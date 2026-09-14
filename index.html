@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>店の空気を、そのままWebに。｜小さな店のWebサイト制作</title>
+<meta name="description" content="美容室・サロン・アパレル・カフェ・バー。世界観で客を呼ぶ小さな店のWebサイトをつくっています。制作 ¥50,000（最初の2件限定）、納期10日。">
+<meta property="og:title" content="店の空気を、そのままWebに。">
+<meta property="og:description" content="世界観で客を呼ぶ小さな店のWebサイト制作。制作 ¥50,000（最初の2件限定）、納期10日。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="社長（仮）">
+<meta property="og:locale" content="ja_JP">
+<!-- og:image は絶対URLにしておく。相対パスだと拾わないサービスがある -->
+<meta property="og:url" content="https://karisyacho.github.io/">
+<meta property="og:image" content="https://karisyacho.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="店の空気を、そのままWebに。小さな店のWebサイト制作。">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --paper:#E8E9EB;
+    --card:#F3F4F5;
+    --ink:#141518;
+    --ink-2:#5E6268;
+    --rule:#C7CACE;
+    --rule-soft:#D8DADD;
+    --dark:#0E0F11;
+
+    --jp:"M PLUS 1","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+    --pad:clamp(20px,5vw,64px);
+    --wide:1120px;
+    --text:760px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--jp);
+    font-weight:400;
+    font-size:16px;
+    line-height:1.95;
+    letter-spacing:.01em;
+    font-feature-settings:"palt" 1;
+  }
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+
+  .wrap{max-width:var(--wide);margin:0 auto;padding-inline:var(--pad)}
+  .narrow{max-width:var(--text);margin-inline:0 auto}
+  .nb{white-space:nowrap}
+
+  /* ---------- utility label voice ---------- */
+  .label{
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    line-height:1;
+  }
+
+  /* ---------- top bar ---------- */
+  .bar{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding-block:18px;
+    border-bottom:1px solid var(--rule);
+  }
+  .bar .name{display:inline-flex;align-items:baseline;gap:12px;font-size:.875rem;font-weight:700;letter-spacing:.02em;color:var(--ink)}
+  .bar .name .handle{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.08em;color:var(--ink-2)}
+  .bar .to-contact{
+    font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;
+    transition:border-color .25s ease;
+  }
+  .bar .to-contact:hover{border-color:var(--ink)}
+
+  /* ---------- hero ---------- */
+  .hero{padding-block:clamp(64px,13vw,148px) clamp(52px,9vw,104px)}
+  .hero h1{
+    margin:0;
+    font-weight:800;
+    font-size:clamp(2.5rem,8.4vw,5.4rem);
+    line-height:1.13;
+    letter-spacing:-.035em;
+  }
+  .hero h1 .ln{display:block;overflow:hidden}
+  .hero h1 .ln > span{display:block}
+  .hero .lead{
+    margin:clamp(28px,4vw,44px) 0 0;
+    max-width:34em;
+    font-size:clamp(.95rem,1.5vw,1.0625rem);
+    color:var(--ink-2);
+    line-height:2.05;
+  }
+  .hero .meta{
+    margin-top:clamp(32px,5vw,52px);
+    padding-top:18px;
+    border-top:1px solid var(--rule);
+    display:flex;flex-wrap:wrap;gap:10px 28px;
+  }
+
+  /* ---------- section frame ---------- */
+  .sec{padding-block:clamp(52px,8vw,88px)}
+  .sec-head{
+    display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+    padding-bottom:12px;border-bottom:1px solid var(--rule);
+  }
+  .sec-head h2{
+    margin:0;font-size:1rem;font-weight:700;letter-spacing:.02em;
+  }
+
+  /* ---------- works ---------- */
+  .work{margin-top:clamp(28px,5vw,44px)}
+  .work + .work{margin-top:clamp(56px,9vw,96px)}
+  .work-head{
+    display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+    padding-bottom:10px;border-bottom:1px solid var(--rule-soft);
+  }
+  .plate{
+    margin-top:18px;
+    background:var(--dark);
+    line-height:0;
+    box-shadow:0 1px 0 rgba(20,21,24,.10), 0 22px 44px -30px rgba(20,21,24,.55);
+  }
+  .plate.paper{background:var(--card);padding:clamp(14px,2.4vw,26px);line-height:0}
+  .plate.paper img{box-shadow:0 1px 0 rgba(20,21,24,.08), 0 14px 30px -22px rgba(20,21,24,.5)}
+  .work-body{
+    margin-top:20px;
+    display:grid;grid-template-columns:1fr;gap:6px 40px;
+  }
+  .work-body h3{margin:0;font-size:1.0625rem;font-weight:700;letter-spacing:.01em}
+  .work-body p{margin:2px 0 0;max-width:42em;color:var(--ink-2);font-size:.9375rem;line-height:1.95}
+  .specline{
+    margin-top:14px;font-family:var(--mono);font-size:11.5px;color:var(--ink-2);
+    letter-spacing:.06em;
+  }
+  .specline span + span{margin-left:1.4em}
+  .visit{display:inline-block;margin-top:12px;font-size:.875rem;font-weight:500;text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:border-color .25s ease}
+  .visit:hover{border-color:var(--ink)}
+
+  /* work 02 sits as an object next to its description */
+  .work-flyer{
+    margin-top:18px;
+    display:grid;grid-template-columns:1fr;gap:24px;align-items:start;
+  }
+  .work-flyer h3{margin:0;font-size:1.0625rem;font-weight:700;letter-spacing:.01em}
+  .work-flyer p{margin:2px 0 0;max-width:34em;color:var(--ink-2);font-size:.9375rem;line-height:1.95}
+  .detail{margin:clamp(24px,3vw,32px) 0 0}
+  .detail img{width:100%}
+  .detail figcaption{
+    margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-2);
+  }
+
+  /* work 02 is a vertical video, so it takes a narrower column than a sheet of paper would */
+  .reel{max-width:320px;background:#fff;line-height:0;box-shadow:0 30px 58px -30px rgba(10,11,13,.5), 0 1px 0 rgba(20,21,24,.08)}
+  .reel video{width:100%;height:auto;display:block}
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .trio img{width:100%;height:auto;display:block;box-shadow:0 0 0 1px var(--rule-soft)}
+  .work-flyer .credit{margin-top:14px;font-size:.75rem;letter-spacing:.02em}
+  @media (min-width:900px){
+    .work-flyer.work-reel{grid-template-columns:minmax(0,320px) 1fr;align-items:start}
+    .reel{max-width:none}
+  }
+
+  /* ---------- price spec sheet ---------- */
+  .sheet{margin-top:clamp(24px,4vw,36px);border-top:1px solid var(--ink)}
+  .row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:baseline;
+    gap:8px 24px;
+    padding-block:16px;
+    border-bottom:1px solid var(--rule-soft);
+  }
+  .row .k{font-size:.9375rem;font-weight:500}
+  .row .k small{display:block;font-weight:400;font-size:.8125rem;color:var(--ink-2);letter-spacing:0;margin-top:2px}
+  .row .v{
+    font-family:var(--mono);font-weight:500;
+    font-size:clamp(1.0625rem,2.4vw,1.375rem);
+    letter-spacing:-.01em;
+    font-variant-numeric:tabular-nums;
+    white-space:nowrap;
+  }
+  .row.major{padding-block:22px}
+  .row.major .v{font-size:clamp(1.5rem,4.4vw,2.125rem)}
+  .note{
+    margin-top:20px;font-size:.9375rem;color:var(--ink-2);line-height:2;
+  }
+
+  .incl{
+    margin:clamp(28px,4vw,40px) 0 0;padding:0;list-style:none;
+    display:grid;grid-template-columns:1fr;gap:0;
+    border-top:1px solid var(--rule-soft);
+  }
+  .incl li{
+    padding-block:11px;border-bottom:1px solid var(--rule-soft);
+    font-size:.9375rem;
+    display:flex;gap:14px;align-items:baseline;
+  }
+  .incl li::before{
+    content:attr(data-n);
+    font-family:var(--mono);font-size:11px;color:var(--ink-2);
+    letter-spacing:.1em;flex:none;
+  }
+
+  /* ---------- about ---------- */
+  .about p{margin:0 0 1.2em;font-size:.9375rem;line-height:2.05}
+  .about p:last-child{margin-bottom:0}
+  .sns{
+    margin-top:clamp(24px,4vw,32px);padding-top:18px;border-top:1px solid var(--rule-soft);
+    display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;
+  }
+  .sns a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:border-color .25s ease}
+  .sns a:hover{border-color:var(--ink)}
+
+  /* ---------- contact ---------- */
+  .contact{
+    margin-top:clamp(56px,9vw,96px);
+    background:var(--ink);color:var(--paper);
+  }
+  .contact .inner{padding-block:clamp(48px,8vw,84px)}
+  .contact .label{color:rgba(232,233,235,.62)}
+  .contact h2{
+    margin:16px 0 0;font-size:clamp(1.5rem,4.4vw,2.25rem);font-weight:800;
+    letter-spacing:-.02em;line-height:1.4;
+  }
+  .contact p{margin:16px 0 0;max-width:34em;color:rgba(232,233,235,.72);font-size:.9375rem;line-height:2}
+  .ways{margin-top:clamp(28px,4vw,40px);display:flex;flex-wrap:wrap;gap:12px}
+  .way{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 22px;
+    background:var(--paper);color:var(--ink);
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;
+    text-decoration:none;
+    transition:transform .25s ease,opacity .25s ease;
+  }
+  .way:hover{transform:translateY(-2px)}
+  .way.ghost{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 1px rgba(232,233,235,.38)}
+
+  footer{padding-block:36px}
+  footer .in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;border-top:1px solid var(--rule);padding-top:18px}
+  footer .who{display:inline-flex;align-items:baseline;gap:12px;font-size:.8125rem;font-weight:500;color:var(--ink-2)}
+  footer .who .handle{font-family:var(--mono);font-size:11px;letter-spacing:.08em}
+
+  /* ---------- larger screens ---------- */
+  @media (min-width:760px){
+    .work-body{grid-template-columns:1fr auto}
+    .work-body .specline{grid-column:1/-1;margin-top:8px}
+    .work-flyer{grid-template-columns:minmax(0,430px) 1fr;gap:clamp(40px,5vw,64px);align-items:center}
+    .incl{grid-template-columns:1fr 1fr;column-gap:44px}
+    .incl li:nth-last-child(2):nth-child(odd){border-bottom:1px solid var(--rule-soft)}
+  }
+
+  /* ---------- motion ---------- */
+  .js .rise{opacity:0;transform:translateY(14px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+  .js .rise.in{opacity:1;transform:none}
+  .js .hero h1 .ln > span{transform:translateY(105%);transition:transform .95s cubic-bezier(.22,.61,.36,1)}
+  .js .ready .hero h1 .ln > span{transform:none}
+  .js .ready .hero h1 .ln:nth-child(2) > span{transition-delay:.09s}
+  .js .hero .lead,.js .hero .meta{opacity:0;transition:opacity .9s ease .34s}
+  .js .ready .hero .lead,.js .ready .hero .meta{opacity:1}
+
+  @media (prefers-reduced-motion:reduce){
+    .js .rise,.js .hero h1 .ln > span,.js .hero .lead,.js .hero .meta{
+      opacity:1!important;transform:none!important;transition:none!important
+    }
+    .way:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="bar">
+    <span class="name">社長（仮）<span class="handle">@shacho_kari</span></span>
+    <a class="to-contact" href="#contact">Contact</a>
+  </div>
+</div>
+
+<header class="wrap hero">
+  <h1>
+    <span class="ln"><span>店の空気を、</span></span>
+    <span class="ln"><span>そのままWebに。</span></span>
+  </h1>
+  <p class="lead">
+    美容室・サロン・アパレル・カフェ・バー。<br>
+    写真と余白と書体で客を呼んでいる小さな店の<span class="nb">Webサイトを、</span><span class="nb">ひとりでつくっています。</span>
+  </p>
+  <div class="meta">
+    <span class="label">制作 ¥50,000 — 最初の2件限定</span>
+    <span class="label">納期 10日</span>
+    <span class="label">全国・オンライン</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="wrap sec" id="work">
+    <div class="sec-head">
+      <h2>これまでにつくったもの</h2>
+      <span class="label">2 works</span>
+    </div>
+
+    <article class="work rise">
+      <div class="work-head">
+        <span class="label">Work 01</span>
+        <span class="label">Web</span>
+      </div>
+      <div class="plate">
+        <picture>
+          <source srcset="assets/kasane-hero.webp" type="image/webp">
+          <img src="assets/kasane-hero.png" alt="アパレルブランド KASANE のWebサイト。黒地に大きな白い欧文見出しが置かれたトップ画面。" width="1903" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="work-body">
+        <div>
+          <h3>KASANE｜かさね</h3>
+          <p>東京・蔵前のアパレルブランド（架空）。ブランドの考え方からコレクション、素材、代表の言葉、問い合わせまでを1本の流れに設計しました。トップの背景は、生地の重なりを WebGL で描いています。</p>
+          <a class="visit" href="https://kasane-demo.github.io/kasane/" target="_blank" rel="noopener">サイトを見る ↗</a>
+        </div>
+        <div class="specline">
+          <span>全6セクション</span><span>WebGL</span><span>スマホ対応</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="work rise">
+      <div class="work-head">
+        <span class="label">Work 02</span>
+        <span class="label">Video</span>
+      </div>
+      <div class="work-flyer work-reel">
+        <div class="reel">
+          <video src="assets/serapeel-reel.mp4" poster="assets/reel-poster.jpg" width="1080" height="1920" autoplay muted loop playsinline preload="metadata" aria-label="セラピールの広告リール。白地に青の差し色で、商品、特長、施術の流れ、受賞、店舗情報が順に出る22秒の縦型動画。"></video>
+        </div>
+        <div>
+          <h3>STUDIO FREE｜スタジオ フリー</h3>
+          <p>徳島県北島町の女性専用トータルボディケアサロン。ピーリング「セラピール」の正規取扱店であることを知らせる、Instagram・TikTok 用の縦型広告です。効果を約束しない言い回しで組み、最後の3.5秒は住所と電話をスクリーンショットで残せるように止めています。</p>
+          <div class="specline">
+            <span>1080 × 1920</span><span>22秒</span><span>Instagram / TikTok</span>
+          </div>
+          <figure class="detail">
+            <div class="trio">
+              <img src="assets/reel-cut2.jpg" alt="カット2。白地に青い明朝の「セラピール」と、ガラス球に囲まれた商品ボトルの写真。" width="540" height="960" loading="lazy" decoding="async">
+              <img src="assets/reel-cut3.jpg" alt="カット3。「剥離しにくい設計」「中和剤がいらない」「ダウンタイムは半日〜数日」の3行と、個人差の注記。" width="540" height="960" loading="lazy" decoding="async">
+              <img src="assets/reel-cut6.jpg" alt="カット6。セラピール正規取扱店 STUDIO FREE の店名、住所、電話、営業時間が中央に並ぶ最後の画面。" width="540" height="960" loading="lazy" decoding="async">
+            </div>
+            <figcaption>Cuts — 2 / 3 / 6</figcaption>
+          </figure>
+          <p class="credit">写真・受賞メダル：メーカー資料より</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="wrap sec" id="price">
+    <div class="sec-head">
+      <h2>料金と納期</h2>
+      <span class="label">Price</span>
+    </div>
+
+    <div class="sheet narrow">
+      <div class="row major">
+        <div class="k">サイト制作<small>縦1ページ・スマホ対応</small></div>
+        <div class="v">¥50,000</div>
+      </div>
+      <div class="row">
+        <div class="k">更新のお手伝い<small>任意。いらなければ無しで大丈夫です</small></div>
+        <div class="v">¥3,000 / 月</div>
+      </div>
+      <div class="row">
+        <div class="k">納期<small>写真と文章をいただいてから</small></div>
+        <div class="v">10日</div>
+      </div>
+      <div class="row">
+        <div class="k">修正</div>
+        <div class="v">2回</div>
+      </div>
+    </div>
+
+    <p class="note narrow">
+      いまは実績をつくっている時期なので、<strong>最初の2件だけ</strong>この価格で受けています。
+      3件目からは通常の価格に戻します。
+    </p>
+
+    <ul class="incl narrow">
+      <li data-n="01">スマホでの見え方</li>
+      <li data-n="02">お手持ちの写真の色補正</li>
+      <li data-n="03">Instagram・地図・営業時間</li>
+      <li data-n="04">問い合わせ・予約への導線</li>
+      <li data-n="05">ドメインとサーバーの手配</li>
+      <li data-n="06">公開後の初期設定</li>
+    </ul>
+  </section>
+
+  <section class="wrap sec about" id="about">
+    <div class="sec-head">
+      <h2>つくっている人</h2>
+      <span class="label">About</span>
+    </div>
+    <div class="narrow" style="margin-top:clamp(24px,4vw,36px)">
+      <p>SNSでは「社長（仮）」という名前でやっています。25歳、徳島。飲食店で4年働いたあと、Webとデザインをやっています。</p>
+      <p>AIを使って会社をゼロから動かす過程を、そのままSNSに出しています。うまくいっていないところも含めて全部出しているので、どんな人間がつくるのかはそちらを見ていただくのが早いと思います。</p>
+    </div>
+    <div class="sns narrow">
+      <span class="label">記録</span>
+      <a href="https://www.youtube.com/@shacho_kari" target="_blank" rel="noopener">YouTube ↗</a>
+      <a href="https://www.instagram.com/shacho_kari/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://x.com/shacho_kari" target="_blank" rel="noopener">X ↗</a>
+      <a href="https://www.tiktok.com/@shacho_kari" target="_blank" rel="noopener">TikTok ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap inner">
+    <span class="label">Contact</span>
+    <h2>まず、いまのお店の写真を<br>見せてください。</h2>
+    <p>「やるかどうか決めていないけど話だけ」で大丈夫です。InstagramかXのDMに、お店の写真かアカウントを送ってください。どんなサイトになりそうかをお伝えします。ここまでは無料で、そこから先に進むかどうかを決めていただければ。</p>
+    <div class="ways">
+      <a class="way" href="https://www.instagram.com/shacho_kari/" target="_blank" rel="noopener">Instagram の DM へ</a>
+      <a class="way ghost" href="https://x.com/shacho_kari" target="_blank" rel="noopener">X の DM へ</a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="in">
+    <span class="who">社長（仮）<span class="handle">@shacho_kari</span></span>
+    <span class="label">2026</span>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  requestAnimationFrame(function(){ document.body.classList.add('ready'); });
+
+  var items = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  // 動きを減らす設定なら、リールは止めて再生ボタンを渡す
+  var reel = document.querySelector('.reel video');
+  if (reel && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    reel.removeAttribute('autoplay'); reel.pause(); reel.controls = true;
+  }
+</script>
+
+</body>
+</html>
