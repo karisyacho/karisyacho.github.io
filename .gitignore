@@ -6,3 +6,8 @@ assets/og-source.html
 
 # Salon ライラックは公開掲載不可（2026-09-14）。手元に残っていても絶対に上げない
 assets/lilac-*
+
+# 作品スクショの撮影・確認用
+shoot.mjs
+check.mjs
+shots/
