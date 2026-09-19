@@ -203,6 +203,17 @@
   }
 
   /* ---------- price ---------- */
+  .goods{margin:clamp(24px,4vw,40px) 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,40px) clamp(14px,2.4vw,28px)}
+  @media (min-width:900px){ .goods{grid-template-columns:repeat(4,minmax(0,1fr))} }
+  .good .g-img{background:var(--paper-2);aspect-ratio:3/4;padding:clamp(14px,2.4vw,28px);display:grid;place-items:center}
+  .good img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 6px 16px rgba(27,26,24,.14))}
+  .good .g-cap{margin-top:12px;display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:baseline}
+  .good b{font-family:var(--serif);font-weight:600;font-size:1.0625rem;letter-spacing:.02em}
+  .good .v{font-family:var(--mono);font-size:.9375rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+  @media (max-width:639px){ .good .g-cap{grid-template-columns:1fr} }
+  .good small{grid-column:1/-1;color:var(--ink-2);font-size:.8125rem;line-height:1.7}
+  .goods-lead{margin:0;max-width:40em;color:var(--ink-2);font-size:.9375rem;line-height:2}
+
   .price-grid{display:grid;gap:clamp(32px,5vw,56px)}
   @media (min-width:900px){ .price-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)} }
   .sheet{border-top:1px solid var(--ink)}
@@ -456,6 +467,33 @@
     </div>
   </section>
 
+  <section class="wrap sec" id="print" style="border-top:1px solid var(--rule)">
+    <div class="sec-head">
+      <h2>ホームページの<span class="nb">ほかに</span></h2>
+      <span class="label">Print &amp; Graphics</span>
+    </div>
+    <p class="goods-lead">お店で配るチラシやメニュー表、SNSやホームページに使う画像もつくっています。紙のものは、印刷所にそのまま出せるデータまでお渡しします。</p>
+    <ul class="goods">
+      <li class="good">
+        <div class="g-img"><img src="assets/print-flyer.webp" alt="パンと珈琲 暁のA4チラシ。暗い窯の棚の写真に「まだ暗いうちに、火を入れる。」の見出し、定番のパンの値段と営業時間。" width="900" height="1263" loading="lazy" decoding="async"></div>
+        <div class="g-cap"><b>チラシ</b><span class="v">¥15,000</span><small>A4片面・入稿用データまで</small></div>
+      </li>
+      <li class="good">
+        <div class="g-img"><img src="assets/print-poster.webp" alt="余白珈琲の店頭ポスター。ドリッパーから落ちるコーヒーの写真に「春のはじめに、浅く煎りました。」の見出しと値段。" width="900" height="1265" loading="lazy" decoding="async"></div>
+        <div class="g-cap"><b>ポスター・看板</b><span class="v">¥15,000</span><small>A3片面・入稿用データまで</small></div>
+      </li>
+      <li class="good">
+        <div class="g-img"><img src="assets/print-menu.webp" alt="パンと珈琲 暁のお品書き。食事のパン、菓子のパン、飲みもの、朝の組み合わせを2段に並べたA4のメニュー表。" width="900" height="1263" loading="lazy" decoding="async"></div>
+        <div class="g-cap"><b>メニュー表・POP</b><span class="v">¥8,000</span><small>A4片面・30品まで</small></div>
+      </li>
+      <li class="good">
+        <div class="g-img"><img src="assets/print-banner.webp" alt="LUEUR AOYAMAの横長バナー。「静かな夜に、髪がほどける。」の見出しと予約ボタン、鏡の並ぶ店内の写真。" width="1200" height="628" loading="lazy" decoding="async"></div>
+        <div class="g-cap"><b>バナー・ヘッダー</b><span class="v">¥5,000</span><small>1サイズ・1案</small></div>
+      </li>
+    </ul>
+    <p class="credit" style="color:var(--ink-2)">どれも見本（架空の店）です。写真：Unsplash</p>
+  </section>
+
   <section class="wrap sec" id="price" style="border-top:1px solid var(--rule)">
     <div class="sec-head">
       <h2>料金と納期</h2>
@@ -484,6 +522,22 @@
           <div class="row">
             <div class="k">広告動画<small>縦型15〜30秒。<span class="nb">お店の写真や資料から、</span><span class="nb">構成と文字入れまで</span></small></div>
             <div class="v">¥15,000 / 本</div>
+          </div>
+          <div class="row">
+            <div class="k">チラシ<small>A4片面・入稿用データまで</small></div>
+            <div class="v">¥15,000</div>
+          </div>
+          <div class="row">
+            <div class="k">ポスター・看板<small>A3片面・入稿用データまで</small></div>
+            <div class="v">¥15,000</div>
+          </div>
+          <div class="row">
+            <div class="k">メニュー表・POP<small>A4片面・30品まで</small></div>
+            <div class="v">¥8,000</div>
+          </div>
+          <div class="row">
+            <div class="k">バナー・ヘッダー<small>1サイズ・1案</small></div>
+            <div class="v">¥5,000</div>
           </div>
         </div>
         <p class="note">
