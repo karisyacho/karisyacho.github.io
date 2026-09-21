@@ -231,6 +231,9 @@
   .incl li{padding-block:12px;border-bottom:1px solid var(--rule);font-size:.9375rem;display:flex;gap:14px;align-items:baseline}
   .incl li::before{content:attr(data-n);font-family:var(--mono);font-size:11px;color:var(--ink-2);letter-spacing:.1em;flex:none}
   .incl-head{margin-bottom:12px;display:block}
+  .more{margin-top:clamp(40px,6vw,64px);max-width:760px}
+  .more-sheet .row .v{font-size:clamp(.9375rem,2vw,1.0625rem)}
+  .more-sheet .row .v.ask{font-family:var(--jp);font-size:.8125rem;font-weight:400;color:var(--ink-2);letter-spacing:.02em}
 
   /* ---------- about ---------- */
   .about p{margin:0 0 1.2em;font-size:.9375rem;line-height:2.05}
@@ -600,6 +603,33 @@
           <li data-n="06">公開後の初期設定</li>
         </ul>
       </div>
+    </div>
+
+    <div class="more">
+      <span class="label incl-head">こんなこともできます</span>
+      <div class="sheet more-sheet">
+        <div class="row">
+          <div class="k">リーフレット<small>二つ折り・三つ折り。印刷所に出せるデータまで</small></div>
+          <div class="v">¥20,000〜</div>
+        </div>
+        <div class="row">
+          <div class="k">ショップカード・名刺<small>両面・入稿用データまで</small></div>
+          <div class="v ask">ご相談ください</div>
+        </div>
+        <div class="row">
+          <div class="k">Googleマップの店舗情報<small>写真・営業時間・紹介文を整える</small></div>
+          <div class="v ask">ご相談ください</div>
+        </div>
+        <div class="row">
+          <div class="k">予約・問い合わせフォーム<small>いまのサイトに足すこともできます</small></div>
+          <div class="v ask">ご相談ください</div>
+        </div>
+        <div class="row">
+          <div class="k">メニューの英語版<small>観光で来るお客さん向けに</small></div>
+          <div class="v ask">ご相談ください</div>
+        </div>
+      </div>
+      <p class="note">ここにないものも、まずは聞いてください。できるかどうか、正直にお答えします。</p>
     </div>
   </section>
 
