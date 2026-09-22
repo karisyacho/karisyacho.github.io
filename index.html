@@ -258,6 +258,14 @@
   .sheet-ui textarea{width:100%;border:0;padding:0;margin:0;font:inherit;color:#1F2328;background:transparent;resize:none;line-height:1.5;field-sizing:content;min-height:1.5em}
   .sheet-ui textarea:focus{outline:2px solid #1A73E8;outline-offset:3px;border-radius:2px}
   .phone-hint{margin:10px 4px 0;font-size:.75rem;color:#5F6368}
+  .who{margin:0 4px 10px;font-size:.75rem;letter-spacing:.08em;color:var(--ink-2)}
+  .phone .who{margin-top:0}
+  .shop-phone{max-width:340px;justify-self:center;width:100%}
+  @media (min-width:760px){ .shop-phone{justify-self:start} }
+  .shop-body{background:#131211;border-radius:38px;padding:10px;box-shadow:0 30px 60px -30px rgba(20,18,15,.6)}
+  .shop-screen{position:relative;overflow:hidden;border-radius:29px;background:#111822;aspect-ratio:390/760}
+  /* iframe は実寸（390×760）で開いて、画面の幅に合わせて縮める。縮め率は JS が入れる */
+  .shop-screen iframe{position:absolute;top:0;left:0;width:390px;height:760px;border:0;transform-origin:0 0;transform:scale(var(--k,.8))}
   .mini{background:#F4EDE1;color:#2A211A;border:1px solid var(--rule);border-radius:10px;overflow:hidden;box-shadow:0 24px 50px -34px rgba(20,18,15,.45)}
   .mini-url{background:#EFE4D2;font-family:var(--mono);font-size:11px;color:#8C7B68;padding:7px 14px;border-bottom:1px solid rgba(42,33,26,.1)}
   .mini-notice{background:#B96A2A;color:#FBF6EE;padding:10px 16px;font-size:.8125rem;line-height:1.7;display:flex;gap:12px;align-items:baseline}
@@ -733,9 +741,10 @@
 
     <div class="try" id="try">
       <span class="label incl-head">自分で更新できる形を、試してみてください</span>
-      <p class="note try-lead">左の表は、お店の人がスマホで触るGoogleスプレッドシートの見本です。「内容」の欄を書き換えると、右のホームページがそのまま変わります。お知らせを消すと、お知らせの帯も消えます。</p>
+      <p class="note try-lead">左はお店の人のスマホで開いたGoogleスプレッドシート、右はお客さんのスマホで見たホームページです。表の「内容」を書き換えると、右のサイトのその場所に移って、書いたとおりに変わります。お知らせを消すと、お知らせの帯も消えます。</p>
       <div class="try-grid">
         <div class="phone" aria-label="スマホで開いたスプレッドシートの見本">
+          <p class="who">お店の人のスマホ</p>
           <div class="phone-bar"><span>暁 営業情報</span><small>Googleスプレッドシート</small></div>
           <table class="sheet-ui">
             <colgroup><col style="width:28px"><col style="width:36%"><col></colgroup>
@@ -750,17 +759,14 @@
           </table>
           <p class="phone-hint">↑ タップして書き換えてみてください</p>
         </div>
-        <div class="mini" aria-live="polite" aria-label="ホームページの見本（パンと珈琲 暁）">
-          <div class="mini-url">akatsuki-demo.github.io</div>
-          <div class="mini-notice" data-sheet-box><b>お知らせ</b><span data-try="お知らせ"></span></div>
-          <div class="mini-body">
-            <p class="mini-label">14:00 — CLOSING</p>
-            <p class="mini-h">昼二時、あるいは売り切れまで</p>
-            <dl class="mini-info">
-              <div><dt>営業時間</dt><dd><span data-try="営業時間"></span><small data-try="営業時間の補足"></small></dd></div>
-              <div><dt>定休日</dt><dd data-try="定休日"></dd></div>
-            </dl>
+        <div class="shop-phone">
+          <p class="who">お客さんのスマホ</p>
+          <div class="shop-body">
+            <div class="shop-screen" id="try-screen">
+              <iframe id="try-frame" title="見本のサイト「パンと珈琲 暁」（表の内容で書き換わります）" loading="lazy" src="https://akatsuki-demo.github.io/akatsuki/"></iframe>
+            </div>
           </div>
+          <p class="phone-hint">見本のサイト「パンと珈琲 暁」。スクロールもできます</p>
         </div>
       </div>
       <p class="note">見本なので、ここで書き換えた内容はあなたの画面の中だけで変わります。本物では、お店の人の表を書き換えると、5分ほどでホームページに反映されます。</p>
@@ -856,25 +862,34 @@
 
   // 自分で更新できる形の見本：表の「内容」を書き換えると右のページが変わる（見た人の画面の中だけ）
   // 本物は sheet-sync.js が公開した表のCSVを読んで、同じように data-sheet の要素へ入れる
+  // 右の iframe は本物の暁のサイト。値は postMessage で送り、暁の script.js が受けて書き換える
   (function(){
     var fields = {'お知らせ':'try-notice','営業時間':'try-hours','営業時間の補足':'try-hoursnote','定休日':'try-closed'};
-    var mini = document.querySelector('.mini');
-    if (!mini) return;
-    function update(changed){
-      Object.keys(fields).forEach(function(key){
-        var v = document.getElementById(fields[key]).value.replace(/\s+$/,'');
-        mini.querySelectorAll('[data-try="'+key+'"]').forEach(function(el){
-          el.textContent = v;
-          if (key === changed) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
-        });
-      });
-      // お知らせが空なら帯ごと消す
-      mini.querySelector('.mini-notice').hidden = !document.getElementById(fields['お知らせ']).value.trim();
+    var frame = document.getElementById('try-frame'), screen = document.getElementById('try-screen');
+    if (!frame) return;
+    // 手元で確かめるときは、手元の暁を開く（node bin/serve.mjs の 4173 番）
+    if (location.hostname === 'localhost') frame.src = 'http://localhost:4173/site-akatsuki/';
+    var target = new URL(frame.src).origin;
+
+    function fit(){ screen.style.setProperty('--k', (screen.clientWidth / 390).toFixed(4)); }
+    fit(); window.addEventListener('resize', fit);
+
+    function values(){
+      var o = {};
+      Object.keys(fields).forEach(function(k){ o[k] = document.getElementById(fields[k]).value; });
+      return o;
     }
-    Object.keys(fields).forEach(function(key){
-      document.getElementById(fields[key]).addEventListener('input', function(){ update(key); });
+    var timer;
+    function send(changed){
+      if (!frame.contentWindow) return;
+      frame.contentWindow.postMessage({type:'sheet-preview', values: values(), changed: changed || null}, target);
+    }
+    Object.keys(fields).forEach(function(k){
+      document.getElementById(fields[k]).addEventListener('input', function(){
+        clearTimeout(timer); timer = setTimeout(function(){ send(k); }, 250);
+      });
     });
-    update();
+    frame.addEventListener('load', function(){ send(null); });
   })();
 </script>
 
