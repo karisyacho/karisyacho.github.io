@@ -235,6 +235,22 @@
   .more-sheet .row .v{font-size:clamp(.9375rem,2vw,1.0625rem)}
   .more-sheet .row .v.ask{font-family:var(--jp);font-size:.8125rem;font-weight:400;color:var(--ink-2);letter-spacing:.02em}
 
+  /* ---------- flow（進め方・用意するもの・よくある質問） ---------- */
+  .flow-grid{display:grid;gap:clamp(32px,5vw,56px)}
+  @media (min-width:900px){ .flow-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)} }
+  .flow{margin:0;padding:0;list-style:none;border-top:1px solid var(--ink)}
+  .flow li{padding-block:16px;border-bottom:1px solid var(--rule);font-size:.875rem;color:var(--ink-2);line-height:1.9;display:grid;grid-template-columns:auto 1fr;gap:2px 14px}
+  .flow li::before{content:attr(data-n);font-family:var(--mono);font-size:11px;color:var(--ink-2);letter-spacing:.1em;grid-row:span 2;padding-top:4px}
+  .flow li b{display:block;font-size:.9375rem;font-weight:500;color:var(--ink)}
+  .faq{margin-top:clamp(40px,6vw,64px);max-width:760px}
+  .faq details{border-bottom:1px solid var(--rule)}
+  .faq details:first-of-type{border-top:1px solid var(--rule)}
+  .faq summary{cursor:pointer;padding-block:16px;font-size:.9375rem;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:var(--mono);color:var(--ink-2)}
+  .faq details[open] summary::after{content:"−"}
+  .faq details p{margin:0 0 16px;font-size:.875rem;color:var(--ink-2);line-height:2;max-width:40em}
+
   /* ---------- about ---------- */
   .about p{margin:0 0 1.2em;font-size:.9375rem;line-height:2.05}
   .sns{
@@ -293,6 +309,7 @@
     <nav class="nav" aria-label="ページ内の移動">
       <a href="#work">Works</a>
       <a class="hide-sm" href="#price">Price</a>
+      <a class="hide-sm" href="#flow">Flow</a>
       <a class="hide-sm" href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -310,6 +327,7 @@
   </p>
   <div class="meta">
     <span class="label">サイト制作 ¥50,000 — 最初の2件限定</span>
+    <span class="label">3日で仮サイト・10日で公開</span>
     <span class="label">広告動画 ¥15,000 / 本</span>
     <span class="label">全国・オンライン</span>
   </div>
@@ -542,16 +560,28 @@
       <div>
         <div class="sheet">
           <div class="row major">
-            <div class="k">サイト制作<small>縦1ページ・スマホ対応</small></div>
+            <div class="k">サイト制作<small>3ページまで・スマホ対応。1ページにまとめることもできます</small></div>
             <div class="v">¥50,000</div>
           </div>
           <div class="row">
-            <div class="k">更新のお手伝い<small>任意。いらなければ無しで大丈夫です</small></div>
+            <div class="k">ページの追加</div>
+            <div class="v">¥10,000 / 1ページ</div>
+          </div>
+          <div class="row">
+            <div class="k">確認用の仮サイト<small>写真と文章がそろってから</small></div>
+            <div class="v">3日</div>
+          </div>
+          <div class="row">
+            <div class="k">公開<small>写真と文章がそろってから</small></div>
+            <div class="v">10日</div>
+          </div>
+          <div class="row">
+            <div class="k">更新はまるごとお任せ<small>営業時間が変わったら、LINEやDMで送っていただくだけ。いらなければ無しで大丈夫です</small></div>
             <div class="v">¥3,000 / 月</div>
           </div>
           <div class="row">
-            <div class="k">納期<small>写真と文章をいただいてから</small></div>
-            <div class="v">10日</div>
+            <div class="k">自分で更新できる形<small>スマホで表を書き換えると、営業時間やお知らせがホームページに反映されます</small></div>
+            <div class="v">¥10,000</div>
           </div>
           <div class="row">
             <div class="k">広告動画<small>縦型15〜30秒。<span class="nb">お店の写真や資料から、</span><span class="nb">構成と文字入れまで</span></small></div>
@@ -634,6 +664,61 @@
         </div>
       </div>
       <p class="note">ここにないものも、まずは聞いてください。できるかどうか、正直にお答えします。</p>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="flow" style="border-top:1px solid var(--rule)">
+    <div class="sec-head">
+      <h2>はじめてでも、<span class="nb">安心して頼めるように</span></h2>
+      <span class="label">Flow</span>
+    </div>
+
+    <div class="flow-grid">
+      <div>
+        <span class="label incl-head">進め方</span>
+        <ol class="flow">
+          <li data-n="01"><b>お話を聞かせてください</b>いまのお店の写真やInstagramを見ながら、どんなお客さんに来てほしいかを伺います。</li>
+          <li data-n="02"><b>何を載せるかを、先に文章で</b>デザインに入る前に、載せることと順番を文章で確かめていただきます。大きな方向はここで決めます。</li>
+          <li data-n="03"><b>3日で確認用の仮サイト</b>写真と文章がそろってから3日で、スマホで実際に触れる仮サイトをお渡しします。</li>
+          <li data-n="04"><b>10日間は何回でも直します</b>気になるところは、遠慮なく何度でも伝えてください。</li>
+          <li data-n="05"><b>公開</b>写真と文章がそろってから、10日が目安です。</li>
+          <li data-n="06"><b>公開後20日間は、小さな直しも無料</b>誤字や営業時間の変更などは、そのまま直します。</li>
+        </ol>
+      </div>
+
+      <div>
+        <span class="label incl-head">用意していただくもの</span>
+        <ul class="incl">
+          <li data-n="01">お店の写真（スマホで撮ったもので大丈夫です。暗い写真は明るく整えます）</li>
+          <li data-n="02">伝えたいこと（箇条書きで大丈夫です。文章はこちらで整えます）</li>
+          <li data-n="03">営業時間・定休日・住所</li>
+        </ul>
+        <p class="note">写真が足りないときや、何を書けばいいか分からないときも、まずはそのまま相談してください。</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <span class="label incl-head">よくある質問</span>
+      <details>
+        <summary>パソコンが苦手でも大丈夫ですか？</summary>
+        <p>大丈夫です。やり取りはLINEやInstagramのDMで、スマホだけで進められます。専門の言葉は使わずにご説明します。</p>
+      </details>
+      <details>
+        <summary>ドメインやサーバーって何ですか？</summary>
+        <p>ホームページの住所と、置き場所のようなものです。設定はこちらで行います。ドメイン代（年1,500円ほど）だけ、お店のお名前で持っていただくのがあとあと安心なので、実費をご負担ください。</p>
+      </details>
+      <details>
+        <summary>公開したあと、営業時間やお知らせを変えたいときは？</summary>
+        <p>公開後20日間は無料で直します。そのあとは、月3,000円の「更新はまるごとお任せ」なら、LINEで送っていただくだけで直します。ご自分で直したい方には、スマホで書き換えられる形（¥10,000）もあります。</p>
+      </details>
+      <details>
+        <summary>本当に10日で公開できますか？</summary>
+        <p>写真と文章がそろってからの日数です。そろうまでのお手伝いもしますので、準備が進んでいなくても先にご相談ください。</p>
+      </details>
+      <details>
+        <summary>遠くのお店でも頼めますか？</summary>
+        <p>全国どこからでも大丈夫です。すべてオンラインで進めます。</p>
+      </details>
     </div>
   </section>
 
