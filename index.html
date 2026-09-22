@@ -242,6 +242,40 @@
   .flow li{padding-block:16px;border-bottom:1px solid var(--rule);font-size:.875rem;color:var(--ink-2);line-height:1.9;display:grid;grid-template-columns:auto 1fr;gap:2px 14px}
   .flow li::before{content:attr(data-n);font-family:var(--mono);font-size:11px;color:var(--ink-2);letter-spacing:.1em;grid-row:span 2;padding-top:4px}
   .flow li b{display:block;font-size:.9375rem;font-weight:500;color:var(--ink)}
+  /* 自分で更新できる形の見本（左：表／右：暁のページ）。色は暁のサイトに合わせる */
+  .try{margin-top:clamp(40px,6vw,64px)}
+  .try-lead{margin:0 0 20px!important;max-width:40em}
+  .try-grid{display:grid;gap:20px;align-items:start}
+  @media (min-width:760px){ .try-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)} }
+  .phone{background:#fff;border:1px solid var(--rule);border-radius:22px;padding:14px 12px 12px;box-shadow:0 24px 50px -34px rgba(20,18,15,.45);max-width:420px}
+  .phone-bar{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px 10px;border-bottom:1px solid #E3E6EA}
+  .phone-bar span{font-size:.875rem;font-weight:500;color:#1F2328}
+  .phone-bar small{font-size:11px;color:#1E8E3E}
+  .sheet-ui{width:100%;border-collapse:collapse;margin-top:8px;font-size:.8125rem;table-layout:fixed}
+  .sheet-ui th{background:#F1F3F4;color:#5F6368;font-weight:400;font-size:11px;border:1px solid #DADCE0;padding:3px 2px;text-align:center}
+  .sheet-ui td{border:1px solid #DADCE0;padding:6px;vertical-align:top;color:#1F2328;background:#fff}
+  .sheet-ui td.h{background:#F8F9FA;font-weight:500}
+  .sheet-ui textarea{width:100%;border:0;padding:0;margin:0;font:inherit;color:#1F2328;background:transparent;resize:none;line-height:1.5;field-sizing:content;min-height:1.5em}
+  .sheet-ui textarea:focus{outline:2px solid #1A73E8;outline-offset:3px;border-radius:2px}
+  .phone-hint{margin:10px 4px 0;font-size:.75rem;color:#5F6368}
+  .mini{background:#F4EDE1;color:#2A211A;border:1px solid var(--rule);border-radius:10px;overflow:hidden;box-shadow:0 24px 50px -34px rgba(20,18,15,.45)}
+  .mini-url{background:#EFE4D2;font-family:var(--mono);font-size:11px;color:#8C7B68;padding:7px 14px;border-bottom:1px solid rgba(42,33,26,.1)}
+  .mini-notice{background:#B96A2A;color:#FBF6EE;padding:10px 16px;font-size:.8125rem;line-height:1.7;display:flex;gap:12px;align-items:baseline}
+  .mini-notice[hidden]{display:none}
+  .mini-notice b{flex:none;font-weight:500;font-size:11px;letter-spacing:.12em;border:1px solid rgba(251,246,238,.5);padding:0 6px}
+  .mini-notice span{white-space:pre-line}
+  .mini-body{padding:22px 20px 24px}
+  .mini-label{margin:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:#8C7B68}
+  .mini-h{margin:8px 0 16px;font-family:var(--serif);font-size:1.25rem;font-weight:600;line-height:1.5}
+  .mini-info{margin:0;border-top:1px solid rgba(42,33,26,.18)}
+  .mini-info div{display:grid;grid-template-columns:5.5em 1fr;gap:12px;padding:12px 0;border-bottom:1px solid rgba(42,33,26,.18)}
+  .mini-info dt{font-size:.8125rem;color:#6B5B4A}
+  .mini-info dd{margin:0;font-size:.9375rem;white-space:pre-line}
+  .mini-info dd small{display:block;margin-top:2px;font-size:.75rem;color:#6B5B4A;white-space:pre-line}
+  .mini .flash{animation:flash 1.2s ease}
+  @keyframes flash{from{background:rgba(185,106,42,.28)}to{background:transparent}}
+  @media (prefers-reduced-motion:reduce){ .mini .flash{animation:none} }
+
   .faq{margin-top:clamp(40px,6vw,64px);max-width:760px}
   .faq details{border-bottom:1px solid var(--rule)}
   .faq details:first-of-type{border-top:1px solid var(--rule)}
@@ -697,6 +731,41 @@
       </div>
     </div>
 
+    <div class="try" id="try">
+      <span class="label incl-head">自分で更新できる形を、試してみてください</span>
+      <p class="note try-lead">左の表は、お店の人がスマホで触るGoogleスプレッドシートの見本です。「内容」の欄を書き換えると、右のホームページがそのまま変わります。お知らせを消すと、お知らせの帯も消えます。</p>
+      <div class="try-grid">
+        <div class="phone" aria-label="スマホで開いたスプレッドシートの見本">
+          <div class="phone-bar"><span>暁 営業情報</span><small>Googleスプレッドシート</small></div>
+          <table class="sheet-ui">
+            <colgroup><col style="width:28px"><col style="width:36%"><col></colgroup>
+            <thead><tr><th></th><th>A</th><th>B</th></tr></thead>
+            <tbody>
+              <tr><th>1</th><td class="h">項目</td><td class="h">内容</td></tr>
+              <tr><th>2</th><td>お知らせ</td><td><textarea id="try-notice" rows="2" aria-label="お知らせの内容">本日は臨時休業です。明日は通常どおり5時から。</textarea></td></tr>
+              <tr><th>3</th><td>営業時間</td><td><textarea id="try-hours" rows="1" aria-label="営業時間の内容">5:00 — 14:00</textarea></td></tr>
+              <tr><th>4</th><td>営業時間の補足</td><td><textarea id="try-hoursnote" rows="2" aria-label="営業時間の補足の内容">パンが売り切れた時点で閉めます。</textarea></td></tr>
+              <tr><th>5</th><td>定休日</td><td><textarea id="try-closed" rows="1" aria-label="定休日の内容">日曜・月曜</textarea></td></tr>
+            </tbody>
+          </table>
+          <p class="phone-hint">↑ タップして書き換えてみてください</p>
+        </div>
+        <div class="mini" aria-live="polite" aria-label="ホームページの見本（パンと珈琲 暁）">
+          <div class="mini-url">akatsuki-demo.github.io</div>
+          <div class="mini-notice" data-sheet-box><b>お知らせ</b><span data-try="お知らせ"></span></div>
+          <div class="mini-body">
+            <p class="mini-label">14:00 — CLOSING</p>
+            <p class="mini-h">昼二時、あるいは売り切れまで</p>
+            <dl class="mini-info">
+              <div><dt>営業時間</dt><dd><span data-try="営業時間"></span><small data-try="営業時間の補足"></small></dd></div>
+              <div><dt>定休日</dt><dd data-try="定休日"></dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <p class="note">見本なので、ここで書き換えた内容はあなたの画面の中だけで変わります。本物では、お店の人の表を書き換えると、数分でホームページに反映されます。</p>
+    </div>
+
     <div class="faq">
       <span class="label incl-head">よくある質問</span>
       <details>
@@ -784,6 +853,29 @@
   if (reel && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     reel.removeAttribute('autoplay'); reel.pause(); reel.controls = true;
   }
+
+  // 自分で更新できる形の見本：表の「内容」を書き換えると右のページが変わる（見た人の画面の中だけ）
+  // 本物は sheet-sync.js が公開した表のCSVを読んで、同じように data-sheet の要素へ入れる
+  (function(){
+    var fields = {'お知らせ':'try-notice','営業時間':'try-hours','営業時間の補足':'try-hoursnote','定休日':'try-closed'};
+    var mini = document.querySelector('.mini');
+    if (!mini) return;
+    function update(changed){
+      Object.keys(fields).forEach(function(key){
+        var v = document.getElementById(fields[key]).value.replace(/\s+$/,'');
+        mini.querySelectorAll('[data-try="'+key+'"]').forEach(function(el){
+          el.textContent = v;
+          if (key === changed) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+        });
+      });
+      // お知らせが空なら帯ごと消す
+      mini.querySelector('.mini-notice').hidden = !document.getElementById(fields['お知らせ']).value.trim();
+    }
+    Object.keys(fields).forEach(function(key){
+      document.getElementById(fields[key]).addEventListener('input', function(){ update(key); });
+    });
+    update();
+  })();
 </script>
 
 </body>
