@@ -186,6 +186,20 @@
   .specline{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 20px}
   .specline li{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-2)}
   .specline li::before{content:"— ";color:var(--rule)}
+  /* 作り直し：前と後 */
+  .ba{margin-top:clamp(28px,4vw,44px);padding-top:clamp(20px,3vw,28px);border-top:1px solid var(--rule);display:grid;gap:22px}
+  .ba-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .ba-head b{font-family:var(--serif);font-weight:600;font-size:1.0625rem;letter-spacing:.03em}
+  .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,24px)}
+  .ba-pair figure{margin:0;display:grid;gap:8px}
+  .ba-pair img{width:100%;aspect-ratio:1440/900;object-fit:cover;object-position:top;border:1px solid var(--rule)}
+  .ba-pair figcaption{font-size:.8125rem;color:var(--ink-2)}
+  .ba-pair figcaption b{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;margin-right:8px;color:var(--ink)}
+  .ba-list{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule-soft)}
+  .ba-list li{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:4px 16px;padding:12px 0;border-bottom:1px solid var(--rule-soft);font-size:.875rem;line-height:1.9}
+  .ba-list li > span{font-size:.8125rem;color:var(--ink-2)}
+  .ba-list s{color:var(--ink-2);text-decoration-color:var(--rule)}
+  @media (max-width:639px){.ba-list li{grid-template-columns:1fr}}
   .visit{
     display:inline-flex;align-items:center;gap:10px;margin-top:18px;
     font-size:.875rem;font-weight:500;text-decoration:none;
@@ -389,7 +403,7 @@
       <li><a href="#w-akatsuki"><span class="no">01</span><span class="ttl">パンと珈琲 暁<small>ベーカリー</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
       <li><a href="#w-studiofree"><span class="no">02</span><span class="ttl">STUDIO FREE<small>ボディケアサロン</small></span><span class="label biz">Video</span><span class="label kind">実案件</span></a></li>
       <li><a href="#w-lueur"><span class="no">03</span><span class="ttl">LUEUR AOYAMA<small>ヘアサロン</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
-      <li><a href="#w-yohaku"><span class="no">04</span><span class="ttl">余白珈琲<small>コーヒー豆の店</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
+      <li><a href="#w-suketo"><span class="no">04</span><span class="ttl">助任珈琲豆店<small>コーヒー豆の店（作り直し）</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
       <li><a href="#w-kasane"><span class="no">05</span><span class="ttl">KASANE<small>アパレル</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
       <li><a href="#w-arc"><span class="no">06</span><span class="ttl">pilates studio ARC<small>ピラティススタジオ</small></span><span class="label biz">LP</span><span class="label kind">見本</span></a></li>
     </ol>
@@ -478,29 +492,43 @@
       </div>
     </article>
 
-    <article class="work rise" id="w-yohaku">
+    <article class="work rise" id="w-suketo">
       <div class="work-head">
         <span class="label">04 — Web</span>
         <span class="tag">見本（架空の店）</span>
       </div>
-      <div class="stage" style="--stage:#E6DAB6">
+      <div class="stage" style="--stage:#D9D9D6">
         <figure class="pc">
-          <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>YOHAKU COFFEE</span></div>
-          <img src="assets/yohaku-pc.webp" alt="余白珈琲のWebサイト。生成り色の地に明朝の「何もしないを、味わおう。」と、器にコーヒーを注ぐ写真。" width="1440" height="900" loading="lazy" decoding="async">
+          <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>suketo-demo.github.io/suketo</span></div>
+          <img src="assets/suketo-pc.webp" alt="助任珈琲豆店のWebサイト。薄い灰色の地に、焙煎機に豆を入れる写真と、明朝の縦書きの店名。" width="1440" height="900" loading="lazy" decoding="async">
         </figure>
         <figure class="sp">
-          <img src="assets/yohaku-sp.webp" alt="同じサイトのスマホ表示。見出しと説明文の下に写真が続く。" width="780" height="1688" loading="lazy" decoding="async">
+          <img src="assets/suketo-sp.webp" alt="同じサイトのスマホ表示。縦書きの店名の下に写真と、どこの何の店かを書いた一文。" width="780" height="1688" loading="lazy" decoding="async">
         </figure>
       </div>
       <div class="work-body">
         <div>
-          <h3>余白珈琲<small>YOHAKU COFFEE</small></h3>
-          <ul class="specline"><li>1ページ</li><li>商品3種</li><li>スマホ対応</li></ul>
+          <h3>助任珈琲豆店<small>SUKETO COFFEE BEANS</small></h3>
+          <ul class="specline"><li>1ページ</li><li>豆6種と焙煎日</li><li>スマホ対応</li></ul>
         </div>
         <div>
-          <p>コーヒー豆のブランド（架空）。「急がない一杯」という考え方を、ゆったりした余白と明朝の見出しで伝えています。浅煎り・中深煎り・デカフェの3種の紹介から、家で淹れるための3つの手順までを1ページにまとめました。</p>
-          <a class="visit" href="https://yohaku-coffee-studio.makoto0808ellhome.chatgpt.site/" target="_blank" rel="noopener">サイトを見る <span>↗</span></a>
+          <p>徳島市助任本町の、自家焙煎の珈琲豆店（架空）。以前の見本「余白珈琲」を、「名前も中身も、どこにでもある感じがする」というご指摘を受けて作り直しました。全国12軒の豆屋さんのサイトを読み比べて、どこの何の店か・いつ焼くか・誰が焼くかを具体的に書いています。</p>
+          <a class="visit" href="https://suketo-demo.github.io/suketo/" target="_blank" rel="noopener">サイトを見る <span>↗</span></a>
         </div>
+      </div>
+      <div class="ba">
+        <div class="ba-head"><b>作り直した前と後</b><span class="label">Before / After</span></div>
+        <div class="ba-pair">
+          <figure><img src="assets/yohaku-pc.webp" alt="前の見本、余白珈琲のWebサイト。生成り色の地に明朝の見出し。" width="1440" height="900" loading="lazy" decoding="async"><figcaption><b>BEFORE</b>余白珈琲</figcaption></figure>
+          <figure><img src="assets/suketo-pc.webp" alt="作り直した助任珈琲豆店のWebサイト。" width="1440" height="900" loading="lazy" decoding="async"><figcaption><b>AFTER</b>助任珈琲豆店</figcaption></figure>
+        </div>
+        <ul class="ba-list">
+          <li><span>名前</span><div><s>余白珈琲</s> → 助任珈琲豆店（徳島市の町と川の名前から）</div></li>
+          <li><span>最初の一言</span><div><s>ひと息ぶんの、いい時間</s> → 徳島市助任本町の、自家焙煎の珈琲豆店です</div></li>
+          <li><span>豆</span><div><s>英語の名前が3つ、量の表記なし</s> → 6種を産地・精製・煎り具合・100gの値段で</div></li>
+          <li><span>足したもの</span><div>焙煎日と注文の締め切り、店主の話、住所と営業時間</div></li>
+        </ul>
+        <a class="visit" href="https://yohaku-coffee-studio.makoto0808ellhome.chatgpt.site/" target="_blank" rel="noopener">前のサイトも見る <span>↗</span></a>
       </div>
     </article>
 
