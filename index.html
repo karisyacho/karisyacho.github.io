@@ -211,6 +211,8 @@
   .good b{font-family:var(--serif);font-weight:600;font-size:1.0625rem;letter-spacing:.02em}
   .good .v{font-family:var(--mono);font-size:.9375rem;font-variant-numeric:tabular-nums;white-space:nowrap}
   @media (max-width:639px){ .good .g-cap{grid-template-columns:1fr} }
+  /* 小さなお仕事は3枚。スマホの2列で3枚目が片寄らないよう真ん中に置く */
+  @media (max-width:759px){ #small .good:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 7px)} }
   .good small{grid-column:1/-1;color:var(--ink-2);font-size:.8125rem;line-height:1.7}
   .goods-lead{margin:0;max-width:40em;color:var(--ink-2);font-size:.9375rem;line-height:2}
 
@@ -592,6 +594,46 @@
     <p class="credit" style="color:var(--ink-2)">どれも見本（架空の店）です。写真：Unsplash</p>
   </section>
 
+  <section class="wrap sec" id="small" style="border-top:1px solid var(--rule)">
+    <div class="sec-head">
+      <h2>送るだけで頼める、<span class="nb">小さなお仕事</span></h2>
+      <span class="label">Small Jobs</span>
+    </div>
+    <p class="goods-lead">毎月の営業日の画像づくりや、メニューの作り直しのように、手間はかかるけれど後回しになりがちなことを引き受けます。InstagramのDMかLINEで、写真やひとことを送っていただくだけです。打ち合わせはいりません。</p>
+    <ul class="goods">
+      <li class="good">
+        <div class="g-img"><img src="assets/cal-cafe.webp" alt="喫茶こもれびの10月の営業日カレンダー。生成りの地に深緑で、毎週月曜と14日の臨時休業に丸。" width="900" height="1125" loading="lazy" decoding="async"></div>
+        <div class="g-cap"><b>カフェ</b><small>「今月の休みは○日」と送るだけ</small></div>
+      </li>
+      <li class="good">
+        <div class="g-img"><img src="assets/cal-sweets.webp" alt="焼き菓子ことりの10月のおやすみカレンダー。ピンクの地に、休みの日と31日のハロウィン営業を印で。" width="900" height="1125" loading="lazy" decoding="async"></div>
+        <div class="g-cap"><b>お菓子屋</b><small>臨時休業や特別営業も印で分かる</small></div>
+      </li>
+      <li class="good">
+        <div class="g-img"><img src="assets/cal-bar.webp" alt="Bar月あかりの10月の営業カレンダー。紺の地に金で、日曜・月曜の休みと21日の貸切を。" width="900" height="1125" loading="lazy" decoding="async"></div>
+        <div class="g-cap"><b>バー</b><small>お店の雰囲気に合わせてつくります</small></div>
+      </li>
+    </ul>
+    <p class="credit" style="color:var(--ink-2)">毎月の営業日カレンダーの見本（架空の店）です。投稿用（4:5）とストーリー用（9:16）の2枚をお渡しします。</p>
+    <div class="more">
+      <div class="sheet more-sheet">
+        <div class="row">
+          <div class="k">営業日カレンダー<small>毎月、休みの日を送っていただくだけ。投稿用とストーリー用の2枚。1回だけなら¥2,000</small></div>
+          <div class="v">¥1,500 / 月</div>
+        </div>
+        <div class="row">
+          <div class="k">メニュー表の作り直し<small>いまのメニューをスマホで撮って送るだけ。店内用とInstagram用に</small></div>
+          <div class="v">¥5,000</div>
+        </div>
+        <div class="row">
+          <div class="k">Googleマップのお店情報を整える<small>営業時間・写真・紹介文の抜けを先にお調べして、整えます。お店の方は、管理者に追加していただくだけです</small></div>
+          <div class="v">¥3,000</div>
+        </div>
+      </div>
+      <p class="note">内容がそろった次の日にお届けします。</p>
+    </div>
+  </section>
+
   <section class="wrap sec" id="price" style="border-top:1px solid var(--rule)">
     <div class="sec-head">
       <h2>料金と納期</h2>
@@ -690,10 +732,6 @@
         </div>
         <div class="row">
           <div class="k">ショップカード・名刺<small>両面・入稿用データまで</small></div>
-          <div class="v ask">ご相談ください</div>
-        </div>
-        <div class="row">
-          <div class="k">Googleマップの店舗情報<small>写真・営業時間・紹介文を整える</small></div>
           <div class="v ask">ご相談ください</div>
         </div>
         <div class="row">
