@@ -3,533 +3,293 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#142b48" />
+    <meta name="theme-color" content="#e6e8e8" />
+    <title>AIMA — 触れて、染まる。</title>
     <meta
       name="description"
-      content="藍に触れ、余白に泊まる。徳島の滞在型アトリエ AIMA を描いたコンセプトサイト。自分だけの青と、ゆっくり流れる一泊を。"
+      content="一枚の布に、あなたの青を。触れると藍がひろがる、AIMAのインタラクティブなアトリエ。"
     />
-    <meta property="og:title" content="AIMA — 藍と余白のアトリエ" />
+    <meta property="og:title" content="AIMA — 触れて、染まる。" />
+    <meta property="og:description" content="一枚の布から、旅がはじまる。" />
     <meta
-      property="og:description"
-      content="青に、ほどける。徳島で過ごす、藍と余白の一泊。"
+      property="og:image"
+      content="https://karisyacho.github.io/aima/assets/hero.webp"
     />
-    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://karisyacho.github.io/aima/" />
-    <meta property="og:image" content="https://karisyacho.github.io/aima/assets/hero.webp" />
-    <meta property="og:image:width" content="1536" />
-    <meta property="og:image:height" content="1024" />
-    <meta property="og:image:alt" content="藍の布が広がる、AIMAのアトリエ" />
+    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="noindex, follow" />
     <link rel="canonical" href="https://karisyacho.github.io/aima/" />
-    <title>AIMA — 藍と余白のアトリエ</title>
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link
-      rel="preload"
-      href="./assets/hero.webp"
-      as="image"
-      fetchpriority="high"
-    />
+    <link rel="icon" href="./assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Noto+Sans+JP:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=2" />
+    <script src="./cloth.js?v=2" defer></script>
+    <script src="./script.js?v=2" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">本文へスキップ</a>
+    <a class="skip-link" href="#about">体験をスキップして施設の紹介へ</a>
     <header class="site-header" id="top">
       <a class="brand" href="#top" aria-label="AIMA トップへ"
-        ><span class="brand-name">AIMA<span class="brand-dot">.</span></span
-        ><span class="brand-descriptor"
-          >藍と余白のアトリエ<br />TOKUSHIMA, JAPAN</span
-        ></a
+        >AIMA<span>藍間</span></a
       >
+      <p class="header-caption">
+        INDIGO, IN YOUR HANDS.<br />TOKUSHIMA / JAPAN
+      </p>
       <nav class="desktop-nav" aria-label="メインナビゲーション">
-        <a href="#about">AIMAについて</a><a href="#experience">藍に触れる</a
-        ><a href="#stay">余白に泊まる</a>
+        <a href="#experience">染める</a><a href="#stay">泊まる</a
+        ><button data-open-planner>旅をつくる ↗</button>
       </nav>
-      <div class="header-actions">
-        <a class="plan-link" href="#visit"
-          >旅をつくる <span aria-hidden="true">↗</span></a
-        ><button
-          class="menu-toggle"
-          aria-label="メニューを開く"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span></span><span></span>
-        </button>
-      </div>
+      <button
+        class="menu-toggle"
+        aria-label="メニューを開く"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span>
+      </button>
     </header>
-    <div class="mobile-menu" id="mobile-menu" hidden>
+    <div id="mobile-menu" class="mobile-menu" hidden>
       <nav aria-label="モバイルナビゲーション">
-        <a href="#about"><small>ABOUT</small>AIMAについて</a
-        ><a href="#blue"><small>SHADES OF BLUE</small>青の標本室</a
-        ><a href="#experience"><small>EXPERIENCE</small>藍に触れる</a
-        ><a href="#stay"><small>STAY</small>余白に泊まる</a
-        ><a href="#visit"><small>YOUR JOURNEY</small>旅をつくる ↗</a>
+        <a href="#about">AIMAとは</a><a href="#experience">染める</a
+        ><a href="#stay">泊まる</a><a href="#visit">旅をつくる ↗</a>
       </nav>
-      <p>少し遠くへ。少し、自分の近くへ。</p>
     </div>
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-image">
-          <img
-            src="./assets/hero.webp"
-            width="1536"
-            height="1024"
-            alt="自然光の差す木造アトリエに、波のように大きく吊るされた藍染の布"
-            fetchpriority="high"
-          />
-        </div>
-        <div class="hero-shade"></div>
-        <div class="hero-topline">
-          <span>AN ATELIER. A STAY. A LITTLE SPACE.</span
-          ><span class="concept-label">A CONCEPT BY AWAI</span>
-        </div>
-        <div class="hero-copy">
-          <p class="hero-eyebrow">日々と、日々のあいまに。</p>
-          <h1 id="hero-title"><span>青に、</span><span>ほどける。</span></h1>
-          <p class="hero-description">
-            藍に触れ、余白に泊まる。<br />徳島で見つける、私のための一泊。
-          </p>
-        </div>
-        <p class="hero-vertical" aria-hidden="true">
-          手を染める。心が澄んでいく。
-        </p>
-        <a class="hero-explore" href="#about"
-          ><span>FIND YOUR OWN BLUE</span
-          ><span class="arrow-circle" aria-hidden="true">↓</span></a
-        >
-        <span class="hero-coordinate">AIMA / 藍間</span>
-      </section>
-      <div class="hero-caption">
-        <span>THE BEAUTY OF TAKING YOUR TIME.</span
-        ><span>徳島に描く、架空の藍染アトリエと小さな宿。</span
-        ><a href="#blue">青の標本室へ <span aria-hidden="true">↗</span></a>
-      </div>
-
-      <section
-        class="about section-wrap"
-        id="about"
-        aria-labelledby="about-title"
-      >
-        <div class="section-label reveal">
-          <span class="label-mark" aria-hidden="true"></span>THE AIMA PHILOSOPHY
-        </div>
-        <div class="about-heading reveal">
-          <p class="english-display">A slower<br /><em>shade of life.</em></p>
-          <h2 id="about-title">
-            何もしない、ではなく。<br />ひとつのことを、ゆっくり。
-          </h2>
-        </div>
-        <div class="about-copy reveal">
-          <div class="mini-symbol" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-          <p>水に触れる。布をひらく。<br />青が深まるのを、ただ待ってみる。</p>
-          <p>
-            いつもなら通り過ぎてしまう時間に、<br />ふと、自分の感覚が戻ってくる。
-          </p>
-          <p>
-            AIMAは、藍染のアトリエと小さな宿。<br />手仕事のある一日と、予定のない翌朝を。<br />日常のあいまに、静かな一泊をつくりました。
-          </p>
-          <a class="text-link" href="#experience"
-            >ここでできること <span aria-hidden="true">↗</span></a
-          >
-        </div>
-        <div class="about-bottom">
-          <span>TOUCH. BREATHE. BE.</span><span>余白も、旅の目的になる。</span>
-        </div>
-      </section>
-
-      <section class="blue-room" id="blue" aria-labelledby="blue-title">
-        <div class="blue-intro section-wrap">
-          <div class="section-label reveal">
-            <span class="label-mark" aria-hidden="true"></span>SHADES OF BLUE
-          </div>
-          <h2 class="reveal" id="blue-title">
-            今日のあなたは、<br />どんな青ですか。
-          </h2>
-          <p class="reveal">
-            淡い青も、深い青も。<br />心に近い色を、ひとつ選んでみてください。
-          </p>
-        </div>
-        <div class="specimen-layout section-wrap">
-          <div class="specimen" aria-label="選んだ青を映す布の標本">
-            <span class="specimen-label">AIMA COLOR STUDY</span
-            ><span class="specimen-number" aria-hidden="true">藍</span>
-            <div class="cloth-stage" aria-hidden="true">
-              <svg
-                class="cloth"
-                viewBox="0 0 520 560"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs>
-                  <linearGradient id="clothLight" x1="0" y1="0" x2="1" y2="0">
-                    <stop stop-color="#000" stop-opacity=".08" />
-                    <stop offset=".17" stop-color="#fff" stop-opacity=".23" />
-                    <stop offset=".34" stop-color="#000" stop-opacity=".13" />
-                    <stop offset=".55" stop-color="#fff" stop-opacity=".25" />
-                    <stop offset=".72" stop-color="#000" stop-opacity=".19" />
-                    <stop offset=".91" stop-color="#fff" stop-opacity=".13" />
-                    <stop offset="1" stop-color="#000" stop-opacity=".12" />
-                  </linearGradient>
-                  <pattern
-                    id="weave"
-                    width="4"
-                    height="4"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <path
-                      d="M0 1H4M1 0V4"
-                      stroke="#fff"
-                      stroke-opacity=".07"
-                      stroke-width=".6"
-                    />
-                    <path
-                      d="M0 3H4M3 0V4"
-                      stroke="#000"
-                      stroke-opacity=".06"
-                      stroke-width=".5"
-                    />
-                  </pattern>
-                  <path
-                    id="clothShape"
-                    d="M84 82C170 99 321 44 426 83C399 195 458 353 415 482C315 456 204 509 99 467C119 354 57 234 84 82Z"
-                  />
-                </defs>
-                <path d="M71 78L437 77" stroke="#455566" stroke-width="1" />
-                <use
-                  href="#clothShape"
-                  fill="#000"
-                  opacity=".07"
-                  transform="translate(9 13)"
-                />
-                <use
-                  class="cloth-color-underlay"
-                  href="#clothShape"
-                  fill="#315b8b"
-                />
-                <use class="cloth-color" href="#clothShape" fill="#315b8b" />
-                <use href="#clothShape" fill="url(#clothLight)" />
-                <use href="#clothShape" fill="url(#weave)" />
-                <path
-                  d="M88 92C171 109 320 55 421 94M102 457C204 499 314 446 416 472"
-                  fill="none"
-                  stroke="#e3edff"
-                  stroke-opacity=".38"
-                  stroke-width="1"
-                  stroke-dasharray="2 3"
-                />
-                <path
-                  d="M94 74V95M415 71V94"
-                  stroke="#7c6c51"
-                  stroke-width="5"
-                />
-              </svg>
-            </div>
-            <div class="specimen-bottom">
-              <span id="specimen-roman">HANADA</span
-              ><span>天然の色を想う、デジタルの標本。</span>
-            </div>
-          </div>
-          <div class="shade-info">
-            <div class="shade-heading">
-              <p class="eyebrow">FIND YOUR SHADE</p>
-              <h3 id="shade-name">縹<span>はなだ</span></h3>
-              <p id="shade-description">
-                晴れた日の、その向こう。<br />気持ちまでひらく、まっすぐな青。
-              </p>
-            </div>
-            <fieldset class="shade-picker">
-              <legend>心に近い青を選ぶ</legend>
-              <label style="--swatch: #b4d4dc"
-                ><input type="radio" name="shade" value="0" /><span
-                  class="swatch"
-                ></span
-                ><span>白藍</span></label
-              ><label style="--swatch: #6299ae"
-                ><input type="radio" name="shade" value="1" /><span
-                  class="swatch"
-                ></span
-                ><span>浅葱</span></label
-              ><label style="--swatch: #315b8b"
-                ><input type="radio" name="shade" value="2" checked /><span
-                  class="swatch"
-                ></span
-                ><span>縹</span></label
-              ><label style="--swatch: #20396b"
-                ><input type="radio" name="shade" value="3" /><span
-                  class="swatch"
-                ></span
-                ><span>藍</span></label
-              ><label style="--swatch: #192b40"
-                ><input type="radio" name="shade" value="4" /><span
-                  class="swatch"
-                ></span
-                ><span>留紺</span></label
-              >
-            </fieldset>
-            <p class="shade-note">
-              同じ藍から、違う表情が生まれる。<br />旅先では、あなた自身の手で。
-            </p>
-            <a class="text-link" href="#experience"
-              >藍染の時間を見てみる <span aria-hidden="true">↗</span></a
-            >
-            <p class="sr-only" id="shade-announcement" aria-live="polite"></p>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="experience section-wrap"
-        id="experience"
-        aria-labelledby="experience-title"
-      >
-        <div class="section-label reveal">
-          <span class="label-mark" aria-hidden="true"></span>IN THE ATELIER
-        </div>
-        <div class="experience-grid">
-          <figure class="craft-photo image-reveal">
+      <section class="immersive-scroll" id="blue" aria-labelledby="hero-title">
+        <div class="immersive-stage">
+          <div class="stage-type" aria-hidden="true">AI<span>MA</span></div>
+          <div class="cloth-shadow" aria-hidden="true"></div>
+          <div class="canvas-fallback">
             <img
-              src="./assets/craft.webp"
-              srcset="./assets/craft-small.webp 768w, ./assets/craft.webp 1536w"
-              sizes="(max-width: 540px) 90vw, 50vw"
+              src="./assets/hero.webp"
               width="1536"
               height="1024"
-              alt="藍の染液から濡れた布を引き上げる職人の手"
-              loading="lazy"
+              alt="アトリエにひろがる藍染の布"
             />
-            <figcaption>手で触れて、はじめてわかる青がある。</figcaption>
-            <span class="photo-stamp" aria-hidden="true"
-              >MADE BY<br />YOUR HANDS.</span
-            >
-          </figure>
-          <div class="experience-copy reveal">
-            <p class="small-serif">Touch the blue.</p>
-            <h2 id="experience-title">持ち帰るのは、<br />色と、この時間。</h2>
-            <p>
-              染めて、ひらいて、空気に触れさせる。<br />少しずつ青になっていく布を眺めながら、<br />世界にひとつの一枚をつくります。
-            </p>
-            <p>
-              はじめてでも、大丈夫。<br />結び方から染め上がりまで、<br />アトリエのスタッフが一緒に手を動かします。
-            </p>
-            <dl class="detail-list">
-              <div>
-                <dt>体験時間</dt>
-                <dd>約90分</dd>
-              </div>
-              <div>
-                <dt>つくるもの</dt>
-                <dd>リネンハンカチ 1枚</dd>
-              </div>
-              <div>
-                <dt>体験プラン</dt>
-                <dd>¥6,600 <small>／ 1名・税込</small></dd>
-              </div>
-            </dl>
-            <a class="text-link" href="#visit" data-preset="day"
-              >この体験で旅をつくる <span aria-hidden="true">↗</span></a
-            >
+          </div>
+          <canvas
+            id="cloth-canvas"
+            aria-label="風で揺れる布。布をタップするか青を落とすボタンで染められます。"
+          ></canvas>
+          <div class="arrival-photo" aria-hidden="true">
+            <img src="./assets/hero.webp" width="1536" height="1024" alt="" />
+          </div>
+          <div class="scene scene-intro">
+            <p class="eyebrow">NOT JUST A COLOR.<br />A FEELING.</p>
+            <h1 id="hero-title">触れて、<br /><span>染まる。</span></h1>
+            <p class="scene-note">一枚の布に、あなたの青を。</p>
+          </div>
+          <div class="scene scene-unfold" aria-hidden="true">
+            <p class="eyebrow">LET YOUR BLUE UNFOLD.</p>
+            <h2>同じ青には、<br />もう出会えない。</h2>
+            <p>触れた跡も、にじみも、あなたのもの。</p>
+          </div>
+          <div class="scene scene-arrival" aria-hidden="true">
+            <p class="eyebrow">FROM YOUR SCREEN, TO YOUR HANDS.</p>
+            <h2>その感覚に、<br />会いにいこう。</h2>
+            <p>徳島、藍と余白のアトリエ。</p>
+          </div>
+          <div class="dye-tools">
+            <div class="dye-prompt">
+              <span class="gesture-icon" aria-hidden="true">＋</span
+              ><span
+                >布に触れて、藍をひろげる。<small>TOUCH THE CLOTH</small></span
+              >
+            </div>
+            <div class="dye-actions">
+              <button id="ink-drop">
+                青を落とす <span aria-hidden="true">＋</span></button
+              ><button id="reset-cloth" aria-label="染めた布を白に戻す">
+                やり直す ↺
+              </button>
+            </div>
+            <fieldset class="shade-picker">
+              <legend>あなたの青</legend>
+              <label style="--swatch: #8daebd"
+                ><input type="radio" name="shade" value="0" /><span></span
+                ><span class="sr-only">白藍</span></label
+              ><label style="--swatch: #497f98"
+                ><input type="radio" name="shade" value="1" /><span></span
+                ><span class="sr-only">浅葱</span></label
+              ><label style="--swatch: #23448c"
+                ><input
+                  type="radio"
+                  name="shade"
+                  value="2"
+                  checked
+                /><span></span><span class="sr-only">縹</span></label
+              ><label style="--swatch: #172e65"
+                ><input type="radio" name="shade" value="3" /><span></span
+                ><span class="sr-only">藍</span></label
+              ><label style="--swatch: #131e31"
+                ><input type="radio" name="shade" value="4" /><span></span
+                ><span class="sr-only">留紺</span></label
+              ><output id="shade-name">縹</output>
+            </fieldset>
+            <p id="dye-status" class="sr-only" aria-live="polite"></p>
+          </div>
+          <div class="stage-footer">
+            <a href="#about" class="scroll-cue"
+              ><span>SCROLL TO UNFOLD</span><span aria-hidden="true">↓</span></a
+            ><span id="chapter-label">TOUCH — 01 / 03</span>
+          </div>
+          <div class="story-rail" aria-hidden="true">
+            <span class="rail-fill"></span>
           </div>
         </div>
       </section>
-
-      <section class="stay" id="stay" aria-labelledby="stay-title">
-        <div class="stay-heading section-wrap">
-          <div class="section-label reveal">
-            <span class="label-mark" aria-hidden="true"></span>A LITTLE SPACE TO
-            STAY
-          </div>
-          <div class="stay-title reveal">
-            <h2 id="stay-title">予定のない朝まで、<br />泊まっていこう。</h2>
-            <p class="small-serif">Stay a little longer.</p>
-          </div>
+      <section class="manifesto" id="about" aria-labelledby="manifesto-title">
+        <div class="manifesto-top">
+          <span>THIS IS AIMA.</span><span>藍と、余白と、あなた。</span>
         </div>
-        <figure class="stay-photo image-reveal">
+        <h2 id="manifesto-title">
+          <span>染めるのは、</span
+          ><span class="manifesto-blue">布だけじゃない。</span>
+        </h2>
+        <div class="manifesto-bottom">
+          <p class="manifesto-english">
+            Make something.<br /><em>Feel something.</em>
+          </p>
+          <p>
+            水に触れる。布をひらく。<br />青が深まるのを、ただ待ってみる。<br /><br />画面の中で生まれた小さな好奇心を、<br />今度は、ほんとうの手触りへ。<br />AIMAは、藍染のアトリエと小さな宿。<br />予定をひとつ減らして、感覚をひとつ取り戻す場所。
+          </p>
+        </div>
+      </section>
+      <section
+        class="craft-scene"
+        id="experience"
+        aria-labelledby="craft-title"
+      >
+        <div class="craft-frame">
+          <img
+            src="./assets/craft.webp"
+            srcset="./assets/craft-small.webp 768w, ./assets/craft.webp 1536w"
+            sizes="100vw"
+            width="1536"
+            height="1024"
+            alt="藍の染液から濡れた布をひらく手"
+            loading="lazy"
+          />
+          <div class="craft-tint"></div>
+          <span class="craft-kicker">THE ATELIER / 手の時間</span>
+          <h2 id="craft-title">手が覚える、<br /><em>青。</em></h2>
+          <p class="craft-description">
+            結んで、染めて、ひらいて。<br />失敗も正解もない。<br />その日にしか生まれない、一枚になる。
+          </p>
+          <span class="giant-touch" aria-hidden="true">TOUCH.</span>
+        </div>
+        <div class="experience-strip">
+          <p>はじめての藍染</p>
+          <span>90分 / リネンハンカチ 1枚</span
+          ><span>¥6,600 <small>1名・税込</small></span
+          ><button data-preset="day">
+            この時間を選ぶ <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+      <section class="stay-scene" id="stay" aria-labelledby="stay-title">
+        <div class="stay-topline">
+          <span>AFTER THE BLUE.</span><span>一日、二組だけ。</span>
+        </div>
+        <div class="stay-heading">
+          <h2 id="stay-title">つづきは、<br />何もしない時間。</h2>
+          <p>STAY<br /><em>a little longer.</em></p>
+        </div>
+        <div class="room-window">
           <img
             src="./assets/stay.webp"
             width="1536"
             height="1024"
-            alt="藍色の布をかけた低いベッドと、庭へひらく木枠の窓がある客室"
+            alt="藍色の布をかけたベッドと、庭に面した大きな窓のある客室"
             loading="lazy"
           />
-          <figcaption>
-            <span>THE GARDEN ROOM</span
-            ><span>窓の外を眺める。それも立派な予定。</span>
-          </figcaption>
-        </figure>
-        <div class="stay-details section-wrap">
-          <p class="reveal">
-            染めた手を休めたら、<br />庭を眺めたり、本をひらいたり。<br />静かな部屋で、時間を自分に返してあげる。
+          <div class="window-left" aria-hidden="true"></div>
+          <div class="window-right" aria-hidden="true"></div>
+          <div class="room-note">
+            <span>THE GARDEN ROOM</span>
+            <p>窓をひらく。<br />予定を、閉じる。</p>
+          </div>
+        </div>
+        <div class="stay-bottom">
+          <p>
+            庭を眺めても、本をひらいても。<br />染めた手を休めたら、時間を自分に返してあげる。
           </p>
-          <dl class="stay-facts reveal">
-            <div>
-              <dt>ROOMS</dt>
-              <dd>一日二組</dd>
-            </div>
-            <div>
-              <dt>YOUR SPACE</dt>
-              <dd>庭に向く、二人の部屋</dd>
-            </div>
-            <div>
-              <dt>ONE NIGHT & ATELIER</dt>
-              <dd>¥28,600〜<small>／ 1名・税込</small></dd>
-            </div>
-          </dl>
-          <a class="text-link" href="#visit" data-preset="stay"
-            >一泊の旅をつくる <span aria-hidden="true">↗</span></a
-          >
+          <div>
+            <span>藍染 ＋ 一泊 ＋ 朝食</span>
+            <p>¥28,600〜 <small>1名・税込</small></p>
+          </div>
+          <button data-preset="stay">この余白を選ぶ ↗</button>
         </div>
       </section>
-
-      <section class="rhythm section-wrap" aria-labelledby="rhythm-title">
-        <div class="rhythm-intro">
-          <div class="section-label reveal">
-            <span class="label-mark" aria-hidden="true"></span>THE RHYTHM OF
-            AIMA
-          </div>
-          <h2 id="rhythm-title" class="reveal">時計より、<br />心のままに。</h2>
-          <p class="reveal">こんな一泊は、いかがでしょう。</p>
-        </div>
-        <ol class="journey">
-          <li class="reveal">
-            <time>14:00</time>
-            <div>
-              <h3>お茶で、ひと息。</h3>
-              <p>
-                荷物を置いて、庭の見える席へ。<br />急いできた気持ちも、ここでほどいて。
-              </p>
-            </div>
-            <span aria-hidden="true">☉</span>
-          </li>
-          <li class="reveal">
-            <time>15:00</time>
-            <div>
-              <h3>青に、手を入れる。</h3>
-              <p>
-                好みの色を見つけて、布を染める。<br />乾くまでの時間には、庭をひと巡り。
-              </p>
-            </div>
-            <span class="journey-blue" aria-hidden="true">◒</span>
-          </li>
-          <li class="reveal">
-            <time>19:00</time>
-            <div>
-              <h3>夜を、ゆっくり使う。</h3>
-              <p>
-                お気に入りの本と、やわらかな灯り。<br />夕食は近くの店を訪ねるのも楽しみ。
-              </p>
-            </div>
-            <span aria-hidden="true">☾</span>
-          </li>
-          <li class="reveal">
-            <time>08:00</time>
-            <div>
-              <h3>いつもより、遠回り。</h3>
-              <p>
-                朝食のあとは、近くを歩いてみる。<br />染めた一枚と、少し軽くなった自分を連れて。
-              </p>
-            </div>
-            <span aria-hidden="true">↗</span>
-          </li>
+      <section class="day-ribbon" aria-label="一泊の流れ">
+        <p>ONE SLOW DAY</p>
+        <ol>
+          <li><time>14:00</time><span>ひと息。</span></li>
+          <li><time>15:00</time><span>染める。</span></li>
+          <li><time>19:00</time><span>ほどける。</span></li>
+          <li><time>08:00</time><span>遠回り。</span></li>
         </ol>
       </section>
-
-      <section class="faq-section section-wrap" aria-labelledby="faq-title">
-        <div>
-          <div class="section-label reveal">
-            <span class="label-mark" aria-hidden="true"></span>BEFORE YOUR VISIT
-          </div>
-          <h2 id="faq-title" class="reveal">旅の前に。</h2>
-        </div>
+      <section class="visit" id="visit" aria-labelledby="visit-title">
+        <span class="visit-index">YOUR NEXT CHAPTER.</span>
+        <h2 id="visit-title">画面の、その先へ。</h2>
+        <button class="journey-button" data-open-planner>
+          <span>あなたの旅をつくる</span
+          ><span class="journey-arrow" aria-hidden="true">↗</span>
+        </button>
+        <p>今日選んだ青を、旅のしおりに連れていこう。</p>
+        <noscript
+          ><p>しおりの作成にはJavaScriptを有効にしてください。</p></noscript
+        >
+      </section>
+      <section class="practical">
+        <p>BEFORE YOU GO.</p>
         <div class="faq-list">
           <details>
-            <summary>
-              藍染は、はじめてでもできますか？<span aria-hidden="true">+</span>
-            </summary>
+            <summary>はじめてでも、ひとりでも？<span>＋</span></summary>
             <p>
-              はじめての方を想定した体験です。布の結び方や染め方を、スタッフが一つずつご案内するプランとして設計しています。
+              どちらも歓迎するアトリエとして設計しています。スタッフと一緒に、結び方から染め上がりまでを体験する約90分のプランです。
             </p>
           </details>
           <details>
-            <summary>
-              泊まらずに、体験だけでも？<span aria-hidden="true">+</span>
-            </summary>
+            <summary>泊まらずに、体験だけでも？<span>＋</span></summary>
             <p>
-              はい。約90分の藍染体験だけを選べます。「旅をつくる」で「日帰りのアトリエ」を選んでみてください。
+              「はじめての藍染」から日帰りのプランを選べます。袖をまくれる、汚れてもよい服装を想定しています。
             </p>
           </details>
           <details>
-            <summary>
-              どんな服装で行けばよいですか？<span aria-hidden="true">+</span>
-            </summary>
+            <summary>実際に予約できますか？<span>＋</span></summary>
             <p>
-              袖をまくれる、動きやすい服装を想定しています。染液がつくことがあるので、汚れてもよい服がおすすめです。エプロンは貸し出す設定です。
+              AIMAは架空のアトリエと宿を描いたコンセプトサイトです。しおりを作って保存できますが、実際の予約・決済はできません。施設・料金・写真は制作上の設定です。
             </p>
           </details>
-          <details>
-            <summary>
-              このサイトから予約できますか？<span aria-hidden="true">+</span>
-            </summary>
-            <p>
-              AIMAは、架空のアトリエと宿を描いたコンセプトサイトです。旅のプランを作って保存できますが、実際の予約・決済はできません。施設・料金・写真はすべて制作上の設定です。
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <section class="visit" id="visit" aria-labelledby="visit-title">
-        <div class="visit-water" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="visit-content">
-          <p class="eyebrow reveal">MAKE ROOM FOR YOURSELF.</p>
-          <h2 id="visit-title" class="reveal">
-            次の余白を、<br />ここにつくろう。
-          </h2>
-          <p class="reveal">
-            ひとりでも、大切な人とでも。<br />あなたのペースで過ごす、一日を。
-          </p>
-          <button class="round-cta" data-open-planner>
-            <span>旅のしおりをつくる</span
-            ><span aria-hidden="true">↗</span></button
-          ><noscript
-            ><p class="no-script">
-              旅のしおりをつくるにはJavaScriptを有効にしてください。プラン内容はこのページでご覧いただけます。
-            </p></noscript
-          ><small>予約・決済を行わない体験デモです。</small>
         </div>
       </section>
     </main>
-    <footer class="site-footer section-wrap">
-      <div class="footer-top">
-        <a class="footer-name" href="#top" aria-label="AIMA トップへ"
-          >AIMA<span>.</span></a
-        >
-        <div class="footer-tagline">
-          藍と余白のアトリエ<br /><span>BETWEEN BLUE & YOU.</span>
-        </div>
-        <a class="back-top" href="#top" aria-label="ページの先頭へ">↑</a>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 AIMA — CONCEPT & DESIGN BY AWAI</p>
-        <p>架空の施設を描いた見本サイト / 写真：AI生成</p>
-        <button id="motion-toggle" aria-pressed="false">
-          <span aria-hidden="true">Ⅱ</span> 動きを止める
-        </button>
+    <footer>
+      <a class="footer-logo" href="#top">AIMA<span>藍間</span></a>
+      <div class="footer-info">
+        <p>架空の藍染アトリエと宿 / 写真：AI生成</p>
+        <p>CONCEPT & DESIGN BY AWAI © 2026</p>
+        <a href="#top">もう一度、染めてみる ↑</a>
       </div>
     </footer>
-    <dialog class="planner-dialog" id="planner" aria-labelledby="planner-title">
+    <button
+      id="motion-toggle"
+      class="motion-toggle"
+      aria-pressed="false"
+      aria-label="動きを止める"
+    >
+      Ⅱ <span>動きを止める</span>
+    </button>
+    <dialog id="planner" class="planner-dialog" aria-labelledby="planner-title">
       <button class="dialog-close" aria-label="閉じる">×</button>
       <div class="planner-cover">
-        <span>AIMA / YOUR JOURNEY</span>
-        <p>A little time,<br /><em>just for you.</em></p>
         <img
           src="./assets/stay.webp"
           width="1536"
@@ -537,9 +297,10 @@
           alt="庭に向いた客室"
           loading="lazy"
         />
+        <p>A little time,<br /><em>just for you.</em></p>
       </div>
       <div class="planner-body">
-        <p class="eyebrow">PLAN YOUR SLOW DAY</p>
+        <p class="eyebrow">YOUR BLUE, YOUR JOURNEY.</p>
         <h2 id="planner-title">旅のしおりをつくる</h2>
         <p class="planner-intro">
           気になる過ごし方を選んでみてください。<br />実際の予約・決済は行いません。
@@ -574,27 +335,24 @@
             >
           </div>
           <div class="estimate">
-            <span>プランの目安 <small>税込</small></span
-            ><output id="estimate">¥57,200</output>
+            <span>参考料金・税込</span><output id="estimate">¥57,200</output>
           </div>
           <p class="estimate-note">
-            表示は架空の参考料金です。空室状況や予約枠を示すものではありません。
+            架空の参考料金です。予約枠を示すものではありません。
           </p>
-          <button class="submit-plan" type="submit">
-            しおりを見る <span aria-hidden="true">↗</span>
-          </button>
+          <button type="submit" class="submit-plan">しおりを見る ↗</button>
         </form>
-        <div class="plan-result" id="plan-result" hidden>
-          <p class="result-kicker">YOUR TIME AT AIMA</p>
+        <div id="plan-result" hidden>
+          <p class="eyebrow">YOUR TIME AT AIMA</p>
           <h3>余白の準備が、できました。</h3>
           <div id="result-details"></div>
           <p class="result-note">
-            これは旅のイメージを楽しむためのしおりです。<br />予約は成立していません。
+            旅のイメージを楽しむためのしおりです。<br />予約は成立していません。
           </p>
-          <button class="submit-plan" id="download-plan">
-            しおりを保存する <span aria-hidden="true">↓</span></button
-          ><button class="edit-plan" id="edit-plan">プランを変更する</button>
-          <p class="sr-only" id="download-status" aria-live="polite"></p>
+          <button id="download-plan" class="submit-plan">
+            しおりを保存する ↓</button
+          ><button id="edit-plan" class="edit-plan">プランを変更する</button>
+          <p id="download-status" class="sr-only" aria-live="polite"></p>
         </div>
       </div>
     </dialog>
