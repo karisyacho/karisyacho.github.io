@@ -1,4 +1,4 @@
-:HL["/awai-paper/_next/static/chunks/1s_gcdrmr0icb.css","style"]
+:HL["/awai-paper/_next/static/chunks/2jr3e--7rh4s_.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"material","h":96,"c":"$Q2"}]]
-0:{"b":"Cn7wyWCmBeTlKY4rIpM-Y","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"m__AuKMaPBYAPbx0S3nID","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

@@ -27,3 +27,11 @@ v9は家庭的な服装と寝具で、本人から「寝ている娘を揉む母
 内蔵imagegenによる構成確認用生成画像。実際のSTUDIO FREEの撮影/納品作品ではない。札の生成イメージ表記を維持。
 横: materials/studiofree-v10-source.png → studiofree-mood-v10.webp。縦: materials/studiofree-v10-mobile-source.png → studiofree-mood-mobile-v10.webp。
 姿勢は施術者が立って服の上から肩周りに両手を置く。写っている施設と人物は架空。元の実案件へのリンクは維持。
+## WORK motion：助任のWeb画面
+- suketo-web.webp：site-awai-v2/assets/works/suketo.webp を無加工コピー。1200×750px、54,322 bytes。
+- suketo-web-mobile.webp：site-awai-v2/assets/works/suketo-sp.webp を無加工コピー。520×1125px、32,640 bytes。
+- 両ファイルはコピー元とのSHA-256一致を確認。既存助任作品のWeb画面で、写真の向こう側の表示に使用。
+## WORK motion：KASANEのカット素材
+- kasane-layer.webp：site-kasane/assets/look-03.webp を無加工コピー。900×1200px、134,240 bytes。灰色コートと襟元のレイヤーを写した元素材で、黒のトーンは構成上CSSにより調整。
+- kasane-detail.webp：public/media/works/kasane.webp を無加工コピー。1300×866px、37,082 bytes。既存KASANE作品写真を、本編CSSで別の寄りの構図として使用。
+- 両ファイルはコピー元とのSHA-256一致を確認。fabric-rib.webp / fabric-linen.webp は使用しない。
