@@ -12,3 +12,9 @@ Use case: photorealistic-natural. Asset type: high-resolution material texture f
 
 背景の生成プロンプト:
 Use case: photorealistic-natural. Asset type: background photograph for a quiet Japanese cinematic website material study. One landscape image 1536x1024. A candid photograph of a small anonymous neighborhood in Japan at late dusk, taken from inside through an old slightly reflective window. An ordinary narrow street, a small independent shop with one gently warm tungsten-lit wooden window, some dark residential building fragments. In the near foreground the glass carries a faint reflection of the room. The frame feels private, incidental, human-scale, not a tourist view and not a staged advertisement. No people as subjects, no readable signage, no logos, no neon, no lantern festival, no large city skyline, no dramatic architecture, no lens flare, no foreground glow. Dark gray evening, restrained amber shop light, muted charcoal buildings, slight blue-gray residual dusk sky only in a small part. Real photographic texture and plausible understated optics. The shop window sits near the middle-right so it can be revealed behind a washi slit, with natural dark detail around it. Composition usable as landscape and portrait crop. No paper, no text, no UI, no framing border. Gentle stillness, a fragment of town behind glass. Generated fictional setting; do not claim a specific real location.
+
+## v9：楮の素材感を追加
+内蔵imagegenで生成した平らな楮和紙の画像を使用。v8の描線tileを置換。
+public/media/washi/paper-v9.webp。元画像materials/washi-v9-source.png。
+灰寄り生成り、絡んだ長い楮繊維、紙の微細な凹凸、折れ・裂け・焦げ・文字なし。960pxへWebP変換。
+画面では44%の強さでsource-atop合成。alphaは保持し、圧力場・透過設定・動作時間は変更しない。

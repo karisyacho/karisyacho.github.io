@@ -12,3 +12,12 @@
 - AIMA: https://karisyacho.github.io/aima/ 。site-aima/assets/hero.webp。
 
 架空店の写真は実在店舗の取材写真として扱わない。広告静止画内の表記は元の広告素材のまま。
+
+## v9：STUDIO FREEの構成用イメージ
+元のセラピール広告静止画は本構成の雰囲気と合わず、本人指示で生成した施術風景に置換。
+これは実案件の納品広告・撮影写真ではなく、静止構成のための仮画像。画面の札にも「構成用の生成イメージ」を表示。
+内蔵imagegenで、服の上から肩をほぐす施術、午後の自然光、生成りの衣服と寝具、窓のある静かな室内を生成。
+PC: public/media/works/studiofree-mood-v9.webp（materials/studiofree-v9-source.png）。
+Mobile: public/media/works/studiofree-mood-mobile-v9.webp（materials/studiofree-v9-mobile-source.png）。同じ画像を参照し縦向き構図に変更、顔と両手を保持。
+公開画像には広告コピー・商品瓶・ブランドロゴなし。作品リンクは本人の既存ポートフォリオの実案件へ。
+ARCは元画像を維持。PCは全体を収め、スマホは顔・支持する手・足が切れない正方形に近い表示範囲を朱の面の中へ配置。人物のポーズは変更していない。
