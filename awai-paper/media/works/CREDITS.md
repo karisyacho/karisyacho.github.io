@@ -21,3 +21,9 @@ PC: public/media/works/studiofree-mood-v9.webp（materials/studiofree-v9-source.
 Mobile: public/media/works/studiofree-mood-mobile-v9.webp（materials/studiofree-v9-mobile-source.png）。同じ画像を参照し縦向き構図に変更、顔と両手を保持。
 公開画像には広告コピー・商品瓶・ブランドロゴなし。作品リンクは本人の既存ポートフォリオの実案件へ。
 ARCは元画像を維持。PCは全体を収め、スマホは顔・支持する手・足が切れない正方形に近い表示範囲を朱の面の中へ配置。人物のポーズは変更していない。
+
+## v10：サロンとして認識できる施術風景
+v9は家庭的な服装と寝具で、本人から「寝ている娘を揉む母親」と指摘。v10ではチャコールの業務用制服・まとめ髪・高さ調節式の業務用施術ベッド・フェイスクレードル・タオルワゴンを明確にした。
+内蔵imagegenによる構成確認用生成画像。実際のSTUDIO FREEの撮影/納品作品ではない。札の生成イメージ表記を維持。
+横: materials/studiofree-v10-source.png → studiofree-mood-v10.webp。縦: materials/studiofree-v10-mobile-source.png → studiofree-mood-mobile-v10.webp。
+姿勢は施術者が立って服の上から肩周りに両手を置く。写っている施設と人物は架空。元の実案件へのリンクは維持。
