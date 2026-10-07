@@ -1,0 +1,21 @@
+{
+  "day": 15,
+  "date": "2026-10-07",
+  "seconds": 33.4,
+  "screens": 10,
+  "bytes": 8943185,
+  "sha256": "e410e31ba9046098a9a199525fef6cf3f401bdda25870cddbf41c327cfe3b428",
+  "streams": [
+    {
+      "type": "video",
+      "codec": "h264",
+      "width": 1080,
+      "height": 1920,
+      "color": "bt709"
+    },
+    {
+      "type": "audio",
+      "codec": "aac"
+    }
+  ]
+}
