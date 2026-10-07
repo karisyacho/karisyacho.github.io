@@ -1,0 +1,4 @@
+:HL["/awai-paper/_next/static/chunks/0kbyv-360vxy8.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"compare","h":96,"c":"$Q2"}]]
+0:{"b":"xiFs7PC4cu0lsfYR7NEqD","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
