@@ -1,0 +1,30 @@
+{
+  "url": "http://127.0.0.1:3137/awai-paper/film/",
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 800,
+      "errors": [],
+      "frames": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "errors": [],
+      "frames": 0
+    }
+  ],
+  "screens": 39,
+  "checks": [
+    "Previous full run completed 39 downward/upward comparisons at each width (78 pairs, each mean RGB difference < 1/255), one sticky stage remains at top, all 20 scene touch/alpha/cancel checks passed. It stopped at a strict page-end progress assertion; --finish runs that remaining check and final link/fallback checks.",
+    "1280: reduced motion + no JS: 7 works and links / name / contact / no horizontal overflow",
+    "touch response only in open/suketo/aima/blank, cancellation, vertical movement release, native wheel scroll, touch at page end",
+    "390: reduced motion + no JS: 7 works and links / name / contact / no horizontal overflow"
+  ],
+  "differences": [],
+  "limitations": [
+    "Browser emulation, not physical iPhone",
+    "Stop 1 scaffold; AIMA and shadow material are gray placeholders",
+    "Studio Free is approved v10 still; video and performance targets not tested"
+  ]
+}

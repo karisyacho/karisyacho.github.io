@@ -1,0 +1,5 @@
+:HL["/awai-paper/_next/static/chunks/2jr3e--7rh4s_.css","style"]
+:HL["/awai-paper/_next/static/chunks/11q4qbgmm8ew0.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"film","h":96,"c":"$Q2"}]]
+0:{"b":"sSCO_hzC1CZtAvstgDhjb","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
