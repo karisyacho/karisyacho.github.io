@@ -1,0 +1,14 @@
+# 和紙の素材案（2026-10-07）
+
+内蔵 imagegen で生成した素材。徳島の実在の店・町の実写ではない。背景は見た目確認用の静止画で、動画未採用。
+
+保存先（プロジェクト内）:
+- 公開用: public/media/washi/paper.webp、dusk-study.webp
+- 元画像: materials/paper-source.png、dusk-source.png
+- 生成元: C:/Users/User/.codex/generated_images/01a1152c-cbdd-7052-9d70-192c8110dbd3/exec-f3da6fe9-77e4-4acb-8b72-e4311c5a5b2c.png および exec-26a9e1cc-88f7-4a4a-a7c7-0f0873c9def7.png
+
+紙の生成プロンプト:
+Use case: photorealistic-natural. Asset type: high-resolution material texture for a quiet Japanese website, NOT a mockup. Produce ONE square image, 2048x2048 if possible. A straight-on flat scan of a single sheet of thin handmade Japanese kozo washi. The entire image is the paper surface, no sheet edges. Grayish warm off-white #e5e3dc, very restrained contrast. Visible irregular long translucent mulberry pulp fibers embedded in the paper, a few delicate straw-colored fibers, varying material density, organic interwoven strands. The paper is thin and tactile, not rough cardboard, not crumpled, not parchment. Broad surface is nearly flat, matte and evenly lit; fibers have a delicate real three-dimensional microstructure visible in close inspection. NO shadows cast onto the sheet, no folds, no stains, no borders, no text, no hands, no tear, no holes, no objects, no graphic design, no repetitive noise, no vignette, no gradients from lighting. This must be a usable edge-to-edge material photograph, not an illustration. Uniform restrained gray-ivory paper with natural non-repeating fiber distribution.
+
+背景の生成プロンプト:
+Use case: photorealistic-natural. Asset type: background photograph for a quiet Japanese cinematic website material study. One landscape image 1536x1024. A candid photograph of a small anonymous neighborhood in Japan at late dusk, taken from inside through an old slightly reflective window. An ordinary narrow street, a small independent shop with one gently warm tungsten-lit wooden window, some dark residential building fragments. In the near foreground the glass carries a faint reflection of the room. The frame feels private, incidental, human-scale, not a tourist view and not a staged advertisement. No people as subjects, no readable signage, no logos, no neon, no lantern festival, no large city skyline, no dramatic architecture, no lens flare, no foreground glow. Dark gray evening, restrained amber shop light, muted charcoal buildings, slight blue-gray residual dusk sky only in a small part. Real photographic texture and plausible understated optics. The shop window sits near the middle-right so it can be revealed behind a washi slit, with natural dark detail around it. Composition usable as landscape and portrait crop. No paper, no text, no UI, no framing border. Gentle stillness, a fragment of town behind glass. Generated fictional setting; do not claim a specific real location.
