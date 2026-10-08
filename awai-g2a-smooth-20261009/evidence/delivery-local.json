@@ -1,0 +1,910 @@
+{
+  "url": "http://127.0.0.1:3151/",
+  "checks": [
+    {
+      "name": "pc report overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "summary": "形状・保存・共通条件 22/22、旧検査 31/31、追加操作 6/6 合格。"
+      }
+    },
+    {
+      "name": "pc sp before images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-before.png",
+          "link": "evidence/sp-clear-before.png"
+        },
+        {
+          "image": "evidence/sp-smooth-before.png",
+          "link": "evidence/sp-smooth-before.png"
+        }
+      ]
+    },
+    {
+      "name": "pc sp max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-max.png",
+          "link": "evidence/sp-clear-max.png"
+        },
+        {
+          "image": "evidence/sp-smooth-max.png",
+          "link": "evidence/sp-smooth-max.png"
+        }
+      ]
+    },
+    {
+      "name": "pc sp restored images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-restored.png",
+          "link": "evidence/sp-clear-restored.png"
+        },
+        {
+          "image": "evidence/sp-smooth-restored.png",
+          "link": "evidence/sp-smooth-restored.png"
+        }
+      ]
+    },
+    {
+      "name": "pc sp on-max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-on-max.png",
+          "link": "evidence/sp-clear-on-max.png"
+        },
+        {
+          "image": "evidence/sp-smooth-on-max.png",
+          "link": "evidence/sp-smooth-on-max.png"
+        }
+      ]
+    },
+    {
+      "name": "pc sp numeric display",
+      "pass": true,
+      "detail": {
+        "expected": [
+          "91.1",
+          "91.2"
+        ],
+        "rows": [
+          "横の最大移動91.1 px / 幅 23.37%91.2 px / 幅 23.38%",
+          "縦の最大移動74.9 px / 高さ 8.87%74.8 px / 高さ 8.87%",
+          "合成移動 最大 / RMS99.1 / 49.9 px93.9 / 51.5 px",
+          "全稜線曲率 最大 / p95 / RMS105.68 / 6.21 / 7.37105.68 / 6.58 / 6.62",
+          "追加変位2階差分 最大 / RMS4.013e-3 / 4.060e-44.705e-3 / 4.214e-4",
+          "追加沈みHessian 最大 / RMS6.325 / 3.8273.279 / 1.048",
+          "投影面積比 最小 / 平均0.267 / 0.9710.352 / 1.000",
+          "最小線方向比 最小 / p05 / 平均0.393 / 0.474 / 0.6350.260 / 0.484 / 0.832",
+          "投影面反転00"
+        ]
+      }
+    },
+    {
+      "name": "sp report video metadata",
+      "pass": true,
+      "detail": [
+        {
+          "id": "clear",
+          "src": "evidence/sp-clear.mp4",
+          "duration": 6,
+          "width": 390,
+          "height": 844
+        },
+        {
+          "id": "smooth",
+          "src": "evidence/sp-smooth.mp4",
+          "duration": 6,
+          "width": 390,
+          "height": 844
+        }
+      ]
+    },
+    {
+      "name": "sp videos play",
+      "pass": true,
+      "detail": [
+        {
+          "paused": false,
+          "time": 0.37682,
+          "error": null
+        },
+        {
+          "paused": false,
+          "time": 0.376635,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "pc pc before images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-before.png",
+          "link": "evidence/pc-clear-before.png"
+        },
+        {
+          "image": "evidence/pc-smooth-before.png",
+          "link": "evidence/pc-smooth-before.png"
+        }
+      ]
+    },
+    {
+      "name": "pc pc max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-max.png",
+          "link": "evidence/pc-clear-max.png"
+        },
+        {
+          "image": "evidence/pc-smooth-max.png",
+          "link": "evidence/pc-smooth-max.png"
+        }
+      ]
+    },
+    {
+      "name": "pc pc restored images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-restored.png",
+          "link": "evidence/pc-clear-restored.png"
+        },
+        {
+          "image": "evidence/pc-smooth-restored.png",
+          "link": "evidence/pc-smooth-restored.png"
+        }
+      ]
+    },
+    {
+      "name": "pc pc on-max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-on-max.png",
+          "link": "evidence/pc-clear-on-max.png"
+        },
+        {
+          "image": "evidence/pc-smooth-on-max.png",
+          "link": "evidence/pc-smooth-on-max.png"
+        }
+      ]
+    },
+    {
+      "name": "pc pc numeric display",
+      "pass": true,
+      "detail": {
+        "expected": [
+          "151.2",
+          "151.2"
+        ],
+        "rows": [
+          "横の最大移動151.2 px / 幅 10.50%151.2 px / 幅 10.50%",
+          "縦の最大移動106.9 px / 高さ 11.88%106.9 px / 高さ 11.88%",
+          "合成移動 最大 / RMS151.4 / 115.9 px151.4 / 112.5 px",
+          "全稜線曲率 最大 / p95 / RMS17.62 / 2.99 / 1.7427.35 / 3.16 / 2.56",
+          "追加変位2階差分 最大 / RMS2.525e-4 / 6.360e-51.938e-4 / 4.495e-5",
+          "追加沈みHessian 最大 / RMS8.229 / 4.3021.568 / 0.646",
+          "投影面積比 最小 / 平均0.247 / 0.9910.505 / 1.000",
+          "最小線方向比 最小 / p05 / 平均0.445 / 0.496 / 0.7340.524 / 0.581 / 0.826",
+          "投影面反転00"
+        ]
+      }
+    },
+    {
+      "name": "pc report video metadata",
+      "pass": true,
+      "detail": [
+        {
+          "id": "clear",
+          "src": "evidence/pc-clear.mp4",
+          "duration": 6,
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "id": "smooth",
+          "src": "evidence/pc-smooth.mp4",
+          "duration": 6,
+          "width": 1440,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "name": "pc videos play",
+      "pass": true,
+      "detail": [
+        {
+          "paused": false,
+          "time": 0.393508,
+          "error": null
+        },
+        {
+          "paused": false,
+          "time": 0.391013,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "pc image links resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "pc download attributes",
+      "pass": true,
+      "detail": [
+        {
+          "href": "evidence/sp-clear.mp4",
+          "name": "awai-sp-clear.mp4"
+        },
+        {
+          "href": "evidence/sp-smooth.mp4",
+          "name": "awai-sp-smooth.mp4"
+        },
+        {
+          "href": "evidence/pc-clear.mp4",
+          "name": "awai-pc-clear.mp4"
+        },
+        {
+          "href": "evidence/pc-smooth.mp4",
+          "name": "awai-pc-smooth.mp4"
+        }
+      ]
+    },
+    {
+      "name": "pc downloads overflow",
+      "pass": true
+    },
+    {
+      "name": "Playwright download awai-sp-clear.mp4",
+      "pass": true,
+      "detail": {
+        "name": "awai-sp-clear.mp4",
+        "bytes": 103717,
+        "error": null
+      }
+    },
+    {
+      "name": "Playwright download awai-sp-smooth.mp4",
+      "pass": true,
+      "detail": {
+        "name": "awai-sp-smooth.mp4",
+        "bytes": 91652,
+        "error": null
+      }
+    },
+    {
+      "name": "Playwright download awai-pc-clear.mp4",
+      "pass": true,
+      "detail": {
+        "name": "awai-pc-clear.mp4",
+        "bytes": 227847,
+        "error": null
+      }
+    },
+    {
+      "name": "Playwright download awai-pc-smooth.mp4",
+      "pass": true,
+      "detail": {
+        "name": "awai-pc-smooth.mp4",
+        "bytes": 214965,
+        "error": null
+      }
+    },
+    {
+      "name": "pc Smooth default",
+      "pass": true,
+      "detail": {
+        "hit": [
+          0.58,
+          0.48
+        ],
+        "amount": 0,
+        "glow": 0,
+        "mode": "B",
+        "target": 0,
+        "age": 0,
+        "preset": "smooth",
+        "quality": "full",
+        "lightEnabled": false
+      }
+    },
+    {
+      "name": "pc Clear switch",
+      "pass": true
+    },
+    {
+      "name": "sp report overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390,
+        "summary": "形状・保存・共通条件 22/22、旧検査 31/31、追加操作 6/6 合格。"
+      }
+    },
+    {
+      "name": "sp sp before images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-before.png",
+          "link": "evidence/sp-clear-before.png"
+        },
+        {
+          "image": "evidence/sp-smooth-before.png",
+          "link": "evidence/sp-smooth-before.png"
+        }
+      ]
+    },
+    {
+      "name": "sp sp max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-max.png",
+          "link": "evidence/sp-clear-max.png"
+        },
+        {
+          "image": "evidence/sp-smooth-max.png",
+          "link": "evidence/sp-smooth-max.png"
+        }
+      ]
+    },
+    {
+      "name": "sp sp restored images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-restored.png",
+          "link": "evidence/sp-clear-restored.png"
+        },
+        {
+          "image": "evidence/sp-smooth-restored.png",
+          "link": "evidence/sp-smooth-restored.png"
+        }
+      ]
+    },
+    {
+      "name": "sp sp on-max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-on-max.png",
+          "link": "evidence/sp-clear-on-max.png"
+        },
+        {
+          "image": "evidence/sp-smooth-on-max.png",
+          "link": "evidence/sp-smooth-on-max.png"
+        }
+      ]
+    },
+    {
+      "name": "sp sp numeric display",
+      "pass": true,
+      "detail": {
+        "expected": [
+          "91.1",
+          "91.2"
+        ],
+        "rows": [
+          "横の最大移動91.1 px / 幅 23.37%91.2 px / 幅 23.38%",
+          "縦の最大移動74.9 px / 高さ 8.87%74.8 px / 高さ 8.87%",
+          "合成移動 最大 / RMS99.1 / 49.9 px93.9 / 51.5 px",
+          "全稜線曲率 最大 / p95 / RMS105.68 / 6.21 / 7.37105.68 / 6.58 / 6.62",
+          "追加変位2階差分 最大 / RMS4.013e-3 / 4.060e-44.705e-3 / 4.214e-4",
+          "追加沈みHessian 最大 / RMS6.325 / 3.8273.279 / 1.048",
+          "投影面積比 最小 / 平均0.267 / 0.9710.352 / 1.000",
+          "最小線方向比 最小 / p05 / 平均0.393 / 0.474 / 0.6350.260 / 0.484 / 0.832",
+          "投影面反転00"
+        ]
+      }
+    },
+    {
+      "name": "sp pc before images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-before.png",
+          "link": "evidence/pc-clear-before.png"
+        },
+        {
+          "image": "evidence/pc-smooth-before.png",
+          "link": "evidence/pc-smooth-before.png"
+        }
+      ]
+    },
+    {
+      "name": "sp pc max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-max.png",
+          "link": "evidence/pc-clear-max.png"
+        },
+        {
+          "image": "evidence/pc-smooth-max.png",
+          "link": "evidence/pc-smooth-max.png"
+        }
+      ]
+    },
+    {
+      "name": "sp pc restored images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-restored.png",
+          "link": "evidence/pc-clear-restored.png"
+        },
+        {
+          "image": "evidence/pc-smooth-restored.png",
+          "link": "evidence/pc-smooth-restored.png"
+        }
+      ]
+    },
+    {
+      "name": "sp pc on-max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-on-max.png",
+          "link": "evidence/pc-clear-on-max.png"
+        },
+        {
+          "image": "evidence/pc-smooth-on-max.png",
+          "link": "evidence/pc-smooth-on-max.png"
+        }
+      ]
+    },
+    {
+      "name": "sp pc numeric display",
+      "pass": true,
+      "detail": {
+        "expected": [
+          "151.2",
+          "151.2"
+        ],
+        "rows": [
+          "横の最大移動151.2 px / 幅 10.50%151.2 px / 幅 10.50%",
+          "縦の最大移動106.9 px / 高さ 11.88%106.9 px / 高さ 11.88%",
+          "合成移動 最大 / RMS151.4 / 115.9 px151.4 / 112.5 px",
+          "全稜線曲率 最大 / p95 / RMS17.62 / 2.99 / 1.7427.35 / 3.16 / 2.56",
+          "追加変位2階差分 最大 / RMS2.525e-4 / 6.360e-51.938e-4 / 4.495e-5",
+          "追加沈みHessian 最大 / RMS8.229 / 4.3021.568 / 0.646",
+          "投影面積比 最小 / 平均0.247 / 0.9910.505 / 1.000",
+          "最小線方向比 最小 / p05 / 平均0.445 / 0.496 / 0.7340.524 / 0.581 / 0.826",
+          "投影面反転00"
+        ]
+      }
+    },
+    {
+      "name": "sp image links resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "sp download attributes",
+      "pass": true,
+      "detail": [
+        {
+          "href": "evidence/sp-clear.mp4",
+          "name": "awai-sp-clear.mp4"
+        },
+        {
+          "href": "evidence/sp-smooth.mp4",
+          "name": "awai-sp-smooth.mp4"
+        },
+        {
+          "href": "evidence/pc-clear.mp4",
+          "name": "awai-pc-clear.mp4"
+        },
+        {
+          "href": "evidence/pc-smooth.mp4",
+          "name": "awai-pc-smooth.mp4"
+        }
+      ]
+    },
+    {
+      "name": "sp downloads overflow",
+      "pass": true
+    },
+    {
+      "name": "sp Smooth default",
+      "pass": true,
+      "detail": {
+        "hit": [
+          0.58,
+          0.48
+        ],
+        "amount": 0,
+        "glow": 0,
+        "mode": "B",
+        "target": 0,
+        "age": 0,
+        "preset": "smooth",
+        "quality": "full",
+        "lightEnabled": false
+      }
+    },
+    {
+      "name": "sp Clear switch",
+      "pass": true
+    },
+    {
+      "name": "small report overflow",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320,
+        "summary": "形状・保存・共通条件 22/22、旧検査 31/31、追加操作 6/6 合格。"
+      }
+    },
+    {
+      "name": "small sp before images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-before.png",
+          "link": "evidence/sp-clear-before.png"
+        },
+        {
+          "image": "evidence/sp-smooth-before.png",
+          "link": "evidence/sp-smooth-before.png"
+        }
+      ]
+    },
+    {
+      "name": "small sp max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-max.png",
+          "link": "evidence/sp-clear-max.png"
+        },
+        {
+          "image": "evidence/sp-smooth-max.png",
+          "link": "evidence/sp-smooth-max.png"
+        }
+      ]
+    },
+    {
+      "name": "small sp restored images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-restored.png",
+          "link": "evidence/sp-clear-restored.png"
+        },
+        {
+          "image": "evidence/sp-smooth-restored.png",
+          "link": "evidence/sp-smooth-restored.png"
+        }
+      ]
+    },
+    {
+      "name": "small sp on-max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/sp-clear-on-max.png",
+          "link": "evidence/sp-clear-on-max.png"
+        },
+        {
+          "image": "evidence/sp-smooth-on-max.png",
+          "link": "evidence/sp-smooth-on-max.png"
+        }
+      ]
+    },
+    {
+      "name": "small sp numeric display",
+      "pass": true,
+      "detail": {
+        "expected": [
+          "91.1",
+          "91.2"
+        ],
+        "rows": [
+          "横の最大移動91.1 px / 幅 23.37%91.2 px / 幅 23.38%",
+          "縦の最大移動74.9 px / 高さ 8.87%74.8 px / 高さ 8.87%",
+          "合成移動 最大 / RMS99.1 / 49.9 px93.9 / 51.5 px",
+          "全稜線曲率 最大 / p95 / RMS105.68 / 6.21 / 7.37105.68 / 6.58 / 6.62",
+          "追加変位2階差分 最大 / RMS4.013e-3 / 4.060e-44.705e-3 / 4.214e-4",
+          "追加沈みHessian 最大 / RMS6.325 / 3.8273.279 / 1.048",
+          "投影面積比 最小 / 平均0.267 / 0.9710.352 / 1.000",
+          "最小線方向比 最小 / p05 / 平均0.393 / 0.474 / 0.6350.260 / 0.484 / 0.832",
+          "投影面反転00"
+        ]
+      }
+    },
+    {
+      "name": "small pc before images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-before.png",
+          "link": "evidence/pc-clear-before.png"
+        },
+        {
+          "image": "evidence/pc-smooth-before.png",
+          "link": "evidence/pc-smooth-before.png"
+        }
+      ]
+    },
+    {
+      "name": "small pc max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-max.png",
+          "link": "evidence/pc-clear-max.png"
+        },
+        {
+          "image": "evidence/pc-smooth-max.png",
+          "link": "evidence/pc-smooth-max.png"
+        }
+      ]
+    },
+    {
+      "name": "small pc restored images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-restored.png",
+          "link": "evidence/pc-clear-restored.png"
+        },
+        {
+          "image": "evidence/pc-smooth-restored.png",
+          "link": "evidence/pc-smooth-restored.png"
+        }
+      ]
+    },
+    {
+      "name": "small pc on-max images",
+      "pass": true,
+      "detail": [
+        {
+          "image": "evidence/pc-clear-on-max.png",
+          "link": "evidence/pc-clear-on-max.png"
+        },
+        {
+          "image": "evidence/pc-smooth-on-max.png",
+          "link": "evidence/pc-smooth-on-max.png"
+        }
+      ]
+    },
+    {
+      "name": "small pc numeric display",
+      "pass": true,
+      "detail": {
+        "expected": [
+          "151.2",
+          "151.2"
+        ],
+        "rows": [
+          "横の最大移動151.2 px / 幅 10.50%151.2 px / 幅 10.50%",
+          "縦の最大移動106.9 px / 高さ 11.88%106.9 px / 高さ 11.88%",
+          "合成移動 最大 / RMS151.4 / 115.9 px151.4 / 112.5 px",
+          "全稜線曲率 最大 / p95 / RMS17.62 / 2.99 / 1.7427.35 / 3.16 / 2.56",
+          "追加変位2階差分 最大 / RMS2.525e-4 / 6.360e-51.938e-4 / 4.495e-5",
+          "追加沈みHessian 最大 / RMS8.229 / 4.3021.568 / 0.646",
+          "投影面積比 最小 / 平均0.247 / 0.9910.505 / 1.000",
+          "最小線方向比 最小 / p05 / 平均0.445 / 0.496 / 0.7340.524 / 0.581 / 0.826",
+          "投影面反転00"
+        ]
+      }
+    },
+    {
+      "name": "small image links resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "small download attributes",
+      "pass": true,
+      "detail": [
+        {
+          "href": "evidence/sp-clear.mp4",
+          "name": "awai-sp-clear.mp4"
+        },
+        {
+          "href": "evidence/sp-smooth.mp4",
+          "name": "awai-sp-smooth.mp4"
+        },
+        {
+          "href": "evidence/pc-clear.mp4",
+          "name": "awai-pc-clear.mp4"
+        },
+        {
+          "href": "evidence/pc-smooth.mp4",
+          "name": "awai-pc-smooth.mp4"
+        }
+      ]
+    },
+    {
+      "name": "small downloads overflow",
+      "pass": true
+    },
+    {
+      "name": "small Smooth default",
+      "pass": true,
+      "detail": {
+        "hit": [
+          0.58,
+          0.48
+        ],
+        "amount": 0,
+        "glow": 0,
+        "mode": "B",
+        "target": 0,
+        "age": 0,
+        "preset": "smooth",
+        "quality": "full",
+        "lightEnabled": false
+      }
+    },
+    {
+      "name": "small Clear switch",
+      "pass": true
+    },
+    {
+      "name": "ffprobe pc-clear",
+      "pass": true,
+      "detail": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "pix_fmt": "yuv420p"
+          }
+        ],
+        "format": {
+          "duration": "6.000000"
+        }
+      }
+    },
+    {
+      "name": "ffprobe pc-smooth",
+      "pass": true,
+      "detail": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "pix_fmt": "yuv420p"
+          }
+        ],
+        "format": {
+          "duration": "6.000000"
+        }
+      }
+    },
+    {
+      "name": "ffprobe sp-clear",
+      "pass": true,
+      "detail": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "pix_fmt": "yuv420p"
+          }
+        ],
+        "format": {
+          "duration": "6.000000"
+        }
+      }
+    },
+    {
+      "name": "ffprobe sp-smooth",
+      "pass": true,
+      "detail": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "pix_fmt": "yuv420p"
+          }
+        ],
+        "format": {
+          "duration": "6.000000"
+        }
+      }
+    },
+    {
+      "name": "No report or preview JS errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "videos": {
+    "pc-clear": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1440,
+          "height": 900,
+          "pix_fmt": "yuv420p"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "pc-smooth": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1440,
+          "height": 900,
+          "pix_fmt": "yuv420p"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "sp-clear": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 390,
+          "height": 844,
+          "pix_fmt": "yuv420p"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "sp-smooth": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 390,
+          "height": 844,
+          "pix_fmt": "yuv420p"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    }
+  },
+  "environment": "Edge emulation DPR1; physical device and published destination unverified",
+  "summary": {
+    "pass": 61,
+    "fail": 0
+  }
+}

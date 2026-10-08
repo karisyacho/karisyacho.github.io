@@ -1,0 +1,566 @@
+{
+  "url": "http://127.0.0.1:3151/",
+  "environment": "Automated Edge, DPR1; physical device unverified",
+  "checks": [
+    {
+      "name": "pc-clear off AB identical",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "pc Clear baseline 0",
+      "pass": true,
+      "detail": {
+        "pixel": {
+          "maxChannelDifference": 1,
+          "mean": 0.000020833333333333333,
+          "changed": 81
+        },
+        "samplesEqual": true
+      }
+    },
+    {
+      "name": "pc Clear baseline 1",
+      "pass": true,
+      "detail": {
+        "pixel": {
+          "maxChannelDifference": 1,
+          "mean": 0.000019032921810699587,
+          "changed": 74
+        },
+        "samplesEqual": true
+      }
+    },
+    {
+      "name": "pc-clear restore pixels identical",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "pc static Clear Smooth equal",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "pc-smooth off AB identical",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "pc-smooth restore pixels identical",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "pc parameter curvature",
+      "pass": true
+    },
+    {
+      "name": "pc parameter compression",
+      "pass": true
+    },
+    {
+      "name": "pc parameter pull",
+      "pass": true
+    },
+    {
+      "name": "pc parameter spread",
+      "pass": true
+    },
+    {
+      "name": "sp-clear off AB identical",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "sp Clear baseline 0",
+      "pass": true,
+      "detail": {
+        "pixel": {
+          "maxChannelDifference": 1,
+          "mean": 0.000019240896018147203,
+          "changed": 19
+        },
+        "samplesEqual": true
+      }
+    },
+    {
+      "name": "sp Clear baseline 1",
+      "pass": true,
+      "detail": {
+        "pixel": {
+          "maxChannelDifference": 1,
+          "mean": 0.000020253574755944424,
+          "changed": 20
+        },
+        "samplesEqual": true
+      }
+    },
+    {
+      "name": "sp-clear restore pixels identical",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "sp static Clear Smooth equal",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "sp-smooth off AB identical",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "sp-smooth restore pixels identical",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changed": 0
+      }
+    },
+    {
+      "name": "sp parameter curvature",
+      "pass": true
+    },
+    {
+      "name": "sp parameter compression",
+      "pass": true
+    },
+    {
+      "name": "sp parameter pull",
+      "pass": true
+    },
+    {
+      "name": "sp parameter spread",
+      "pass": true
+    }
+  ],
+  "metrics": {
+    "pc-clear": {
+      "canvas": [
+        1440,
+        900
+      ],
+      "ridge": {
+        "sameUV": true,
+        "dxPx": {
+          "max": 151.1616687164607,
+          "min": 0,
+          "p05": 3.031130711476715,
+          "p95": 150.5029532477391,
+          "mean": 88.01035581672532,
+          "rms": 100.97653031825999
+        },
+        "dyPx": {
+          "max": 106.92476753750285,
+          "min": 0,
+          "p05": 1.1886495663823715,
+          "p95": 105.95499459843195,
+          "mean": 44.12538258616242,
+          "rms": 56.98147566301051
+        },
+        "movementPx": {
+          "max": 151.43103734367455,
+          "min": 0,
+          "p05": 4.8725497411294265,
+          "p95": 150.9270672562813,
+          "mean": 108.01882660410782,
+          "rms": 115.94459126603847
+        },
+        "maxPercentW": 10.49733810530977,
+        "maxPercentH": 11.880529726389206,
+        "curvature": {
+          "max": 17.615602775779696,
+          "min": 0.0022570920041531687,
+          "p05": 0.04025776266796031,
+          "p95": 2.9892351868107423,
+          "mean": 0.8851169156249548,
+          "rms": 1.7411474239112692
+        },
+        "deltaSecond": {
+          "max": 0.00025253608602001125,
+          "min": 0.00000271483602474953,
+          "p05": 0.000003289185678843585,
+          "p95": 0.00016347848997359568,
+          "mean": 0.0000370431090121304,
+          "rms": 0.0000635989542003008
+        }
+      },
+      "mesh": {
+        "count": 6561,
+        "jacobian": {
+          "max": 2.7053053742907287,
+          "min": 0.24687113425921867,
+          "p05": 0.30563641144219306,
+          "p95": 2.1327079452662403,
+          "mean": 0.9905665425924357,
+          "rms": 1.1452084170432337
+        },
+        "minJacobian": 0.24687113425921867,
+        "negative": 0,
+        "singularMin": {
+          "max": 0.9999988033549493,
+          "min": 0.44531414632883765,
+          "p05": 0.4961411362920161,
+          "p95": 0.9865987555615837,
+          "mean": 0.7343933983293272,
+          "rms": 0.7502302001322454
+        },
+        "singularMax": {
+          "max": 3.0239055661751975,
+          "min": 0.5532900275380662,
+          "p05": 0.6056067358004079,
+          "p95": 2.575030345121491,
+          "mean": 1.2753470485427116,
+          "rms": 1.4068743200816625
+        }
+      },
+      "addedSagHessian": {
+        "count": 441,
+        "max": 8.2290056103352,
+        "min": 0.18627329556719033,
+        "p05": 1.0917138574030052,
+        "p95": 7.205534412379913,
+        "mean": 3.9405997931177854,
+        "rms": 4.302293847349755
+      }
+    },
+    "pc-smooth": {
+      "canvas": [
+        1440,
+        900
+      ],
+      "ridge": {
+        "sameUV": true,
+        "dxPx": {
+          "max": 151.15738928732043,
+          "min": 0,
+          "p05": 1.1709652180615482,
+          "p95": 150.51093780029814,
+          "mean": 81.07588278244428,
+          "rms": 97.4069569441815
+        },
+        "dyPx": {
+          "max": 106.93374998596524,
+          "min": 0,
+          "p05": 0.6748223811614884,
+          "p95": 105.64141823584009,
+          "mean": 42.96609550681742,
+          "rms": 56.25842371110043
+        },
+        "movementPx": {
+          "max": 151.43491248759233,
+          "min": 0,
+          "p05": 1.9852912812253551,
+          "p95": 150.94402682848371,
+          "mean": 102.74119619224142,
+          "rms": 112.48611247431094
+        },
+        "maxPercentW": 10.497040922730585,
+        "maxPercentH": 11.881527776218359,
+        "curvature": {
+          "max": 27.35432645080168,
+          "min": 0.0017164461785946117,
+          "p05": 0.03748963358134326,
+          "p95": 3.1644698397891995,
+          "mean": 1.0019201538734588,
+          "rms": 2.559773472381475
+        },
+        "deltaSecond": {
+          "max": 0.0001938325158382855,
+          "min": 0.000004383524893436739,
+          "p05": 0.000008220563526622261,
+          "p95": 0.00010946769586818567,
+          "mean": 0.00002916928680568941,
+          "rms": 0.0000449457162883783
+        }
+      },
+      "mesh": {
+        "count": 6561,
+        "jacobian": {
+          "max": 2.359360209699138,
+          "min": 0.5053245451640656,
+          "p05": 0.5725049927204867,
+          "p95": 1.6304998986257886,
+          "mean": 0.9996215036966847,
+          "rms": 1.0491414818886249
+        },
+        "minJacobian": 0.5053245451640656,
+        "negative": 0,
+        "singularMin": {
+          "max": 1.1190390851305854,
+          "min": 0.5236762803471009,
+          "p05": 0.5805471932334512,
+          "p95": 0.9977702979797217,
+          "mean": 0.8262752728116914,
+          "rms": 0.8370601118503004
+        },
+        "singularMax": {
+          "max": 2.5429276039293183,
+          "min": 0.7542141958196377,
+          "p05": 0.8632577421728007,
+          "p95": 1.8121917301054216,
+          "mean": 1.205140266096345,
+          "rms": 1.243367238930248
+        }
+      },
+      "addedSagHessian": {
+        "count": 441,
+        "max": 1.5675835820156656,
+        "min": 0.1942182104585005,
+        "p05": 0.22336239986748,
+        "p95": 1.1251817890778135,
+        "mean": 0.5767398366994779,
+        "rms": 0.6463103760081493
+      }
+    },
+    "sp-clear": {
+      "canvas": [
+        390,
+        844
+      ],
+      "ridge": {
+        "sameUV": true,
+        "dxPx": {
+          "max": 91.14420149822448,
+          "min": 0,
+          "p05": 0,
+          "p95": 86.66998342230161,
+          "mean": 24.955072888815234,
+          "rms": 39.72467707646511
+        },
+        "dyPx": {
+          "max": 74.8567076881498,
+          "min": 0,
+          "p05": 0,
+          "p95": 70.02568633132361,
+          "mean": 18.341097842271562,
+          "rms": 30.16978061133779
+        },
+        "movementPx": {
+          "max": 99.08991484496768,
+          "min": 0,
+          "p05": 0,
+          "p95": 94.61543181230955,
+          "mean": 33.97548209541785,
+          "rms": 49.88251829013533
+        },
+        "maxPercentW": 23.370308076467815,
+        "maxPercentH": 8.869278162103056,
+        "curvature": {
+          "max": 105.67510185841732,
+          "min": 0,
+          "p05": 1.7901477637061417e-12,
+          "p95": 6.205516883822967,
+          "mean": 2.0746500284008538,
+          "rms": 7.367889206517373
+        },
+        "deltaSecond": {
+          "max": 0.004012624342339701,
+          "min": 0,
+          "p05": 0,
+          "p95": 0.00040577014532844894,
+          "mean": 0.00008292190136392462,
+          "rms": 0.000405985823361811
+        }
+      },
+      "mesh": {
+        "count": 6561,
+        "jacobian": {
+          "max": 5.03128269774363,
+          "min": 0.2665036446096762,
+          "p05": 0.278855568405558,
+          "p95": 3.1827391800587286,
+          "mean": 0.9710365355128853,
+          "rms": 1.3798734162271802
+        },
+        "minJacobian": 0.2665036446096762,
+        "negative": 0,
+        "singularMin": {
+          "max": 0.9996420303343047,
+          "min": 0.3933199636034304,
+          "p05": 0.4744842866227163,
+          "p95": 0.9765934961740936,
+          "mean": 0.6353548232978314,
+          "rms": 0.652367252182999
+        },
+        "singularMax": {
+          "max": 6.0985094509377165,
+          "min": 0.5736368753541112,
+          "p05": 0.581577839152385,
+          "p95": 4.693778368739735,
+          "mean": 1.4017789557364972,
+          "rms": 1.8915684675090851
+        }
+      },
+      "addedSagHessian": {
+        "count": 441,
+        "max": 6.325289787402147,
+        "min": 0.046582459903251765,
+        "p05": 1.0110415704101912,
+        "p95": 5.715265536064556,
+        "mean": 3.55307735866428,
+        "rms": 3.8267058869142168
+      }
+    },
+    "sp-smooth": {
+      "canvas": [
+        390,
+        844
+      ],
+      "ridge": {
+        "sameUV": true,
+        "dxPx": {
+          "max": 91.16431090650808,
+          "min": 0,
+          "p05": 0,
+          "p95": 88.62937242632047,
+          "mean": 23.876920883154007,
+          "rms": 39.407277447431525
+        },
+        "dyPx": {
+          "max": 74.82079713439869,
+          "min": 0,
+          "p05": 0,
+          "p95": 73.83056190009944,
+          "mean": 19.797252431807753,
+          "rms": 33.2085283933865
+        },
+        "movementPx": {
+          "max": 93.85006277595284,
+          "min": 0,
+          "p05": 0,
+          "p95": 91.25521311640456,
+          "mean": 35.30955992473172,
+          "rms": 51.53387113222918
+        },
+        "maxPercentW": 23.37546433500207,
+        "maxPercentH": 8.865023357156243,
+        "curvature": {
+          "max": 105.67510185841732,
+          "min": 0,
+          "p05": 1.7901477637061417e-12,
+          "p95": 6.576892755442176,
+          "mean": 2.265975884552039,
+          "rms": 6.616915510195909
+        },
+        "deltaSecond": {
+          "max": 0.004704850369396878,
+          "min": 0,
+          "p05": 0,
+          "p95": 0.00033031939841628524,
+          "mean": 0.0000868643270272023,
+          "rms": 0.0004213909972548659
+        }
+      },
+      "mesh": {
+        "count": 6561,
+        "jacobian": {
+          "max": 5.805852149398714,
+          "min": 0.3516030283894463,
+          "p05": 0.45599022617988455,
+          "p95": 1.4720284827775458,
+          "mean": 1.000405625471339,
+          "rms": 1.0768049422918347
+        },
+        "minJacobian": 0.3516030283894463,
+        "negative": 0,
+        "singularMin": {
+          "max": 1.063189131613711,
+          "min": 0.26045154546117616,
+          "p05": 0.483801846346802,
+          "p95": 0.9998984165302927,
+          "mean": 0.8321887824356665,
+          "rms": 0.8506214257859445
+        },
+        "singularMax": {
+          "max": 6.683744065886645,
+          "min": 0.6284737298178145,
+          "p05": 0.8743124058304986,
+          "p95": 1.7317122286845779,
+          "mean": 1.2125148522858913,
+          "rms": 1.2970371898033233
+        }
+      },
+      "addedSagHessian": {
+        "count": 441,
+        "max": 3.278871679006105,
+        "min": 0.15597085202216396,
+        "p05": 0.3273852270784056,
+        "p95": 2.189160037209072,
+        "mean": 0.8309885990327892,
+        "rms": 1.0477185333121775
+      }
+    },
+    "pc-comparison": {
+      "curvatureRatio": {
+        "max": 1.5528464622517542,
+        "p95": 1.0586219022683918,
+        "rms": 1.4701646955495964
+      },
+      "deltaSecondRatio": {
+        "max": 0.7675438345984581,
+        "rms": 0.7067052729644684
+      }
+    },
+    "sp-comparison": {
+      "curvatureRatio": {
+        "max": 1,
+        "p95": 1.0598460818932491,
+        "rms": 0.8980747843416024
+      },
+      "deltaSecondRatio": {
+        "max": 1.1725120439890344,
+        "rms": 1.0379451030222941
+      }
+    }
+  },
+  "definitions": {
+    "curvature": "501 identical reference ridge UV samples, projected coordinates x=screenX*(W/H), y=screenY, central difference |x'y''-y'x''|/(x'^2+y'^2)^(3/2); units 1/screen-height; all 499 interior samples, without cropping",
+    "deltaSecond": "Central second differences of loaded minus rest projected XY; Euclidean norm, screen-height units per index squared; 499 interior samples",
+    "jacobian": "81x81 grid of reference screen UV coordinates x,y in [.02,.98]; physical XY=[sample.x*W/H,(sample.y-.5)/scaleY+.5]. Finite difference epsilon=.0001 screen-height. Singular values dimensionless.",
+    "hessian": "Added sag sample(loaded).z-sample(rest).z; physical XY derivatives using epsilon=.001 screen-height; contact neighbourhood |x-hitX|<=.12, |y-hitY|<=.12. Frobenius Hessian norm, sag units /screen-height squared."
+  },
+  "summary": {
+    "pass": 22,
+    "fail": 0
+  }
+}

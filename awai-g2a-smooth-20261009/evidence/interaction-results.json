@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "name": "Smooth native short tap retains target through 50ms and releases by 220ms",
+      "pass": true,
+      "detail": {
+        "held": {
+          "hit": [
+            0.4205128205128205,
+            0.5498168498168499
+          ],
+          "amount": 0.9117927982374938,
+          "glow": 0,
+          "mode": "B",
+          "target": 1,
+          "age": 0.09840000000298005,
+          "preset": "smooth",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "released": {
+          "hit": [
+            0.4205128205128205,
+            0.5498168498168499
+          ],
+          "amount": 0.6365090609832729,
+          "glow": 0.35226115199058783,
+          "mode": "B",
+          "target": 0,
+          "age": 0,
+          "preset": "smooth",
+          "quality": "full",
+          "lightEnabled": false
+        }
+      }
+    },
+    {
+      "name": "Smooth native cancel releases",
+      "pass": true
+    },
+    {
+      "name": "Smooth native recontact reaches max",
+      "pass": true,
+      "detail": {
+        "hit": [
+          0.4205128205128205,
+          0.5498168498168499
+        ],
+        "amount": 1,
+        "glow": 0.9376583434342507,
+        "mode": "B",
+        "target": 1,
+        "age": 0.91020000000149,
+        "preset": "smooth",
+        "quality": "full",
+        "lightEnabled": false
+      }
+    },
+    {
+      "name": "Smooth quality balanced",
+      "pass": true,
+      "detail": {
+        "vertices": 27985,
+        "triangles": 55296,
+        "bufferBytes": 555656
+      }
+    },
+    {
+      "name": "Smooth quality full",
+      "pass": true,
+      "detail": {
+        "vertices": 49601,
+        "triangles": 98304,
+        "bufferBytes": 986632
+      }
+    },
+    {
+      "name": "Quality switches dispose replaced resources without outstanding growth",
+      "pass": true,
+      "detail": {
+        "before": {
+          "Buffer": {
+            "created": 2,
+            "deleted": 0
+          },
+          "Shader": {
+            "created": 2,
+            "deleted": 0
+          },
+          "Program": {
+            "created": 1,
+            "deleted": 0
+          },
+          "VertexArray": {
+            "created": 1,
+            "deleted": 0
+          }
+        },
+        "after": {
+          "Buffer": {
+            "created": 6,
+            "deleted": 4
+          },
+          "Shader": {
+            "created": 6,
+            "deleted": 4
+          },
+          "Program": {
+            "created": 3,
+            "deleted": 2
+          },
+          "VertexArray": {
+            "created": 3,
+            "deleted": 2
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "pass": 6,
+    "fail": 0
+  },
+  "physicalDevice": "unverified"
+}
