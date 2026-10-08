@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="dark">
+<title>あわい — G2-A 黒い膜 / A・B比較</title><link rel="stylesheet" href="preview.css">
+</head>
+<body>
+<header class="dev-header"><a href="#controls">G2-A / 黒い膜</a><nav aria-label="比較条件"><select id="preset-select" aria-label="プリセット"><option value="original">Original</option><option value="readable">Readable</option></select><button data-mode="A" aria-pressed="true">A 反射</button><button data-mode="B" aria-pressed="false">B 透過</button><a href="#controls">調整 ↓</a></nav></header>
+<main>
+<section id="stage" class="stage" aria-label="触れられる黒い膜">
+<picture id="fallback"><source media="(max-aspect-ratio: 4/5)" srcset="assets/s0-sp.webp"><img src="assets/s0-pc.webp" alt="斜めの稜線と左上からの弱い光を持つ黒い膜。WebGL非対応時の静止美術見本。"></picture>
+<canvas id="membrane" tabindex="0" aria-label="黒い膜。押して沈める。キーボードは矢印で位置、スペースまたはEnterで押す。"></canvas>
+<picture id="reference" aria-hidden="true"><source media="(max-aspect-ratio: 4/5)" srcset="assets/s0-sp.webp"><img src="assets/s0-pc.webp" alt=""></picture>
+<span class="scene-title">あわい</span>
+</section>
+<section id="controls" class="controls">
+<div class="control-intro"><p class="eyebrow">DEVELOPMENT PREVIEW / S0 ONLY</p><h1>表面を、押す。</h1><p>面を押して、離す。スマホでは短く触れるか、そのまま少し待つ。縦スワイプとピンチはブラウザに譲ります。</p><p id="status" role="status">静止見本を表示中。描画を準備しています。</p><p>Aは不透明な面の反射。Bは同じ面が薄くなることで、奥の微光がわずかに透けます。</p><p>Originalは前回の設定。Readableは小さな張力の連動を足し、光が120ms遅れて立ち上がります。A/Bはどちらのプリセットでも同じ形状・荷重・座標を使います。</p><p id="settings-summary"></p></div>
+<div class="tool-row"><button id="replay">同じ荷重を再生（2.4秒）</button><button id="reset">初期値へ</button><a href="#stage">面を見る ↑</a></div>
+<p class="hint">再生は面UV (0.64, 0.48) に同じ荷重を加えます。A/Bを切り替えて比較できます。設定は両案で共有します。</p>
+<div id="sliders" class="slider-grid"></div>
+<fieldset class="comparison"><legend>描画負荷の比較</legend><label>面の分割数 <select id="quality-select"><option value="full">Full / 256 × 192（標準）</option><option value="balanced">Balanced / 192 × 144（比較候補）</option></select></label><p>解像度・材質・照明は同じ。頂点計算だけを減らす候補です。稜線の細部を比較してから選んでください。低性能実機の性能は未検証です。</p></fieldset>
+<fieldset class="comparison"><legend>G1の静止構図と比較</legend><label>重ねる量 <output id="overlay-value">0%</output><input id="overlay" type="range" min="0" max="100" step="1" value="0"></label><p>0%は実装、50%は重ね比較、100%はG1。画像は切り取らず、面と同じ参照座標へ配置します。</p><label><input id="dim" type="checkbox">低輝度を模した表示（実機試験の代替ではありません）</label></fieldset>
+<details><summary>方式・結果・未確認事項</summary><p>新規のWebGL2面メッシュ。稜線の制御点、高さ場、繊維・粗さ、照明、荷重、復元を分離。G1画像は比較と静止代替だけに使用します。</p><p>沈み・張力・透過は演出用モデルです。PC/SPの実機低輝度、屋外、Safariのバー伸縮、長時間の発熱は未確認です。</p><p><a href="report.html">提出資料・スクリーンショット・録画・検証結果 →</a></p></details>
+<noscript><p>JavaScriptが無効のため、G1の静止見本を表示しています。</p></noscript>
+</section>
+</main><script type="module" src="preview.js"></script>
+</body></html>

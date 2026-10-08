@@ -1,0 +1,2010 @@
+{
+  "checks": [
+    {
+      "name": "Readable first 100ms geometry responds, glow waits A",
+      "pass": true
+    },
+    {
+      "name": "Readable restores no-preference A",
+      "pass": true
+    },
+    {
+      "name": "Readable first 100ms geometry responds, glow waits B",
+      "pass": true
+    },
+    {
+      "name": "Readable restores no-preference B",
+      "pass": true
+    },
+    {
+      "name": "Readable reduced immediate A",
+      "pass": true
+    },
+    {
+      "name": "Readable restores reduce A",
+      "pass": true
+    },
+    {
+      "name": "Readable reduced immediate B",
+      "pass": true
+    },
+    {
+      "name": "Readable restores reduce B",
+      "pass": true
+    },
+    {
+      "name": "A/B runtime contact amounts/glow within frame timing tolerance",
+      "pass": true
+    }
+  ],
+  "series": [
+    {
+      "reducedMotion": "no-preference",
+      "mode": "A",
+      "series": [
+        {
+          "ms": 50.400000005960464,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 0.6138515250448503,
+              "glow": 0,
+              "mode": "A",
+              "target": 1,
+              "age": 0.05010000000149012,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 21,
+              "cpuMs": 0.5999999940395355,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 10,
+              "frameMs": 51.299999999999955,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 16,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 99.70000000298023,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 0.8066268106089142,
+              "glow": 0,
+              "mode": "A",
+              "target": 1,
+              "age": 0.09950000000149009,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 30,
+              "cpuMs": 0.7999999895691872,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 19,
+              "frameMs": 100.69999999999993,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 25,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 151.10000000149012,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 0.9004139648275086,
+              "glow": 0.07424852545890605,
+              "mode": "A",
+              "target": 1,
+              "age": 0.14690000000149006,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 39,
+              "cpuMs": 0.8999999910593033,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 28,
+              "frameMs": 148.0999999999999,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 34,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 300.90000000596046,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 0.9884206661376637,
+              "glow": 0.40649080600965154,
+              "mode": "A",
+              "target": 1,
+              "age": 0.3006000000014901,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 67,
+              "cpuMs": 1.3999999836087227,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 56,
+              "frameMs": 301.79999999999995,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 62,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 602.4000000059605,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 0.7694110400796169,
+              "mode": "A",
+              "target": 1,
+              "age": 0.59920000000149,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 122,
+              "cpuMs": 2.199999988079071,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 111,
+              "frameMs": 600.3999999999999,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 117,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 1601.1000000014901,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 0.9906486872806686,
+              "mode": "A",
+              "target": 1,
+              "age": 1.60080000000149,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 304,
+              "cpuMs": 3.5,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 293,
+              "frameMs": 1601.9999999999998,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 299,
+            "destroyed": false
+          }
+        }
+      ]
+    },
+    {
+      "reducedMotion": "no-preference",
+      "mode": "B",
+      "series": [
+        {
+          "ms": 52.29999999701977,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 0.6056566621696006,
+              "glow": 0,
+              "mode": "B",
+              "target": 1,
+              "age": 0.051999999998510245,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 701,
+              "cpuMs": 14.69999997317791,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 686,
+              "frameMs": 3784,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 1077,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 101.10000000149012,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 0.8005782466421646,
+              "glow": 0,
+              "mode": "B",
+              "target": 1,
+              "age": 0.10069999999851006,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 710,
+              "cpuMs": 14.999999977648258,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 695,
+              "frameMs": 3832.7,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 1086,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 152.39999999850988,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 0.9026198933791394,
+              "glow": 0.08019298164697325,
+              "mode": "B",
+              "target": 1,
+              "age": 0.1518999999985099,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 719,
+              "cpuMs": 15.099999979138374,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 704,
+              "frameMs": 3883.8999999999996,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 1095,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 302.1000000014901,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 0.9880751799603148,
+              "glow": 0.40397604431481277,
+              "mode": "B",
+              "target": 1,
+              "age": 0.30189999999850986,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 746,
+              "cpuMs": 16.099999971687794,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 731,
+              "frameMs": 4033.8999999999996,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 1122,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 601.6000000014901,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 0.7661432329833269,
+              "mode": "B",
+              "target": 1,
+              "age": 0.5974999999985102,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 799,
+              "cpuMs": 16.799999967217445,
+              "maxCpuMs": 0.29999999701976776,
+              "frames": 784,
+              "frameMs": 4329.5,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 1175,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 1602.3999999985099,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 0.9906097790698818,
+              "mode": "B",
+              "target": 1,
+              "age": 1.6021999999985101,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 978,
+              "cpuMs": 22.099999971687794,
+              "maxCpuMs": 0.6000000014901161,
+              "frames": 963,
+              "frameMs": 5334.2,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 1354,
+            "destroyed": false
+          }
+        }
+      ]
+    },
+    {
+      "reducedMotion": "reduce",
+      "mode": "A",
+      "series": [
+        {
+          "ms": 64.80000000447035,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "A",
+              "target": 1,
+              "age": 0.0041000000014901165,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 10,
+              "cpuMs": 0.7999999970197678,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 111.10000000149012,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "A",
+              "target": 1,
+              "age": 0.0041000000014901165,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 10,
+              "cpuMs": 0.7999999970197678,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 156.89999999850988,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "A",
+              "target": 1,
+              "age": 0.0041000000014901165,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 10,
+              "cpuMs": 0.7999999970197678,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 311.5,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "A",
+              "target": 1,
+              "age": 0.0041000000014901165,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 10,
+              "cpuMs": 0.7999999970197678,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 607.8999999985099,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "A",
+              "target": 1,
+              "age": 0.0041000000014901165,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 10,
+              "cpuMs": 0.7999999970197678,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 1605.2000000029802,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "A",
+              "target": 1,
+              "age": 0.0041000000014901165,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 10,
+              "cpuMs": 0.7999999970197678,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 2,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        }
+      ]
+    },
+    {
+      "reducedMotion": "reduce",
+      "mode": "B",
+      "series": [
+        {
+          "ms": 55.20000000298023,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "B",
+              "target": 1,
+              "age": 0.003500000002980187,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 15,
+              "cpuMs": 1,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 102.80000000447035,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "B",
+              "target": 1,
+              "age": 0.003500000002980187,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 15,
+              "cpuMs": 1,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 150,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "B",
+              "target": 1,
+              "age": 0.003500000002980187,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 15,
+              "cpuMs": 1,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 306,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "B",
+              "target": 1,
+              "age": 0.003500000002980187,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 15,
+              "cpuMs": 1,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 601.3000000044703,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "B",
+              "target": 1,
+              "age": 0.003500000002980187,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 15,
+              "cpuMs": 1,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        },
+        {
+          "ms": 1612,
+          "snapshot": {
+            "state": {
+              "hit": [
+                0.64,
+                0.48
+              ],
+              "amount": 1,
+              "glow": 1,
+              "mode": "B",
+              "target": 1,
+              "age": 0.003500000002980187,
+              "preset": "readable",
+              "quality": "full"
+            },
+            "settings": {
+              "depth": 0.014,
+              "range": 0.22,
+              "ratio": 3.2,
+              "response": 14,
+              "restore": 3.9,
+              "amber": 0.26,
+              "transmission": 0.3,
+              "tension": 0.65,
+              "opticalGain": 2.4,
+              "lightDelay": 0.12,
+              "glowResponse": 3.2
+            },
+            "frame": {
+              "portrait": false,
+              "aspect": 1.75,
+              "scaleY": 1.09375,
+              "controls": [
+                [
+                  0,
+                  0.19
+                ],
+                [
+                  0.25,
+                  0.49
+                ],
+                [
+                  0.5,
+                  0.68
+                ],
+                [
+                  0.75,
+                  0.82
+                ],
+                [
+                  1,
+                  0.95
+                ]
+              ]
+            },
+            "renderer": "webgl2",
+            "canvas": [
+              1440,
+              900
+            ],
+            "mesh": {
+              "vertices": 49601,
+              "triangles": 98304,
+              "bufferBytes": 986632
+            },
+            "stats": {
+              "draws": 15,
+              "cpuMs": 1,
+              "maxCpuMs": 0.19999999552965164,
+              "frames": 0,
+              "frameMs": 0,
+              "releases": 5,
+              "lastRelease": "comparison start",
+              "restoreCount": 0,
+              "error": null
+            },
+            "raf": 0,
+            "destroyed": false
+          }
+        }
+      ]
+    }
+  ]
+}
