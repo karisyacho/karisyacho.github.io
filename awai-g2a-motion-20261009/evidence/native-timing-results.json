@@ -1,0 +1,1280 @@
+[
+  {
+    "preset": "clear",
+    "nativePressMs": 50.5,
+    "peakAfterRelease": 0.9904179782119011,
+    "heldAfterReleaseMs": 152.69999999552965,
+    "events": [
+      {
+        "type": "pointerdown",
+        "time": 1113.9000000059605,
+        "trusted": true,
+        "amount": 0,
+        "target": 1
+      },
+      {
+        "type": "pointerup",
+        "time": 1164.4000000059605,
+        "trusted": true,
+        "amount": 0.7447384738569232,
+        "target": 1
+      },
+      {
+        "type": "pointerleave",
+        "time": 1164.6000000014901,
+        "trusted": true,
+        "amount": 0.7447384738569232,
+        "target": 1
+      }
+    ],
+    "samples": [
+      {
+        "time": 1169.1000000014901,
+        "amount": 0.7713280114531447,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1171.9000000059605,
+        "amount": 0.7713280114531447,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1180.1000000014901,
+        "amount": 0.82047964275823,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1187.8000000044703,
+        "amount": 0.8423324641947546,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1195.9000000059605,
+        "amount": 0.8615251650072231,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1204.7000000029802,
+        "amount": 0.8910500489267273,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1211.9000000059605,
+        "amount": 0.9028274161702486,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1220,
+        "amount": 0.9221885484652941,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1228.9000000059605,
+        "amount": 0.930599878910586,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1237,
+        "amount": 0.9455170062159105,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1244.9000000059605,
+        "amount": 0.9521491628848476,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1252.1000000014901,
+        "amount": 0.9625169581892246,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1259.8000000044703,
+        "amount": 0.9670072245310518,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1268.1000000014901,
+        "amount": 0.9740988178035218,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1276,
+        "amount": 0.9773516135197735,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1284.2000000029802,
+        "amount": 0.9797108022816248,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1292,
+        "amount": 0.9840718399936191,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1300.1000000014901,
+        "amount": 0.9857310105538191,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1308.1000000014901,
+        "amount": 0.9890658752222005,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1317.1000000014901,
+        "amount": 0.9904179782119011,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 1324.1000000014901,
+        "amount": 0.962762786893544,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1332.3000000044703,
+        "amount": 0.9123713180902427,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1340.8000000044703,
+        "amount": 0.8881734533273199,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1348,
+        "amount": 0.8420901325028948,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1356.1000000014901,
+        "amount": 0.821331705662495,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1364.7000000029802,
+        "amount": 0.7824633265139948,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1371.8000000044703,
+        "amount": 0.7617108747637967,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1380.1000000014901,
+        "amount": 0.7249676652763432,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1389.3000000044703,
+        "amount": 0.7043863894464549,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1396.2000000029802,
+        "amount": 0.667838951727376,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1404.2000000029802,
+        "amount": 0.6520016249911393,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1412.3000000044703,
+        "amount": 0.6331877959692235,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1420.8000000044703,
+        "amount": 0.5991829961665787,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1428.4000000059605,
+        "amount": 0.5849737966873589,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1436.3000000044703,
+        "amount": 0.5538240595353393,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1444.7000000029802,
+        "amount": 0.5404310458748262,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1452.4000000059605,
+        "amount": 0.512390512601478,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1461,
+        "amount": 0.49784413904915,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1468.3000000044703,
+        "amount": 0.47269343728771634,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1476.5,
+        "amount": 0.46126238882777615,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1484.2000000029802,
+        "amount": 0.4375395292297397,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1493,
+        "amount": 0.42716358984119795,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1500.3000000044703,
+        "amount": 0.4053889814682857,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1508.8000000044703,
+        "amount": 0.3955855428614807,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1515.9000000059605,
+        "amount": 0.3747005052614095,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1523.8000000044703,
+        "amount": 0.36546373508051316,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1531.9000000059605,
+        "amount": 0.34816867277839664,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1540.7000000029802,
+        "amount": 0.3395859407844855,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1548.2000000029802,
+        "amount": 0.321966355558188,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1557.2000000029802,
+        "amount": 0.31418030920651036,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1564.2000000029802,
+        "amount": 0.30540753170175133,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1572.8000000044703,
+        "amount": 0.2888671963340965,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1580.5,
+        "amount": 0.28134088676023383,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1588.9000000059605,
+        "amount": 0.26687144264890816,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1596.4000000059605,
+        "amount": 0.25954421001487815,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1604.5,
+        "amount": 0.24702438445404507,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1612.5,
+        "amount": 0.24001155169381552,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1620.4000000059605,
+        "amount": 0.22766768737570145,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1628.6000000014901,
+        "amount": 0.22216204637910328,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1635.9000000059605,
+        "amount": 0.21124256159679822,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1644.7000000029802,
+        "amount": 0.20563999733777255,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1651.8000000044703,
+        "amount": 0.1958143573939241,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1659.9000000059605,
+        "amount": 0.1910790189441976,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1668.1000000014901,
+        "amount": 0.18203647047755087,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1676.1000000014901,
+        "amount": 0.1776343198417283,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1683.9000000059605,
+        "amount": 0.16793332980519593,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1692.9000000059605,
+        "amount": 0.16363642633452552,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1700.2000000029802,
+        "amount": 0.15529508080855994,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1709,
+        "amount": 0.15088637260510174,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1715.9000000059605,
+        "amount": 0.14674363053270625,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1724.4000000059605,
+        "amount": 0.13872964709194568,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1732.7000000029802,
+        "amount": 0.13543977197562446,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1740.5,
+        "amount": 0.12798167047368253,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1748.9000000059605,
+        "amount": 0.12464716353073782,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1755.8000000044703,
+        "amount": 0.1183500850086168,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1764.5,
+        "amount": 0.1151006605047884,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1772,
+        "amount": 0.11226330551373936,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1780,
+        "amount": 0.10689927695332055,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1788.7000000029802,
+        "amount": 0.10426409488162051,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1796.1000000014901,
+        "amount": 0.0984281710498026,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1805.1000000014901,
+        "amount": 0.09609401683352943,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1812.1000000014901,
+        "amount": 0.09071539283482093,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1820.2000000029802,
+        "amount": 0.0880977553550472,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1828.1000000014901,
+        "amount": 0.08563782395975866,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1836.1000000014901,
+        "amount": 0.0808444593952917,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1844.2000000029802,
+        "amount": 0.07892729042072683,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1853.2000000029802,
+        "amount": 0.0751200164769156,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1860.4000000059605,
+        "amount": 0.07302245920997474,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1868.3000000044703,
+        "amount": 0.06923365264009226,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1877.3000000044703,
+        "amount": 0.06759182570686503,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1884.4000000059605,
+        "amount": 0.06408479025394859,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1892.6000000014901,
+        "amount": 0.06256506493776294,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1899.8000000044703,
+        "amount": 0.059347325344833,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1908.6000000014901,
+        "amount": 0.05793994564651385,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1916.3000000044703,
+        "amount": 0.05519801840846124,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1924.3000000044703,
+        "amount": 0.05370827326865252,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1932.4000000059605,
+        "amount": 0.05094604106228692,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1941.1000000014901,
+        "amount": 0.04947596787665283,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1948.4000000059605,
+        "amount": 0.04693140437474323,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1956.3000000044703,
+        "amount": 0.04559905780980723,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 1965.3000000044703,
+        "amount": 0.04432580682344716,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      }
+    ],
+    "restoredExactZero": true,
+    "releaseDelayMs": 159.69999999552965
+  },
+  {
+    "preset": "dramatic",
+    "nativePressMs": 48.899999998509884,
+    "peakAfterRelease": 0.9834201415493496,
+    "heldAfterReleaseMs": 155.20000000298023,
+    "events": [
+      {
+        "type": "pointerdown",
+        "time": 2938.60000000149,
+        "trusted": true,
+        "amount": 0,
+        "target": 1
+      },
+      {
+        "type": "pointerup",
+        "time": 2987.5,
+        "trusted": true,
+        "amount": 0.6817972964302844,
+        "target": 1
+      },
+      {
+        "type": "pointerleave",
+        "time": 2987.5,
+        "trusted": true,
+        "amount": 0.6817972964302844,
+        "target": 1
+      }
+    ],
+    "samples": [
+      {
+        "time": 2992.3000000044703,
+        "amount": 0.710635073699083,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 2999.3000000044703,
+        "amount": 0.7388516563560767,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3007.60000000149,
+        "amount": 0.7629695503743513,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3014.3000000044703,
+        "amount": 0.8098546818268414,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3023.10000000149,
+        "amount": 0.8296953976404569,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3030.3000000044703,
+        "amount": 0.8454235783871527,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3038.3000000044703,
+        "amount": 0.8750531293292502,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3046.3000000044703,
+        "amount": 0.8883031380288765,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3054.3000000044703,
+        "amount": 0.9095417324492878,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3062.4000000059605,
+        "amount": 0.9192878911025376,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3071.3000000044703,
+        "amount": 0.9282571202834431,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3078.4000000059605,
+        "amount": 0.9416774615892082,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3086.4000000059605,
+        "amount": 0.9469630620997421,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3095.3000000044703,
+        "amount": 0.9570477680931417,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3103.4000000059605,
+        "amount": 0.9616755293581994,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3110.5,
+        "amount": 0.9689037071126873,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3118.5,
+        "amount": 0.9717218728859808,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3126.60000000149,
+        "amount": 0.977055262386766,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3134.60000000149,
+        "amount": 0.9795662363761565,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3142.7000000029802,
+        "amount": 0.9834201415493496,
+        "target": 1,
+        "lastRelease": "new contact"
+      },
+      {
+        "time": 3151,
+        "amount": 0.9622809312027707,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3158.2000000029802,
+        "amount": 0.9228682066791218,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3166.2000000029802,
+        "amount": 0.9037713855429386,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3175.7000000029802,
+        "amount": 0.8814483759997754,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3182.4000000059605,
+        "amount": 0.8391306675131438,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3190.7000000029802,
+        "amount": 0.8207564674775006,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3198.9000000059605,
+        "amount": 0.7810322453997868,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3207.7000000029802,
+        "amount": 0.7623657567885809,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3215.3000000044703,
+        "amount": 0.7465901970798645,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3222.7000000029802,
+        "amount": 0.7139596415562943,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3231.8000000044703,
+        "amount": 0.6966105036781101,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3238.8000000044703,
+        "amount": 0.6794043349829901,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3246.9000000059605,
+        "amount": 0.646786616946181,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3254.9000000059605,
+        "amount": 0.6334027250234702,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3263,
+        "amount": 0.6054708599952062,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3271,
+        "amount": 0.5931850669992088,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3278.10000000149,
+        "amount": 0.5647066745857864,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3287.10000000149,
+        "amount": 0.553021254846624,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3294.2000000029802,
+        "amount": 0.5305883240671637,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3303,
+        "amount": 0.518119772363511,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3310.10000000149,
+        "amount": 0.4971025964646862,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3319,
+        "amount": 0.4866165475822889,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3326.10000000149,
+        "amount": 0.4653484297625295,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3334.2000000029802,
+        "amount": 0.4557190204223195,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3342.2000000029802,
+        "amount": 0.43562267150184836,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3350.9000000059605,
+        "amount": 0.42381898262921003,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3358.7000000029802,
+        "amount": 0.4152191430128197,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3367,
+        "amount": 0.3969087622683167,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3374.9000000059605,
+        "amount": 0.38758161125594637,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3382.9000000059605,
+        "amount": 0.3701863162436522,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3391,
+        "amount": 0.3610427730839061,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3399.10000000149,
+        "amount": 0.3463973187437073,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3406.10000000149,
+        "amount": 0.33936846560866557,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3414.2000000029802,
+        "amount": 0.324269978667846,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3422.2000000029802,
+        "amount": 0.3166498015709022,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3430.4000000059605,
+        "amount": 0.30343166732745736,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3438.5,
+        "amount": 0.297152785645253,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3446.60000000149,
+        "amount": 0.28393247230398166,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3454.60000000149,
+        "amount": 0.278171112327721,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3462.7000000029802,
+        "amount": 0.27141158601754795,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3470.8000000044703,
+        "amount": 0.25923019125727914,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3478.2000000029802,
+        "amount": 0.24881668893067577,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3486.9000000059605,
+        "amount": 0.24366794963093846,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3494.9000000059605,
+        "amount": 0.2377468462399588,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3503,
+        "amount": 0.2271695003255793,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3510.60000000149,
+        "amount": 0.22210415451056686,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3518.10000000149,
+        "amount": 0.21118117964056024,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3527,
+        "amount": 0.20664171254094676,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3534.10000000149,
+        "amount": 0.20244868283075299,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3542.2000000029802,
+        "amount": 0.192650263013452,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3550.8000000044703,
+        "amount": 0.1886637700473055,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3558.9000000059605,
+        "amount": 0.17990095263680936,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3566.9000000059605,
+        "amount": 0.17625052780233247,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3574.10000000149,
+        "amount": 0.1677888655436729,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3582.7000000029802,
+        "amount": 0.16384591382304,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3590.9000000059605,
+        "amount": 0.15986447680021793,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3598.8000000044703,
+        "amount": 0.152752113808742,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3606.8000000044703,
+        "amount": 0.1492848814181797,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3614.7000000029802,
+        "amount": 0.1424678608406806,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3622.4000000059605,
+        "amount": 0.13929116246502343,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3630.5,
+        "amount": 0.13640882412440844,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3638.5,
+        "amount": 0.12980670201194838,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3646.5,
+        "amount": 0.12665241395470095,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3654.60000000149,
+        "amount": 0.1209680469961606,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3662.60000000149,
+        "amount": 0.11802853724793964,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3670.8000000044703,
+        "amount": 0.11516045725141304,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3678.8000000044703,
+        "amount": 0.11003697396963322,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3687,
+        "amount": 0.10736308804950476,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3694.2000000029802,
+        "amount": 0.10250242289622674,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3702.2000000029802,
+        "amount": 0.10042251512114207,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3710.7000000029802,
+        "amount": 0.09794209496261827,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3718.7000000029802,
+        "amount": 0.09381515745657507,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3726.8000000044703,
+        "amount": 0.09149793798194171,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3735,
+        "amount": 0.08742719906029617,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3743.10000000149,
+        "amount": 0.08526776114250618,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3750.8000000044703,
+        "amount": 0.08309349638727415,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3758.8000000044703,
+        "amount": 0.07926656684799864,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3767,
+        "amount": 0.07759449130339416,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3774.10000000149,
+        "amount": 0.07386923506315084,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3783,
+        "amount": 0.07207422107430263,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      },
+      {
+        "time": 3790.5,
+        "amount": 0.0702939992719813,
+        "target": 0,
+        "lastRelease": "short tap restore"
+      }
+    ],
+    "restoredExactZero": true,
+    "releaseDelayMs": 163.5
+  }
+]

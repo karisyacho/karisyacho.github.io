@@ -1,0 +1,245 @@
+{
+  "environment": "Automated DPR1; physical device unverified",
+  "results": [
+    {
+      "device": "pc",
+      "preset": "clear",
+      "hit": [
+        0.2,
+        0.3
+      ],
+      "min": 0.24642469439737946,
+      "negative": 0,
+      "minUV": [
+        0.1875,
+        0.349609375
+      ],
+      "projectedContact": [
+        0.2,
+        0.3,
+        -0.06437357398367555
+      ],
+      "filename": "extra-pc-clear-0.2-0.3.png"
+    },
+    {
+      "device": "pc",
+      "preset": "clear",
+      "hit": [
+        0.75,
+        0.65
+      ],
+      "min": 0.2490451023292847,
+      "negative": 0,
+      "minUV": [
+        0.7375,
+        0.705078125
+      ],
+      "projectedContact": [
+        0.75,
+        0.65,
+        0.006763752611759648
+      ],
+      "filename": "extra-pc-clear-0.75-0.65.png"
+    },
+    {
+      "device": "pc",
+      "preset": "clear",
+      "hit": [
+        0.55,
+        0.5
+      ],
+      "min": 0.24688490240207148,
+      "negative": 0,
+      "minUV": [
+        0.5625,
+        0.458984375
+      ],
+      "projectedContact": [
+        0.55,
+        0.5,
+        -0.06041910540098479
+      ],
+      "filename": "extra-pc-clear-0.55-0.5.png"
+    },
+    {
+      "device": "pc",
+      "preset": "dramatic",
+      "hit": [
+        0.2,
+        0.3
+      ],
+      "min": 0.07335264776931291,
+      "negative": 0,
+      "minUV": [
+        0.175,
+        0.36328125
+      ],
+      "projectedContact": [
+        0.2,
+        0.3,
+        -0.10687011867911556
+      ],
+      "filename": "extra-pc-dramatic-0.2-0.3.png"
+    },
+    {
+      "device": "pc",
+      "preset": "dramatic",
+      "hit": [
+        0.75,
+        0.65
+      ],
+      "min": 0.07405411027348785,
+      "negative": 0,
+      "minUV": [
+        0.725,
+        0.732421875
+      ],
+      "projectedContact": [
+        0.75,
+        0.65,
+        -0.034192342514051906
+      ],
+      "filename": "extra-pc-dramatic-0.75-0.65.png"
+    },
+    {
+      "device": "pc",
+      "preset": "dramatic",
+      "hit": [
+        0.55,
+        0.5
+      ],
+      "min": 0.07349855254554222,
+      "negative": 0,
+      "minUV": [
+        0.5625,
+        0.4453125
+      ],
+      "projectedContact": [
+        0.55,
+        0.5,
+        -0.10293965861756997
+      ],
+      "filename": "extra-pc-dramatic-0.55-0.5.png"
+    },
+    {
+      "device": "sp",
+      "preset": "clear",
+      "hit": [
+        0.2,
+        0.3
+      ],
+      "min": 0.26627083562788184,
+      "negative": 0,
+      "minUV": [
+        0.175,
+        0.3454212454212454
+      ],
+      "projectedContact": [
+        0.2,
+        0.3,
+        -0.011905442530023892
+      ],
+      "filename": "extra-sp-clear-0.2-0.3.png"
+    },
+    {
+      "device": "sp",
+      "preset": "clear",
+      "hit": [
+        0.75,
+        0.65
+      ],
+      "min": 0.26841585188913825,
+      "negative": 0,
+      "minUV": [
+        0.8125,
+        0.67003663003663
+      ],
+      "projectedContact": [
+        0.75,
+        0.65,
+        -0.010850258591333695
+      ],
+      "filename": "extra-sp-clear-0.75-0.65.png"
+    },
+    {
+      "device": "sp",
+      "preset": "clear",
+      "hit": [
+        0.55,
+        0.5
+      ],
+      "min": 0.26665715670724854,
+      "negative": 0,
+      "minUV": [
+        0.55,
+        0.46908424908424906
+      ],
+      "projectedContact": [
+        0.55,
+        0.5,
+        -0.01366780651124425
+      ],
+      "filename": "extra-sp-clear-0.55-0.5.png"
+    },
+    {
+      "device": "sp",
+      "preset": "dramatic",
+      "hit": [
+        0.2,
+        0.3
+      ],
+      "min": 0.09608513099379667,
+      "negative": 0,
+      "minUV": [
+        0.1625,
+        0.3608791208791209
+      ],
+      "projectedContact": [
+        0.2,
+        0.3,
+        -0.03618918235598961
+      ],
+      "filename": "extra-sp-dramatic-0.2-0.3.png"
+    },
+    {
+      "device": "sp",
+      "preset": "dramatic",
+      "hit": [
+        0.75,
+        0.65
+      ],
+      "min": 0.09707019583382047,
+      "negative": 0,
+      "minUV": [
+        0.85,
+        0.67003663003663
+      ],
+      "projectedContact": [
+        0.75,
+        0.65,
+        -0.03425374152036886
+      ],
+      "filename": "extra-sp-dramatic-0.75-0.65.png"
+    },
+    {
+      "device": "sp",
+      "preset": "dramatic",
+      "hit": [
+        0.55,
+        0.5
+      ],
+      "min": 0.09636804943108915,
+      "negative": 0,
+      "minUV": [
+        0.5875,
+        0.4381684981684982
+      ],
+      "projectedContact": [
+        0.55,
+        0.5,
+        -0.03796526549215007
+      ],
+      "filename": "extra-sp-dramatic-0.55-0.5.png"
+    }
+  ]
+}
