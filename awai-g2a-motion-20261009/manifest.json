@@ -24,6 +24,11 @@
       "bytes": 193940
     },
     {
+      "path": "downloads.html",
+      "sha256": "f627bbf5c200a3762052868d960f378e83839d47159077fefedd885cfd21e3dc",
+      "bytes": 3265
+    },
+    {
       "path": "evidence/deformation-results.json",
       "sha256": "893d61f38751e951fbcaaccbcdc610baaf29b9619b8e0fadfe3e2b5175545b81",
       "bytes": 218284
@@ -320,13 +325,14 @@
     },
     {
       "path": "report.html",
-      "sha256": "3c70e025224892131e1dab20c9ad1a1ed20a748ef69d156e9f6da45ac6b69b81",
-      "bytes": 11867
+      "sha256": "557e45000f0c4e310ef1668b8cf80135517f1701a98b00c079d1f3ebd3b0b40c",
+      "bytes": 12164
     },
     {
       "path": "surface.js",
       "sha256": "894b1af6dab6a34b507528a8acdf25375046a1bb0c2e6e5fbb3dff776149fb1c",
       "bytes": 6870
     }
-  ]
+  ],
+  "revision": "Mobile MP4 download links"
 }
