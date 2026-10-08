@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-08",
+  "tool": "OpenAI built-in imagegen",
+  "sourceUrl": "https://openai.com/policies/terms-of-use/",
+  "termsEffective": "2026-01-01",
+  "section": "Content / Ownership of content; Similarity of content",
+  "finding": "Official general terms assign output ownership to the user as between OpenAI and the user, to the extent permitted by law. Outputs may not be unique; third-party rights are not automatically cleared.",
+  "scope": "General terms checked. This record does not establish the exact contractual terms applicable to the signed-in account, exclusive rights, or production adoption approval.",
+  "inputs": "Original text prompts only for S0-S3. S4 uses our newly generated S0 image of the same device size as an edit target. No third-party stock or real shop photo was uploaded.",
+  "status": "G1 concept-preview placeholder only. Production adoption on hold."
+}

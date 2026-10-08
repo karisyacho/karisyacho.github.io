@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-08",
+  "environment": "Codex in-app Chromium, viewport simulation; physical devices not tested",
+  "frames": [
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS0-PC · 1659 × 948\n\n元WebP\nあわい",
+      "url": "/g1-keyframes/frames/s0-pc.html",
+      "width": 1440
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS1-PC · 1659 × 948\n\n元WebP\n助任珈琲豆店",
+      "url": "/g1-keyframes/frames/s1-pc.html",
+      "width": 1440
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS2-PC · 1659 × 948\n\n元WebP\nKASANE",
+      "url": "/g1-keyframes/frames/s2-pc.html",
+      "width": 1440
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS3-PC · 1659 × 948\n\n元WebP\nAIMA",
+      "url": "/g1-keyframes/frames/s3-pc.html",
+      "width": 1440
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS4-PC · 1659 × 948\n\n元WebP\n\nここに、あなたの店の話が入ります。\n\n話してみる",
+      "url": "/g1-keyframes/frames/s4-pc.html",
+      "width": 1440
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS0-SP · 948 × 1659\n\n元WebP\nあわい",
+      "url": "/g1-keyframes/frames/s0-sp.html",
+      "width": 390
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS1-SP · 948 × 1659\n\n元WebP\n助任珈琲豆店",
+      "url": "/g1-keyframes/frames/s1-sp.html",
+      "width": 390
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS2-SP · 948 × 1659\n\n元WebP\nKASANE",
+      "url": "/g1-keyframes/frames/s2-sp.html",
+      "width": 390
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS3-SP · 948 × 1659\n\n元WebP\nAIMA",
+      "url": "/g1-keyframes/frames/s3-sp.html",
+      "width": 390
+    },
+    {
+      "imageReady": true,
+      "overflow": false,
+      "text": "← 比較ページへ\n\nS4-SP · 948 × 1660\n\n元WebP\n\nここに、あなたの\n店の話が入ります。\n\n話してみる",
+      "url": "/g1-keyframes/frames/s4-sp.html",
+      "width": 390
+    }
+  ],
+  "overview": {
+    "desktopWidth": 1440,
+    "mobileWidth": 390,
+    "horizontalOverflow": false,
+    "imageCount": 10
+  },
+  "narrowWidth320": {
+    "scene": "s4-sp",
+    "horizontalOverflow": false
+  },
+  "screenshots": [
+    "verification/pc-overview.png",
+    "verification/mobile-overview.png",
+    "verification/s4-mobile.png"
+  ],
+  "limitations": [
+    "No animation, touch, scroll-timeline or physical-device test in G1",
+    "Lazy-loaded detail images are checked in standalone frame pages"
+  ]
+}
