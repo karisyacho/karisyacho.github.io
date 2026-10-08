@@ -141,13 +141,14 @@
     },
     {
       "path": "report.html",
-      "bytes": 7010,
-      "sha256": "4b14abbd6d0c03fb581c58c81f883331b4a202afdd9e2596c7de693f9e307941"
+      "bytes": 6994,
+      "sha256": "88c750d051e7a9b8c895b4371f10e683a50bbee11a85b100748514ab272e78a2"
     },
     {
       "path": "surface.js",
       "bytes": 4310,
       "sha256": "d331df01ee60fcbc95bff2bed18b3fab4fe55f21c82864bd77b4bef4e1c9f588"
     }
-  ]
+  ],
+  "textEncoding": "UTF-8, canonical LF newlines"
 }
