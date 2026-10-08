@@ -1,0 +1,1471 @@
+{
+  "url": "http://127.0.0.1:3149/",
+  "started": "2026-10-08T15:33:56.593Z",
+  "environment": "Windows automated Edge/CDP emulation; not physical device or GPU timing",
+  "checks": [
+    {
+      "name": "WebGL2 ready",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "A",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 5,
+          "cpuMs": 0.4000000059604645,
+          "maxCpuMs": 0.30000000447034836,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 0,
+          "lastRelease": "",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Idle has no RAF/draws",
+      "status": "pass",
+      "detail": {
+        "before": 6,
+        "after": 6,
+        "raf": 0
+      }
+    },
+    {
+      "name": "Mouse press",
+      "status": "pass",
+      "detail": {
+        "amount": 1
+      }
+    },
+    {
+      "name": "Mouse load position follows",
+      "status": "pass",
+      "detail": {
+        "before": [
+          0.5800000084771051,
+          0.47812499999999997
+        ],
+        "after": [
+          0.6427508038529893,
+          0.5330319459538987
+        ]
+      }
+    },
+    {
+      "name": "Mouse outside releases",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.6427508038529893,
+            0.5330319459538987
+          ],
+          "amount": 0.20618942373697505,
+          "glow": 0.3522767605363675,
+          "mode": "A",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 307,
+          "cpuMs": 4.8000000193715096,
+          "maxCpuMs": 0.30000000447034836,
+          "frames": 300,
+          "frameMs": 1642.3000000000002,
+          "releases": 3,
+          "lastRelease": "outside",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 305,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Release returns to zero",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.6427508038529893,
+            0.5330319459538987
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "A",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 590,
+          "cpuMs": 8.30000002682209,
+          "maxCpuMs": 0.30000000447034836,
+          "frames": 583,
+          "frameMs": 3196.1,
+          "releases": 3,
+          "lastRelease": "outside",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Keyboard press and location",
+      "status": "pass",
+      "detail": {
+        "before": {
+          "hit": [
+            0.6427508038529893,
+            0.5330319459538987
+          ],
+          "amount": 1,
+          "glow": 0.8474126790861877,
+          "mode": "A",
+          "target": 1
+        },
+        "after": {
+          "hit": [
+            0.6677508038529893,
+            0.5330319459538987
+          ],
+          "amount": 1,
+          "glow": 0.8492689642536564,
+          "mode": "A",
+          "target": 1
+        }
+      }
+    },
+    {
+      "name": "Keyboard releases",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.6677508038529893,
+            0.5330319459538987
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "A",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 1114,
+          "cpuMs": 13.80000003427267,
+          "maxCpuMs": 0.30000000447034836,
+          "frames": 1106,
+          "frameMs": 6026.3,
+          "releases": 4,
+          "lastRelease": "keyboard",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "A/B static pixels equal",
+      "status": "pass",
+      "detail": {
+        "changedChannels": 0,
+        "meanChannelDifference": 0,
+        "maxChannelDifference": 0
+      }
+    },
+    {
+      "name": "A/B same geometry, changed contact pixels",
+      "status": "pass",
+      "detail": {
+        "sampleA": [
+          0.58,
+          0.48,
+          -0.024687407776877092
+        ],
+        "sampleB": [
+          0.58,
+          0.48,
+          -0.024687407776877092
+        ],
+        "loadDiff": {
+          "changedChannels": 33485,
+          "meanChannelDifference": 0.01102854938271605,
+          "maxChannelDifference": 3
+        }
+      }
+    },
+    {
+      "name": "Contact depresses surface",
+      "status": "pass",
+      "detail": {
+        "resting": [
+          0.58,
+          0.48,
+          -0.01409907602398761
+        ],
+        "pressed": [
+          0.58,
+          0.48,
+          -0.024687407776877092
+        ]
+      }
+    },
+    {
+      "name": "Replay survives A/B switch and header hover",
+      "status": "pass",
+      "detail": {
+        "A": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0.990529750255911,
+          "glow": 0.4891227048995727,
+          "mode": "A",
+          "target": 1
+        },
+        "B": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0.9920668095687286,
+          "glow": 0.5078508995456823,
+          "mode": "B",
+          "target": 1
+        }
+      }
+    },
+    {
+      "name": "Replay 2.4 second timer restores",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "B",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 2338,
+          "cpuMs": 28.000000044703484,
+          "maxCpuMs": 0.30000000447034836,
+          "frames": 2302,
+          "frameMs": 12681.7,
+          "releases": 21,
+          "lastRelease": "replay end",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "No horizontal overflow 320x640",
+      "status": "pass",
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320,
+        "layout": "sp"
+      }
+    },
+    {
+      "name": "No horizontal overflow 390x844",
+      "status": "pass",
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390,
+        "layout": "sp"
+      }
+    },
+    {
+      "name": "No horizontal overflow 844x390",
+      "status": "pass",
+      "detail": {
+        "width": 844,
+        "scrollWidth": 844,
+        "layout": "pc"
+      }
+    },
+    {
+      "name": "No horizontal overflow 1440x900",
+      "status": "pass",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "layout": "pc"
+      }
+    },
+    {
+      "name": "No horizontal overflow 1920x1080",
+      "status": "pass",
+      "detail": {
+        "width": 1920,
+        "scrollWidth": 1920,
+        "layout": "pc"
+      }
+    },
+    {
+      "name": "Context loss fallback",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "B",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "static",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": null,
+        "stats": {
+          "draws": 2350,
+          "cpuMs": 28.1000000461936,
+          "maxCpuMs": 0.30000000447034836,
+          "frames": 2302,
+          "frameMs": 12681.7,
+          "releases": 22,
+          "lastRelease": "context lost",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Context restore",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "B",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 2352,
+          "cpuMs": 28.200000040233135,
+          "maxCpuMs": 0.30000000447034836,
+          "frames": 2302,
+          "frameMs": 12681.7,
+          "releases": 22,
+          "lastRelease": "context lost",
+          "restoreCount": 1,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Destroy stops input, drawing and resize",
+      "status": "pass",
+      "detail": {
+        "before": {
+          "state": {
+            "hit": [
+              0.58,
+              0.48
+            ],
+            "amount": 0,
+            "glow": 0,
+            "mode": "B",
+            "target": 0
+          },
+          "settings": {
+            "depth": 0.011,
+            "range": 0.17,
+            "ratio": 2.8,
+            "response": 11,
+            "restore": 4.3,
+            "amber": 0.13,
+            "transmission": 0.12
+          },
+          "frame": {
+            "portrait": false,
+            "aspect": 1.75,
+            "scaleY": 1.09375,
+            "controls": [
+              [
+                0,
+                0.19
+              ],
+              [
+                0.25,
+                0.49
+              ],
+              [
+                0.5,
+                0.68
+              ],
+              [
+                0.75,
+                0.82
+              ],
+              [
+                1,
+                0.95
+              ]
+            ]
+          },
+          "renderer": "static",
+          "canvas": [
+            1,
+            1
+          ],
+          "mesh": null,
+          "stats": {
+            "draws": 2352,
+            "cpuMs": 28.200000040233135,
+            "maxCpuMs": 0.30000000447034836,
+            "frames": 2302,
+            "frameMs": 12681.7,
+            "releases": 23,
+            "lastRelease": "pagehide",
+            "restoreCount": 1,
+            "error": null
+          },
+          "raf": 0,
+          "destroyed": true
+        },
+        "after": {
+          "state": {
+            "hit": [
+              0.58,
+              0.48
+            ],
+            "amount": 0,
+            "glow": 0,
+            "mode": "B",
+            "target": 0
+          },
+          "settings": {
+            "depth": 0.011,
+            "range": 0.17,
+            "ratio": 2.8,
+            "response": 11,
+            "restore": 4.3,
+            "amber": 0.13,
+            "transmission": 0.12
+          },
+          "frame": {
+            "portrait": false,
+            "aspect": 1.75,
+            "scaleY": 1.09375,
+            "controls": [
+              [
+                0,
+                0.19
+              ],
+              [
+                0.25,
+                0.49
+              ],
+              [
+                0.5,
+                0.68
+              ],
+              [
+                0.75,
+                0.82
+              ],
+              [
+                1,
+                0.95
+              ]
+            ]
+          },
+          "renderer": "static",
+          "canvas": [
+            1,
+            1
+          ],
+          "mesh": null,
+          "stats": {
+            "draws": 2352,
+            "cpuMs": 28.200000040233135,
+            "maxCpuMs": 0.30000000447034836,
+            "frames": 2302,
+            "frameMs": 12681.7,
+            "releases": 23,
+            "lastRelease": "pagehide",
+            "restoreCount": 1,
+            "error": null
+          },
+          "raf": 0,
+          "destroyed": true
+        }
+      }
+    },
+    {
+      "name": "Destroy deletes GL resources",
+      "status": "pass",
+      "detail": {
+        "Buffer": {
+          "created": 4,
+          "deleted": 4
+        },
+        "Shader": {
+          "created": 4,
+          "deleted": 4
+        },
+        "Program": {
+          "created": 2,
+          "deleted": 2
+        },
+        "VertexArray": {
+          "created": 2,
+          "deleted": 2
+        }
+      }
+    },
+    {
+      "name": "Native CDP short touch reacts",
+      "status": "pass",
+      "detail": {
+        "amount": 0.12501067093058083,
+        "events": [
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerup",
+            "trusted": true,
+            "pointerType": "touch"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Native stationary touch presses",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.5794871794871795,
+            0.47509157509157507
+          ],
+          "amount": 1,
+          "glow": 0.8294967145451014,
+          "mode": "A",
+          "target": 1
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 435,
+          "cpuMs": 6.699999995529652,
+          "maxCpuMs": 0.20000000298023224,
+          "frames": 427,
+          "frameMs": 2324.6,
+          "releases": 3,
+          "lastRelease": "new contact",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 673,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Native touch restores",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.5794871794871795,
+            0.47509157509157507
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "A",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 785,
+          "cpuMs": 12.000000044703484,
+          "maxCpuMs": 0.20000000298023224,
+          "frames": 777,
+          "frameMs": 4240.6,
+          "releases": 4,
+          "lastRelease": "pointerup",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Native vertical swipe scroll and pointercancel",
+      "status": "pass",
+      "detail": {
+        "scrollY": 181,
+        "events": [
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerup",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerup",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointercancel",
+            "trusted": true,
+            "pointerType": "touch"
+          }
+        ],
+        "state": {
+          "hit": [
+            0.5794871794871795,
+            0.47509157509157507
+          ],
+          "amount": 0.0023178817226034427,
+          "glow": 0.000005372575679979103,
+          "mode": "B",
+          "target": 0
+        }
+      }
+    },
+    {
+      "name": "Native CDP pinch zoom and releases load",
+      "status": "pass",
+      "detail": {
+        "beforeScale": 1,
+        "scale": 5,
+        "snapshot": {
+          "state": {
+            "hit": [
+              0.3717948717948718,
+              0.47509157509157507
+            ],
+            "amount": 0,
+            "glow": 0,
+            "mode": "B",
+            "target": 0
+          },
+          "settings": {
+            "depth": 0.011,
+            "range": 0.17,
+            "ratio": 2.8,
+            "response": 11,
+            "restore": 4.3,
+            "amber": 0.13,
+            "transmission": 0.12
+          },
+          "frame": {
+            "portrait": true,
+            "aspect": 0.5714285714285714,
+            "scaleY": 1.2366300366300367,
+            "controls": [
+              [
+                0,
+                -0.34
+              ],
+              [
+                0.25,
+                0.19
+              ],
+              [
+                0.5,
+                0.64
+              ],
+              [
+                0.75,
+                0.94
+              ],
+              [
+                1,
+                1.1
+              ]
+            ]
+          },
+          "renderer": "webgl2",
+          "canvas": [
+            390,
+            844
+          ],
+          "mesh": {
+            "vertices": 49601,
+            "triangles": 98304,
+            "bufferBytes": 986632
+          },
+          "stats": {
+            "draws": 987,
+            "cpuMs": 15.300000056624413,
+            "maxCpuMs": 0.20000000298023224,
+            "frames": 965,
+            "frameMs": 5302,
+            "releases": 16,
+            "lastRelease": "multitouch",
+            "restoreCount": 0,
+            "error": null
+          },
+          "raf": 0,
+          "destroyed": false
+        }
+      }
+    },
+    {
+      "name": "Reduced motion immediate stable load",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 1,
+          "glow": 1,
+          "mode": "A",
+          "target": 1
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 7,
+          "cpuMs": 0.10000000149011612,
+          "maxCpuMs": 0.10000000149011612,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 0,
+          "lastRelease": "",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Reduced motion immediate restore",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "A",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 8,
+          "cpuMs": 0.10000000149011612,
+          "maxCpuMs": 0.10000000149011612,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 1,
+          "lastRelease": "keyboard",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Real unavailable WebGL fallback",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "A",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "static",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": null,
+        "stats": {
+          "draws": 0,
+          "cpuMs": 0,
+          "maxCpuMs": 0,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 0,
+          "lastRelease": "",
+          "restoreCount": 0,
+          "error": "WebGL2 unavailable"
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Automated WebKit startup",
+      "status": "pass",
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "A",
+          "target": 0
+        },
+        "settings": {
+          "depth": 0.011,
+          "range": 0.17,
+          "ratio": 2.8,
+          "response": 11,
+          "restore": 4.3,
+          "amber": 0.13,
+          "transmission": 0.12
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366071428571428,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "stats": {
+          "draws": 5,
+          "cpuMs": 0,
+          "maxCpuMs": 0,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 0,
+          "lastRelease": "",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "154.0.4258.62",
+  "performance": {
+    "note": "Automated browser, CPU submit duration and RAF intervals only; not GPU frame time, physical device FPS or thermal test",
+    "drawCount": 422,
+    "meanDrawCpuMs": 0.011137440730045193,
+    "maxDrawCpuMs": 0.30000000447034836,
+    "meanAnimationIntervalMs": 5.481947743467935
+  },
+  "finished": "2026-10-08T15:34:39.116Z",
+  "summary": {
+    "pass": 31,
+    "fail": 0,
+    "unverified": 0
+  }
+}
