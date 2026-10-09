@@ -1,0 +1,432 @@
+{
+  "recordedAt": "2026-10-09T07:42:51.621Z",
+  "environment": "Desktop Edge headless, viewport emulation; physical phone unverified",
+  "recordings": [
+    {
+      "name": "sp-grid-interactions",
+      "device": "sp",
+      "grid": true,
+      "viewport": [
+        390,
+        844
+      ],
+      "duration": 12.68,
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "physicalPhone": false,
+      "input": "CDP browser touch (trusted Pointer Events)",
+      "reaction": [
+        {
+          "receivedAt": 4309.200000000186,
+          "eventTime": 4306.0999999996275,
+          "source": "pointer",
+          "hit": [
+            0.42000000782502,
+            0.5499999999999999
+          ],
+          "firstDraw": 4309.5,
+          "softwareMs": 0.2999999998137355,
+          "eventToDrawMs": 3.400000000372529,
+          "measurement": "CPU draw submission, not physical display"
+        },
+        {
+          "receivedAt": 5829.5999999996275,
+          "eventTime": 5820.5,
+          "source": "pointer",
+          "hit": [
+            0.42000000782502,
+            0.5499999999999999
+          ],
+          "firstDraw": 5829.5999999996275,
+          "softwareMs": 0,
+          "eventToDrawMs": 9.099999999627471,
+          "measurement": "CPU draw submission, not physical display"
+        },
+        {
+          "receivedAt": 9574.899999999441,
+          "eventTime": 9569.599999999627,
+          "source": "pointer",
+          "hit": [
+            0.32000000782502,
+            0.5499999999999999
+          ],
+          "firstDraw": 9575,
+          "softwareMs": 0.10000000055879354,
+          "eventToDrawMs": 5.400000000372529,
+          "measurement": "CPU draw submission, not physical display"
+        }
+      ],
+      "final": {
+        "contact": 0,
+        "reveal": 0,
+        "target": 0,
+        "hit": [
+          0.64000001565004,
+          0.5499999999999999
+        ],
+        "down": false,
+        "began": 9574.899999999441,
+        "releasedAt": 10676.299999999814,
+        "graceUntil": 10676.299999999814,
+        "releaseReveal": 0.9993179209121621,
+        "reason": "pointerup",
+        "events": 6,
+        "active": null,
+        "amount": 0,
+        "transition": 0,
+        "progress": 0,
+        "passiveReveal": 0,
+        "reduced": false,
+        "grid": true,
+        "quality": "full",
+        "lastRelease": "pointerup",
+        "replay": null
+      },
+      "notes": "Finger and labels are recording-only annotations. Real wall-clock browser video, converted to H264 MP4."
+    },
+    {
+      "name": "sp-flat-interactions",
+      "device": "sp",
+      "grid": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "duration": 12.56,
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "physicalPhone": false,
+      "input": "CDP browser touch (trusted Pointer Events)",
+      "reaction": [
+        {
+          "receivedAt": 638.5,
+          "eventTime": 633.8999999994412,
+          "source": "pointer",
+          "hit": [
+            0.42000000782502,
+            0.5499999999999999
+          ],
+          "firstDraw": 638.5999999996275,
+          "softwareMs": 0.09999999962747097,
+          "eventToDrawMs": 4.7000000001862645,
+          "measurement": "CPU draw submission, not physical display"
+        },
+        {
+          "receivedAt": 2142.7000000001863,
+          "eventTime": 2136.7999999998137,
+          "source": "pointer",
+          "hit": [
+            0.42000000782502,
+            0.5499999999999999
+          ],
+          "firstDraw": 2142.7000000001863,
+          "softwareMs": 0,
+          "eventToDrawMs": 5.900000000372529,
+          "measurement": "CPU draw submission, not physical display"
+        },
+        {
+          "receivedAt": 5860.799999999814,
+          "eventTime": 5854.899999999441,
+          "source": "pointer",
+          "hit": [
+            0.32000000782502,
+            0.5499999999999999
+          ],
+          "firstDraw": 5860.799999999814,
+          "softwareMs": 0,
+          "eventToDrawMs": 5.900000000372529,
+          "measurement": "CPU draw submission, not physical display"
+        }
+      ],
+      "final": {
+        "contact": 0,
+        "reveal": 0,
+        "target": 0,
+        "hit": [
+          0.64000001565004,
+          0.5499999999999999
+        ],
+        "down": false,
+        "began": 5860.799999999814,
+        "releasedAt": 6893.399999999441,
+        "graceUntil": 6893.399999999441,
+        "releaseReveal": 0.9989606553849101,
+        "reason": "pointerup",
+        "events": 6,
+        "active": null,
+        "amount": 0,
+        "transition": 0,
+        "progress": 0,
+        "passiveReveal": 0,
+        "reduced": false,
+        "grid": false,
+        "quality": "full",
+        "lastRelease": "pointerup",
+        "replay": null
+      },
+      "notes": "Finger and labels are recording-only annotations. Real wall-clock browser video, converted to H264 MP4."
+    },
+    {
+      "name": "pc-grid-interactions",
+      "device": "pc",
+      "grid": true,
+      "viewport": [
+        1440,
+        900
+      ],
+      "duration": 13.08,
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "physicalPhone": false,
+      "input": "Playwright mouse",
+      "reaction": [
+        {
+          "receivedAt": 884,
+          "eventTime": 883.5999999996275,
+          "source": "pointer",
+          "hit": [
+            0.41999999152289497,
+            0.5499999947018093
+          ],
+          "firstDraw": 884.1999999992549,
+          "softwareMs": 0.19999999925494194,
+          "eventToDrawMs": 0.599999999627471,
+          "measurement": "CPU draw submission, not physical display"
+        },
+        {
+          "receivedAt": 2628.899999999441,
+          "eventTime": 2628.5999999996275,
+          "source": "pointer",
+          "hit": [
+            0.41999999152289497,
+            0.5499999947018093
+          ],
+          "firstDraw": 2628.899999999441,
+          "softwareMs": 0,
+          "eventToDrawMs": 0.2999999998137355,
+          "measurement": "CPU draw submission, not physical display"
+        },
+        {
+          "receivedAt": 6641.799999999814,
+          "eventTime": 6636.5,
+          "source": "pointer",
+          "hit": [
+            0.319999991522895,
+            0.5499999947018093
+          ],
+          "firstDraw": 6641.899999999441,
+          "softwareMs": 0.09999999962747097,
+          "eventToDrawMs": 5.3999999994412065,
+          "measurement": "CPU draw submission, not physical display"
+        }
+      ],
+      "final": {
+        "contact": 0,
+        "reveal": 0,
+        "target": 0,
+        "hit": [
+          0.63999998304579,
+          0.5499999947018093
+        ],
+        "down": false,
+        "began": 6641.799999999814,
+        "releasedAt": 7757.0999999996275,
+        "graceUntil": 7757.0999999996275,
+        "releaseReveal": 0.999348824657653,
+        "reason": "pointerup",
+        "events": 6,
+        "active": null,
+        "amount": 0,
+        "transition": 0,
+        "progress": 0,
+        "passiveReveal": 0,
+        "reduced": false,
+        "grid": true,
+        "quality": "full",
+        "lastRelease": "pointerup",
+        "replay": null
+      },
+      "notes": "Finger and labels are recording-only annotations. Real wall-clock browser video, converted to H264 MP4."
+    },
+    {
+      "name": "pc-flat-interactions",
+      "device": "pc",
+      "grid": false,
+      "viewport": [
+        1440,
+        900
+      ],
+      "duration": 13.56,
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "physicalPhone": false,
+      "input": "Playwright mouse",
+      "reaction": [
+        {
+          "receivedAt": 884.4000000003725,
+          "eventTime": 883.9000000003725,
+          "source": "pointer",
+          "hit": [
+            0.41999999152289497,
+            0.5499999947018093
+          ],
+          "firstDraw": 884.6000000005588,
+          "softwareMs": 0.20000000018626451,
+          "eventToDrawMs": 0.7000000001862645,
+          "measurement": "CPU draw submission, not physical display"
+        },
+        {
+          "receivedAt": 2639,
+          "eventTime": 2638.7999999998137,
+          "source": "pointer",
+          "hit": [
+            0.41999999152289497,
+            0.5499999947018093
+          ],
+          "firstDraw": 2639.100000000559,
+          "softwareMs": 0.10000000055879354,
+          "eventToDrawMs": 0.30000000074505806,
+          "measurement": "CPU draw submission, not physical display"
+        },
+        {
+          "receivedAt": 6591.299999999814,
+          "eventTime": 6590.9000000003725,
+          "source": "pointer",
+          "hit": [
+            0.319999991522895,
+            0.5499999947018093
+          ],
+          "firstDraw": 6591.299999999814,
+          "softwareMs": 0,
+          "eventToDrawMs": 0.39999999944120646,
+          "measurement": "CPU draw submission, not physical display"
+        }
+      ],
+      "final": {
+        "contact": 0,
+        "reveal": 0,
+        "target": 0,
+        "hit": [
+          0.63999998304579,
+          0.5499999947018093
+        ],
+        "down": false,
+        "began": 6591.299999999814,
+        "releasedAt": 7640.4000000003725,
+        "graceUntil": 7640.4000000003725,
+        "releaseReveal": 0.9990522927792419,
+        "reason": "pointerup",
+        "events": 6,
+        "active": null,
+        "amount": 0,
+        "transition": 0,
+        "progress": 0,
+        "passiveReveal": 0,
+        "reduced": false,
+        "grid": false,
+        "quality": "full",
+        "lastRelease": "pointerup",
+        "replay": null
+      },
+      "notes": "Finger and labels are recording-only annotations. Real wall-clock browser video, converted to H264 MP4."
+    },
+    {
+      "name": "sp-touch-connection",
+      "device": "sp",
+      "grid": true,
+      "viewport": [
+        390,
+        844
+      ],
+      "duration": 7.24,
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "physicalPhone": false,
+      "input": "CDP browser touch (trusted Pointer Events)",
+      "reaction": [
+        {
+          "receivedAt": 636.5,
+          "eventTime": 630.7999999998137,
+          "source": "pointer",
+          "hit": [
+            0.42000000782502,
+            0.5499999999999999
+          ],
+          "firstDraw": 636.7999999998137,
+          "softwareMs": 0.2999999998137355,
+          "eventToDrawMs": 6,
+          "measurement": "CPU draw submission, not physical display"
+        }
+      ],
+      "final": {
+        "contact": 0,
+        "reveal": 0,
+        "target": 0,
+        "hit": [
+          0.42000000782502,
+          0.5499999999999999
+        ],
+        "down": false,
+        "began": 636.5,
+        "releasedAt": 1646.6000000005588,
+        "graceUntil": 1646.6000000005588,
+        "releaseReveal": 0.9988008771433697,
+        "reason": "pointerup",
+        "events": 2,
+        "active": null,
+        "amount": 0,
+        "transition": 1,
+        "progress": 1,
+        "passiveReveal": 1,
+        "reduced": false,
+        "grid": true,
+        "quality": "full",
+        "lastRelease": "pointerup",
+        "replay": null
+      },
+      "notes": "Finger and labels are recording-only annotations. Real wall-clock browser video, converted to H264 MP4."
+    },
+    {
+      "name": "sp-passive-connection",
+      "device": "sp",
+      "grid": true,
+      "viewport": [
+        390,
+        844
+      ],
+      "duration": 6.4,
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "physicalPhone": false,
+      "input": "CDP browser touch (trusted Pointer Events)",
+      "reaction": [],
+      "final": {
+        "contact": 0,
+        "reveal": 0,
+        "target": 0,
+        "hit": [
+          0.42,
+          0.55
+        ],
+        "down": false,
+        "began": 0,
+        "releasedAt": 0,
+        "graceUntil": 0,
+        "releaseReveal": 0,
+        "reason": "rest",
+        "events": 0,
+        "active": null,
+        "amount": 0,
+        "transition": 1,
+        "progress": 1,
+        "passiveReveal": 1,
+        "reduced": false,
+        "grid": true,
+        "quality": "full",
+        "lastRelease": "rest",
+        "replay": null
+      },
+      "notes": "Finger and labels are recording-only annotations. Real wall-clock browser video, converted to H264 MP4."
+    }
+  ]
+}

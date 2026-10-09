@@ -1,0 +1,61 @@
+{
+  "preview": {
+    "overflow": false,
+    "grid": true,
+    "quality": "full",
+    "title": "あわい",
+    "font": "17px"
+  },
+  "videos": [
+    {
+      "src": "evidence/sp-grid-interactions.mp4",
+      "duration": 12.68,
+      "time": 0.152813,
+      "width": 390,
+      "height": 844,
+      "decode": true
+    },
+    {
+      "src": "evidence/sp-flat-interactions.mp4",
+      "duration": 12.56,
+      "time": 0.156984,
+      "width": 390,
+      "height": 844,
+      "decode": true
+    },
+    {
+      "src": "evidence/sp-touch-connection.mp4",
+      "duration": 7.24,
+      "time": 0.156374,
+      "width": 390,
+      "height": 844,
+      "decode": true
+    },
+    {
+      "src": "evidence/sp-passive-connection.mp4",
+      "duration": 6.4,
+      "time": 0.158593,
+      "width": 390,
+      "height": 844,
+      "decode": true
+    },
+    {
+      "src": "evidence/pc-grid-interactions.mp4",
+      "duration": 13.08,
+      "time": 0.157869,
+      "width": 1440,
+      "height": 900,
+      "decode": true
+    },
+    {
+      "src": "evidence/pc-flat-interactions.mp4",
+      "duration": 13.56,
+      "time": 0.162084,
+      "width": 1440,
+      "height": 900,
+      "decode": true
+    }
+  ],
+  "errors": [],
+  "physicalPhone": false
+}
