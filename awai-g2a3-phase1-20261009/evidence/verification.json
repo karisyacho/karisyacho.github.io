@@ -1,0 +1,3327 @@
+{
+  "generatedAt": "2026-10-09T07:09:36.833Z",
+  "environment": "Edge headless; DPR1; PC1440x900/SP390x844 (viewport emulation, no physical device)",
+  "checks": [
+    {
+      "name": "grid-model.js旧版SHA256一致",
+      "pass": true,
+      "detail": {
+        "old": "64feef0c8d0481d1e4c80a7824f606c13d4d76ac8a5dc136b42e4e1bb60cca6d",
+        "new": "64feef0c8d0481d1e4c80a7824f606c13d4d76ac8a5dc136b42e4e1bb60cca6d"
+      }
+    },
+    {
+      "name": "grid-shader.js旧版SHA256一致",
+      "pass": true,
+      "detail": {
+        "old": "58fc557a4292e7feb6770ee233507f4decfecc9f3f8ae0e1ef4f59de6f909d80",
+        "new": "58fc557a4292e7feb6770ee233507f4decfecc9f3f8ae0e1ef4f59de6f909d80"
+      }
+    },
+    {
+      "name": "対象JS syntax",
+      "pass": true,
+      "detail": [
+        {
+          "name": "gallery.js",
+          "pass": true
+        },
+        {
+          "name": "grid-model.js",
+          "pass": true
+        },
+        {
+          "name": "grid-shader.js",
+          "pass": true
+        },
+        {
+          "name": "material.js",
+          "pass": true
+        },
+        {
+          "name": "optics.js",
+          "pass": true
+        },
+        {
+          "name": "prepare-renderer.mjs",
+          "pass": true
+        },
+        {
+          "name": "render.js",
+          "pass": true
+        },
+        {
+          "name": "renderer.js",
+          "pass": true
+        },
+        {
+          "name": "surface.js",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "光学参照が固定screen/refUV",
+      "pass": true,
+      "detail": {
+        "plate": "screenUV from gl_FragCoord",
+        "visibility": "sceneUV derived from screenUV and uScaleY",
+        "meshOnly": "Grid modifies vertex position and normal; shading follows displaced mesh",
+        "debug": "uDebug outputs visibility alone"
+      }
+    },
+    {
+      "name": "静止ページソース no RAF/pointer/touch",
+      "pass": true,
+      "detail": {
+        "htmlCanvasCount": 1,
+        "pagehideDispose": true
+      }
+    },
+    {
+      "name": "pc rest evidence最新",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc rest旧保存版 title以外<=1",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000020878634815664854,
+        "changedChannels": 81,
+        "changedPixels": 81,
+        "comparedPixels": 1293188,
+        "changedPixelPercent": 0.006263590444699456,
+        "excluded": [
+          {
+            "x": 127,
+            "y": 114,
+            "width": 76,
+            "height": 36
+          },
+          {
+            "x": 127,
+            "y": 115,
+            "width": 76,
+            "height": 36
+          }
+        ]
+      }
+    },
+    {
+      "name": "pc rest canvas旧版<=1",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000020833333333333333,
+        "changedChannels": 81,
+        "changedPixels": 81,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0.00625,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc 旧版baseline再現",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc 同hit/load1 Grid diagnostics一致",
+      "pass": true,
+      "detail": {
+        "old": {
+          "finite": true,
+          "maxDisplacement": 0.0419558887652487,
+          "maxXY": 0.0029514831559774384,
+          "maxZ": 0.04195552808504391,
+          "maxVelocity": 0.00003891355230690907,
+          "maxStrain": 0.010215545802604087,
+          "meanStrain": 0.001094968060356508,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": true
+        },
+        "new": {
+          "finite": true,
+          "maxDisplacement": 0.0419558887652487,
+          "maxXY": 0.0029514831559774384,
+          "maxZ": 0.04195552808504391,
+          "maxVelocity": 0.00003891355230690907,
+          "maxStrain": 0.010215545802604087,
+          "meanStrain": 0.001094968060356508,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008
+        },
+        "oldSettings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "oldState": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 1,
+          "glow": 1,
+          "mode": "B",
+          "target": 1,
+          "age": 10,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        }
+      }
+    },
+    {
+      "name": "pc contact全画素差あり",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 42,
+        "meanChannelDifference": 1.0198045267489713,
+        "changedChannels": 2276895,
+        "changedPixels": 944437,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 72.87322530864198,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc mask完全一致",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc contactGrid evidence最新",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc contactFlat evidence最新",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc plate参照完全同一",
+      "pass": true,
+      "detail": {
+        "grid": {
+          "width": 1659,
+          "height": 948,
+          "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+        },
+        "flat": {
+          "width": 1659,
+          "height": 948,
+          "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+        },
+        "sha256": "ff5df2a015c9aa47cc56a1e4e28da596deb24d53413a2571717fb9cade05e0c6"
+      }
+    },
+    {
+      "name": "pc 光学uniform固定",
+      "pass": true,
+      "detail": {
+        "uPlate": {
+          "grid": [
+            1
+          ],
+          "flat": [
+            1
+          ]
+        },
+        "uPlateSize": {
+          "grid": [
+            1659,
+            948
+          ],
+          "flat": [
+            1659,
+            948
+          ]
+        },
+        "uResolution": {
+          "grid": [
+            1440,
+            900
+          ],
+          "flat": [
+            1440,
+            900
+          ]
+        },
+        "uHit": {
+          "grid": [
+            [
+              0.42,
+              0.55
+            ]
+          ],
+          "flat": [
+            [
+              0.42,
+              0.55
+            ]
+          ]
+        },
+        "uReveal": {
+          "grid": [
+            1
+          ],
+          "flat": [
+            1
+          ]
+        },
+        "uTransition": {
+          "grid": [
+            0
+          ],
+          "flat": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "pc runtime mask完全一致",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc mask evidence最新",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "pc no RAF/no pointer-touch handlers/静止",
+      "pass": true,
+      "detail": {
+        "before": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            },
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 0
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 0
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              1659,
+              948
+            ],
+            "uResolution": [
+              1440,
+              900
+            ],
+            "uRidge": [
+              [
+                0.19,
+                0.49,
+                0.68,
+                0.82
+              ]
+            ],
+            "uRidgeEnd": [
+              0.95
+            ],
+            "uAspect": [
+              1.75
+            ],
+            "uScaleY": [
+              1.09375
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              65,
+              41
+            ]
+          }
+        },
+        "after": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            },
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 0
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 0
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              1659,
+              948
+            ],
+            "uResolution": [
+              1440,
+              900
+            ],
+            "uRidge": [
+              [
+                0.19,
+                0.49,
+                0.68,
+                0.82
+              ]
+            ],
+            "uRidgeEnd": [
+              0.95
+            ],
+            "uAspect": [
+              1.75
+            ],
+            "uScaleY": [
+              1.09375
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              65,
+              41
+            ]
+          }
+        },
+        "canvasCount": 1
+      }
+    },
+    {
+      "name": "pc canvas1/context1",
+      "pass": true,
+      "detail": [
+        {
+          "type": "webgl2",
+          "success": true
+        }
+      ]
+    },
+    {
+      "name": "pc dispose WebGL全resource delete",
+      "pass": true,
+      "detail": {
+        "Buffer": {
+          "created": 2,
+          "deleted": 2
+        },
+        "Texture": {
+          "created": 2,
+          "deleted": 2
+        },
+        "Shader": {
+          "created": 2,
+          "deleted": 2
+        },
+        "Program": {
+          "created": 1,
+          "deleted": 1
+        },
+        "VertexArray": {
+          "created": 1,
+          "deleted": 1
+        }
+      }
+    },
+    {
+      "name": "pc dispose後setPose停止",
+      "pass": true,
+      "detail": "Disposed"
+    },
+    {
+      "name": "pc page JS/GL errorなし",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "sp rest evidence最新",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp rest旧保存版 title以外<=1",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000026494331232129064,
+        "changedChannels": 26,
+        "changedPixels": 26,
+        "comparedPixels": 327114,
+        "changedPixelPercent": 0.007948299369638718,
+        "excluded": [
+          {
+            "x": 33,
+            "y": 107,
+            "width": 66,
+            "height": 31
+          },
+          {
+            "x": 33,
+            "y": 107,
+            "width": 66,
+            "height": 31
+          }
+        ]
+      }
+    },
+    {
+      "name": "sp rest canvas旧版<=1",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000026329647182727753,
+        "changedChannels": 26,
+        "changedPixels": 26,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0.007898894154818325,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp 旧版baseline再現",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp 同hit/load1 Grid diagnostics一致",
+      "pass": true,
+      "detail": {
+        "old": {
+          "finite": true,
+          "maxDisplacement": 0.033055856485505096,
+          "maxXY": 0.003963921962109736,
+          "maxZ": 0.03305557065644715,
+          "maxVelocity": 0.000016879842032423963,
+          "maxStrain": 0.03754539848110805,
+          "meanStrain": 0.003470809866070642,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": true
+        },
+        "new": {
+          "finite": true,
+          "maxDisplacement": 0.033055856485505096,
+          "maxXY": 0.003963921962109736,
+          "maxZ": 0.03305557065644715,
+          "maxVelocity": 0.000016879842032423963,
+          "maxStrain": 0.03754539848110805,
+          "meanStrain": 0.003470809866070642,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008
+        },
+        "oldSettings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "oldState": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 1,
+          "glow": 1,
+          "mode": "B",
+          "target": 1,
+          "age": 10,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        }
+      }
+    },
+    {
+      "name": "sp contact全画素差あり",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 51,
+        "meanChannelDifference": 2.519182160651355,
+        "changedChannels": 617321,
+        "changedPixels": 237868,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 72.26515980070482,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp mask完全一致",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp contactGrid evidence最新",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp contactFlat evidence最新",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp plate参照完全同一",
+      "pass": true,
+      "detail": {
+        "grid": {
+          "width": 948,
+          "height": 1659,
+          "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+        },
+        "flat": {
+          "width": 948,
+          "height": 1659,
+          "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+        },
+        "sha256": "11862b7c3457ea166e3da10387f8ab16ba963bb44cba3d9fb0891d99696c605a"
+      }
+    },
+    {
+      "name": "sp 光学uniform固定",
+      "pass": true,
+      "detail": {
+        "uPlate": {
+          "grid": [
+            1
+          ],
+          "flat": [
+            1
+          ]
+        },
+        "uPlateSize": {
+          "grid": [
+            948,
+            1659
+          ],
+          "flat": [
+            948,
+            1659
+          ]
+        },
+        "uResolution": {
+          "grid": [
+            390,
+            844
+          ],
+          "flat": [
+            390,
+            844
+          ]
+        },
+        "uHit": {
+          "grid": [
+            [
+              0.42,
+              0.55
+            ]
+          ],
+          "flat": [
+            [
+              0.42,
+              0.55
+            ]
+          ]
+        },
+        "uReveal": {
+          "grid": [
+            1
+          ],
+          "flat": [
+            1
+          ]
+        },
+        "uTransition": {
+          "grid": [
+            0
+          ],
+          "flat": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "sp runtime mask完全一致",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp mask evidence最新",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      }
+    },
+    {
+      "name": "sp no RAF/no pointer-touch handlers/静止",
+      "pass": true,
+      "detail": {
+        "before": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 0
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 0
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              948,
+              1659
+            ],
+            "uResolution": [
+              390,
+              844
+            ],
+            "uRidge": [
+              [
+                -0.34,
+                0.19,
+                0.64,
+                0.94
+              ]
+            ],
+            "uRidgeEnd": [
+              1.1
+            ],
+            "uAspect": [
+              0.5714285714285714
+            ],
+            "uScaleY": [
+              1.2366300366300367
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              33,
+              65
+            ]
+          }
+        },
+        "after": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 0
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 0
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              948,
+              1659
+            ],
+            "uResolution": [
+              390,
+              844
+            ],
+            "uRidge": [
+              [
+                -0.34,
+                0.19,
+                0.64,
+                0.94
+              ]
+            ],
+            "uRidgeEnd": [
+              1.1
+            ],
+            "uAspect": [
+              0.5714285714285714
+            ],
+            "uScaleY": [
+              1.2366300366300367
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              33,
+              65
+            ]
+          }
+        },
+        "canvasCount": 1
+      }
+    },
+    {
+      "name": "sp canvas1/context1",
+      "pass": true,
+      "detail": [
+        {
+          "type": "webgl2",
+          "success": true
+        }
+      ]
+    },
+    {
+      "name": "sp dispose WebGL全resource delete",
+      "pass": true,
+      "detail": {
+        "Buffer": {
+          "created": 2,
+          "deleted": 2
+        },
+        "Texture": {
+          "created": 2,
+          "deleted": 2
+        },
+        "Shader": {
+          "created": 2,
+          "deleted": 2
+        },
+        "Program": {
+          "created": 1,
+          "deleted": 1
+        },
+        "VertexArray": {
+          "created": 1,
+          "deleted": 1
+        }
+      }
+    },
+    {
+      "name": "sp dispose後setPose停止",
+      "pass": true,
+      "detail": "Disposed"
+    },
+    {
+      "name": "sp page JS/GL errorなし",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "devices": {
+    "pc": {
+      "viewport": [
+        1440,
+        900
+      ],
+      "restEvidenceVsLive": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "title": {
+        "old": {
+          "box": {
+            "x": 127,
+            "y": 114,
+            "width": 76,
+            "height": 36
+          },
+          "fontSize": "20px",
+          "fontFamily": "\"Yu Mincho\", \"Hiragino Mincho ProN\", serif",
+          "color": "rgb(191, 192, 196)",
+          "lineHeight": "normal",
+          "colorScheme": "dark",
+          "top": "116.984px",
+          "left": "129.594px"
+        },
+        "new": {
+          "box": {
+            "x": 127,
+            "y": 115,
+            "width": 76,
+            "height": 36
+          },
+          "fontSize": "20px",
+          "fontFamily": "\"Yu Mincho\", \"Hiragino Mincho ProN\", serif",
+          "color": "rgb(191, 192, 196)",
+          "lineHeight": "normal",
+          "colorScheme": "normal",
+          "top": "117px",
+          "left": "129.594px"
+        }
+      },
+      "restVsSavedOld": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000020833333333333333,
+        "changedChannels": 81,
+        "changedPixels": 81,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0.00625,
+        "excluded": []
+      },
+      "restVsSavedOldOutsideTitle": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000020878634815664854,
+        "changedChannels": 81,
+        "changedPixels": 81,
+        "comparedPixels": 1293188,
+        "changedPixelPercent": 0.006263590444699456,
+        "excluded": [
+          {
+            "x": 127,
+            "y": 114,
+            "width": 76,
+            "height": 36
+          },
+          {
+            "x": 127,
+            "y": 115,
+            "width": 76,
+            "height": 36
+          }
+        ]
+      },
+      "savedOldVsOldLive": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "restCanvasVsOldCanvas": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000020833333333333333,
+        "changedChannels": 81,
+        "changedPixels": 81,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0.00625,
+        "excluded": []
+      },
+      "oldLoaded": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 1,
+          "glow": 1,
+          "mode": "B",
+          "target": 1,
+          "age": 10,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0.0419558887652487,
+          "maxXY": 0.0029514831559774384,
+          "maxZ": 0.04195552808504391,
+          "maxVelocity": 0.00003891355230690907,
+          "maxStrain": 0.010215545802604087,
+          "meanStrain": 0.001094968060356508,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": true
+        },
+        "stats": {
+          "draws": 13,
+          "cpuMs": 1.4000000013038516,
+          "maxCpuMs": 0.2999999998137355,
+          "solverFrames": 3,
+          "solverMs": 0.10000000055879354,
+          "maxSolverMs": 0.10000000055879354,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 2,
+          "lastRelease": "test settle",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      },
+      "newLoaded": {
+        "pose": {
+          "contact": 1,
+          "reveal": 1,
+          "transition": 0,
+          "name": "contact",
+          "grid": true,
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "debug": 0
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "device": "pc",
+        "plate": {
+          "width": 1659,
+          "height": 948,
+          "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0.0419558887652487,
+          "maxXY": 0.0029514831559774384,
+          "maxZ": 0.04195552808504391,
+          "maxVelocity": 0.00003891355230690907,
+          "maxStrain": 0.010215545802604087,
+          "meanStrain": 0.001094968060356508,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008
+        },
+        "raf": 0,
+        "interactive": false,
+        "disposed": false
+      },
+      "contactGridVsFlat": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 42,
+        "meanChannelDifference": 1.0198045267489713,
+        "meanAbsoluteRGB8": 1.0198045267489713,
+        "p95MaxRGBDifference8": 3,
+        "over8Pixels": 4575,
+        "over8PixelPercent": 0.35300925925925924,
+        "meanEncodedLumaA": 21.03725627482784,
+        "meanEncodedLumaB": 20.99198316920841,
+        "lumaDefinition": "sRGB8 encoded luma 0..255, Rec709 weights; not physical luminance",
+        "changedChannels": 2276895,
+        "changedPixels": 944437,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 72.87322530864198,
+        "excluded": []
+      },
+      "maskGridVsFlat": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "contactGridEvidenceVsLive": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "contactFlatEvidenceVsLive": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "plate": {
+        "grid": {
+          "width": 1659,
+          "height": 948,
+          "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+        },
+        "flat": {
+          "width": 1659,
+          "height": 948,
+          "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+        },
+        "sha256": "ff5df2a015c9aa47cc56a1e4e28da596deb24d53413a2571717fb9cade05e0c6"
+      },
+      "opticalUniforms": {
+        "uPlate": {
+          "grid": [
+            1
+          ],
+          "flat": [
+            1
+          ]
+        },
+        "uPlateSize": {
+          "grid": [
+            1659,
+            948
+          ],
+          "flat": [
+            1659,
+            948
+          ]
+        },
+        "uResolution": {
+          "grid": [
+            1440,
+            900
+          ],
+          "flat": [
+            1440,
+            900
+          ]
+        },
+        "uHit": {
+          "grid": [
+            [
+              0.42,
+              0.55
+            ]
+          ],
+          "flat": [
+            [
+              0.42,
+              0.55
+            ]
+          ]
+        },
+        "uReveal": {
+          "grid": [
+            1
+          ],
+          "flat": [
+            1
+          ]
+        },
+        "uTransition": {
+          "grid": [
+            0
+          ],
+          "flat": [
+            0
+          ]
+        }
+      },
+      "runtimeMaskGridVsFlat": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "maskEvidenceVsLive": {
+        "width": 1440,
+        "height": 900,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 1296000,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "runtimeStatic": {
+        "before": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            },
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 0
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 0
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              1659,
+              948
+            ],
+            "uResolution": [
+              1440,
+              900
+            ],
+            "uRidge": [
+              [
+                0.19,
+                0.49,
+                0.68,
+                0.82
+              ]
+            ],
+            "uRidgeEnd": [
+              0.95
+            ],
+            "uAspect": [
+              1.75
+            ],
+            "uScaleY": [
+              1.09375
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              65,
+              41
+            ]
+          }
+        },
+        "after": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            },
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 0
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 0
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              1659,
+              948
+            ],
+            "uResolution": [
+              1440,
+              900
+            ],
+            "uRidge": [
+              [
+                0.19,
+                0.49,
+                0.68,
+                0.82
+              ]
+            ],
+            "uRidgeEnd": [
+              0.95
+            ],
+            "uAspect": [
+              1.75
+            ],
+            "uScaleY": [
+              1.09375
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              65,
+              41
+            ]
+          }
+        },
+        "canvasCount": 1
+      },
+      "disposal": {
+        "audit": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            },
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 2
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 2
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 2
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 1
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 1
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              1659,
+              948
+            ],
+            "uResolution": [
+              1440,
+              900
+            ],
+            "uRidge": [
+              [
+                0.19,
+                0.49,
+                0.68,
+                0.82
+              ]
+            ],
+            "uRidgeEnd": [
+              0.95
+            ],
+            "uAspect": [
+              1.75
+            ],
+            "uScaleY": [
+              1.09375
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              65,
+              41
+            ]
+          }
+        },
+        "snapshot": {
+          "pose": {
+            "contact": 0,
+            "reveal": 0,
+            "transition": 0,
+            "name": "rest",
+            "grid": true,
+            "hit": [
+              0.42,
+              0.55
+            ],
+            "debug": 0
+          },
+          "frame": {
+            "portrait": false,
+            "aspect": 1.75,
+            "scaleY": 1.09375,
+            "controls": [
+              [
+                0,
+                0.19
+              ],
+              [
+                0.25,
+                0.49
+              ],
+              [
+                0.5,
+                0.68
+              ],
+              [
+                0.75,
+                0.82
+              ],
+              [
+                1,
+                0.95
+              ]
+            ]
+          },
+          "device": "pc",
+          "plate": {
+            "width": 1659,
+            "height": 948,
+            "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+          },
+          "grid": null,
+          "raf": 0,
+          "interactive": false,
+          "disposed": true
+        }
+      },
+      "afterDisposeSetPose": "Disposed",
+      "errors": []
+    },
+    "sp": {
+      "viewport": [
+        390,
+        844
+      ],
+      "restEvidenceVsLive": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "title": {
+        "old": {
+          "box": {
+            "x": 33,
+            "y": 107,
+            "width": 66,
+            "height": 31
+          },
+          "fontSize": "17px",
+          "fontFamily": "\"Yu Mincho\", \"Hiragino Mincho ProN\", serif",
+          "color": "rgb(191, 192, 196)",
+          "lineHeight": "normal",
+          "colorScheme": "dark",
+          "top": "109.719px",
+          "left": "35.0938px"
+        },
+        "new": {
+          "box": {
+            "x": 33,
+            "y": 107,
+            "width": 66,
+            "height": 31
+          },
+          "fontSize": "17px",
+          "fontFamily": "\"Yu Mincho\", \"Hiragino Mincho ProN\", serif",
+          "color": "rgb(191, 192, 196)",
+          "lineHeight": "normal",
+          "colorScheme": "normal",
+          "top": "109.719px",
+          "left": "35.0938px"
+        }
+      },
+      "restVsSavedOld": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000026329647182727753,
+        "changedChannels": 26,
+        "changedPixels": 26,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0.007898894154818325,
+        "excluded": []
+      },
+      "restVsSavedOldOutsideTitle": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000026494331232129064,
+        "changedChannels": 26,
+        "changedPixels": 26,
+        "comparedPixels": 327114,
+        "changedPixelPercent": 0.007948299369638718,
+        "excluded": [
+          {
+            "x": 33,
+            "y": 107,
+            "width": 66,
+            "height": 31
+          },
+          {
+            "x": 33,
+            "y": 107,
+            "width": 66,
+            "height": 31
+          }
+        ]
+      },
+      "savedOldVsOldLive": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "restCanvasVsOldCanvas": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 1,
+        "meanChannelDifference": 0.000026329647182727753,
+        "changedChannels": 26,
+        "changedPixels": 26,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0.007898894154818325,
+        "excluded": []
+      },
+      "oldLoaded": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 1,
+          "glow": 1,
+          "mode": "B",
+          "target": 1,
+          "age": 10,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0.033055856485505096,
+          "maxXY": 0.003963921962109736,
+          "maxZ": 0.03305557065644715,
+          "maxVelocity": 0.000016879842032423963,
+          "maxStrain": 0.03754539848110805,
+          "meanStrain": 0.003470809866070642,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": true
+        },
+        "stats": {
+          "draws": 13,
+          "cpuMs": 0.9999999990686774,
+          "maxCpuMs": 0.30000000074505806,
+          "solverFrames": 3,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 2,
+          "lastRelease": "test settle",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      },
+      "newLoaded": {
+        "pose": {
+          "contact": 1,
+          "reveal": 1,
+          "transition": 0,
+          "name": "contact",
+          "grid": true,
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "debug": 0
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "device": "sp",
+        "plate": {
+          "width": 948,
+          "height": 1659,
+          "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0.033055856485505096,
+          "maxXY": 0.003963921962109736,
+          "maxZ": 0.03305557065644715,
+          "maxVelocity": 0.000016879842032423963,
+          "maxStrain": 0.03754539848110805,
+          "meanStrain": 0.003470809866070642,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008
+        },
+        "raf": 0,
+        "interactive": false,
+        "disposed": false
+      },
+      "contactGridVsFlat": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 51,
+        "meanChannelDifference": 2.519182160651355,
+        "meanAbsoluteRGB8": 2.519182160651355,
+        "p95MaxRGBDifference8": 11,
+        "over8Pixels": 23285,
+        "over8PixelPercent": 7.074067322882489,
+        "meanEncodedLumaA": 21.833586853176776,
+        "meanEncodedLumaB": 21.125196441199762,
+        "lumaDefinition": "sRGB8 encoded luma 0..255, Rec709 weights; not physical luminance",
+        "changedChannels": 617321,
+        "changedPixels": 237868,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 72.26515980070482,
+        "excluded": []
+      },
+      "maskGridVsFlat": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "contactGridEvidenceVsLive": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "contactFlatEvidenceVsLive": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "plate": {
+        "grid": {
+          "width": 948,
+          "height": 1659,
+          "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+        },
+        "flat": {
+          "width": 948,
+          "height": 1659,
+          "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+        },
+        "sha256": "11862b7c3457ea166e3da10387f8ab16ba963bb44cba3d9fb0891d99696c605a"
+      },
+      "opticalUniforms": {
+        "uPlate": {
+          "grid": [
+            1
+          ],
+          "flat": [
+            1
+          ]
+        },
+        "uPlateSize": {
+          "grid": [
+            948,
+            1659
+          ],
+          "flat": [
+            948,
+            1659
+          ]
+        },
+        "uResolution": {
+          "grid": [
+            390,
+            844
+          ],
+          "flat": [
+            390,
+            844
+          ]
+        },
+        "uHit": {
+          "grid": [
+            [
+              0.42,
+              0.55
+            ]
+          ],
+          "flat": [
+            [
+              0.42,
+              0.55
+            ]
+          ]
+        },
+        "uReveal": {
+          "grid": [
+            1
+          ],
+          "flat": [
+            1
+          ]
+        },
+        "uTransition": {
+          "grid": [
+            0
+          ],
+          "flat": [
+            0
+          ]
+        }
+      },
+      "runtimeMaskGridVsFlat": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "maskEvidenceVsLive": {
+        "width": 390,
+        "height": 844,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0,
+        "changedChannels": 0,
+        "changedPixels": 0,
+        "comparedPixels": 329160,
+        "changedPixelPercent": 0,
+        "excluded": []
+      },
+      "runtimeStatic": {
+        "before": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 0
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 0
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              948,
+              1659
+            ],
+            "uResolution": [
+              390,
+              844
+            ],
+            "uRidge": [
+              [
+                -0.34,
+                0.19,
+                0.64,
+                0.94
+              ]
+            ],
+            "uRidgeEnd": [
+              1.1
+            ],
+            "uAspect": [
+              0.5714285714285714
+            ],
+            "uScaleY": [
+              1.2366300366300367
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              33,
+              65
+            ]
+          }
+        },
+        "after": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 0
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 0
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 0
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              948,
+              1659
+            ],
+            "uResolution": [
+              390,
+              844
+            ],
+            "uRidge": [
+              [
+                -0.34,
+                0.19,
+                0.64,
+                0.94
+              ]
+            ],
+            "uRidgeEnd": [
+              1.1
+            ],
+            "uAspect": [
+              0.5714285714285714
+            ],
+            "uScaleY": [
+              1.2366300366300367
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              33,
+              65
+            ]
+          }
+        },
+        "canvasCount": 1
+      },
+      "disposal": {
+        "audit": {
+          "raf": 0,
+          "events": [
+            {
+              "type": "__playwright_global_listeners_check__",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at InjectedScript._setupGlobalListenersRemovalDetection (<anonymous>:7880:17)\n    at new InjectedScript (<anonymous>:6845:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousemove",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerdown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pointerup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchstart",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchend",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "touchcancel",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mousedown",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "mouseup",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "click",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "auxclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "dblclick",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "contextmenu",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at addHitTargetInterceptorListeners (<anonymous>:7901:21)\n    at InjectedScript._setupHitTargetInterceptors (<anonymous>:7903:5)\n    at new InjectedScript (<anonymous>:6846:10)\n    at <anonymous>:8288:16\n    at <anonymous>:8289:11"
+            },
+            {
+              "type": "pagehide",
+              "stack": "Error\n    at EventTarget.addEventListener (<anonymous>:2:365)\n    at http://127.0.0.1:3153/render.js:6:443"
+            }
+          ],
+          "contexts": [
+            {
+              "type": "webgl2",
+              "success": true
+            }
+          ],
+          "draws": 6,
+          "resources": {
+            "Buffer": {
+              "created": 2,
+              "deleted": 2
+            },
+            "Texture": {
+              "created": 2,
+              "deleted": 2
+            },
+            "Shader": {
+              "created": 2,
+              "deleted": 2
+            },
+            "Program": {
+              "created": 1,
+              "deleted": 1
+            },
+            "VertexArray": {
+              "created": 1,
+              "deleted": 1
+            }
+          },
+          "uniforms": {
+            "uGridTex": [
+              0
+            ],
+            "uGrid": [
+              0
+            ],
+            "uPlate": [
+              1
+            ],
+            "uPlateSize": [
+              948,
+              1659
+            ],
+            "uResolution": [
+              390,
+              844
+            ],
+            "uRidge": [
+              [
+                -0.34,
+                0.19,
+                0.64,
+                0.94
+              ]
+            ],
+            "uRidgeEnd": [
+              1.1
+            ],
+            "uAspect": [
+              0.5714285714285714
+            ],
+            "uScaleY": [
+              1.2366300366300367
+            ],
+            "uAmount": [
+              0
+            ],
+            "uSmooth": [
+              1
+            ],
+            "uHit": [
+              [
+                0.42,
+                0.55
+              ]
+            ],
+            "uReveal": [
+              0
+            ],
+            "uTransition": [
+              0
+            ],
+            "uDebug": [
+              0
+            ],
+            "uGridSize": [
+              33,
+              65
+            ]
+          }
+        },
+        "snapshot": {
+          "pose": {
+            "contact": 0,
+            "reveal": 0,
+            "transition": 0,
+            "name": "rest",
+            "grid": true,
+            "hit": [
+              0.42,
+              0.55
+            ],
+            "debug": 0
+          },
+          "frame": {
+            "portrait": true,
+            "aspect": 0.5714285714285714,
+            "scaleY": 1.2366300366300367,
+            "controls": [
+              [
+                0,
+                -0.34
+              ],
+              [
+                0.25,
+                0.19
+              ],
+              [
+                0.5,
+                0.64
+              ],
+              [
+                0.75,
+                0.94
+              ],
+              [
+                1,
+                1.1
+              ]
+            ]
+          },
+          "device": "sp",
+          "plate": {
+            "width": 948,
+            "height": 1659,
+            "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+          },
+          "grid": null,
+          "raf": 0,
+          "interactive": false,
+          "disposed": true
+        }
+      },
+      "afterDisposeSetPose": "Disposed",
+      "errors": []
+    }
+  },
+  "limits": [
+    "画像美術の合否は判定しない。",
+    "実機GPU/スマホ/Safari/長時間動作は未確認。",
+    "WebGL資源のdelete呼出しを確認するがドライバの物理解放時刻は未確認。",
+    "Gridのdisposeはactive=falseのみ。JS配列はstaticArtクロージャから参照され続け、GCによる解放は未確認。"
+  ],
+  "fatal": null,
+  "edgeVersion": "154.0.4258.62",
+  "passed": true,
+  "notes": [
+    "登録元stackでページJSとPlaywright注入listenerを区別。静止ページ由来のpointer/touch登録0。",
+    "favicon.icoのみHTTPエラー集計対象から除外。その他の資源HTTP失敗、console error、pageerrorなし。"
+  ]
+}

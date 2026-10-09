@@ -1,0 +1,44 @@
+[
+  {
+    "width": 320,
+    "start": {
+      "device": "sp",
+      "overflow": false,
+      "canvas": 0
+    },
+    "swapped": {
+      "device": "pc",
+      "overflow": false,
+      "overlay": "0.5"
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "start": {
+      "device": "sp",
+      "overflow": false,
+      "canvas": 0
+    },
+    "swapped": {
+      "device": "pc",
+      "overflow": false,
+      "overlay": "0.5"
+    },
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "start": {
+      "device": "pc",
+      "overflow": false,
+      "canvas": 0
+    },
+    "swapped": {
+      "device": "sp",
+      "overflow": false,
+      "overlay": "0.5"
+    },
+    "errors": []
+  }
+]

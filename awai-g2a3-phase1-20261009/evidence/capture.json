@@ -1,0 +1,936 @@
+[
+  {
+    "device": "pc",
+    "name": "rest",
+    "pose": {
+      "contact": 0,
+      "reveal": 0,
+      "transition": 0,
+      "name": "rest",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": false,
+      "aspect": 1.75,
+      "scaleY": 1.09375,
+      "controls": [
+        [
+          0,
+          0.19
+        ],
+        [
+          0.25,
+          0.49
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.75,
+          0.82
+        ],
+        [
+          1,
+          0.95
+        ]
+      ]
+    },
+    "plate": {
+      "width": 1659,
+      "height": 948,
+      "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "pc",
+    "name": "contact-grid",
+    "pose": {
+      "contact": 1,
+      "reveal": 1,
+      "transition": 0,
+      "name": "contact",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": false,
+      "aspect": 1.75,
+      "scaleY": 1.09375,
+      "controls": [
+        [
+          0,
+          0.19
+        ],
+        [
+          0.25,
+          0.49
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.75,
+          0.82
+        ],
+        [
+          1,
+          0.95
+        ]
+      ]
+    },
+    "plate": {
+      "width": 1659,
+      "height": 948,
+      "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+    },
+    "grid": {
+      "finite": true,
+      "maxDisplacement": 0.0419558887652487,
+      "maxXY": 0.0029514831559774384,
+      "maxZ": 0.04195552808504391,
+      "maxVelocity": 0.00003891355230690907,
+      "maxStrain": 0.010215545802604087,
+      "meanStrain": 0.001094968060356508,
+      "boundaryError": 0,
+      "steps": 300,
+      "nodes": 2665,
+      "edges": 10344,
+      "bends": 5118,
+      "amount": 1,
+      "iterations": 6,
+      "stretchCompliance": 2e-7,
+      "bendCompliance": 0.00008
+    },
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "pc",
+    "name": "contact-flat",
+    "pose": {
+      "contact": 1,
+      "reveal": 1,
+      "transition": 0,
+      "name": "contact",
+      "grid": false,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": false,
+      "aspect": 1.75,
+      "scaleY": 1.09375,
+      "controls": [
+        [
+          0,
+          0.19
+        ],
+        [
+          0.25,
+          0.49
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.75,
+          0.82
+        ],
+        [
+          1,
+          0.95
+        ]
+      ]
+    },
+    "plate": {
+      "width": 1659,
+      "height": 948,
+      "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "pc",
+    "name": "grid-only",
+    "pose": {
+      "contact": 1,
+      "reveal": 0,
+      "transition": 0,
+      "name": "grid-only",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": false,
+      "aspect": 1.75,
+      "scaleY": 1.09375,
+      "controls": [
+        [
+          0,
+          0.19
+        ],
+        [
+          0.25,
+          0.49
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.75,
+          0.82
+        ],
+        [
+          1,
+          0.95
+        ]
+      ]
+    },
+    "plate": {
+      "width": 1659,
+      "height": 948,
+      "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+    },
+    "grid": {
+      "finite": true,
+      "maxDisplacement": 0.0419558887652487,
+      "maxXY": 0.0029514831559774384,
+      "maxZ": 0.04195552808504391,
+      "maxVelocity": 0.00003891355230690907,
+      "maxStrain": 0.010215545802604087,
+      "meanStrain": 0.001094968060356508,
+      "boundaryError": 0,
+      "steps": 300,
+      "nodes": 2665,
+      "edges": 10344,
+      "bends": 5118,
+      "amount": 1,
+      "iterations": 6,
+      "stretchCompliance": 2e-7,
+      "bendCompliance": 0.00008
+    },
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "pc",
+    "name": "handoff",
+    "pose": {
+      "contact": 0,
+      "reveal": 0.2,
+      "transition": 0.78,
+      "name": "handoff",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": false,
+      "aspect": 1.75,
+      "scaleY": 1.09375,
+      "controls": [
+        [
+          0,
+          0.19
+        ],
+        [
+          0.25,
+          0.49
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.75,
+          0.82
+        ],
+        [
+          1,
+          0.95
+        ]
+      ]
+    },
+    "plate": {
+      "width": 1659,
+      "height": 948,
+      "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "pc",
+    "name": "s1",
+    "pose": {
+      "contact": 0,
+      "reveal": 0,
+      "transition": 1,
+      "name": "s1",
+      "grid": false,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": false,
+      "aspect": 1.75,
+      "scaleY": 1.09375,
+      "controls": [
+        [
+          0,
+          0.19
+        ],
+        [
+          0.25,
+          0.49
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.75,
+          0.82
+        ],
+        [
+          1,
+          0.95
+        ]
+      ]
+    },
+    "plate": {
+      "width": 1659,
+      "height": 948,
+      "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "pc",
+    "name": "mask-grid",
+    "pose": {
+      "contact": 1,
+      "reveal": 1,
+      "transition": 0,
+      "name": "contact",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 1
+    },
+    "frame": {
+      "portrait": false,
+      "aspect": 1.75,
+      "scaleY": 1.09375,
+      "controls": [
+        [
+          0,
+          0.19
+        ],
+        [
+          0.25,
+          0.49
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.75,
+          0.82
+        ],
+        [
+          1,
+          0.95
+        ]
+      ]
+    },
+    "plate": {
+      "width": 1659,
+      "height": 948,
+      "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+    },
+    "grid": {
+      "finite": true,
+      "maxDisplacement": 0.0419558887652487,
+      "maxXY": 0.0029514831559774384,
+      "maxZ": 0.04195552808504391,
+      "maxVelocity": 0.00003891355230690907,
+      "maxStrain": 0.010215545802604087,
+      "meanStrain": 0.001094968060356508,
+      "boundaryError": 0,
+      "steps": 300,
+      "nodes": 2665,
+      "edges": 10344,
+      "bends": 5118,
+      "amount": 1,
+      "iterations": 6,
+      "stretchCompliance": 2e-7,
+      "bendCompliance": 0.00008
+    },
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "pc",
+    "name": "mask-flat",
+    "pose": {
+      "contact": 1,
+      "reveal": 1,
+      "transition": 0,
+      "name": "contact",
+      "grid": false,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 1
+    },
+    "frame": {
+      "portrait": false,
+      "aspect": 1.75,
+      "scaleY": 1.09375,
+      "controls": [
+        [
+          0,
+          0.19
+        ],
+        [
+          0.25,
+          0.49
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.75,
+          0.82
+        ],
+        [
+          1,
+          0.95
+        ]
+      ]
+    },
+    "plate": {
+      "width": 1659,
+      "height": 948,
+      "path": "http://127.0.0.1:3153/assets/s1-pc.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "sp",
+    "name": "rest",
+    "pose": {
+      "contact": 0,
+      "reveal": 0,
+      "transition": 0,
+      "name": "rest",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": true,
+      "aspect": 0.5714285714285714,
+      "scaleY": 1.2366300366300367,
+      "controls": [
+        [
+          0,
+          -0.34
+        ],
+        [
+          0.25,
+          0.19
+        ],
+        [
+          0.5,
+          0.64
+        ],
+        [
+          0.75,
+          0.94
+        ],
+        [
+          1,
+          1.1
+        ]
+      ]
+    },
+    "plate": {
+      "width": 948,
+      "height": 1659,
+      "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "sp",
+    "name": "contact-grid",
+    "pose": {
+      "contact": 1,
+      "reveal": 1,
+      "transition": 0,
+      "name": "contact",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": true,
+      "aspect": 0.5714285714285714,
+      "scaleY": 1.2366300366300367,
+      "controls": [
+        [
+          0,
+          -0.34
+        ],
+        [
+          0.25,
+          0.19
+        ],
+        [
+          0.5,
+          0.64
+        ],
+        [
+          0.75,
+          0.94
+        ],
+        [
+          1,
+          1.1
+        ]
+      ]
+    },
+    "plate": {
+      "width": 948,
+      "height": 1659,
+      "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+    },
+    "grid": {
+      "finite": true,
+      "maxDisplacement": 0.033055856485505096,
+      "maxXY": 0.003963921962109736,
+      "maxZ": 0.03305557065644715,
+      "maxVelocity": 0.000016879842032423963,
+      "maxStrain": 0.03754539848110805,
+      "meanStrain": 0.003470809866070642,
+      "boundaryError": 0,
+      "steps": 300,
+      "nodes": 2145,
+      "edges": 8288,
+      "bends": 4094,
+      "amount": 1,
+      "iterations": 6,
+      "stretchCompliance": 2e-7,
+      "bendCompliance": 0.00008
+    },
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "sp",
+    "name": "contact-flat",
+    "pose": {
+      "contact": 1,
+      "reveal": 1,
+      "transition": 0,
+      "name": "contact",
+      "grid": false,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": true,
+      "aspect": 0.5714285714285714,
+      "scaleY": 1.2366300366300367,
+      "controls": [
+        [
+          0,
+          -0.34
+        ],
+        [
+          0.25,
+          0.19
+        ],
+        [
+          0.5,
+          0.64
+        ],
+        [
+          0.75,
+          0.94
+        ],
+        [
+          1,
+          1.1
+        ]
+      ]
+    },
+    "plate": {
+      "width": 948,
+      "height": 1659,
+      "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "sp",
+    "name": "grid-only",
+    "pose": {
+      "contact": 1,
+      "reveal": 0,
+      "transition": 0,
+      "name": "grid-only",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": true,
+      "aspect": 0.5714285714285714,
+      "scaleY": 1.2366300366300367,
+      "controls": [
+        [
+          0,
+          -0.34
+        ],
+        [
+          0.25,
+          0.19
+        ],
+        [
+          0.5,
+          0.64
+        ],
+        [
+          0.75,
+          0.94
+        ],
+        [
+          1,
+          1.1
+        ]
+      ]
+    },
+    "plate": {
+      "width": 948,
+      "height": 1659,
+      "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+    },
+    "grid": {
+      "finite": true,
+      "maxDisplacement": 0.033055856485505096,
+      "maxXY": 0.003963921962109736,
+      "maxZ": 0.03305557065644715,
+      "maxVelocity": 0.000016879842032423963,
+      "maxStrain": 0.03754539848110805,
+      "meanStrain": 0.003470809866070642,
+      "boundaryError": 0,
+      "steps": 300,
+      "nodes": 2145,
+      "edges": 8288,
+      "bends": 4094,
+      "amount": 1,
+      "iterations": 6,
+      "stretchCompliance": 2e-7,
+      "bendCompliance": 0.00008
+    },
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "sp",
+    "name": "handoff",
+    "pose": {
+      "contact": 0,
+      "reveal": 0.2,
+      "transition": 0.78,
+      "name": "handoff",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": true,
+      "aspect": 0.5714285714285714,
+      "scaleY": 1.2366300366300367,
+      "controls": [
+        [
+          0,
+          -0.34
+        ],
+        [
+          0.25,
+          0.19
+        ],
+        [
+          0.5,
+          0.64
+        ],
+        [
+          0.75,
+          0.94
+        ],
+        [
+          1,
+          1.1
+        ]
+      ]
+    },
+    "plate": {
+      "width": 948,
+      "height": 1659,
+      "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "sp",
+    "name": "s1",
+    "pose": {
+      "contact": 0,
+      "reveal": 0,
+      "transition": 1,
+      "name": "s1",
+      "grid": false,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 0
+    },
+    "frame": {
+      "portrait": true,
+      "aspect": 0.5714285714285714,
+      "scaleY": 1.2366300366300367,
+      "controls": [
+        [
+          0,
+          -0.34
+        ],
+        [
+          0.25,
+          0.19
+        ],
+        [
+          0.5,
+          0.64
+        ],
+        [
+          0.75,
+          0.94
+        ],
+        [
+          1,
+          1.1
+        ]
+      ]
+    },
+    "plate": {
+      "width": 948,
+      "height": 1659,
+      "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "sp",
+    "name": "mask-grid",
+    "pose": {
+      "contact": 1,
+      "reveal": 1,
+      "transition": 0,
+      "name": "contact",
+      "grid": true,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 1
+    },
+    "frame": {
+      "portrait": true,
+      "aspect": 0.5714285714285714,
+      "scaleY": 1.2366300366300367,
+      "controls": [
+        [
+          0,
+          -0.34
+        ],
+        [
+          0.25,
+          0.19
+        ],
+        [
+          0.5,
+          0.64
+        ],
+        [
+          0.75,
+          0.94
+        ],
+        [
+          1,
+          1.1
+        ]
+      ]
+    },
+    "plate": {
+      "width": 948,
+      "height": 1659,
+      "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+    },
+    "grid": {
+      "finite": true,
+      "maxDisplacement": 0.033055856485505096,
+      "maxXY": 0.003963921962109736,
+      "maxZ": 0.03305557065644715,
+      "maxVelocity": 0.000016879842032423963,
+      "maxStrain": 0.03754539848110805,
+      "meanStrain": 0.003470809866070642,
+      "boundaryError": 0,
+      "steps": 300,
+      "nodes": 2145,
+      "edges": 8288,
+      "bends": 4094,
+      "amount": 1,
+      "iterations": 6,
+      "stretchCompliance": 2e-7,
+      "bendCompliance": 0.00008
+    },
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  },
+  {
+    "device": "sp",
+    "name": "mask-flat",
+    "pose": {
+      "contact": 1,
+      "reveal": 1,
+      "transition": 0,
+      "name": "contact",
+      "grid": false,
+      "hit": [
+        0.42,
+        0.55
+      ],
+      "debug": 1
+    },
+    "frame": {
+      "portrait": true,
+      "aspect": 0.5714285714285714,
+      "scaleY": 1.2366300366300367,
+      "controls": [
+        [
+          0,
+          -0.34
+        ],
+        [
+          0.25,
+          0.19
+        ],
+        [
+          0.5,
+          0.64
+        ],
+        [
+          0.75,
+          0.94
+        ],
+        [
+          1,
+          1.1
+        ]
+      ]
+    },
+    "plate": {
+      "width": 948,
+      "height": 1659,
+      "path": "http://127.0.0.1:3153/assets/s1-sp.webp"
+    },
+    "grid": null,
+    "raf": 0,
+    "interactive": false,
+    "disposed": false
+  }
+]
