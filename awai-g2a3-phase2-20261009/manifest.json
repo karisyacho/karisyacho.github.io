@@ -184,8 +184,8 @@
       "bytes": 1384
     },
     "implementation.md": {
-      "sha256": "e605977ee29dd931967221822fdcf6ae5f4fb9b54a579c45ccdc08338cd43de0",
-      "bytes": 7371
+      "sha256": "cd73dfde13e569ea39b824ef98fd779935afec891821619e068f14d272289830",
+      "bytes": 7739
     },
     "index.html": {
       "sha256": "9b4ca6912c453d7be46cb6c2d66cfbe5eb7393875d75eba11fbb1123debb86a1",
@@ -204,8 +204,8 @@
       "bytes": 2700
     },
     "preview.js": {
-      "sha256": "94af17c0f4479a3753dbc93df9722478bea62b1b3f29c644bcb017f8d8ca1993",
-      "bytes": 15354
+      "sha256": "ba5e80d72ff5eb54a5c5187664cc065ae6f89fd5dba9018e3f91976dd0bc5e32",
+      "bytes": 15398
     },
     "renderer.js": {
       "sha256": "3ba43a7a297410b39cd07752937c88ac805d5a1e0153e4b88abd61ffed59e287",
@@ -218,6 +218,10 @@
     "surface.js": {
       "sha256": "b771fcdba20ea751ebbf3bdff5fca240d6c9f5cae8615f4eaa4ac79e79d59b85",
       "bytes": 1743
+    },
+    "evidence/endpoint-regression.json": {
+      "sha256": "ba0cbd8bb5f5bdaa8f2408bc6c1e9b500de9f4f75aedc76a97f04a892d50db42",
+      "bytes": 471
     }
   }
 }

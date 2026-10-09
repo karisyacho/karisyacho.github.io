@@ -1,0 +1,24 @@
+{
+  "reason": "Default studio header introduces fractional pixel height; endpoint snaps within one CSS pixel.",
+  "rows": [
+    {
+      "width": 320,
+      "progress": 1,
+      "transition": 1,
+      "journeyTop": -1296.46875
+    },
+    {
+      "width": 390,
+      "progress": 1,
+      "transition": 1,
+      "journeyTop": -1519.0625
+    },
+    {
+      "width": 1440,
+      "progress": 1,
+      "transition": 1,
+      "journeyTop": -1619.84375
+    }
+  ],
+  "pass": true
+}
