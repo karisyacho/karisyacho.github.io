@@ -1,0 +1,15 @@
+{
+  "definition": "Same 501 reference ridge points, physical XY in screen-height units, central-difference projected curvature; same as grid-results, but no load",
+  "metrics": {
+    "pc": {
+      "max": 63.005462632385196,
+      "p95": 3.723251090428871,
+      "rms": 4.853192010487015
+    },
+    "sp": {
+      "max": 105.67510185841512,
+      "p95": 2.767294766138161,
+      "rms": 5.858236105589127
+    }
+  }
+}

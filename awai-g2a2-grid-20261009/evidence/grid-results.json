@@ -1,0 +1,3949 @@
+{
+  "url": "http://127.0.0.1:3152/",
+  "environment": "Automated Edge, DPR1; PC viewport 1440x900 / SP emulation 390x844; no physical phone or GPU timer",
+  "checks": [
+    {
+      "name": "pc old Smooth saved static baseline",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0,
+        "oldFile": "C:\\Users\\User\\Desktop\\claude\\docs\\awai\\g2a-smooth\\evidence\\pc-smooth-before.png"
+      }
+    },
+    {
+      "name": "pc-smooth load changes pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 68,
+        "mean": 5.041927211934157,
+        "changedChannels": 2989503,
+        "changedChannelPercent": 76.89050925925926
+      }
+    },
+    {
+      "name": "pc-smooth lightoff AB exact",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "pc-smooth light changes pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 29,
+        "mean": 0.7560398662551441,
+        "changedChannels": 676124,
+        "changedChannelPercent": 17.390020576131686
+      }
+    },
+    {
+      "name": "pc-smooth exact restore",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "pc-smooth recording exact natural restore",
+      "pass": true,
+      "detail": {
+        "recoveryMs": 1588,
+        "totalMs": 4920,
+        "grid": null
+      }
+    },
+    {
+      "name": "pc static Grid Smooth equal",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      },
+      "previousDetail": {
+        "maxChannelDifference": 1,
+        "mean": 0.000020833333333333333,
+        "changedChannels": 81,
+        "changedChannelPercent": 0.0020833333333333333
+      },
+      "note": "Rechecked after inactive Grid shader follows original static surface branch; initial 1/255 rounding retained as previousDetail."
+    },
+    {
+      "name": "pc-grid load changes pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 42,
+        "mean": 1.067079475308642,
+        "changedChannels": 2361320,
+        "changedChannelPercent": 60.733539094650205
+      }
+    },
+    {
+      "name": "pc-grid lightoff AB exact",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "pc-grid light changes pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 28,
+        "mean": 1.1315758744855966,
+        "changedChannels": 909057,
+        "changedChannelPercent": 23.381095679012347
+      }
+    },
+    {
+      "name": "pc-grid exact restore",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "pc-grid recording exact natural restore",
+      "pass": true,
+      "detail": {
+        "recoveryMs": 3382,
+        "totalMs": 6707,
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0,
+          "maxXY": 0,
+          "maxZ": 0,
+          "maxVelocity": 0,
+          "maxStrain": 4.440892098500626e-16,
+          "meanStrain": 6.971092947544849e-17,
+          "boundaryError": 0,
+          "steps": 696,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 0,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": false
+        }
+      }
+    },
+    {
+      "name": "pc default Grid B lightoff Full",
+      "pass": true,
+      "detail": {
+        "hit": [
+          0.42,
+          0.55
+        ],
+        "amount": 0,
+        "glow": 0,
+        "mode": "B",
+        "target": 0,
+        "age": 10,
+        "preset": "grid",
+        "quality": "full",
+        "lightEnabled": false
+      }
+    },
+    {
+      "name": "pc idle RAF stopped",
+      "pass": true,
+      "detail": {
+        "before": {
+          "draws": 8,
+          "cpuMs": 2.2000000001862645,
+          "maxCpuMs": 1.1000000000931323,
+          "solverFrames": 3,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 1,
+          "lastRelease": "test settle",
+          "restoreCount": 0,
+          "error": null
+        },
+        "after": {
+          "draws": 8,
+          "cpuMs": 2.2000000001862645,
+          "maxCpuMs": 1.1000000000931323,
+          "solverFrames": 3,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 1,
+          "lastRelease": "test settle",
+          "restoreCount": 0,
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "PC drag follows hit",
+      "pass": true,
+      "detail": {
+        "press": {
+          "hit": [
+            0.41999999152289497,
+            0.5546875
+          ],
+          "amount": 1,
+          "glow": 0.8218259737317476,
+          "mode": "B",
+          "target": 1,
+          "age": 0.6637000000000467,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "drag": {
+          "hit": [
+            0.47555554707845055,
+            0.5789930555555556
+          ],
+          "amount": 1,
+          "glow": 0.9101374978403473,
+          "mode": "B",
+          "target": 1,
+          "age": 0.8776000000000466,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        }
+      }
+    },
+    {
+      "name": "PC drag exact restore",
+      "pass": true
+    },
+    {
+      "name": "Keyboard Enter load",
+      "pass": true
+    },
+    {
+      "name": "pc quality balanced",
+      "pass": true,
+      "detail": {
+        "mesh": {
+          "vertices": 27985,
+          "triangles": 55296,
+          "bufferBytes": 555656
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0,
+          "maxXY": 0,
+          "maxZ": 0,
+          "maxVelocity": 0,
+          "maxStrain": 4.440892098500626e-16,
+          "meanStrain": 6.971092947544849e-17,
+          "boundaryError": 0,
+          "steps": 933,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 0,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": false
+        }
+      }
+    },
+    {
+      "name": "pc quality full",
+      "pass": true,
+      "detail": {
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0,
+          "maxXY": 0,
+          "maxZ": 0,
+          "maxVelocity": 0,
+          "maxStrain": 4.440892098500626e-16,
+          "meanStrain": 6.971092947544849e-17,
+          "boundaryError": 0,
+          "steps": 933,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 0,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": false
+        }
+      }
+    },
+    {
+      "name": "pc UI only supported four settings",
+      "pass": true,
+      "detail": [
+        "response",
+        "restore",
+        "amber",
+        "transmission"
+      ]
+    },
+    {
+      "name": "pc setting response",
+      "pass": true
+    },
+    {
+      "name": "pc setting restore",
+      "pass": true
+    },
+    {
+      "name": "pc setting amber",
+      "pass": true
+    },
+    {
+      "name": "pc setting transmission",
+      "pass": true
+    },
+    {
+      "name": "pc context loss static",
+      "pass": true
+    },
+    {
+      "name": "pc context restore",
+      "pass": true
+    },
+    {
+      "name": "pc dispose input RAF canvas",
+      "pass": true,
+      "detail": {
+        "before": {
+          "state": {
+            "hit": [
+              0.42,
+              0.55
+            ],
+            "amount": 0,
+            "glow": 0,
+            "mode": "B",
+            "target": 0,
+            "age": 0,
+            "preset": "grid",
+            "quality": "full",
+            "lightEnabled": false
+          },
+          "settings": {
+            "depth": 0.045,
+            "range": 0.44,
+            "ratio": 2.1,
+            "response": 28,
+            "restore": 12,
+            "amber": 0.5,
+            "transmission": 0.5,
+            "tension": 0,
+            "opticalGain": 2.4,
+            "lightDelay": 0.12,
+            "glowResponse": 3.2,
+            "pull": 0.46,
+            "spread": 0.62,
+            "bend": 0.048,
+            "smooth": 1,
+            "curvature": 0.14,
+            "compression": 0.15,
+            "grid": 1
+          },
+          "frame": {
+            "portrait": false,
+            "aspect": 1.75,
+            "scaleY": 1.09375,
+            "controls": [
+              [
+                0,
+                0.19
+              ],
+              [
+                0.25,
+                0.49
+              ],
+              [
+                0.5,
+                0.68
+              ],
+              [
+                0.75,
+                0.82
+              ],
+              [
+                1,
+                0.95
+              ]
+            ]
+          },
+          "renderer": "static",
+          "canvas": [
+            1,
+            1
+          ],
+          "mesh": null,
+          "grid": null,
+          "stats": {
+            "draws": 1473,
+            "cpuMs": 32.80000000097789,
+            "maxCpuMs": 1.1000000000931323,
+            "solverFrames": 1452,
+            "solverMs": 3331.799999999581,
+            "maxSolverMs": 11.199999999953434,
+            "frames": 1446,
+            "frameMs": 7763.6,
+            "releases": 9,
+            "lastRelease": "pagehide",
+            "restoreCount": 1,
+            "error": null
+          },
+          "raf": 0,
+          "destroyed": true
+        },
+        "after": {
+          "state": {
+            "hit": [
+              0.42,
+              0.55
+            ],
+            "amount": 0,
+            "glow": 0,
+            "mode": "B",
+            "target": 0,
+            "age": 0,
+            "preset": "grid",
+            "quality": "full",
+            "lightEnabled": false
+          },
+          "settings": {
+            "depth": 0.045,
+            "range": 0.44,
+            "ratio": 2.1,
+            "response": 28,
+            "restore": 12,
+            "amber": 0.5,
+            "transmission": 0.5,
+            "tension": 0,
+            "opticalGain": 2.4,
+            "lightDelay": 0.12,
+            "glowResponse": 3.2,
+            "pull": 0.46,
+            "spread": 0.62,
+            "bend": 0.048,
+            "smooth": 1,
+            "curvature": 0.14,
+            "compression": 0.15,
+            "grid": 1
+          },
+          "frame": {
+            "portrait": false,
+            "aspect": 1.75,
+            "scaleY": 1.09375,
+            "controls": [
+              [
+                0,
+                0.19
+              ],
+              [
+                0.25,
+                0.49
+              ],
+              [
+                0.5,
+                0.68
+              ],
+              [
+                0.75,
+                0.82
+              ],
+              [
+                1,
+                0.95
+              ]
+            ]
+          },
+          "renderer": "static",
+          "canvas": [
+            1,
+            1
+          ],
+          "mesh": null,
+          "grid": null,
+          "stats": {
+            "draws": 1473,
+            "cpuMs": 32.80000000097789,
+            "maxCpuMs": 1.1000000000931323,
+            "solverFrames": 1452,
+            "solverMs": 3331.799999999581,
+            "maxSolverMs": 11.199999999953434,
+            "frames": 1446,
+            "frameMs": 7763.6,
+            "releases": 9,
+            "lastRelease": "pagehide",
+            "restoreCount": 1,
+            "error": null
+          },
+          "raf": 0,
+          "destroyed": true
+        }
+      }
+    },
+    {
+      "name": "pc delete textures buffers shaders program vao",
+      "pass": true,
+      "detail": {
+        "Buffer": {
+          "created": 8,
+          "deleted": 8
+        },
+        "Shader": {
+          "created": 8,
+          "deleted": 8
+        },
+        "Program": {
+          "created": 4,
+          "deleted": 4
+        },
+        "VertexArray": {
+          "created": 4,
+          "deleted": 4
+        },
+        "Texture": {
+          "created": 4,
+          "deleted": 4
+        }
+      }
+    },
+    {
+      "name": "sp old Smooth saved static baseline",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0,
+        "oldFile": "C:\\Users\\User\\Desktop\\claude\\docs\\awai\\g2a-smooth\\evidence\\sp-smooth-before.png"
+      }
+    },
+    {
+      "name": "sp-smooth load changes pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 74,
+        "mean": 6.275710900473934,
+        "changedChannels": 723345,
+        "changedChannelPercent": 73.25161015919309
+      }
+    },
+    {
+      "name": "sp-smooth lightoff AB exact",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "sp-smooth light changes pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 35,
+        "mean": 2.068742658079151,
+        "changedChannels": 428361,
+        "changedChannelPercent": 43.379207680155545
+      }
+    },
+    {
+      "name": "sp-smooth exact restore",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "sp-smooth recording exact natural restore",
+      "pass": true,
+      "detail": {
+        "recoveryMs": 1589,
+        "totalMs": 4922,
+        "grid": null
+      }
+    },
+    {
+      "name": "sp static Grid Smooth equal",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      },
+      "previousDetail": {
+        "maxChannelDifference": 1,
+        "mean": 0.00002329161096933609,
+        "changedChannels": 23,
+        "changedChannelPercent": 0.002329161096933609
+      },
+      "note": "Rechecked after inactive Grid shader follows original static surface branch; initial 1/255 rounding retained as previousDetail."
+    },
+    {
+      "name": "sp-grid load changes pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 51,
+        "mean": 2.620610037671649,
+        "changedChannels": 658771,
+        "changedChannelPercent": 66.71233847774131
+      }
+    },
+    {
+      "name": "sp-grid lightoff AB exact",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "sp-grid light changes pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 36,
+        "mean": 2.962839753716531,
+        "changedChannels": 468613,
+        "changedChannelPercent": 47.45544213553693
+      }
+    },
+    {
+      "name": "sp-grid exact restore",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "sp-grid recording exact natural restore",
+      "pass": true,
+      "detail": {
+        "recoveryMs": 2242,
+        "totalMs": 5565,
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0,
+          "maxXY": 0,
+          "maxZ": 0,
+          "maxVelocity": 0,
+          "maxStrain": 2.220446049250313e-16,
+          "meanStrain": 2.4821950586756938e-17,
+          "boundaryError": 0,
+          "steps": 558,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 0,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": false
+        }
+      }
+    },
+    {
+      "name": "sp default Grid B lightoff Full",
+      "pass": true,
+      "detail": {
+        "hit": [
+          0.42,
+          0.55
+        ],
+        "amount": 0,
+        "glow": 0,
+        "mode": "B",
+        "target": 0,
+        "age": 10,
+        "preset": "grid",
+        "quality": "full",
+        "lightEnabled": false
+      }
+    },
+    {
+      "name": "sp idle RAF stopped",
+      "pass": true,
+      "detail": {
+        "before": {
+          "draws": 8,
+          "cpuMs": 2,
+          "maxCpuMs": 0.8999999999068677,
+          "solverFrames": 3,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 1,
+          "lastRelease": "test settle",
+          "restoreCount": 0,
+          "error": null
+        },
+        "after": {
+          "draws": 8,
+          "cpuMs": 2,
+          "maxCpuMs": 0.8999999999068677,
+          "solverFrames": 3,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 1,
+          "lastRelease": "test settle",
+          "restoreCount": 0,
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "Native short tap 150ms load hold",
+      "pass": true,
+      "detail": {
+        "state": {
+          "hit": [
+            0.42000000782502,
+            0.5618315197172619
+          ],
+          "amount": 0.9468196688736672,
+          "glow": 0,
+          "mode": "B",
+          "target": 1,
+          "age": 0.11969999999990683,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "events": [
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerup",
+            "trusted": true,
+            "pointerType": "touch"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Short tap releases",
+      "pass": true
+    },
+    {
+      "name": "Native cancel releases",
+      "pass": true
+    },
+    {
+      "name": "Native recontact loads",
+      "pass": true
+    },
+    {
+      "name": "Native vertical scroll and cancellation",
+      "pass": true,
+      "detail": {
+        "scrollY": 181,
+        "events": [
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerup",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointercancel",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerup",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "pointerType": "touch"
+          },
+          {
+            "type": "pointercancel",
+            "trusted": true,
+            "pointerType": "touch"
+          }
+        ],
+        "state": {
+          "hit": [
+            0.42000000782502,
+            0.5618315197172619
+          ],
+          "amount": 0.01387677685439373,
+          "glow": 0.004971653129142768,
+          "mode": "B",
+          "target": 0,
+          "age": 0,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "touchAction": "pan-y pinch-zoom"
+      }
+    },
+    {
+      "name": "Native pinch zoom and load release",
+      "pass": true,
+      "detail": {
+        "beforeScale": 1,
+        "scale": 5,
+        "state": {
+          "hit": [
+            0.3717948717948718,
+            0.5618315197172619
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "B",
+          "target": 0,
+          "age": 0,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        }
+      }
+    },
+    {
+      "name": "sp quality balanced",
+      "pass": true,
+      "detail": {
+        "mesh": {
+          "vertices": 27985,
+          "triangles": 55296,
+          "bufferBytes": 555656
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0,
+          "maxXY": 0,
+          "maxZ": 0,
+          "maxVelocity": 0,
+          "maxStrain": 2.220446049250313e-16,
+          "meanStrain": 2.4821950586756938e-17,
+          "boundaryError": 0,
+          "steps": 827,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 0,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": false
+        }
+      }
+    },
+    {
+      "name": "sp quality full",
+      "pass": true,
+      "detail": {
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0,
+          "maxXY": 0,
+          "maxZ": 0,
+          "maxVelocity": 0,
+          "maxStrain": 2.220446049250313e-16,
+          "meanStrain": 2.4821950586756938e-17,
+          "boundaryError": 0,
+          "steps": 827,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 0,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": false
+        }
+      }
+    },
+    {
+      "name": "sp UI only supported four settings",
+      "pass": true,
+      "detail": [
+        "response",
+        "restore",
+        "amber",
+        "transmission"
+      ]
+    },
+    {
+      "name": "sp setting response",
+      "pass": true
+    },
+    {
+      "name": "sp setting restore",
+      "pass": true
+    },
+    {
+      "name": "sp setting amber",
+      "pass": true
+    },
+    {
+      "name": "sp setting transmission",
+      "pass": true
+    },
+    {
+      "name": "sp context loss static",
+      "pass": true
+    },
+    {
+      "name": "sp context restore",
+      "pass": true
+    },
+    {
+      "name": "sp dispose input RAF canvas",
+      "pass": true,
+      "detail": {
+        "before": {
+          "state": {
+            "hit": [
+              0.42,
+              0.55
+            ],
+            "amount": 0,
+            "glow": 0,
+            "mode": "B",
+            "target": 0,
+            "age": 0,
+            "preset": "grid",
+            "quality": "full",
+            "lightEnabled": false
+          },
+          "settings": {
+            "depth": 0.045,
+            "range": 0.44,
+            "ratio": 2.1,
+            "response": 28,
+            "restore": 12,
+            "amber": 0.5,
+            "transmission": 0.5,
+            "tension": 0,
+            "opticalGain": 2.4,
+            "lightDelay": 0.12,
+            "glowResponse": 3.2,
+            "pull": 0.46,
+            "spread": 0.62,
+            "bend": 0.048,
+            "smooth": 1,
+            "curvature": 0.14,
+            "compression": 0.15,
+            "grid": 1
+          },
+          "frame": {
+            "portrait": true,
+            "aspect": 0.5714285714285714,
+            "scaleY": 1.2366300366300367,
+            "controls": [
+              [
+                0,
+                -0.34
+              ],
+              [
+                0.25,
+                0.19
+              ],
+              [
+                0.5,
+                0.64
+              ],
+              [
+                0.75,
+                0.94
+              ],
+              [
+                1,
+                1.1
+              ]
+            ]
+          },
+          "renderer": "static",
+          "canvas": [
+            1,
+            1
+          ],
+          "mesh": null,
+          "grid": null,
+          "stats": {
+            "draws": 1285,
+            "cpuMs": 30.00000000023283,
+            "maxCpuMs": 0.8999999999068677,
+            "solverFrames": 1265,
+            "solverMs": 2373.400000001304,
+            "maxSolverMs": 20.899999999906868,
+            "frames": 1259,
+            "frameMs": 6872.900000000001,
+            "releases": 16,
+            "lastRelease": "pagehide",
+            "restoreCount": 1,
+            "error": null
+          },
+          "raf": 0,
+          "destroyed": true
+        },
+        "after": {
+          "state": {
+            "hit": [
+              0.42,
+              0.55
+            ],
+            "amount": 0,
+            "glow": 0,
+            "mode": "B",
+            "target": 0,
+            "age": 0,
+            "preset": "grid",
+            "quality": "full",
+            "lightEnabled": false
+          },
+          "settings": {
+            "depth": 0.045,
+            "range": 0.44,
+            "ratio": 2.1,
+            "response": 28,
+            "restore": 12,
+            "amber": 0.5,
+            "transmission": 0.5,
+            "tension": 0,
+            "opticalGain": 2.4,
+            "lightDelay": 0.12,
+            "glowResponse": 3.2,
+            "pull": 0.46,
+            "spread": 0.62,
+            "bend": 0.048,
+            "smooth": 1,
+            "curvature": 0.14,
+            "compression": 0.15,
+            "grid": 1
+          },
+          "frame": {
+            "portrait": true,
+            "aspect": 0.5714285714285714,
+            "scaleY": 1.2366300366300367,
+            "controls": [
+              [
+                0,
+                -0.34
+              ],
+              [
+                0.25,
+                0.19
+              ],
+              [
+                0.5,
+                0.64
+              ],
+              [
+                0.75,
+                0.94
+              ],
+              [
+                1,
+                1.1
+              ]
+            ]
+          },
+          "renderer": "static",
+          "canvas": [
+            1,
+            1
+          ],
+          "mesh": null,
+          "grid": null,
+          "stats": {
+            "draws": 1285,
+            "cpuMs": 30.00000000023283,
+            "maxCpuMs": 0.8999999999068677,
+            "solverFrames": 1265,
+            "solverMs": 2373.400000001304,
+            "maxSolverMs": 20.899999999906868,
+            "frames": 1259,
+            "frameMs": 6872.900000000001,
+            "releases": 16,
+            "lastRelease": "pagehide",
+            "restoreCount": 1,
+            "error": null
+          },
+          "raf": 0,
+          "destroyed": true
+        }
+      }
+    },
+    {
+      "name": "sp delete textures buffers shaders program vao",
+      "pass": true,
+      "detail": {
+        "Buffer": {
+          "created": 8,
+          "deleted": 8
+        },
+        "Shader": {
+          "created": 8,
+          "deleted": 8
+        },
+        "Program": {
+          "created": 4,
+          "deleted": 4
+        },
+        "VertexArray": {
+          "created": 4,
+          "deleted": 4
+        },
+        "Texture": {
+          "created": 4,
+          "deleted": 4
+        }
+      }
+    },
+    {
+      "name": "Reduced motion immediate stable",
+      "pass": true,
+      "detail": {
+        "state": {
+          "hit": [
+            0.58,
+            0.48
+          ],
+          "amount": 1,
+          "glow": 1,
+          "mode": "B",
+          "target": 1,
+          "age": 0.004399999999999977,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0.03062569274981181,
+          "maxXY": 0.004117446351885582,
+          "maxZ": 0.030371863003918517,
+          "maxVelocity": 0.000022125344533698198,
+          "maxStrain": 0.04093741911558957,
+          "meanStrain": 0.0033351828671886836,
+          "boundaryError": 0,
+          "steps": 300,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": true
+        },
+        "stats": {
+          "draws": 8,
+          "cpuMs": 1.7000000004190952,
+          "maxCpuMs": 1.1000000000931323,
+          "solverFrames": 4,
+          "solverMs": 713.4000000001397,
+          "maxSolverMs": 713.3000000000466,
+          "frames": 0,
+          "frameMs": 0,
+          "releases": 0,
+          "lastRelease": "",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      }
+    },
+    {
+      "name": "Reduced motion exact restore",
+      "pass": true
+    },
+    {
+      "name": "Fallback URL static",
+      "pass": true
+    },
+    {
+      "name": "pc old Smooth saved before pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "pc old Smooth saved max pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "pc old Smooth saved on-max pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "pc old Smooth saved restored pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "sp old Smooth saved before pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "sp old Smooth saved max pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "sp old Smooth saved on-max pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    },
+    {
+      "name": "sp old Smooth saved restored pixels",
+      "pass": true,
+      "detail": {
+        "maxChannelDifference": 0,
+        "mean": 0,
+        "changedChannels": 0,
+        "changedChannelPercent": 0
+      }
+    }
+  ],
+  "metrics": {
+    "pc-smooth": {
+      "canvas": [
+        1440,
+        900
+      ],
+      "ridge": {
+        "sameUV": true,
+        "dxPx": {
+          "max": 151.15738928732043,
+          "min": 0,
+          "p05": 1.1709652180615482,
+          "p95": 150.51093780029814,
+          "mean": 81.07588278244428,
+          "rms": 97.4069569441815
+        },
+        "dyPx": {
+          "max": 106.93374998596524,
+          "min": 0,
+          "p05": 0.6748223811614884,
+          "p95": 105.64141823584009,
+          "mean": 42.96609550681742,
+          "rms": 56.25842371110043
+        },
+        "movementPx": {
+          "max": 151.43491248759233,
+          "min": 0,
+          "p05": 1.9852912812253551,
+          "p95": 150.94402682848371,
+          "mean": 102.74119619224142,
+          "rms": 112.48611247431094
+        },
+        "maxPercentW": 10.497040922730585,
+        "maxPercentH": 11.881527776218359,
+        "curvature": {
+          "max": 27.35432645080168,
+          "min": 0.0017164461785946117,
+          "p05": 0.03748963358134326,
+          "p95": 3.1644698397891995,
+          "mean": 1.0019201538734588,
+          "rms": 2.559773472381475
+        },
+        "deltaSecond": {
+          "max": 0.0001938325158382855,
+          "min": 0.000004383524893436739,
+          "p05": 0.000008220563526622261,
+          "p95": 0.00010946769586818567,
+          "mean": 0.00002916928680568941,
+          "rms": 0.0000449457162883783
+        }
+      },
+      "mesh": {
+        "count": 6561,
+        "jacobian": {
+          "max": 2.359360209699138,
+          "min": 0.5053245451640656,
+          "p05": 0.5725049927204867,
+          "p95": 1.6304998986257886,
+          "mean": 0.9996215036966847,
+          "rms": 1.0491414818886249
+        },
+        "minJacobian": 0.5053245451640656,
+        "negative": 0,
+        "singularMin": {
+          "max": 1.1190390851305854,
+          "min": 0.5236762803471009,
+          "p05": 0.5805471932334512,
+          "p95": 0.9977702979797217,
+          "mean": 0.8262752728116914,
+          "rms": 0.8370601118503004
+        },
+        "singularMax": {
+          "max": 2.5429276039293183,
+          "min": 0.7542141958196377,
+          "p05": 0.8632577421728007,
+          "p95": 1.8121917301054216,
+          "mean": 1.205140266096345,
+          "rms": 1.243367238930248
+        }
+      },
+      "addedSagHessian": {
+        "count": 441,
+        "max": 1.5675835820156656,
+        "min": 0.1942182104585005,
+        "p05": 0.22336239986748,
+        "p95": 1.1251817890778135,
+        "mean": 0.5767398366994779,
+        "rms": 0.6463103760081493
+      },
+      "grid": null,
+      "additionalHits": [
+        {
+          "hit": [
+            0.2,
+            0.3
+          ],
+          "canvas": [
+            1440,
+            900
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 148.7011213867467,
+              "min": 0,
+              "p05": 0.4667445249619373,
+              "p95": 147.46497731012965,
+              "mean": 74.33586198310712,
+              "rms": 89.7216994560662
+            },
+            "dyPx": {
+              "max": 79.31629006891627,
+              "min": 0,
+              "p05": 0.45965170412752276,
+              "p95": 77.37458253900418,
+              "mean": 25.662059808411605,
+              "rms": 34.54013058489332
+            },
+            "movementPx": {
+              "max": 151.6039027753876,
+              "min": 0,
+              "p05": 0.8045593000036375,
+              "p95": 150.6259770839507,
+              "mean": 81.4899730236987,
+              "rms": 96.14054282198614
+            },
+            "maxPercentW": 10.32646676296852,
+            "maxPercentH": 8.812921118768475,
+            "curvature": {
+              "max": 50.80744382813482,
+              "min": 0.0032702833636391432,
+              "p05": 0.07541469212337727,
+              "p95": 4.640500767314653,
+              "mean": 1.5198682262862728,
+              "rms": 4.822425661207296
+            },
+            "deltaSecond": {
+              "max": 0.00018513448713571457,
+              "min": 0.000001068422421014644,
+              "p05": 0.0000015849090789585738,
+              "p95": 0.00009709847673086393,
+              "mean": 0.000020501655029430425,
+              "rms": 0.00003535940880504847
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 2.1964282519844334,
+              "min": 0.2874734201444645,
+              "p05": 0.5182510090703146,
+              "p95": 1.3877388366487093,
+              "mean": 0.9995868310712084,
+              "rms": 1.037519978907903
+            },
+            "minJacobian": 0.2874734201444645,
+            "negative": 0,
+            "singularMin": {
+              "max": 0.99999935662182,
+              "min": 0.383439750335723,
+              "p05": 0.5399256880428996,
+              "p95": 0.9986986503316694,
+              "mean": 0.8561040052284858,
+              "rms": 0.8685325005349426
+            },
+            "singularMax": {
+              "max": 2.352405079685637,
+              "min": 0.7344741783262909,
+              "p05": 0.912084315083183,
+              "p95": 1.6410462453429022,
+              "mean": 1.1620663281039527,
+              "rms": 1.1885093988408244
+            }
+          },
+          "addedSagHessian": {
+            "count": 441,
+            "max": 1.3882436325400858,
+            "min": 0.22343017201803392,
+            "p05": 0.3259888204041681,
+            "p95": 1.3020384012638022,
+            "mean": 0.8612581500674381,
+            "rms": 0.9209348750724174
+          },
+          "grid": null
+        },
+        {
+          "hit": [
+            0.75,
+            0.65
+          ],
+          "canvas": [
+            1440,
+            900
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 108.58579428251309,
+              "min": 0,
+              "p05": 1.2023153652012342,
+              "p95": 107.66387404824667,
+              "mean": 59.14792723797476,
+              "rms": 68.66831855352655
+            },
+            "dyPx": {
+              "max": 72.12997190452806,
+              "min": 0,
+              "p05": 0.6991352392780592,
+              "p95": 71.50375724611507,
+              "mean": 38.22489467729598,
+              "rms": 44.65014515212613
+            },
+            "movementPx": {
+              "max": 130.0891978472699,
+              "min": 0,
+              "p05": 1.7915193931990472,
+              "p95": 129.02160460452802,
+              "mean": 70.73554687126979,
+              "rms": 81.90832335650957
+            },
+            "maxPercentW": 7.540680158507854,
+            "maxPercentH": 8.014441322725341,
+            "curvature": {
+              "max": 23.90759790346264,
+              "min": 0.0011554078625489344,
+              "p05": 0.07911163586386569,
+              "p95": 3.087359764657075,
+              "mean": 1.3356263249404388,
+              "rms": 2.514736487512418
+            },
+            "deltaSecond": {
+              "max": 0.00018650599627021146,
+              "min": 0.00000116525109521658,
+              "p05": 0.000002128548537586873,
+              "p95": 0.00011503670349714957,
+              "mean": 0.000026470704781901367,
+              "rms": 0.00004283737086345502
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 2.3111856393310806,
+              "min": 0.6036682312869345,
+              "p05": 0.6558587728699202,
+              "p95": 1.4051246492728704,
+              "mean": 0.9997176058058195,
+              "rms": 1.0237112928660934
+            },
+            "minJacobian": 0.6036682312869345,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0399837016736093,
+              "min": 0.49929406408319443,
+              "p05": 0.560950510647944,
+              "p95": 0.998727024640416,
+              "mean": 0.8494663689621998,
+              "rms": 0.8599525684694405
+            },
+            "singularMax": {
+              "max": 2.5722747566708675,
+              "min": 0.9687444172666957,
+              "p05": 0.9982190813742468,
+              "p95": 1.6667626049774096,
+              "mean": 1.1827279181136174,
+              "rms": 1.2028783521109683
+            }
+          },
+          "addedSagHessian": {
+            "count": 441,
+            "max": 2.711702653099114,
+            "min": 0.06823186605748628,
+            "p05": 0.2046209816040113,
+            "p95": 2.6740618335221553,
+            "mean": 1.7260333004392279,
+            "rms": 1.9247103074641407
+          },
+          "grid": null
+        },
+        {
+          "hit": [
+            0.55,
+            0.5
+          ],
+          "canvas": [
+            1440,
+            900
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 130.19723419447885,
+              "min": 0,
+              "p05": 1.4603942210589693,
+              "p95": 129.57229810771165,
+              "mean": 71.36611035704672,
+              "rms": 83.20327528135894
+            },
+            "dyPx": {
+              "max": 79.04733549030146,
+              "min": 0,
+              "p05": 0.7863034309632089,
+              "p95": 78.07557137003428,
+              "mean": 39.10880969164901,
+              "rms": 46.07756357013131
+            },
+            "movementPx": {
+              "max": 136.6269055831668,
+              "min": 0,
+              "p05": 2.1010875007758507,
+              "p95": 135.91627793031398,
+              "mean": 86.43707941501118,
+              "rms": 95.11007771054071
+            },
+            "maxPercentW": 9.04147459683881,
+            "maxPercentH": 8.783037276700163,
+            "curvature": {
+              "max": 24.254371041086717,
+              "min": 0.0006451178747293747,
+              "p05": 0.05819551122769541,
+              "p95": 2.485335607651598,
+              "mean": 0.9992081598470756,
+              "rms": 2.2188438216902195
+            },
+            "deltaSecond": {
+              "max": 0.00019042184842363086,
+              "min": 0.000005488968870253503,
+              "p05": 0.00000632294162790998,
+              "p95": 0.00011848281557255901,
+              "mean": 0.0000310343792406284,
+              "rms": 0.00004806001959970841
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 2.4279846451490457,
+              "min": 0.5856212122764965,
+              "p05": 0.6296130572846091,
+              "p95": 1.512104628460918,
+              "mean": 0.9996777397013861,
+              "rms": 1.0335692992489929
+            },
+            "minJacobian": 0.5856212122764965,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.1061488881442505,
+              "min": 0.49947351677558854,
+              "p05": 0.5618910760426267,
+              "p95": 0.9975687201998041,
+              "mean": 0.8363183041966089,
+              "rms": 0.8462475934501253
+            },
+            "singularMax": {
+              "max": 2.76304784459982,
+              "min": 0.8229621257133368,
+              "p05": 0.9046532031093416,
+              "p95": 1.8543791654368527,
+              "mean": 1.2019483475953174,
+              "rms": 1.2352957424019684
+            }
+          },
+          "addedSagHessian": {
+            "count": 441,
+            "max": 2.860862568173317,
+            "min": 0.07109471557537386,
+            "p05": 0.1154676701206632,
+            "p95": 2.636079260451889,
+            "mean": 1.221752062608638,
+            "rms": 1.5034624633654137
+          },
+          "grid": null
+        }
+      ]
+    },
+    "pc-grid": {
+      "canvas": [
+        1440,
+        900
+      ],
+      "ridge": {
+        "sameUV": true,
+        "dxPx": {
+          "max": 1.5965826473469336,
+          "min": 0,
+          "p05": 0.025257080033425083,
+          "p95": 1.5789121534172446,
+          "mean": 0.7036271285232194,
+          "rms": 0.8897226634420551
+        },
+        "dyPx": {
+          "max": 2.1955257271283224,
+          "min": 0,
+          "p05": 0.009050599051707575,
+          "p95": 2.165398362494786,
+          "mean": 0.8543088243060296,
+          "rms": 1.1559428578830844
+        },
+        "movementPx": {
+          "max": 2.605182611379002,
+          "min": 0,
+          "p05": 0.05268435910289718,
+          "p95": 2.5757194626774016,
+          "mean": 1.1765677719056893,
+          "rms": 1.4587015830982486
+        },
+        "maxPercentW": 0.11087379495464816,
+        "maxPercentH": 0.24394730301425804,
+        "curvature": {
+          "max": 62.777247846601234,
+          "min": 0.0002521817141328756,
+          "p05": 0.02087456398196278,
+          "p95": 3.7233005112329893,
+          "mean": 1.2065881440467967,
+          "rms": 4.836487355484031
+        },
+        "deltaSecond": {
+          "max": 0.000009309567568299157,
+          "min": 9.240131784314072e-10,
+          "p05": 5.244149662329554e-8,
+          "p95": 0.000005078923567684578,
+          "mean": 0.00000109573919603785,
+          "rms": 0.000002005174040508379
+        }
+      },
+      "mesh": {
+        "count": 6561,
+        "jacobian": {
+          "max": 1.0292630156014237,
+          "min": 0.9820267443486393,
+          "p05": 0.9908941851514455,
+          "p95": 1.0116567349179089,
+          "mean": 0.9999679496017776,
+          "rms": 0.9999850619716646
+        },
+        "minJacobian": 0.9820267443486393,
+        "negative": 0,
+        "singularMin": {
+          "max": 1.0042998385068993,
+          "min": 0.9818688962605923,
+          "p05": 0.9909781680225945,
+          "p95": 0.9999953282621641,
+          "mean": 0.9978887305823789,
+          "rms": 0.9978935301225607
+        },
+        "singularMax": {
+          "max": 1.0313412129548103,
+          "min": 0.9965914790957777,
+          "p05": 0.9991653188666237,
+          "p95": 1.012618124913405,
+          "mean": 1.0020818996881775,
+          "rms": 1.0020925176722526
+        }
+      },
+      "addedSagHessian": {
+        "count": 441,
+        "max": 2.577117815780903,
+        "min": 0.5240745171448391,
+        "p05": 0.6866969902211895,
+        "p95": 2.417208990495241,
+        "mean": 1.5791079295412909,
+        "rms": 1.6724307494770256
+      },
+      "grid": {
+        "finite": true,
+        "maxDisplacement": 0.0419558887652487,
+        "maxXY": 0.0029514831559774384,
+        "maxZ": 0.04195552808504391,
+        "maxVelocity": 0.00003891355230690907,
+        "maxStrain": 0.010215545802604087,
+        "meanStrain": 0.001094968060356508,
+        "boundaryError": 0,
+        "steps": 1202,
+        "nodes": 2665,
+        "edges": 10344,
+        "bends": 5118,
+        "amount": 1,
+        "iterations": 6,
+        "stretchCompliance": 2e-7,
+        "bendCompliance": 0.00008,
+        "active": true
+      },
+      "additionalHits": [
+        {
+          "hit": [
+            0.2,
+            0.3
+          ],
+          "canvas": [
+            1440,
+            900
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 1.0819202121134464,
+              "min": 0,
+              "p05": 0.009355209433126177,
+              "p95": 1.0330977046614842,
+              "mean": 0.4010012497731176,
+              "rms": 0.5163649625337479
+            },
+            "dyPx": {
+              "max": 1.696886485655802,
+              "min": 0,
+              "p05": 0.005572235833950501,
+              "p95": 1.5881811365003606,
+              "mean": 0.36245432290567087,
+              "rms": 0.6219316176155979
+            },
+            "movementPx": {
+              "max": 2.0124122831270306,
+              "min": 0,
+              "p05": 0.022377878249631104,
+              "p95": 1.8943296747579128,
+              "mean": 0.5670717492058108,
+              "rms": 0.8083512302968513
+            },
+            "maxPercentW": 0.07513334806343377,
+            "maxPercentH": 0.18854294285064466,
+            "curvature": {
+              "max": 62.93330549068574,
+              "min": 0.00022529937479579503,
+              "p05": 0.008494252695325487,
+              "p95": 3.76732378349925,
+              "mean": 1.2279247599415624,
+              "rms": 4.8684887147595335
+            },
+            "deltaSecond": {
+              "max": 0.000013176719996090741,
+              "min": 2.672047057014153e-9,
+              "p05": 1.7592663122912196e-8,
+              "p95": 0.0000044029061831333085,
+              "mean": 9.740839479229642e-7,
+              "rms": 0.000002211012991742033
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 1.035841183926167,
+              "min": 0.9764515847714862,
+              "p05": 0.9938760928362731,
+              "p95": 1.0055980932447306,
+              "mean": 0.999953021957561,
+              "rms": 0.999963332957063
+            },
+            "minJacobian": 0.9764515847714862,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0038678789000297,
+              "min": 0.9780110704484072,
+              "p05": 0.9930480428338463,
+              "p95": 0.9999882947785116,
+              "mean": 0.9984382286846036,
+              "rms": 0.998442677990371
+            },
+            "singularMax": {
+              "max": 1.0382035616584124,
+              "min": 0.9956875281008728,
+              "p05": 1.0000200323584865,
+              "p95": 1.0057088139809789,
+              "mean": 1.0015166544637877,
+              "rms": 1.0015220233117132
+            }
+          },
+          "addedSagHessian": {
+            "count": 441,
+            "max": 2.494685033538068,
+            "min": 0.37782928421738166,
+            "p05": 0.7152117517788358,
+            "p95": 2.362824277138914,
+            "mean": 1.5698014761077197,
+            "rms": 1.6549794498296833
+          },
+          "grid": {
+            "finite": true,
+            "maxDisplacement": 0.03363443326080892,
+            "maxXY": 0.002223540145013743,
+            "maxZ": 0.03362108204493292,
+            "maxVelocity": 0.000012664669931451216,
+            "maxStrain": 0.021316483155289445,
+            "meanStrain": 0.0008852430307796711,
+            "boundaryError": 0,
+            "steps": 2702,
+            "nodes": 2665,
+            "edges": 10344,
+            "bends": 5118,
+            "amount": 1,
+            "iterations": 6,
+            "stretchCompliance": 2e-7,
+            "bendCompliance": 0.00008,
+            "active": true
+          }
+        },
+        {
+          "hit": [
+            0.75,
+            0.65
+          ],
+          "canvas": [
+            1440,
+            900
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 1.0800218919449378,
+              "min": 0,
+              "p05": 0.0053420696738193385,
+              "p95": 1.0553071283834425,
+              "mean": 0.4326205394864657,
+              "rms": 0.544856569684107
+            },
+            "dyPx": {
+              "max": 0.8553256576226742,
+              "min": 0,
+              "p05": 0.01284259363434348,
+              "p95": 0.8423782005680835,
+              "mean": 0.37959359269697046,
+              "rms": 0.48769602744631846
+            },
+            "movementPx": {
+              "max": 1.0802186593648242,
+              "min": 0,
+              "p05": 0.038502881124353475,
+              "p95": 1.055351168495134,
+              "mean": 0.6601188732544269,
+              "rms": 0.7312428438725754
+            },
+            "maxPercentW": 0.07500152027395401,
+            "maxPercentH": 0.09503618418029713,
+            "curvature": {
+              "max": 62.043561049057104,
+              "min": 0.00010229179156842951,
+              "p05": 0.02249827577831939,
+              "p95": 3.7225283631586534,
+              "mean": 1.2052723354000432,
+              "rms": 4.803962725944763
+            },
+            "deltaSecond": {
+              "max": 0.000005094626404600965,
+              "min": 4.6268624286022567e-8,
+              "p05": 2.359005357525127e-7,
+              "p95": 0.000002367432063083484,
+              "mean": 0.0000010581810135326532,
+              "rms": 0.000001265327550143003
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 1.0106745171735725,
+              "min": 0.97110465974358,
+              "p05": 0.9968845176777845,
+              "p95": 1.005899990259748,
+              "mean": 0.9999740318429824,
+              "rms": 0.9999810413576118
+            },
+            "minJacobian": 0.97110465974358,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0029283730571634,
+              "min": 0.9664365681207611,
+              "p05": 0.9930622627872756,
+              "p95": 1.0001819605595952,
+              "mean": 0.9982684783462985,
+              "rms": 0.9982752713605619
+            },
+            "singularMax": {
+              "max": 1.0142631334562127,
+              "min": 0.9941193831911059,
+              "p05": 1.0000059115441695,
+              "p95": 1.0080439444690188,
+              "mean": 1.0017122197736126,
+              "rms": 1.0017161148396079
+            }
+          },
+          "addedSagHessian": {
+            "count": 441,
+            "max": 1.3245747434236643,
+            "min": 0.06732282897329493,
+            "p05": 0.2322237509210495,
+            "p95": 1.1309105018633334,
+            "mean": 0.522875048368604,
+            "rms": 0.5912114433351138
+          },
+          "grid": {
+            "finite": true,
+            "maxDisplacement": 0.020621618337070647,
+            "maxXY": 0.0014168991013442068,
+            "maxZ": 0.02061703188237031,
+            "maxVelocity": 0.000055353690263308734,
+            "maxStrain": 0.015951884727352317,
+            "meanStrain": 0.0007840068548824875,
+            "boundaryError": 0,
+            "steps": 3902,
+            "nodes": 2665,
+            "edges": 10344,
+            "bends": 5118,
+            "amount": 1,
+            "iterations": 6,
+            "stretchCompliance": 2e-7,
+            "bendCompliance": 0.00008,
+            "active": true
+          }
+        },
+        {
+          "hit": [
+            0.55,
+            0.5
+          ],
+          "canvas": [
+            1440,
+            900
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 1.6275923874179865,
+              "min": 0,
+              "p05": 0.018584192352510964,
+              "p95": 1.5995824518140633,
+              "mean": 0.7467214013653933,
+              "rms": 0.9505899847105569
+            },
+            "dyPx": {
+              "max": 2.1647095085935653,
+              "min": 0,
+              "p05": 0.017545715658773275,
+              "p95": 2.09847929739298,
+              "mean": 0.8562085177606946,
+              "rms": 1.1512158397324306
+            },
+            "movementPx": {
+              "max": 2.4580705924462567,
+              "min": 0,
+              "p05": 0.0662013631348843,
+              "p95": 2.4295230416145905,
+              "mean": 1.2781933799884353,
+              "rms": 1.4929565394487752
+            },
+            "maxPercentW": 0.11302724912624906,
+            "maxPercentH": 0.24052327873261836,
+            "curvature": {
+              "max": 62.468379831569166,
+              "min": 0.0013077987888381667,
+              "p05": 0.029852268318128403,
+              "p95": 3.7198634161221795,
+              "mean": 1.207163742167238,
+              "rms": 4.8204889161736295
+            },
+            "deltaSecond": {
+              "max": 0.000012260468496534739,
+              "min": 2.26487457068774e-8,
+              "p05": 1.2878542953610544e-7,
+              "p95": 0.000006224232999127136,
+              "mean": 0.000001561879469532989,
+              "rms": 0.000002530393426149219
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 1.027040591298144,
+              "min": 0.9580763303385925,
+              "p05": 0.9891579830625324,
+              "p95": 1.0127928999793419,
+              "mean": 0.999964962045447,
+              "rms": 0.9999898155865017
+            },
+            "minJacobian": 0.9580763303385925,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0031834494725274,
+              "min": 0.958586115799799,
+              "p05": 0.98632092128827,
+              "p95": 0.9999682062634102,
+              "mean": 0.997441520043453,
+              "rms": 0.9974551007811188
+            },
+            "singularMax": {
+              "max": 1.0305811067334434,
+              "min": 0.9941589934999232,
+              "p05": 0.9998774346746163,
+              "p95": 1.0148225047118669,
+              "mean": 1.0025317676034704,
+              "rms": 1.002544918714978
+            }
+          },
+          "addedSagHessian": {
+            "count": 441,
+            "max": 2.6609250930401216,
+            "min": 0.06828697344478607,
+            "p05": 0.6007122976384114,
+            "p95": 2.2399735263347065,
+            "mean": 1.407193874967253,
+            "rms": 1.5022040127321215
+          },
+          "grid": {
+            "finite": true,
+            "maxDisplacement": 0.03166752023650805,
+            "maxXY": 0.0029222979615566823,
+            "maxZ": 0.031666928102272174,
+            "maxVelocity": 0.00006978715899858016,
+            "maxStrain": 0.014096558140991311,
+            "meanStrain": 0.0009663449356033836,
+            "boundaryError": 0,
+            "steps": 5102,
+            "nodes": 2665,
+            "edges": 10344,
+            "bends": 5118,
+            "amount": 1,
+            "iterations": 6,
+            "stretchCompliance": 2e-7,
+            "bendCompliance": 0.00008,
+            "active": true
+          }
+        }
+      ]
+    },
+    "sp-smooth": {
+      "canvas": [
+        390,
+        844
+      ],
+      "ridge": {
+        "sameUV": true,
+        "dxPx": {
+          "max": 91.16431090650808,
+          "min": 0,
+          "p05": 0,
+          "p95": 88.62937242632047,
+          "mean": 23.876920883154007,
+          "rms": 39.407277447431525
+        },
+        "dyPx": {
+          "max": 74.82079713439869,
+          "min": 0,
+          "p05": 0,
+          "p95": 73.83056190009944,
+          "mean": 19.797252431807753,
+          "rms": 33.2085283933865
+        },
+        "movementPx": {
+          "max": 93.85006277595284,
+          "min": 0,
+          "p05": 0,
+          "p95": 91.25521311640456,
+          "mean": 35.30955992473172,
+          "rms": 51.53387113222918
+        },
+        "maxPercentW": 23.37546433500207,
+        "maxPercentH": 8.865023357156243,
+        "curvature": {
+          "max": 105.67510185841732,
+          "min": 0,
+          "p05": 1.7901477637061417e-12,
+          "p95": 6.576892755442176,
+          "mean": 2.265975884552039,
+          "rms": 6.616915510195909
+        },
+        "deltaSecond": {
+          "max": 0.004704850369396878,
+          "min": 0,
+          "p05": 0,
+          "p95": 0.00033031939841628524,
+          "mean": 0.0000868643270272023,
+          "rms": 0.0004213909972548659
+        }
+      },
+      "mesh": {
+        "count": 6561,
+        "jacobian": {
+          "max": 5.805852149398714,
+          "min": 0.3516030283894463,
+          "p05": 0.45599022617988455,
+          "p95": 1.4720284827775458,
+          "mean": 1.000405625471339,
+          "rms": 1.0768049422918347
+        },
+        "minJacobian": 0.3516030283894463,
+        "negative": 0,
+        "singularMin": {
+          "max": 1.063189131613711,
+          "min": 0.26045154546117616,
+          "p05": 0.483801846346802,
+          "p95": 0.9998984165302927,
+          "mean": 0.8321887824356665,
+          "rms": 0.8506214257859445
+        },
+        "singularMax": {
+          "max": 6.683744065886645,
+          "min": 0.6284737298178145,
+          "p05": 0.8743124058304986,
+          "p95": 1.7317122286845779,
+          "mean": 1.2125148522858913,
+          "rms": 1.2970371898033233
+        }
+      },
+      "addedSagHessian": {
+        "count": 441,
+        "max": 3.278871679006105,
+        "min": 0.15597085202216396,
+        "p05": 0.3273852270784056,
+        "p95": 2.189160037209072,
+        "mean": 0.8309885990327892,
+        "rms": 1.0477185333121775
+      },
+      "grid": null,
+      "additionalHits": [
+        {
+          "hit": [
+            0.2,
+            0.3
+          ],
+          "canvas": [
+            390,
+            844
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 87.19947158006774,
+              "min": 0,
+              "p05": 0,
+              "p95": 86.1067198826155,
+              "mean": 26.417092972241484,
+              "rms": 42.91948583255552
+            },
+            "dyPx": {
+              "max": 63.030367067140936,
+              "min": 0,
+              "p05": 0,
+              "p95": 61.70739728449068,
+              "mean": 16.85578025631701,
+              "rms": 28.52033398982959
+            },
+            "movementPx": {
+              "max": 106.96763517614778,
+              "min": 0,
+              "p05": 0,
+              "p95": 105.41273815812096,
+              "mean": 31.686960706705676,
+              "rms": 51.531463350290785
+            },
+            "maxPercentW": 22.358838866684035,
+            "maxPercentH": 7.468052970040395,
+            "curvature": {
+              "max": 105.67510185841732,
+              "min": 0,
+              "p05": 1.7901477637061417e-12,
+              "p95": 5.901667714938908,
+              "mean": 1.5724559148929786,
+              "rms": 6.214208034659984
+            },
+            "deltaSecond": {
+              "max": 0.0007601441429482518,
+              "min": 0,
+              "p05": 0,
+              "p95": 0.00024397309628452398,
+              "mean": 0.000033713009189201436,
+              "rms": 0.00010520453394646764
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 4.847597578498175,
+              "min": 0.43279715329731666,
+              "p05": 0.562950123529352,
+              "p95": 1.3801798942358432,
+              "mean": 1.0000959455658673,
+              "rms": 1.050833456917897
+            },
+            "minJacobian": 0.43279715329731666,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0109248129264239,
+              "min": 0.4221567561422935,
+              "p05": 0.5528556350912989,
+              "p95": 0.999961966981404,
+              "mean": 0.8663858865530093,
+              "rms": 0.8805906121654998
+            },
+            "singularMax": {
+              "max": 6.531100161542778,
+              "min": 0.8138503201631828,
+              "p05": 0.9892998223468868,
+              "p95": 1.6286947710033055,
+              "mean": 1.1672198336333133,
+              "rms": 1.2309266873189981
+            }
+          },
+          "addedSagHessian": {
+            "count": 378,
+            "max": 108.17471985357297,
+            "min": 0.16252556726098338,
+            "p05": 0.29339854813820737,
+            "p95": 75.8492173664213,
+            "mean": 10.351110274937495,
+            "rms": 26.971614758942085
+          },
+          "grid": null
+        },
+        {
+          "hit": [
+            0.75,
+            0.65
+          ],
+          "canvas": [
+            390,
+            844
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 81.02817222154607,
+              "min": 0,
+              "p05": 0,
+              "p95": 79.82518321721521,
+              "mean": 21.515027898236657,
+              "rms": 36.51335655493864
+            },
+            "dyPx": {
+              "max": 72.13189112418216,
+              "min": 0,
+              "p05": 0,
+              "p95": 71.10038733741871,
+              "mean": 20.00454337238834,
+              "rms": 34.09585882257342
+            },
+            "movementPx": {
+              "max": 108.15571060885577,
+              "min": 0,
+              "p05": 0,
+              "p95": 106.57312506534753,
+              "mean": 29.97236092027688,
+              "rms": 49.95750990348637
+            },
+            "maxPercentW": 20.776454415781043,
+            "maxPercentH": 8.546432597651915,
+            "curvature": {
+              "max": 105.67510185841732,
+              "min": 0,
+              "p05": 1.7901477637061417e-12,
+              "p95": 6.205516883822967,
+              "mean": 2.2623792464877006,
+              "rms": 6.411397880362097
+            },
+            "deltaSecond": {
+              "max": 0.005259385870222845,
+              "min": 0,
+              "p05": 0,
+              "p95": 0.00012247987916882153,
+              "mean": 0.00007942347599210181,
+              "rms": 0.00046090021214313204
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 5.2850437676203015,
+              "min": 0.47128820789012343,
+              "p05": 0.6172278852236596,
+              "p95": 1.3961224605985516,
+              "mean": 1.0003579602427284,
+              "rms": 1.0432296666560323
+            },
+            "minJacobian": 0.47128820789012343,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0355429947837278,
+              "min": 0.36009183195343203,
+              "p05": 0.512152105225458,
+              "p95": 0.9999253462896578,
+              "mean": 0.8593904808962001,
+              "rms": 0.8745046606234704
+            },
+            "singularMax": {
+              "max": 7.1799151792404965,
+              "min": 0.9055529189293428,
+              "p05": 0.9855772082122713,
+              "p95": 1.6509351943623916,
+              "mean": 1.185376043694894,
+              "rms": 1.2416038323413592
+            }
+          },
+          "addedSagHessian": {
+            "count": 420,
+            "max": 108.26715225515476,
+            "min": 0.0406475062639658,
+            "p05": 0.14252880300654666,
+            "p95": 66.69670077702551,
+            "mean": 8.497093112799757,
+            "rms": 23.86756964038612
+          },
+          "grid": null
+        },
+        {
+          "hit": [
+            0.55,
+            0.5
+          ],
+          "canvas": [
+            390,
+            844
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 79.44349903990154,
+              "min": 0,
+              "p05": 0,
+              "p95": 76.88520659036473,
+              "mean": 25.323489713140727,
+              "rms": 39.50127301858925
+            },
+            "dyPx": {
+              "max": 61.266003962909004,
+              "min": 0,
+              "p05": 0,
+              "p95": 60.100241285386154,
+              "mean": 18.839972831198914,
+              "rms": 29.55781087275706
+            },
+            "movementPx": {
+              "max": 94.03119475568074,
+              "min": 0,
+              "p05": 0,
+              "p95": 92.67113711315254,
+              "mean": 32.25357956310556,
+              "rms": 49.33573505765168
+            },
+            "maxPercentW": 20.370127958949112,
+            "maxPercentH": 7.259005208875474,
+            "curvature": {
+              "max": 105.67510185841732,
+              "min": 0,
+              "p05": 1.7901477637061417e-12,
+              "p95": 7.777214771030556,
+              "mean": 2.880214779709472,
+              "rms": 6.761298469016397
+            },
+            "deltaSecond": {
+              "max": 0.005457456420936356,
+              "min": 0,
+              "p05": 0,
+              "p95": 0.0003455946388254538,
+              "mean": 0.00009845019140442326,
+              "rms": 0.00048728884815003485
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 5.518500993136971,
+              "min": 0.4150192983790555,
+              "p05": 0.4955461849416581,
+              "p95": 1.4273224582559494,
+              "mean": 1.000391180066046,
+              "rms": 1.0806526740837425
+            },
+            "minJacobian": 0.4150192983790555,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0390663943028082,
+              "min": 0.3308469516332043,
+              "p05": 0.4532266201778862,
+              "p95": 0.9998814508849865,
+              "mean": 0.8267685689662945,
+              "rms": 0.8461571497153422
+            },
+            "singularMax": {
+              "max": 7.290251669944069,
+              "min": 0.876238682315595,
+              "p05": 0.969348728474898,
+              "p95": 1.7074241927293177,
+              "mean": 1.2247228470774538,
+              "rms": 1.3146973756941651
+            }
+          },
+          "addedSagHessian": {
+            "count": 441,
+            "max": 4.106812289870402,
+            "min": 0.018493323695321216,
+            "p05": 0.07213177073849722,
+            "p95": 2.470013388361938,
+            "mean": 1.1165927035880125,
+            "rms": 1.4166350165857973
+          },
+          "grid": null
+        }
+      ]
+    },
+    "sp-grid": {
+      "canvas": [
+        390,
+        844
+      ],
+      "ridge": {
+        "sameUV": true,
+        "dxPx": {
+          "max": 2.051684627470385,
+          "min": 0,
+          "p05": 0,
+          "p95": 2.0101028478117273,
+          "mean": 0.499988152722506,
+          "rms": 0.8819307782130691
+        },
+        "dyPx": {
+          "max": 2.4799667189725474,
+          "min": 0,
+          "p05": 0,
+          "p95": 2.4461669240271586,
+          "mean": 0.699154232352928,
+          "rms": 1.1619088499578247
+        },
+        "movementPx": {
+          "max": 3.1833785144384246,
+          "min": 0,
+          "p05": 0,
+          "p95": 3.124908845960551,
+          "mean": 0.8741235721879155,
+          "rms": 1.4587097288939377
+        },
+        "maxPercentW": 0.5260729814026628,
+        "maxPercentH": 0.29383491930954353,
+        "curvature": {
+          "max": 105.67510185841732,
+          "min": 0,
+          "p05": 1.7901477637061417e-12,
+          "p95": 2.7672947661370255,
+          "mean": 1.3372502006434066,
+          "rms": 5.864484732459741
+        },
+        "deltaSecond": {
+          "max": 0.000020197401016684767,
+          "min": 0,
+          "p05": 0,
+          "p95": 0.000005604030179312177,
+          "mean": 0.0000015992829032669892,
+          "rms": 0.000003147928953265675
+        }
+      },
+      "mesh": {
+        "count": 6561,
+        "jacobian": {
+          "max": 1.0390152643929194,
+          "min": 0.9448749472063244,
+          "p05": 0.975722115241777,
+          "p95": 1.023913981291098,
+          "mean": 1.0000120212540202,
+          "rms": 1.0001009941126582
+        },
+        "minJacobian": 0.9448749472063244,
+        "negative": 0,
+        "singularMin": {
+          "max": 1.0048462546784076,
+          "min": 0.9385751516086331,
+          "p05": 0.9722038114727684,
+          "p95": 1.000509918831937,
+          "mean": 0.9941647464134225,
+          "rms": 0.9942117873243104
+        },
+        "singularMax": {
+          "max": 1.044752187087578,
+          "min": 0.9930638711031886,
+          "p05": 0.9982073261275204,
+          "p95": 1.0281461367460871,
+          "mean": 1.0058812862126574,
+          "rms": 1.0059228889823586
+        }
+      },
+      "addedSagHessian": {
+        "count": 441,
+        "max": 7.972298104837439,
+        "min": 0.297810946892184,
+        "p05": 1.254604603695028,
+        "p95": 6.143593903440998,
+        "mean": 3.514876799685134,
+        "rms": 3.8837452171573656
+      },
+      "grid": {
+        "finite": true,
+        "maxDisplacement": 0.033055856485505096,
+        "maxXY": 0.003963921962109736,
+        "maxZ": 0.03305557065644715,
+        "maxVelocity": 0.000016879842032423963,
+        "maxStrain": 0.03754539848110805,
+        "meanStrain": 0.003470809866070642,
+        "boundaryError": 0,
+        "steps": 1202,
+        "nodes": 2145,
+        "edges": 8288,
+        "bends": 4094,
+        "amount": 1,
+        "iterations": 6,
+        "stretchCompliance": 2e-7,
+        "bendCompliance": 0.00008,
+        "active": true
+      },
+      "additionalHits": [
+        {
+          "hit": [
+            0.2,
+            0.3
+          ],
+          "canvas": [
+            390,
+            844
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 1.125480118885663,
+              "min": 0,
+              "p05": 0,
+              "p95": 1.1021295392936254,
+              "mean": 0.315914836279243,
+              "rms": 0.5220536999588514
+            },
+            "dyPx": {
+              "max": 0.5458030150262292,
+              "min": 0,
+              "p05": 0,
+              "p95": 0.5152208504950768,
+              "mean": 0.12508430750087507,
+              "rms": 0.21453381629487925
+            },
+            "movementPx": {
+              "max": 1.1734385607350504,
+              "min": 0,
+              "p05": 0,
+              "p95": 1.1582612669242118,
+              "mean": 0.3518975036767599,
+              "rms": 0.5644154710625598
+            },
+            "maxPercentW": 0.28858464586811866,
+            "maxPercentH": 0.0646686036760935,
+            "curvature": {
+              "max": 105.67510185841732,
+              "min": 0,
+              "p05": 1.7901477637061417e-12,
+              "p95": 2.7672947661370255,
+              "mean": 1.3657027429575694,
+              "rms": 5.867638862261246
+            },
+            "deltaSecond": {
+              "max": 0.000030062030233298017,
+              "min": 0,
+              "p05": 0,
+              "p95": 0.000005151491477039707,
+              "mean": 0.0000015412241197739034,
+              "rms": 0.000004362741303085583
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 1.027975459002036,
+              "min": 0.9568727362031763,
+              "p05": 0.9838705145603379,
+              "p95": 1.0125498414909675,
+              "mean": 1.0000073204335784,
+              "rms": 1.0000415672156073
+            },
+            "minJacobian": 0.9568727362031763,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0052662140974957,
+              "min": 0.9540450513851267,
+              "p05": 0.9790632468179977,
+              "p95": 1.0017179229985362,
+              "mean": 0.9963331806496225,
+              "rms": 0.9963599766150166
+            },
+            "singularMax": {
+              "max": 1.0585872837287114,
+              "min": 0.9930178227008385,
+              "p05": 1.0000378469052438,
+              "p95": 1.0136079187971287,
+              "mean": 1.0036928895211632,
+              "rms": 1.0037054508681726
+            }
+          },
+          "addedSagHessian": {
+            "count": 378,
+            "max": 11.997795289381202,
+            "min": 0.45870567063914924,
+            "p05": 0.8673368058261821,
+            "p95": 5.61064122736057,
+            "mean": 2.4120836848333864,
+            "rms": 2.882600992837947
+          },
+          "grid": {
+            "finite": true,
+            "maxDisplacement": 0.01691954529012414,
+            "maxXY": 0.0015604643192024307,
+            "maxZ": 0.01690037113638332,
+            "maxVelocity": 0.000015641222793606282,
+            "maxStrain": 0.04980540624727148,
+            "meanStrain": 0.0021093851359147943,
+            "boundaryError": 0,
+            "steps": 2702,
+            "nodes": 2145,
+            "edges": 8288,
+            "bends": 4094,
+            "amount": 1,
+            "iterations": 6,
+            "stretchCompliance": 2e-7,
+            "bendCompliance": 0.00008,
+            "active": true
+          }
+        },
+        {
+          "hit": [
+            0.75,
+            0.65
+          ],
+          "canvas": [
+            390,
+            844
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 1.0110692566009325,
+              "min": 0,
+              "p05": 0,
+              "p95": 0.9541956048448492,
+              "mean": 0.25423808479936605,
+              "rms": 0.42176277297866327
+            },
+            "dyPx": {
+              "max": 2.0223092232452795,
+              "min": 0,
+              "p05": 0,
+              "p95": 1.9841135941541956,
+              "mean": 0.5805538424767807,
+              "rms": 0.9460214682527216
+            },
+            "movementPx": {
+              "max": 2.2605324370725453,
+              "min": 0,
+              "p05": 0,
+              "p95": 2.2021197398098242,
+              "mean": 0.6680522354431293,
+              "rms": 1.0357801190724245
+            },
+            "maxPercentW": 0.25924852733357245,
+            "maxPercentH": 0.2396100975409099,
+            "curvature": {
+              "max": 105.67510185841732,
+              "min": 0,
+              "p05": 1.7901477637061417e-12,
+              "p95": 2.7672947661370255,
+              "mean": 1.3539216417690698,
+              "rms": 5.8704499849397465
+            },
+            "deltaSecond": {
+              "max": 0.000017809364866703906,
+              "min": 0,
+              "p05": 0,
+              "p95": 0.0000063260557765493965,
+              "mean": 0.000001520215937480952,
+              "rms": 0.000002825884841200974
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 1.040260688721054,
+              "min": 0.9163010422599194,
+              "p05": 0.9760742247994993,
+              "p95": 1.0149319844012885,
+              "mean": 0.9999802574381745,
+              "rms": 1.0000692641978395
+            },
+            "minJacobian": 0.9163010422599194,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0026754233496618,
+              "min": 0.9110005403792159,
+              "p05": 0.9717114048249947,
+              "p95": 1.0000191484069123,
+              "mean": 0.99475941704729,
+              "rms": 0.9948290704226734
+            },
+            "singularMax": {
+              "max": 1.0484297412943013,
+              "min": 0.9866503451457801,
+              "p05": 0.999924204411784,
+              "p95": 1.0191805822603466,
+              "mean": 1.0052500164771556,
+              "rms": 1.0052710833400487
+            }
+          },
+          "addedSagHessian": {
+            "count": 420,
+            "max": 9.334515172378417,
+            "min": 0.4401521887783641,
+            "p05": 0.9632337212258173,
+            "p95": 7.30043937313681,
+            "mean": 2.7020454138860335,
+            "rms": 3.2670163303063777
+          },
+          "grid": {
+            "finite": true,
+            "maxDisplacement": 0.020989361368600693,
+            "maxXY": 0.002978047737928067,
+            "maxZ": 0.020897560729478168,
+            "maxVelocity": 0.000011146356296343731,
+            "maxStrain": 0.05026958111866642,
+            "meanStrain": 0.002577737885451502,
+            "boundaryError": 0,
+            "steps": 3902,
+            "nodes": 2145,
+            "edges": 8288,
+            "bends": 4094,
+            "amount": 1,
+            "iterations": 6,
+            "stretchCompliance": 2e-7,
+            "bendCompliance": 0.00008,
+            "active": true
+          }
+        },
+        {
+          "hit": [
+            0.55,
+            0.5
+          ],
+          "canvas": [
+            390,
+            844
+          ],
+          "ridge": {
+            "sameUV": true,
+            "dxPx": {
+              "max": 1.4641813648051825,
+              "min": 0,
+              "p05": 0,
+              "p95": 1.4025381759167426,
+              "mean": 0.3503813750087454,
+              "rms": 0.5896549141848769
+            },
+            "dyPx": {
+              "max": 1.9916688027727212,
+              "min": 0,
+              "p05": 0,
+              "p95": 1.9630621502828416,
+              "mean": 0.5776598437402876,
+              "rms": 0.9496625671988375
+            },
+            "movementPx": {
+              "max": 2.4224143358150205,
+              "min": 0,
+              "p05": 0,
+              "p95": 2.354309777700764,
+              "mean": 0.6948791744991069,
+              "rms": 1.1178335785621496
+            },
+            "maxPercentW": 0.375431119180816,
+            "maxPercentH": 0.2359797159683319,
+            "curvature": {
+              "max": 105.67510185841732,
+              "min": 0,
+              "p05": 1.7901477637061417e-12,
+              "p95": 2.7672947661370255,
+              "mean": 1.348349057658133,
+              "rms": 5.867302888556776
+            },
+            "deltaSecond": {
+              "max": 0.000027267792947323083,
+              "min": 0,
+              "p05": 0,
+              "p95": 0.000006878969357310067,
+              "mean": 0.0000020157703684720764,
+              "rms": 0.000003893680258208805
+            }
+          },
+          "mesh": {
+            "count": 6561,
+            "jacobian": {
+              "max": 1.0442070024892451,
+              "min": 0.9107008628551493,
+              "p05": 0.9794385223904358,
+              "p95": 1.0196652616704815,
+              "mean": 0.9999790152352221,
+              "rms": 1.0000759059384101
+            },
+            "minJacobian": 0.9107008628551493,
+            "negative": 0,
+            "singularMin": {
+              "max": 1.0038111134403322,
+              "min": 0.9069406665976317,
+              "p05": 0.9738422575669872,
+              "p95": 1.0013052179668895,
+              "mean": 0.9939352584952583,
+              "rms": 0.9940058815688617
+            },
+            "singularMax": {
+              "max": 1.055746025877705,
+              "min": 0.9929139299458307,
+              "p05": 0.9998121253880409,
+              "p95": 1.0249045113271138,
+              "mean": 1.0060910170577964,
+              "rms": 1.0061276042281835
+            }
+          },
+          "addedSagHessian": {
+            "count": 441,
+            "max": 4.376176233406333,
+            "min": 0.28947779636393234,
+            "p05": 0.9685920442062584,
+            "p95": 3.754689919350198,
+            "mean": 1.9793927579318253,
+            "rms": 2.1563144203454514
+          },
+          "grid": {
+            "finite": true,
+            "maxDisplacement": 0.02722378948093915,
+            "maxXY": 0.003216554619329623,
+            "maxZ": 0.027216321139142255,
+            "maxVelocity": 0.000013149351835430818,
+            "maxStrain": 0.03918810181354182,
+            "meanStrain": 0.003315293595131703,
+            "boundaryError": 0,
+            "steps": 5102,
+            "nodes": 2145,
+            "edges": 8288,
+            "bends": 4094,
+            "amount": 1,
+            "iterations": 6,
+            "stretchCompliance": 2e-7,
+            "bendCompliance": 0.00008,
+            "active": true
+          }
+        }
+      ]
+    },
+    "pc-comparison": {
+      "curvatureRatio": {
+        "max": 2.294965952077442,
+        "p95": 1.1765953539569889,
+        "rms": 1.8894200630122258
+      },
+      "deltaSecondRatio": {
+        "max": 0.048028926044927006,
+        "rms": 0.044613240283965856
+      }
+    },
+    "sp-comparison": {
+      "curvatureRatio": {
+        "max": 1,
+        "p95": 0.4207602083593615,
+        "rms": 0.8862867786997192
+      },
+      "deltaSecondRatio": {
+        "max": 0.004292889131620546,
+        "rms": 0.007470327970395018
+      }
+    }
+  },
+  "definitions": {
+    "curvature": "501 identical reference ridge UV samples, projected coordinates x=screenX*(W/H), y=screenY, central difference |x'y''-y'x''|/(x'^2+y'^2)^(3/2); units 1/screen-height; all 499 interior samples, without cropping; Grid is settled to load=1 before both static and loaded ridge traces.",
+    "deltaSecond": "Central second differences of loaded minus rest projected XY; Euclidean norm, screen-height units per index squared; 499 interior samples",
+    "jacobian": "81x81 grid of reference screen UV coordinates x,y in [.02,.98]; physical XY=[sample.x*W/H,(sample.y-.5)/scaleY+.5]. Finite difference epsilon=.0001 screen-height. Singular values dimensionless.",
+    "hessian": "Added sag sample(loaded).z-sample(rest).z; physical XY derivatives using epsilon=.001 screen-height; contact neighbourhood |x-hitX|<=.12, |y-hitY|<=.12. Frobenius Hessian norm, sag units /screen-height squared."
+  },
+  "started": "2026-10-09T06:21:43.536Z",
+  "performance": {
+    "pc-smooth": {
+      "recoveryMs": 1588,
+      "totalMs": 4920,
+      "loadedSnapshot": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 1,
+          "glow": 0.9993214927242192,
+          "mode": "B",
+          "target": 1,
+          "age": 2.3998000000000004,
+          "preset": "smooth",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 0
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": null,
+        "stats": {
+          "draws": 438,
+          "cpuMs": 18.90000000083819,
+          "maxCpuMs": 1.1000000000931323,
+          "solverFrames": 0,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 430,
+          "frameMs": 2402.4,
+          "releases": 2,
+          "lastRelease": "comparison start",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 435,
+        "destroyed": false
+      },
+      "restoredSnapshot": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 0,
+          "glow": 0.000985428207883093,
+          "mode": "B",
+          "target": 0,
+          "age": 0,
+          "preset": "smooth",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 0
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": null,
+        "stats": {
+          "draws": 725,
+          "cpuMs": 28.199999999953434,
+          "maxCpuMs": 1.1000000000931323,
+          "solverFrames": 0,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 717,
+          "frameMs": 3991.7000000000003,
+          "releases": 3,
+          "lastRelease": "comparison end",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 1008,
+        "destroyed": false
+      },
+      "drawCount": 718,
+      "meanSubmitCpuMs": 0.03579387186623041,
+      "meanAnimationIntervalMs": 5.567224546722455,
+      "note": "Browser real-time recording. CPU dt capped 1/30; low FPS can slow simulation in wall time. Submit CPU does not measure GPU.",
+      "video": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "format": {
+          "duration": "6.280000"
+        }
+      },
+      "releaseMeanSolverCpuMs": null,
+      "maxSolverCpuMs": 0,
+      "cpuGpuAgreement": {
+        "verified": "CPU/GPU both map reference UV through same bicubic Catmull-Rom weights and convert displacement by aspect and scaleY",
+        "limitation": "GPU render readback positions/derivatives were not directly measured; no GPU timing claim"
+      }
+    },
+    "pc-grid": {
+      "recoveryMs": 3382,
+      "totalMs": 6707,
+      "loadedSnapshot": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 1,
+          "glow": 0.9993307164833757,
+          "mode": "B",
+          "target": 1,
+          "age": 2.4062999999999533,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0.041957555423707216,
+          "maxXY": 0.0029516169024475757,
+          "maxZ": 0.04195719492099807,
+          "maxVelocity": 0.00005644335813133922,
+          "maxStrain": 0.010216934052349913,
+          "meanStrain": 0.0010950015336274762,
+          "boundaryError": 0,
+          "steps": 291,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": true
+        },
+        "stats": {
+          "draws": 439,
+          "cpuMs": 22.899999999906868,
+          "maxCpuMs": 1.1000000000931323,
+          "solverFrames": 434,
+          "solverMs": 1125.3999999994412,
+          "maxSolverMs": 14.899999999906868,
+          "frames": 430,
+          "frameMs": 2409,
+          "releases": 2,
+          "lastRelease": "comparison start",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 436,
+        "destroyed": false
+      },
+      "restoredSnapshot": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "B",
+          "target": 0,
+          "age": 0,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "frame": {
+          "portrait": false,
+          "aspect": 1.75,
+          "scaleY": 1.09375,
+          "controls": [
+            [
+              0,
+              0.19
+            ],
+            [
+              0.25,
+              0.49
+            ],
+            [
+              0.5,
+              0.68
+            ],
+            [
+              0.75,
+              0.82
+            ],
+            [
+              1,
+              0.95
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          1440,
+          900
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0,
+          "maxXY": 0,
+          "maxZ": 0,
+          "maxVelocity": 0,
+          "maxStrain": 4.440892098500626e-16,
+          "meanStrain": 6.971092947544849e-17,
+          "boundaryError": 0,
+          "steps": 696,
+          "nodes": 2665,
+          "edges": 10344,
+          "bends": 5118,
+          "amount": 0,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": false
+        },
+        "stats": {
+          "draws": 1053,
+          "cpuMs": 49.700000000884756,
+          "maxCpuMs": 1.1000000000931323,
+          "solverFrames": 1048,
+          "solverMs": 2883.0999999993946,
+          "maxSolverMs": 14.899999999906868,
+          "frames": 1044,
+          "frameMs": 5785.4,
+          "releases": 3,
+          "lastRelease": "comparison end",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      },
+      "drawCount": 1045,
+      "meanSubmitCpuMs": 0.04535885167544324,
+      "meanAnimationIntervalMs": 5.541570881226053,
+      "note": "Browser real-time recording. CPU dt capped 1/30; low FPS can slow simulation in wall time. Submit CPU does not measure GPU.",
+      "video": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "format": {
+          "duration": "8.200000"
+        }
+      },
+      "releaseMeanSolverCpuMs": 2.8627035830618133,
+      "maxSolverCpuMs": 14.899999999906868,
+      "cpuGpuAgreement": {
+        "verified": "CPU/GPU both map reference UV through same bicubic Catmull-Rom weights and convert displacement by aspect and scaleY",
+        "limitation": "GPU render readback positions/derivatives were not directly measured; no GPU timing claim"
+      }
+    },
+    "sp-smooth": {
+      "recoveryMs": 1589,
+      "totalMs": 4922,
+      "loadedSnapshot": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 1,
+          "glow": 0.9993350417517485,
+          "mode": "B",
+          "target": 1,
+          "age": 2.4064999999998604,
+          "preset": "smooth",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 0
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": null,
+        "stats": {
+          "draws": 445,
+          "cpuMs": 10.399999999208376,
+          "maxCpuMs": 1,
+          "solverFrames": 0,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 436,
+          "frameMs": 2409.6000000000004,
+          "releases": 2,
+          "lastRelease": "comparison start",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 442,
+        "destroyed": false
+      },
+      "restoredSnapshot": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 0,
+          "glow": 0.0009666640062941545,
+          "mode": "B",
+          "target": 0,
+          "age": 0,
+          "preset": "smooth",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 0
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": null,
+        "stats": {
+          "draws": 733,
+          "cpuMs": 16.300000000512227,
+          "maxCpuMs": 1,
+          "solverFrames": 0,
+          "solverMs": 0,
+          "maxSolverMs": 0,
+          "frames": 724,
+          "frameMs": 3997.3000000000006,
+          "releases": 3,
+          "lastRelease": "comparison end",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 1018,
+        "destroyed": false
+      },
+      "drawCount": 725,
+      "meanSubmitCpuMs": 0.01986206896635222,
+      "meanAnimationIntervalMs": 5.521132596685084,
+      "note": "Browser real-time recording. CPU dt capped 1/30; low FPS can slow simulation in wall time. Submit CPU does not measure GPU.",
+      "video": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "format": {
+          "duration": "6.040000"
+        }
+      },
+      "releaseMeanSolverCpuMs": null,
+      "maxSolverCpuMs": 0,
+      "cpuGpuAgreement": {
+        "verified": "CPU/GPU both map reference UV through same bicubic Catmull-Rom weights and convert displacement by aspect and scaleY",
+        "limitation": "GPU render readback positions/derivatives were not directly measured; no GPU timing claim"
+      }
+    },
+    "sp-grid": {
+      "recoveryMs": 2242,
+      "totalMs": 5565,
+      "loadedSnapshot": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 1,
+          "glow": 0.9993173857279791,
+          "mode": "B",
+          "target": 1,
+          "age": 2.399100000000047,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0.03305448543156629,
+          "maxXY": 0.003963747390814757,
+          "maxZ": 0.033054199084162045,
+          "maxVelocity": 0.000023806924565911263,
+          "maxStrain": 0.03754282788822527,
+          "meanStrain": 0.003470566860417163,
+          "boundaryError": 0,
+          "steps": 289,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 1,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": true
+        },
+        "stats": {
+          "draws": 442,
+          "cpuMs": 15.699999998090789,
+          "maxCpuMs": 0.8999999999068677,
+          "solverFrames": 437,
+          "solverMs": 846.3999999985099,
+          "maxSolverMs": 13.100000000093132,
+          "frames": 434,
+          "frameMs": 2399.1,
+          "releases": 2,
+          "lastRelease": "comparison start",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 439,
+        "destroyed": false
+      },
+      "restoredSnapshot": {
+        "state": {
+          "hit": [
+            0.42,
+            0.55
+          ],
+          "amount": 0,
+          "glow": 0,
+          "mode": "B",
+          "target": 0,
+          "age": 0,
+          "preset": "grid",
+          "quality": "full",
+          "lightEnabled": false
+        },
+        "settings": {
+          "depth": 0.045,
+          "range": 0.44,
+          "ratio": 2.1,
+          "response": 22,
+          "restore": 4.8,
+          "amber": 0.26,
+          "transmission": 0.3,
+          "tension": 0,
+          "opticalGain": 2.4,
+          "lightDelay": 0.12,
+          "glowResponse": 3.2,
+          "pull": 0.46,
+          "spread": 0.62,
+          "bend": 0.048,
+          "smooth": 1,
+          "curvature": 0.14,
+          "compression": 0.15,
+          "grid": 1
+        },
+        "frame": {
+          "portrait": true,
+          "aspect": 0.5714285714285714,
+          "scaleY": 1.2366300366300367,
+          "controls": [
+            [
+              0,
+              -0.34
+            ],
+            [
+              0.25,
+              0.19
+            ],
+            [
+              0.5,
+              0.64
+            ],
+            [
+              0.75,
+              0.94
+            ],
+            [
+              1,
+              1.1
+            ]
+          ]
+        },
+        "renderer": "webgl2",
+        "canvas": [
+          390,
+          844
+        ],
+        "mesh": {
+          "vertices": 49601,
+          "triangles": 98304,
+          "bufferBytes": 986632
+        },
+        "grid": {
+          "finite": true,
+          "maxDisplacement": 0,
+          "maxXY": 0,
+          "maxZ": 0,
+          "maxVelocity": 0,
+          "maxStrain": 2.220446049250313e-16,
+          "meanStrain": 2.4821950586756938e-17,
+          "boundaryError": 0,
+          "steps": 558,
+          "nodes": 2145,
+          "edges": 8288,
+          "bends": 4094,
+          "amount": 0,
+          "iterations": 6,
+          "stretchCompliance": 2e-7,
+          "bendCompliance": 0.00008,
+          "active": false
+        },
+        "stats": {
+          "draws": 855,
+          "cpuMs": 27.29999999841675,
+          "maxCpuMs": 0.8999999999068677,
+          "solverFrames": 850,
+          "solverMs": 1656.1999999983236,
+          "maxSolverMs": 13.100000000093132,
+          "frames": 847,
+          "frameMs": 4637.799999999999,
+          "releases": 3,
+          "lastRelease": "comparison end",
+          "restoreCount": 0,
+          "error": null
+        },
+        "raf": 0,
+        "destroyed": false
+      },
+      "drawCount": 848,
+      "meanSubmitCpuMs": 0.02983490565851032,
+      "meanAnimationIntervalMs": 5.475560802833529,
+      "note": "Browser real-time recording. CPU dt capped 1/30; low FPS can slow simulation in wall time. Submit CPU does not measure GPU.",
+      "video": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "format": {
+          "duration": "6.560000"
+        }
+      },
+      "releaseMeanSolverCpuMs": 1.9607748184014862,
+      "maxSolverCpuMs": 13.100000000093132,
+      "cpuGpuAgreement": {
+        "verified": "CPU/GPU both map reference UV through same bicubic Catmull-Rom weights and convert displacement by aspect and scaleY",
+        "limitation": "GPU render readback positions/derivatives were not directly measured; no GPU timing claim"
+      }
+    }
+  },
+  "fatal": null,
+  "finished": "2026-10-09T06:25:19.749Z",
+  "summary": {
+    "pass": 70,
+    "fail": 0
+  }
+}

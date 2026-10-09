@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "generatedAt": "2026-10-09T06:18:34.864Z",
+  "cases": [
+    {
+      "name": "pc",
+      "settleMS": 863.2360000000001,
+      "stepMS": 5.9954166666666655,
+      "loaded": {
+        "finite": true,
+        "maxDisplacement": 0.0225028703655829,
+        "maxXY": 0.001655892534541218,
+        "maxZ": 0.02249553502145509,
+        "maxVelocity": 0.00007533964921974305,
+        "maxStrain": 0.013141991903724337,
+        "meanStrain": 0.0008520181477308029,
+        "boundaryError": 0,
+        "steps": 300,
+        "nodes": 2665,
+        "edges": 10344,
+        "bends": 5118,
+        "amount": 1,
+        "iterations": 6,
+        "stretchCompliance": 2e-7,
+        "bendCompliance": 0.00008
+      },
+      "released": {
+        "finite": true,
+        "maxDisplacement": 0,
+        "maxXY": 0,
+        "maxZ": 0,
+        "maxVelocity": 0,
+        "maxStrain": 4.440892098500626e-16,
+        "meanStrain": 7.000072086818708e-17,
+        "boundaryError": 0,
+        "steps": 972,
+        "nodes": 2665,
+        "edges": 10344,
+        "bends": 5118,
+        "amount": 0,
+        "iterations": 6,
+        "stretchCompliance": 2e-7,
+        "bendCompliance": 0.00008
+      },
+      "center": [
+        -0.0000654038184161767,
+        0.0002504048499725761,
+        -0.024198715421438217
+      ],
+      "comparisonHit": {
+        "hit": [
+          0.42,
+          0.55
+        ],
+        "maxXY": 0.0029514831559774657,
+        "maxZ": 0.04195552808504366,
+        "maxStrain": 0.010215545802605419
+      }
+    },
+    {
+      "name": "sp",
+      "settleMS": 722.9951999999998,
+      "stepMS": 4.986339999999988,
+      "loaded": {
+        "finite": true,
+        "maxDisplacement": 0.03282773492240411,
+        "maxXY": 0.004742308535020529,
+        "maxZ": 0.03250805849675539,
+        "maxVelocity": 0.00001815658360685809,
+        "maxStrain": 0.03670416495157114,
+        "meanStrain": 0.0032470165141028334,
+        "boundaryError": 0,
+        "steps": 300,
+        "nodes": 2145,
+        "edges": 8288,
+        "bends": 4094,
+        "amount": 1,
+        "iterations": 6,
+        "stretchCompliance": 2e-7,
+        "bendCompliance": 0.00008
+      },
+      "released": {
+        "finite": true,
+        "maxDisplacement": 0,
+        "maxXY": 0,
+        "maxZ": 0,
+        "maxVelocity": 0,
+        "maxStrain": 2.220446049250313e-16,
+        "meanStrain": 2.4781763942525817e-17,
+        "boundaryError": 0,
+        "steps": 918,
+        "nodes": 2145,
+        "edges": 8288,
+        "bends": 4094,
+        "amount": 0,
+        "iterations": 6,
+        "stretchCompliance": 2e-7,
+        "bendCompliance": 0.00008
+      },
+      "center": [
+        -0.0025507278483361006,
+        0.0030908646430522204,
+        -0.029792158772468567
+      ],
+      "comparisonHit": {
+        "hit": [
+          0.42,
+          0.55
+        ],
+        "maxXY": 0.003963921962109823,
+        "maxZ": 0.033055570656447,
+        "maxStrain": 0.03754539848110916
+      }
+    }
+  ]
+}
