@@ -1,0 +1,284 @@
+{
+  "events": [
+    {
+      "name": "pointerdown",
+      "duration": 24,
+      "interactionId": 4758,
+      "start": 513.8999999985099,
+      "processing": 0.30000000447034836
+    },
+    {
+      "name": "pointerup",
+      "duration": 40,
+      "interactionId": 4758,
+      "start": 1024.8999999985099,
+      "processing": 0.29999999701976776
+    },
+    {
+      "name": "click",
+      "duration": 40,
+      "interactionId": 4758,
+      "start": 1024.8999999985099,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 32,
+      "interactionId": 4765,
+      "start": 1954.8999999985099,
+      "processing": 0
+    },
+    {
+      "name": "pointerup",
+      "duration": 32,
+      "interactionId": 4765,
+      "start": 2469.10000000149,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "interactionId": 4765,
+      "start": 2469.10000000149,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 16,
+      "interactionId": 4772,
+      "start": 3351.60000000149,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "pointerup",
+      "duration": 24,
+      "interactionId": 4772,
+      "start": 3864.8000000044703,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 24,
+      "interactionId": 4772,
+      "start": 3864.8000000044703,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 24,
+      "interactionId": 4779,
+      "start": 4776.70000000298,
+      "processing": 0
+    },
+    {
+      "name": "pointerup",
+      "duration": 24,
+      "interactionId": 4779,
+      "start": 5288.80000000447,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "interactionId": 4779,
+      "start": 5288.80000000447,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 32,
+      "interactionId": 4786,
+      "start": 6175,
+      "processing": 0
+    },
+    {
+      "name": "pointerup",
+      "duration": 40,
+      "interactionId": 4786,
+      "start": 6467.80000000447,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "click",
+      "duration": 48,
+      "interactionId": 4786,
+      "start": 6467.80000000447,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 40,
+      "interactionId": 4793,
+      "start": 6919.60000000149,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "pointerup",
+      "duration": 48,
+      "interactionId": 4793,
+      "start": 7215.10000000149,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 48,
+      "interactionId": 4793,
+      "start": 7215.10000000149,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 56,
+      "interactionId": 4800,
+      "start": 7651.60000000149,
+      "processing": 0.09999999403953552
+    },
+    {
+      "name": "pointerup",
+      "duration": 40,
+      "interactionId": 4800,
+      "start": 7963,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "click",
+      "duration": 48,
+      "interactionId": 4800,
+      "start": 7963,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 48,
+      "interactionId": 4807,
+      "start": 8413.89999999851,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "pointerup",
+      "duration": 48,
+      "interactionId": 4807,
+      "start": 8725.89999999851,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "click",
+      "duration": 48,
+      "interactionId": 4807,
+      "start": 8725.89999999851,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 56,
+      "interactionId": 4814,
+      "start": 9159,
+      "processing": 0.20000000298023224
+    },
+    {
+      "name": "pointerup",
+      "duration": 48,
+      "interactionId": 4814,
+      "start": 9469.89999999851,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 48,
+      "interactionId": 4814,
+      "start": 9469.89999999851,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 48,
+      "interactionId": 4821,
+      "start": 9904.89999999851,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "pointerup",
+      "duration": 40,
+      "interactionId": 4821,
+      "start": 10213.70000000298,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 48,
+      "interactionId": 4821,
+      "start": 10213.70000000298,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 48,
+      "interactionId": 4828,
+      "start": 10666,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "pointerup",
+      "duration": 48,
+      "interactionId": 4828,
+      "start": 10977.30000000447,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "click",
+      "duration": 56,
+      "interactionId": 4828,
+      "start": 10977.30000000447,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 48,
+      "interactionId": 4835,
+      "start": 11428.39999999851,
+      "processing": 0.09999999403953552
+    },
+    {
+      "name": "pointerup",
+      "duration": 40,
+      "interactionId": 4835,
+      "start": 11738.80000000447,
+      "processing": 0.09999999403953552
+    },
+    {
+      "name": "click",
+      "duration": 56,
+      "interactionId": 4835,
+      "start": 11738.80000000447,
+      "processing": 0
+    }
+  ],
+  "interactionCount": 12,
+  "eventTimingRecordedInteractions": 12,
+  "labInteractionP98Ms": 56,
+  "render": {
+    "scene": "s0-membrane",
+    "p": 0.14302640485714285,
+    "stageHeight": 844,
+    "width": 390,
+    "dpr": 1,
+    "drag": 0,
+    "stains": [
+      {
+        "x": 0.5,
+        "y": 0.4146919431279621,
+        "born": 3352.10000000149
+      }
+    ],
+    "traces": 1,
+    "strength": 0,
+    "interaction": "rest",
+    "visible": true,
+    "raf": 1341,
+    "lowQuality": false,
+    "frames": 1340,
+    "meanRenderMs": 7.1490298508041015,
+    "maxRenderMs": 39.600000001490116
+  },
+  "environment": "Chrome mobile emulation; native CDP touch, durationThreshold16ms. Laboratory EventTiming sample only; no field INP or physical phone result."
+}

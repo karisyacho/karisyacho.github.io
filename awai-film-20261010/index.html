@@ -1,49 +1,19 @@
 <!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <meta name="color-scheme" content="dark">
-  <title>あわい</title>
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="film.css">
-  <script src="film.js" defer></script>
-</head>
-<body>
-  <main class="film" aria-label="あわい、五つの場面">
-    <div class="stage">
-      <section class="scene s0" aria-label="あわい">
-        <div class="frame">
-          <picture class="photo"><source media="(orientation: portrait)" srcset="assets/s0-sp.webp"><img src="assets/s0-pc.webp" width="1659" height="948" alt="左上の光を受け、斜めの稜線が走る黒い膜" decoding="async" fetchpriority="high"></picture>
-          <div class="lettering"><h1 class="scene-title">あわい</h1></div>
-        </div>
-      </section>
-      <section class="scene s1" aria-label="助任珈琲豆店">
-        <div class="frame">
-          <picture class="photo"><source media="(orientation: portrait)" srcset="assets/s1-sp.webp"><img src="assets/s1-pc.webp" width="1659" height="948" alt="暗い空間に浮かぶ、珈琲焙煎機の縁の弧" decoding="async"></picture>
-          <div class="lettering"><h2 class="scene-title">助任珈琲豆店</h2></div>
-        </div>
-      </section>
-      <section class="scene s2" aria-label="KASANE">
-        <div class="frame">
-          <picture class="photo"><source media="(orientation: portrait)" srcset="assets/s2-sp.webp"><img src="assets/s2-pc.webp" width="1659" height="948" alt="左上から右下へ、透ける布の端が重なる" decoding="async"></picture>
-          <div class="lettering"><h2 class="scene-title">KASANE</h2></div>
-        </div>
-      </section>
-      <section class="scene s3" aria-label="AIMA">
-        <div class="frame">
-          <picture class="photo"><source media="(orientation: portrait)" srcset="assets/s3-sp.webp"><img src="assets/s3-pc.webp" width="1659" height="948" alt="グラファイト色から藍へ染まる布に、斜めの折り目が走る" decoding="async"></picture>
-          <div class="lettering"><h2 class="scene-title">AIMA</h2></div>
-        </div>
-      </section>
-      <section class="scene s4" aria-label="ここに、あなたの店の話が入ります。">
-        <div class="frame">
-          <picture class="photo"><source media="(orientation: portrait)" srcset="assets/s4-sp.webp"><img src="assets/s4-pc.webp" width="1659" height="948" alt="冒頭の黒い膜と同じ稜線を残した、白い紙" decoding="async"></picture>
-          <div class="lettering"><div class="closing-copy"><p>ここに、あなたの<span class="mobile-break"><br></span>店の話が入ります。</p><span class="contact-label">話してみる</span></div></div>
-        </div>
-      </section>
-    </div>
-  </main>
-</body>
-</html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="dark light"><title>あわい</title><link rel="icon" href="data:,"><link rel="stylesheet" href="film.css?v=interactive-20261011"><link rel="preload" as="image" href="assets/s0-sp.webp" media="(orientation:portrait)"><link rel="preload" as="image" href="assets/s0-pc.webp" media="(orientation:landscape)"><script type="module" src="film.js?v=interactive-20261011"></script></head>
+<body><script>document.documentElement.classList.add('boot');setTimeout(()=>{if(!window.awaiFilm)document.documentElement.classList.remove('boot')},5000)</script>
+<main class="film-track" id="film">
+ <section class="film-stage" tabindex="0" aria-label="あわい、五つの場面">
+  <picture class="opening-image"><source media="(orientation:portrait)" srcset="assets/s0-sp.webp"><img src="assets/s0-pc.webp" width="1659" height="948" alt="斜めの稜線を持つ黒い膜" fetchpriority="high"></picture>
+  <canvas class="film-surface" aria-hidden="true"></canvas>
+  <h1 class="film-logo">あわい</h1>
+  <div class="film-ending" hidden><p>ここに、あなたの<span class="mobile-break"><br></span>店の話が入ります。</p><a class="film-talk" href="https://www.instagram.com/shacho_kari/">話してみる</a><a class="film-archive" href="https://karisyacho.github.io/">アーカイブ</a></div>
+ </section>
+</main>
+<main class="film-reading">
+ <h1>あわい</h1><figure><picture><source media="(orientation:portrait)" srcset="assets/s0-sp.webp"><img src="assets/s0-pc.webp" alt="黒い膜" width="1659" height="948"></picture></figure>
+ <figure><picture><source media="(orientation:portrait)" srcset="assets/s1-sp.webp"><img src="assets/s1-pc.webp" alt="琥珀の光を受ける焙煎機と珈琲豆" width="1659" height="948" loading="lazy"></picture><figcaption>助任珈琲豆店</figcaption></figure>
+ <figure><picture><source media="(orientation:portrait)" srcset="assets/s2-sp.webp"><img src="assets/s2-pc.webp" alt="重なった黒い透け布" width="1659" height="948" loading="lazy"></picture><figcaption>KASANE</figcaption></figure>
+ <figure><picture><source media="(orientation:portrait)" srcset="assets/s3-sp.webp"><img src="assets/s3-pc.webp" alt="繊維に藍が染みた布" width="1659" height="948" loading="lazy"></picture><figcaption>AIMA</figcaption></figure>
+ <div class="reading-end"><picture><source media="(orientation:portrait)" srcset="assets/s4-sp.webp"><img src="assets/s4-pc.webp" alt="冒頭と同じ稜線の白い紙" width="1659" height="948" loading="lazy"></picture><div><p>ここに、あなたの店の話が入ります。</p><a href="https://www.instagram.com/shacho_kari/">話してみる</a><p><a href="https://karisyacho.github.io/">アーカイブ</a></p></div></div>
+</main>
+</body></html>

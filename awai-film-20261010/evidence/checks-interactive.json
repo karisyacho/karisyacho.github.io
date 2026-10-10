@@ -1,0 +1,5815 @@
+{
+  "at": "2026-10-10T15:23:32.414Z",
+  "url": "http://127.0.0.1:3161/",
+  "browsers": [
+    {
+      "browser": "chromium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "size": "sp",
+      "input": "native CDP touch",
+      "errors": [],
+      "centers": [
+        {
+          "id": "s0-membrane",
+          "snapshot": {
+            "scene": "s0-membrane",
+            "p": 0.500169262,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 3,
+            "meanRenderMs": 16,
+            "maxRenderMs": 38,
+            "scrollY": 591
+          },
+          "image": "chromium-sp-center-s0-membrane.jpg"
+        },
+        {
+          "id": "seam-01",
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.5003949446666667,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 4,
+            "meanRenderMs": 14.025000000372529,
+            "maxRenderMs": 40.79999999701977,
+            "scrollY": 1435
+          },
+          "image": "chromium-sp-center-seam-01.jpg"
+        },
+        {
+          "id": "s1-suketo",
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.49978457563636364,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 5,
+            "meanRenderMs": 11.220000000298024,
+            "maxRenderMs": 40.79999999701977,
+            "scrollY": 2616
+          },
+          "image": "chromium-sp-center-s1-suketo.jpg"
+        },
+        {
+          "id": "seam-12",
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 6,
+            "meanRenderMs": 12.400000000993412,
+            "maxRenderMs": 40.79999999701977,
+            "scrollY": 3798
+          },
+          "image": "chromium-sp-center-seam-12.jpg"
+        },
+        {
+          "id": "s2-kasane",
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 7,
+            "meanRenderMs": 10.642857143921512,
+            "maxRenderMs": 40.79999999701977,
+            "scrollY": 5064
+          },
+          "image": "chromium-sp-center-s2-kasane.jpg"
+        },
+        {
+          "id": "seam-23",
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 8,
+            "meanRenderMs": 9.325000001117587,
+            "maxRenderMs": 40.79999999701977,
+            "scrollY": 6330
+          },
+          "image": "chromium-sp-center-seam-23.jpg"
+        },
+        {
+          "id": "s3-aima",
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 9,
+            "meanRenderMs": 12.177777778771189,
+            "maxRenderMs": 40.79999999701977,
+            "scrollY": 7596
+          },
+          "image": "chromium-sp-center-s3-aima.jpg"
+        },
+        {
+          "id": "seam-34",
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 10,
+            "meanRenderMs": 13.490000000596046,
+            "maxRenderMs": 40.79999999701977,
+            "scrollY": 8862
+          },
+          "image": "chromium-sp-center-seam-34.jpg"
+        },
+        {
+          "id": "s4-paper",
+          "snapshot": {
+            "scene": "s4-paper",
+            "p": 0.4997037915000007,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 4,
+            "meanRenderMs": 17.22499999962747,
+            "maxRenderMs": 38,
+            "scrollY": 9790
+          },
+          "image": "chromium-sp-center-s4-paper.jpg"
+        }
+      ],
+      "interactions": [
+        {
+          "scene": "s0-membrane",
+          "before": {
+            "scene": "s0-membrane",
+            "p": 0.500169262,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 21,
+            "meanRenderMs": 7.914285714072841,
+            "maxRenderMs": 38,
+            "scrollY": 591
+          },
+          "beforeImage": "chromium-sp-s0-membrane-before.jpg",
+          "during": {
+            "scene": "s0-membrane",
+            "p": 0.500169262,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 1,
+            "interaction": "thin",
+            "visible": true,
+            "raf": 291,
+            "lowQuality": false,
+            "frames": 290,
+            "meanRenderMs": 9.815862068867895,
+            "maxRenderMs": 38,
+            "scrollY": 591
+          },
+          "duringImage": "chromium-sp-s0-membrane-during.jpg",
+          "after500": {
+            "scene": "s0-membrane",
+            "p": 0.500169262,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 1,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 348,
+            "lowQuality": false,
+            "frames": 347,
+            "meanRenderMs": 9.921037463959776,
+            "maxRenderMs": 38,
+            "scrollY": 591
+          },
+          "afterImage": "chromium-sp-s0-membrane-after.jpg",
+          "after1350": {
+            "scene": "s0-membrane",
+            "p": 0.500169262,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 411,
+            "meanRenderMs": 9.99270072992701,
+            "maxRenderMs": 38,
+            "scrollY": 591
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s2-kasane",
+          "before": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 167,
+            "meanRenderMs": 27.18083832337113,
+            "maxRenderMs": 126.70000000298023,
+            "scrollY": 5064
+          },
+          "beforeImage": "chromium-sp-s2-kasane-before.jpg",
+          "during": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 5.9646262557446015,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 256,
+            "lowQuality": true,
+            "frames": 255,
+            "meanRenderMs": 17.81333333329826,
+            "maxRenderMs": 126.70000000298023,
+            "scrollY": 5064
+          },
+          "duringImage": "chromium-sp-s2-kasane-during.jpg",
+          "after500": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0.7029036748560733,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 356,
+            "lowQuality": true,
+            "frames": 355,
+            "meanRenderMs": 12.810422535114704,
+            "maxRenderMs": 126.70000000298023,
+            "scrollY": 5064
+          },
+          "afterImage": "chromium-sp-s2-kasane-after.jpg",
+          "after1350": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 394,
+            "meanRenderMs": 11.546700507515862,
+            "maxRenderMs": 126.70000000298023,
+            "scrollY": 5064
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s3-aima",
+          "before": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 395,
+            "meanRenderMs": 11.526329113825948,
+            "maxRenderMs": 126.70000000298023,
+            "scrollY": 7596
+          },
+          "beforeImage": "chromium-sp-s3-aima-before.jpg",
+          "during": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.2999999963841732,
+                "born": 15852.5
+              },
+              {
+                "x": 0.4599999843499599,
+                "y": 0.31184835569553465,
+                "born": 16008
+              },
+              {
+                "x": 0.52000000782502,
+                "y": 0.32369669692776215,
+                "born": 16135
+              },
+              {
+                "x": 0.57999999217498,
+                "y": 0.33554503815998965,
+                "born": 16264.79999999702
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "dye",
+            "visible": true,
+            "raf": 532,
+            "lowQuality": true,
+            "frames": 531,
+            "meanRenderMs": 9.812241054594285,
+            "maxRenderMs": 126.70000000298023,
+            "scrollY": 7596
+          },
+          "duringImage": "chromium-sp-s3-aima-during.jpg",
+          "after500": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.2999999963841732,
+                "born": 15852.5
+              },
+              {
+                "x": 0.4599999843499599,
+                "y": 0.31184835569553465,
+                "born": 16008
+              },
+              {
+                "x": 0.52000000782502,
+                "y": 0.32369669692776215,
+                "born": 16135
+              },
+              {
+                "x": 0.57999999217498,
+                "y": 0.33554503815998965,
+                "born": 16264.79999999702
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 631,
+            "lowQuality": true,
+            "frames": 630,
+            "meanRenderMs": 9.15999999999526,
+            "maxRenderMs": 126.70000000298023,
+            "scrollY": 7596
+          },
+          "afterImage": "chromium-sp-s3-aima-after.jpg",
+          "after1350": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.2999999963841732,
+                "born": 15852.5
+              },
+              {
+                "x": 0.4599999843499599,
+                "y": 0.31184835569553465,
+                "born": 16008
+              },
+              {
+                "x": 0.52000000782502,
+                "y": 0.32369669692776215,
+                "born": 16135
+              },
+              {
+                "x": 0.57999999217498,
+                "y": 0.33554503815998965,
+                "born": 16264.79999999702
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 736,
+            "meanRenderMs": 8.6845108694903,
+            "maxRenderMs": 126.70000000298023,
+            "scrollY": 7596
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s4-paper",
+          "before": {
+            "scene": "s4-paper",
+            "p": 0.4997037915000007,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 412,
+            "meanRenderMs": 9.980825242722066,
+            "maxRenderMs": 38,
+            "scrollY": 9790
+          },
+          "beforeImage": "chromium-sp-s4-paper-before.jpg",
+          "during": {
+            "scene": "s4-paper",
+            "p": 0.4997037915000007,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 1,
+            "interaction": "thin",
+            "visible": true,
+            "raf": 917,
+            "lowQuality": false,
+            "frames": 916,
+            "meanRenderMs": 7.200327510835686,
+            "maxRenderMs": 38,
+            "scrollY": 9790
+          },
+          "duringImage": "chromium-sp-s4-paper-during.jpg",
+          "after500": {
+            "scene": "s4-paper",
+            "p": 0.4997037915000007,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 1,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 1022,
+            "lowQuality": false,
+            "frames": 1021,
+            "meanRenderMs": 6.965621939266457,
+            "maxRenderMs": 38,
+            "scrollY": 9790
+          },
+          "afterImage": "chromium-sp-s4-paper-after.jpg",
+          "after1350": {
+            "scene": "s4-paper",
+            "p": 0.4997037915000007,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 1146,
+            "meanRenderMs": 6.748691099417919,
+            "maxRenderMs": 38,
+            "scrollY": 9790
+          },
+          "reacted": true
+        }
+      ],
+      "verticalSwipes": [
+        {
+          "scene": "s0-membrane",
+          "before": {
+            "scene": "s0-membrane",
+            "p": 0.19972918078571428,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 1147,
+            "meanRenderMs": 6.746294681720083,
+            "maxRenderMs": 38,
+            "scrollY": 236
+          },
+          "maximumStrength": 0.15,
+          "after": {
+            "scene": "s0-membrane",
+            "p": 0.7261340555,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 1259,
+            "meanRenderMs": 6.633915806166978,
+            "maxRenderMs": 38,
+            "scrollY": 858
+          },
+          "scrolled": true,
+          "previewWithinLimit": true
+        },
+        {
+          "scene": "s2-kasane",
+          "before": {
+            "scene": "s2-kasane",
+            "p": 0.20477883095833344,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 1269,
+            "meanRenderMs": 6.581875492483251,
+            "maxRenderMs": 38,
+            "scrollY": 4466
+          },
+          "maximumStrength": 0,
+          "after": {
+            "scene": "s2-kasane",
+            "p": 0.5222156397916667,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 1362,
+            "meanRenderMs": 6.135682819370122,
+            "maxRenderMs": 38,
+            "scrollY": 5109
+          },
+          "scrolled": true,
+          "previewWithinLimit": true
+        },
+        {
+          "scene": "s3-aima",
+          "before": {
+            "scene": "s3-aima",
+            "p": 0.20527251183333325,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 1372,
+            "meanRenderMs": 6.121355685114895,
+            "maxRenderMs": 38,
+            "scrollY": 6999
+          },
+          "maximumStrength": 0,
+          "after": {
+            "scene": "s3-aima",
+            "p": 0.38546603475000013,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.5,
+                "y": 0.6999999855366928,
+                "born": 21084.20000000298
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 1516,
+            "lowQuality": false,
+            "frames": 1515,
+            "meanRenderMs": 6.047656765678528,
+            "maxRenderMs": 38,
+            "scrollY": 7364
+          },
+          "scrolled": true,
+          "previewWithinLimit": true
+        },
+        {
+          "scene": "s4-paper",
+          "before": {
+            "scene": "s4-paper",
+            "p": 0.19979265399999946,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.5,
+                "y": 0.6999999855366928,
+                "born": 21084.20000000298
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 1652,
+            "meanRenderMs": 5.856416464884716,
+            "maxRenderMs": 38,
+            "scrollY": 9385
+          },
+          "maximumStrength": 0.15,
+          "after": {
+            "scene": "s4-paper",
+            "p": 0.6796504739374996,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.5,
+                "y": 0.6999999855366928,
+                "born": 21084.20000000298
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 1784,
+            "meanRenderMs": 5.728867712969391,
+            "maxRenderMs": 38,
+            "scrollY": 10033
+          },
+          "scrolled": true,
+          "previewWithinLimit": true
+        }
+      ],
+      "boundaries": [
+        {
+          "vh": 139.9,
+          "snapshot": {
+            "scene": "s0-membrane",
+            "p": 0.9994922139285713,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 5,
+            "meanRenderMs": 14.979999999701977,
+            "maxRenderMs": 38,
+            "scrollY": 1181
+          }
+        },
+        {
+          "vh": 140.1,
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.000789889333333349,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 6,
+            "meanRenderMs": 13.449999999254942,
+            "maxRenderMs": 38,
+            "scrollY": 1182
+          }
+        },
+        {
+          "vh": 199.9,
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.9980252764999998,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 7,
+            "meanRenderMs": 12.114285713859967,
+            "maxRenderMs": 38,
+            "scrollY": 1687
+          }
+        },
+        {
+          "vh": 200.1,
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.0005385609545455012,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 8,
+            "meanRenderMs": 10.612499999813735,
+            "maxRenderMs": 38,
+            "scrollY": 1689
+          }
+        },
+        {
+          "vh": 419.9,
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.9995691512272726,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 9,
+            "meanRenderMs": 9.444444444444445,
+            "maxRenderMs": 38,
+            "scrollY": 3544
+          }
+        },
+        {
+          "vh": 420.1,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.002369668166666846,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 10,
+            "meanRenderMs": 10.239999999850989,
+            "maxRenderMs": 38,
+            "scrollY": 3546
+          }
+        },
+        {
+          "vh": 479.9,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.9976303318333332,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 11,
+            "meanRenderMs": 9.690909091044556,
+            "maxRenderMs": 38,
+            "scrollY": 4050
+          }
+        },
+        {
+          "vh": 480.1,
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.0003949447083333742,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 12,
+            "meanRenderMs": 8.900000000372529,
+            "maxRenderMs": 38,
+            "scrollY": 4052
+          }
+        },
+        {
+          "vh": 719.9,
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.9996050552916667,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 13,
+            "meanRenderMs": 8.2230769229623,
+            "maxRenderMs": 38,
+            "scrollY": 6076
+          }
+        },
+        {
+          "vh": 720.1,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.002369668166666846,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 14,
+            "meanRenderMs": 7.642857142857143,
+            "maxRenderMs": 38,
+            "scrollY": 6078
+          }
+        },
+        {
+          "vh": 779.9,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.9976303318333332,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 15,
+            "meanRenderMs": 7.1400000000993415,
+            "maxRenderMs": 38,
+            "scrollY": 6582
+          }
+        },
+        {
+          "vh": 780.1,
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.0003949447083333742,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 16,
+            "meanRenderMs": 9,
+            "maxRenderMs": 38,
+            "scrollY": 6584
+          }
+        },
+        {
+          "vh": 1019.9,
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.9996050552916667,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 17,
+            "meanRenderMs": 8.764705882352942,
+            "maxRenderMs": 38,
+            "scrollY": 8608
+          }
+        },
+        {
+          "vh": 1020.1,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.002369668166666846,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 18,
+            "meanRenderMs": 8.51111111127668,
+            "maxRenderMs": 38,
+            "scrollY": 8610
+          }
+        },
+        {
+          "vh": 1079.9,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.9976303318333332,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 19,
+            "meanRenderMs": 8.305263157737883,
+            "maxRenderMs": 38,
+            "scrollY": 9114
+          }
+        },
+        {
+          "vh": 1080.1,
+          "snapshot": {
+            "scene": "s4-paper",
+            "p": 0.0005924170624993508,
+            "stageHeight": 844,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 20,
+            "meanRenderMs": 8.114999999850989,
+            "maxRenderMs": 38,
+            "scrollY": 9116
+          }
+        }
+      ],
+      "reverse": [
+        {
+          "scene": "s4-paper",
+          "p": 0.5056279620625006,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 920,
+          "meanRenderMs": 12.160978260992659,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 9798
+        },
+        {
+          "scene": "seam-34",
+          "p": 0.5,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 921,
+          "meanRenderMs": 12.151465798175034,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 8862
+        },
+        {
+          "scene": "s3-aima",
+          "p": 0.5,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 922,
+          "meanRenderMs": 12.143709327678097,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 7596
+        },
+        {
+          "scene": "seam-23",
+          "p": 0.5,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 923,
+          "meanRenderMs": 12.130660888538133,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 6330
+        },
+        {
+          "scene": "s2-kasane",
+          "p": 0.5,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 924,
+          "meanRenderMs": 12.117640692772929,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 5064
+        },
+        {
+          "scene": "seam-12",
+          "p": 0.5,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 925,
+          "meanRenderMs": 12.10810810823698,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 3798
+        },
+        {
+          "scene": "s1-suketo",
+          "p": 0.49978457563636364,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 926,
+          "meanRenderMs": 12.095140388891194,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 2616
+        },
+        {
+          "scene": "seam-01",
+          "p": 0.5003949446666667,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 927,
+          "meanRenderMs": 12.086299892245691,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 1435
+        },
+        {
+          "scene": "s0-membrane",
+          "p": 0.500169262,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.5,
+              "y": 0.6999999855366928,
+              "born": 22035.20000000298
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 928,
+          "meanRenderMs": 12.076616379424348,
+          "maxRenderMs": 126.10000000149012,
+          "scrollY": 591
+        }
+      ],
+      "initial": {
+        "scene": "s0-membrane",
+        "p": 0,
+        "stageHeight": 844,
+        "width": 390,
+        "dpr": 1,
+        "drag": 0,
+        "stains": [],
+        "traces": 0,
+        "strength": 0,
+        "interaction": "rest",
+        "visible": true,
+        "raf": 0,
+        "lowQuality": false,
+        "frames": 2,
+        "meanRenderMs": 22.300000000745058,
+        "maxRenderMs": 38,
+        "scrollY": 0
+      },
+      "totalVh": 1240,
+      "reverseFinal": {
+        "scene": "s4-paper",
+        "p": 0.4997037915000007,
+        "stageHeight": 844,
+        "width": 390,
+        "dpr": 1,
+        "drag": 0,
+        "stains": [
+          {
+            "x": 0.5,
+            "y": 0.6999999855366928,
+            "born": 22035.20000000298
+          }
+        ],
+        "traces": 0,
+        "strength": 0,
+        "interaction": "rest",
+        "visible": true,
+        "raf": 0,
+        "lowQuality": true,
+        "frames": 936,
+        "meanRenderMs": 11.993589743709142,
+        "maxRenderMs": 126.10000000149012,
+        "scrollY": 9790
+      },
+      "stainsPersist": true,
+      "canvas": {
+        "visible": 1,
+        "webglCalls": []
+      },
+      "endingLink": true,
+      "endingHref": "https://www.instagram.com/shacho_kari/",
+      "reducedMotion": {
+        "linkVisible": true,
+        "href": "https://www.instagram.com/shacho_kari/",
+        "text": "あわい\n助任珈琲豆店\nKASANE\nAIMA\n\nここに、あなたの店の話が入ります。\n\n話してみる\n\nアーカイブ"
+      },
+      "javaScriptOff": {
+        "linkVisible": true,
+        "href": "https://www.instagram.com/shacho_kari/",
+        "text": "あわい\n助任珈琲豆店\nKASANE\nAIMA\n\nここに、あなたの店の話が入ります。\n\n話してみる\n\nアーカイブ"
+      },
+      "refreshAt": "2026-10-10T15:23:32.414Z",
+      "aimaPersistenceRecheck": {
+        "input": "native mouse tap (including touch-capable viewport)",
+        "before": {
+          "scene": "s3-aima",
+          "p": 0.5,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.2999999963841732,
+              "born": 423.20000000298023
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 43,
+          "lowQuality": false,
+          "frames": 42,
+          "meanRenderMs": 6.6976190484350635,
+          "maxRenderMs": 37.79999999701977
+        },
+        "upper": {
+          "scene": "s0-membrane",
+          "p": 0,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.2999999963841732,
+              "born": 423.20000000298023
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 83,
+          "lowQuality": false,
+          "frames": 82,
+          "meanRenderMs": 5.241463415324688,
+          "maxRenderMs": 37.79999999701977
+        },
+        "final": {
+          "scene": "s4-paper",
+          "p": 1,
+          "stageHeight": 844,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.2999999963841732,
+              "born": 423.20000000298023
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 117,
+          "lowQuality": false,
+          "frames": 116,
+          "meanRenderMs": 4.930172414358321,
+          "maxRenderMs": 37.79999999701977
+        },
+        "persistent": true
+      }
+    },
+    {
+      "browser": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "size": "pc",
+      "input": "native mouse",
+      "errors": [],
+      "centers": [
+        {
+          "id": "s0-membrane",
+          "snapshot": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 3,
+            "meanRenderMs": 27.933333332339924,
+            "maxRenderMs": 48,
+            "scrollY": 560
+          },
+          "image": "chromium-pc-center-s0-membrane.jpg"
+        },
+        {
+          "id": "seam-01",
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 4,
+            "meanRenderMs": 24.575000002980232,
+            "maxRenderMs": 48.80000000447035,
+            "scrollY": 1360
+          },
+          "image": "chromium-pc-center-seam-01.jpg"
+        },
+        {
+          "id": "s1-suketo",
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 5,
+            "meanRenderMs": 19.68000000268221,
+            "maxRenderMs": 48.80000000447035,
+            "scrollY": 2480
+          },
+          "image": "chromium-pc-center-s1-suketo.jpg"
+        },
+        {
+          "id": "seam-12",
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 6,
+            "meanRenderMs": 20.98333333556851,
+            "maxRenderMs": 48.80000000447035,
+            "scrollY": 3600
+          },
+          "image": "chromium-pc-center-seam-12.jpg"
+        },
+        {
+          "id": "s2-kasane",
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 7,
+            "meanRenderMs": 18.01428571556296,
+            "maxRenderMs": 48.80000000447035,
+            "scrollY": 4800
+          },
+          "image": "chromium-pc-center-s2-kasane.jpg"
+        },
+        {
+          "id": "seam-23",
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 8,
+            "meanRenderMs": 15.775000001303853,
+            "maxRenderMs": 48.80000000447035,
+            "scrollY": 6000
+          },
+          "image": "chromium-pc-center-seam-23.jpg"
+        },
+        {
+          "id": "s3-aima",
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 9,
+            "meanRenderMs": 19.366666667163372,
+            "maxRenderMs": 48.80000000447035,
+            "scrollY": 7200
+          },
+          "image": "chromium-pc-center-s3-aima.jpg"
+        },
+        {
+          "id": "seam-34",
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 10,
+            "meanRenderMs": 21.230000000447035,
+            "maxRenderMs": 48.80000000447035,
+            "scrollY": 8400
+          },
+          "image": "chromium-pc-center-seam-34.jpg"
+        },
+        {
+          "id": "s4-paper",
+          "snapshot": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 4,
+            "meanRenderMs": 29.824999999254942,
+            "maxRenderMs": 48,
+            "scrollY": 9280
+          },
+          "image": "chromium-pc-center-s4-paper.jpg"
+        }
+      ],
+      "interactions": [
+        {
+          "scene": "s0-membrane",
+          "before": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 21,
+            "meanRenderMs": 16.009523808956143,
+            "maxRenderMs": 50,
+            "scrollY": 560
+          },
+          "beforeImage": "chromium-pc-s0-membrane-before.jpg",
+          "during": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 1,
+            "interaction": "thin",
+            "visible": true,
+            "raf": 361,
+            "lowQuality": true,
+            "frames": 360,
+            "meanRenderMs": 8.385833333163628,
+            "maxRenderMs": 50,
+            "scrollY": 560
+          },
+          "duringImage": "chromium-pc-s0-membrane-during.jpg",
+          "after500": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 1,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 440,
+            "lowQuality": true,
+            "frames": 439,
+            "meanRenderMs": 8.177220956560282,
+            "maxRenderMs": 50,
+            "scrollY": 560
+          },
+          "afterImage": "chromium-pc-s0-membrane-after.jpg",
+          "after1350": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 561,
+            "lowQuality": true,
+            "frames": 560,
+            "meanRenderMs": 7.963214285618492,
+            "maxRenderMs": 50,
+            "scrollY": 560
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s2-kasane",
+          "before": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 277,
+            "meanRenderMs": 18.03176895278887,
+            "maxRenderMs": 73,
+            "scrollY": 4800
+          },
+          "beforeImage": "chromium-pc-s2-kasane-before.jpg",
+          "during": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 176.6400146484375,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "drag",
+            "visible": true,
+            "raf": 373,
+            "lowQuality": true,
+            "frames": 372,
+            "meanRenderMs": 13.44032258039681,
+            "maxRenderMs": 73,
+            "scrollY": 4800
+          },
+          "duringImage": "chromium-pc-s2-kasane-during.jpg",
+          "after500": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 106.98409077300433,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 472,
+            "lowQuality": true,
+            "frames": 471,
+            "meanRenderMs": 10.626114649456913,
+            "maxRenderMs": 73,
+            "scrollY": 4800
+          },
+          "afterImage": "chromium-pc-s2-kasane-after.jpg",
+          "after1350": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 596,
+            "meanRenderMs": 8.406711409230965,
+            "maxRenderMs": 73,
+            "scrollY": 4800
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s3-aima",
+          "before": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 597,
+            "meanRenderMs": 8.404522612903092,
+            "maxRenderMs": 73,
+            "scrollY": 7200
+          },
+          "beforeImage": "chromium-pc-s3-aima-before.jpg",
+          "during": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.3,
+                "born": 15863.70000000298
+              },
+              {
+                "x": 0.45999999046325685,
+                "y": 0.3125,
+                "born": 16045
+              },
+              {
+                "x": 0.5199999809265137,
+                "y": 0.325,
+                "born": 16200.20000000298
+              },
+              {
+                "x": 0.5800000190734863,
+                "y": 0.3375,
+                "born": 16350.20000000298
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "dye",
+            "visible": true,
+            "raf": 707,
+            "lowQuality": true,
+            "frames": 706,
+            "meanRenderMs": 8.240084985719612,
+            "maxRenderMs": 73,
+            "scrollY": 7200
+          },
+          "duringImage": "chromium-pc-s3-aima-during.jpg",
+          "after500": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.3,
+                "born": 15863.70000000298
+              },
+              {
+                "x": 0.45999999046325685,
+                "y": 0.3125,
+                "born": 16045
+              },
+              {
+                "x": 0.5199999809265137,
+                "y": 0.325,
+                "born": 16200.20000000298
+              },
+              {
+                "x": 0.5800000190734863,
+                "y": 0.3375,
+                "born": 16350.20000000298
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 781,
+            "lowQuality": true,
+            "frames": 780,
+            "meanRenderMs": 8.189871794806844,
+            "maxRenderMs": 73,
+            "scrollY": 7200
+          },
+          "afterImage": "chromium-pc-s3-aima-after.jpg",
+          "after1350": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.3,
+                "born": 15863.70000000298
+              },
+              {
+                "x": 0.45999999046325685,
+                "y": 0.3125,
+                "born": 16045
+              },
+              {
+                "x": 0.5199999809265137,
+                "y": 0.325,
+                "born": 16200.20000000298
+              },
+              {
+                "x": 0.5800000190734863,
+                "y": 0.3375,
+                "born": 16350.20000000298
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 855,
+            "meanRenderMs": 8.130643274805005,
+            "maxRenderMs": 73,
+            "scrollY": 7200
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s4-paper",
+          "before": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 562,
+            "meanRenderMs": 7.9603202846100105,
+            "maxRenderMs": 50,
+            "scrollY": 9280
+          },
+          "beforeImage": "chromium-pc-s4-paper-before.jpg",
+          "during": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 1,
+            "interaction": "thin",
+            "visible": true,
+            "raf": 947,
+            "lowQuality": true,
+            "frames": 946,
+            "meanRenderMs": 7.534778012651918,
+            "maxRenderMs": 50,
+            "scrollY": 9280
+          },
+          "duringImage": "chromium-pc-s4-paper-during.jpg",
+          "after500": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 1,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 1029,
+            "lowQuality": true,
+            "frames": 1028,
+            "meanRenderMs": 7.488326848241787,
+            "maxRenderMs": 50,
+            "scrollY": 9280
+          },
+          "afterImage": "chromium-pc-s4-paper-after.jpg",
+          "after1350": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 1153,
+            "lowQuality": true,
+            "frames": 1152,
+            "meanRenderMs": 7.433072916626577,
+            "maxRenderMs": 50,
+            "scrollY": 9280
+          },
+          "reacted": true
+        }
+      ],
+      "verticalSwipes": [],
+      "boundaries": [
+        {
+          "vh": 139.9,
+          "snapshot": {
+            "scene": "s0-membrane",
+            "p": 0.9991071428571429,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 5,
+            "meanRenderMs": 27.059999999403953,
+            "maxRenderMs": 48,
+            "scrollY": 1119
+          }
+        },
+        {
+          "vh": 140.1,
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.0020833333333333333,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 6,
+            "meanRenderMs": 25.10000000024835,
+            "maxRenderMs": 48,
+            "scrollY": 1121
+          }
+        },
+        {
+          "vh": 199.9,
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.9979166666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 7,
+            "meanRenderMs": 23.7285714287843,
+            "maxRenderMs": 48,
+            "scrollY": 1599
+          }
+        },
+        {
+          "vh": 200.1,
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.0005681818181818182,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 8,
+            "meanRenderMs": 20.775000000372525,
+            "maxRenderMs": 48,
+            "scrollY": 1601
+          }
+        },
+        {
+          "vh": 419.9,
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.9994318181818181,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 9,
+            "meanRenderMs": 18.477777777446637,
+            "maxRenderMs": 48,
+            "scrollY": 3359
+          }
+        },
+        {
+          "vh": 420.1,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.0020833333333333333,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 10,
+            "meanRenderMs": 19.379999999701973,
+            "maxRenderMs": 48,
+            "scrollY": 3361
+          }
+        },
+        {
+          "vh": 479.9,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.9979166666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 11,
+            "meanRenderMs": 18.972727272320874,
+            "maxRenderMs": 48,
+            "scrollY": 3839
+          }
+        },
+        {
+          "vh": 480.1,
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.0005208333333333333,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 12,
+            "meanRenderMs": 17.40833333258827,
+            "maxRenderMs": 48,
+            "scrollY": 3841
+          }
+        },
+        {
+          "vh": 719.9,
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.9994791666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 13,
+            "meanRenderMs": 16.07692307634995,
+            "maxRenderMs": 48,
+            "scrollY": 5759
+          }
+        },
+        {
+          "vh": 720.1,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.0020833333333333333,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 14,
+            "meanRenderMs": 14.935714285288533,
+            "maxRenderMs": 48,
+            "scrollY": 5761
+          }
+        },
+        {
+          "vh": 779.9,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.9979166666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 15,
+            "meanRenderMs": 13.946666666368639,
+            "maxRenderMs": 48,
+            "scrollY": 6239
+          }
+        },
+        {
+          "vh": 780.1,
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.0005208333333333333,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 16,
+            "meanRenderMs": 16.1999999997206,
+            "maxRenderMs": 50,
+            "scrollY": 6241
+          }
+        },
+        {
+          "vh": 1019.9,
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.9994791666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 17,
+            "meanRenderMs": 16.17647058779702,
+            "maxRenderMs": 50,
+            "scrollY": 8159
+          }
+        },
+        {
+          "vh": 1020.1,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.0020833333333333333,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 18,
+            "meanRenderMs": 16.127777777198283,
+            "maxRenderMs": 50,
+            "scrollY": 8161
+          }
+        },
+        {
+          "vh": 1079.9,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.9979166666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 19,
+            "meanRenderMs": 16.089473683583105,
+            "maxRenderMs": 50,
+            "scrollY": 8639
+          }
+        },
+        {
+          "vh": 1080.1,
+          "snapshot": {
+            "scene": "s4-paper",
+            "p": 0.00078125,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 20,
+            "meanRenderMs": 16.04499999955296,
+            "maxRenderMs": 50,
+            "scrollY": 8641
+          }
+        }
+      ],
+      "reverse": [
+        {
+          "scene": "s4-paper",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 533,
+          "lowQuality": true,
+          "frames": 532,
+          "meanRenderMs": 18.10394736840145,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 9280
+        },
+        {
+          "scene": "seam-34",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 534,
+          "meanRenderMs": 18.079588014967324,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 8400
+        },
+        {
+          "scene": "s3-aima",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 535,
+          "meanRenderMs": 18.059439252330883,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 7200
+        },
+        {
+          "scene": "seam-23",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 536,
+          "meanRenderMs": 18.02593283581812,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 6000
+        },
+        {
+          "scene": "s2-kasane",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 537,
+          "meanRenderMs": 17.99255121042831,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 4800
+        },
+        {
+          "scene": "seam-12",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 538,
+          "meanRenderMs": 17.971747211890374,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 3600
+        },
+        {
+          "scene": "s1-suketo",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 539,
+          "meanRenderMs": 17.93858998143054,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 2480
+        },
+        {
+          "scene": "seam-01",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 540,
+          "meanRenderMs": 17.918148148128832,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 1360
+        },
+        {
+          "scene": "s0-membrane",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 541,
+          "meanRenderMs": 17.898336414034286,
+          "maxRenderMs": 72.39999999850988,
+          "scrollY": 560
+        }
+      ],
+      "initial": {
+        "scene": "s0-membrane",
+        "p": 0,
+        "stageHeight": 800,
+        "width": 1280,
+        "dpr": 1.5,
+        "drag": 0,
+        "stains": [],
+        "traces": 0,
+        "strength": 0,
+        "interaction": "rest",
+        "visible": true,
+        "raf": 0,
+        "lowQuality": false,
+        "frames": 2,
+        "meanRenderMs": 33.5,
+        "maxRenderMs": 48,
+        "scrollY": 0
+      },
+      "totalVh": 1240,
+      "reverseFinal": {
+        "scene": "s4-paper",
+        "p": 0.5,
+        "stageHeight": 800,
+        "width": 1280,
+        "dpr": 1,
+        "drag": 0,
+        "stains": [],
+        "traces": 0,
+        "strength": 0,
+        "interaction": "rest",
+        "visible": true,
+        "raf": 0,
+        "lowQuality": true,
+        "frames": 549,
+        "meanRenderMs": 17.700182149373333,
+        "maxRenderMs": 72.39999999850988,
+        "scrollY": 9280
+      },
+      "stainsPersist": true,
+      "canvas": {
+        "visible": 1,
+        "webglCalls": []
+      },
+      "endingLink": true,
+      "endingHref": "https://www.instagram.com/shacho_kari/",
+      "reducedMotion": {
+        "linkVisible": true,
+        "href": "https://www.instagram.com/shacho_kari/",
+        "text": "あわい\n助任珈琲豆店\nKASANE\nAIMA\n\nここに、あなたの店の話が入ります。\n\n話してみる\n\nアーカイブ"
+      },
+      "javaScriptOff": {
+        "linkVisible": true,
+        "href": "https://www.instagram.com/shacho_kari/",
+        "text": "あわい\n助任珈琲豆店\nKASANE\nAIMA\n\nここに、あなたの店の話が入ります。\n\n話してみる\n\nアーカイブ"
+      },
+      "refreshAt": "2026-10-10T15:23:32.414Z",
+      "aimaPersistenceRecheck": {
+        "input": "native mouse tap (including touch-capable viewport)",
+        "before": {
+          "scene": "s3-aima",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 416
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 30,
+          "lowQuality": false,
+          "frames": 29,
+          "meanRenderMs": 9.582758621409019,
+          "maxRenderMs": 40.100000001490116
+        },
+        "upper": {
+          "scene": "s0-membrane",
+          "p": 0,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 416
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 57,
+          "lowQuality": false,
+          "frames": 56,
+          "meanRenderMs": 8.253571429156828,
+          "maxRenderMs": 40.100000001490116
+        },
+        "final": {
+          "scene": "s4-paper",
+          "p": 1,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 416
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 88,
+          "lowQuality": false,
+          "frames": 87,
+          "meanRenderMs": 7.9597701151138045,
+          "maxRenderMs": 40.100000001490116
+        },
+        "persistent": true
+      }
+    },
+    {
+      "browser": "webkit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "size": "sp",
+      "input": "synthetic PointerEvent",
+      "errors": [],
+      "centers": [
+        {
+          "id": "s0-membrane",
+          "snapshot": {
+            "scene": "s0-membrane",
+            "p": 0.4993321960714286,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 3,
+            "meanRenderMs": 8,
+            "maxRenderMs": 10,
+            "scrollY": 590
+          },
+          "image": "webkit-sp-center-s0-membrane.jpg"
+        },
+        {
+          "id": "seam-01",
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.4984726464999999,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 4,
+            "meanRenderMs": 8.25,
+            "maxRenderMs": 11,
+            "scrollY": 1434
+          },
+          "image": "webkit-sp-center-seam-01.jpg"
+        },
+        {
+          "id": "s1-suketo",
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.4998106586363636,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 5,
+            "meanRenderMs": 6.6,
+            "maxRenderMs": 11,
+            "scrollY": 2616
+          },
+          "image": "webkit-sp-center-s1-suketo.jpg"
+        },
+        {
+          "id": "seam-12",
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.498164090166667,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 6,
+            "meanRenderMs": 9,
+            "maxRenderMs": 21,
+            "scrollY": 3797
+          },
+          "image": "webkit-sp-center-seam-12.jpg"
+        },
+        {
+          "id": "s2-kasane",
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.49955259341666647,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 7,
+            "meanRenderMs": 7.857142857142858,
+            "maxRenderMs": 21,
+            "scrollY": 5063
+          },
+          "image": "webkit-sp-center-s2-kasane.jpg"
+        },
+        {
+          "id": "seam-23",
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.4982566571666666,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 8,
+            "meanRenderMs": 6.875,
+            "maxRenderMs": 21,
+            "scrollY": 6329
+          },
+          "image": "webkit-sp-center-seam-23.jpg"
+        },
+        {
+          "id": "s3-aima",
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.49957573512500014,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 9,
+            "meanRenderMs": 7.777777777777778,
+            "maxRenderMs": 21,
+            "scrollY": 7595
+          },
+          "image": "webkit-sp-center-s3-aima.jpg"
+        },
+        {
+          "id": "seam-34",
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.4983492239999994,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 10,
+            "meanRenderMs": 7.9,
+            "maxRenderMs": 21,
+            "scrollY": 8861
+          },
+          "image": "webkit-sp-center-seam-34.jpg"
+        },
+        {
+          "id": "s4-paper",
+          "snapshot": {
+            "scene": "s4-paper",
+            "p": 0.49983800793749966,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 4,
+            "meanRenderMs": 7.75,
+            "maxRenderMs": 10,
+            "scrollY": 9790
+          },
+          "image": "webkit-sp-center-s4-paper.jpg"
+        }
+      ],
+      "interactions": [
+        {
+          "scene": "s0-membrane",
+          "before": {
+            "scene": "s0-membrane",
+            "p": 0.4993321960714286,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 21,
+            "meanRenderMs": 6.904761904761905,
+            "maxRenderMs": 21,
+            "scrollY": 590
+          },
+          "beforeImage": "webkit-sp-s0-membrane-before.jpg",
+          "during": {
+            "scene": "s0-membrane",
+            "p": 0.4993321960714286,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 1,
+            "interaction": "thin",
+            "visible": true,
+            "raf": 93,
+            "lowQuality": false,
+            "frames": 92,
+            "meanRenderMs": 13.173913043478263,
+            "maxRenderMs": 21,
+            "scrollY": 590
+          },
+          "duringImage": "webkit-sp-s0-membrane-during.jpg",
+          "after500": {
+            "scene": "s0-membrane",
+            "p": 0.4993321960714286,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 1,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 106,
+            "lowQuality": false,
+            "frames": 105,
+            "meanRenderMs": 13.419047619047621,
+            "maxRenderMs": 21,
+            "scrollY": 590
+          },
+          "afterImage": "webkit-sp-s0-membrane-after.jpg",
+          "after1350": {
+            "scene": "s0-membrane",
+            "p": 0.4993321960714286,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 123,
+            "meanRenderMs": 13.666666666666668,
+            "maxRenderMs": 21,
+            "scrollY": 590
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s2-kasane",
+          "before": {
+            "scene": "s2-kasane",
+            "p": 0.49955259341666647,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 120,
+            "meanRenderMs": 16.341666666666672,
+            "maxRenderMs": 81,
+            "scrollY": 5063
+          },
+          "beforeImage": "webkit-sp-s2-kasane-before.jpg",
+          "during": {
+            "scene": "s2-kasane",
+            "p": 0.49955259341666647,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 53.81999999999999,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "drag",
+            "visible": true,
+            "raf": 136,
+            "lowQuality": true,
+            "frames": 135,
+            "meanRenderMs": 14.533333333333337,
+            "maxRenderMs": 81,
+            "scrollY": 5063
+          },
+          "duringImage": "webkit-sp-s2-kasane-during.jpg",
+          "after500": {
+            "scene": "s2-kasane",
+            "p": 0.49955259341666647,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 33.18211153833333,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 152,
+            "lowQuality": true,
+            "frames": 151,
+            "meanRenderMs": 13.006622516556295,
+            "maxRenderMs": 81,
+            "scrollY": 5063
+          },
+          "afterImage": "webkit-sp-s2-kasane-after.jpg",
+          "after1350": {
+            "scene": "s2-kasane",
+            "p": 0.49955259341666647,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 171,
+            "meanRenderMs": 11.497076023391818,
+            "maxRenderMs": 81,
+            "scrollY": 5063
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s3-aima",
+          "before": {
+            "scene": "s3-aima",
+            "p": 0.49957573512500014,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 172,
+            "meanRenderMs": 11.476744186046517,
+            "maxRenderMs": 81,
+            "scrollY": 7595
+          },
+          "beforeImage": "webkit-sp-s3-aima-before.jpg",
+          "during": {
+            "scene": "s3-aima",
+            "p": 0.49957573512500014,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.30000555401277423,
+                "born": 15667
+              },
+              {
+                "x": 0.46,
+                "y": 0.3118541145977969,
+                "born": 15793
+              },
+              {
+                "x": 0.52,
+                "y": 0.3237026751828196,
+                "born": 15901
+              },
+              {
+                "x": 0.58,
+                "y": 0.33555123576784224,
+                "born": 16010
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "dye",
+            "visible": true,
+            "raf": 194,
+            "lowQuality": true,
+            "frames": 193,
+            "meanRenderMs": 11.077720207253895,
+            "maxRenderMs": 81,
+            "scrollY": 7595
+          },
+          "duringImage": "webkit-sp-s3-aima-during.jpg",
+          "after500": {
+            "scene": "s3-aima",
+            "p": 0.49957573512500014,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.30000555401277423,
+                "born": 15667
+              },
+              {
+                "x": 0.46,
+                "y": 0.3118541145977969,
+                "born": 15793
+              },
+              {
+                "x": 0.52,
+                "y": 0.3237026751828196,
+                "born": 15901
+              },
+              {
+                "x": 0.58,
+                "y": 0.33555123576784224,
+                "born": 16010
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 210,
+            "lowQuality": true,
+            "frames": 209,
+            "meanRenderMs": 10.851674641148332,
+            "maxRenderMs": 81,
+            "scrollY": 7595
+          },
+          "afterImage": "webkit-sp-s3-aima-after.jpg",
+          "after1350": {
+            "scene": "s3-aima",
+            "p": 0.49957573512500014,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.30000555401277423,
+                "born": 15667
+              },
+              {
+                "x": 0.46,
+                "y": 0.3118541145977969,
+                "born": 15793
+              },
+              {
+                "x": 0.52,
+                "y": 0.3237026751828196,
+                "born": 15901
+              },
+              {
+                "x": 0.58,
+                "y": 0.33555123576784224,
+                "born": 16010
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 228,
+            "meanRenderMs": 10.622807017543865,
+            "maxRenderMs": 81,
+            "scrollY": 7595
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s4-paper",
+          "before": {
+            "scene": "s4-paper",
+            "p": 0.49983800793749966,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 124,
+            "meanRenderMs": 13.60483870967742,
+            "maxRenderMs": 21,
+            "scrollY": 9790
+          },
+          "beforeImage": "webkit-sp-s4-paper-before.jpg",
+          "during": {
+            "scene": "s4-paper",
+            "p": 0.49983800793749966,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 1,
+            "interaction": "thin",
+            "visible": true,
+            "raf": 218,
+            "lowQuality": false,
+            "frames": 217,
+            "meanRenderMs": 10.07834101382488,
+            "maxRenderMs": 21,
+            "scrollY": 9790
+          },
+          "duringImage": "webkit-sp-s4-paper-during.jpg",
+          "after500": {
+            "scene": "s4-paper",
+            "p": 0.49983800793749966,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 1,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 235,
+            "lowQuality": false,
+            "frames": 234,
+            "meanRenderMs": 9.730769230769228,
+            "maxRenderMs": 21,
+            "scrollY": 9790
+          },
+          "afterImage": "webkit-sp-s4-paper-after.jpg",
+          "after1350": {
+            "scene": "s4-paper",
+            "p": 0.49983800793749966,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 256,
+            "meanRenderMs": 9.343749999999995,
+            "maxRenderMs": 21,
+            "scrollY": 9790
+          },
+          "reacted": true
+        }
+      ],
+      "verticalSwipes": [],
+      "boundaries": [
+        {
+          "vh": 139.9,
+          "snapshot": {
+            "scene": "s0-membrane",
+            "p": 0.9986643921428572,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 5,
+            "meanRenderMs": 7.6,
+            "maxRenderMs": 10,
+            "scrollY": 1180
+          }
+        },
+        {
+          "vh": 140.1,
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.0008331018333331978,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 6,
+            "meanRenderMs": 7.5,
+            "maxRenderMs": 10,
+            "scrollY": 1182
+          }
+        },
+        {
+          "vh": 199.9,
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.9980869511666668,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 7,
+            "meanRenderMs": 7.285714285714286,
+            "maxRenderMs": 10,
+            "scrollY": 1687
+          }
+        },
+        {
+          "vh": 200.1,
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.000016830363636379597,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 8,
+            "meanRenderMs": 6.375,
+            "maxRenderMs": 10,
+            "scrollY": 1688
+          }
+        },
+        {
+          "vh": 419.9,
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.9990659160454545,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 9,
+            "meanRenderMs": 5.666666666666667,
+            "maxRenderMs": 10,
+            "scrollY": 3543
+          }
+        },
+        {
+          "vh": 420.1,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.0005245456666671088,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 10,
+            "meanRenderMs": 7.2,
+            "maxRenderMs": 21,
+            "scrollY": 3545
+          }
+        },
+        {
+          "vh": 479.9,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.9977783948333335,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 11,
+            "meanRenderMs": 8,
+            "maxRenderMs": 21,
+            "scrollY": 4050
+          }
+        },
+        {
+          "vh": 480.1,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.9997531550000001,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 12,
+            "meanRenderMs": 8.583333333333334,
+            "maxRenderMs": 21,
+            "scrollY": 4051
+          }
+        },
+        {
+          "vh": 719.9,
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.9991668980833334,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 13,
+            "meanRenderMs": 7.923076923076923,
+            "maxRenderMs": 21,
+            "scrollY": 6075
+          }
+        },
+        {
+          "vh": 720.1,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.0006171124999999241,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 14,
+            "meanRenderMs": 7.428571428571429,
+            "maxRenderMs": 21,
+            "scrollY": 6077
+          }
+        },
+        {
+          "vh": 779.9,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.9978709618333331,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 15,
+            "meanRenderMs": 7,
+            "maxRenderMs": 21,
+            "scrollY": 6582
+          }
+        },
+        {
+          "vh": 780.1,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.9998457218333329,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 16,
+            "meanRenderMs": 6.5625,
+            "maxRenderMs": 21,
+            "scrollY": 6583
+          }
+        },
+        {
+          "vh": 1019.9,
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.9991900397916667,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 17,
+            "meanRenderMs": 6.9411764705882355,
+            "maxRenderMs": 21,
+            "scrollY": 8607
+          }
+        },
+        {
+          "vh": 1020.1,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.0007096793333327393,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 18,
+            "meanRenderMs": 6.944444444444445,
+            "maxRenderMs": 21,
+            "scrollY": 8609
+          }
+        },
+        {
+          "vh": 1079.9,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.9979635286666659,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 19,
+            "meanRenderMs": 6.947368421052632,
+            "maxRenderMs": 21,
+            "scrollY": 9114
+          }
+        },
+        {
+          "vh": 1080.1,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.9999382886666657,
+            "stageHeight": 843.984375,
+            "width": 390,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 20,
+            "meanRenderMs": 6.9,
+            "maxRenderMs": 21,
+            "scrollY": 9115
+          }
+        }
+      ],
+      "reverse": [
+        {
+          "scene": "s4-paper",
+          "p": 0.49983800793749966,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 346,
+          "meanRenderMs": 10.39306358381503,
+          "maxRenderMs": 81,
+          "scrollY": 9790
+        },
+        {
+          "scene": "seam-34",
+          "p": 0.4983492239999994,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 347,
+          "meanRenderMs": 10.380403458213257,
+          "maxRenderMs": 81,
+          "scrollY": 8861
+        },
+        {
+          "scene": "s3-aima",
+          "p": 0.49957573512500014,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 348,
+          "meanRenderMs": 10.379310344827587,
+          "maxRenderMs": 81,
+          "scrollY": 7595
+        },
+        {
+          "scene": "seam-23",
+          "p": 0.4982566571666666,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 349,
+          "meanRenderMs": 10.349570200573067,
+          "maxRenderMs": 81,
+          "scrollY": 6329
+        },
+        {
+          "scene": "s2-kasane",
+          "p": 0.49955259341666647,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 350,
+          "meanRenderMs": 10.320000000000002,
+          "maxRenderMs": 81,
+          "scrollY": 5063
+        },
+        {
+          "scene": "seam-12",
+          "p": 0.498164090166667,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 351,
+          "meanRenderMs": 10.330484330484332,
+          "maxRenderMs": 81,
+          "scrollY": 3797
+        },
+        {
+          "scene": "s1-suketo",
+          "p": 0.4998106586363636,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 352,
+          "meanRenderMs": 10.303977272727273,
+          "maxRenderMs": 81,
+          "scrollY": 2616
+        },
+        {
+          "scene": "seam-01",
+          "p": 0.4984726464999999,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 353,
+          "meanRenderMs": 10.288951841359774,
+          "maxRenderMs": 81,
+          "scrollY": 1434
+        },
+        {
+          "scene": "s0-membrane",
+          "p": 0.4993321960714286,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.30000555401277423,
+              "born": 15667
+            },
+            {
+              "x": 0.46,
+              "y": 0.3118541145977969,
+              "born": 15793
+            },
+            {
+              "x": 0.52,
+              "y": 0.3237026751828196,
+              "born": 15901
+            },
+            {
+              "x": 0.58,
+              "y": 0.33555123576784224,
+              "born": 16010
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 354,
+          "meanRenderMs": 10.27683615819209,
+          "maxRenderMs": 81,
+          "scrollY": 590
+        }
+      ],
+      "initial": {
+        "scene": "s0-membrane",
+        "p": 0,
+        "stageHeight": 843.984375,
+        "width": 390,
+        "dpr": 1,
+        "drag": 0,
+        "stains": [],
+        "traces": 0,
+        "strength": 0,
+        "interaction": "rest",
+        "visible": true,
+        "raf": 0,
+        "lowQuality": false,
+        "frames": 2,
+        "meanRenderMs": 8.5,
+        "maxRenderMs": 10,
+        "scrollY": 0
+      },
+      "totalVh": 1240,
+      "reverseFinal": {
+        "scene": "s4-paper",
+        "p": 0.49983800793749966,
+        "stageHeight": 843.984375,
+        "width": 390,
+        "dpr": 1,
+        "drag": 0,
+        "stains": [
+          {
+            "x": 0.4,
+            "y": 0.30000555401277423,
+            "born": 15667
+          },
+          {
+            "x": 0.46,
+            "y": 0.3118541145977969,
+            "born": 15793
+          },
+          {
+            "x": 0.52,
+            "y": 0.3237026751828196,
+            "born": 15901
+          },
+          {
+            "x": 0.58,
+            "y": 0.33555123576784224,
+            "born": 16010
+          }
+        ],
+        "traces": 0,
+        "strength": 0,
+        "interaction": "rest",
+        "visible": true,
+        "raf": 0,
+        "lowQuality": true,
+        "frames": 362,
+        "meanRenderMs": 10.154696132596685,
+        "maxRenderMs": 81,
+        "scrollY": 9790
+      },
+      "stainsPersist": true,
+      "canvas": {
+        "visible": 1,
+        "webglCalls": []
+      },
+      "endingLink": true,
+      "endingHref": "https://www.instagram.com/shacho_kari/",
+      "reducedMotion": {
+        "linkVisible": true,
+        "href": "https://www.instagram.com/shacho_kari/",
+        "text": "あわい\n助任珈琲豆店\nKASANE\nAIMA\n\nここに、あなたの店の話が入ります。\n\n話してみる\n\nアーカイブ"
+      },
+      "javaScriptOff": {
+        "linkVisible": true,
+        "href": "https://www.instagram.com/shacho_kari/",
+        "text": "あわい\n助任珈琲豆店\nKASANE\nAIMA\n\nここに、あなたの店の話が入ります。\n\n話してみる\n\nアーカイブ"
+      },
+      "refreshAt": "2026-10-10T15:23:32.414Z",
+      "aimaPersistenceRecheck": {
+        "input": "native mouse tap (including touch-capable viewport)",
+        "before": {
+          "scene": "s3-aima",
+          "p": 0.49957573512500014,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.29976858280107377,
+              "born": 523
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 17,
+          "lowQuality": false,
+          "frames": 16,
+          "meanRenderMs": 8.1875,
+          "maxRenderMs": 16
+        },
+        "upper": {
+          "scene": "s0-membrane",
+          "p": 0,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.29976858280107377,
+              "born": 523
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 30,
+          "lowQuality": false,
+          "frames": 29,
+          "meanRenderMs": 9.344827586206895,
+          "maxRenderMs": 18
+        },
+        "final": {
+          "scene": "s4-paper",
+          "p": 0.9996991576249996,
+          "stageHeight": 843.984375,
+          "width": 390,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.29976858280107377,
+              "born": 523
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 46,
+          "lowQuality": false,
+          "frames": 45,
+          "meanRenderMs": 7.7111111111111095,
+          "maxRenderMs": 18
+        },
+        "persistent": true
+      }
+    },
+    {
+      "browser": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "size": "pc",
+      "input": "native mouse",
+      "errors": [],
+      "centers": [
+        {
+          "id": "s0-membrane",
+          "snapshot": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 3,
+            "meanRenderMs": 33.333333333333336,
+            "maxRenderMs": 38,
+            "scrollY": 560
+          },
+          "image": "webkit-pc-center-s0-membrane.jpg"
+        },
+        {
+          "id": "seam-01",
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 4,
+            "meanRenderMs": 32.75,
+            "maxRenderMs": 39,
+            "scrollY": 1360
+          },
+          "image": "webkit-pc-center-seam-01.jpg"
+        },
+        {
+          "id": "s1-suketo",
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 5,
+            "meanRenderMs": 26.4,
+            "maxRenderMs": 39,
+            "scrollY": 2480
+          },
+          "image": "webkit-pc-center-s1-suketo.jpg"
+        },
+        {
+          "id": "seam-12",
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 6,
+            "meanRenderMs": 37.83333333333333,
+            "maxRenderMs": 95,
+            "scrollY": 3600
+          },
+          "image": "webkit-pc-center-seam-12.jpg"
+        },
+        {
+          "id": "s2-kasane",
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 7,
+            "meanRenderMs": 32.57142857142857,
+            "maxRenderMs": 95,
+            "scrollY": 4800
+          },
+          "image": "webkit-pc-center-s2-kasane.jpg"
+        },
+        {
+          "id": "seam-23",
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 8,
+            "meanRenderMs": 28.5,
+            "maxRenderMs": 95,
+            "scrollY": 6000
+          },
+          "image": "webkit-pc-center-seam-23.jpg"
+        },
+        {
+          "id": "s3-aima",
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 9,
+            "meanRenderMs": 29.77777777777778,
+            "maxRenderMs": 95,
+            "scrollY": 7200
+          },
+          "image": "webkit-pc-center-s3-aima.jpg"
+        },
+        {
+          "id": "seam-34",
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 10,
+            "meanRenderMs": 30.5,
+            "maxRenderMs": 95,
+            "scrollY": 8400
+          },
+          "image": "webkit-pc-center-seam-34.jpg"
+        },
+        {
+          "id": "s4-paper",
+          "snapshot": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 4,
+            "meanRenderMs": 30.75,
+            "maxRenderMs": 38,
+            "scrollY": 9280
+          },
+          "image": "webkit-pc-center-s4-paper.jpg"
+        }
+      ],
+      "interactions": [
+        {
+          "scene": "s0-membrane",
+          "before": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 22,
+            "meanRenderMs": 27.909090909090907,
+            "maxRenderMs": 95,
+            "scrollY": 560
+          },
+          "beforeImage": "webkit-pc-s0-membrane-before.jpg",
+          "during": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 1,
+            "interaction": "thin",
+            "visible": true,
+            "raf": 69,
+            "lowQuality": true,
+            "frames": 68,
+            "meanRenderMs": 19.66176470588235,
+            "maxRenderMs": 95,
+            "scrollY": 560
+          },
+          "duringImage": "webkit-pc-s0-membrane-during.jpg",
+          "after500": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 1,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 79,
+            "lowQuality": true,
+            "frames": 78,
+            "meanRenderMs": 19.11538461538462,
+            "maxRenderMs": 95,
+            "scrollY": 560
+          },
+          "afterImage": "webkit-pc-s0-membrane-after.jpg",
+          "after1350": {
+            "scene": "s0-membrane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 93,
+            "lowQuality": true,
+            "frames": 92,
+            "meanRenderMs": 18.565217391304348,
+            "maxRenderMs": 95,
+            "scrollY": 560
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s2-kasane",
+          "before": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 97,
+            "meanRenderMs": 19.91752577319587,
+            "maxRenderMs": 95,
+            "scrollY": 4800
+          },
+          "beforeImage": "webkit-pc-s2-kasane-before.jpg",
+          "during": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 176,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "drag",
+            "visible": true,
+            "raf": 105,
+            "lowQuality": true,
+            "frames": 104,
+            "meanRenderMs": 18.605769230769223,
+            "maxRenderMs": 95,
+            "scrollY": 4800
+          },
+          "duringImage": "webkit-pc-s2-kasane-during.jpg",
+          "after500": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 93.277184,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 114,
+            "lowQuality": true,
+            "frames": 113,
+            "meanRenderMs": 17.150442477876094,
+            "maxRenderMs": 95,
+            "scrollY": 4800
+          },
+          "afterImage": "webkit-pc-s2-kasane-after.jpg",
+          "after1350": {
+            "scene": "s2-kasane",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 122,
+            "meanRenderMs": 15.893442622950806,
+            "maxRenderMs": 95,
+            "scrollY": 4800
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s3-aima",
+          "before": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 123,
+            "meanRenderMs": 15.886178861788604,
+            "maxRenderMs": 95,
+            "scrollY": 7200
+          },
+          "beforeImage": "webkit-pc-s3-aima-before.jpg",
+          "during": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.3,
+                "born": 16314
+              },
+              {
+                "x": 0.459375,
+                "y": 0.3125,
+                "born": 16539
+              },
+              {
+                "x": 0.51953125,
+                "y": 0.325,
+                "born": 16670
+              },
+              {
+                "x": 0.5796875,
+                "y": 0.3375,
+                "born": 16780
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "dye",
+            "visible": true,
+            "raf": 137,
+            "lowQuality": true,
+            "frames": 136,
+            "meanRenderMs": 15.963235294117633,
+            "maxRenderMs": 95,
+            "scrollY": 7200
+          },
+          "duringImage": "webkit-pc-s3-aima-during.jpg",
+          "after500": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.3,
+                "born": 16314
+              },
+              {
+                "x": 0.459375,
+                "y": 0.3125,
+                "born": 16539
+              },
+              {
+                "x": 0.51953125,
+                "y": 0.325,
+                "born": 16670
+              },
+              {
+                "x": 0.5796875,
+                "y": 0.3375,
+                "born": 16780
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 146,
+            "lowQuality": true,
+            "frames": 145,
+            "meanRenderMs": 16.027586206896533,
+            "maxRenderMs": 95,
+            "scrollY": 7200
+          },
+          "afterImage": "webkit-pc-s3-aima-after.jpg",
+          "after1350": {
+            "scene": "s3-aima",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [
+              {
+                "x": 0.4,
+                "y": 0.3,
+                "born": 16314
+              },
+              {
+                "x": 0.459375,
+                "y": 0.3125,
+                "born": 16539
+              },
+              {
+                "x": 0.51953125,
+                "y": 0.325,
+                "born": 16670
+              },
+              {
+                "x": 0.5796875,
+                "y": 0.3375,
+                "born": 16780
+              }
+            ],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": true,
+            "frames": 154,
+            "meanRenderMs": 16.058441558441537,
+            "maxRenderMs": 95,
+            "scrollY": 7200
+          },
+          "reacted": true
+        },
+        {
+          "scene": "s4-paper",
+          "before": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 121,
+            "lowQuality": true,
+            "frames": 120,
+            "meanRenderMs": 16.18333333333333,
+            "maxRenderMs": 95,
+            "scrollY": 9280
+          },
+          "beforeImage": "webkit-pc-s4-paper-before.jpg",
+          "during": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 1,
+            "interaction": "thin",
+            "visible": true,
+            "raf": 172,
+            "lowQuality": true,
+            "frames": 171,
+            "meanRenderMs": 13.906432748538013,
+            "maxRenderMs": 95,
+            "scrollY": 9280
+          },
+          "duringImage": "webkit-pc-s4-paper-during.jpg",
+          "after500": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 1,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 182,
+            "lowQuality": true,
+            "frames": 181,
+            "meanRenderMs": 13.624309392265197,
+            "maxRenderMs": 95,
+            "scrollY": 9280
+          },
+          "afterImage": "webkit-pc-s4-paper-after.jpg",
+          "after1350": {
+            "scene": "s4-paper",
+            "p": 0.5,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 197,
+            "lowQuality": true,
+            "frames": 196,
+            "meanRenderMs": 13.255102040816329,
+            "maxRenderMs": 95,
+            "scrollY": 9280
+          },
+          "reacted": true
+        }
+      ],
+      "verticalSwipes": [],
+      "boundaries": [
+        {
+          "vh": 139.9,
+          "snapshot": {
+            "scene": "s0-membrane",
+            "p": 0.9991071428571429,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 5,
+            "meanRenderMs": 31.4,
+            "maxRenderMs": 38,
+            "scrollY": 1119
+          }
+        },
+        {
+          "vh": 140.1,
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 6,
+            "meanRenderMs": 31.833333333333332,
+            "maxRenderMs": 38,
+            "scrollY": 1120
+          }
+        },
+        {
+          "vh": 199.9,
+          "snapshot": {
+            "scene": "seam-01",
+            "p": 0.9979166666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 7,
+            "meanRenderMs": 32.14285714285714,
+            "maxRenderMs": 38,
+            "scrollY": 1599
+          }
+        },
+        {
+          "vh": 200.1,
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 8,
+            "meanRenderMs": 28.124999999999996,
+            "maxRenderMs": 38,
+            "scrollY": 1600
+          }
+        },
+        {
+          "vh": 419.9,
+          "snapshot": {
+            "scene": "s1-suketo",
+            "p": 0.9994318181818181,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 9,
+            "meanRenderMs": 24.999999999999996,
+            "maxRenderMs": 38,
+            "scrollY": 3359
+          }
+        },
+        {
+          "vh": 420.1,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 10,
+            "meanRenderMs": 31.999999999999996,
+            "maxRenderMs": 95,
+            "scrollY": 3360
+          }
+        },
+        {
+          "vh": 479.9,
+          "snapshot": {
+            "scene": "seam-12",
+            "p": 0.9979166666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 11,
+            "meanRenderMs": 37,
+            "maxRenderMs": 95,
+            "scrollY": 3839
+          }
+        },
+        {
+          "vh": 480.1,
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 12,
+            "meanRenderMs": 33.916666666666664,
+            "maxRenderMs": 95,
+            "scrollY": 3840
+          }
+        },
+        {
+          "vh": 719.9,
+          "snapshot": {
+            "scene": "s2-kasane",
+            "p": 0.9994791666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 13,
+            "meanRenderMs": 31.307692307692307,
+            "maxRenderMs": 95,
+            "scrollY": 5759
+          }
+        },
+        {
+          "vh": 720.1,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 14,
+            "meanRenderMs": 29.07142857142857,
+            "maxRenderMs": 95,
+            "scrollY": 5760
+          }
+        },
+        {
+          "vh": 779.9,
+          "snapshot": {
+            "scene": "seam-23",
+            "p": 0.9979166666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 15,
+            "meanRenderMs": 27.133333333333333,
+            "maxRenderMs": 95,
+            "scrollY": 6239
+          }
+        },
+        {
+          "vh": 780.1,
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 16,
+            "meanRenderMs": 27.875,
+            "maxRenderMs": 95,
+            "scrollY": 6240
+          }
+        },
+        {
+          "vh": 1019.9,
+          "snapshot": {
+            "scene": "s3-aima",
+            "p": 0.9994791666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 17,
+            "meanRenderMs": 28.235294117647058,
+            "maxRenderMs": 95,
+            "scrollY": 8159
+          }
+        },
+        {
+          "vh": 1020.1,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 18,
+            "meanRenderMs": 28.555555555555554,
+            "maxRenderMs": 95,
+            "scrollY": 8160
+          }
+        },
+        {
+          "vh": 1079.9,
+          "snapshot": {
+            "scene": "seam-34",
+            "p": 0.9979166666666667,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 19,
+            "meanRenderMs": 28.789473684210524,
+            "maxRenderMs": 95,
+            "scrollY": 8639
+          }
+        },
+        {
+          "vh": 1080.1,
+          "snapshot": {
+            "scene": "s4-paper",
+            "p": 0,
+            "stageHeight": 800,
+            "width": 1280,
+            "dpr": 1.5,
+            "drag": 0,
+            "stains": [],
+            "traces": 0,
+            "strength": 0,
+            "interaction": "rest",
+            "visible": true,
+            "raf": 0,
+            "lowQuality": false,
+            "frames": 20,
+            "meanRenderMs": 28.2,
+            "maxRenderMs": 95,
+            "scrollY": 8640
+          }
+        }
+      ],
+      "reverse": [
+        {
+          "scene": "s4-paper",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 259,
+          "lowQuality": true,
+          "frames": 258,
+          "meanRenderMs": 14.069767441860446,
+          "maxRenderMs": 95,
+          "scrollY": 9280
+        },
+        {
+          "scene": "seam-34",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 259,
+          "meanRenderMs": 14.077220077220058,
+          "maxRenderMs": 95,
+          "scrollY": 8400
+        },
+        {
+          "scene": "s3-aima",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 260,
+          "meanRenderMs": 14.084615384615367,
+          "maxRenderMs": 95,
+          "scrollY": 7200
+        },
+        {
+          "scene": "seam-23",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 261,
+          "meanRenderMs": 14.030651340996151,
+          "maxRenderMs": 95,
+          "scrollY": 6000
+        },
+        {
+          "scene": "s2-kasane",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 262,
+          "meanRenderMs": 13.977099236641203,
+          "maxRenderMs": 95,
+          "scrollY": 4800
+        },
+        {
+          "scene": "seam-12",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 263,
+          "meanRenderMs": 14.072243346007587,
+          "maxRenderMs": 95,
+          "scrollY": 3600
+        },
+        {
+          "scene": "s1-suketo",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 264,
+          "meanRenderMs": 14.018939393939377,
+          "maxRenderMs": 95,
+          "scrollY": 2480
+        },
+        {
+          "scene": "seam-01",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 0,
+          "lowQuality": true,
+          "frames": 265,
+          "meanRenderMs": 14.022641509433946,
+          "maxRenderMs": 95,
+          "scrollY": 1360
+        },
+        {
+          "scene": "s0-membrane",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 16314
+            },
+            {
+              "x": 0.459375,
+              "y": 0.3125,
+              "born": 16539
+            },
+            {
+              "x": 0.51953125,
+              "y": 0.325,
+              "born": 16670
+            },
+            {
+              "x": 0.5796875,
+              "y": 0.3375,
+              "born": 16780
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 268,
+          "lowQuality": true,
+          "frames": 267,
+          "meanRenderMs": 14.037453183520583,
+          "maxRenderMs": 95,
+          "scrollY": 560
+        }
+      ],
+      "initial": {
+        "scene": "s0-membrane",
+        "p": 0,
+        "stageHeight": 800,
+        "width": 1280,
+        "dpr": 1.5,
+        "drag": 0,
+        "stains": [],
+        "traces": 0,
+        "strength": 0,
+        "interaction": "rest",
+        "visible": true,
+        "raf": 0,
+        "lowQuality": false,
+        "frames": 2,
+        "meanRenderMs": 33,
+        "maxRenderMs": 38,
+        "scrollY": 0
+      },
+      "totalVh": 1240,
+      "reverseFinal": {
+        "scene": "s4-paper",
+        "p": 0.5,
+        "stageHeight": 800,
+        "width": 1280,
+        "dpr": 1,
+        "drag": 0,
+        "stains": [
+          {
+            "x": 0.4,
+            "y": 0.3,
+            "born": 16314
+          },
+          {
+            "x": 0.459375,
+            "y": 0.3125,
+            "born": 16539
+          },
+          {
+            "x": 0.51953125,
+            "y": 0.325,
+            "born": 16670
+          },
+          {
+            "x": 0.5796875,
+            "y": 0.3375,
+            "born": 16780
+          }
+        ],
+        "traces": 0,
+        "strength": 0,
+        "interaction": "rest",
+        "visible": true,
+        "raf": 282,
+        "lowQuality": true,
+        "frames": 281,
+        "meanRenderMs": 13.996441281138774,
+        "maxRenderMs": 95,
+        "scrollY": 9280
+      },
+      "stainsPersist": true,
+      "canvas": {
+        "visible": 1,
+        "webglCalls": []
+      },
+      "endingLink": true,
+      "endingHref": "https://www.instagram.com/shacho_kari/",
+      "reducedMotion": {
+        "linkVisible": true,
+        "href": "https://www.instagram.com/shacho_kari/",
+        "text": "あわい\n助任珈琲豆店\nKASANE\nAIMA\n\nここに、あなたの店の話が入ります。\n\n話してみる\n\nアーカイブ"
+      },
+      "javaScriptOff": {
+        "linkVisible": true,
+        "href": "https://www.instagram.com/shacho_kari/",
+        "text": "あわい\n助任珈琲豆店\nKASANE\nAIMA\n\nここに、あなたの店の話が入ります。\n\n話してみる\n\nアーカイブ"
+      },
+      "refreshAt": "2026-10-10T15:23:32.414Z",
+      "aimaPersistenceRecheck": {
+        "input": "native mouse tap (including touch-capable viewport)",
+        "before": {
+          "scene": "s3-aima",
+          "p": 0.5,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 550
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 9,
+          "lowQuality": false,
+          "frames": 8,
+          "meanRenderMs": 17.000000000000004,
+          "maxRenderMs": 28
+        },
+        "upper": {
+          "scene": "s0-membrane",
+          "p": 0,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 550
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 14,
+          "lowQuality": false,
+          "frames": 13,
+          "meanRenderMs": 19.384615384615387,
+          "maxRenderMs": 35
+        },
+        "final": {
+          "scene": "s4-paper",
+          "p": 1,
+          "stageHeight": 800,
+          "width": 1280,
+          "dpr": 1,
+          "drag": 0,
+          "stains": [
+            {
+              "x": 0.4,
+              "y": 0.3,
+              "born": 550
+            }
+          ],
+          "traces": 0,
+          "strength": 0,
+          "interaction": "rest",
+          "visible": true,
+          "raf": 22,
+          "lowQuality": false,
+          "frames": 21,
+          "meanRenderMs": 15.380952380952383,
+          "maxRenderMs": 35
+        },
+        "persistent": true
+      }
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Chromium SP uses native CDP touch input. WebKit SP interaction uses synthetic PointerEvent; vertical native swipe is unavailable through Playwright WebKit. Synthetic WebKit touch skips pointer capture because PointerEvent does not register a native pointer. Installed Google Chrome is used as Chromium executable. These are desktop browser emulations, not iPhone/Android hardware."
+  ],
+  "firstTouch100ms": {
+    "requestedDelayMs": 100,
+    "input": "native CDP touch",
+    "snapshot": {
+      "scene": "s0-membrane",
+      "p": 0,
+      "stageHeight": 844,
+      "width": 390,
+      "dpr": 1,
+      "drag": 0,
+      "stains": [],
+      "traces": 0,
+      "strength": 0.15,
+      "interaction": "preview",
+      "visible": true,
+      "raf": 7,
+      "lowQuality": false,
+      "frames": 6,
+      "meanRenderMs": 17.333333334575094,
+      "maxRenderMs": 44.30000000447035
+    }
+  }
+}

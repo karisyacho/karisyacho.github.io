@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-10T15:25:03.755Z",
+  "source": "page@13334747f3d829d06934f36ccb48d2fd.webm",
+  "output": "mobile-interactive.mp4",
+  "scrollDurationSeconds": 75,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "inputs": "scrollTo only; no intervention",
+  "scrollSteps": 690,
+  "ffmpegExit": 0,
+  "bytes": 4800990,
+  "ffprobe": {
+    "durationSeconds": 78.4,
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "width": 390,
+    "height": 844
+  }
+}

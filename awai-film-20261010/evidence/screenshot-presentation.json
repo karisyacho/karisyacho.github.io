@@ -1,0 +1,16 @@
+{
+  "screenshots": 84,
+  "spRasterWidth": 390,
+  "pcRasterWidth": 640,
+  "viewports": {
+    "sp": [
+      390,
+      844
+    ],
+    "pc": [
+      1280,
+      800
+    ]
+  },
+  "note": "Browser captures downsampled for mobile review after interaction verification; viewport size unchanged."
+}
