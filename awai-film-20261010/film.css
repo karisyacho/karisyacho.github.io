@@ -1,0 +1,41 @@
+:root{color-scheme:dark;background:#090A0C;color:#BFC0C4;font-synthesis:none;--stage-height:100vh}
+@supports(height:100svh){:root{--stage-height:100svh}}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{overflow-x:clip}
+h1,h2,p{margin:0;font-weight:400}
+.scene{position:relative;background:#090A0C}
+.frame{position:relative;width:100%;aspect-ratio:1659/948;container-type:inline-size;overflow:visible}
+.photo,.photo img{display:block;width:100%;height:100%}
+.photo img{object-fit:contain}
+.lettering{position:absolute;inset:0}
+.scene-title,.closing-copy{position:absolute;color:#BFC0C4;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:400;white-space:nowrap;line-height:1.5}
+.s0 .scene-title{left:9%;top:13%;font-size:1.3888889cqw;letter-spacing:.2em}
+.s1 .scene-title{right:9%;top:18%;font-size:1.1805556cqw}
+.s2 .scene-title,.s3 .scene-title{font-family:"Times New Roman",serif;font-size:1.25cqw;letter-spacing:.18em}
+.s2 .scene-title{left:9%;top:76%}
+.s3 .scene-title{left:9%;top:12%}
+.s4{background:#ECEDEF}
+.s4 .closing-copy{left:12%;top:66%;color:#2C2D31;font-size:1.7361111cqw}
+.closing-copy p{line-height:1.5}
+.contact-label{display:block;width:fit-content;margin-top:2.2222222cqw;font-size:1.25cqw;text-decoration:underline;text-underline-offset:.3em}
+.mobile-break{display:none}
+.film-ready .film{height:calc(var(--stage-height) * 10.75)}
+.film-ready .stage{position:sticky;top:0;width:100%;height:var(--stage-height);overflow:hidden;background:#090A0C;isolation:isolate}
+.film-ready .scene{position:absolute;inset:0;visibility:hidden;background:transparent}
+.film-ready .scene.is-active{visibility:visible}
+.film-ready .frame{position:absolute;left:50%;top:50%;width:var(--frame-width);height:var(--frame-height);transform:translate(-50%,-50%)}
+.film-ready .photo{position:absolute;inset:0;transform-origin:50% 50%;will-change:transform}
+.film-ready .lettering{opacity:0}
+@media(orientation:portrait){
+  .frame{aspect-ratio:948/1659}
+  .s4 .frame{aspect-ratio:948/1660}
+  .s0 .scene-title{font-size:4.3589744cqw}
+  .s1 .scene-title{left:10%;right:auto;top:17%;font-size:3.5897436cqw}
+  .s2 .scene-title{left:auto;right:10%;top:8%;font-size:4.1025641cqw}
+  .s3 .scene-title{left:10%;top:10%;font-size:4.1025641cqw}
+  .s4 .closing-copy{left:10%;top:67%;font-size:4.8717949cqw}
+  .s4 .closing-copy p{line-height:1.9}
+  .s4 .contact-label{margin-top:6.1538462cqw;font-size:4.1025641cqw}
+  .mobile-break{display:inline}
+}

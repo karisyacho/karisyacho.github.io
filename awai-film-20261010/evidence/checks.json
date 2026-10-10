@@ -1,0 +1,2350 @@
+{
+  "url": "http://127.0.0.1:3160/film-v1/",
+  "environment": "Desktop Edge browser viewport emulation; physical iPhone/Android unverified",
+  "checks": [
+    {
+      "name": "sp five scenes",
+      "ok": true,
+      "detail": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "sp reversible 78",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 77",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 76",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 75",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 74",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 73",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 72",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 71",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 70",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 69",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 68",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 67",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 66",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 65",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 64",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 63",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 62",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 61",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 60",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 59",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 58",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 57",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 56",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 55",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 54",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 53",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 52",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 51",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 50",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 49",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 48",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 47",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 46",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 45",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 44",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 43",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 42",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 41",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 40",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 39",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 38",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 37",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 36",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 35",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 34",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 33",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 32",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 31",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 30",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 29",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 28",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 27",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 26",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 25",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 24",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 23",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 22",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 21",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 20",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 19",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 18",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 17",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 16",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "sp reversible 15",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 14",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 13",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 12",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "sp reversible 11",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 10",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 9",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 8",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 7",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 6",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 5",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 4",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 3",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 2",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 1",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp reversible 0",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "sp no horizontal overflow",
+      "ok": true
+    },
+    {
+      "name": "same-width height change cached stage",
+      "ok": true,
+      "detail": {
+        "old": 844,
+        "new": 844
+      }
+    },
+    {
+      "name": "pc five scenes",
+      "ok": true,
+      "detail": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "pc reversible 78",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 77",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 76",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 75",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 74",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 73",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 72",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 71",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 70",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 69",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 68",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 67",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 66",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 65",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 64",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 63",
+      "ok": true,
+      "detail": {
+        "scene": 4,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 62",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 61",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 60",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 59",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 58",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 57",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 56",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 55",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 54",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 53",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 52",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 51",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 50",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 49",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 48",
+      "ok": true,
+      "detail": {
+        "scene": 3,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 47",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 46",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 45",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 44",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 43",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 42",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 41",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 40",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 39",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 38",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 37",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 36",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 35",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 34",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 33",
+      "ok": true,
+      "detail": {
+        "scene": 2,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 32",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 31",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 30",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 29",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 28",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 27",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 26",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 25",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 24",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 23",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 22",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 21",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 20",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 19",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 18",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 17",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 16",
+      "ok": true,
+      "detail": {
+        "scene": 1,
+        "phase": "pull"
+      }
+    },
+    {
+      "name": "pc reversible 15",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 14",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 13",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 12",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "approach"
+      }
+    },
+    {
+      "name": "pc reversible 11",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 10",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 9",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 8",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 7",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 6",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 5",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 4",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 3",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 2",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 1",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc reversible 0",
+      "ok": true,
+      "detail": {
+        "scene": 0,
+        "phase": "rest"
+      }
+    },
+    {
+      "name": "pc no horizontal overflow",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 0",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 1",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 2",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 3",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 4",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 5",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 6",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 7",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 8",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 9",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 10",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 11",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 12",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 13",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 14",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 15",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 16",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 17",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 18",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 19",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 20",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 21",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 22",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 23",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 24",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 25",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 26",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 27",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 28",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 29",
+      "ok": true
+    },
+    {
+      "name": "320 copy inside frame 30",
+      "ok": true
+    },
+    {
+      "name": "fallback no overflow",
+      "ok": true
+    },
+    {
+      "name": "reduced motion rest 0",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 1",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 2",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 3",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 4",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 5",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 6",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 7",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 8",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 9",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 10",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 11",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 12",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 13",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 14",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 15",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 16",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 17",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 18",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 19",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 20",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 21",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 22",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 23",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 24",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 25",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 26",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 27",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 28",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 29",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 30",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 31",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 32",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 33",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 34",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 35",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 36",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 37",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 38",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 39",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion rest 40",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "rotation": 0,
+        "scale": 1
+      }
+    },
+    {
+      "name": "reduced motion five scenes",
+      "ok": true,
+      "detail": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "fallback no overflow",
+      "ok": true
+    },
+    {
+      "name": "no JS five loaded images stacked",
+      "ok": true,
+      "detail": [
+        {
+          "loaded": true,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 682.5,
+            "top": 0,
+            "right": 390,
+            "bottom": 682.5,
+            "left": 0
+          }
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "x": 0,
+            "y": 682.5,
+            "width": 390,
+            "height": 682.5,
+            "top": 682.5,
+            "right": 390,
+            "bottom": 1365,
+            "left": 0
+          }
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "x": 0,
+            "y": 1365,
+            "width": 390,
+            "height": 682.5,
+            "top": 1365,
+            "right": 390,
+            "bottom": 2047.5,
+            "left": 0
+          }
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "x": 0,
+            "y": 2047.5,
+            "width": 390,
+            "height": 682.5,
+            "top": 2047.5,
+            "right": 390,
+            "bottom": 2730,
+            "left": 0
+          }
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "x": 0,
+            "y": 2730,
+            "width": 390,
+            "height": 682.90625,
+            "top": 2730,
+            "right": 390,
+            "bottom": 3412.90625,
+            "left": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "no JS all names and closing copy",
+      "ok": true
+    },
+    {
+      "name": "fallback no overflow",
+      "ok": true
+    },
+    {
+      "name": "no browser errors",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screens": [
+    {
+      "name": "sp-cut1-before.jpg",
+      "scene": 0,
+      "phase": "approach",
+      "transform": {
+        "x": 17.207536913315153,
+        "y": 118.38021405427418,
+        "rotation": -4.999664144861188,
+        "scale": 1.7499496217291781
+      },
+      "unit": 1.947867298578199
+    },
+    {
+      "name": "sp-cut1-after.jpg",
+      "scene": 1,
+      "phase": "pull",
+      "transform": {
+        "x": 163.5940439445183,
+        "y": -225.46767329985062,
+        "rotation": 4.999850573343182,
+        "scale": 1.7499775860014775
+      },
+      "unit": 1.9514218009478672
+    },
+    {
+      "name": "sp-cut2-before.jpg",
+      "scene": 1,
+      "phase": "approach",
+      "transform": {
+        "x": 151.1638698762228,
+        "y": -224.41573642836312,
+        "rotation": 2.9996055351055912,
+        "scale": 1.6999079581913046
+      },
+      "unit": 4.0225118483412325
+    },
+    {
+      "name": "sp-cut2-after.jpg",
+      "scene": 2,
+      "phase": "pull",
+      "transform": {
+        "x": 16.27621446310887,
+        "y": 57.23285754491641,
+        "rotation": -2.999676956726399,
+        "scale": 1.6999246232361598
+      },
+      "unit": 4.027251184834123
+    },
+    {
+      "name": "sp-cut3-before.jpg",
+      "scene": 2,
+      "phase": "approach",
+      "transform": {
+        "x": 18.204716555159187,
+        "y": 54.805221261215586,
+        "rotation": -5.499170075871326,
+        "scale": 1.6499019180575203
+      },
+      "unit": 5.947867298578199
+    },
+    {
+      "name": "sp-cut3-after.jpg",
+      "scene": 3,
+      "phase": "pull",
+      "transform": {
+        "x": 72.54224945085947,
+        "y": 52.235321829109644,
+        "rotation": 5.499630559347307,
+        "scale": 1.6499563388319545
+      },
+      "unit": 5.951421800947867
+    },
+    {
+      "name": "sp-cut4-before.jpg",
+      "scene": 3,
+      "phase": "approach",
+      "transform": {
+        "x": 74.95840994153579,
+        "y": 58.052473688686895,
+        "rotation": 7.499496217291781,
+        "scale": 1.7499496217291781
+      },
+      "unit": 7.873222748815166
+    },
+    {
+      "name": "sp-cut4-after.jpg",
+      "scene": 4,
+      "phase": "pull",
+      "transform": {
+        "x": 42.66269796873768,
+        "y": 114.91598879417518,
+        "rotation": -7.499496217291781,
+        "scale": 1.7499496217291781
+      },
+      "unit": 7.876777251184834
+    },
+    {
+      "name": "pc-cut1-before.jpg",
+      "scene": 0,
+      "phase": "approach",
+      "transform": {
+        "x": -73.14632453258116,
+        "y": 120.17458440634277,
+        "rotation": -4.999635406376249,
+        "scale": 1.7499453109564373
+      },
+      "unit": 1.9477777777777778
+    },
+    {
+      "name": "pc-cut1-after.jpg",
+      "scene": 1,
+      "phase": "pull",
+      "transform": {
+        "x": -498.6300625054221,
+        "y": -171.85353961364615,
+        "rotation": 4.999635406376248,
+        "scale": 1.7499453109564373
+      },
+      "unit": 1.9522222222222223
+    },
+    {
+      "name": "pc-cut2-before.jpg",
+      "scene": 1,
+      "phase": "approach",
+      "transform": {
+        "x": -492.45090247111114,
+        "y": -111.90195945876538,
+        "rotation": 0,
+        "scale": 1.699958641426612
+      },
+      "unit": 4.023333333333333
+    },
+    {
+      "name": "pc-cut2-after.jpg",
+      "scene": 2,
+      "phase": "pull",
+      "transform": {
+        "x": -272.14391978666674,
+        "y": -251.7794087822223,
+        "rotation": 0,
+        "scale": 1.699958641426612
+      },
+      "unit": 4.026666666666666
+    },
+    {
+      "name": "pc-cut3-before.jpg",
+      "scene": 2,
+      "phase": "approach",
+      "transform": {
+        "x": -419.9149644167517,
+        "y": -215.5819010023858,
+        "rotation": -3.9993448153228672,
+        "scale": 1.649893532489966
+      },
+      "unit": 5.947777777777778
+    },
+    {
+      "name": "pc-cut3-after.jpg",
+      "scene": 3,
+      "phase": "pull",
+      "transform": {
+        "x": -255.92116475271854,
+        "y": 254.26559967488566,
+        "rotation": 3.9993448153228677,
+        "scale": 1.649893532489966
+      },
+      "unit": 5.952222222222222
+    },
+    {
+      "name": "pc-cut4-before.jpg",
+      "scene": 3,
+      "phase": "approach",
+      "transform": {
+        "x": -300.24632734286325,
+        "y": 237.2400431122669,
+        "rotation": 10.499379621399177,
+        "scale": 1.7499556872427984
+      },
+      "unit": 7.873333333333333
+    },
+    {
+      "name": "pc-cut4-after.jpg",
+      "scene": 4,
+      "phase": "pull",
+      "transform": {
+        "x": -105.51454282799935,
+        "y": 122.06655832729682,
+        "rotation": -10.499379621399177,
+        "scale": 1.7499556872427984
+      },
+      "unit": 7.876666666666667
+    }
+  ],
+  "sp": {
+    "timeline": {
+      "rests": [
+        1.5,
+        1.25,
+        1.25,
+        1.25,
+        1.5
+      ],
+      "transitions": [
+        0.9,
+        0.75,
+        0.6,
+        0.75
+      ],
+      "cuts": [
+        {
+          "from": 0,
+          "to": 1,
+          "unit": 1.95,
+          "progress": 0.19999999999999998
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "unit": 4.025,
+          "progress": 0.41282051282051285
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "unit": 5.95,
+          "progress": 0.6102564102564103
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "unit": 7.875,
+          "progress": 0.8076923076923077
+        }
+      ],
+      "segments": [
+        {
+          "phase": "rest",
+          "scene": 0,
+          "start": 0,
+          "end": 1.5
+        },
+        {
+          "phase": "transition",
+          "scene": 0,
+          "start": 1.5,
+          "end": 2.4
+        },
+        {
+          "phase": "rest",
+          "scene": 1,
+          "start": 2.4,
+          "end": 3.65
+        },
+        {
+          "phase": "transition",
+          "scene": 1,
+          "start": 3.65,
+          "end": 4.4
+        },
+        {
+          "phase": "rest",
+          "scene": 2,
+          "start": 4.4,
+          "end": 5.65
+        },
+        {
+          "phase": "transition",
+          "scene": 2,
+          "start": 5.65,
+          "end": 6.25
+        },
+        {
+          "phase": "rest",
+          "scene": 3,
+          "start": 6.25,
+          "end": 7.5
+        },
+        {
+          "phase": "transition",
+          "scene": 3,
+          "start": 7.5,
+          "end": 8.25
+        },
+        {
+          "phase": "rest",
+          "scene": 4,
+          "start": 8.25,
+          "end": 9.75
+        }
+      ],
+      "total": 9.75
+    },
+    "phases": [
+      "rest",
+      "approach",
+      "pull"
+    ]
+  },
+  "pc": {
+    "timeline": {
+      "rests": [
+        1.5,
+        1.25,
+        1.25,
+        1.25,
+        1.5
+      ],
+      "transitions": [
+        0.9,
+        0.75,
+        0.6,
+        0.75
+      ],
+      "cuts": [
+        {
+          "from": 0,
+          "to": 1,
+          "unit": 1.95,
+          "progress": 0.19999999999999998
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "unit": 4.025,
+          "progress": 0.41282051282051285
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "unit": 5.95,
+          "progress": 0.6102564102564103
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "unit": 7.875,
+          "progress": 0.8076923076923077
+        }
+      ],
+      "segments": [
+        {
+          "phase": "rest",
+          "scene": 0,
+          "start": 0,
+          "end": 1.5
+        },
+        {
+          "phase": "transition",
+          "scene": 0,
+          "start": 1.5,
+          "end": 2.4
+        },
+        {
+          "phase": "rest",
+          "scene": 1,
+          "start": 2.4,
+          "end": 3.65
+        },
+        {
+          "phase": "transition",
+          "scene": 1,
+          "start": 3.65,
+          "end": 4.4
+        },
+        {
+          "phase": "rest",
+          "scene": 2,
+          "start": 4.4,
+          "end": 5.65
+        },
+        {
+          "phase": "transition",
+          "scene": 2,
+          "start": 5.65,
+          "end": 6.25
+        },
+        {
+          "phase": "rest",
+          "scene": 3,
+          "start": 6.25,
+          "end": 7.5
+        },
+        {
+          "phase": "transition",
+          "scene": 3,
+          "start": 7.5,
+          "end": 8.25
+        },
+        {
+          "phase": "rest",
+          "scene": 4,
+          "start": 8.25,
+          "end": 9.75
+        }
+      ],
+      "total": 9.75
+    },
+    "phases": [
+      "rest",
+      "approach",
+      "pull"
+    ]
+  }
+}
