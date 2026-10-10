@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-10T15:29:22.042Z",
+  "url": "https://karisyacho.github.io/awai-film-20261010/?v=bc888b87dfd0",
+  "commit": "b929157574090dc985862541cc107921c5183aaa",
+  "version": "bc888b87dfd0",
+  "contentChecks": [
+    {
+      "file": "index.html",
+      "sha256": "c747bd41217d857a749dba7d0776d392c2dc65cd7dbd9fd0f9bc63066164199c"
+    },
+    {
+      "file": "film.css",
+      "sha256": "10274c34a47ecabd204045a3288a606b3adddc2ceed5ad39e51c5296c60932ae"
+    },
+    {
+      "file": "film.js",
+      "sha256": "9541d667162bce0310e3488756d183b0289eac2712fe103e957ba373a8bb8d3e"
+    },
+    {
+      "file": "FilmStage.js",
+      "sha256": "b6c8a26763030abba45c6ea83e77ca454f7812db738386b22cc35b979388962d"
+    },
+    {
+      "file": "lib/film.js",
+      "sha256": "cfa020bc5f6e196363e224a6439858b96b0b942fff7bf64cc15d17573e778e9c"
+    },
+    {
+      "file": "lib/config.js",
+      "sha256": "09e95646ce09d2dad299ba9b383f95d2e72cba0da4c2f0b1308e42c1730420bf"
+    },
+    {
+      "file": "lib/washi.js",
+      "sha256": "be82cd0a89bfcde31d2de7a559eb1b23b8e08bf67c558e4e277bfb3ac8c9df40"
+    }
+  ],
+  "states": [
+    "s0-membrane",
+    "seam-01",
+    "s1-suketo",
+    "seam-12",
+    "s2-kasane",
+    "seam-23",
+    "s3-aima",
+    "seam-34",
+    "s4-paper"
+  ],
+  "ending": true,
+  "href": "https://www.instagram.com/shacho_kari/",
+  "reviewImages": 84,
+  "video": {
+    "duration": 78.4,
+    "width": 390,
+    "height": 844,
+    "time": 0.173634,
+    "ready": 4
+  },
+  "errors": [],
+  "physicalPhone": false
+}

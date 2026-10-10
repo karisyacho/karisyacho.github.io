@@ -383,6 +383,21 @@
       "sha256": "a5017847794d322a03362b171fabe40996dbacb5e02d0e76f0e21ad10bcc7d31"
     },
     {
+      "path": "evidence/live-ending.jpg",
+      "bytes": 35522,
+      "sha256": "a84c22bd5064a06cdd183fdcf257b2639f6b8731eeea3feca4c043101ed0c475"
+    },
+    {
+      "path": "evidence/live-interactive.json",
+      "bytes": 1505,
+      "sha256": "78388649495cd242e8dc541a7993abed49f0c0cf972fc78e1be8cb0f59344faf"
+    },
+    {
+      "path": "evidence/live-review.jpg",
+      "bytes": 41149,
+      "sha256": "a8936bb799864972a76644e6dbdd49b82c8e8ef40cc41bece8b961179a9f6c81"
+    },
+    {
       "path": "evidence/mobile-interactive.mp4",
       "bytes": 4800990,
       "sha256": "36bc87c3f262ad2f0e5076ea79181c011c869aee3afc77a024f5886e96b7ebdf"
@@ -836,6 +851,11 @@
       "path": "verify-interactive.cjs",
       "bytes": 8133,
       "sha256": "b180e0bd313490733b3156c9aca9168bc9ad15fbca6d0006db00b421e5a6cee5"
+    },
+    {
+      "path": "verify-published.cjs",
+      "bytes": 3194,
+      "sha256": "48735423d2c8d3de4b98bd45f7cdddf7f3451a9c53bf2f2227adf4366d7de7c5"
     }
   ]
 }
