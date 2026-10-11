@@ -1,6 +1,6 @@
 {
-  "at": "2026-10-11T07:43:07.466Z",
-  "source": "page@6babbf85a3547a840cc84a8779ff0c49.webm",
+  "at": "2026-10-11T08:18:31.718Z",
+  "source": "page@7f571eaa259e93210ef242ac8b75fabc.webm",
   "output": "mobile-interactive.mp4",
   "scrollDurationSeconds": 75,
   "viewport": {
@@ -10,5 +10,5 @@
   "inputs": "scrollTo only; no intervention",
   "scrollSteps": 690,
   "ffmpegExit": 0,
-  "bytes": 5103646
+  "bytes": 4802969
 }

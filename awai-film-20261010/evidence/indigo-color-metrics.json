@@ -1,19 +1,47 @@
 {
-  "formula": "Y=.2126R+.7152G+.0722B; c=min(.9Y+.15max(B-R,0),(255-Y)/1.370859); RGB=(Y-.6c,Y+.04c,Y+1.370859c); black=.45Y",
+  "formula": "元Y=.2126R+.7152G+.0722B; black=.55元Y; palette=#181B39→#2A2E4E→#165E83; targetY=min(.90×blackY,paletteY)。灰混合6〜12%、既存藍筋は灰混合を減らす。lossless WebP。",
   "rows": [
     {
       "size": "pc",
       "pixels": 1572732,
-      "meanLuminanceChangeFromG1": 1.2900555521225188,
-      "meanBlueMinusRed": 63.74396337074594,
-      "pixelsContrastAtLeast12Percent": 94.23964159182874
+      "beforeMeanY": 20.997616249939597,
+      "indigoMeanY": 18.293160561031446,
+      "meanDeltaY": -2.7044556889081504,
+      "maxPerPixelYIncrease": 0.21659999999999968,
+      "pixelsYIncreaseOver3": 0,
+      "medianBlueMinusRed": 13,
+      "blueMinusRedAtLeast12Percent": 55.32417474814527,
+      "brightest": {
+        "Y": 81.7762,
+        "RGB": [
+          29,
+          93,
+          126
+        ]
+      },
+      "conditionY": true,
+      "conditionMedianBlue": true
     },
     {
       "size": "sp",
       "pixels": 1572732,
-      "meanLuminanceChangeFromG1": 1.0638147062564998,
-      "meanBlueMinusRed": 75.32168354176045,
-      "pixelsContrastAtLeast12Percent": 98.09376295516337
+      "beforeMeanY": 23.422981156357217,
+      "indigoMeanY": 20.67354846507691,
+      "meanDeltaY": -2.7494326912803086,
+      "maxPerPixelYIncrease": 0.21659999999999968,
+      "pixelsYIncreaseOver3": 0,
+      "medianBlueMinusRed": 18,
+      "blueMinusRedAtLeast12Percent": 70.08613037694916,
+      "brightest": {
+        "Y": 80.98880000000001,
+        "RGB": [
+          29,
+          92,
+          125
+        ]
+      },
+      "conditionY": true,
+      "conditionMedianBlue": true
     }
   ]
 }

@@ -36,17 +36,23 @@ async function main() {
     for(let i=0;i<indigo.length;i+=3){
       const r=original.data[i],g=original.data[i+1],b=original.data[i+2];
       const y=.2126*r+.7152*g+.0722*b;
-      // Zero-luminance chroma vector: retain folds/fibers, add a deep blue hue.
-      // Original blue streaks increase chroma instead of being neutralized.
-      const c=Math.min(.90*y+Math.max(0,b-r)*.15,(255-y)/1.370859);
-      indigo[i]=Math.round(y-.60*c);indigo[i+1]=Math.round(y+.04*c);indigo[i+2]=Math.round(y+1.370859*c);
-      black[i]=black[i+1]=black[i+2]=Math.round(y*.45);
+      // Ink palette: navy shadows, muted indigo highlights. The original folds
+      // control luminance; existing blue veins retain slightly more chroma.
+      const dark=[24,27,57],middle=[42,46,78],high=[22,94,131];
+      const t=y<100?Math.max(0,Math.min(1,(y-40)/60)):Math.min(1,(y-100)/110);
+      const lo=y<100?dark:middle,hi=y<100?middle:high;
+      const palette=lo.map((v,k)=>v+(hi[k]-v)*t);
+      const paletteY=.2126*palette[0]+.7152*palette[1]+.0722*palette[2];
+      const gray=.12-.06*Math.max(0,Math.min(1,(b-r)/80));
+      const targetY=Math.min(y*.55*.90,paletteY),scale=paletteY?targetY/paletteY:0;
+      for(let k=0;k<3;k++)indigo[i+k]=Math.round((palette[k]*(1-gray)+paletteY*gray)*scale);
+      black[i]=black[i+1]=black[i+2]=Math.round(y*.55);
     }
-    await sharp(black,{raw:{width:original.info.width,height:original.info.height,channels:3}}).webp({quality:90,effort:5}).toFile(path.join(out,name));
-    await record(name,src,'同じ画素の輝度Y=0.2126R+0.7152G+0.0722Bを0.45倍、無彩色の黒布','仮');
+    await sharp(black,{raw:{width:original.info.width,height:original.info.height,channels:3}}).webp({lossless:true,effort:5}).toFile(path.join(out,name));
+    await record(name,src,'同じG1画素の輝度Yを0.55倍、無彩色の黒布。色差の余地を残すため元0.45から変更。lossless WebP','仮');
     name=`s3-${viewport}-indigo.webp`;
-    await sharp(indigo,{raw:{width:original.info.width,height:original.info.height,channels:3}}).webp({quality:94,effort:5}).toFile(path.join(out,name));
-    await record(name,src,'G1 から色処理・仮。Y維持、c=min(0.90Y+0.15max(B-R,0),(255-Y)/1.370859)、RGB=(Y-0.60c,Y+0.04c,Y+1.370859c)。既存の藍筋は彩度に加算','仮');
+    await sharp(indigo,{raw:{width:original.info.width,height:original.info.height,channels:3}}).webp({lossless:true,effort:5}).toFile(path.join(out,name));
+    await record(name,src,'G1 から色処理・仮。#181B39→#2A2E4E→#165E83の灰みの藍へ、targetY=min(0.90×0.55×元Y,paletteY)。灰混合6〜12%。既存藍筋は灰混合を減らす。同じ画素・lossless WebP','仮');
     const width=viewport==='pc'?1280:731, height=viewport==='pc'?731:1280;
     for(let layer=0;layer<3;layer++) {
       const credit=fabric[layer===0?0:1];
@@ -73,9 +79,8 @@ async function main() {
   const totalBytes=entries.reduce((n,e)=>n+e.bytes,0);
   fs.writeFileSync(path.join(__dirname,'asset-manifest.json'),JSON.stringify({processed:'2026-10-11',totalBytes,entries},null,2)+'\n');
   const rows=entries.map(e=>`| ${e.file} | ${e.sourceURL||e.source} | ${e.author} | ${e.license} | ${e.acquired}（加工 ${e.processed}） | ${e.status} | ${e.transform} |`);
-  const ledger=['# 通し版素材台帳','','新しい画像生成は行っていない。元G1 10枚はSHA-256でbyte一致を確認。','','- G1：本人制作物、今回の使用承認。助任珈琲豆店・KASANE・AIMAはコンセプト制作。実在の受注事例として表記しない。','- G0布：docs/awai/01-assets.md の US-fabric-linen / US-fabric-rib、site-kasane/CREDITS.md が根拠。無料Unsplash写真、加工済み原素材。Unsplash+不使用。','- S2仮素材：G0写真の明度で抜いた独立alpha 3層。G1の稜線方向へ寄せた切抜きであり、G1の繊細な透け布を完全再現する素材ではない。黒地でscreen合成を前提とする。','- S3：G1 から色処理・仮。2026-10-11本人承認。元画像・黒布・全面藍は同じ画素から作り皺が一致。全面藍は元の輝度を維持し、既存藍筋は彩度へ加算。圧縮と丸めの差はあり。','- 原素材の取得日は既存資料に記載がなく不明。今回の加工日は原取得日と区別して記録。','','| ファイル | 出典URL/内部出典 | 作者 | ライセンス/使用根拠 | 取得日 | 状態 | 加工 |','|---|---|---|---|---|---|---|',...rows,'',`画像合計：${entries.length}点 / ${totalBytes} bytes（${(totalBytes/1048576).toFixed(2)} MiB）。`,'','再加工：このフォルダで `node prepare-assets.cjs`。asset-manifest.json に寸法・alpha・SHA-256・容量を記録。',''];
+  const ledger=['# 通し版素材台帳','','新しい画像生成は行っていない。元G1 10枚はSHA-256でbyte一致を確認。','','- G1：本人制作物、今回の使用承認。助任珈琲豆店・KASANE・AIMAはコンセプト制作。実在の受注事例として表記しない。','- G0布：docs/awai/01-assets.md の US-fabric-linen / US-fabric-rib、site-kasane/CREDITS.md が根拠。無料Unsplash写真、加工済み原素材。Unsplash+不使用。','- S2仮素材：G0写真の明度で抜いた独立alpha 3層。G1の稜線方向へ寄せた切抜きであり、G1の繊細な透け布を完全再現する素材ではない。黒地でscreen合成を前提とする。','- S3：G1 から色処理・仮。2026-10-11本人承認。元画像・黒布・全面藍は同じ画素から作り皺が一致。全面藍は黒布より明るくせず、濃紺から灰みの藍へ移す。元の明暗から陰影を保持し、既存藍筋は灰混合を減らす。lossless WebP・丸めの差あり。','- 原素材の取得日は既存資料に記載がなく不明。今回の加工日は原取得日と区別して記録。','','| ファイル | 出典URL/内部出典 | 作者 | ライセンス/使用根拠 | 取得日 | 状態 | 加工 |','|---|---|---|---|---|---|---|',...rows,'',`画像合計：${entries.length}点 / ${totalBytes} bytes（${(totalBytes/1048576).toFixed(2)} MiB）。`,'','再加工：このフォルダで `node prepare-assets.cjs`。asset-manifest.json に寸法・alpha・SHA-256・容量を記録。',''];
   fs.writeFileSync(path.join(__dirname,'assets-ledger.md'),ledger.join('\n'));
   console.log(JSON.stringify({images:entries.length,totalBytes,totalMiB:(totalBytes/1048576).toFixed(2),derivatives:entries.filter(e=>e.transform!=='元画像をbyte一致でコピー').map(e=>({file:e.file,bytes:e.bytes,alpha:e.alpha}))}));
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
-

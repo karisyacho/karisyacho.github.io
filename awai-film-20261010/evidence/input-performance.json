@@ -3,259 +3,259 @@
     {
       "name": "pointerdown",
       "duration": 48,
-      "interactionId": 9472,
-      "start": 588.5,
-      "processing": 0.40000000037252903
+      "interactionId": 5719,
+      "start": 546.9000000003725,
+      "processing": 0.2999999988824129
     },
     {
       "name": "pointerup",
       "duration": 48,
-      "interactionId": 9472,
-      "start": 1094.199999999255,
+      "interactionId": 5719,
+      "start": 1061.199999999255,
+      "processing": 0.30000000074505806
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "interactionId": 5719,
+      "start": 1061.199999999255,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 24,
+      "interactionId": 5726,
+      "start": 1978.0999999996275,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "pointerup",
+      "duration": 24,
+      "interactionId": 5726,
+      "start": 2489.9000000003725,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 24,
+      "interactionId": 5726,
+      "start": 2489.9000000003725,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 24,
+      "interactionId": 5733,
+      "start": 3374.5,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "pointerup",
+      "duration": 24,
+      "interactionId": 5733,
+      "start": 3889.0999999996275,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "interactionId": 5733,
+      "start": 3889.0999999996275,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 24,
+      "interactionId": 5740,
+      "start": 4823.5999999996275,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "pointerup",
+      "duration": 24,
+      "interactionId": 5740,
+      "start": 5336.4000000003725,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "click",
+      "duration": 24,
+      "interactionId": 5740,
+      "start": 5336.4000000003725,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 40,
+      "interactionId": 5747,
+      "start": 6219,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "pointerup",
+      "duration": 48,
+      "interactionId": 5747,
+      "start": 6515.5,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "interactionId": 5747,
+      "start": 6515.5,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 56,
+      "interactionId": 5754,
+      "start": 6976.799999998882,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "pointerup",
+      "duration": 56,
+      "interactionId": 5754,
+      "start": 7289.299999998882,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 72,
+      "interactionId": 5754,
+      "start": 7289.299999998882,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "pointerdown",
+      "duration": 56,
+      "interactionId": 5761,
+      "start": 7755.799999998882,
+      "processing": 0
+    },
+    {
+      "name": "pointerup",
+      "duration": 48,
+      "interactionId": 5761,
+      "start": 8065.5999999996275,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "interactionId": 5761,
+      "start": 8065.5999999996275,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 56,
+      "interactionId": 5768,
+      "start": 8515,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "pointerup",
+      "duration": 56,
+      "interactionId": 5768,
+      "start": 8825.199999999255,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "interactionId": 5768,
+      "start": 8825.199999999255,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 64,
+      "interactionId": 5775,
+      "start": 9275.900000000373,
+      "processing": 0.19999999925494194
+    },
+    {
+      "name": "pointerup",
+      "duration": 48,
+      "interactionId": 5775,
+      "start": 9587.900000000373,
+      "processing": 0
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "interactionId": 5775,
+      "start": 9587.900000000373,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 56,
+      "interactionId": 5782,
+      "start": 10036.299999998882,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "pointerup",
+      "duration": 48,
+      "interactionId": 5782,
+      "start": 10347.900000000373,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "interactionId": 5782,
+      "start": 10347.900000000373,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 64,
+      "interactionId": 5789,
+      "start": 10799.099999999627,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "pointerup",
+      "duration": 64,
+      "interactionId": 5789,
+      "start": 11126.299999998882,
+      "processing": 0.09999999962747097
+    },
+    {
+      "name": "click",
+      "duration": 80,
+      "interactionId": 5789,
+      "start": 11126.299999998882,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "duration": 48,
+      "interactionId": 5796,
+      "start": 11596.199999999255,
+      "processing": 0.10000000149011612
+    },
+    {
+      "name": "pointerup",
+      "duration": 64,
+      "interactionId": 5796,
+      "start": 11904.5,
       "processing": 0.19999999925494194
     },
     {
       "name": "click",
-      "duration": 56,
-      "interactionId": 9472,
-      "start": 1094.199999999255,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 24,
-      "interactionId": 9479,
-      "start": 2062.5999999996275,
-      "processing": 0
-    },
-    {
-      "name": "pointerup",
-      "duration": 24,
-      "interactionId": 9479,
-      "start": 2570.4000000003725,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 24,
-      "interactionId": 9479,
-      "start": 2570.4000000003725,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 16,
-      "interactionId": 9486,
-      "start": 3456.9000000003725,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "pointerup",
-      "duration": 24,
-      "interactionId": 9486,
-      "start": 3969.5,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 24,
-      "interactionId": 9486,
-      "start": 3969.5,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 24,
-      "interactionId": 9493,
-      "start": 4852.5999999996275,
-      "processing": 0.10000000149011612
-    },
-    {
-      "name": "pointerup",
-      "duration": 24,
-      "interactionId": 9493,
-      "start": 5363.0999999996275,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "click",
-      "duration": 24,
-      "interactionId": 9493,
-      "start": 5363.0999999996275,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 32,
-      "interactionId": 9500,
-      "start": 6238.4000000003725,
-      "processing": 0.10000000149011612
-    },
-    {
-      "name": "pointerup",
-      "duration": 48,
-      "interactionId": 9500,
-      "start": 6530.5999999996275,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 64,
-      "interactionId": 9500,
-      "start": 6530.5999999996275,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 64,
-      "interactionId": 9507,
-      "start": 6976.5,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "pointerup",
-      "duration": 40,
-      "interactionId": 9507,
-      "start": 7286.199999999255,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 56,
-      "interactionId": 9507,
-      "start": 7286.199999999255,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 56,
-      "interactionId": 9514,
-      "start": 7737.199999999255,
-      "processing": 0
-    },
-    {
-      "name": "pointerup",
-      "duration": 56,
-      "interactionId": 9514,
-      "start": 8048.799999998882,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 56,
-      "interactionId": 9514,
-      "start": 8048.799999998882,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 56,
-      "interactionId": 9521,
-      "start": 8497.400000000373,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "pointerup",
-      "duration": 56,
-      "interactionId": 9521,
-      "start": 8806.299999998882,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 56,
-      "interactionId": 9521,
-      "start": 8806.299999998882,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 64,
-      "interactionId": 9528,
-      "start": 9254.5,
-      "processing": 0.2000000011175871
-    },
-    {
-      "name": "pointerup",
-      "duration": 56,
-      "interactionId": 9528,
-      "start": 9563.699999999255,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 72,
-      "interactionId": 9528,
-      "start": 9563.699999999255,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 56,
-      "interactionId": 9535,
-      "start": 10027.199999999255,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "pointerup",
-      "duration": 64,
-      "interactionId": 9535,
-      "start": 10339.900000000373,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 72,
-      "interactionId": 9535,
-      "start": 10339.900000000373,
-      "processing": 0
-    },
-    {
-      "name": "pointerdown",
-      "duration": 48,
-      "interactionId": 9542,
-      "start": 10803.400000000373,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "pointerup",
-      "duration": 56,
-      "interactionId": 9542,
-      "start": 11113.599999999627,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "click",
-      "duration": 64,
-      "interactionId": 9542,
-      "start": 11113.599999999627,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "pointerdown",
-      "duration": 48,
-      "interactionId": 9549,
-      "start": 11577,
-      "processing": 0.09999999962747097
-    },
-    {
-      "name": "pointerup",
-      "duration": 64,
-      "interactionId": 9549,
-      "start": 11887.400000000373,
-      "processing": 0
-    },
-    {
-      "name": "click",
-      "duration": 72,
-      "interactionId": 9549,
-      "start": 11887.400000000373,
+      "duration": 80,
+      "interactionId": 5796,
+      "start": 11904.5,
       "processing": 0
     }
   ],
   "interactionCount": 12,
   "eventTimingRecordedInteractions": 12,
-  "labInteractionP98Ms": 72,
+  "labInteractionP98Ms": 80,
   "render": {
     "scene": "s0-membrane",
     "p": 0.14302640485714285,
@@ -271,7 +271,7 @@
       {
         "x": 0.5,
         "y": 0.4146919431279621,
-        "born": 3457.5
+        "born": 3375.199999999255
       }
     ],
     "activeStains": 0,
@@ -280,12 +280,21 @@
     "strength": 0,
     "interaction": "rest",
     "visible": true,
-    "raf": 1179,
+    "raf": 1147,
     "lowQuality": false,
-    "frames": 1178,
-    "meanRenderMs": 8.11926994906304,
-    "maxRenderMs": 72,
-    "lastRenderMs": 12.799999998882413
+    "warmReady": true,
+    "decodeAt": 269.09999999962747,
+    "qualitySampleCount": 1055,
+    "qualityLevel": 0,
+    "qualityMeanMs": 13.690000000037253,
+    "qualityWindowFrames": 30,
+    "qualityEvents": [],
+    "maskWidth": 160,
+    "haloScale": 1,
+    "frames": 1146,
+    "meanRenderMs": 8.55907504361961,
+    "maxRenderMs": 77.09999999962747,
+    "lastRenderMs": 12.900000000372529
   },
   "environment": "Chrome mobile emulation; native CDP touch, durationThreshold16ms. Laboratory EventTiming sample only; no field INP or physical phone result."
 }

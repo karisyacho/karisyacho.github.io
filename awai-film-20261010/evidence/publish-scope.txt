@@ -1,236 +1,126 @@
-awai-film-20261010/FilmStage.js                    |  100 +-
- awai-film-20261010/asset-manifest.json             |   46 +-
- awai-film-20261010/assets-ledger.md                |   10 +-
- awai-film-20261010/assets/s3-pc-black.webp         |  Bin 114544 -> 323612 bytes
- awai-film-20261010/assets/s3-pc-indigo.webp        |  Bin 0 -> 787714 bytes
- awai-film-20261010/assets/s3-sp-black.webp         |  Bin 69610 -> 284116 bytes
- awai-film-20261010/assets/s3-sp-indigo.webp        |  Bin 0 -> 702906 bytes
- awai-film-20261010/build-interactive-review.cjs    |   25 -
- awai-film-20261010/build-visibility-review.cjs     |   13 +
- awai-film-20261010/cleanup-obsolete.cjs            |   10 +
- awai-film-20261010/decision-log.md                 |   11 +-
- awai-film-20261010/evidence/320-closing.jpg        |  Bin 41754 -> 0 bytes
- .../evidence/checks-interactive.json               | 9302 +++++++++++++++-----
- awai-film-20261010/evidence/checks.json            | 2350 -----
- .../evidence/chromium-pc-center-s0-membrane.jpg    |  Bin 24052 -> 164038 bytes
- .../evidence/chromium-pc-center-s1-suketo.jpg      |  Bin 35700 -> 162085 bytes
- .../evidence/chromium-pc-center-s2-kasane.jpg      |  Bin 24950 -> 146899 bytes
- .../evidence/chromium-pc-center-s3-aima.jpg        |  Bin 63322 -> 314762 bytes
- .../evidence/chromium-pc-center-s4-paper.jpg       |  Bin 35568 -> 269327 bytes
- .../evidence/chromium-pc-center-seam-01.jpg        |  Bin 24762 -> 133351 bytes
- .../evidence/chromium-pc-center-seam-12.jpg        |  Bin 4888 -> 51507 bytes
- .../evidence/chromium-pc-center-seam-23.jpg        |  Bin 26866 -> 233254 bytes
- .../evidence/chromium-pc-center-seam-34.jpg        |  Bin 51307 -> 378325 bytes
- .../evidence/chromium-pc-s0-membrane-after.jpg     |  Bin 22851 -> 0 bytes
- .../evidence/chromium-pc-s0-membrane-before.jpg    |  Bin 24052 -> 0 bytes
- .../evidence/chromium-pc-s0-membrane-during.jpg    |  Bin 22706 -> 0 bytes
- .../evidence/chromium-pc-s0-ridge-after.png        |  Bin 0 -> 1183992 bytes
- .../evidence/chromium-pc-s0-ridge-before.png       |  Bin 0 -> 1203584 bytes
- .../evidence/chromium-pc-s0-ridge-during.png       |  Bin 0 -> 1201467 bytes
- .../evidence/chromium-pc-s0-upper-third-after.png  |  Bin 0 -> 1150491 bytes
- .../evidence/chromium-pc-s0-upper-third-before.png |  Bin 0 -> 1203584 bytes
- .../evidence/chromium-pc-s0-upper-third-during.png |  Bin 0 -> 1152742 bytes
- .../evidence/chromium-pc-s2-delayed-drag-after.png |  Bin 0 -> 1425398 bytes
- .../chromium-pc-s2-delayed-drag-before.png         |  Bin 0 -> 1446771 bytes
- .../chromium-pc-s2-delayed-drag-during.png         |  Bin 0 -> 1414249 bytes
- .../evidence/chromium-pc-s2-drag-after.png         |  Bin 0 -> 1434310 bytes
- .../evidence/chromium-pc-s2-drag-before.png        |  Bin 0 -> 1446771 bytes
- .../evidence/chromium-pc-s2-drag-during.png        |  Bin 0 -> 1414249 bytes
- .../evidence/chromium-pc-s2-kasane-after.jpg       |  Bin 23074 -> 0 bytes
- .../evidence/chromium-pc-s2-kasane-before.jpg      |  Bin 24369 -> 0 bytes
- .../evidence/chromium-pc-s2-kasane-during.jpg      |  Bin 21883 -> 0 bytes
- .../evidence/chromium-pc-s3-aima-after.jpg         |  Bin 59927 -> 0 bytes
- .../evidence/chromium-pc-s3-aima-before.jpg        |  Bin 59927 -> 0 bytes
- .../evidence/chromium-pc-s3-aima-during.jpg        |  Bin 59927 -> 0 bytes
- .../evidence/chromium-pc-s3-p015-after.png         |  Bin 0 -> 2389796 bytes
- .../evidence/chromium-pc-s3-p015-before.png        |  Bin 0 -> 1735635 bytes
- .../evidence/chromium-pc-s3-p015-during.png        |  Bin 0 -> 2389796 bytes
- .../evidence/chromium-pc-s3-p050-after.png         |  Bin 0 -> 2775175 bytes
- .../evidence/chromium-pc-s3-p050-before.png        |  Bin 0 -> 2169509 bytes
- .../evidence/chromium-pc-s3-p050-during.png        |  Bin 0 -> 2775175 bytes
- .../evidence/chromium-pc-s4-center-after.png       |  Bin 0 -> 2339580 bytes
- .../evidence/chromium-pc-s4-center-before.png      |  Bin 0 -> 2299052 bytes
- .../evidence/chromium-pc-s4-center-during.png      |  Bin 0 -> 2352286 bytes
- .../evidence/chromium-pc-s4-paper-after.jpg        |  Bin 33941 -> 0 bytes
- .../evidence/chromium-pc-s4-paper-before.jpg       |  Bin 34257 -> 0 bytes
- .../evidence/chromium-pc-s4-paper-during.jpg       |  Bin 33655 -> 0 bytes
- .../evidence/chromium-sp-center-s0-membrane.jpg    |  Bin 22761 -> 72069 bytes
- .../evidence/chromium-sp-center-s1-suketo.jpg      |  Bin 39253 -> 93655 bytes
- .../evidence/chromium-sp-center-s2-kasane.jpg      |  Bin 28958 -> 66889 bytes
- .../evidence/chromium-sp-center-s3-aima.jpg        |  Bin 53398 -> 108075 bytes
- .../evidence/chromium-sp-center-s4-paper.jpg       |  Bin 31787 -> 96237 bytes
- .../evidence/chromium-sp-center-seam-01.jpg        |  Bin 36562 -> 99693 bytes
- .../evidence/chromium-sp-center-seam-12.jpg        |  Bin 9882 -> 23641 bytes
- .../evidence/chromium-sp-center-seam-23.jpg        |  Bin 26861 -> 86683 bytes
- .../evidence/chromium-sp-center-seam-34.jpg        |  Bin 38150 -> 118033 bytes
- .../evidence/chromium-sp-s0-membrane-after.jpg     |  Bin 22298 -> 0 bytes
- .../evidence/chromium-sp-s0-membrane-before.jpg    |  Bin 22761 -> 0 bytes
- .../evidence/chromium-sp-s0-membrane-during.jpg    |  Bin 21954 -> 0 bytes
- .../evidence/chromium-sp-s0-ridge-after.png        |  Bin 0 -> 845167 bytes
- .../evidence/chromium-sp-s0-ridge-before.png       |  Bin 0 -> 786621 bytes
- .../evidence/chromium-sp-s0-ridge-during.png       |  Bin 0 -> 873115 bytes
- .../evidence/chromium-sp-s0-upper-third-after.png  |  Bin 0 -> 803624 bytes
- .../evidence/chromium-sp-s0-upper-third-before.png |  Bin 0 -> 786621 bytes
- .../evidence/chromium-sp-s0-upper-third-during.png |  Bin 0 -> 804611 bytes
- .../evidence/chromium-sp-s2-delayed-drag-after.png |  Bin 0 -> 646859 bytes
- .../chromium-sp-s2-delayed-drag-before.png         |  Bin 0 -> 646859 bytes
- .../chromium-sp-s2-delayed-drag-during.png         |  Bin 0 -> 651391 bytes
- .../evidence/chromium-sp-s2-drag-after.png         |  Bin 0 -> 646859 bytes
- .../evidence/chromium-sp-s2-drag-before.png        |  Bin 0 -> 646859 bytes
- .../evidence/chromium-sp-s2-drag-during.png        |  Bin 0 -> 647182 bytes
- .../evidence/chromium-sp-s2-kasane-after.jpg       |  Bin 28908 -> 0 bytes
- .../evidence/chromium-sp-s2-kasane-before.jpg      |  Bin 28958 -> 0 bytes
- .../evidence/chromium-sp-s2-kasane-during.jpg      |  Bin 28789 -> 0 bytes
- .../evidence/chromium-sp-s3-aima-after.jpg         |  Bin 53497 -> 0 bytes
- .../evidence/chromium-sp-s3-aima-before.jpg        |  Bin 53497 -> 0 bytes
- .../evidence/chromium-sp-s3-aima-during.jpg        |  Bin 53497 -> 0 bytes
- .../evidence/chromium-sp-s3-p015-after.png         |  Bin 0 -> 857179 bytes
- .../evidence/chromium-sp-s3-p015-before.png        |  Bin 0 -> 717341 bytes
- .../evidence/chromium-sp-s3-p015-during.png        |  Bin 0 -> 857179 bytes
- .../evidence/chromium-sp-s3-p050-after.png         |  Bin 0 -> 1047173 bytes
- .../evidence/chromium-sp-s3-p050-before.png        |  Bin 0 -> 907276 bytes
- .../evidence/chromium-sp-s3-p050-during.png        |  Bin 0 -> 1047173 bytes
- .../evidence/chromium-sp-s4-center-after.png       |  Bin 0 -> 1003684 bytes
- .../evidence/chromium-sp-s4-center-before.png      |  Bin 0 -> 986033 bytes
- .../evidence/chromium-sp-s4-center-during.png      |  Bin 0 -> 1005014 bytes
- .../evidence/chromium-sp-s4-paper-after.jpg        |  Bin 31338 -> 0 bytes
- .../evidence/chromium-sp-s4-paper-before.jpg       |  Bin 31787 -> 0 bytes
- .../evidence/chromium-sp-s4-paper-during.jpg       |  Bin 31034 -> 0 bytes
- awai-film-20261010/evidence/cut-sheet.jpg          |  Bin 632654 -> 0 bytes
- .../evidence/indigo-color-metrics.json             |   19 +
- awai-film-20261010/evidence/input-performance.json |  257 +-
- .../evidence/interactive-overview.jpg              |  Bin 101986 -> 0 bytes
- awai-film-20261010/evidence/lighthouse-mobile.json | 1213 +--
- awai-film-20261010/evidence/live-ending.jpg        |  Bin 35522 -> 0 bytes
- awai-film-20261010/evidence/live-interactive.json  |   59 -
- awai-film-20261010/evidence/live-review.jpg        |  Bin 41149 -> 0 bytes
- awai-film-20261010/evidence/mobile-interactive.mp4 |  Bin 4800990 -> 5103646 bytes
- awai-film-20261010/evidence/mobile-scroll.mp4      |  Bin 2642103 -> 0 bytes
- awai-film-20261010/evidence/no-js.jpg              |  Bin 176098 -> 0 bytes
- .../evidence/paper-center-metrics.json             |   33 +
- awai-film-20261010/evidence/pc-closing.jpg         |  Bin 332190 -> 0 bytes
- awai-film-20261010/evidence/pc-cut1-after.jpg      |  Bin 171918 -> 0 bytes
- awai-film-20261010/evidence/pc-cut1-before.jpg     |  Bin 237525 -> 0 bytes
- awai-film-20261010/evidence/pc-cut2-after.jpg      |  Bin 180427 -> 0 bytes
- awai-film-20261010/evidence/pc-cut2-before.jpg     |  Bin 170382 -> 0 bytes
- awai-film-20261010/evidence/pc-cut3-after.jpg      |  Bin 426610 -> 0 bytes
- awai-film-20261010/evidence/pc-cut3-before.jpg     |  Bin 201151 -> 0 bytes
- awai-film-20261010/evidence/pc-cut4-after.jpg      |  Bin 288953 -> 0 bytes
- awai-film-20261010/evidence/pc-cut4-before.jpg     |  Bin 426700 -> 0 bytes
- awai-film-20261010/evidence/pc-opening.jpg         |  Bin 204020 -> 0 bytes
- awai-film-20261010/evidence/publish-scope.txt      |    6 +
- .../evidence/recording-interactive.json            |   13 +-
- awai-film-20261010/evidence/recording.json         |   10 -
- awai-film-20261010/evidence/removed-files.json     |   86 +
- .../evidence/screenshot-presentation.json          |   16 -
- awai-film-20261010/evidence/sp-closing.jpg         |  Bin 59407 -> 0 bytes
- awai-film-20261010/evidence/sp-cut1-after.jpg      |  Bin 69811 -> 0 bytes
- awai-film-20261010/evidence/sp-cut1-before.jpg     |  Bin 74110 -> 0 bytes
- awai-film-20261010/evidence/sp-cut2-after.jpg      |  Bin 81326 -> 0 bytes
- awai-film-20261010/evidence/sp-cut2-before.jpg     |  Bin 69302 -> 0 bytes
- awai-film-20261010/evidence/sp-cut3-after.jpg      |  Bin 151784 -> 0 bytes
- awai-film-20261010/evidence/sp-cut3-before.jpg     |  Bin 82419 -> 0 bytes
- awai-film-20261010/evidence/sp-cut4-after.jpg      |  Bin 80763 -> 0 bytes
- awai-film-20261010/evidence/sp-cut4-before.jpg     |  Bin 149429 -> 0 bytes
- awai-film-20261010/evidence/sp-opening.jpg         |  Bin 42070 -> 0 bytes
- .../evidence/throttled-performance.json            | 1072 +++
- awai-film-20261010/evidence/visibility-contact.png |  Bin 0 -> 828960 bytes
- .../evidence/webkit-pc-center-s0-membrane.jpg      |  Bin 24077 -> 164105 bytes
- .../evidence/webkit-pc-center-s1-suketo.jpg        |  Bin 35693 -> 162067 bytes
- .../evidence/webkit-pc-center-s2-kasane.jpg        |  Bin 24888 -> 146950 bytes
- .../evidence/webkit-pc-center-s3-aima.jpg          |  Bin 63414 -> 315301 bytes
- .../evidence/webkit-pc-center-s4-paper.jpg         |  Bin 35549 -> 268199 bytes
- .../evidence/webkit-pc-center-seam-01.jpg          |  Bin 24724 -> 132306 bytes
- .../evidence/webkit-pc-center-seam-12.jpg          |  Bin 8176 -> 61799 bytes
- .../evidence/webkit-pc-center-seam-23.jpg          |  Bin 26930 -> 232259 bytes
- .../evidence/webkit-pc-center-seam-34.jpg          |  Bin 51273 -> 375886 bytes
- .../evidence/webkit-pc-s0-membrane-after.jpg       |  Bin 22830 -> 0 bytes
- .../evidence/webkit-pc-s0-membrane-before.jpg      |  Bin 23006 -> 0 bytes
- .../evidence/webkit-pc-s0-membrane-during.jpg      |  Bin 22774 -> 0 bytes
- .../evidence/webkit-pc-s0-ridge-after.png          |  Bin 0 -> 1245668 bytes
- .../evidence/webkit-pc-s0-ridge-before.png         |  Bin 0 -> 1247208 bytes
- .../evidence/webkit-pc-s0-ridge-during.png         |  Bin 0 -> 1247208 bytes
- .../evidence/webkit-pc-s0-upper-third-after.png    |  Bin 0 -> 1203356 bytes
- .../evidence/webkit-pc-s0-upper-third-before.png   |  Bin 0 -> 1247208 bytes
- .../evidence/webkit-pc-s0-upper-third-during.png   |  Bin 0 -> 1247208 bytes
- .../evidence/webkit-pc-s2-delayed-drag-after.png   |  Bin 0 -> 1496956 bytes
- .../evidence/webkit-pc-s2-delayed-drag-before.png  |  Bin 0 -> 1523412 bytes
- .../evidence/webkit-pc-s2-delayed-drag-during.png  |  Bin 0 -> 1491511 bytes
- .../evidence/webkit-pc-s2-drag-after.png           |  Bin 0 -> 1520601 bytes
- .../evidence/webkit-pc-s2-drag-before.png          |  Bin 0 -> 1523412 bytes
- .../evidence/webkit-pc-s2-drag-during.png          |  Bin 0 -> 1491511 bytes
- .../evidence/webkit-pc-s2-kasane-after.jpg         |  Bin 23152 -> 0 bytes
- .../evidence/webkit-pc-s2-kasane-before.jpg        |  Bin 24349 -> 0 bytes
- .../evidence/webkit-pc-s2-kasane-during.jpg        |  Bin 21895 -> 0 bytes
- .../evidence/webkit-pc-s3-aima-after.jpg           |  Bin 60139 -> 0 bytes
- .../evidence/webkit-pc-s3-aima-before.jpg          |  Bin 60116 -> 0 bytes
- .../evidence/webkit-pc-s3-aima-during.jpg          |  Bin 60116 -> 0 bytes
- .../evidence/webkit-pc-s3-p015-after.png           |  Bin 0 -> 2544122 bytes
- .../evidence/webkit-pc-s3-p015-before.png          |  Bin 0 -> 1628655 bytes
- .../evidence/webkit-pc-s3-p015-during.png          |  Bin 0 -> 2544122 bytes
- .../evidence/webkit-pc-s3-p050-after.png           |  Bin 0 -> 3038547 bytes
- .../evidence/webkit-pc-s3-p050-before.png          |  Bin 0 -> 2200212 bytes
- .../evidence/webkit-pc-s3-p050-during.png          |  Bin 0 -> 3038547 bytes
- .../evidence/webkit-pc-s4-center-after.png         |  Bin 0 -> 2460251 bytes
- .../evidence/webkit-pc-s4-center-before.png        |  Bin 0 -> 2394839 bytes
- .../evidence/webkit-pc-s4-center-during.png        |  Bin 0 -> 2473516 bytes
- .../evidence/webkit-pc-s4-paper-after.jpg          |  Bin 33905 -> 0 bytes
- .../evidence/webkit-pc-s4-paper-before.jpg         |  Bin 34211 -> 0 bytes
- .../evidence/webkit-pc-s4-paper-during.jpg         |  Bin 33651 -> 0 bytes
- .../evidence/webkit-sp-center-s0-membrane.jpg      |  Bin 22711 -> 72001 bytes
- .../evidence/webkit-sp-center-s1-suketo.jpg        |  Bin 39179 -> 93629 bytes
- .../evidence/webkit-sp-center-s2-kasane.jpg        |  Bin 28977 -> 66953 bytes
- .../evidence/webkit-sp-center-s3-aima.jpg          |  Bin 53319 -> 108344 bytes
- .../evidence/webkit-sp-center-s4-paper.jpg         |  Bin 31609 -> 94809 bytes
- .../evidence/webkit-sp-center-seam-01.jpg          |  Bin 36513 -> 99618 bytes
- .../evidence/webkit-sp-center-seam-12.jpg          |  Bin 11857 -> 28207 bytes
- .../evidence/webkit-sp-center-seam-23.jpg          |  Bin 27001 -> 86432 bytes
- .../evidence/webkit-sp-center-seam-34.jpg          |  Bin 38240 -> 117980 bytes
- .../evidence/webkit-sp-s0-membrane-after.jpg       |  Bin 22166 -> 0 bytes
- .../evidence/webkit-sp-s0-membrane-before.jpg      |  Bin 22711 -> 0 bytes
- .../evidence/webkit-sp-s0-membrane-during.jpg      |  Bin 21914 -> 0 bytes
- .../evidence/webkit-sp-s0-ridge-after.png          |  Bin 0 -> 924308 bytes
- .../evidence/webkit-sp-s0-ridge-before.png         |  Bin 0 -> 845301 bytes
- .../evidence/webkit-sp-s0-ridge-during.png         |  Bin 0 -> 945010 bytes
- .../evidence/webkit-sp-s0-upper-third-after.png    |  Bin 0 -> 872600 bytes
- .../evidence/webkit-sp-s0-upper-third-before.png   |  Bin 0 -> 845301 bytes
- .../evidence/webkit-sp-s0-upper-third-during.png   |  Bin 0 -> 875211 bytes
- .../evidence/webkit-sp-s2-delayed-drag-after.png   |  Bin 0 -> 668408 bytes
- .../evidence/webkit-sp-s2-delayed-drag-before.png  |  Bin 0 -> 682533 bytes
- .../evidence/webkit-sp-s2-delayed-drag-during.png  |  Bin 0 -> 641027 bytes
- .../evidence/webkit-sp-s2-drag-after.png           |  Bin 0 -> 665312 bytes
- .../evidence/webkit-sp-s2-drag-before.png          |  Bin 0 -> 682533 bytes
- .../evidence/webkit-sp-s2-drag-during.png          |  Bin 0 -> 641027 bytes
- .../evidence/webkit-sp-s2-kasane-after.jpg         |  Bin 27341 -> 0 bytes
- .../evidence/webkit-sp-s2-kasane-before.jpg        |  Bin 28977 -> 0 bytes
- .../evidence/webkit-sp-s2-kasane-during.jpg        |  Bin 26018 -> 0 bytes
- .../evidence/webkit-sp-s3-aima-after.jpg           |  Bin 53591 -> 0 bytes
- .../evidence/webkit-sp-s3-aima-before.jpg          |  Bin 53591 -> 0 bytes
- .../evidence/webkit-sp-s3-aima-during.jpg          |  Bin 53591 -> 0 bytes
- .../evidence/webkit-sp-s3-p015-after.png           |  Bin 0 -> 863759 bytes
- .../evidence/webkit-sp-s3-p015-before.png          |  Bin 0 -> 682216 bytes
- .../evidence/webkit-sp-s3-p015-during.png          |  Bin 0 -> 863759 bytes
- .../evidence/webkit-sp-s3-p050-after.png           |  Bin 0 -> 1099255 bytes
- .../evidence/webkit-sp-s3-p050-before.png          |  Bin 0 -> 917731 bytes
- .../evidence/webkit-sp-s3-p050-during.png          |  Bin 0 -> 1099255 bytes
- .../evidence/webkit-sp-s4-center-after.png         |  Bin 0 -> 1108749 bytes
- .../evidence/webkit-sp-s4-center-before.png        |  Bin 0 -> 1085691 bytes
- .../evidence/webkit-sp-s4-center-during.png        |  Bin 0 -> 1110405 bytes
- .../evidence/webkit-sp-s4-paper-after.jpg          |  Bin 31186 -> 0 bytes
- .../evidence/webkit-sp-s4-paper-before.jpg         |  Bin 31609 -> 0 bytes
- .../evidence/webkit-sp-s4-paper-during.jpg         |  Bin 30869 -> 0 bytes
- awai-film-20261010/film.js                         |    2 +-
- awai-film-20261010/finalize-evidence.cjs           |   14 -
- awai-film-20261010/index.html                      |    3 +-
- awai-film-20261010/manifest.json                   |  837 +-
- awai-film-20261010/measure-assets.cjs              |    2 +
- awai-film-20261010/measure-paper.cjs               |    2 +
- awai-film-20261010/measure-throttled.cjs           |   38 +
- awai-film-20261010/notes.md                        |   52 +-
- awai-film-20261010/prepare-assets.cjs              |   21 +-
- awai-film-20261010/publish-interactive-result.json |   11 +
- awai-film-20261010/publish-interactive.cjs         |   15 +-
- awai-film-20261010/review.html                     |  119 +-
- awai-film-20261010/verify-interactive.cjs          |   46 +-
- awai-film-20261010/verify-published.cjs            |    9 +-
- 235 files changed, 9877 insertions(+), 5945 deletions(-)
+awai-film-20261010/FilmStage.js                    |    64 +-
+ awai-film-20261010/asset-manifest.json             |    26 +-
+ awai-film-20261010/assets-ledger.md                |    12 +-
+ awai-film-20261010/assets/s3-pc-black.webp         |   Bin 323612 -> 863780 bytes
+ awai-film-20261010/assets/s3-pc-indigo.webp        |   Bin 787714 -> 1824922 bytes
+ awai-film-20261010/assets/s3-sp-black.webp         |   Bin 284116 -> 814968 bytes
+ awai-film-20261010/assets/s3-sp-indigo.webp        |   Bin 702906 -> 1616696 bytes
+ awai-film-20261010/build-visibility-review.cjs     |    30 +-
+ awai-film-20261010/decision-log.md                 |    12 +-
+ .../evidence/checks-interactive.json               | 30116 +++++++++++++++++--
+ .../evidence/chromium-pc-center-s2-kasane.jpg      |   Bin 146899 -> 152721 bytes
+ .../evidence/chromium-pc-center-s3-aima.jpg        |   Bin 314762 -> 332683 bytes
+ .../evidence/chromium-pc-center-seam-12.jpg        |   Bin 51507 -> 60860 bytes
+ .../evidence/chromium-pc-center-seam-23.jpg        |   Bin 233254 -> 256505 bytes
+ .../evidence/chromium-pc-center-seam-34.jpg        |   Bin 378325 -> 288791 bytes
+ .../evidence/chromium-pc-s0-ridge-after.png        |   Bin 1183992 -> 1185228 bytes
+ .../evidence/chromium-pc-s0-ridge-during.png       |   Bin 1201467 -> 1208985 bytes
+ .../evidence/chromium-pc-s0-upper-third-after.png  |   Bin 1150491 -> 1153268 bytes
+ .../evidence/chromium-pc-s0-upper-third-during.png |   Bin 1152742 -> 9958 bytes
+ .../evidence/chromium-pc-s2-delayed-drag-after.png |   Bin 1425398 -> 1466739 bytes
+ .../chromium-pc-s2-delayed-drag-before.png         |   Bin 1446771 -> 1485886 bytes
+ .../chromium-pc-s2-delayed-drag-during.png         |   Bin 1414249 -> 1456172 bytes
+ .../evidence/chromium-pc-s2-drag-after.png         |   Bin 1434310 -> 1462015 bytes
+ .../evidence/chromium-pc-s2-drag-before.png        |   Bin 1446771 -> 1485886 bytes
+ .../evidence/chromium-pc-s2-drag-during.png        |   Bin 1414249 -> 1456172 bytes
+ .../evidence/chromium-pc-s3-p015-after.png         |   Bin 2389796 -> 2474129 bytes
+ .../evidence/chromium-pc-s3-p015-before.png        |   Bin 1735635 -> 1870186 bytes
+ .../evidence/chromium-pc-s3-p015-during.png        |   Bin 2389796 -> 2474129 bytes
+ .../evidence/chromium-pc-s3-p050-after.png         |   Bin 2775175 -> 2708837 bytes
+ .../evidence/chromium-pc-s3-p050-before.png        |   Bin 2169509 -> 2127460 bytes
+ .../evidence/chromium-pc-s3-p050-during.png        |   Bin 2775175 -> 2708837 bytes
+ .../evidence/chromium-pc-s4-center-after.png       |   Bin 2339580 -> 2341509 bytes
+ .../evidence/chromium-sp-center-s2-kasane.jpg      |   Bin 66889 -> 67706 bytes
+ .../evidence/chromium-sp-center-s3-aima.jpg        |   Bin 108075 -> 116339 bytes
+ .../evidence/chromium-sp-center-seam-12.jpg        |   Bin 23641 -> 24855 bytes
+ .../evidence/chromium-sp-center-seam-23.jpg        |   Bin 86683 -> 94764 bytes
+ .../evidence/chromium-sp-center-seam-34.jpg        |   Bin 118033 -> 93866 bytes
+ .../evidence/chromium-sp-cpu4-s0-after.png         |   Bin 0 -> 337104 bytes
+ .../evidence/chromium-sp-cpu4-s0-before.png        |   Bin 0 -> 324638 bytes
+ .../evidence/chromium-sp-cpu4-s0-during.png        |   Bin 0 -> 355104 bytes
+ .../evidence/chromium-sp-s0-ridge-after.png        |   Bin 845167 -> 846657 bytes
+ .../evidence/chromium-sp-s0-upper-third-after.png  |   Bin 803624 -> 803578 bytes
+ .../evidence/chromium-sp-s2-delayed-drag-after.png |   Bin 646859 -> 649305 bytes
+ .../chromium-sp-s2-delayed-drag-before.png         |   Bin 646859 -> 665090 bytes
+ .../chromium-sp-s2-delayed-drag-during.png         |   Bin 651391 -> 625597 bytes
+ .../evidence/chromium-sp-s2-drag-after.png         |   Bin 646859 -> 649395 bytes
+ .../evidence/chromium-sp-s2-drag-before.png        |   Bin 646859 -> 665090 bytes
+ .../evidence/chromium-sp-s2-drag-during.png        |   Bin 647182 -> 625597 bytes
+ .../evidence/chromium-sp-s3-p015-after.png         |   Bin 857179 -> 894451 bytes
+ .../evidence/chromium-sp-s3-p015-before.png        |   Bin 717341 -> 792904 bytes
+ .../evidence/chromium-sp-s3-p015-during.png        |   Bin 857179 -> 894451 bytes
+ .../evidence/chromium-sp-s3-p015-edge-enlarged.png |   Bin 0 -> 581340 bytes
+ .../evidence/chromium-sp-s3-p050-after.png         |   Bin 1047173 -> 1009438 bytes
+ .../evidence/chromium-sp-s3-p050-before.png        |   Bin 907276 -> 907914 bytes
+ .../evidence/chromium-sp-s3-p050-during.png        |   Bin 1047173 -> 1009438 bytes
+ .../evidence/chromium-sp-s4-center-after.png       |   Bin 1003684 -> 1003528 bytes
+ .../evidence/deep-indigo-comparison.png            |   Bin 0 -> 428417 bytes
+ .../evidence/indigo-color-metrics.json             |    42 +-
+ awai-film-20261010/evidence/input-performance.json |   237 +-
+ awai-film-20261010/evidence/lighthouse-mobile.json |  1286 +-
+ awai-film-20261010/evidence/mobile-interactive.mp4 |   Bin 5103646 -> 4802969 bytes
+ awai-film-20261010/evidence/quality-stability.json |   643 +
+ .../evidence/quality-transition-hold-after.png     |   Bin 0 -> 251833 bytes
+ .../evidence/quality-transition-hold-before.png    |   Bin 0 -> 355104 bytes
+ .../evidence/recording-interactive.json            |     6 +-
+ .../evidence/throttled-performance.json            |   723 +-
+ awai-film-20261010/evidence/touch-cause.json       |   359 +
+ .../evidence/webkit-pc-center-s2-kasane.jpg        |   Bin 146950 -> 152884 bytes
+ .../evidence/webkit-pc-center-s3-aima.jpg          |   Bin 315301 -> 332697 bytes
+ .../evidence/webkit-pc-center-seam-12.jpg          |   Bin 61799 -> 70340 bytes
+ .../evidence/webkit-pc-center-seam-23.jpg          |   Bin 232259 -> 255635 bytes
+ .../evidence/webkit-pc-center-seam-34.jpg          |   Bin 375886 -> 289028 bytes
+ .../evidence/webkit-pc-s0-ridge-after.png          |   Bin 1245668 -> 1385287 bytes
+ .../evidence/webkit-pc-s0-ridge-during.png         |   Bin 1247208 -> 1406105 bytes
+ .../evidence/webkit-pc-s0-upper-third-after.png    |   Bin 1203356 -> 1324141 bytes
+ .../evidence/webkit-pc-s0-upper-third-during.png   |   Bin 1247208 -> 1334007 bytes
+ .../evidence/webkit-pc-s2-delayed-drag-after.png   |   Bin 1496956 -> 1536508 bytes
+ .../evidence/webkit-pc-s2-delayed-drag-before.png  |   Bin 1523412 -> 1561249 bytes
+ .../evidence/webkit-pc-s2-delayed-drag-during.png  |   Bin 1491511 -> 1531254 bytes
+ .../evidence/webkit-pc-s2-drag-after.png           |   Bin 1520601 -> 1532082 bytes
+ .../evidence/webkit-pc-s2-drag-before.png          |   Bin 1523412 -> 1561249 bytes
+ .../evidence/webkit-pc-s2-drag-during.png          |   Bin 1491511 -> 1531254 bytes
+ .../evidence/webkit-pc-s3-p015-after.png           |   Bin 2544122 -> 2764910 bytes
+ .../evidence/webkit-pc-s3-p015-before.png          |   Bin 1628655 -> 1738221 bytes
+ .../evidence/webkit-pc-s3-p015-during.png          |   Bin 2544122 -> 2764910 bytes
+ .../evidence/webkit-pc-s3-p050-after.png           |   Bin 3038547 -> 3047879 bytes
+ .../evidence/webkit-pc-s3-p050-before.png          |   Bin 2200212 -> 2097059 bytes
+ .../evidence/webkit-pc-s3-p050-during.png          |   Bin 3038547 -> 3047879 bytes
+ .../evidence/webkit-pc-s4-center-after.png         |   Bin 2460251 -> 2465478 bytes
+ .../evidence/webkit-pc-s4-center-during.png        |   Bin 2473516 -> 2473550 bytes
+ .../evidence/webkit-sp-center-s2-kasane.jpg        |   Bin 66953 -> 67954 bytes
+ .../evidence/webkit-sp-center-s3-aima.jpg          |   Bin 108344 -> 116584 bytes
+ .../evidence/webkit-sp-center-seam-12.jpg          |   Bin 28207 -> 29632 bytes
+ .../evidence/webkit-sp-center-seam-23.jpg          |   Bin 86432 -> 94274 bytes
+ .../evidence/webkit-sp-center-seam-34.jpg          |   Bin 117980 -> 93889 bytes
+ .../evidence/webkit-sp-s0-ridge-after.png          |   Bin 924308 -> 930060 bytes
+ .../evidence/webkit-sp-s0-ridge-during.png         |   Bin 945010 -> 954247 bytes
+ .../evidence/webkit-sp-s0-upper-third-after.png    |   Bin 872600 -> 873227 bytes
+ .../evidence/webkit-sp-s0-upper-third-during.png   |   Bin 875211 -> 875306 bytes
+ .../evidence/webkit-sp-s2-delayed-drag-after.png   |   Bin 668408 -> 691538 bytes
+ .../evidence/webkit-sp-s2-delayed-drag-before.png  |   Bin 682533 -> 698586 bytes
+ .../evidence/webkit-sp-s2-delayed-drag-during.png  |   Bin 641027 -> 660123 bytes
+ .../evidence/webkit-sp-s2-drag-after.png           |   Bin 665312 -> 684332 bytes
+ .../evidence/webkit-sp-s2-drag-before.png          |   Bin 682533 -> 698586 bytes
+ .../evidence/webkit-sp-s2-drag-during.png          |   Bin 641027 -> 660123 bytes
+ .../evidence/webkit-sp-s3-p015-after.png           |   Bin 863759 -> 914088 bytes
+ .../evidence/webkit-sp-s3-p015-before.png          |   Bin 682216 -> 748973 bytes
+ .../evidence/webkit-sp-s3-p015-during.png          |   Bin 863759 -> 914088 bytes
+ .../evidence/webkit-sp-s3-p050-after.png           |   Bin 1099255 -> 1064524 bytes
+ .../evidence/webkit-sp-s3-p050-before.png          |   Bin 917731 -> 899383 bytes
+ .../evidence/webkit-sp-s3-p050-during.png          |   Bin 1099255 -> 1064524 bytes
+ .../evidence/webkit-sp-s4-center-after.png         |   Bin 1108749 -> 1108405 bytes
+ awai-film-20261010/film.js                         |     2 +-
+ awai-film-20261010/index.html                      |     2 +-
+ awai-film-20261010/manifest.json                   |   504 +-
+ awai-film-20261010/measure-assets.cjs              |     2 +-
+ awai-film-20261010/measure-throttled.cjs           |    19 +-
+ awai-film-20261010/notes.md                        |    25 +-
+ awai-film-20261010/prepare-assets.cjs              |    27 +-
+ awai-film-20261010/publish-interactive.cjs         |     9 +-
+ awai-film-20261010/publish-preflight-local.log     |     0
+ awai-film-20261010/review.html                     |    37 +-
+ awai-film-20261010/verify-interactive.cjs          |    31 +-
+ awai-film-20261010/verify-published.cjs            |     5 +-
+ awai-film-20261010/verify-quality.cjs              |    37 +
+ 125 files changed, 30723 insertions(+), 3533 deletions(-)

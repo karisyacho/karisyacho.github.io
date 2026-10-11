@@ -1,0 +1,359 @@
+{
+  "phase": "before fix",
+  "cases": [
+    {
+      "delayMs": 0,
+      "events": [
+        {
+          "type": "pointerdown",
+          "target": "CANVAS",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": false,
+          "x": 195,
+          "y": 422,
+          "time": 652.9000000003725,
+          "mode": "rest"
+        },
+        {
+          "type": "gotpointercapture",
+          "target": "CANVAS",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": false,
+          "x": 207,
+          "y": 422,
+          "time": 674,
+          "mode": "pending"
+        },
+        {
+          "type": "pointermove",
+          "target": "CANVAS",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": false,
+          "x": 207,
+          "y": 422,
+          "time": 674,
+          "mode": "pending"
+        },
+        {
+          "type": "setPointerCapture",
+          "target": "SECTION",
+          "id": 2,
+          "time": 674.0999999996275,
+          "mode": "drag"
+        },
+        {
+          "type": "lostpointercapture",
+          "target": "CANVAS",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 219,
+          "y": 422,
+          "time": 712.7999999988824,
+          "mode": "drag"
+        },
+        {
+          "type": "gotpointercapture",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 219,
+          "y": 422,
+          "time": 712.9000000003725,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 219,
+          "y": 422,
+          "time": 712.9000000003725,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 231,
+          "y": 422,
+          "time": 764.7999999988824,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 243,
+          "y": 422,
+          "time": 815.5999999996275,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 255,
+          "y": 422,
+          "time": 859.5,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 267,
+          "y": 422,
+          "time": 904.5,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 279,
+          "y": 422,
+          "time": 952.7999999988824,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 291,
+          "y": 422,
+          "time": 1002.6999999992549,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 303,
+          "y": 422,
+          "time": 1051.699999999255,
+          "mode": "rest"
+        },
+        {
+          "type": "pointerup",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": true,
+          "x": 303,
+          "y": 422,
+          "time": 1089.4000000003725,
+          "mode": "rest"
+        },
+        {
+          "type": "lostpointercapture",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 2,
+          "stageHasCapture": false,
+          "x": 303,
+          "y": 422,
+          "time": 1089.4000000003725,
+          "mode": "rest"
+        }
+      ]
+    },
+    {
+      "delayMs": 300,
+      "events": [
+        {
+          "type": "pointerdown",
+          "target": "CANVAS",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": false,
+          "x": 195,
+          "y": 422,
+          "time": 1186.9000000003725,
+          "mode": "rest"
+        },
+        {
+          "type": "gotpointercapture",
+          "target": "CANVAS",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": false,
+          "x": 207,
+          "y": 422,
+          "time": 1500,
+          "mode": "pending"
+        },
+        {
+          "type": "pointermove",
+          "target": "CANVAS",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": false,
+          "x": 207,
+          "y": 422,
+          "time": 1500,
+          "mode": "pending"
+        },
+        {
+          "type": "setPointerCapture",
+          "target": "SECTION",
+          "id": 3,
+          "time": 1500,
+          "mode": "drag"
+        },
+        {
+          "type": "lostpointercapture",
+          "target": "CANVAS",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 219,
+          "y": 422,
+          "time": 1542,
+          "mode": "drag"
+        },
+        {
+          "type": "gotpointercapture",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 219,
+          "y": 422,
+          "time": 1542,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 219,
+          "y": 422,
+          "time": 1542.0999999996275,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 231,
+          "y": 422,
+          "time": 1594.199999999255,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 243,
+          "y": 422,
+          "time": 1641.2999999988824,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 255,
+          "y": 422,
+          "time": 1685.2999999988824,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 267,
+          "y": 422,
+          "time": 1731.9000000003725,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 279,
+          "y": 422,
+          "time": 1779,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 291,
+          "y": 422,
+          "time": 1829.699999999255,
+          "mode": "rest"
+        },
+        {
+          "type": "pointermove",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 303,
+          "y": 422,
+          "time": 1873.9000000003725,
+          "mode": "rest"
+        },
+        {
+          "type": "pointerup",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": true,
+          "x": 303,
+          "y": 422,
+          "time": 1913.199999999255,
+          "mode": "rest"
+        },
+        {
+          "type": "lostpointercapture",
+          "target": "SECTION",
+          "currentTarget": "document",
+          "id": 3,
+          "stageHasCapture": false,
+          "x": 303,
+          "y": 422,
+          "time": 1913.199999999255,
+          "mode": "rest"
+        }
+      ]
+    }
+  ]
+}

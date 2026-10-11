@@ -5,19 +5,22 @@ if(folder!=='awai-film-20261010'||git('remote','get-url','origin')!=='https://gi
 if(git('diff','--cached','--name-only'))throw Error('Preexisting staged changes');
 const status=execFileSync('git',['-C',repo,'status','--porcelain'],{encoding:'utf8'}).trimEnd().split('\n').filter(Boolean);if(status.some(l=>!l.slice(3).startsWith(folder+'/')))throw Error('Changes outside scope');
 const checks=JSON.parse(fs.readFileSync(path.join(root,'evidence/checks-interactive.json')));if(checks.failures.length||checks.browsers.length!==4||checks.browsers.some(b=>b.errors.length||b.interactions.length!==7||b.interactions.some(i=>!i.duringDiff||!i.afterDiff)))throw Error('Unresolved structural verification or missing pixel evidence');
+const quality=JSON.parse(fs.readFileSync(path.join(root,'evidence/quality-stability.json'))),colors=JSON.parse(fs.readFileSync(path.join(root,'evidence/indigo-color-metrics.json')));if(quality.failures.length||quality.errors.length||colors.rows.some(r=>!r.conditionY||!r.conditionMedianBlue))throw Error('Unresolved preflight conditions');
 git('fetch','origin','main');if(git('rev-parse','HEAD')!==git('rev-parse','origin/main'))throw Error('Remote moved; recheck scope before merging');
-const files=[];function walk(p){for(const e of fs.readdirSync(p,{withFileTypes:true})){const f=path.join(p,e.name);if(e.isDirectory())walk(f);else if(/\.(html|css|js|cjs|ts|tsx|md|webp|png|jpg|mp4|json)$/.test(e.name)&&!['manifest.json','publish-result.json','publish-interactive-result.json'].includes(e.name))files.push(path.relative(root,f).replaceAll('\\','/'));}}walk(root);
+const localOnly=['publish-interactive-result.json','evidence/live-ending.jpg','evidence/live-review.jpg','evidence/live-interactive.json'];
+const files=[];function walk(p){for(const e of fs.readdirSync(p,{withFileTypes:true})){const f=path.join(p,e.name),relative=path.relative(root,f).replaceAll('\\','/');if(e.isDirectory())walk(f);else if(/\.(html|css|js|cjs|ts|tsx|md|webp|png|jpg|mp4|json)$/.test(e.name)&&!['manifest.json','publish-result.json'].includes(e.name)&&!localOnly.includes(relative))files.push(relative);}}walk(root);
 // Git core.autocrlf normalizes published text to LF. Hash those actual bytes.
 const publishedBytes=f=>{const b=fs.readFileSync(path.join(root,f));return /\.(html|css|js|cjs|ts|tsx|md|json|txt)$/.test(f)?Buffer.from(b.toString('utf8').replace(/\r\n/g,'\n')):b;};
 const sha=f=>crypto.createHash('sha256').update(publishedBytes(f)).digest('hex');
 const current=['index.html','film.css','film.js','FilmStage.js','lib/film.js','lib/config.js','lib/washi.js'];
 const version=crypto.createHash('sha256').update(current.map(sha).join('')).digest('hex').slice(0,12);
-fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify({date:'2026-10-11',stage:'AWAI intervention visibility correction',version,current,files:files.map(f=>({path:f,bytes:publishedBytes(f).length,sha256:sha(f)}))},null,2)+'\n');
+fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify({date:'2026-10-11',stage:'AWAI preflight indigo, native touch and sustained quality correction',version,current,files:files.map(f=>({path:f,bytes:publishedBytes(f).length,sha256:sha(f)}))},null,2)+'\n');
 files.push('manifest.json');git('add','-A','--',folder);
+git('restore','--staged','--',...localOnly.map(f=>folder+'/'+f));
 const staged=git('diff','--cached','--name-only').split('\n').filter(Boolean);if(staged.some(f=>!f.startsWith(folder+'/')))throw Error('Staging escaped scope');
 fs.writeFileSync(path.join(root,'evidence/publish-scope.txt'),git('diff','--cached','--stat')+'\n');
 git('add','--',folder+'/evidence/publish-scope.txt');
 console.log(git('diff','--cached','--stat').split('\n').slice(-1).join(''));
-git('commit','-m','Make AWAI interventions visible and record pixel differences');git('push','origin','HEAD:main');
+git('commit','-m','Repair AWAI deep indigo, native drag and sustained quality adaptation');git('push','origin','HEAD:main');
 const commit=git('rev-parse','HEAD'),result={commit,version,url:`https://karisyacho.github.io/${folder}/?v=${version}`,review:`https://karisyacho.github.io/${folder}/review.html?v=${version}`,recording:`https://karisyacho.github.io/${folder}/evidence/mobile-interactive.mp4?v=${version}`,ledger:`https://karisyacho.github.io/${folder}/assets-ledger.md?v=${version}`,changedFiles:staged.length,scope:folder,outsideScopeChanges:0};
 fs.writeFileSync(path.join(root,'publish-interactive-result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

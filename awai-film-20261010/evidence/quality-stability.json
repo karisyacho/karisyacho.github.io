@@ -1,0 +1,643 @@
+{
+  "at": "2026-10-11T08:14:02.278Z",
+  "url": "http://127.0.0.1:3161/",
+  "environment": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "browser": "installed Chrome / Chromium",
+    "input": "native CDP touch",
+    "cpuThrottlingRate": 1
+  },
+  "method": "Inject busy wait into the visible film canvas fillRect only. One heavy frame tests rolling-window stability; sustained render delay forces a real quality transition while a native hold remains down.",
+  "failures": [],
+  "errors": [],
+  "singleHeavyFrame": {
+    "before": {
+      "scene": "s0-membrane",
+      "p": 0.49932295192857146,
+      "stageHeight": 844,
+      "width": 390,
+      "dpr": 1,
+      "idlePoint": {
+        "x": 0.64,
+        "y": 0.54
+      },
+      "drag": 0,
+      "stains": [],
+      "activeStains": 0,
+      "settledStains": 0,
+      "traces": 0,
+      "strength": 0,
+      "interaction": "rest",
+      "visible": true,
+      "raf": 0,
+      "lowQuality": false,
+      "warmReady": true,
+      "decodeAt": 260.59999999962747,
+      "qualitySampleCount": 60,
+      "qualityLevel": 0,
+      "qualityMeanMs": 6.966666666852931,
+      "qualityWindowFrames": 30,
+      "qualityEvents": [],
+      "maskWidth": 160,
+      "haloScale": 1,
+      "frames": 64,
+      "meanRenderMs": 8.209375000064028,
+      "maxRenderMs": 75.69999999925494,
+      "lastRenderMs": 7,
+      "light": 0.15,
+      "maxTraces": 6,
+      "now": 9226.699999999255
+    },
+    "immediatelyAfter": {
+      "scene": "s0-membrane",
+      "p": 0.5018618822142857,
+      "stageHeight": 844,
+      "width": 390,
+      "dpr": 1,
+      "idlePoint": {
+        "x": 0.64,
+        "y": 0.54
+      },
+      "drag": 0,
+      "stains": [],
+      "activeStains": 0,
+      "settledStains": 0,
+      "traces": 0,
+      "strength": 0,
+      "interaction": "rest",
+      "visible": true,
+      "raf": 0,
+      "lowQuality": false,
+      "warmReady": true,
+      "decodeAt": 260.59999999962747,
+      "qualitySampleCount": 61,
+      "qualityLevel": 0,
+      "qualityMeanMs": 23.636666666840515,
+      "qualityWindowFrames": 30,
+      "qualityEvents": [],
+      "maskWidth": 160,
+      "haloScale": 1,
+      "frames": 65,
+      "meanRenderMs": 15.884615384672696,
+      "maxRenderMs": 507.09999999962747,
+      "lastRenderMs": 507.09999999962747,
+      "light": 0.15,
+      "maxTraces": 6,
+      "now": 9880.5
+    },
+    "after": {
+      "scene": "s0-membrane",
+      "p": 0.49932295192857146,
+      "stageHeight": 844,
+      "width": 390,
+      "dpr": 1,
+      "idlePoint": {
+        "x": 0.64,
+        "y": 0.54
+      },
+      "drag": 0,
+      "stains": [],
+      "activeStains": 0,
+      "settledStains": 0,
+      "traces": 0,
+      "strength": 0,
+      "interaction": "rest",
+      "visible": true,
+      "raf": 0,
+      "lowQuality": false,
+      "warmReady": true,
+      "decodeAt": 260.59999999962747,
+      "qualitySampleCount": 121,
+      "qualityLevel": 0,
+      "qualityMeanMs": 7.316666666790843,
+      "qualityWindowFrames": 30,
+      "qualityEvents": [],
+      "maskWidth": 160,
+      "haloScale": 1,
+      "frames": 125,
+      "meanRenderMs": 11.79040000002086,
+      "maxRenderMs": 507.09999999962747,
+      "lastRenderMs": 7.400000000372529,
+      "light": 0.15,
+      "maxTraces": 6,
+      "now": 17342
+    },
+    "injections": [
+      {
+        "at": 9228.39999999851,
+        "requestedMs": 500,
+        "elapsedMs": 500
+      }
+    ],
+    "stayedNormal": true,
+    "framesBefore": 60,
+    "framesAfter": 60
+  },
+  "transition": {
+    "inkBeforeHold": {
+      "scene": "s3-aima",
+      "p": 0.14998025274999993,
+      "stageHeight": 844,
+      "width": 390,
+      "dpr": 1,
+      "idlePoint": {
+        "x": 0.64,
+        "y": 0.54
+      },
+      "drag": 0,
+      "stains": [
+        {
+          "x": 0.1794871794871795,
+          "y": 0.2014218009478673,
+          "born": 1827
+        },
+        {
+          "x": 0.23076923076923078,
+          "y": 0.2014218009478673,
+          "born": 1980
+        },
+        {
+          "x": 0.28205128205128205,
+          "y": 0.2014218009478673,
+          "born": 2073.7999999988824
+        },
+        {
+          "x": 0.3333333333333333,
+          "y": 0.2014218009478673,
+          "born": 2175
+        },
+        {
+          "x": 0.38461538461538464,
+          "y": 0.2014218009478673,
+          "born": 2278.199999999255
+        }
+      ],
+      "activeStains": 0,
+      "settledStains": 5,
+      "traces": 0,
+      "strength": 0,
+      "interaction": "rest",
+      "visible": true,
+      "raf": 0,
+      "lowQuality": false,
+      "warmReady": true,
+      "decodeAt": 228.5,
+      "qualitySampleCount": 259,
+      "qualityLevel": 0,
+      "qualityMeanMs": 5.3699999999875825,
+      "qualityWindowFrames": 30,
+      "qualityEvents": [],
+      "maskWidth": 160,
+      "haloScale": 1,
+      "frames": 263,
+      "meanRenderMs": 8.09695817482704,
+      "maxRenderMs": 73.30000000074506,
+      "lastRenderMs": 5.199999999254942,
+      "light": 0.15,
+      "maxTraces": 6,
+      "now": 4126.5999999996275
+    },
+    "inputPoint": {
+      "x": 249.6,
+      "y": 505.76000000000005
+    },
+    "holdMs": 2600,
+    "injectedDelayMs": 45,
+    "timeoutMs": 12000,
+    "switched": true,
+    "before": {
+      "scene": "s0-membrane",
+      "p": 0.500169262,
+      "stageHeight": 844,
+      "width": 390,
+      "dpr": 1,
+      "idlePoint": {
+        "x": 0.64,
+        "y": 0.54
+      },
+      "drag": 0,
+      "stains": [
+        {
+          "x": 0.1794871794871795,
+          "y": 0.2014218009478673,
+          "born": 1827
+        },
+        {
+          "x": 0.23076923076923078,
+          "y": 0.2014218009478673,
+          "born": 1980
+        },
+        {
+          "x": 0.28205128205128205,
+          "y": 0.2014218009478673,
+          "born": 2073.7999999988824
+        },
+        {
+          "x": 0.3333333333333333,
+          "y": 0.2014218009478673,
+          "born": 2175
+        },
+        {
+          "x": 0.38461538461538464,
+          "y": 0.2014218009478673,
+          "born": 2278.199999999255
+        }
+      ],
+      "activeStains": 0,
+      "settledStains": 5,
+      "traces": 0,
+      "strength": 1,
+      "interaction": "thin",
+      "visible": true,
+      "raf": 454,
+      "lowQuality": false,
+      "warmReady": true,
+      "decodeAt": 228.5,
+      "qualitySampleCount": 449,
+      "qualityLevel": 0,
+      "qualityMeanMs": 13.809999999776483,
+      "qualityWindowFrames": 30,
+      "qualityEvents": [],
+      "maskWidth": 160,
+      "haloScale": 1,
+      "frames": 453,
+      "meanRenderMs": 10.271964679811374,
+      "maxRenderMs": 73.30000000074506,
+      "lastRenderMs": 13.599999999627471,
+      "light": 0.15,
+      "maxTraces": 6,
+      "now": 6838.0999999996275
+    },
+    "after": {
+      "scene": "s0-membrane",
+      "p": 0.500169262,
+      "stageHeight": 844,
+      "width": 390,
+      "dpr": 0.85,
+      "idlePoint": {
+        "x": 0.64,
+        "y": 0.54
+      },
+      "drag": 0,
+      "stains": [
+        {
+          "x": 0.1794871794871795,
+          "y": 0.2014218009478673,
+          "born": 1827
+        },
+        {
+          "x": 0.23076923076923078,
+          "y": 0.2014218009478673,
+          "born": 1980
+        },
+        {
+          "x": 0.28205128205128205,
+          "y": 0.2014218009478673,
+          "born": 2073.7999999988824
+        },
+        {
+          "x": 0.3333333333333333,
+          "y": 0.2014218009478673,
+          "born": 2175
+        },
+        {
+          "x": 0.38461538461538464,
+          "y": 0.2014218009478673,
+          "born": 2278.199999999255
+        }
+      ],
+      "activeStains": 0,
+      "settledStains": 5,
+      "traces": 0,
+      "strength": 1,
+      "interaction": "thin",
+      "visible": true,
+      "raf": 522,
+      "lowQuality": true,
+      "warmReady": true,
+      "decodeAt": 228.5,
+      "qualitySampleCount": 504,
+      "qualityLevel": 2,
+      "qualityMeanMs": 58.84333333335817,
+      "qualityWindowFrames": 0,
+      "qualityEvents": [
+        {
+          "scene": "s0-membrane",
+          "p": 0.500169262,
+          "time": 9568,
+          "elapsed": 9530.10000000149,
+          "mean": 58.84333333335817,
+          "sampleCount": 504,
+          "qualityLevel": 2,
+          "actions": [
+            "DPR already 1; render resolution 85%, mask 110"
+          ]
+        }
+      ],
+      "maskWidth": 110,
+      "haloScale": 1,
+      "frames": 521,
+      "meanRenderMs": 14.543570057505063,
+      "maxRenderMs": 82.70000000111759,
+      "lastRenderMs": 7.599999999627471,
+      "light": 0.15,
+      "maxTraces": 6,
+      "now": 9807.599999999627
+    },
+    "beforeImage": "quality-transition-hold-before.png",
+    "afterImage": "quality-transition-hold-after.png",
+    "comparisons": {
+      "scene": {
+        "before": "s0-membrane",
+        "after": "s0-membrane",
+        "same": true
+      },
+      "width": {
+        "before": 390,
+        "after": 390,
+        "same": true
+      },
+      "stageHeight": {
+        "before": 844,
+        "after": 844,
+        "same": true
+      },
+      "p": {
+        "before": 0.500169262,
+        "after": 0.500169262,
+        "same": true
+      },
+      "traces": {
+        "before": 0,
+        "after": 0,
+        "same": true
+      },
+      "activeStains": {
+        "before": 0,
+        "after": 0,
+        "same": true
+      },
+      "settledStains": {
+        "before": 5,
+        "after": 5,
+        "same": true
+      },
+      "interaction": {
+        "before": "thin",
+        "after": "thin",
+        "same": true
+      },
+      "strength": {
+        "before": 1,
+        "after": 1,
+        "same": true
+      }
+    },
+    "statePreserved": true,
+    "reductionOrderCorrect": true,
+    "qualityEvents": [
+      {
+        "scene": "s0-membrane",
+        "p": 0.500169262,
+        "time": 9568,
+        "elapsed": 9530.10000000149,
+        "mean": 58.84333333335817,
+        "sampleCount": 504,
+        "qualityLevel": 2,
+        "actions": [
+          "DPR already 1; render resolution 85%, mask 110"
+        ]
+      }
+    ],
+    "injections": [
+      {
+        "at": 7008.199999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7071.799999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7131.5,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7190.5,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7249.5999999996275,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7309.699999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7368.5,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7427,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7487.39999999851,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7546.199999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7608.299999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7667.199999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7726,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7785.39999999851,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7844.0999999996275,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7902.5999999996275,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 7961.699999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8021.699999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8081.199999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8140.39999999851,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8199.799999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8258.599999999627,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8317.39999999851,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8376.099999999627,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8435.199999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8496.299999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8558.599999999627,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8617.299999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8676.099999999627,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8735.39999999851,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8794,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8853.39999999851,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8912.299999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 8971.299999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9030,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9088.5,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9147.299999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9206.099999999627,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9264.699999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9326.89999999851,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9389,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9448.299999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9508.199999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9568.199999999255,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      },
+      {
+        "at": 9629.299999998882,
+        "requestedMs": 45,
+        "elapsedMs": 45
+      }
+    ]
+  }
+}

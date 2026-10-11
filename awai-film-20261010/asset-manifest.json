@@ -1,6 +1,6 @@
 {
   "processed": "2026-10-11",
-  "totalBytes": 5837004,
+  "totalBytes": 8859022,
   "entries": [
     {
       "file": "assets/s0-pc.webp",
@@ -187,12 +187,12 @@
       "acquired": "元の取得日不明",
       "processed": "2026-10-11",
       "status": "仮",
-      "transform": "同じ画素の輝度Y=0.2126R+0.7152G+0.0722Bを0.45倍、無彩色の黒布",
+      "transform": "同じG1画素の輝度Yを0.55倍、無彩色の黒布。色差の余地を残すため元0.45から変更。lossless WebP",
       "width": 1659,
       "height": 948,
       "alpha": false,
-      "bytes": 323612,
-      "sha256": "2c8970311ab1124be0f1d9ba09ad29928983bf1db218c43c6c4c1da7ec531c6b"
+      "bytes": 863780,
+      "sha256": "32958031aef13b4d228d948b53e0036dd25d8eb69f7474ee6ead0280d3348e38"
     },
     {
       "file": "assets/s3-pc-indigo.webp",
@@ -203,12 +203,12 @@
       "acquired": "元の取得日不明",
       "processed": "2026-10-11",
       "status": "仮",
-      "transform": "G1 から色処理・仮。Y維持、c=min(0.90Y+0.15max(B-R,0),(255-Y)/1.370859)、RGB=(Y-0.60c,Y+0.04c,Y+1.370859c)。既存の藍筋は彩度に加算",
+      "transform": "G1 から色処理・仮。#181B39→#2A2E4E→#165E83の灰みの藍へ、targetY=min(0.90×0.55×元Y,paletteY)。灰混合6〜12%。既存藍筋は灰混合を減らす。同じ画素・lossless WebP",
       "width": 1659,
       "height": 948,
       "alpha": false,
-      "bytes": 787714,
-      "sha256": "6714a78303f61343cc1de2df314052780239d0c7f60570cf89bfc9a8c98fd368"
+      "bytes": 1824922,
+      "sha256": "3e8758e045fa046d73b0032b9c98937ac9a88584c46b7ffb5a3072b69862469a"
     },
     {
       "file": "assets/kasane-pc-0.webp",
@@ -283,12 +283,12 @@
       "acquired": "元の取得日不明",
       "processed": "2026-10-11",
       "status": "仮",
-      "transform": "同じ画素の輝度Y=0.2126R+0.7152G+0.0722Bを0.45倍、無彩色の黒布",
+      "transform": "同じG1画素の輝度Yを0.55倍、無彩色の黒布。色差の余地を残すため元0.45から変更。lossless WebP",
       "width": 948,
       "height": 1659,
       "alpha": false,
-      "bytes": 284116,
-      "sha256": "d124ce5d1f36f5d4b6dc8ee2d3f12bd3e51cb1a9a463be4acf9c7cddf836887d"
+      "bytes": 814968,
+      "sha256": "9e7da0c40ecf2966d418a401b80d798e2f413ec9930f9f99adaf5db70dfbf3d4"
     },
     {
       "file": "assets/s3-sp-indigo.webp",
@@ -299,12 +299,12 @@
       "acquired": "元の取得日不明",
       "processed": "2026-10-11",
       "status": "仮",
-      "transform": "G1 から色処理・仮。Y維持、c=min(0.90Y+0.15max(B-R,0),(255-Y)/1.370859)、RGB=(Y-0.60c,Y+0.04c,Y+1.370859c)。既存の藍筋は彩度に加算",
+      "transform": "G1 から色処理・仮。#181B39→#2A2E4E→#165E83の灰みの藍へ、targetY=min(0.90×0.55×元Y,paletteY)。灰混合6〜12%。既存藍筋は灰混合を減らす。同じ画素・lossless WebP",
       "width": 948,
       "height": 1659,
       "alpha": false,
-      "bytes": 702906,
-      "sha256": "e0db6c38aef9af966d72a070d9e47438b8dabc4d766bbe5a8e628e1cddb575c2"
+      "bytes": 1616696,
+      "sha256": "7298c7cc85ea66cd2bb6224a12a96daf778e5dd8a631d4b9a90e786a940257d7"
     },
     {
       "file": "assets/kasane-sp-0.webp",
