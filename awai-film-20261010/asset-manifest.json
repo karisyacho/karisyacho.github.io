@@ -1,6 +1,6 @@
 {
   "processed": "2026-10-11",
-  "totalBytes": 3922810,
+  "totalBytes": 5837004,
   "entries": [
     {
       "file": "assets/s0-pc.webp",
@@ -187,12 +187,28 @@
       "acquired": "元の取得日不明",
       "processed": "2026-10-11",
       "status": "仮",
-      "transform": "同じ画素を脱彩色・明度0.28倍。元G1のグラファイト領域は藍版にも残る",
+      "transform": "同じ画素の輝度Y=0.2126R+0.7152G+0.0722Bを0.45倍、無彩色の黒布",
       "width": 1659,
       "height": 948,
       "alpha": false,
-      "bytes": 114544,
-      "sha256": "8f70728d7144fdc1c9f2e7b66d9defc9458d9ab118b2952fd449147821160e78"
+      "bytes": 323612,
+      "sha256": "2c8970311ab1124be0f1d9ba09ad29928983bf1db218c43c6c4c1da7ec531c6b"
+    },
+    {
+      "file": "assets/s3-pc-indigo.webp",
+      "source": "docs/awai/g1-keyframes/assets/s3-pc.webp",
+      "sourceURL": null,
+      "author": "本人（G1キーフレーム）",
+      "license": "本人制作物・今回使用承認済み",
+      "acquired": "元の取得日不明",
+      "processed": "2026-10-11",
+      "status": "仮",
+      "transform": "G1 から色処理・仮。Y維持、c=min(0.90Y+0.15max(B-R,0),(255-Y)/1.370859)、RGB=(Y-0.60c,Y+0.04c,Y+1.370859c)。既存の藍筋は彩度に加算",
+      "width": 1659,
+      "height": 948,
+      "alpha": false,
+      "bytes": 787714,
+      "sha256": "6714a78303f61343cc1de2df314052780239d0c7f60570cf89bfc9a8c98fd368"
     },
     {
       "file": "assets/kasane-pc-0.webp",
@@ -267,12 +283,28 @@
       "acquired": "元の取得日不明",
       "processed": "2026-10-11",
       "status": "仮",
-      "transform": "同じ画素を脱彩色・明度0.28倍。元G1のグラファイト領域は藍版にも残る",
+      "transform": "同じ画素の輝度Y=0.2126R+0.7152G+0.0722Bを0.45倍、無彩色の黒布",
       "width": 948,
       "height": 1659,
       "alpha": false,
-      "bytes": 69610,
-      "sha256": "f9595ae81ac29188e0f265049c099232d9ee5e578b74835e7aa702fb4859ef38"
+      "bytes": 284116,
+      "sha256": "d124ce5d1f36f5d4b6dc8ee2d3f12bd3e51cb1a9a463be4acf9c7cddf836887d"
+    },
+    {
+      "file": "assets/s3-sp-indigo.webp",
+      "source": "docs/awai/g1-keyframes/assets/s3-sp.webp",
+      "sourceURL": null,
+      "author": "本人（G1キーフレーム）",
+      "license": "本人制作物・今回使用承認済み",
+      "acquired": "元の取得日不明",
+      "processed": "2026-10-11",
+      "status": "仮",
+      "transform": "G1 から色処理・仮。Y維持、c=min(0.90Y+0.15max(B-R,0),(255-Y)/1.370859)、RGB=(Y-0.60c,Y+0.04c,Y+1.370859c)。既存の藍筋は彩度に加算",
+      "width": 948,
+      "height": 1659,
+      "alpha": false,
+      "bytes": 702906,
+      "sha256": "e0db6c38aef9af966d72a070d9e47438b8dabc4d766bbe5a8e628e1cddb575c2"
     },
     {
       "file": "assets/kasane-sp-0.webp",

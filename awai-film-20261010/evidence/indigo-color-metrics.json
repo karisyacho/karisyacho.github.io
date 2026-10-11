@@ -1,0 +1,19 @@
+{
+  "formula": "Y=.2126R+.7152G+.0722B; c=min(.9Y+.15max(B-R,0),(255-Y)/1.370859); RGB=(Y-.6c,Y+.04c,Y+1.370859c); black=.45Y",
+  "rows": [
+    {
+      "size": "pc",
+      "pixels": 1572732,
+      "meanLuminanceChangeFromG1": 1.2900555521225188,
+      "meanBlueMinusRed": 63.74396337074594,
+      "pixelsContrastAtLeast12Percent": 94.23964159182874
+    },
+    {
+      "size": "sp",
+      "pixels": 1572732,
+      "meanLuminanceChangeFromG1": 1.0638147062564998,
+      "meanBlueMinusRed": 75.32168354176045,
+      "pixelsContrastAtLeast12Percent": 98.09376295516337
+    }
+  ]
+}

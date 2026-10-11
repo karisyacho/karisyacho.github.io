@@ -1,0 +1,33 @@
+{
+  "method": "Chromium PNGの圧中心40×40撮影画素。輝度Yと、上下左右4近傍平均からの残差RMS。繊維の細かいコントラストの参考指標。",
+  "rows": [
+    {
+      "size": "sp",
+      "before": {
+        "mean": 198.18241512499753,
+        "highFrequencyRMS": 1.083202519910877
+      },
+      "during": {
+        "mean": 223.19661062499853,
+        "highFrequencyRMS": 1.2175135351828872
+      },
+      "meanIncrease": 25.014195500000994,
+      "highFrequencyRatio": 1.1239943711385207,
+      "status": "仮：細かい明暗の幅が半分以下になったことは示せていない"
+    },
+    {
+      "size": "pc",
+      "before": {
+        "mean": 194.5155471250009,
+        "highFrequencyRMS": 2.845240969165481
+      },
+      "during": {
+        "mean": 218.90130362499895,
+        "highFrequencyRMS": 3.3443942844351966
+      },
+      "meanIncrease": 24.385756499998053,
+      "highFrequencyRatio": 1.1754344607993321,
+      "status": "仮：細かい明暗の幅が半分以下になったことは示せていない"
+    }
+  ]
+}
