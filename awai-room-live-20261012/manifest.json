@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "app.js",
-      "bytes": 628618,
-      "sha256": "fa8ca09060c7894b4b723e684da51494f0447d60609be3763f7ad03ffab1488e"
+      "bytes": 633811,
+      "sha256": "b9ea189bb96cf5b921ce47978395de7542a909bc76129e57fd3ebc2342c5874a"
     },
     {
       "path": "assets-LICENSE.md",
@@ -29,13 +29,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 6348,
-      "sha256": "9dd92987282f18ba98b51a9dcb5539ff45aca6d9475bb9c5822e221554ab446d"
+      "bytes": 4459,
+      "sha256": "a6f0f73a279dc8916bd3ecad0e2b7388143e3a4b9ea29b633829c3b8a7793e65"
     },
     {
       "path": "style.css",
-      "bytes": 11991,
-      "sha256": "2f3ed465b08a3caaadf1fdb9c9e4b8617e40a84d708fa81b42a6305a11432442"
+      "bytes": 10392,
+      "sha256": "f5fcc192339bbc42d6da0b14805b2a30b6fc955bc0edc2a2a78abe5aecae8963"
     },
     {
       "path": "THREE-LICENSE.txt",
