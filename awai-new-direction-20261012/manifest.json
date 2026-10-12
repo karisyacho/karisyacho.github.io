@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-12",
+  "stage": "Unapproved static art-direction review; 3D not implemented",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 12674,
+      "sha256": "f0434607ad2e81fa829a374ba61b7456c67d3a8d87268ac8ce9ed70b064c3159"
+    },
+    {
+      "path": "assets/vision-desktop.webp",
+      "bytes": 69300,
+      "sha256": "e62698ac45dad971f94e4021f8e933a05a20f58360c32c36a99154f76e9263ba"
+    },
+    {
+      "path": "assets/vision-mobile.webp",
+      "bytes": 69882,
+      "sha256": "f38d6a4dce0aa74719b8327e5191b1d6b2d699ee3adf2df7042f76c76fdf4b93"
+    }
+  ]
+}
