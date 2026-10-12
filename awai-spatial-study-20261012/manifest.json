@@ -1,0 +1,35 @@
+{
+  "stage": "Blender-rendered motion study; not a completed website or realtime WebGL performance result",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 2002,
+      "sha256": "6c0c9686bc441389b0efc9b1a228c1e65e9bd096fe4135f4b56288788bb17ac4"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5893,
+      "sha256": "11532f4e163d97b9ed9201a301fe5a2fe7fcc53a120dd7fd9db00e0873d326c1"
+    },
+    {
+      "path": "app.js",
+      "bytes": 3843,
+      "sha256": "77b6d7710d212d7dcaef63931049c3ed870ad655ffb392e65564230815a3a45d"
+    },
+    {
+      "path": "assets/entry.webp",
+      "bytes": 28784,
+      "sha256": "153eef8494f4b1e7ffa902d31a39b85fa4c169a8c3302391bc7854d7b5f17113"
+    },
+    {
+      "path": "assets/spatial-study.mp4",
+      "bytes": 1703481,
+      "sha256": "76bac77d3b3f7c76f898f2992075379d2e263068e7d4c83b89e01223f9ca19c9"
+    },
+    {
+      "path": "assets-LICENSE.md",
+      "bytes": 487,
+      "sha256": "ce6141faf05784a67b2aa83f8deab6698c60940cbce3e844511ba934a8d70b45"
+    }
+  ]
+}
