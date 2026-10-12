@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 12674,
-      "sha256": "f0434607ad2e81fa829a374ba61b7456c67d3a8d87268ac8ce9ed70b064c3159"
+      "bytes": 15165,
+      "sha256": "56ed71d810d7125f959510aac9140eb5be5cc170879c7d3a90e40d74b4ee0fbd"
     },
     {
       "path": "assets/vision-desktop.webp",
@@ -16,6 +16,16 @@
       "path": "assets/vision-mobile.webp",
       "bytes": 69882,
       "sha256": "f38d6a4dce0aa74719b8327e5191b1d6b2d699ee3adf2df7042f76c76fdf4b93"
+    },
+    {
+      "path": "assets/story-before.webp",
+      "bytes": 71174,
+      "sha256": "16723a54bed371df1ca7bcc21da5d328cf1bda53380a10e9b615f8fd1531e1d3"
+    },
+    {
+      "path": "assets/story-inside.webp",
+      "bytes": 94610,
+      "sha256": "fc0ae0ffbd0329ae8ffff10abe10f4ca4022bf2e87615fe6f58d543769ca942c"
     }
   ]
 }
