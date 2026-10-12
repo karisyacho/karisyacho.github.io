@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 3375,
-      "sha256": "5b9d7aebc109be8f05941570dfde319d239a72d38f9805f97037734984cdbf87"
+      "bytes": 3893,
+      "sha256": "5dcbc520825b33b3575b9e5177fc016af9ae6192040236f262c61b70679ac07d"
     },
     {
       "path": "about.html",
@@ -14,8 +14,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 11483,
-      "sha256": "fd3a61636a859cb0d05df382ecfedbe2d4b122c9f3d3713a22d79987271599fe"
+      "bytes": 16259,
+      "sha256": "6f122cd36cac620c274fc9cc925c878d97453f41fb054c42ae882ba43ad0bf44"
     },
     {
       "path": "about.css",
@@ -24,8 +24,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 992445,
-      "sha256": "94d1df75411a94ae65d5e6204f645cfd2774fd25a108ec972da8858ce1fd85ed"
+      "bytes": 1020566,
+      "sha256": "26eedf3876ff9a5c868df0b1cbb96a97b157876a282529674caaa7c83d7bcca9"
     },
     {
       "path": "favicon.svg",
@@ -59,8 +59,8 @@
     },
     {
       "path": "assets/room-baked.glb",
-      "bytes": 3076560,
-      "sha256": "00392fcba1f7d5c4d7118261e9dd24477926cde18292b9d124b1f4340cd027e4"
+      "bytes": 2116804,
+      "sha256": "cce50d12d8fe1124b0e8747100e74dd0c7524208f4441fa1a2da2b9efb88e068"
     }
   ]
 }
