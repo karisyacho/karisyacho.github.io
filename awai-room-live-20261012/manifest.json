@@ -4,13 +4,18 @@
   "files": [
     {
       "path": "app.js",
-      "bytes": 624971,
-      "sha256": "6f2eb8b7309e6805a662464b5d99d65c46a72c65d96d8db81c7289e47e0d16a7"
+      "bytes": 628618,
+      "sha256": "fa8ca09060c7894b4b723e684da51494f0447d60609be3763f7ad03ffab1488e"
     },
     {
       "path": "assets-LICENSE.md",
       "bytes": 467,
       "sha256": "78909809fb8824e269bfbf38af60c6638d3796385bc592fc4afe718aaa3db002"
+    },
+    {
+      "path": "assets/part-states.json",
+      "bytes": 9456,
+      "sha256": "8b6a77e6897bdc790d9c0ab56a4955ab92e26a5ecc201c0952b6d756594a61ea"
     },
     {
       "path": "assets/room-entry.webp",
@@ -19,13 +24,13 @@
     },
     {
       "path": "assets/room.glb",
-      "bytes": 430844,
-      "sha256": "42fafa2ff47b9763d196e63757a48c0fe02b62c1df1d0345fdec91347146ea16"
+      "bytes": 566336,
+      "sha256": "5a804f90f515e3dc86f229db3629ab18a844cd8f1e1351b7c3e53225975593d3"
     },
     {
       "path": "index.html",
       "bytes": 6348,
-      "sha256": "072136ab1f2de6f3ba524d3f321dd5f7e0dff04cdcf374999c7489b36d144467"
+      "sha256": "9dd92987282f18ba98b51a9dcb5539ff45aca6d9475bb9c5822e221554ab446d"
     },
     {
       "path": "style.css",
