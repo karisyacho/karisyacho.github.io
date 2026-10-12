@@ -1,0 +1,15 @@
+{
+  "stage": "Visual direction proposal only; not production 3D or a performance result",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 8040,
+      "sha256": "5b200ece0055a21015d04bd69b7de449e1ae641c3652ccb69e66a20c57b44d34"
+    },
+    {
+      "path": "aima.webp",
+      "bytes": 29120,
+      "sha256": "84c6152340efccb253fb338c85bc5adc10d6ab6f7d4f85b3890ab6c0c139c104"
+    }
+  ]
+}
