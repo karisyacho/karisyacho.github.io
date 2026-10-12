@@ -1,0 +1,41 @@
+{
+  "owner": "awai-v7-room-review",
+  "folder": "awai-room-live-20261012",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 624971,
+      "sha256": "6f2eb8b7309e6805a662464b5d99d65c46a72c65d96d8db81c7289e47e0d16a7"
+    },
+    {
+      "path": "assets-LICENSE.md",
+      "bytes": 467,
+      "sha256": "78909809fb8824e269bfbf38af60c6638d3796385bc592fc4afe718aaa3db002"
+    },
+    {
+      "path": "assets/room-entry.webp",
+      "bytes": 12100,
+      "sha256": "ead5e9c27717e14d76bc4558b0247c1c029f64097d927b29825c64a5ccc451e6"
+    },
+    {
+      "path": "assets/room.glb",
+      "bytes": 430844,
+      "sha256": "42fafa2ff47b9763d196e63757a48c0fe02b62c1df1d0345fdec91347146ea16"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6348,
+      "sha256": "072136ab1f2de6f3ba524d3f321dd5f7e0dff04cdcf374999c7489b36d144467"
+    },
+    {
+      "path": "style.css",
+      "bytes": 11991,
+      "sha256": "2f3ed465b08a3caaadf1fdb9c9e4b8617e40a84d708fa81b42a6305a11432442"
+    },
+    {
+      "path": "THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    }
+  ]
+}
