@@ -8,13 +8,13 @@
     },
     {
       "path": "style.css",
-      "bytes": 5893,
-      "sha256": "11532f4e163d97b9ed9201a301fe5a2fe7fcc53a120dd7fd9db00e0873d326c1"
+      "bytes": 5884,
+      "sha256": "5d3d07eade936f7a7685aae2f4591bb1d85af2487cd57235b90a05cf1cd6c554"
     },
     {
       "path": "app.js",
-      "bytes": 3843,
-      "sha256": "77b6d7710d212d7dcaef63931049c3ed870ad655ffb392e65564230815a3a45d"
+      "bytes": 3836,
+      "sha256": "90a7bb8d9e125fe98dcff7b1dd3f56c2784cd70974ebadb533ce70c345a376bf"
     },
     {
       "path": "assets/entry.webp",
