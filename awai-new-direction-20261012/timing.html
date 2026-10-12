@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#090e0b">
+<title>AWAI — 入場と見せ場のテンポ見本</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--ink:#090e0b;--paper:#eceee7;--accent:#ed603e;--mx:0;--my:0;font-family:"Archivo","IBM Plex Sans JP",sans-serif}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--ink);color:var(--paper)}
+button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:7px}
+.notice{position:fixed;left:24px;top:21px;z-index:5;font-size:10px;line-height:1.8;letter-spacing:.03em;color:#b7beb4;pointer-events:none}
+.review{position:fixed;right:24px;top:21px;z-index:5;font-size:10px;line-height:1.8;padding:4px 0;border-bottom:1px solid #475146}body[data-phase="waiting"] .review{visibility:hidden;pointer-events:none}
+.entrance{position:absolute;inset:0;display:grid;place-items:center;opacity:1;transition:opacity .75s;z-index:3;pointer-events:none;perspective:900px}
+.word{font-weight:900;font-size:clamp(70px,19vw,290px);line-height:.8;letter-spacing:-.075em;padding-right:.075em;transform:translate3d(calc(var(--mx)*8px),calc(var(--my)*5px),0) rotateY(calc(var(--mx)*2deg)) rotateX(calc(var(--my)*-1deg));text-shadow:calc(var(--mx)*-5px) calc(var(--my)*-3px) 32px #dff0d712;transition:transform .25s ease-out,text-shadow .25s ease-out;user-select:none}
+.action{position:absolute;inset:0;border:0;padding:0;background:none;cursor:pointer;z-index:4;touch-action:manipulation}.action:disabled{cursor:default}
+.prompt{position:absolute;left:24px;right:24px;bottom:58px;display:block;text-align:center;font-size:11px;line-height:2;letter-spacing:.11em;opacity:0;transition:opacity .45s;pointer-events:none}.prompt.visible{opacity:1}.prompt small{display:block;font-size:9px;letter-spacing:.08em;color:#c4cabe;margin-top:7px}
+.scene{position:absolute;inset:0;opacity:0;transition:opacity .85s;background:var(--ink);overflow:hidden;z-index:1}.scene.active{opacity:1}.scene img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform-origin:58% 52%}.scene.moving img{animation:approach 4400ms cubic-bezier(.24,.5,.2,1) forwards}.scene.held img{transform:scale(1.065)}.scene.mobile-detail img{object-position:65% center}
+.caption{position:absolute;left:5%;bottom:20%;z-index:2;opacity:0;transition:opacity .75s;pointer-events:none;max-width:29%}.caption.visible{opacity:1}.caption h1{font-family:"IBM Plex Sans JP",sans-serif;font-size:clamp(28px,4vw,61px);font-weight:500;line-height:1.38;letter-spacing:-.04em;margin:0}.caption p{font-size:12px;line-height:2.1;margin:18px 0 0;color:#c4cabe}
+.status{position:fixed;bottom:21px;left:24px;font-size:10px;letter-spacing:.05em;color:#b7beb4;z-index:5;pointer-events:none}.replay{position:fixed;right:24px;bottom:18px;z-index:6;background:none;border:0;border-bottom:1px solid #475146;font-size:10px;padding:7px 0;cursor:pointer;display:none}.replay.visible{display:block}
+@keyframes approach{from{transform:scale(1.005)}to{transform:scale(1.065)}}
+@media(max-width:760px){.notice{left:18px;top:18px;font-size:9px;max-width:60%}.review{right:18px;top:18px;font-size:9px}.word{font-size:22vw}.prompt{bottom:80px;font-size:11px}.caption{left:22px;top:18%;bottom:auto;max-width:78%}.caption h1{font-size:34px}.caption p{font-size:12px;margin-top:15px}.scene:not(.mobile-detail) img{object-position:58% center}.status{left:18px;bottom:20px;font-size:9px}.replay{right:18px}.scene.mobile-detail .caption{top:14%;max-width:73%}.scene.mobile-detail .caption h1{font-size:27px;text-shadow:0 2px 18px #000}}
+@media(prefers-reduced-motion:reduce){.word{transform:none!important;text-shadow:none!important;transition:none}.scene.moving img{animation:none}.scene.held img{transform:none}.scene,.entrance,.caption,.prompt{transition:none}}
+</style></head>
+<body data-phase="waiting" data-scene="-1">
+<div class="notice">入場と停止のテンポ見本<br>静止画による仮見本・3D変容は未実装</div><a class="review" href="index.html">絵コンテへ</a>
+<div class="entrance" id="entrance"><div class="word" aria-label="AWAI">AWAI</div></div>
+<section class="scene" id="scene-0" aria-label="最初の見せ場"><img src="assets/story-before.webp" alt="墨色の面の端から、内側の気配が見える"><div class="caption"><h1>まだ、見えていない<br>その店の姿。</h1></div></section>
+<section class="scene" id="scene-1" aria-label="内側が現れる見せ場"><picture><source media="(max-width:760px)" srcset="assets/vision-mobile.webp"><img src="assets/vision-desktop.webp" alt="面の内側に、朱色の構造と店が現れる"></picture><div class="caption"><h1>個性を、<br>ひらく。</h1><p>お店の話を聞く。<br>そこから、かたちを設計する。</p></div></section>
+<section class="scene mobile-detail" id="scene-2" aria-label="店へ近づく見せ場"><img src="assets/story-inside.webp" alt="店の内側に近づき、木のカウンターとカップが見える"><div class="caption"><h1>その店らしさを、<br>細部まで。</h1></div></section>
+<button class="action" id="action" type="button" disabled aria-label="入場準備中"></button><div class="prompt" id="prompt" aria-live="polite"></div><div class="status" id="status">入口の間を確認中</div><button class="replay" id="replay" type="button">最初から</button>
+<script>
+const HOLD=2500,MOVE=4400;
+const entrance=document.getElementById('entrance'),action=document.getElementById('action'),prompt=document.getElementById('prompt'),status=document.getElementById('status'),replay=document.getElementById('replay');
+const scenes=[...document.querySelectorAll('.scene')],reduced=matchMedia('(prefers-reduced-motion:reduce)').matches,touch=matchMedia('(pointer:coarse)').matches;
+let phase='waiting',current=-1,timer=0,generation=0;
+function setPhase(next){phase=next;document.body.dataset.phase=next;document.body.dataset.scene=String(current)}
+function showPrompt(text,detail=''){prompt.textContent=text;if(detail){const small=document.createElement('small');small.textContent=detail;prompt.append(small)}prompt.classList.add('visible')}
+function reset(){generation++;clearTimeout(timer);current=-1;setPhase('waiting');entrance.style.opacity='1';action.disabled=true;action.setAttribute('aria-label','入場準備中');prompt.classList.remove('visible');prompt.textContent='';replay.classList.remove('visible');status.textContent='入口の間を確認中';for(const s of scenes){s.classList.remove('active','moving','held');s.querySelector('.caption').classList.remove('visible')}const run=generation;timer=setTimeout(()=>{if(run!==generation)return;setPhase('ready');action.disabled=false;action.setAttribute('aria-label','入場する');showPrompt(touch?'タップして入場':'CLICK TO ENTER','Enterでも入場できます');status.textContent='入場待ち'},HOLD)}
+function pause(){const scene=scenes[current];scene.classList.remove('moving');scene.classList.add('held');scene.querySelector('.caption').classList.add('visible');action.disabled=false;setPhase('paused');status.textContent='見せ場 '+(current+1)+' / '+scenes.length+' — 入力されるまで停止';if(current===scenes.length-1){action.setAttribute('aria-label','絵コンテを見る');showPrompt(touch?'タップして絵コンテへ':'CLICK TO VIEW STORYBOARD')}else{action.setAttribute('aria-label','次の場面へ進む');showPrompt(touch?'タップして、続きを見る':'CLICK TO CONTINUE')}replay.classList.add('visible')}
+function advance(){if(phase!=='ready'&&phase!=='paused')return;if(current===scenes.length-1){location.href='index.html#concept';return}current++;setPhase('moving');clearTimeout(timer);action.disabled=true;prompt.classList.remove('visible');replay.classList.remove('visible');entrance.style.opacity='0';status.textContent='自律的に進行中 — 移動中の入力は受け付けません';for(const s of scenes){s.classList.remove('active','moving','held');s.querySelector('.caption').classList.remove('visible')}const scene=scenes[current];scene.classList.add('active');void scene.offsetWidth;scene.classList.add('moving');const run=generation;timer=setTimeout(()=>{if(run===generation)pause()},MOVE)}
+action.addEventListener('click',advance);replay.addEventListener('click',reset);
+window.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.repeat&&e.target!==replay&&!(e.target instanceof HTMLAnchorElement)){e.preventDefault();advance()}});
+window.addEventListener('pointermove',e=>{if(reduced||e.pointerType==='touch'||(phase!=='waiting'&&phase!=='ready'))return;document.documentElement.style.setProperty('--mx',String((e.clientX/innerWidth-.5)*2));document.documentElement.style.setProperty('--my',String((e.clientY/innerHeight-.5)*2))},{passive:true});
+reset();
+</script></body></html>

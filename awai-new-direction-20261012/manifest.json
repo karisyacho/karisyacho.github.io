@@ -4,8 +4,13 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 15165,
-      "sha256": "56ed71d810d7125f959510aac9140eb5be5cc170879c7d3a90e40d74b4ee0fbd"
+      "bytes": 15486,
+      "sha256": "fb2787ffb8797e48dd76ed3775f5fd8f7391fb0942bb793f27a4ce8f44071d1b"
+    },
+    {
+      "path": "timing.html",
+      "bytes": 9378,
+      "sha256": "d4899ba238f1c667b33dce8285b2c478e37ec3c64aee4ea2671c25cd78aecd62"
     },
     {
       "path": "assets/vision-desktop.webp",
