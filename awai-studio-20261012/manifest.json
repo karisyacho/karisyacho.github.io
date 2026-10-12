@@ -1,0 +1,15 @@
+{
+  "stage": "Visual direction proposal only; not production 3D or a performance result",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 7391,
+      "sha256": "f327ea1bbc793931841b31c6c750e3b2c5775456e5e1fd1851ec00f147d54ad3"
+    },
+    {
+      "path": "awai-word.webp",
+      "bytes": 30552,
+      "sha256": "b5b3e3e60847c13999b6a4beb12ca93b454ae8133110b1d34f78893099ad8371"
+    }
+  ]
+}
