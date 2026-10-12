@@ -34,13 +34,13 @@
     },
     {
       "path": "THREE-LICENSE.txt",
-      "bytes": 1081,
-      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+      "bytes": 2202,
+      "sha256": "0703f88e52608606d5b4daf0f4cd1ce6ec9e751680e720fe6f6e73b482f7f54c"
     },
     {
       "path": "assets-LICENSE.md",
-      "bytes": 524,
-      "sha256": "43ea162ded36048705a3f8231b99c85789ef81a5e1270a7d4cee9f084f535c07"
+      "bytes": 539,
+      "sha256": "ffb9c93a3dfabacfc949aa34681052a11a0df708dd37177a77a1bf145563e1bf"
     },
     {
       "path": "assets/wood-diffuse.jpg",
