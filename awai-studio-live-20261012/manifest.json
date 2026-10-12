@@ -1,0 +1,41 @@
+{
+  "owner": "awai-v6-managed-review",
+  "folder": "awai-studio-live-20261012",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 623378,
+      "sha256": "f7de73e4e8e46fcb416dd6f6a2daba83646ef459a2660163c40a19aacc10f8e7"
+    },
+    {
+      "path": "assets-LICENSE.md",
+      "bytes": 467,
+      "sha256": "78909809fb8824e269bfbf38af60c6638d3796385bc592fc4afe718aaa3db002"
+    },
+    {
+      "path": "assets/awai-word.glb",
+      "bytes": 31088,
+      "sha256": "0901756854e614aa265a5beb970d65aeebb7d044ff548a9eff5e4a950aa47c26"
+    },
+    {
+      "path": "assets/awai-word.webp",
+      "bytes": 30552,
+      "sha256": "b5b3e3e60847c13999b6a4beb12ca93b454ae8133110b1d34f78893099ad8371"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5682,
+      "sha256": "8b73c4b0c45abca0a5ee566afb032c43d1141e9d253ad5959a5a4c15e90427ae"
+    },
+    {
+      "path": "style.css",
+      "bytes": 10212,
+      "sha256": "a41fd294151f8c5a0ffba2fff80fbe24c2fced582d117a073b6db617139942e0"
+    },
+    {
+      "path": "THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    }
+  ]
+}
