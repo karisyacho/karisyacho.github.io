@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-12",
+  "stage": "Actual interactive WebGL production review; award standard not confirmed",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 3363,
+      "sha256": "6db36d3e025602e75f55568b12895764113f0d45b9d0a90124566eb469d13987"
+    },
+    {
+      "path": "about.html",
+      "bytes": 3454,
+      "sha256": "7d03a7d91bdc978085bdf45611f13408c06ba17c2c54d0914b2168d5fc104daf"
+    },
+    {
+      "path": "style.css",
+      "bytes": 9491,
+      "sha256": "9c8a69a0e1755459c0ac02771edd0140b5ea62254603c6ffd3e1551e7627c9f7"
+    },
+    {
+      "path": "about.css",
+      "bytes": 3163,
+      "sha256": "724246a5f801ca3025ad36e9689e4e1cc459ac24b26a1331bc4ac237b68d2ab6"
+    },
+    {
+      "path": "app.js",
+      "bytes": 879360,
+      "sha256": "8f67a6eb64013153c31b4f2c3432a76d58fa1622a5930f60d9d249853aad99f6"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 191,
+      "sha256": "238fd8ffea72d6337d0584607de35e36316dba14d48e054b44018edac9fc468f"
+    },
+    {
+      "path": "THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "assets-LICENSE.md",
+      "bytes": 524,
+      "sha256": "43ea162ded36048705a3f8231b99c85789ef81a5e1270a7d4cee9f084f535c07"
+    },
+    {
+      "path": "assets/wood-diffuse.jpg",
+      "bytes": 215573,
+      "sha256": "460dd08d240f4a1f02982415048c3c5c200f385db212da18dc7e2df68bf4d0be"
+    },
+    {
+      "path": "assets/wood-nor_gl.jpg",
+      "bytes": 51927,
+      "sha256": "9bf7ddf5721e225c20290f1772ae37f9bdfd49658f6d458259eb794e2149d3cf"
+    },
+    {
+      "path": "assets/wood-rough.jpg",
+      "bytes": 237261,
+      "sha256": "a2ca9ae89dfe7b8e2e5e92f0aa43467845417de8a50205b5852ef0d57c7624f9"
+    }
+  ]
+}
