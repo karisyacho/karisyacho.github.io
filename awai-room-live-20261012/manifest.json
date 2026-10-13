@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "app.js",
-      "bytes": 634210,
-      "sha256": "306e6853b76dbe7307a6f4ab100a0f669bf77376e796cecc0fd604598a352159"
+      "bytes": 634365,
+      "sha256": "3eec3f2399fbd887af557820e9f38b57a088e7f5bed397b0446ebe426e40a372"
     },
     {
       "path": "assets-LICENSE.md",
@@ -30,7 +30,7 @@
     {
       "path": "index.html",
       "bytes": 4459,
-      "sha256": "45118e798624b272a32a133d1fdbe54abc4660b8672393d4b82b5f651df2707e"
+      "sha256": "0f7142759f6287d364ee3c27f685399e594bfdb6156d03e1fa36b12e88ca5c37"
     },
     {
       "path": "style.css",
