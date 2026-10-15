@@ -37,9 +37,36 @@
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const connection = navigator.connection;
   const staticPreferred = () => motion.matches || Boolean(connection?.saveData);
+  const entryHost = $('live-entry');
+  let entryController = null, entryLoading = null, entryPaused = false, entryReady = false, entryAnimating = !motion.matches;
   let chapters = [], current = 0, started = false, reachedHold = false, pending = false, frame = 0, request = 0, mediaFailed = false;
   let visible = true, drag = null, scrubFrame = 0, queuedSeek = null, mediaLoading = null;
-  const announce = (message) => { status.textContent = message; };
+  const announce = (message) => { status.textContent = message; status.classList.toggle('sr-only', retry.hidden); };
+  function syncEntry() {
+    if (!entryHost) return;
+    const candidate = Boolean((entryController || entryLoading) && current === 0 && video.hidden);
+    entryHost.hidden = !candidate; stage.dataset.live = String(entryReady && candidate);
+    if (candidate && entryController && visible && !document.hidden && !entryPaused) entryController.resume();
+    else entryController?.pause();
+  }
+  function loadEntry() {
+    if (!entryHost?.dataset.module || entryLoading || entryController || connection?.saveData) return;
+    // Make the canvas measurable before its first render. Poster remains in place.
+    entryHost.hidden = false;
+    let failed = false;
+    entryLoading = import(new URL(entryHost.dataset.module, document.baseURI).href)
+      .then(({ createEntry }) => createEntry({host:entryHost, reducedMotion:motion.matches,
+        onReady:() => { entryReady = true; syncEntry(); updateControls();
+          if (current === 0 && !pending) announce(entryAnimating ? '指やカーソルに反応する入口です。' : '入口を静止して表示しています。「入口を動かす」で動きを選べます。'); },
+        onPerformance:() => { entryAnimating = false; updateControls(); announce('描画の負荷に合わせて入口を静止させました。次の場面へ進めます。'); },
+        onError:() => { failed = true; entryController?.dispose(); entryController = null; entryReady = false; entryHost.hidden = true; stage.dataset.live = 'false'; updateControls(); }
+      }))
+      .then(controller => { if (failed) { controller.dispose(); return; } entryController = controller;
+        controller.setMotion(entryAnimating && !staticPreferred());
+        if (entryReady) syncEntry(); updateControls(); })
+      .catch(() => { entryHost.hidden = true; stage.dataset.live = 'false'; })
+      .finally(() => { entryLoading = null; });
+  }
   function updateControls() {
     const ready = chapters.length === 7;
     previous.disabled = !ready || current === 0;
@@ -56,6 +83,12 @@
     }
     advance.textContent = !started ? 'ENTER — 体験をはじめる' : current === 3 && !reachedHold ? '弾いてみる' : current === 6 ? (reachedHold ? '体験の終わり' : '最後の映像を見る') : '次へ';
     play.textContent = pending ? '読み込みを中止' : video.paused ? reachedHold ? 'この場面をもう一度見る' : '映像を再生' : '映像を止める';
+    if (current === 0 && entryController && video.hidden && !pending) {
+      advance.textContent = '文字の中へ';
+      play.textContent = entryAnimating && !entryPaused ? '入口を止める' : '入口を動かす';
+    } else if (current > 0 && !pending && !(current === 3 && !reachedHold)) {
+      advance.textContent = ['','','指先へ','制作の部屋へ','届ける','外へ','体験の終わり'][current] || '町へ広がる';
+    }
   }
   function pause(message) {
     request += 1; pending = false; video.pause(); cancelAnimationFrame(frame);
@@ -67,10 +100,14 @@
   function showEnding(ending) {
     frameContact.hidden = !ending; stage.dataset.ending = String(ending);
   }
-  function showPoster() { video.hidden = true; still.hidden = false; showEnding(current === 6); }
+  function showPoster() { video.hidden = true; still.hidden = false; showEnding(current === 6); syncEntry(); }
   function select(index) {
     pause(); current = index; reachedHold = false;
     stage.dataset.entry = String(index === 0);
+    stage.dataset.chapter = String(index);
+    const chapterNav = $('chapter-nav'), chapterToggle = $('chapter-toggle');
+    if (chapterNav) chapterNav.hidden = true;
+    chapterToggle?.setAttribute('aria-expanded', 'false');
     const chapter = chapters[index];
     still.src = chapter.poster;
     still.alt = `${String(index).padStart(2, '0')} ${chapter.title || '場面'}の静止画`;
@@ -80,6 +117,7 @@
     document.querySelector('.gesture-hint').hidden = current !== 3;
     announce(current === 3 ? '上へ引いて離すと、ページが弾かれます。ボタンでも進めます。' : staticPreferred() ? '静止画で表示しています。映像は再生ボタンから選べます。' : '映像は操作するまで止まっています。');
     updateControls();
+    if (index === 0) loadEntry();
   }
   function finishChapter() {
     const chapter = chapters[current];
@@ -135,6 +173,7 @@
       // A stale play promise must not pause a newer chapter's playback.
       if (token !== request) return;
       video.hidden = false; still.hidden = true; retry.hidden = true;
+      syncEntry();
       announce('映像を再生しています。場面の終わりで止まります。');
       monitor();
     } catch (error) {
@@ -163,6 +202,7 @@
   }
   $('controls').hidden = false;
   advance.addEventListener('click', () => {
+    if (current === 0 && entryController && video.hidden) { started = true; select(1); if (!staticPreferred()) playChapter(); return; }
     if (!started) { started = true; updateControls(); if (!staticPreferred()) playChapter(); else announce('静止画で体験を始めました。次へ進めます。'); return; }
     if (current === 3 && !reachedHold) {
       if (staticPreferred()) { reachedHold = true; announce('静止画で表示しています。映像は再生ボタンから選べます。'); updateControls(); } else playChapter();
@@ -174,7 +214,23 @@
   });
   previous.addEventListener('click', () => { started = true; select(Math.max(0, current - 1)); });
   chapterButtons.forEach((button, index) => button.addEventListener('click', () => { started = true; select(index); }));
-  play.addEventListener('click', () => { started = true; if (!video.paused || pending) pause('映像を止めました。'); else playChapter(); });
+  play.addEventListener('click', () => {
+    if (pending || !video.paused) { pause('映像を止めました。'); return; }
+    if (current === 0 && entryController && video.hidden) {
+      entryAnimating = !(entryAnimating && !entryPaused); entryPaused = false;
+      entryController.setMotion(entryAnimating); syncEntry(); updateControls();
+      announce(entryAnimating ? '指やカーソルに反応する入口です。' : '入口の動きを止めました。'); return;
+    }
+    started = true; if (!video.paused || pending) pause('映像を止めました。'); else playChapter();
+  });
+  const chapterToggle = $('chapter-toggle'), chapterNav = $('chapter-nav');
+  chapterToggle?.addEventListener('click', () => {
+    chapterNav.hidden = !chapterNav.hidden;
+    chapterToggle.setAttribute('aria-expanded', String(!chapterNav.hidden));
+  });
+  chapterNav?.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { chapterNav.hidden = true; chapterToggle.setAttribute('aria-expanded','false'); chapterToggle.focus(); }
+  });
   retry.addEventListener('click', () => chapters.length ? playChapter() : loadTimeline());
   video.addEventListener('timeupdate', () => { if (!video.paused && chapters.length && hasReachedHold(video.currentTime, chapters[current])) finishChapter(); });
   video.addEventListener('ended', finishChapter);
@@ -256,10 +312,17 @@
   }, { passive: true });
   window.addEventListener('touchcancel', () => { if (drag?.kind === 'touch') { pause(); showPoster(); } }, { passive: true });
   // Native buttons provide Enter/Space input without capturing page scrolling.
-  document.addEventListener('visibilitychange', () => { if (document.hidden) pause('映像を止めました。再生ボタンで続けられます。'); });
-  if ('IntersectionObserver' in window) new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (!visible) pause('映像を止めました。再生ボタンで続けられます。'); }, { threshold: 0.1 }).observe(stage);
-  motion.addEventListener('change', () => { if (staticPreferred()) { pause('静止画で表示しています。映像は再生ボタンから選べます。'); showPoster(); } });
-  connection?.addEventListener?.('change', () => { if (staticPreferred()) { pause('静止画で表示しています。映像は再生ボタンから選べます。'); showPoster(); } });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) pause('映像を止めました。再生ボタンで続けられます。'); syncEntry(); });
+  window.addEventListener('pagehide', () => { entryController?.pause(); pause(); });
+  window.addEventListener('pageshow', syncEntry);
+  if ('IntersectionObserver' in window) new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (!visible) pause('映像を止めました。再生ボタンで続けられます。'); syncEntry(); }, { threshold: 0.1 }).observe(stage);
+  function preferStatic() {
+    if (!staticPreferred()) return;
+    entryAnimating = false; entryController?.setMotion(false);
+    pause('動きを止めました。再生ボタンで動かすこともできます。'); showPoster(); updateControls();
+  }
+  motion.addEventListener('change', preferStatic);
+  connection?.addEventListener?.('change', preferStatic);
   function fitOverlay() {
     // Align the native link with the uncropped 16:10 picture, including letterboxing.
     const width = Math.min(stage.clientWidth, stage.clientHeight * 1.6);

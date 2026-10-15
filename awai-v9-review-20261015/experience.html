@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&amp;family=Noto+Sans+JP:wght@400;500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="experience.css?v=42731d459cd1">
-  <script src="experience.js?v=d4717447948e" defer></script>
+  <link rel="stylesheet" href="experience-world.css?v=e3eb5c6ac5cd">
+  <script src="experience.js?v=89d05f2cbc03" defer></script>
 </head>
 <body>
   <a class="skip" href="#about">あわいについて読む</a>
@@ -22,6 +23,7 @@
   <main>
     <section class="experience" aria-label="あわいのWebサイト体験">
       <div class="stage" id="stage" data-entry="true">
+        <div id="live-entry" data-module="live-entry.bundle.js?v=f3ac9a71f858" aria-label="指やカーソルに反応する、立体のAWAI工房" hidden></div>
         <div class="film-overlay" id="film-overlay"><a id="frame-contact" href="#contact" aria-label="Webサイト制作を相談する" hidden>相談する <span aria-hidden="true">↓</span></a></div>
         <video id="film" poster="w0.jpg" preload="none" playsinline muted width="1440" height="900" aria-label="同じWebページが姿を変える映像" hidden></video>
         <img id="still" src="w0.jpg" width="1440" height="900" alt="黒い工房に立つAWAIの文字と、組み上がるWebページ">
@@ -38,16 +40,17 @@
         </div>
         <div class="controls" id="controls" hidden>
           <div class="transport"><button id="previous" type="button">戻る</button><button id="advance" class="primary" type="button">ENTER — 体験をはじめる</button><button id="play" type="button">映像を再生</button></div>
-          <p id="status" class="status" role="status" aria-live="polite">場面の情報を読み込んでいます。</p>
+          <p id="status" class="status sr-only" role="status" aria-live="polite">場面の情報を読み込んでいます。</p>
           <button id="retry" type="button" hidden>もう一度読み込む</button>
-          <nav class="chapters" aria-label="場面を選ぶ">
+          <button id="chapter-toggle" type="button" aria-expanded="false" aria-controls="chapter-nav">場面を選ぶ <span aria-hidden="true">＋</span></button>
+          <nav class="chapters" id="chapter-nav" aria-label="場面を選ぶ" hidden>
             <button type="button" data-chapter="0" title="00 入口">00<span>入口</span></button><button type="button" data-chapter="1" title="01 縮む">01<span>縮む</span></button><button type="button" data-chapter="2" title="02 広がる">02<span>広がる</span></button><button type="button" data-chapter="3" title="03 指で弾く">03<span>指で弾く</span></button><button type="button" data-chapter="4" title="04 仕上がる">04<span>仕上がる</span></button><button type="button" data-chapter="5" title="05 届く">05<span>届く</span></button><button type="button" data-chapter="6" title="06 抜け出る">06<span>抜け出る</span></button>
           </nav>
         </div>
         <noscript><p class="status">すべての場面の言葉を、このページで読めます。<a href="flow-complete.mp4">通し映像を見る</a></p></noscript>
       </div>
     </section>
-    <section class="information" id="about"><p class="eyebrow">ABOUT AWAI</p><h2>つくる前に、<br>話すところから。</h2><p>徳島を拠点に、Webサイトの企画・デザイン・制作を行う「あわい」です。お店や会社のことを聞き、その魅力が伝わる順番と形を、一緒に考えます。</p><p class="note">映像の中のお店は、表現のためのモデルケースです。「10日で仕上がる」は作品内の演出で、実際の制作期間のお約束ではありません。</p></section>
+    <section class="information" id="about"><p class="eyebrow">ABOUT AWAI</p><h2>つくる前に、<br>話すところから。</h2><p>徳島を拠点に、Webサイトの企画・デザイン・制作を行う「あわい」です。お店や会社のことを聞き、その魅力が伝わる順番と形を、一緒に考えます。</p><p class="note">体験の中のお店は、表現のためのモデルケースです。「10日で仕上がる」は作品内の演出で、実際の制作期間のお約束ではありません。</p></section>
     <section class="information contact" id="contact"><p class="eyebrow">CONTACT</p><h2>つくりたいもの、<br>伝えたいこと。</h2><p>まだまとまっていなくても、そこから一緒に考えます。</p><div class="contact-links"><a href="https://lin.ee/TRxM4U2" target="_blank" rel="noopener noreferrer">LINEで相談 <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a><a href="https://ig.me/m/shacho_kari" target="_blank" rel="noopener noreferrer">Instagramで相談 <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a></div></section>
   </main>
   <footer><p>AWAI <span>TOKUSHIMA, JAPAN</span></p><div><small>確認用の体験版</small><a href="world.html">映像一覧を見る</a></div></footer>

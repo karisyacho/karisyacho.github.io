@@ -1,11 +1,11 @@
 {
   "owner": "awai-v9-review-20261015",
-  "revision": 19,
+  "revision": 20,
   "files": [
     {
       "path": "index.html",
-      "bytes": 14925,
-      "sha256": "9effac0055cafb776b9c94088b4c070ee13719651ffe15ff8fb722e0cbdf5456"
+      "bytes": 14942,
+      "sha256": "b3311695e50df7f2ec5c1382b20bd6e589ff94b904730b78105881bfbb617c8c"
     },
     {
       "path": "flow.mp4",
@@ -124,13 +124,13 @@
     },
     {
       "path": "world.html",
-      "bytes": 14925,
-      "sha256": "9effac0055cafb776b9c94088b4c070ee13719651ffe15ff8fb722e0cbdf5456"
+      "bytes": 14942,
+      "sha256": "b3311695e50df7f2ec5c1382b20bd6e589ff94b904730b78105881bfbb617c8c"
     },
     {
       "path": "experience.html",
-      "bytes": 6776,
-      "sha256": "f8ad3496f2057423697525a1abeef6e3235f430fced76932fd46035e6cc4f0c9"
+      "bytes": 7202,
+      "sha256": "008d6e360d889181afdf3fa9f21031b99ae01e4870aef0fb718c563bc4d7dd67"
     },
     {
       "path": "experience.css",
@@ -139,8 +139,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 17332,
-      "sha256": "d4717447948e08661710cc54a586c32b178af8326ac748edb5fde89b25c8ff91"
+      "bytes": 21348,
+      "sha256": "89d05f2cbc03c4349ec4c3dcda404e66c78cd743fdab2790835dc6f7d6f9b30b"
     },
     {
       "path": "timeline.json",
@@ -171,6 +171,36 @@
       "path": "s6c-poster.jpg",
       "bytes": 27466,
       "sha256": "3a22cdc630f4a3eb70e26b3145d3d3da2f213c0a3fcf3150f8036621d09b89e9"
+    },
+    {
+      "path": "experience-world.css",
+      "bytes": 5888,
+      "sha256": "e3eb5c6ac5cd78b013938f874157e7cf12346a02ec40cfc451b93081e792c802"
+    },
+    {
+      "path": "live-entry.bundle.js",
+      "bytes": 628754,
+      "sha256": "f3ac9a71f858df358e8434a27232d2e53413d98545437ee0f82cc305170343da"
+    },
+    {
+      "path": "live-assets/room.glb",
+      "bytes": 566336,
+      "sha256": "5a804f90f515e3dc86f229db3629ab18a844cd8f1e1351b7c3e53225975593d3"
+    },
+    {
+      "path": "live-assets/part-states.json",
+      "bytes": 9456,
+      "sha256": "8b6a77e6897bdc790d9c0ab56a4955ab92e26a5ecc201c0952b6d756594a61ea"
+    },
+    {
+      "path": "live-assets/assets-LICENSE.md",
+      "bytes": 467,
+      "sha256": "78909809fb8824e269bfbf38af60c6638d3796385bc592fc4afe718aaa3db002"
+    },
+    {
+      "path": "live-assets/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
     }
   ]
 }
