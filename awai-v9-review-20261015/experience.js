@@ -151,7 +151,7 @@
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 8000);
     try {
-      const response = await fetch('timeline.json', { signal: controller.signal });
+      const response = await fetch('timeline.json', { signal: controller.signal, cache: 'no-cache' });
       if (!response.ok) throw new Error('場面の情報を読み込めませんでした。');
       chapters = validateTimeline(await response.json());
       document.documentElement.classList.add('enhanced'); select(0);
