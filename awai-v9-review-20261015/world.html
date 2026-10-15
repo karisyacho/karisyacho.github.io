@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="あわい v9 第19版。入口から最後の空の枠まで、53.5秒の通し映像と操作できる体験版。">
+<title>あわい 世界が変わる通し</title>
+<style>
+/* 1列の縦読み：場面ごとに 絵 → 変化の名前 → 画面の言葉 → 動き。暗い工房の絵が主役なので、地も暗く。 */
+:root{
+  --bg:#0b0d12; --panel:#12151c; --fg:#e7e9ee; --muted:#9097a6; --line:#262b36; --accent:#bcd3ff;
+  --display:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --body:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.8;padding:40px 16px 64px}
+.wrap{max-width:980px;margin:0 auto;display:grid;gap:56px}
+header{display:grid;gap:12px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(26px,5vw,40px);line-height:1.3;margin:0;text-wrap:balance}
+.lead{color:var(--muted);max-width:40em;margin:0}
+.flow{font-family:var(--mono);font-size:13px;color:var(--accent);display:flex;flex-wrap:wrap;gap:6px 10px}
+.flow span+span::before{content:"→";color:var(--muted);margin-right:10px}
+section{display:grid;gap:16px}
+figure{margin:0}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px}
+.no{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.08em}
+.verb{font-family:var(--display);font-size:22px;font-weight:700;color:var(--accent)}
+.say{font-family:var(--display);font-size:18px;font-weight:500}
+.body{display:grid;grid-template-columns:7em 1fr;gap:6px 16px;margin:0;max-width:46em}
+.body dt{color:var(--muted);font-size:13px;padding-top:2px}
+.body dd{margin:0;min-width:0}
+.ask{border-top:1px solid var(--line);padding-top:32px;display:grid;gap:10px}
+.ask h2{font-family:var(--display);font-size:20px;margin:0}
+.ask ul{margin:0;padding-left:1.2em;color:var(--fg)}
+.ask p{color:var(--muted);margin:0}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+summary{cursor:pointer;padding:12px 0}
+video{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+.strip{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.strip a{display:grid;gap:4px;color:var(--muted);font-size:12px;text-decoration:none;text-align:center}
+.strip img{width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);border-radius:3px}
+@media (max-width:560px){.strip{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:560px){.body{grid-template-columns:1fr}.body dt{padding-top:6px}}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&family=Noto+Sans+JP:wght@400;500&family=IBM+Plex+Mono&display=swap">
+
+</head>
+<body>
+<main class="wrap">
+<header>
+  <div class="eyebrow">AWAI v9 · world motion · 2026-10-16 第19版</div>
+  <h1>入口から、<span style="display:inline-block">世界が変わっていく</span></h1>
+  <p class="lead">00の入口から06の空の枠まで、7場面をつないだ53.5秒の映像です。完成した同じページが受け手に届き、その画面から文字が抜け、最後の空の枠へつながります。</p>
+  <p><a href="experience.html">操作できる体験版を開く →</a></p>
+  <figure><video src="flow-complete.mp4" poster="w0.jpg" muted playsinline controls preload="none" aria-label="00から06までの通し映像、53.5秒" width="960" height="600"></video></figure>
+  <p class="lead">第19版では終盤をつなぎ直し、届いた言葉を近くで読める時間を取りました。体験版では、03を指の移動に合わせて進められます。06の空の枠は実際の相談リンクになります。</p>
+  <div class="strip">
+    <a href="#s0"><img src="w0.jpg" alt="">00 入口</a><a href="#s1"><img src="w1.jpg" alt="">01 縮む</a><a href="#s2"><img src="w2.jpg" alt="">02 広がる</a><a href="#s3"><img src="w3.jpg" alt="">03 指で弾く</a>
+    <a href="#s4"><img src="w4.jpg" alt="">04 仕上がる</a><a href="#s5b"><img src="w5c-poster.jpg" alt="">05 届く</a><a href="#s6"><img src="s6c-poster.jpg" alt="">06 抜け出る</a>
+  </div>
+</header>
+<aside id="review" class="ask" aria-label="今回のレビュー">
+  <h2>品質チェック</h2>
+  <p>初回の独立チェックでは、指の操作が絵に返らないことと、空の枠と相談が別々になっていることが課題でした。03の連続操作、06の枠の中のリンク、入口と本文の見せ方を修正しています。受賞水準と判定するには、実機での操作や描画の品質も含めた確認が必要です。</p>
+  <ul><li>一つのページを通して見せる構想と、04の窓の影を維持。</li><li>05は受け手の画面で「届くかたちへ。」を読んでから、06へ移る。</li><li>スマホの縦画面に合わせた構図と、実機での指への追従は引き続き確認する。</li></ul>
+</aside>
+<div class="ask"><h2>第15版で直したこと（どの場面にも出る物）</h2><ul><li>ページの板：角を丸め、面は薄い艶、縁は細い金属にしました。縁が光を細い線で拾います。</li><li>ご予約のボタン：両端の丸い磁器の形にし、釉薬のような艶を付けました。</li><li>02 の白い太い縁：ページの下の光る板がはみ出していた物です。板をやめ、ページの下からにじむ光だまりにしました。駅からの光る道も、四角い棒から細い丸管にしています。</li><li>05 の受け手の画面：角の丸い薄い板と金属の縁、細い首と丸い足にしました。光る縁も細い丸管です。</li></ul></div>
+<section id="s0">
+  <figure><video aria-label="00 入口の映像" src="w0.mp4" poster="w0-poster.jpg" muted loop playsinline controls preload="none" width="960" height="600"></video></figure>
+  <div class="head"><span class="no">00</span><span class="verb">入口</span><span class="say">AWAI の世界に入る</span></div>
+  <dl class="body"><dt>動き</dt><dd>暗い工房に AWAI の字が立っていて、その後ろで店のページの部品が飛んできては組み上がっていきます。ここで見る人は、AWAI の世界の中に入ります。実際のサイトでは、ここから ENTER で01へ進みます。</dd><dt>実際に触る</dt><dd><a href="https://karisyacho.github.io/awai-room-live-20261012/" style="color:var(--accent)">入口を動かして見る</a>（近づくと部品がよけます）</dd></dl>
+</section>
+<section id="s1">
+  <figure><video aria-label="01 縮むの映像" src="w1.mp4" poster="w1-poster.jpg" muted loop playsinline controls preload="none" width="960" height="600"></video></figure>
+  <div class="head"><span class="no">01</span><span class="verb">縮む</span><span class="say">大きさが変わる</span></div>
+  <dl class="body"><dt>動き</dt><dd>上から見ると、店のトップページがそのまま読めます。そこからカメラが降りはじめ、光も真上から真横へ倒れていきます。着くころには「来たくなる。」の字が見上げるほどの壁になり、長い影を落としています。</dd></dl>
+</section>
+<section id="s2">
+  <figure><video aria-label="02 広がるの映像" src="w2.mp4" poster="w2-poster.jpg" muted loop playsinline controls preload="none" width="960" height="600"></video></figure>
+  <div class="head"><span class="no">02</span><span class="verb">広がる</span><span class="say">大きさが逆に変わる</span></div>
+  <dl class="body"><dt>伝えること</dt><dd>探している人に、お店が見つかる。</dd><dt>動き</dt><dd>01 の終わりと同じ、字の足元から始まります。カメラが昇るにつれて壁だった字はページへ沈み、そのまま町の大きさまで引いていきます。暗い町で灯っているのは店のページ1つだけ。駅を出た光が道をたどって店へ着くと、店がひと息明るくなり、カメラはその店の真上へ降りていきます。最後に、同じページがスマホの形へ組み替わって 03 へ渡ります。</dd></dl>
+</section>
+<section id="s3">
+  <figure><video aria-label="03 指で弾くの映像" src="w3.mp4" poster="w3-poster.jpg" muted loop playsinline controls preload="none" width="960" height="600"></video></figure>
+  <div class="head"><span class="no">03</span><span class="verb">指で弾く</span><span class="say">ページを上へ送る</span></div>
+  <dl class="body"><dt>動き</dt><dd>スマホのページに指が触れ、少し押し込まれます。そのまま上へ引いて離すと、離した瞬間がいちばん速く、ページは縦長の深い穴を一気に昇っていく。カメラは少し遅れて追いかけ、壁に並んだページと目盛りが流れ去ります。勢いが落ちるとページは行き過ぎて、少し戻ってから止まります。最後は正面へ戻って読める姿で止まり、部品が上へ抜けて04へつながります。</dd><dt>今回直したこと</dt><dd>前の版はカメラが見上げるだけで、物の側に勢いがありませんでした（10/14 のご指摘）。弾いた速さ・追いかける遅れ・跳ね返りを、ばねの計算で付けています。</dd></dl>
+</section>
+<section id="s4">
+  <figure><video aria-label="04 仕上がるの映像" src="w4.mp4" poster="w4-poster.jpg" muted loop playsinline controls preload="none" width="960" height="600"></video></figure>
+  <div class="head"><span class="no">04</span><span class="verb">仕上がる</span><span class="say">1枚のページが完成する</span></div>
+  <dl class="body"><dt>動き</dt><dd>1枚のページが、目の前で10日かけて仕上がります。窓から入る日が1日に1回ページの上を渡り、そのたびに1日進みます。1〜3日目は線が1本ずつ引かれ、4〜6日目は白い形が浮いて現れてから板に収まり、7日目に本物の質感へ変わります。光は夜の青から始まり、10日目の夕方で止まります。板はずっと同じ黒のままなので、白い形の上の字も読めます。</dd><dt>今回直したこと</dt><dd>前の版は窓が日といっしょにページのまわりを回っていたので、影がページの真ん中を軸に回り、日の変わり目では光が右から左へ飛んで戻っていました。上からの補助の光も、字に別の向きの影を落としていました（10/14 のご指摘）。いまは窓を部屋に固定し、動くのは日だけです。窓の光と桟の影は、毎日同じ向きへまっすぐ滑ります。朝と夕は光が弱まり、日の変わり目は暗い時間に来るので、戻りは見えません。影を落とすのは日の光だけにしました。</dd></dl>
+</section>
+<details id="previous-s5">
+<summary>05の前の案を見る</summary>
+<section id="s5">
+  <figure><video aria-label="05 前の案の映像" src="w5.mp4" poster="w5-poster.jpg" muted loop playsinline controls preload="none" width="960" height="600"></video></figure>
+  <div class="head"><span class="no">05 前の案</span><span class="verb">埋まる</span><span class="say">混み具合が変わる</span></div>
+  <dl class="body"><dt>伝えること</dt><dd>伝えたいことを、ありのままに、届くかたちへ。</dd><dt>動き</dt><dd>暗がりに、手前の3枚が1枚ずつ現れて1つの文になります。そのあと奥が真ん中から端へ向かってページで埋まり、カメラは少しだけ引きます。</dd></dl>
+</section>
+</details>
+<section id="s5b">
+  <div class="head"><span class="no">05</span><span class="verb">届く</span><span class="say">言葉が、受け手の画面に灯る</span></div>
+  <figure><video aria-label="05から06へつながる映像" src="w5c.mp4" poster="w5c-poster.jpg" muted playsinline controls preload="none" width="960" height="600"></video></figure>
+  <dl class="body"><dt>動き</dt><dd>04の完成したページと同じ位置・光から始まります。ページが部屋を離れ、見出しが「伝えたいことを、」「ありのままに、」「届くかたちへ。」と替わる。言葉をのせたページが受け手へ届くと、その画面へ近づいて、届いた言葉を読みます。その後、文字が上へ抜けて面が薄くなり、同じ輪郭が06の空の枠として残ります。</dd></dl>
+</section>
+<section id="s6">
+  <figure><video aria-label="06 抜け出るの映像" src="s6c.mp4" poster="s6c-poster.jpg" muted playsinline controls preload="none" width="960" height="600"></video></figure>
+  <div class="head"><span class="no">06</span><span class="verb">抜け出る</span><span class="say">内と外が変わる</span></div>
+  <dl class="body"><dt>動き</dt><dd>受け手の画面から文字と面が抜け、輪郭だけが残ります。カメラが引くにつれて白い光が満ち、空の枠になる。体験版では、この枠の中に実際の「相談する」リンクが入ります。</dd></dl>
+</section>
+<div class="ask">
+  <h2>引き続き確かめること</h2>
+  <ul>
+    <li>03でページを追えるか、04で文字を読めるかを確認する</li>
+    <li>操作できる体験版で、03の追従と06から相談までを確認する</li>
+    <li>縦画面での主役の大きさと、実際のスマホでの反応を確かめる</li>
+  </ul>
+</div>
+</main>
+<script>
+// 再生は本人が選んだ1本だけ。画面から離れた動画は止める。
+const videos = [...document.querySelectorAll('video')];
+for (const video of videos) {
+  video.addEventListener('play', () => {
+    for (const other of videos) if (other !== video) other.pause();
+  });
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) videos.forEach(video => video.pause());
+});
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) if (!entry.isIntersecting) entry.target.pause();
+  });
+  videos.forEach(video => observer.observe(video));
+}
+document.querySelector('#previous-s5').addEventListener('toggle', event => {
+  if (!event.currentTarget.open) event.currentTarget.querySelector('video').pause();
+});
+</script>
+</body>
+</html>
