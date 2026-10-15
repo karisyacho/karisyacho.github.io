@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 15073,
-      "sha256": "1f0f5ebd67e6d3fea9c1ac331af4a5a702aeb9228181983a6c3d26fe50816119"
+      "bytes": 14925,
+      "sha256": "9effac0055cafb776b9c94088b4c070ee13719651ffe15ff8fb722e0cbdf5456"
     },
     {
       "path": "flow.mp4",
@@ -124,28 +124,28 @@
     },
     {
       "path": "world.html",
-      "bytes": 15073,
-      "sha256": "1f0f5ebd67e6d3fea9c1ac331af4a5a702aeb9228181983a6c3d26fe50816119"
+      "bytes": 14925,
+      "sha256": "9effac0055cafb776b9c94088b4c070ee13719651ffe15ff8fb722e0cbdf5456"
     },
     {
       "path": "experience.html",
-      "bytes": 6801,
-      "sha256": "cdf103c834731c4e5ec602bbbb645140b2873c52226a12300f6dc1eedbea0791"
+      "bytes": 6746,
+      "sha256": "10d01753a7e9ca82759395a82c0c7ae4aee5ffe3825c0419f1d7bae3229016f8"
     },
     {
       "path": "experience.css",
-      "bytes": 6341,
-      "sha256": "a9f0f8b3bd42a6ba5ce78a770332e6dba687fe14ac6dce12d3b4edf7bdc40bc6"
+      "bytes": 6333,
+      "sha256": "42731d459cd19ff4a5b8aee477588848274c3b7ace48a508a939b550c14ff861"
     },
     {
       "path": "experience.js",
-      "bytes": 17103,
-      "sha256": "3f5323eab0ee4149eed70debdf25ff60ad6576ee5965bb873a3443d26f62cd66"
+      "bytes": 16838,
+      "sha256": "be5fd2f3e8d391ae3fab29edf06d0343a7179f1acf585a7f46420848423f5426"
     },
     {
       "path": "timeline.json",
-      "bytes": 1305,
-      "sha256": "2fffca6fef2f59de82d959236d714a58860ae2a6967a0f20cac12e32940b61c1"
+      "bytes": 1244,
+      "sha256": "e16d7e63e5f5774b1c70beeb766e1be1c7c611a0f70785ae5fd2f195a05b3641"
     },
     {
       "path": "flow-complete.mp4",
