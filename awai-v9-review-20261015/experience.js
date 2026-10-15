@@ -23,6 +23,14 @@
   const $ = (id) => document.getElementById(id);
   const video = $('film'), still = $('still'), stage = $('stage');
   const frameContact = $('frame-contact'), filmOverlay = $('film-overlay');
+  // Read-only browser inspection transports DOM attributes reliably; media
+  // element properties may be represented by defaults in its isolated scope.
+  const recordMediaState = () => {
+    video.dataset.mediaTime = String(video.currentTime);
+    video.dataset.mediaPaused = String(video.paused);
+    video.dataset.mediaReady = String(video.readyState);
+  };
+  for (const event of ['timeupdate','seeked','pause','playing']) video.addEventListener(event,recordMediaState);
   const advance = $('advance'), previous = $('previous'), play = $('play'), status = $('status'), retry = $('retry');
   const chapterButtons = [...document.querySelectorAll('[data-chapter]')];
   const copies = [...document.querySelectorAll('[data-copy]')];
