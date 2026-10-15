@@ -1,5 +1,6 @@
 /* The experience occupies one room. Static/no-JS content keeps the readable layout. */
 .enhanced{--bg:#07090d;--fg:#e7e9ee;--muted:#bcc1ca;--warm:#e1cdb3}
+.enhanced[data-loading="true"] .chapter-copy article:not(:first-child){display:none}
 .enhanced .header{background:linear-gradient(#07090dc9,transparent);border:0;height:80px;pointer-events:none}
 .enhanced .header a{pointer-events:auto}
 .enhanced main{padding-top:0}
@@ -27,7 +28,6 @@
 #live-entry{position:absolute;inset:0;z-index:1;visibility:hidden}
 .stage[data-live="true"] #live-entry{visibility:visible}
 #live-entry canvas{display:block;width:100%;height:100%;outline:none}
-@media(min-width:701px){#live-entry{left:18%}}
 .enhanced .stage[data-live="true"]::after{z-index:2;background:linear-gradient(0deg,#07090ded,transparent 38%,transparent 80%,#07090d44)}
 .enhanced .stage[data-live="true"]~.experience-body .chapter-copy{bottom:auto;top:126px}
 .enhanced .stage[data-live="true"]~.experience-body .chapter-copy article>p:not(.eyebrow){max-width:28em}
@@ -44,7 +44,7 @@
  .enhanced .experience{height:max(760px,100svh)}
  .enhanced .stage{inset:218px 0 150px;height:auto}
  .enhanced .stage::after{background:linear-gradient(0deg,#07090d,transparent 20%,transparent 85%,#07090d)}
- .enhanced .stage[data-entry="true"]{inset:140px 0 125px}
+ .enhanced .stage[data-entry="true"],.enhanced .stage[data-chapter="1"][data-live="true"]{inset:140px 0 125px}
  .enhanced #live-entry{inset:0}
  .enhanced .stage[data-live="true"]::after{background:linear-gradient(0deg,#07090d,transparent 20%,transparent 85%,#07090d)}
  .enhanced .chapter-copy,.enhanced .stage[data-live="true"]~.experience-body .chapter-copy{left:24px;right:24px;bottom:auto;top:88px;max-width:none}
@@ -55,9 +55,13 @@
  .enhanced .chapter-copy .eyebrow{margin-bottom:8px}
  .enhanced .gesture-hint{position:absolute;top:calc(max(760px,100svh) - 290px);font-size:11px!important;max-width:28em}
  .enhanced .controls{left:24px;right:24px;bottom:22px}
- .enhanced .transport{gap:16px}
- .enhanced .transport .primary{min-width:144px;font-size:14px;gap:16px}
- .enhanced .transport button:not(.primary){font-size:11px}
+ .enhanced .transport{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:44px 44px;gap:0 20px}
+ .enhanced .transport .primary{grid-column:2;grid-row:1/3;align-self:center;height:64px;min-width:144px;font-size:14px;gap:16px;margin:0}
+ .enhanced .transport #play{grid-column:1;grid-row:1}
+ .enhanced .transport #previous{grid-column:1;grid-row:2}
+ .enhanced .transport button:not(.primary){font-size:11px;white-space:nowrap}
+ .enhanced [data-copy="1"] h2{font-size:clamp(22px,6.7vw,30px)}
+ .enhanced [data-copy="1"] h2 span{display:block;white-space:nowrap}
  .enhanced .chapters{bottom:116px}
  .enhanced .stage[data-ending="true"]{background-size:contain;background-repeat:no-repeat;background-position:center}
 }

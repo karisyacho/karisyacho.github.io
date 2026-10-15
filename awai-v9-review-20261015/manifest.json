@@ -1,11 +1,11 @@
 {
   "owner": "awai-v9-review-20261015",
-  "revision": 20,
+  "revision": 21,
   "files": [
     {
       "path": "index.html",
-      "bytes": 14942,
-      "sha256": "b3311695e50df7f2ec5c1382b20bd6e589ff94b904730b78105881bfbb617c8c"
+      "bytes": 14988,
+      "sha256": "504d479aa14c5c0cef22ef85e4bd2674fcb6b598d377ecb35c2f30302975e72c"
     },
     {
       "path": "flow.mp4",
@@ -124,13 +124,13 @@
     },
     {
       "path": "world.html",
-      "bytes": 14942,
-      "sha256": "b3311695e50df7f2ec5c1382b20bd6e589ff94b904730b78105881bfbb617c8c"
+      "bytes": 14988,
+      "sha256": "504d479aa14c5c0cef22ef85e4bd2674fcb6b598d377ecb35c2f30302975e72c"
     },
     {
       "path": "experience.html",
-      "bytes": 7202,
-      "sha256": "008d6e360d889181afdf3fa9f21031b99ae01e4870aef0fb718c563bc4d7dd67"
+      "bytes": 7347,
+      "sha256": "fcdd972c6750b2796188cc942fc96ec48c4f6a21f1e4d9c44ef76829e4961b21"
     },
     {
       "path": "experience.css",
@@ -139,8 +139,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 21348,
-      "sha256": "89d05f2cbc03c4349ec4c3dcda404e66c78cd743fdab2790835dc6f7d6f9b30b"
+      "bytes": 26137,
+      "sha256": "a397dce1e8e764c58dac24e6b11a9d27275c3a540b0cf74870c9aba1fb6b9a92"
     },
     {
       "path": "timeline.json",
@@ -174,13 +174,13 @@
     },
     {
       "path": "experience-world.css",
-      "bytes": 5888,
-      "sha256": "e3eb5c6ac5cd78b013938f874157e7cf12346a02ec40cfc451b93081e792c802"
+      "bytes": 6394,
+      "sha256": "182ea690493f3bedc09192be5a0dbb011562d78d174b88d9b48820a10ee7dd2e"
     },
     {
       "path": "live-entry.bundle.js",
-      "bytes": 628754,
-      "sha256": "f3ac9a71f858df358e8434a27232d2e53413d98545437ee0f82cc305170343da"
+      "bytes": 646046,
+      "sha256": "89c572f8eea4b5b6d13a50c433a1e668186943a8c245a72eb122144cbc108bb4"
     },
     {
       "path": "live-assets/room.glb",
@@ -194,13 +194,38 @@
     },
     {
       "path": "live-assets/assets-LICENSE.md",
-      "bytes": 467,
-      "sha256": "78909809fb8824e269bfbf38af60c6638d3796385bc592fc4afe718aaa3db002"
+      "bytes": 764,
+      "sha256": "78e703fa944e11b956cd18018a1fd9a10c8bdb3c9a712bdab2a0dfa0053f9076"
     },
     {
       "path": "live-assets/THREE-LICENSE.txt",
       "bytes": 1081,
       "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "live-assets/page-parts.glb",
+      "bytes": 853752,
+      "sha256": "453a36009855a42414ed6701cb92252bf44487e12dae866e830eb6294c184557"
+    },
+    {
+      "path": "live-assets/page-layouts.json",
+      "bytes": 4279,
+      "sha256": "8f857307e2f1a33ca308d8b352d829ad997a6d077e7edf73d079395c683e53eb"
+    },
+    {
+      "path": "live-assets/draco/draco_decoder.wasm",
+      "bytes": 192420,
+      "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac"
+    },
+    {
+      "path": "live-assets/draco/draco_wasm_wrapper.js",
+      "bytes": 58456,
+      "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6"
+    },
+    {
+      "path": "live-assets/draco/LICENSE.txt",
+      "bytes": 13898,
+      "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4"
     }
   ]
 }
