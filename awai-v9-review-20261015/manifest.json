@@ -1,6 +1,6 @@
 {
   "owner": "awai-v9-review-20261015",
-  "revision": 26,
+  "revision": 27,
   "files": [
     {
       "path": "index.html",
@@ -130,7 +130,7 @@
     {
       "path": "experience.html",
       "bytes": 7883,
-      "sha256": "63619ef75ef29ab6d52d0aa0c93551e526c8f80c5a7fbf81fb6c0b8830395d10"
+      "sha256": "d8967f85b12f856746ef112d7114cf752ef455d655a580495182599f6313c6a2"
     },
     {
       "path": "experience.css",
@@ -179,8 +179,8 @@
     },
     {
       "path": "live-entry.bundle.js",
-      "bytes": 681002,
-      "sha256": "1be132bc7dde96f6df0f5e4d31578a89e18129d20b03f57d346f376c57fd8159"
+      "bytes": 686224,
+      "sha256": "05322d77d0f470a94a5f558bf1e8e13fd665d7b9492b78dc6cd928da93226a10"
     },
     {
       "path": "live-assets/room.glb",
