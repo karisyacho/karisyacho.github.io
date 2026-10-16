@@ -28,6 +28,10 @@
 #live-entry{position:absolute;inset:0;z-index:1;visibility:hidden}
 .stage[data-live="true"] #live-entry{visibility:visible}
 #live-entry canvas{display:block;width:100%;height:100%;outline:none}
+.flick-hit{position:absolute;z-index:3;display:block;border:0;border-radius:0;padding:0;background:transparent;cursor:grab;touch-action:pan-x pinch-zoom;-webkit-tap-highlight-color:transparent}
+.flick-hit[hidden]{display:none}
+.flick-hit:active{cursor:grabbing}
+.flick-hit:focus-visible{outline:1px solid var(--warm);outline-offset:8px}
 .enhanced .stage[data-live="true"]::after{z-index:2;background:linear-gradient(0deg,#07090ded,transparent 38%,transparent 80%,#07090d44)}
 .enhanced .stage[data-live="true"]~.experience-body .chapter-copy{bottom:auto;top:126px}
 .enhanced .stage[data-live="true"]~.experience-body .chapter-copy article>p:not(.eyebrow){max-width:28em}
@@ -54,6 +58,7 @@
  .enhanced .chapter-copy [data-copy="5"] h2{font-size:27px;line-height:1.65}
  .enhanced .chapter-copy .eyebrow{margin-bottom:8px}
  .enhanced .gesture-hint{position:absolute;top:calc(max(760px,100svh) - 290px);font-size:11px!important;max-width:28em}
+ .enhanced .gesture-hint span{display:block}
  .enhanced .controls{left:24px;right:24px;bottom:22px}
  .enhanced .transport{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:44px 44px;gap:0 20px}
  .enhanced .transport .primary{grid-column:2;grid-row:1/3;align-self:center;height:64px;min-width:144px;font-size:14px;gap:16px;margin:0}

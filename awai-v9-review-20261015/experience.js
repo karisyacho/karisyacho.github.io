@@ -40,61 +40,69 @@
   const entryHost = $('live-entry');
   let entryController = null, entryLoading = null, entryPaused = false, entryReady = false, entryAnimating = !motion.matches;
   let pagePlaying=false,pagePaused=false,pendingKind=null;
-  const nativeLimited={0:false,1:false};
+  const nativeLimited={0:false,1:false,3:false};
+  let nativeAttempt=0;
   let chapters = [], current = 0, started = false, reachedHold = false, pending = false, frame = 0, request = 0, mediaFailed = false;
   let visible = true, drag = null, scrubFrame = 0, queuedSeek = null, mediaLoading = null, cancelSeek=null;
   const announce = (message) => { status.textContent = message; status.classList.toggle('sr-only', retry.hidden); };
+  const isNativeFlick=()=>current===3&&entryController?.chapter===3&&video.hidden&&!connection?.saveData;
   function syncEntry() {
     if (!entryHost) return;
     const nativeChapter=entryController?.chapter ?? 0;
-    const candidate = Boolean(video.hidden && ((current===0&&(entryController||entryLoading)&&nativeChapter===0)||(current===1&&entryController&&nativeChapter===1)));
+    const candidate = Boolean(video.hidden && ((current===0&&(entryController||entryLoading)&&nativeChapter===0)||([1,3].includes(current)&&entryController&&nativeChapter===current&&!(current===3&&connection?.saveData))));
     entryHost.hidden = !candidate; stage.dataset.live = String(entryReady && candidate);
-    if (candidate && entryController && visible && !document.hidden && !(current===1?pagePaused:entryPaused)) entryController.resume();
+    if (candidate && entryController && visible && !document.hidden && !([1,3].includes(current)?pagePaused:entryPaused)) entryController.resume();
     else entryController?.pause();
   }
   function loadEntry() {
     if (!entryHost?.dataset.module || entryLoading || entryController || connection?.saveData) return;
     // Make the canvas measurable before its first render. Poster remains in place.
     entryHost.hidden = false;
+    const attemptAtLoad=nativeAttempt;
     let failed = false;
     entryLoading = import(new URL(entryHost.dataset.module, document.baseURI).href)
       .then(({ createEntry }) => createEntry({host:entryHost, reducedMotion:motion.matches,
         onReady:() => { entryReady = true; syncEntry(); updateControls();
           if (current === 0 && !pending) announce(entryAnimating ? '指やカーソルに反応する入口です。' : '入口を静止して表示しています。「入口を動かす」で動きを選べます。'); },
-        onPerformance:() => { nativeLimited[entryController?.chapter??0]=true;if(current===0)entryAnimating=false;else if(current===1){pagePlaying=false;pagePaused=false;reachedHold=true;}updateControls();announce('描画の負荷に合わせて動きを止めました。「映像で動きを見る」から続きを選べます。'); },
-        onChapterEnd:index=>{if(index===1&&current===1){pagePlaying=false;pagePaused=false;reachedHold=true;updateControls();announce('文字の足元まで降りました。次の場面へ進めます。');}},
+        onPerformance:() => { nativeLimited[entryController?.chapter??0]=true;if(current===0)entryAnimating=false;else if([1,3].includes(current)){pagePlaying=false;pagePaused=false;reachedHold=true;}updateControls();announce('描画の負荷に合わせて動きを止めました。「映像で動きを見る」から続きを選べます。'); },
+        onChapterEnd:index=>{if([1,3].includes(index)&&current===index){pagePlaying=false;pagePaused=false;reachedHold=true;updateControls();announce(index===3?'ページが止まりました。次の場面へ進めます。':'文字の足元まで降りました。次の場面へ進めます。');}},
+        onRelease:index=>{if(index===3&&current===3&&video.hidden){pagePlaying=true;pagePaused=false;reachedHold=false;updateControls();announce('ページを弾きました。カメラが少し遅れて追いかけます。');}},
         onError:() => { failed = true; entryController?.dispose(); entryController = null; entryReady = false; entryHost.hidden = true; stage.dataset.live = 'false'; updateControls(); }
       }))
       .then(controller => { if (failed) { controller.dispose(); return; } entryController = controller;
         controller.setMotion(entryAnimating && !staticPreferred());
         if (entryReady) syncEntry(); updateControls();
-        if(current===1&&video.hidden&&video.paused&&!pending&&!connection?.saveData)openNativePage1({animate:false}); })
+        if([1,3].includes(current)&&visible&&!document.hidden&&nativeAttempt===attemptAtLoad&&video.hidden&&video.paused&&!pending&&!connection?.saveData)openNativePage(current,{animate:false}); })
       .catch(() => { entryHost.hidden = true; stage.dataset.live = 'false'; })
       .finally(() => { entryLoading = null; });
   }
-  async function openNativePage1({animate=false,fromEntry=false}={}){
-    if(!entryController?.preparePage1||connection?.saveData)return false;
+  const openNativePage1=options=>openNativePage(1,options);
+  async function openNativePage(index,{animate=false,fromEntry=false}={}){
+    const prepare=index===3?'preparePage3':'preparePage1';
+    if(!entryController?.[prepare]||connection?.saveData)return false;
     const controller=entryController,token=++request;
+    nativeAttempt++;
     pending=true;pendingKind='native';updateControls();announce('立体のページを読み込んでいます。');
     try{
-      await controller.preparePage1();
+      await controller[prepare]();
       if(token!==request||controller!==entryController)return false;
-      if(fromEntry){started=true;select(1,{native:false});}
+      if(fromEntry){started=true;select(index,{native:false});}
+      if(connection?.saveData){pending=false;pendingKind=null;showPoster();updateControls();return false;}
       const canAnimate=animate&&!staticPreferred();
-      pending=false;pendingKind=null;pagePlaying=canAnimate;pagePaused=false;reachedHold=!canAnimate;
-      controller.showChapter(1,{animate:canAnimate});syncEntry();updateControls();
-      announce(canAnimate?'同じ紙が広がり、文字の足元へ降ります。':'文字の足元を立体で表示しています。再生ボタンで動きを選べます。');return true;
+      pending=false;pendingKind=null;pagePlaying=canAnimate;pagePaused=false;reachedHold=index===3?false:!canAnimate;
+      controller.showChapter(index,index===3?{animate:canAnimate,interactive:!staticPreferred()}:{animate:canAnimate});syncEntry();updateControls();
+      announce(index===3?'上へ引いて離すと、ページが弾かれます。ボタンでも進めます。':canAnimate?'同じ紙が広がり、文字の足元へ降ります。':'文字の足元を立体で表示しています。再生ボタンで動きを選べます。');return true;
     }catch{
       if(token!==request)return false;
       pending=false;pendingKind=null;
-      if(fromEntry){started=true;select(1,{native:false});}
+      if(fromEntry){started=true;select(index,{native:false});}
       updateControls();announce('立体を読み込めませんでした。静止画と映像でご覧いただけます。');return false;
     }
   }
   function updateControls() {
     const ready = chapters.length === 7;
     previous.disabled = !ready || current === 0;
-    advance.disabled = !ready || pending || (current === 6 && reachedHold);
+    advance.disabled = !ready || pending || (current === 6 && reachedHold) || (isNativeFlick()&&pagePlaying);
     play.disabled = !ready;
     chapterButtons.forEach((button, index) => {
       button.disabled = !ready;
@@ -114,10 +122,13 @@
       advance.textContent = ['','','指先へ','制作の部屋へ','届ける','外へ','体験の終わり'][current] || '町へ広がる';
     }
     if(current===1&&entryController?.chapter===1&&video.hidden&&!pending)play.textContent=pagePlaying?'動きを止める':pagePaused?'続きから動かす':'もう一度動かす';
-    if([0,1].includes(current)&&entryController&&(entryController.chapter??0)===current&&video.hidden&&!pending&&nativeLimited[current])play.textContent='映像で動きを見る';
+    if(isNativeFlick()&&!pending)play.textContent=pagePlaying?'動きを止める':pagePaused?'続きから動かす':reachedHold?'もう一度弾く':'弾いてみる';
+    if([0,1,3].includes(current)&&entryController&&(entryController.chapter??0)===current&&video.hidden&&!pending&&nativeLimited[current])play.textContent='映像で動きを見る';
   }
   function pause(message) {
-    if(current===1&&pagePlaying){pagePlaying=false;pagePaused=true;entryController?.pause();}
+    if([1,3].includes(current)&&pagePlaying){pagePlaying=false;pagePaused=true;entryController?.pause();}
+    if(current===3)entryController?.cancelFlick?.();
+    if(pending&&pendingKind==='native')nativeAttempt++;
     request += 1; pending = false; pendingKind=null; video.pause(); cancelAnimationFrame(frame);
     cancelSeek?.();
     cancelAnimationFrame(scrubFrame); scrubFrame = 0; queuedSeek = null; drag = null;
@@ -133,9 +144,10 @@
     pause(); current = index; reachedHold = false;
     pagePlaying=false;pagePaused=false;
     if(index===0&&entryController?.showChapter)entryController.showChapter(0,{animate:entryAnimating&&!staticPreferred()});
+    else if(index!==3&&entryController?.chapter===3)entryController.showChapter(0,{animate:false});
     stage.dataset.entry = String(index === 0);
     stage.dataset.chapter = String(index);
-    entryHost?.setAttribute('aria-label',index===1?'Webページの文字の足元へ降りる立体の世界':'指やカーソルに反応する、立体のAWAI工房');
+    entryHost?.setAttribute('aria-label',index===3?'指でページを引き、離して弾く立体の世界':index===1?'Webページの文字の足元へ降りる立体の世界':'指やカーソルに反応する、立体のAWAI工房');
     const chapterNav = $('chapter-nav'), chapterToggle = $('chapter-toggle');
     if (chapterNav) chapterNav.hidden = true;
     chapterToggle?.setAttribute('aria-expanded', 'false');
@@ -149,7 +161,7 @@
     announce(current === 3 ? '上へ引いて離すと、ページが弾かれます。ボタンでも進めます。' : staticPreferred() ? '静止画で表示しています。映像は再生ボタンから選べます。' : '映像は操作するまで止まっています。');
     updateControls();
     if (index === 0) loadEntry();
-    else if(index===1&&native&&entryController)openNativePage1({animate:false});
+    else if([1,3].includes(index)&&native&&entryController)openNativePage(index,{animate:false});
   }
   function finishChapter() {
     const chapter = chapters[current];
@@ -250,6 +262,14 @@
     } finally { clearTimeout(timer); updateControls(); }
   }
   $('controls').hidden = false;
+  function activateNativeFlick(){
+    if(!isNativeFlick())return false;
+    if(nativeLimited[3]){started=true;playChapter({release:true});return true;}
+    if(pagePlaying){pagePlaying=false;pagePaused=true;entryController.pause();}
+    else if(pagePaused&&!reachedHold){pagePaused=false;pagePlaying=true;syncEntry();}
+    else{started=true;pagePlaying=true;pagePaused=false;reachedHold=false;entryController.flick(1);syncEntry();}
+    updateControls();return true;
+  }
   advance.addEventListener('click', () => {
     if (current === 0 && entryController && video.hidden) {
       if(connection?.saveData){started=true;select(1,{native:false});return;}
@@ -257,6 +277,7 @@
     }
     if (!started) { started = true; updateControls(); if (!staticPreferred()) playChapter(); else announce('静止画で体験を始めました。次へ進めます。'); return; }
     if (current === 3 && !reachedHold) {
+      if(isNativeFlick()){if(!pagePlaying)activateNativeFlick();return;}
       if (staticPreferred()) { reachedHold = true; announce('静止画で表示しています。映像は再生ボタンから選べます。'); updateControls(); } else playChapter();
       return;
     }
@@ -267,8 +288,9 @@
   previous.addEventListener('click', () => { started = true; select(Math.max(0, current - 1)); });
   chapterButtons.forEach((button, index) => button.addEventListener('click', () => { started = true; select(index); }));
   play.addEventListener('click', () => {
-    if (pending || !video.paused) { pause('映像を止めました。'); return; }
-    if([0,1].includes(current)&&nativeLimited[current]&&video.hidden){started=true;playChapter({release:false});return;}
+    if (pending || !video.paused) { nativeAttempt++;pause('映像を止めました。'); return; }
+    if([0,1,3].includes(current)&&nativeLimited[current]&&video.hidden){started=true;playChapter({release:current===3});return;}
+    if(activateNativeFlick())return;
     if(current===1&&entryController?.chapter===1&&video.hidden){
       if(pagePlaying){pagePlaying=false;pagePaused=true;entryController.pause();}
       else if(pagePaused&&!reachedHold){pagePaused=false;pagePlaying=true;syncEntry();}
@@ -309,7 +331,7 @@
     if (!scrubFrame) scrubFrame = requestAnimationFrame(flushScrub);
   }
   function beginDrag(x, y, id, kind) {
-    if (current !== 3 || reachedHold || pending || !visible || document.hidden || staticPreferred()) return;
+    if (current !== 3 || isNativeFlick() || reachedHold || pending || !visible || document.hidden || staticPreferred()) return;
     pause();
     const rect = stage.getBoundingClientRect();
     drag = { x, y, id, kind, time: performance.now(), lastY: y, lastTime: performance.now(), speed: 0 };
