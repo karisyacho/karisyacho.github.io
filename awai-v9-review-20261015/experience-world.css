@@ -50,7 +50,7 @@
  .enhanced .stage::after{background:linear-gradient(0deg,#07090d,transparent 20%,transparent 85%,#07090d)}
  .enhanced .stage[data-entry="true"],.enhanced .stage[data-chapter="1"][data-live="true"],.enhanced .stage[data-chapter="2"][data-live="true"],.enhanced .stage[data-chapter="3"][data-live="true"]{inset:140px 0 125px}
  .enhanced #live-entry{inset:0}
- .enhanced .stage[data-live="true"]::after{background:linear-gradient(0deg,#07090d,transparent 20%,transparent 85%,#07090d)}
+ .enhanced .stage[data-live="true"]::after{background:linear-gradient(to bottom,#07090d 0,#07090de8 95px,transparent 175px,transparent calc(100% - 110px),#07090d)}
  .enhanced .chapter-copy,.enhanced .stage[data-live="true"]~.experience-body .chapter-copy{left:24px;right:24px;bottom:auto;top:88px;max-width:none}
  .enhanced .chapter-copy h1,.enhanced .chapter-copy h2{font-size:clamp(25px,7vw,32px);line-height:1.5;margin-bottom:10px}
  .enhanced .chapter-copy article>p:not(.eyebrow){font-size:13px;line-height:1.85;max-width:30em}
