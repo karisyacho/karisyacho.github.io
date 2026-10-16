@@ -64,7 +64,7 @@
       .then(({ createEntry }) => createEntry({host:entryHost, reducedMotion:motion.matches,
         onReady:() => { entryReady = true; syncEntry(); updateControls();
           if (current === 0 && !pending) announce(entryAnimating ? '指やカーソルに反応する入口です。' : '入口を静止して表示しています。「入口を動かす」で動きを選べます。'); },
-        onPerformance:() => { nativeLimited[entryController?.chapter??0]=true;if(current===0)entryAnimating=false;else if([1,2,3].includes(current)){pagePlaying=false;pagePaused=false;reachedHold=true;}updateControls();announce('描画の負荷に合わせて動きを止めました。「映像で動きを見る」から続きを選べます。'); },
+        onPerformance:() => { nativeLimited[entryController?.chapter??0]=true;if(current===0)entryAnimating=false;else if([1,2,3].includes(current)){pagePlaying=false;pagePaused=false;reachedHold=true;}updateControls();announce('この端末では動きがかくつくため、いったん止めました。「映像で動きを見る」で続きを映像で見られます。'); },
         onChapterEnd:index=>{if([1,2,3].includes(index)&&current===index){pagePlaying=false;pagePaused=false;reachedHold=true;updateControls();announce(index===3?'ページが止まりました。次の場面へ進めます。':index===2?'お店のページへ着きました。次の場面へ進めます。':'文字の足元まで降りました。次の場面へ進めます。');}},
         onRelease:index=>{if(index===3&&current===3&&video.hidden){pagePlaying=true;pagePaused=false;reachedHold=false;updateControls();announce('ページを弾きました。カメラが少し遅れて追いかけます。');}},
         onError:() => { failed = true; entryController?.dispose(); entryController = null; entryReady = false; entryHost.hidden = true; stage.dataset.live = 'false'; updateControls(); }
@@ -124,6 +124,8 @@
     if([1,2].includes(current)&&entryController?.chapter===current&&video.hidden&&!pending&&!connection?.saveData)play.textContent=pagePlaying?'動きを止める':pagePaused?'続きから動かす':'もう一度動かす';
     if(isNativeFlick()&&!pending)play.textContent=pagePlaying?'動きを止める':pagePaused?'続きから動かす':reachedHold?'もう一度弾く':'弾いてみる';
     if([0,1,2,3].includes(current)&&entryController&&(entryController.chapter??0)===current&&video.hidden&&!pending&&nativeLimited[current])play.textContent='映像で動きを見る';
+    // 弾く前は「次へ」も同じ「弾いてみる」なので、同じ言葉のボタンを2つ並べない。
+    play.hidden=!pending&&play.textContent===advance.textContent;
   }
   function pause(message) {
     if([1,2,3].includes(current)&&pagePlaying){pagePlaying=false;pagePaused=true;entryController?.pause();}

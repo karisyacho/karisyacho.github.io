@@ -72,3 +72,19 @@
  .enhanced .stage[data-ending="true"]{background-size:contain;background-repeat:no-repeat;background-position:center}
 }
 @media(max-width:359px){.enhanced .controls,.enhanced .chapter-copy{left:18px;right:18px}.enhanced .transport{gap:10px}.enhanced .transport .primary{min-width:126px}.enhanced .transport button:not(.primary){font-size:10px}.enhanced .chapter-copy article>p:not(.eyebrow){font-size:12px}}
+/* 2026-10-17 手直し：日本語は文節で折る。PCでは文字の列と舞台を分け、重ねない。 */
+.enhanced :is(h1,h2,p){word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+@media(min-width:1000px) and (orientation:landscape){
+ .enhanced{--copy-edge:calc(clamp(24px,5vw,80px) + min(27em,30vw))}
+ .enhanced [data-copy="1"] h2 span,.enhanced [data-copy="2"] h2 span,.enhanced [data-copy="4"] h2 span{display:block}
+ .enhanced .stage[data-live="true"]~.experience-body .chapter-copy{max-width:min(27em,30vw)}
+ .enhanced #live-entry{left:auto;right:0;width:min(100%,max(calc(100% - var(--copy-edge)),max(700px,100svh)));-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%);mask-image:linear-gradient(90deg,transparent,#000 22%)}
+ .enhanced .stage video,.enhanced .stage>img{transition:height .9s cubic-bezier(.4,0,.2,1),object-position .9s cubic-bezier(.4,0,.2,1)}
+ .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]) :is(video,img){height:calc(100% - 112px);object-position:left center;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 76%,transparent 99%);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 76%,transparent 99%)}
+ .enhanced .stage[data-chapter="4"]~.experience-body .chapter-copy{left:auto;right:clamp(24px,5vw,80px);max-width:19em}
+ .enhanced .stage[data-chapter="4"]::after{background:linear-gradient(270deg,#07090dd9 0,#07090d8c 20%,transparent 36%),linear-gradient(0deg,#07090df5 0%,#07090d9c 16%,transparent 43%)}
+ .enhanced .chapter-copy{transition:opacity .6s ease}
+ .enhanced .stage[data-chapter="6"]:not([data-ending="true"]):has(video[data-media-paused="false"]:not([hidden]))~.experience-body .chapter-copy{opacity:0}
+ .enhanced .stage[data-ending="true"]~.experience-body .chapter-copy{top:104px}
+}
+@media(prefers-reduced-motion:reduce){.enhanced .stage video,.enhanced .stage>img{transition:none}}

@@ -1,6 +1,6 @@
 {
   "owner": "awai-v9-review-20261015",
-  "revision": 23,
+  "revision": 24,
   "files": [
     {
       "path": "index.html",
@@ -129,8 +129,8 @@
     },
     {
       "path": "experience.html",
-      "bytes": 7382,
-      "sha256": "5eeaff301c9e25a9afcfac247a5dfb3475fddcdd8cc054ec3567d1e0dc2d1959"
+      "bytes": 7883,
+      "sha256": "2b27b6dda0400c49371100fb17f9965c5dec191a5488b4a619b0beff916ac3e6"
     },
     {
       "path": "experience.css",
@@ -139,8 +139,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 29390,
-      "sha256": "8d531ec4d9284dd9867b92efd48834642a5c8599196fd176dbe2fcad77700c45"
+      "bytes": 29606,
+      "sha256": "aa1244bb7e2e330c21644e4aef8d5eb11a766af744e02c9aaf2349c43a2ac4f9"
     },
     {
       "path": "timeline.json",
@@ -174,8 +174,8 @@
     },
     {
       "path": "experience-world.css",
-      "bytes": 6990,
-      "sha256": "024570db6f2ed51643ef898354540edaac930f9bf649c5e079e39f39f0707f15"
+      "bytes": 8883,
+      "sha256": "9b05e10692594e635a18ddd7e5c54c4fa85e26cc28a57cab318723f500103447"
     },
     {
       "path": "live-entry.bundle.js",
