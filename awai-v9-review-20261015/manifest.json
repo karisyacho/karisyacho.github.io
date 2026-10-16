@@ -1,11 +1,11 @@
 {
   "owner": "awai-v9-review-20261015",
-  "revision": 22,
+  "revision": 23,
   "files": [
     {
       "path": "index.html",
-      "bytes": 15080,
-      "sha256": "277c8e72ba0221b6607f1d157d21350a1f1f724c58870ea4490791b8350330af"
+      "bytes": 15084,
+      "sha256": "0b6e27989bb509f0b608163e2250154e4d92f3e06d6dfb7bd626fd6404feba67"
     },
     {
       "path": "flow.mp4",
@@ -124,13 +124,13 @@
     },
     {
       "path": "world.html",
-      "bytes": 15080,
-      "sha256": "277c8e72ba0221b6607f1d157d21350a1f1f724c58870ea4490791b8350330af"
+      "bytes": 15084,
+      "sha256": "0b6e27989bb509f0b608163e2250154e4d92f3e06d6dfb7bd626fd6404feba67"
     },
     {
       "path": "experience.html",
-      "bytes": 7356,
-      "sha256": "31802abc98a103c505f5058dfcca52e8d5134bb7b3a0df46c0983de60c09e8e7"
+      "bytes": 7382,
+      "sha256": "e1dd7b1720a36401837c587d60b6a64bf636f1df2268587191d713bf901d97b3"
     },
     {
       "path": "experience.css",
@@ -139,8 +139,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 28364,
-      "sha256": "6b5a96f4fe308e684357fd89d38e2d241e6e26f7e801abd7278108ff7379f1bb"
+      "bytes": 29390,
+      "sha256": "8d531ec4d9284dd9867b92efd48834642a5c8599196fd176dbe2fcad77700c45"
     },
     {
       "path": "timeline.json",
@@ -174,13 +174,13 @@
     },
     {
       "path": "experience-world.css",
-      "bytes": 6776,
-      "sha256": "a5b78bc45c8297c47ee989bcaa18c9ee99bd3090adc6713c451d84371de890f1"
+      "bytes": 6951,
+      "sha256": "87dcd7bef4670e3847db2827255951fa7fd6d99e5df00cdb637930a99ad683e8"
     },
     {
       "path": "live-entry.bundle.js",
-      "bytes": 655817,
-      "sha256": "8a5dce56df963f04c713f99af67eba38d3d882decb3f75129de0cc06c2a82257"
+      "bytes": 680903,
+      "sha256": "4f9db5827023b8f440cacfd5c0aa2a09477c1013080144749411e1a3ffea6c87"
     },
     {
       "path": "live-assets/room.glb",
@@ -226,6 +226,11 @@
       "path": "live-assets/draco/LICENSE.txt",
       "bytes": 13898,
       "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4"
+    },
+    {
+      "path": "live-assets/town-layout.json",
+      "bytes": 101012,
+      "sha256": "10d27ca9b6921f2d3a8d379ed2c0075435f713038fb0ec08907d5820b72f879b"
     }
   ]
 }
