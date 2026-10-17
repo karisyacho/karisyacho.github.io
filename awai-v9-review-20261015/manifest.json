@@ -246,6 +246,31 @@
       "path": "s6c-hd-poster.jpg",
       "bytes": 21878,
       "sha256": "1593cfc1ecf03f5fbb26dab423df870051d9f2cb9adbfb0a18412bb212fae5ce"
+    },
+    {
+      "path": "letter-view-review.html",
+      "bytes": 2951,
+      "sha256": "db399737898de30ce2bbd3d0224c1914c8f2a8f94a96f371866773a2dad4b3e4"
+    },
+    {
+      "path": "letter-view-current-pc.jpg",
+      "bytes": 38908,
+      "sha256": "ddfaee6cc32e50305d77fcaad4fb8a4109ecb2744e8c2c0b5ae2ba178d59baf2"
+    },
+    {
+      "path": "letter-view-current-sp.jpg",
+      "bytes": 22606,
+      "sha256": "97d5ec86ca722493889de71558ad67019eabd537d1596bbb8386b638f4b7233f"
+    },
+    {
+      "path": "letter-view-proposed-pc.png",
+      "bytes": 254793,
+      "sha256": "f99442b5faadc2a4920079ed35859d94be60ec73752b88fb1a2e519832e5d4ba"
+    },
+    {
+      "path": "letter-view-proposed-sp.png",
+      "bytes": 89996,
+      "sha256": "5cbf85e7ccf9f03999d046abca204e3de6452a84fe1f8f216f5f76f1494bf177"
     }
   ]
 }
