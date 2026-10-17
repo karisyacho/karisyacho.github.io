@@ -1,4 +1,4 @@
-/* Starts by itself. Scrolling only moves the document; touching is optional. */
+/* Flows by itself, stops at the end of each scene, and moves on when the scene is touched. Scrolling only moves the document. */
 (() => {
   'use strict';
   const clamp=value=>Math.max(0,Math.min(1,Number.isFinite(value)?value:0));
@@ -26,14 +26,14 @@
 
   const $=id=>document.getElementById(id),root=document.documentElement;
   const room=document.querySelector('.experience'),stage=$('stage'),host=$('live-entry'),video=$('film'),still=$('still');
-  const overlay=$('film-overlay'),contact=$('frame-contact'),controls=$('controls'),playback=$('playback-toggle'),flick=$('flick-action');
-  const status=$('status'),retry=$('retry'),toggle=$('chapter-toggle'),nav=$('chapter-nav'),hint=document.querySelector('.gesture-hint');
+  const overlay=$('film-overlay'),contact=$('frame-contact'),controls=$('controls'),playback=$('playback-toggle'),touchHint=$('touch-hint');
+  const status=$('status'),retry=$('retry'),toggle=$('chapter-toggle'),nav=$('chapter-nav');
   const copies=[...document.querySelectorAll('[data-copy]')],buttons=[...nav.querySelectorAll('[data-chapter]')];
   const motion=matchMedia('(prefers-reduced-motion: reduce)'),connection=navigator.connection;
   const staticPreferred=()=>motion.matches||Boolean(connection?.saveData);
   let chapters=[],index=0,elapsed=0,mode='loading',serial=0,frame=0,lastNow=null,running=false,visible=true,manualPaused=false,waiting=false;
   let controller,entryLoading,mediaLoading,mediaPlay,failedEntry=false,failedMedia=false,handoff,lastFilmFrame;
-  let autoFlick=false,automaticRelease=false,finished=false;
+  let finished=false,awaiting=false,restedFor=-1;
   const prepared=new Set(),preparing=new Map();
   const announce=message=>{status.textContent=message;status.classList.toggle('sr-only',retry.hidden);};
   const canRun=()=>visible&&!document.hidden&&!manualPaused&&!finished;
@@ -65,14 +65,14 @@
     index=next;stage.dataset.chapter=String(index);stage.dataset.entry=String(index===0);
     copies.forEach((copy,i)=>copy.hidden=i!==index);
     buttons.forEach((button,i)=>{if(i===index)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');});
-    still.src=chapters[index].poster;flick.hidden=true;hint.hidden=true;setProgress(0);fitOverlay();
+    still.src=chapters[index].poster;setProgress(0);fitOverlay();
     announce(`${String(index).padStart(2,'0')} / ${chapters[index].title}`);
   }
   function showPoster(){video.pause();video.hidden=true;still.hidden=false;stage.dataset.live='false';host.hidden=true;controller?.pause();}
   function updateControls(){playback.textContent=finished?'もう一度見る':manualPaused?'再開':'一時停止';playback.setAttribute('aria-label',finished?'体験をもう一度見る':manualPaused?'体験を再開':'体験を一時停止');}
   function requestTick(){if(!frame&&canRun()&&mode!=='loading')frame=requestAnimationFrame(tick);}
   function resumeFilm(){
-    if(mode!=='film'||!canRun()||!video.paused||mediaPlay)return;
+    if(mode!=='film'||awaiting||!canRun()||!video.paused||mediaPlay)return;
     const token=serial;
     mediaPlay=Promise.resolve().then(()=>{if(token===serial&&mode==='film'&&canRun())return video.play();}).catch(()=>{
       if(token!==serial||!canRun()||mode!=='film')return;
@@ -95,7 +95,8 @@
   }
   function nativeEnd(chapter){
     const token=serial;
-    queueMicrotask(()=>{if(token===serial&&mode==='native'&&chapter===index)enter(Math.min(6,index+1));});
+    // 03 waited for its touch before the flick, so its end hands straight to 04.
+    queueMicrotask(()=>{if(token===serial&&mode==='native'&&chapter===index){if(chapter===3)enter(4);else awaitTouch();}});
   }
   function entryFault(){
     failedEntry=true;controller?.dispose();controller=null;prepared.clear();
@@ -106,7 +107,7 @@
     host.hidden=false;
     entryLoading=import(new URL(host.dataset.module,document.baseURI).href).then(({createEntry})=>createEntry({host,filmFrame,onChapterEnd:nativeEnd,onError:entryFault,
       onPerformance:()=>{failedEntry=true;if(mode==='native')enter(index);},
-      onRelease:()=>{autoFlick=true;if(!automaticRelease){host.dataset.intervened='true';announce('ページを弾きました。このまま続きます。');}}}))
+      onRelease:()=>{clearAwait();host.dataset.intervened='true';announce('ページを弾きました。');}}))
       .then(value=>{controller=value;return value;}).catch(()=>{failedEntry=true;return null;}).finally(()=>{entryLoading=null;});
     return entryLoading;
   }
@@ -136,7 +137,7 @@
   async function enter(next){
     const from=index,capture=from===3&&next===4&&mode==='native';
     if(capture){lastFilmFrame=filmFrame();captureHandoff();}else dropHandoff();
-    const token=++serial;finished=false;elapsed=0;autoFlick=false;lastNow=null;running=false;host.dataset.intervened='false';
+    const token=++serial;finished=false;elapsed=0;restedFor=-1;clearAwait();lastNow=null;running=false;host.dataset.intervened='false';
     setMode('loading');setCopy(next);showPoster();updateControls();
     if(!visible||document.hidden){waiting=true;return;}
     if(staticPreferred()){dropHandoff();setMode('poster');setProgress(0);syncPlayback();return;}
@@ -147,7 +148,7 @@
           await prepare(index,c);if(token!==serial)return;
           host.hidden=false;stage.dataset.live='true';still.hidden=true;video.hidden=true;
           if(!c.showChapter(index,{animate:index!==3,interactive:true,fromPage:from===1&&index===2}))throw Error('native scene unavailable');
-          setMode('native');flick.hidden=index!==3;hint.hidden=index!==3;syncPlayback();
+          setMode('native');syncPlayback();if(index===3)awaitTouch();
           if(index===0){Promise.allSettled([prepare(1,c),prepare(2,c),prepare(3,c),loadMedia()]);}
           return;
         }
@@ -161,22 +162,39 @@
       if(token!==serial)return;failedMedia=true;dropHandoff();showPoster();setMode('poster');retry.hidden=false;announce('映像を読み込めませんでした。静止画と文章で、そのまま続きます。');setProgress(0);syncPlayback();
     }
   }
+  // 止まる場所：場面の終わりで止まり、触れるまで待つ。合図は小さな「触れる」だけ。
+  function awaitTouch(){
+    if(finished||awaiting)return;
+    awaiting=true;stage.dataset.awaiting='true';touchHint.hidden=false;
+    announce(index===3?'ページに触れると、弾かれて次へ進みます。':'画面に触れると、次へ進みます。');
+  }
+  function clearAwait(){awaiting=false;stage.dataset.awaiting='false';touchHint.hidden=true;}
+  function proceed(){
+    if(!awaiting||finished||mode==='loading')return;
+    clearAwait();manualPaused=false;
+    if(mode==='native'&&index===3){controller?.flick(1);syncPlayback();return;}
+    if(mode==='film'){syncPlayback();return;}
+    enter(Math.min(6,index+1));
+  }
   function finish(){
-    finished=true;setMode('finished');video.pause();controller?.pause();dropHandoff();flick.hidden=true;hint.hidden=true;setProgress(1);syncPlayback();announce('体験の最後です。ご相談は画面の中、またはこの下から。');
+    finished=true;clearAwait();setMode('finished');video.pause();controller?.pause();dropHandoff();setProgress(1);syncPlayback();announce('体験の最後です。ご相談は画面の中、またはこの下から。');
   }
   function tick(now){
-    frame=0;if(!canRun()||mode==='loading'){lastNow=null;return;}
+    frame=0;if(!canRun()||mode==='loading'||awaiting){lastNow=null;return;}
     const delta=lastNow===null?0:(now-lastNow)/1000;lastNow=now;
     if(mode==='film'){
-      const next=resolveTime(video.currentTime,chapters);if(next.index!==index)setCopy(next.index);setProgress(next.progress);
+      const next=resolveTime(video.currentTime,chapters);
+      // 04 and 05 settle on their hold frame and wait there; a late frame is pulled back to it.
+      if(index<6&&restedFor!==index&&(next.index>index||video.currentTime>=chapters[index].hold)){
+        video.pause();if(next.index>index){try{video.currentTime=chapters[index].hold;}catch{}}
+        restedFor=index;setProgress(1);awaitTouch();return;
+      }
+      if(next.index!==index)setCopy(next.index);setProgress(next.progress);
       if(video.currentTime>=chapters[6].hold){finish();return;}
     }else{
       elapsed=advanceElapsed(elapsed,delta,true);const duration=chapters[index].end-chapters[index].start;setProgress(elapsed/duration);
-      if(mode==='poster'&&elapsed>=duration){if(index===6)finish();else enter(index+1);return;}
-      if(mode==='native'&&index===0&&elapsed>=duration){enter(1);return;}
-      if(mode==='native'&&index===3&&!autoFlick&&elapsed>=1.8&&host.dataset.flickPressed!=='true'){
-        autoFlick=true;automaticRelease=true;controller.flick(1);automaticRelease=false;
-      }
+      if(mode==='poster'&&elapsed>=duration){if(index===6)finish();else awaitTouch();return;}
+      if(mode==='native'&&index===0&&elapsed>=duration){awaitTouch();return;}
     }
     requestTick();
   }
@@ -187,7 +205,8 @@
   nav.addEventListener('keydown',event=>{if(event.key==='Escape'){closeNav(true);event.preventDefault();}});
   buttons.forEach((button,i)=>button.addEventListener('click',()=>{closeNav(true);enter(i);}));
   playback.addEventListener('click',()=>{if(finished){manualPaused=false;enter(0);}else {manualPaused=!manualPaused;syncPlayback();}});
-  flick.addEventListener('click',()=>{if(mode==='native'&&index===3){manualPaused=false;controller.flick(1);syncPlayback();}});
+  touchHint.addEventListener('click',event=>{event.stopPropagation();proceed();});
+  room.addEventListener('click',event=>{if(awaiting&&!event.target.closest('a,button,input,textarea,select,nav,.controls'))proceed();});
   // These events only control visibility/layout, never select a scene or seek.
   addEventListener('scroll',refreshVisibility,{passive:true});addEventListener('resize',()=>{fitOverlay();refreshVisibility();});
   document.addEventListener('visibilitychange',()=>{if(!document.hidden&&waiting){waiting=false;enter(index);}else syncPlayback();});

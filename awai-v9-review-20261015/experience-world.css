@@ -32,7 +32,7 @@
 .handoff{position:absolute;z-index:1;pointer-events:none}
 .enhanced .stage[data-handoff="true"]>img{visibility:hidden}
 .enhanced .stage[data-handoff="true"]::after{z-index:2}
-.flick-hit{position:absolute;z-index:3;display:block;border:0;border-radius:0;padding:0;background:transparent;cursor:grab;touch-action:pan-y pinch-zoom;-webkit-tap-highlight-color:transparent}
+.flick-hit{position:absolute;z-index:3;display:block;border:0;border-radius:0;padding:0;background:transparent;cursor:grab;touch-action:none;-webkit-tap-highlight-color:transparent}
 .flick-hit[hidden]{display:none}
 .flick-hit:active{cursor:grabbing}
 .flick-hit:focus-visible{outline:1px solid var(--warm);outline-offset:8px}
@@ -141,3 +141,16 @@
  .enhanced .gesture-hint{top:calc(var(--room-height) - 204px);font-size:10px!important;line-height:1.5!important}
  .enhanced .gesture-hint span{display:inline}
 }
+/* 止まる場所：場面の終わりで止まり、触れるまで待つ。合図は小さな一言と、ゆっくり息をする輪だけ。 */
+.touch-hint{position:absolute;z-index:5;left:var(--hint-x,62%);bottom:var(--hint-bottom,150px);transform:translateX(-50%);display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:8px 14px;background:transparent;border:0;color:var(--fg);font-size:13px;letter-spacing:.2em;opacity:0;animation:hint-in .9s .3s ease forwards}
+.touch-ring{position:relative;width:12px;height:12px;border-radius:50%;background:var(--warm)}
+.touch-ring::after{content:"";position:absolute;inset:-7px;border:1px solid var(--warm);border-radius:50%;animation:hint-ring 2.4s ease-out infinite}
+.stage[data-ending="true"] .touch-hint{color:#17202a}
+.stage[data-chapter="0"]{--hint-x:50%}.stage[data-chapter="3"]{--hint-x:67%;--hint-bottom:180px}.stage[data-chapter="4"]{--hint-x:40%}.stage[data-chapter="5"]{--hint-x:78%}
+.stage[data-awaiting="true"] canvas,.stage[data-awaiting="true"]>video,.stage[data-awaiting="true"]>img{animation:rest-breathe 4.8s ease-in-out infinite}
+@keyframes hint-in{to{opacity:1}}
+@keyframes hint-ring{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+@keyframes rest-breathe{0%,100%{filter:brightness(1)}50%{filter:brightness(1.09)}}
+@media(max-width:700px){.touch-hint,.stage[data-chapter] .touch-hint{left:50%;bottom:6px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.touch-hint{animation:none;opacity:1}.touch-ring::after,.stage[data-awaiting="true"] canvas,.stage[data-awaiting="true"]>video,.stage[data-awaiting="true"]>img{animation:none}}
+.experience:has(#chapter-nav:not([hidden])) .touch-hint{visibility:hidden}
