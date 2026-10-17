@@ -42,7 +42,7 @@
 .enhanced .chapter-copy [data-copy="6"] .text-link{display:none}
 .enhanced .information{border-color:#ffffff1a}
 @media(min-width:701px){
- .enhanced:has(.stage[data-ending="true"]) .header{color:#17202a;background:linear-gradient(#d4d5d7cc,transparent)}
+ .enhanced:not([data-information="true"]):has(.stage[data-ending="true"]) .header{color:#17202a;background:linear-gradient(#d4d5d7cc,transparent)}
  .enhanced .stage[data-ending="true"]~.experience-body .chapter-copy{top:126px;bottom:auto;color:#17202a}
  .enhanced .stage[data-ending="true"]~.experience-body .chapter-copy p{color:#39444e}
 }
@@ -92,3 +92,45 @@
  .enhanced .stage[data-ending="true"]~.experience-body .chapter-copy{top:104px}
 }
 @media(prefers-reduced-motion:reduce){.enhanced .stage video,.enhanced .stage>img{transition:none}}
+/* Keep navigation legible after leaving the white ending. */
+.enhanced[data-information="true"] .header{color:var(--fg);background:var(--bg);border-bottom:1px solid var(--line)}
+.information:focus{outline:none}
+.studio-person{margin-top:32px;color:var(--muted);font-size:14px}
+.consultation-details{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);max-width:40em}
+.consultation-details .eyebrow{margin-bottom:12px}
+.consultation-details .note{margin-top:16px}
+/* A complete phone viewport, including short screens and browser toolbars. */
+@media(max-width:700px){
+ .enhanced{--room-height:max(560px,100svh)}
+ .enhanced .experience{height:var(--room-height)}
+ .enhanced .chapter-copy [data-copy="0"]>p:not(.eyebrow){top:calc(var(--room-height) - 320px)}
+ .enhanced .gesture-hint{top:calc(var(--room-height) - 290px)}
+ /* Same film, framed around the page rather than a small widescreen window. */
+ .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]){inset:260px 0 150px;overflow:hidden}
+ .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]) :is(video,img){object-fit:cover;object-position:50% center}
+ .enhanced .stage[data-chapter="4"] :is(video,img){object-position:left center}
+ .enhanced .stage:is([data-chapter="4"],[data-chapter="5"])::after{background:linear-gradient(0deg,#07090d,transparent 16%,transparent 84%,#07090d)}
+ .enhanced .stage[data-chapter="6"]{inset:0;overflow:hidden}
+ .enhanced .stage[data-ending="true"]{background:#d4d5d7}
+ .enhanced .stage[data-chapter="6"] :is(video,img){position:absolute;left:50%;top:50%;width:165%;height:auto;transform:translate(-50%,-50%);-webkit-mask-image:linear-gradient(0deg,transparent,#000 20%,#000 80%,transparent);mask-image:linear-gradient(0deg,transparent,#000 20%,#000 80%,transparent)}
+ .enhanced .stage[data-chapter="6"]:not([data-ending="true"]):has(video[data-media-paused="false"]:not([hidden]))~.experience-body .chapter-copy{opacity:0}
+ .enhanced .stage[data-ending="true"]~.experience-body .chapter-copy{color:#17202a}
+ .enhanced .stage[data-ending="true"]~.experience-body .chapter-copy :is(p,.eyebrow){color:#39444e}
+ .enhanced:not([data-information="true"]):has(.stage[data-ending="true"]) .header{color:#17202a;background:linear-gradient(#d4d5d7cc,transparent)}
+}
+.film-overlay{inset:auto;left:50%;top:50%;margin:0;transform:translate(-50%,-50%)}
+@media(max-width:700px) and (max-height:700px){
+ .enhanced .header{height:56px;padding-inline:18px}
+ .enhanced .chapter-copy,.enhanced .stage[data-live="true"]~.experience-body .chapter-copy{top:72px;left:18px;right:18px}
+ .enhanced .chapter-copy h1,.enhanced .chapter-copy h2{font-size:23px;line-height:1.4;margin-bottom:8px}
+ .enhanced .chapter-copy .eyebrow{font-size:10px;margin-bottom:6px}
+ .enhanced .chapter-copy article>p:not(.eyebrow){font-size:12px;line-height:1.7}
+ .enhanced .chapter-copy [data-copy="0"]>p:not(.eyebrow){top:calc(var(--room-height) - 304px)}
+ .enhanced .controls{bottom:12px}
+ .enhanced .stage[data-entry="true"]{inset:136px 0 230px}
+ .enhanced .stage:is([data-chapter="1"],[data-chapter="2"],[data-chapter="3"])[data-live="true"]{inset:218px 0 154px}
+ .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]){inset:228px 0 150px}
+ .enhanced .stage[data-live="true"]::after{background:linear-gradient(0deg,#07090d,transparent 15%,transparent 88%,#07090d)}
+ .enhanced .gesture-hint{top:calc(var(--room-height) - 254px);font-size:10px!important;line-height:1.5!important}
+ .enhanced .gesture-hint span{display:inline}
+}

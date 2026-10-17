@@ -1,6 +1,6 @@
 {
   "owner": "awai-v9-review-20261015",
-  "revision": 28,
+  "revision": 29,
   "files": [
     {
       "path": "index.html",
@@ -129,8 +129,8 @@
     },
     {
       "path": "experience.html",
-      "bytes": 7830,
-      "sha256": "5da7fa24c003d64022711d68cf46e3fe43faaa999bfe199a21c08e3e0957b0ad"
+      "bytes": 8621,
+      "sha256": "70d6f188dc98e9ef987fc36da1389aac9c78019402b0dbed6b7fbb4a2f287c27"
     },
     {
       "path": "experience.css",
@@ -139,13 +139,13 @@
     },
     {
       "path": "experience.js",
-      "bytes": 32929,
-      "sha256": "a551df54b5340f977a9ef4faf45aaa9edabbac11e589e711834b61ee874baec5"
+      "bytes": 33966,
+      "sha256": "3ae90905599a9b18d7d668c5f2f7cf6542470a3de5c0dbf19d09e371a3815e4b"
     },
     {
       "path": "timeline.json",
-      "bytes": 1244,
-      "sha256": "e16d7e63e5f5774b1c70beeb766e1be1c7c611a0f70785ae5fd2f195a05b3641"
+      "bytes": 1260,
+      "sha256": "c63b9f4916c407b8f0ef2128d3107d411835c126fecb5a645fa69f40ea854cf9"
     },
     {
       "path": "flow-complete.mp4",
@@ -174,13 +174,13 @@
     },
     {
       "path": "experience-world.css",
-      "bytes": 9386,
-      "sha256": "6e60d16032f62daabfa9aaecab00a881166fada3ee4774c5fd2a1c03aac81c99"
+      "bytes": 12916,
+      "sha256": "d861108a059fda9b2cd68b9f961061a03b301fd8d3dc44d4281f26cb6ee2b38a"
     },
     {
       "path": "live-entry.bundle.js",
-      "bytes": 687722,
-      "sha256": "4bf842cf79585c8cbe5a0689314a3cf63ab48259331c81524d0122422fe4c9eb"
+      "bytes": 691758,
+      "sha256": "4fbc7bbc2474183d05d01b1d8cba8e2327cba55f62f970f6e198c8bfb29a0dae"
     },
     {
       "path": "live-assets/room.glb",
@@ -231,6 +231,21 @@
       "path": "live-assets/town-layout.json",
       "bytes": 101012,
       "sha256": "10d27ca9b6921f2d3a8d379ed2c0075435f713038fb0ec08907d5820b72f879b"
+    },
+    {
+      "path": "w4-hd-poster.jpg",
+      "bytes": 57575,
+      "sha256": "77aeed2850fbe3e8f4674428845432bfb8999a8fa6c1517fff088bd58fb2d345"
+    },
+    {
+      "path": "w5c-hd-poster.jpg",
+      "bytes": 53030,
+      "sha256": "deae310642244cb1bfea6455086a8d70c76a16c74a92319ea46952e6976e2f6b"
+    },
+    {
+      "path": "s6c-hd-poster.jpg",
+      "bytes": 21878,
+      "sha256": "1593cfc1ecf03f5fbb26dab423df870051d9f2cb9adbfb0a18412bb212fae5ce"
     }
   ]
 }

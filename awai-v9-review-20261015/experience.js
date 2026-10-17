@@ -52,10 +52,11 @@
   function filmFrame(){
     const room=stage.parentElement?.getBoundingClientRect?.(),host=entryHost?.getBoundingClientRect?.(),narrow=narrowStage.matches;
     if(!room?.width||!host?.width)return null;
-    const box={left:room.left,top:room.top+(narrow?218:0),width:room.width,height:room.height-(narrow?368:0)};
+    const phoneTop=matchMedia('(max-height:700px)').matches?228:260;
+    const box={left:room.left,top:room.top+(narrow?phoneTop:0),width:room.width,height:room.height-(narrow?phoneTop+150:0)};
     const wide=wideStage.matches,boxH=wide?box.height-112:box.height,aspect=video.videoWidth&&video.videoHeight?video.videoWidth/video.videoHeight:1.6;
-    const cw=Math.min(box.width,boxH*aspect),ch=cw/aspect,x=wide?0:(box.width-cw)/2,y=(boxH-ch)/2;
-    return {height:ch,centerX:host.width/2,centerY:box.top+y+ch/2-host.top,dx:host.left+host.width/2-(box.left+x+cw/2)};
+    const cw=(narrow?Math.max:Math.min)(box.width,boxH*aspect),ch=cw/aspect,x=wide||narrow?0:(box.width-cw)/2,y=(boxH-ch)/2;
+    return {height:ch,centerX:narrow?box.left+cw/2-host.left:host.width/2,centerY:box.top+y+ch/2-host.top,dx:narrow?0:host.left+host.width/2-(box.left+x+cw/2)};
   }
   let handoff=null;
   function captureLive(){ // 03 の最後の絵を写し取る（04 の映像が同じ絵で出るまで重ねておく）
@@ -73,13 +74,14 @@
     video.style.transition='none';video.style.transform=`translateX(${shot.dx}px)`;
   }
   function dropHandoff(){
-    if(!handoff)return;handoff.layer.remove();handoff=null;stage.dataset.handoff='false';video.style.transform='';video.style.transition='';
+    if(!handoff)return;const shot=handoff;handoff=null;shot.animations?.forEach(animation=>animation.cancel());shot.layer.remove();stage.dataset.handoff='false';video.style.transform='';video.style.transition='';
   }
   function finishHandoff(){
-    if(!handoff)return;const {layer,dx}=handoff,quick=motion.matches;handoff=null;
-    const done=()=>{layer.remove();if(!handoff){stage.dataset.handoff='false';video.style.transform='';video.style.transition='';}};
-    layer.animate([{opacity:1},{opacity:0}],{duration:quick?0:350,easing:'ease-out',fill:'forwards'});
-    video.animate([{transform:`translateX(${dx}px)`},{transform:'translateX(0)'}],{duration:quick?0:900,easing:'cubic-bezier(.4,0,.2,1)'}).finished.then(done,done);
+    if(!handoff||handoff.animations)return;const shot=handoff,{layer,dx}=shot,quick=motion.matches;
+    const done=()=>{layer.remove();if(handoff===shot){handoff=null;stage.dataset.handoff='false';video.style.transform='';video.style.transition='';}};
+    shot.animations=[layer.animate([{opacity:1},{opacity:0}],{duration:quick?0:350,easing:'ease-out',fill:'forwards'}),
+      video.animate([{transform:`translateX(${dx}px)`},{transform:'translateX(0)'}],{duration:quick?0:900,easing:'cubic-bezier(.4,0,.2,1)'})];
+    Promise.allSettled(shot.animations.map(animation=>animation.finished)).then(done);
   }
   const isNativeFlick=()=>current===3&&entryController?.chapter===3&&video.hidden&&!connection?.saveData;
   function syncEntry() {
@@ -139,7 +141,7 @@
   function updateControls() {
     const ready = chapters.length === 7;
     previous.disabled = !ready || current === 0;
-    advance.disabled = !ready || pending || (current === 6 && reachedHold) || (isNativeFlick()&&pagePlaying);
+    advance.disabled = !ready || pending || (isNativeFlick()&&pagePlaying);
     play.disabled = !ready;
     chapterButtons.forEach((button, index) => {
       button.disabled = !ready;
@@ -160,6 +162,7 @@
     }
     if([1,2].includes(current)&&entryController?.chapter===current&&video.hidden&&!pending&&!connection?.saveData)play.textContent=pagePlaying?'動きを止める':pagePaused?'続きから動かす':'もう一度動かす';
     if(isNativeFlick()&&!pending)play.textContent=pagePlaying?'動きを止める':pagePaused?'続きから動かす':reachedHold?'もう一度弾く':'弾いてみる';
+    if(current===6&&!pending)advance.textContent='相談へ進む';
     if([0,1,2,3].includes(current)&&entryController&&(entryController.chapter??0)===current&&video.hidden&&!pending&&nativeLimited[current])play.textContent='映像で動きを見る';
     // 弾く前は「次へ」も同じ「弾いてみる」なので、同じ言葉のボタンを2つ並べない。
     play.hidden=!pending&&play.textContent===advance.textContent;
@@ -178,6 +181,7 @@
   }
   function showEnding(ending) {
     frameContact.hidden = !ending; stage.dataset.ending = String(ending);
+    fitOverlay();
   }
   function showPoster() { video.hidden = true; still.hidden = false; showEnding(current === 6); syncEntry(); }
   function select(index,{native=true}={}) {
@@ -230,7 +234,7 @@
       video.addEventListener('loadedmetadata', done, { once: true });
       video.addEventListener('error', error, { once: true });
       timer = setTimeout(() => { cleanup(); reject(new Error('映像の読み込みに時間がかかっています。')); }, 15000);
-      if (!video.getAttribute('src') || mediaFailed) { video.src = 'flow-complete.mp4'; mediaFailed = false; video.load(); }
+      if (!video.getAttribute('src') || mediaFailed) { video.src = video.dataset.source || 'flow-complete.mp4'; mediaFailed = false; video.load(); }
     }).finally(() => { mediaLoading = null; });
     return mediaLoading;
   }
@@ -312,6 +316,7 @@
     updateControls();return true;
   }
   advance.addEventListener('click', () => {
+    if(current===6){pause();const contact=$('contact');contact?.scrollIntoView({behavior:motion.matches?'instant':'smooth',block:'start'});contact?.focus?.({preventScroll:true});return;}
     if (current === 0 && entryController && video.hidden) {
       if(connection?.saveData){started=true;select(1,{native:false});return;}
       openNativePage1({animate:!staticPreferred(),fromEntry:true});return;
@@ -333,7 +338,7 @@
     else { reachedHold = true; updateControls(); announce('体験はここまでです。下の相談へ進めます。'); }
   });
   previous.addEventListener('click', () => { started = true; select(Math.max(0, current - 1)); });
-  chapterButtons.forEach((button, index) => button.addEventListener('click', () => { started = true; select(index); }));
+  chapterButtons.forEach((button, index) => button.addEventListener('click', () => { started = true; select(index); $('chapter-toggle')?.focus?.({preventScroll:true}); }));
   play.addEventListener('click', () => {
     if (pending || !video.paused) { nativeAttempt++;pause('映像を止めました。'); return; }
     if([0,1,2,3].includes(current)&&nativeLimited[current]&&video.hidden){started=true;playChapter({release:current===3});return;}
@@ -443,7 +448,13 @@
   document.addEventListener('visibilitychange', () => { if (document.hidden) pause('映像を止めました。再生ボタンで続けられます。'); syncEntry(); });
   window.addEventListener('pagehide', () => { entryController?.pause(); pause(); });
   window.addEventListener('pageshow', syncEntry);
-  if ('IntersectionObserver' in window) new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (!visible) pause('映像を止めました。再生ボタンで続けられます。'); syncEntry(); }, { threshold: 0.1 }).observe(stage);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (!visible) pause('映像を止めました。再生ボタンで続けられます。'); syncEntry(); }, { threshold: 0.1 }).observe(stage);
+    // Ending colours belong to the experience, never to the information below it.
+    new IntersectionObserver(([entry]) => {
+      document.documentElement.dataset.information=String(!entry.isIntersecting);
+    }, {rootMargin:'-80px 0px 0px 0px'}).observe(stage.parentElement);
+  }
   function preferStatic() {
     if (!staticPreferred()) return;
     entryAnimating = false; entryController?.setMotion(false);
@@ -455,7 +466,8 @@
   connection?.addEventListener?.('change', preferStatic);
   function fitOverlay() {
     // Align the native link with the uncropped 16:10 picture, including letterboxing.
-    const width = Math.min(stage.clientWidth, stage.clientHeight * 1.6);
+    const phoneEnding=narrowStage.matches&&stage.dataset.chapter==='6';
+    const width = Math.min(stage.clientWidth, stage.clientHeight * 1.6)*(phoneEnding?1.65:1);
     filmOverlay.style.width = `${width}px`;
     filmOverlay.style.height = `${width / 1.6}px`;
   }

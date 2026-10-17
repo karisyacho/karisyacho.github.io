@@ -40,7 +40,7 @@
       "end": 38.5,
       "hold": 38.375,
       "title": "仕上がる",
-      "poster": "w4.jpg"
+      "poster": "w4-hd-poster.jpg"
     },
     {
       "id": "5",
@@ -48,7 +48,7 @@
       "end": 48.5,
       "hold": 48.375,
       "title": "届く",
-      "poster": "w5c-poster.jpg"
+      "poster": "w5c-hd-poster.jpg"
     },
     {
       "id": "6",
@@ -56,7 +56,7 @@
       "end": 53.541666666666664,
       "hold": 53.416666666666664,
       "title": "抜け出る",
-      "poster": "s6c-poster.jpg"
+      "poster": "s6c-hd-poster.jpg"
     }
   ]
 }
