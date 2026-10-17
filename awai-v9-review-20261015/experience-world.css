@@ -121,14 +121,11 @@
  .enhanced:not([data-information="true"]):has(.stage[data-ending="true"]) .header{color:#17202a;background:linear-gradient(#d4d5d7cc,transparent)}
 }
 .film-overlay{inset:auto;left:50%;top:50%;margin:0;transform:translate(-50%,-50%)}
-/* One sticky room in normal document flow; scrolling owns scene progress. */
-.scroll-driven .journey{height:calc(max(560px,100svh) + var(--scroll-distance,1000svh));overflow-anchor:none}
-.scroll-driven .experience{position:sticky;top:0;height:max(560px,100svh)}
-.scroll-driven .transport{display:flex;min-height:44px;justify-content:space-between}
-.scroll-driven .scroll-cue{margin-left:auto;font-size:12px;color:var(--muted);pointer-events:none}
-.scroll-driven .chapters{bottom:100px}
-.scroll-driven .stage[data-revealed="false"]~.experience-body .chapter-copy{opacity:0;pointer-events:none}
-.scroll-driven .stage[data-ending="true"]~.experience-body .scroll-cue{color:#39444e}
+/* A self-running experience in normal document flow. No scroll timeline. */
+.autonomous .experience{position:relative;height:max(560px,100svh)}
+.autonomous .transport{display:flex;min-height:44px;justify-content:space-between}
+.autonomous .chapters{bottom:100px}
+.autonomous .stage[data-revealed="false"]~.experience-body .chapter-copy{opacity:0;pointer-events:none}
 @media(max-width:700px) and (max-height:700px){
  .enhanced .header{height:56px;padding-inline:18px}
  .enhanced .chapter-copy,.enhanced .stage[data-live="true"]~.experience-body .chapter-copy{top:72px;left:18px;right:18px}
