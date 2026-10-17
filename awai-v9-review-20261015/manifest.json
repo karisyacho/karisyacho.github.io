@@ -1,6 +1,6 @@
 {
   "owner": "awai-v9-review-20261015",
-  "revision": 27,
+  "revision": 28,
   "files": [
     {
       "path": "index.html",
@@ -129,8 +129,8 @@
     },
     {
       "path": "experience.html",
-      "bytes": 7883,
-      "sha256": "d8967f85b12f856746ef112d7114cf752ef455d655a580495182599f6313c6a2"
+      "bytes": 7830,
+      "sha256": "5da7fa24c003d64022711d68cf46e3fe43faaa999bfe199a21c08e3e0957b0ad"
     },
     {
       "path": "experience.css",
@@ -139,8 +139,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 29606,
-      "sha256": "aa1244bb7e2e330c21644e4aef8d5eb11a766af744e02c9aaf2349c43a2ac4f9"
+      "bytes": 32929,
+      "sha256": "a551df54b5340f977a9ef4faf45aaa9edabbac11e589e711834b61ee874baec5"
     },
     {
       "path": "timeline.json",
@@ -149,8 +149,8 @@
     },
     {
       "path": "flow-complete.mp4",
-      "bytes": 8720597,
-      "sha256": "caa21dffd50a4e186334c88dad39fc9493dc09b6cc798ad5447d522ed22f002f"
+      "bytes": 17728746,
+      "sha256": "ba424ac79386ca76bf32cf8d65d70bc5f2c3f6dbb96650025b7f6d4af06cd543"
     },
     {
       "path": "w5c.mp4",
@@ -174,13 +174,13 @@
     },
     {
       "path": "experience-world.css",
-      "bytes": 8883,
-      "sha256": "9b05e10692594e635a18ddd7e5c54c4fa85e26cc28a57cab318723f500103447"
+      "bytes": 9386,
+      "sha256": "6e60d16032f62daabfa9aaecab00a881166fada3ee4774c5fd2a1c03aac81c99"
     },
     {
       "path": "live-entry.bundle.js",
-      "bytes": 686224,
-      "sha256": "05322d77d0f470a94a5f558bf1e8e13fd665d7b9492b78dc6cd928da93226a10"
+      "bytes": 687722,
+      "sha256": "4bf842cf79585c8cbe5a0689314a3cf63ab48259331c81524d0122422fe4c9eb"
     },
     {
       "path": "live-assets/room.glb",

@@ -45,6 +45,42 @@
   let chapters = [], current = 0, started = false, reachedHold = false, pending = false, frame = 0, request = 0, mediaFailed = false;
   let visible = true, drag = null, scrubFrame = 0, queuedSeek = null, mediaLoading = null, cancelSeek=null;
   const announce = (message) => { status.textContent = message; status.classList.toggle('sr-only', retry.hidden); };
+  // 04 の映像が舞台に置かれる枠（experience-world.css の04の指定と同じ計算）。03 の立体は止まったあと、この枠の絵へ寄る。
+  // 横の位置だけは立体の真ん中に合わせ、受け渡しのあと映像を dx だけ滑らせて04の置き場所へ戻す。
+  // スマホの04の舞台は上218px・下150px を空ける（立体の間は140px・125px）。PCは全面で、映像は下112pxを空けて左寄せ。
+  const wideStage=matchMedia('(min-width:1000px) and (orientation:landscape)'),narrowStage=matchMedia('(max-width:700px)');
+  function filmFrame(){
+    const room=stage.parentElement?.getBoundingClientRect?.(),host=entryHost?.getBoundingClientRect?.(),narrow=narrowStage.matches;
+    if(!room?.width||!host?.width)return null;
+    const box={left:room.left,top:room.top+(narrow?218:0),width:room.width,height:room.height-(narrow?368:0)};
+    const wide=wideStage.matches,boxH=wide?box.height-112:box.height,aspect=video.videoWidth&&video.videoHeight?video.videoWidth/video.videoHeight:1.6;
+    const cw=Math.min(box.width,boxH*aspect),ch=cw/aspect,x=wide?0:(box.width-cw)/2,y=(boxH-ch)/2;
+    return {height:ch,centerX:host.width/2,centerY:box.top+y+ch/2-host.top,dx:host.left+host.width/2-(box.left+x+cw/2)};
+  }
+  let handoff=null;
+  function captureLive(){ // 03 の最後の絵を写し取る（04 の映像が同じ絵で出るまで重ねておく）
+    const source=entryController?.snapshot?.(),frame=filmFrame();
+    if(!source||!frame)return null;
+    const layer=document.createElement('canvas');
+    layer.className='handoff';layer.width=source.width;layer.height=source.height;layer.getContext('2d').drawImage(source,0,0);
+    return {layer,dx:frame.dx,host:entryHost.getBoundingClientRect()};
+  }
+  function attachHandoff(shot){
+    dropHandoff();handoff=shot;
+    const box=stage.getBoundingClientRect(),{host}=shot; // 04 の枠へ移ったあとの舞台から見て、立体があった場所に置く
+    Object.assign(shot.layer.style,{left:host.left-box.left+'px',top:host.top-box.top+'px',width:host.width+'px',height:host.height+'px'});
+    stage.append(shot.layer);stage.dataset.handoff='true';
+    video.style.transition='none';video.style.transform=`translateX(${shot.dx}px)`;
+  }
+  function dropHandoff(){
+    if(!handoff)return;handoff.layer.remove();handoff=null;stage.dataset.handoff='false';video.style.transform='';video.style.transition='';
+  }
+  function finishHandoff(){
+    if(!handoff)return;const {layer,dx}=handoff,quick=motion.matches;handoff=null;
+    const done=()=>{layer.remove();if(!handoff){stage.dataset.handoff='false';video.style.transform='';video.style.transition='';}};
+    layer.animate([{opacity:1},{opacity:0}],{duration:quick?0:350,easing:'ease-out',fill:'forwards'});
+    video.animate([{transform:`translateX(${dx}px)`},{transform:'translateX(0)'}],{duration:quick?0:900,easing:'cubic-bezier(.4,0,.2,1)'}).finished.then(done,done);
+  }
   const isNativeFlick=()=>current===3&&entryController?.chapter===3&&video.hidden&&!connection?.saveData;
   function syncEntry() {
     if (!entryHost) return;
@@ -66,6 +102,7 @@
           if (current === 0 && !pending) announce(entryAnimating ? '指やカーソルに反応する入口です。' : '入口を静止して表示しています。「入口を動かす」で動きを選べます。'); },
         onPerformance:() => { nativeLimited[entryController?.chapter??0]=true;if(current===0)entryAnimating=false;else if([1,2,3].includes(current)){pagePlaying=false;pagePaused=false;reachedHold=true;}updateControls();announce('この端末では動きがかくつくため、いったん止めました。「映像で動きを見る」で続きを映像で見られます。'); },
         onChapterEnd:index=>{if([1,2,3].includes(index)&&current===index){pagePlaying=false;pagePaused=false;reachedHold=true;updateControls();announce(index===3?'ページが止まりました。次の場面へ進めます。':index===2?'お店のページへ着きました。次の場面へ進めます。':'文字の足元まで降りました。次の場面へ進めます。');}},
+        filmFrame,
         onRelease:index=>{if(index===3&&current===3&&video.hidden){pagePlaying=true;pagePaused=false;reachedHold=false;updateControls();announce('ページを弾きました。カメラが少し遅れて追いかけます。');}},
         onError:() => { failed = true; entryController?.dispose(); entryController = null; entryReady = false; entryHost.hidden = true; stage.dataset.live = 'false'; updateControls(); }
       }))
@@ -130,6 +167,7 @@
   function pause(message) {
     if([1,2,3].includes(current)&&pagePlaying){pagePlaying=false;pagePaused=true;entryController?.pause();}
     if(current===3)entryController?.cancelFlick?.();
+    dropHandoff();
     if(pending&&pendingKind==='native')nativeAttempt++;
     request += 1; pending = false; pendingKind=null; video.pause(); cancelAnimationFrame(frame);
     cancelSeek?.();
@@ -235,12 +273,13 @@
       // A stale play promise must not pause a newer chapter's playback.
       if (token !== request) return;
       video.hidden = false; still.hidden = true; retry.hidden = true;
+      if(handoff){const go=()=>finishHandoff();video.requestVideoFrameCallback?video.requestVideoFrameCallback(go):requestAnimationFrame(()=>requestAnimationFrame(go));}
       syncEntry();
       announce('映像を再生しています。場面の終わりで止まります。');
       monitor();
     } catch (error) {
       if (token !== request) return;
-      request += 1; cancelSeek?.(); video.pause(); mediaFailed = true; showPoster(); retry.hidden = false;
+      request += 1; cancelSeek?.(); video.pause(); mediaFailed = true; dropHandoff(); showPoster(); retry.hidden = false;
       announce(`${error.message || '映像を再生できませんでした。'} 静止画と文章で引き続きご覧いただけます。`);
     } finally {
       clearTimeout(timer);
@@ -286,7 +325,10 @@
       if (staticPreferred()) { reachedHold = true; announce('静止画で表示しています。映像は再生ボタンから選べます。'); updateControls(); } else playChapter();
       return;
     }
-    if (current < 6) { select(current + 1); if (!staticPreferred() && current !== 3) playChapter(); }
+    if (current < 6) {
+      const shot=current===3&&isNativeFlick()&&reachedHold&&!staticPreferred()?captureLive():null;
+      select(current + 1); if(shot)attachHandoff(shot); if (!staticPreferred() && current !== 3) playChapter();
+    }
     else if (!staticPreferred()) playChapter();
     else { reachedHold = true; updateControls(); announce('体験はここまでです。下の相談へ進めます。'); }
   });
