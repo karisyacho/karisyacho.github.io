@@ -34,7 +34,7 @@
   const staticPreferred = () => motion.matches || Boolean(connection?.saveData);
   let chapters = [], journey, travel = 1, state, frame = 0, serial = 0, visible = true;
   let controller, entryLoading, mediaLoading, failedEntry = false, failedMedia = false;
-  let nativeIndex = -1, pendingTime = null, appliedTime = null, entered = false;
+  let nativeIndex = -1, pendingTime = null, appliedTime = null, entered = false, handoff, lastFilmFrame;
   const prepared = new Set(), preparing = new Map();
   const announce = message => {status.textContent=message;status.classList.toggle('sr-only',retry.hidden);};
   function mediaState() {
@@ -49,7 +49,20 @@
     const r=room.getBoundingClientRect(),h=host.getBoundingClientRect(),narrow=innerWidth<=700,wide=matchMedia('(min-width:1000px) and (orientation:landscape)').matches;
     if (!h.width) return null;
     const top=narrow?(innerHeight<=700?264:290):0,boxH=r.height-(narrow?top+150:wide?112:0),cw=(narrow?Math.max:Math.min)(r.width,boxH*1.6),ch=cw/1.6;
-    return {height:ch,centerX:narrow?r.left+cw/2-h.left:h.width/2,centerY:r.top+top+(boxH-ch)/2+ch/2-h.top,dx:0};
+    const filmX=wide||narrow?r.left+cw/2:r.left+r.width/2;
+    return {height:ch,centerX:narrow?filmX-h.left:h.width/2,centerY:r.top+top+(boxH-ch)/2+ch/2-h.top,dx:narrow?0:h.left+h.width/2-filmX};
+  }
+  function dropHandoff() {handoff?.remove();handoff=null;stage.dataset.handoff='false';}
+  function captureHandoff() {
+    dropHandoff();const source=controller?.snapshot?.();if(!source)return;
+    const canvas=document.createElement('canvas'),box=host.getBoundingClientRect();canvas.width=source.width;canvas.height=source.height;
+    canvas.getContext('2d').drawImage(source,0,0);canvas.className='handoff';
+    handoff=canvas;stage.append(canvas);stage.dataset.handoff='true';
+    Object.assign(canvas.style,{position:'fixed',left:box.left+'px',top:box.top+'px',width:box.width+'px',height:box.height+'px'});
+  }
+  function alignFilm() {
+    const dx=state.index===4?(lastFilmFrame?.dx||0)*(1-clamp(state.progress/.18))**3:0;
+    for(const element of [video,still])element.style.transform=dx?`translateX(${dx}px)`:'';
   }
   function showPoster() {video.hidden=true;still.hidden=false;stage.dataset.live='false';host.hidden=true;controller?.pause();}
   async function loadEntry() {
@@ -58,7 +71,7 @@
     if (failedEntry || staticPreferred()) return null;
     host.hidden=false;
     entryLoading=import(new URL(host.dataset.module,document.baseURI).href)
-      .then(({createEntry})=>createEntry({host,filmFrame,onRelease:()=>{host.dataset.intervened='true';announce('ページを弾きました。スクロールすると続きへ進みます。');},onError:()=>{failedEntry=true;controller?.dispose();controller=null;schedule();}}))
+      .then(({createEntry})=>createEntry({host,filmFrame,onRelease:()=>{host.dataset.intervened='true';announce('ページを弾きました。スクロールすると続きへ進みます。');},onError:()=>{failedEntry=true;controller?.dispose();controller=null;prepared.clear();schedule();}}))
       .then(value=>{controller=value;return value;})
       .catch(()=>{failedEntry=true;return null;}).finally(()=>{entryLoading=null;});
     return entryLoading;
@@ -88,13 +101,13 @@
   }
   function presentFilm() {
     if (!state || state.index<4&&!failedEntry || staticPreferred() || !visible || appliedTime===null || Math.abs(appliedTime-state.time)>.08) return;
-    video.hidden=false;still.hidden=true;stage.dataset.live='false';host.hidden=true;
+    video.hidden=false;still.hidden=true;stage.dataset.live='false';host.hidden=true;dropHandoff();
   }
   video.addEventListener('seeked',()=>{appliedTime=video.currentTime;if (pendingTime!==null&&Math.abs(appliedTime-pendingTime)>.035) flushSeek();else presentFilm();});
   async function paint(token) {
     if (!state || !visible || document.hidden) {controller?.pause();return;}
     const desired={...state};
-    if (staticPreferred()) {showPoster();return;}
+    if (staticPreferred()) {dropHandoff();showPoster();return;}
     if (desired.index<=3&&!failedEntry) {
       try {
         const c=await loadEntry();
@@ -105,14 +118,14 @@
         if (desired.index===0) {
           if(nativeIndex!==0){c.showChapter(0,{animate:!entered});entered=true;}
           c.resume();
-        } else c.seekChapter(desired.index,desired.progress,{interactive:true});
-        nativeIndex=desired.index;stage.dataset.live='true';video.hidden=true;still.hidden=true;
+        } else if(!c.seekChapter(desired.index,desired.progress,{interactive:true}))throw Error('native scene unavailable');
+        nativeIndex=desired.index;stage.dataset.live='true';video.hidden=true;still.hidden=true;if(desired.index===3)lastFilmFrame=filmFrame();
         flick.hidden=desired.index!==3;document.querySelector('.gesture-hint').hidden=desired.index!==3;
         return;
       } catch {failedEntry=true;if(token===serial)showPoster();}
     }
     controller?.pause();nativeIndex=-1;host.hidden=true;stage.dataset.live='false';
-    try {await loadMedia();if(token!==serial)return;pendingTime=state.time;flushSeek();} catch {if(token===serial)showPoster();}
+    try {await loadMedia();if(token!==serial)return;pendingTime=state.time;flushSeek();} catch {if(token===serial){dropHandoff();showPoster();}}
   }
   function update() {
     frame=0;if(!chapters.length||!journey)return;
@@ -120,6 +133,8 @@
     const progress=clamp((scrollY-offset)/travel), next=resolveJourney(progress,chapters), previous=state;
     const rect=room.getBoundingClientRect();visible=rect.bottom>0&&rect.top<innerHeight;
     root.dataset.information=String(rect.bottom<=80);
+    const capture=previous?.index===3&&next.index===4&&stage.dataset.live==='true';
+    if(capture)captureHandoff();else if(next.index!==4)dropHandoff();
     state=next;stage.dataset.chapter=String(next.index);stage.dataset.progress=next.progress.toFixed(5);stage.dataset.entry=String(next.index===0);
     stage.dataset.ending=String(next.index===6&&next.progress>=.65);
     stage.dataset.revealed=String(next.index!==6||next.progress>=.65);
@@ -129,7 +144,7 @@
     buttons.forEach((button,i)=>{if(i===next.index)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');});
     flick.hidden=true;document.querySelector('.gesture-hint').hidden=true;cue.hidden=next.index===6;
     if (!previous || next.index!==previous.index) {still.src=chapters[next.index].poster;showPoster();announce(`${String(next.index).padStart(2,'0')} / ${buttons[next.index].title.slice(3)}。スクロールで続きます。`);}
-    fitOverlay();paint(++serial);
+    fitOverlay();alignFilm();paint(++serial);
   }
   function schedule() {if(!frame)frame=requestAnimationFrame(update);}
   function measure() {travel=scrollDistance(room.getBoundingClientRect().height);journey.style.setProperty('--scroll-distance',travel+'px');schedule();}

@@ -130,7 +130,7 @@
     {
       "path": "experience.html",
       "bytes": 8675,
-      "sha256": "b97fb9c8f7359c0e2b87fd6389c97a64165f8d50d48069616f3ac939d4f7fcae"
+      "sha256": "809c880b752b6cab951c25585ead4db519da11a57718f4adbfc389f0290990be"
     },
     {
       "path": "experience.css",
@@ -139,8 +139,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 11687,
-      "sha256": "859ae835a910377e3a0dcd974f2a03a6c849815c46fb41c0248ce3098f548225"
+      "bytes": 12937,
+      "sha256": "6f3251d230cc8fbb4e9e836510333097244edc1590410892a5e02ab6c41b325e"
     },
     {
       "path": "timeline.json",
