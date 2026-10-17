@@ -32,7 +32,7 @@
 .handoff{position:absolute;z-index:1;pointer-events:none}
 .enhanced .stage[data-handoff="true"]>img{visibility:hidden}
 .enhanced .stage[data-handoff="true"]::after{z-index:2}
-.flick-hit{position:absolute;z-index:3;display:block;border:0;border-radius:0;padding:0;background:transparent;cursor:grab;touch-action:pan-x pinch-zoom;-webkit-tap-highlight-color:transparent}
+.flick-hit{position:absolute;z-index:3;display:block;border:0;border-radius:0;padding:0;background:transparent;cursor:grab;touch-action:pan-y pinch-zoom;-webkit-tap-highlight-color:transparent}
 .flick-hit[hidden]{display:none}
 .flick-hit:active{cursor:grabbing}
 .flick-hit:focus-visible{outline:1px solid var(--warm);outline-offset:8px}
@@ -121,6 +121,14 @@
  .enhanced:not([data-information="true"]):has(.stage[data-ending="true"]) .header{color:#17202a;background:linear-gradient(#d4d5d7cc,transparent)}
 }
 .film-overlay{inset:auto;left:50%;top:50%;margin:0;transform:translate(-50%,-50%)}
+/* One sticky room in normal document flow; scrolling owns scene progress. */
+.scroll-driven .journey{height:calc(max(560px,100svh) + var(--scroll-distance,1000svh));overflow-anchor:none}
+.scroll-driven .experience{position:sticky;top:0;height:max(560px,100svh)}
+.scroll-driven .transport{display:flex;min-height:44px;justify-content:space-between}
+.scroll-driven .scroll-cue{margin-left:auto;font-size:12px;color:var(--muted);pointer-events:none}
+.scroll-driven .chapters{bottom:100px}
+.scroll-driven .stage[data-revealed="false"]~.experience-body .chapter-copy{opacity:0;pointer-events:none}
+.scroll-driven .stage[data-ending="true"]~.experience-body .scroll-cue{color:#39444e}
 @media(max-width:700px) and (max-height:700px){
  .enhanced .header{height:56px;padding-inline:18px}
  .enhanced .chapter-copy,.enhanced .stage[data-live="true"]~.experience-body .chapter-copy{top:72px;left:18px;right:18px}
@@ -133,6 +141,6 @@
  .enhanced .stage:is([data-chapter="1"],[data-chapter="2"],[data-chapter="3"])[data-live="true"]{inset:218px 0 154px}
  .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]){inset:264px 0 150px}
  .enhanced .stage[data-live="true"]::after{background:linear-gradient(0deg,#07090d,transparent 15%,transparent 88%,#07090d)}
- .enhanced .gesture-hint{top:calc(var(--room-height) - 254px);font-size:10px!important;line-height:1.5!important}
+ .enhanced .gesture-hint{top:calc(var(--room-height) - 204px);font-size:10px!important;line-height:1.5!important}
  .enhanced .gesture-hint span{display:inline}
 }
