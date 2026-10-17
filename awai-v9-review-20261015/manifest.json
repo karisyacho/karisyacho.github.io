@@ -1,6 +1,6 @@
 {
   "owner": "awai-v9-review-20261015",
-  "revision": 29,
+  "revision": 30,
   "files": [
     {
       "path": "index.html",
@@ -129,8 +129,8 @@
     },
     {
       "path": "experience.html",
-      "bytes": 8621,
-      "sha256": "70d6f188dc98e9ef987fc36da1389aac9c78019402b0dbed6b7fbb4a2f287c27"
+      "bytes": 8698,
+      "sha256": "17b78530f9e64853fcf0de6c1bdac143e664dedf9e44da62a6f4b741239a9783"
     },
     {
       "path": "experience.css",
@@ -139,8 +139,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 33966,
-      "sha256": "3ae90905599a9b18d7d668c5f2f7cf6542470a3de5c0dbf19d09e371a3815e4b"
+      "bytes": 33912,
+      "sha256": "3cea1a05f48ddac8a21ac25172490b9453a2ef169c749ea8d8b6ccff305dd57a"
     },
     {
       "path": "timeline.json",
@@ -174,13 +174,13 @@
     },
     {
       "path": "experience-world.css",
-      "bytes": 12916,
-      "sha256": "d861108a059fda9b2cd68b9f961061a03b301fd8d3dc44d4281f26cb6ee2b38a"
+      "bytes": 13075,
+      "sha256": "7af3b2b4193fcb7f4cc9ea8d9fd3e9291c07a5667ad08c177f99cce88ddf3535"
     },
     {
       "path": "live-entry.bundle.js",
-      "bytes": 691758,
-      "sha256": "4fbc7bbc2474183d05d01b1d8cba8e2327cba55f62f970f6e198c8bfb29a0dae"
+      "bytes": 691825,
+      "sha256": "68d1edd16d5397d195fd0d4a625272e959b53d4f91d9ce5e266ccdd14cf65fd0"
     },
     {
       "path": "live-assets/room.glb",

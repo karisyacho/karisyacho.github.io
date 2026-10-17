@@ -99,6 +99,7 @@
 .consultation-details{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);max-width:40em}
 .consultation-details .eyebrow{margin-bottom:12px}
 .consultation-details .note{margin-top:16px}
+.enhanced .chapter-copy article>p.scene-note{font-size:11px;line-height:1.6;margin-top:12px;color:var(--muted)}
 /* A complete phone viewport, including short screens and browser toolbars. */
 @media(max-width:700px){
  .enhanced{--room-height:max(560px,100svh)}
@@ -107,6 +108,7 @@
  .enhanced .gesture-hint{top:calc(var(--room-height) - 290px)}
  /* Same film, framed around the page rather than a small widescreen window. */
  .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]){inset:260px 0 150px;overflow:hidden}
+ .enhanced .stage[data-chapter="4"]{top:290px}
  .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]) :is(video,img){object-fit:cover;object-position:50% center}
  .enhanced .stage[data-chapter="4"] :is(video,img){object-position:left center}
  .enhanced .stage:is([data-chapter="4"],[data-chapter="5"])::after{background:linear-gradient(0deg,#07090d,transparent 16%,transparent 84%,#07090d)}
@@ -129,7 +131,7 @@
  .enhanced .controls{bottom:12px}
  .enhanced .stage[data-entry="true"]{inset:136px 0 230px}
  .enhanced .stage:is([data-chapter="1"],[data-chapter="2"],[data-chapter="3"])[data-live="true"]{inset:218px 0 154px}
- .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]){inset:228px 0 150px}
+ .enhanced .stage:is([data-chapter="4"],[data-chapter="5"]){inset:264px 0 150px}
  .enhanced .stage[data-live="true"]::after{background:linear-gradient(0deg,#07090d,transparent 15%,transparent 88%,#07090d)}
  .enhanced .gesture-hint{top:calc(var(--room-height) - 254px);font-size:10px!important;line-height:1.5!important}
  .enhanced .gesture-hint span{display:inline}
