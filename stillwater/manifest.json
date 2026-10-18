@@ -1,0 +1,82 @@
+{
+  "title": "STILLWATER",
+  "date": "2026-10-19",
+  "sourceCommit": "e03e59e941ee0ad2a71d76a7b5803f7b5293a23a",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 13529,
+      "sha256": "ca18d10195890fd56f7ba51f188e02a62b7e3374d459fd661771764f53fef2cc"
+    },
+    {
+      "path": "assets/cormorant-italic.ttf",
+      "bytes": 293036,
+      "sha256": "0b9a8a33cfaa624d30f70f9b6686da769b319b8c37a55af16e29fef690108bbf"
+    },
+    {
+      "path": "assets/cormorant.ttf",
+      "bytes": 290236,
+      "sha256": "6d37a86241a25d63f8fe6018b4c083449886b7165c1acb15edd0f574f690ecf7"
+    },
+    {
+      "path": "assets/cover.jpg",
+      "bytes": 65248,
+      "sha256": "74622f52a9f7f6d11dd28a91b890cf009240e81574d0084eb535ebd7d2df7ae4"
+    },
+    {
+      "path": "assets/garden-environment.jpg",
+      "bytes": 501047,
+      "sha256": "171ddd9570a0ae55838e415e86c780fa9b343d7ecf96315ceaff3a32a7b3bf8a"
+    },
+    {
+      "path": "assets/garden-environment.jpg.provenance.json",
+      "bytes": 349,
+      "sha256": "ef046c68ab610d9d168e727c08c034064e85a0414b974c938762b0524b514a6f"
+    },
+    {
+      "path": "assets/inter.ttf",
+      "bytes": 324820,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "path": "assets/mark.svg",
+      "bytes": 297,
+      "sha256": "5901ccdbe32af4bad7de0cb15934171c3b8f8af6c1f84d7eea79fa1d65bec5ba"
+    },
+    {
+      "path": "assets/noto-serif-jp.ttf",
+      "bytes": 126244,
+      "sha256": "f160ac42ca7276924bb80c2f1701ad99d3366baa3c9ee48fa0682a42cb8bb867"
+    },
+    {
+      "path": "assets/OFL-cormorant.txt",
+      "bytes": 4387,
+      "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+    },
+    {
+      "path": "assets/OFL-inter.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "path": "assets/OFL-noto-serif-jp.txt",
+      "bytes": 4350,
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+    },
+    {
+      "path": "index.html",
+      "bytes": 8336,
+      "sha256": "821869a823c38fb32ccfb3ba5b390a81d45b29f99be0af4167b0f7d0fcccbaa7"
+    },
+    {
+      "path": "style.css",
+      "bytes": 16356,
+      "sha256": "f031241fce19f04d7962dc4333607b3edba762f6b8250c553401b4f309628b6e"
+    },
+    {
+      "path": "water.js",
+      "bytes": 12759,
+      "sha256": "f59926292533a17653f5ecf31b18d0e0b37994da29ef62e61d980a705516664e"
+    }
+  ]
+}
