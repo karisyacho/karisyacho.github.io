@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://karisyacho.github.io/maison-void/sitemap.xml
