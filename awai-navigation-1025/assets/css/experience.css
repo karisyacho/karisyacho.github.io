@@ -1,0 +1,125 @@
+/* TOP と WORKS：1枚の体験。JS が動く時だけ画面に固定する */
+html.js body.experience{height:100%;overflow:hidden;overscroll-behavior:none;touch-action:none;background:var(--night)}
+html.js.exp-gl{height:100%}
+
+#scene{position:fixed;inset:0;perspective:1200px;background:var(--night) center/cover no-repeat}
+#scene .still{position:absolute;inset:-1.5%;background:center/cover no-repeat}
+#gl{position:absolute;inset:-1.5%;width:103%;height:103%;display:block;transform-origin:50% 50%;will-change:transform;opacity:0;transition:opacity .9s var(--ease)}
+html:not(.js) #scene{display:none}
+
+.experience .site-header{transition:opacity .9s var(--ease)}
+
+/* TOP */
+/* 立体の字が画面の主役。一文と「制作を見る」は字の下、左下にまとめる */
+#top{position:fixed;left:var(--gut);bottom:max(40px,calc(env(safe-area-inset-bottom) + 24px));z-index:10;text-shadow:0 1px 18px rgba(0,0,0,.55);display:grid;grid-template-columns:auto auto;justify-content:start;align-items:center;column-gap:48px}
+#top h1{grid-column:1/-1}
+#top h1{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.2vw,34px);line-height:1.6;letter-spacing:.06em}
+#top h1 span{display:block;white-space:nowrap}
+#top p{margin-top:14px;font-size:clamp(13px,1.02vw,15.5px);color:var(--white-2);letter-spacing:.08em;font-weight:400}
+#top p span{display:inline-block}
+#top .cta{margin-top:14px}
+.scroll-cue{position:fixed;right:var(--gut);bottom:0;height:86px;padding:18px 0 0 26px;border-left:1px solid rgba(233,237,242,.22);font-family:var(--latin);font-size:10px;letter-spacing:.3em;color:var(--white-3);z-index:10}
+
+/* 案内：字の根元のすぐ下（位置は letters.js が決める） */
+.hint{position:fixed;left:50%;top:70%;transform:translateX(-50%);z-index:9;font-family:var(--serif);font-size:13px;letter-spacing:.3em;color:var(--white-2);opacity:0;transition:opacity 1s var(--ease);pointer-events:none;white-space:nowrap}
+.hint.on{opacity:1}
+html:not(.js) .hint{display:none}
+
+/* WORKS */
+#works-text{position:fixed;left:var(--gut);top:50%;transform:translateY(-50%);z-index:10;width:min(30vw,420px);pointer-events:none;opacity:0}
+#works-text h2{margin-top:20px;font-family:var(--latin);font-weight:300;font-size:clamp(32px,3.4vw,54px);letter-spacing:.05em;line-height:1.18}
+#works-text h2 small{display:block;margin-top:10px;font-family:var(--serif);font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;color:var(--white-2)}
+#works-text .w-cat{margin-top:18px;font-size:14px;color:var(--white-2);letter-spacing:.1em}
+.w-meta{margin-top:22px;display:grid;gap:6px;font-size:12px;letter-spacing:.08em}
+.w-meta div{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:baseline}
+.w-meta dt{font-size:10.5px;color:var(--white-3);letter-spacing:.2em}
+.w-meta dd{color:var(--white-2);word-break:keep-all;overflow-wrap:anywhere}
+.w-meta .real{color:var(--white)}
+#works-text .cta{margin-top:30px;pointer-events:auto}
+#works-text .swap{transition:opacity .35s,transform .45s var(--ease)}
+#works-text.is-swapping .swap{opacity:0;transform:translateY(8px)}
+
+#counter{position:fixed;right:var(--gut);bottom:40px;display:flex;align-items:center;gap:14px;font-family:var(--latin);font-size:11px;letter-spacing:.2em;color:var(--white-2);z-index:12;opacity:0}
+#counter .c-hint{position:absolute;right:0;bottom:calc(100% + 6px);font-size:10px;letter-spacing:.3em;color:var(--white-2);transition:opacity .8s var(--ease);pointer-events:none}
+#counter .c-hint .sp{display:none}
+body.w-moved #counter .c-hint{opacity:0}
+#counter .bar{position:relative;width:120px;height:1px;background:rgba(233,237,242,.22)}
+#counter .bar i{position:absolute;left:0;top:-.5px;height:2px;background:var(--white);transition:width .6s var(--ease)}
+#counter .step{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;color:var(--white-2);transition:color .3s,background .3s}
+#counter .step:hover{color:var(--white);background:rgba(233,237,242,.07)}
+#counter .step[data-step="-1"] svg{transform:scaleX(-1)}
+
+#panels{position:fixed;inset:0;perspective:1500px;perspective-origin:64% 44%;z-index:5;pointer-events:none}
+.panel{position:absolute;left:33vw;top:24vh;width:36vw;aspect-ratio:16/10;transform-origin:50% 50%;transform-style:preserve-3d;will-change:transform,opacity,filter;opacity:0;cursor:pointer;
+  -webkit-box-reflect:below 3px linear-gradient(transparent 62%,rgba(255,255,255,.14))}
+.panel .face{position:absolute;inset:0;overflow:hidden;border-radius:3px;background:#0d1117;
+  box-shadow:0 0 0 1px rgba(214,224,240,.30),0 0 30px rgba(190,205,230,.10),0 30px 80px rgba(0,0,0,.55);transition:box-shadow .35s}
+.panel img{width:100%;height:100%;object-fit:cover;display:block}
+.panel .face::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16),rgba(255,255,255,0) 32%,rgba(255,255,255,0) 70%,rgba(255,255,255,.07));mix-blend-mode:screen}
+.panel .no{position:absolute;right:16px;bottom:12px;font-family:var(--latin);font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.8);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.panel:hover .face,.panel:focus-visible .face{box-shadow:0 0 0 1px rgba(232,238,248,.62),0 0 44px rgba(200,214,236,.20),0 30px 80px rgba(0,0,0,.55)}
+.panel:focus-visible{outline:none}
+
+/* 入口：読み込み → 触れる → 始まる */
+#gate[hidden],.g-start[hidden]{display:none}
+#gate{position:fixed;inset:0;z-index:60;display:grid;place-content:center;justify-items:center;gap:26px;background:var(--night);transition:opacity .55s var(--ease),visibility 0s .55s}
+#gate.is-out{opacity:0;visibility:hidden}
+.g-logo{font-family:var(--latin);font-size:17px;letter-spacing:.32em;padding-left:.32em;color:var(--white)}
+.g-sub{margin-top:-12px;font-size:11.5px;letter-spacing:.18em;color:var(--white-2)}
+.g-bar{position:relative;width:132px;height:1px;background:rgba(233,237,242,.16);transition:opacity .6s}
+.g-bar i{position:absolute;left:0;top:0;height:1px;width:0;background:var(--white);transition:width .5s var(--ease)}
+#gate.is-ready .g-bar{opacity:0}
+.g-start{display:inline-flex;align-items:center;gap:16px;font-size:12.5px;letter-spacing:.2em;color:var(--white-2);opacity:0;transform:translateY(6px);transition:opacity .9s,transform .9s var(--ease),color .3s}
+#gate.is-ready .g-start{opacity:1;transform:none}
+.g-start:hover{color:var(--white)}
+.g-ring{width:30px;height:30px;border-radius:50%;border:1px solid rgba(233,237,242,.4);position:relative}
+.g-ring::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid rgba(233,237,242,.5);animation:g-breathe 2.4s var(--ease) infinite}
+@keyframes g-breathe{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+html.js .experience.is-gated #top,html.js .experience.is-gated .scroll-cue,html.js .experience.is-gated .site-header{opacity:0}
+
+/* 作品の詳しいページへ：白銀の幕 */
+#veil{position:fixed;inset:0;z-index:50;pointer-events:none;opacity:0;background:radial-gradient(120% 90% at 70% 10%,#EEF2F4,#D9DEE2 55%,#C9D0D6);transition:opacity .7s var(--ease)}
+#veil.is-on{opacity:1}
+
+/* 動かせない時の一覧（JSなし・WebGLなし・動きを減らす設定の予備）。体験が動く時は読み上げにだけ残す */
+#works-list{padding:140px var(--gut) 80px}
+#works-list h2{font-family:var(--latin);font-weight:300;font-size:40px;letter-spacing:.06em;margin-bottom:28px}
+#works-list ol{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px}
+#works-list a{display:grid;gap:4px}
+#works-list img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:3px;margin-bottom:10px;box-shadow:0 0 0 1px rgba(214,224,240,.25)}
+#works-list .no,#works-list .l{font-family:var(--latin);font-size:11px;letter-spacing:.2em;color:var(--white-3)}
+#works-list .l{font-family:var(--sans);letter-spacing:.08em}
+#works-list .t{font-size:17px}
+#works-list .c{font-size:13px;color:var(--white-2)}
+/* 体験が動く時は、画面の板と前後の送りで作品を巡る（見えない一覧を二重に巡らせない） */
+html.js body.experience:not(.exp-off) #works-list{display:none}
+/* WebGL が使えない時：固定の絵を外し、普通の本文と一覧を見せる */
+.exp-off #scene,.exp-off #panels{display:none}
+html:not(.js) #top{position:static;transform:none;padding:160px var(--gut) 40px}
+html:not(.js) .scroll-cue,html:not(.js) #works-text,html:not(.js) #counter,html:not(.js) #panels{display:none}
+body.experience:not(.exp-on) #works-text,body.experience:not(.exp-on) #counter,body.experience:not(.exp-on) .scroll-cue{display:none}
+body.experience:not(.exp-on){overflow:auto;height:auto;touch-action:auto}
+body.experience:not(.exp-on) #top{position:static;transform:none;padding:160px var(--gut) 40px}
+
+@media (max-aspect-ratio:4/5){
+  #top{left:20px;right:20px;bottom:max(110px,calc(env(safe-area-inset-bottom) + 96px));display:block}
+  #top h1{font-size:clamp(22px,6.5vw,30px)}
+  #top p{margin-top:16px;font-size:12.5px}
+  #top .cta{margin-top:14px}
+  .scroll-cue{display:none}
+  #works-text{left:20px;right:20px;width:auto;top:auto;bottom:max(96px,calc(env(safe-area-inset-bottom) + 84px));transform:none}
+  #works-text h2{font-size:30px;margin-top:10px}
+  #works-text .w-cat{margin-top:10px;font-size:13px}
+  .w-meta{margin-top:12px}
+  #works-text .cta{margin-top:16px}
+  #counter .c-hint .pc{display:none}
+  #counter .c-hint .sp{display:inline}
+  #counter{left:20px;right:20px;bottom:max(24px,env(safe-area-inset-bottom));justify-content:space-between}
+  #counter .bar{flex:1}
+  #scene::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(6,8,11,0) 48%,rgba(6,8,11,.5) 70%,rgba(6,8,11,.66))}
+  #panels{perspective:1000px;perspective-origin:58% 30%}
+  .panel{left:9vw;top:17vh;width:82vw}
+}
+@media (max-aspect-ratio:4/5) and (max-height:700px){
+  .w-meta{display:none}
+}

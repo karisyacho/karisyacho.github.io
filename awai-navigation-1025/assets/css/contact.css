@@ -1,0 +1,49 @@
+/* CONTACT：ABOUT・作品ページと同じ銀の部屋と斜めの板。板のスマホには、相談する人が打ちかけの一通（まだ送っていない）。主役は言葉と2つの窓口 */
+.c-main{grid-template-rows:auto auto;row-gap:0}
+.c-text{grid-column:1;grid-row:1;align-self:end}
+.c-visual{grid-column:2;grid-row:1/3}
+.c-ask{grid-column:1;grid-row:2;align-self:start}
+
+.c-main h1{margin-top:22px;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.6vw,56px);line-height:1.5;letter-spacing:.05em}
+.c-main h1 span{display:block}
+.c-main .lead{margin-top:26px;max-width:30em;font-size:clamp(15px,1.15vw,17px);color:var(--ink);word-break:keep-all;overflow-wrap:anywhere}
+
+/* 板の画面：まだ何も送っていない会話と、打ちかけの入力欄 */
+.c-talk .t-screen{display:flex;flex-direction:column}
+.c-day{margin:14px auto 0;padding:2px 10px;border-radius:10px;background:rgba(23,33,43,.06);font-size:10px;letter-spacing:.12em;color:var(--ink-3)}
+.c-input{margin-top:auto;display:flex;align-items:flex-end;gap:8px;padding:10px 10px 10px 14px;border-radius:18px;background:#fff;box-shadow:0 1px 0 rgba(23,33,43,.06),0 6px 16px -10px rgba(23,33,43,.3);font-size:12.5px;line-height:1.7;letter-spacing:.04em;line-break:strict;overflow-wrap:break-word}
+.c-draft{flex:1;min-width:0}
+.c-draft>span{display:inline-block;max-width:100%}
+.c-caret{display:inline-block;width:1.5px;height:1.2em;margin-left:2px;vertical-align:-.22em;background:var(--ink);animation:c-caret 1.1s steps(1) infinite}
+.c-send{flex:none;width:26px;height:26px;border-radius:50%;background:rgba(23,33,43,.14)}
+@keyframes c-caret{50%{background:transparent}}
+
+/* 窓口2つ：銀の部屋の上の、薄い板 */
+.c-ways{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:620px}
+.c-way{position:relative;display:grid;gap:4px;padding:22px 52px 22px 24px;border:1px solid rgba(23,33,43,.22);border-radius:4px;background:rgba(255,255,255,.42);transition:border-color .35s,background .35s}
+.c-way:hover,.c-way:focus-visible{border-color:var(--ink);background:rgba(255,255,255,.75)}
+.c-way .k{font-family:var(--latin);font-size:10.5px;letter-spacing:.26em;color:var(--ink-3)}
+.c-way .t{font-size:16px;letter-spacing:.08em;color:var(--ink)}
+.c-way .d{font-size:12.5px;color:var(--ink-2);letter-spacing:.04em}
+.c-way .ic{position:absolute;right:22px;top:24px;color:var(--ink-2)}
+
+.c-ask{margin-top:52px;padding-top:26px;border-top:1px solid rgba(23,33,43,.16);max-width:620px}
+.c-ask h2{font-size:14px;letter-spacing:.14em;font-weight:500;color:var(--ink)}
+.c-ask p{margin-top:10px;font-size:15px;color:var(--ink)}
+.c-ask .note{font-size:13.5px;color:var(--ink-2)}
+.c-ask .price{margin-top:14px;font-size:13.5px;letter-spacing:.08em}
+.c-ask .price a{display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid currentColor;color:var(--ink)}
+
+@media (max-width:900px){
+  /* 相談しに来た画面なので、言葉と窓口2つを先に。板はその下 */
+  .c-text,.c-visual,.c-ask{grid-column:1}
+  .c-text{grid-row:1}
+  .c-visual{grid-row:2}
+  .c-ask{grid-row:3}
+  .c-visual{margin:36px 0 150px}
+  .c-ways{grid-template-columns:1fr;margin-top:32px;gap:12px}
+  .c-way{padding:18px 48px 18px 20px}
+  .c-way .d{font-size:13px}
+  .c-ask{margin-top:0}
+}
+@media (prefers-reduced-motion:reduce){.c-caret{animation:none}}

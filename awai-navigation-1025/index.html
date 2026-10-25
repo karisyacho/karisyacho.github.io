@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja" data-tone="dark">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AWAI. — 魅力は、もうある。まだ、伝わっていないだけ。</title>
+<meta name="description" content="AWAI. は徳島のWebデザインスタジオです。お店や会社の魅力が伝わるWebサイトを、話を聞くところから作ります。">
+<meta name="theme-color" content="#0C131B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AWAI. — 魅力は、もうある。まだ、伝わっていないだけ。">
+<meta property="og:description" content="AWAI. は徳島のWebデザインスタジオです。お店や会社の魅力が伝わるWebサイトを、話を聞くところから作ります。">
+<link rel="canonical" href="https://awai-web.pages.dev/">
+<meta property="og:url" content="https://awai-web.pages.dev/">
+<meta property="og:image" content="https://awai-web.pages.dev/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AWAI.">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Noto+Serif+JP:wght@300;400&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/experience.css">
+<script>document.documentElement.classList.add('js');document.documentElement.dataset.tone="dark";window.AWAI={root:"",preview:false};</script>
+</head>
+<body class="experience" data-start="top">
+<a class="skip" href="#works-list">作品の一覧へ</a>
+<div id="scene" aria-hidden="true"><canvas id="gl"></canvas></div>
+<header class="site-header">
+  <a class="logo" href="" data-nav="top" aria-label="AWAI. トップへ">AWAI.</a>
+  <nav aria-label="メインメニュー">
+    <a href="works/" data-nav="works">WORKS</a>
+    <a href="about/" data-nav="about">ABOUT</a>
+    <a href="contact/" data-nav="contact">CONTACT</a>
+  </nav>
+</header>
+<script>(()=>{const h=document.querySelector('.site-header');let y=scrollY,f=0;const u=()=>{f=0;const n=scrollY;h.classList.toggle('is-off',n>40);if(Math.abs(n-y)>6){h.classList.toggle('is-tucked',n>y&&n>160&&!h.contains(document.activeElement));y=n;}};addEventListener('scroll',()=>{if(!f)f=requestAnimationFrame(u);},{passive:true});h.addEventListener('focusin',()=>h.classList.remove('is-tucked'));u();})();</script>
+<main>
+<section id="top" aria-labelledby="top-h">
+  <h1 id="top-h"><span>魅力は、もうある。</span><span>まだ、伝わっていないだけ。</span></h1>
+  <p><span>徳島から、</span><span>お店や会社の魅力が伝わるWebサイトを。</span></p>
+  <a class="cta" href="works/" data-go="works"><span class="ring"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M0 5h17M12.5 .5 17 5l-4.5 4.5"/></svg></span>制作を見る<span class="tail"></span></a>
+</section>
+<div class="scroll-cue" aria-hidden="true">SCROLL DOWN</div>
+<div class="hint" id="hint" aria-hidden="true">近づいてみる</div>
+
+<div id="panels"></div>
+<section id="works-text" aria-live="polite">
+  <p class="eyebrow">WORKS / <span id="wno">01</span></p>
+  <h2 id="wname">AIMA</h2>
+  <p class="w-cat" id="wcat"></p>
+  <dl class="w-meta"><div><dt>種別</dt><dd id="wlabel"></dd></div><div><dt>担当</dt><dd id="wroles"></dd></div></dl>
+  <a class="cta" id="wlink" href="works/aima/"><span class="ring"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M0 5h17M12.5 .5 17 5l-4.5 4.5"/></svg></span>詳細を見る<span class="tail"></span></a>
+</section>
+<div id="counter"><span class="c-hint" aria-hidden="true"><span class="pc">SCROLL / DRAG</span><span class="sp">SWIPE</span></span><button type="button" class="step" data-step="-1" aria-label="前の作品"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M0 5h17M12.5 .5 17 5l-4.5 4.5"/></svg></button><span id="cno" aria-hidden="true">01</span><span class="bar" aria-hidden="true"><i id="cbar"></i></span><span aria-hidden="true">07</span><button type="button" class="step" data-step="1" aria-label="次の作品"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M0 5h17M12.5 .5 17 5l-4.5 4.5"/></svg></button></div>
+
+<nav id="works-list" aria-label="作品の一覧">
+  <h2>WORKS</h2>
+  <ol>
+    <li><a href="works/aima/"><img src="assets/works/aima/desktop.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><span class="no">01</span><span class="t">AIMA</span><span class="c">藍染と滞在のアトリエ</span><span class="l">見本（架空の施設）</span></a></li>
+    <li><a href="works/kasane/"><img src="assets/works/kasane/desktop.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><span class="no">02</span><span class="t">KASANE</span><span class="c">アパレル</span><span class="l">見本（架空のブランド）</span></a></li>
+    <li><a href="works/suketo/"><img src="assets/works/suketo/desktop.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><span class="no">03</span><span class="t">助任珈琲豆店</span><span class="c">コーヒー豆の店</span><span class="l">見本（架空の店）</span></a></li>
+    <li><a href="works/studio-free/"><img src="assets/works/studio-free/cover.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><span class="no">04</span><span class="t">STUDIO FREE</span><span class="c">ボディケアサロンの広告動画</span><span class="l">実案件</span></a></li>
+    <li><a href="works/okinohama/"><img src="assets/works/okinohama/desktop.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><span class="no">05</span><span class="t">おきのはま製パン</span><span class="c">パン屋</span><span class="l">見本（架空の店）</span></a></li>
+    <li><a href="works/uchimachi/"><img src="assets/works/uchimachi/desktop.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><span class="no">06</span><span class="t">UCHIMACHI HAIR</span><span class="c">ヘアサロン</span><span class="l">見本（架空の店）</span></a></li>
+    <li><a href="works/arc/"><img src="assets/works/arc/desktop.webp" alt="" width="1200" height="750" loading="lazy" decoding="async"><span class="no">07</span><span class="t">pilates studio ARC</span><span class="c">ピラティスの申し込みページ</span><span class="l">見本（架空の店）</span></a></li>
+  </ol>
+</nav>
+</main>
+
+<div id="gate" hidden>
+  <p class="g-logo">AWAI.</p>
+  <p class="g-sub">徳島で、ひとりでWebサイトを作っています</p>
+  <span class="g-bar" aria-hidden="true"><i></i></span>
+  <button type="button" class="g-start" hidden><span class="g-ring" aria-hidden="true"></span>触れて、はじめる</button>
+</div>
+<div id="veil" aria-hidden="true"></div>
+<script>window.AWAI.works=[{"no":"01","slug":"aima","title":"AIMA","sub":"藍間","label":"見本（架空の施設）","category":"藍染と滞在のアトリエ","roles":"企画・デザイン・動きの設計・実装","media":"Web","img":"assets/works/aima/desktop.webp","href":"works/aima/"},{"no":"02","slug":"kasane","title":"KASANE","sub":"かさね","label":"見本（架空のブランド）","category":"アパレル","roles":"企画・デザイン・WebGL・実装","media":"Web","img":"assets/works/kasane/desktop.webp","href":"works/kasane/"},{"no":"03","slug":"suketo","title":"助任珈琲豆店","sub":"SUKETO COFFEE BEANS","label":"見本（架空の店）","category":"コーヒー豆の店","roles":"企画・ほかの豆屋のサイトの読み比べ・デザイン・実装","media":"Web","img":"assets/works/suketo/desktop.webp","href":"works/suketo/"},{"no":"04","slug":"studio-free","title":"STUDIO FREE","sub":"AD REEL","label":"実案件","category":"ボディケアサロンの広告動画","roles":"構成・文字のデザイン・編集","media":"Video","img":"assets/works/studio-free/cover.webp","href":"works/studio-free/"},{"no":"05","slug":"okinohama","title":"おきのはま製パン","sub":"OKINOHAMA","label":"見本（架空の店）","category":"パン屋","roles":"企画・デザイン・実装","media":"Web","img":"assets/works/okinohama/desktop.webp","href":"works/okinohama/"},{"no":"06","slug":"uchimachi","title":"UCHIMACHI HAIR","sub":"内町","label":"見本（架空の店）","category":"ヘアサロン","roles":"企画・デザイン・実装","media":"Web","img":"assets/works/uchimachi/desktop.webp","href":"works/uchimachi/"},{"no":"07","slug":"arc","title":"pilates studio ARC","sub":"アーク","label":"見本（架空の店）","category":"ピラティスの申し込みページ","roles":"企画・デザイン・フォームの実装","media":"LP","img":"assets/works/arc/desktop.webp","href":"works/arc/"}];</script>
+<link rel="modulepreload" href="assets/js/letters.js">
+<link rel="modulepreload" href="assets/js/three/three.module.min.js">
+<script src="assets/js/experience.js" defer></script>
+</body>
+</html>

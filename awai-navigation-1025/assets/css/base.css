@@ -1,0 +1,70 @@
+:root{
+  --dark-900:#0C131B; --dark-800:#15212B; --night:#06080b;
+  --silver-100:#E8EDF0; --silver-300:#D9DEE2; --silver-500:#A6B3BD;
+  --ink:#17212B; --ink-2:#4A5763; --ink-3:#5E6A76;
+  --white:#E9EDF2; --white-2:rgba(233,237,242,.64); --white-3:rgba(233,237,242,.6);
+  --muted:#AAB8C3;
+  --serif:"Noto Serif JP",serif; --sans:"Zen Kaku Gothic New",sans-serif; --latin:"Jost","Zen Kaku Gothic New",sans-serif;
+  --gut:clamp(20px,5.2vw,80px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.9;letter-spacing:.04em}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ol,ul{list-style:none}
+:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:12px;top:-60px;z-index:100;padding:10px 14px;background:var(--white);color:var(--ink);font-size:13px}
+.skip:focus{top:12px}
+
+html[data-tone="dark"] body{background:var(--dark-900);color:var(--white)}
+html[data-tone="silver"] body{background:var(--silver-300);color:var(--ink)}
+
+/* ヘッダー：左にロゴ、右に3つ。今いるページは小さな点 */
+.site-header{position:fixed;left:0;right:0;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:30px var(--gut);transition:transform .6s var(--ease),background-color .4s,padding .4s var(--ease)}
+/* 読み進める間は上へ隠れ、戻ると薄い地を敷いて出る（本文の字と重ならない） */
+.site-header.is-tucked{transform:translateY(-110%)}
+.site-header.is-off{padding-top:18px;padding-bottom:18px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+html[data-tone="silver"] .site-header.is-off{background:rgba(217,222,226,.82)}
+html[data-tone="dark"] .site-header.is-off{background:rgba(12,19,27,.78)}
+.logo{font-family:var(--latin);font-weight:400;font-size:19px;letter-spacing:.06em}
+.site-header nav{display:flex;gap:clamp(18px,3vw,44px);font-family:var(--latin);font-size:11.5px;letter-spacing:.24em}
+.site-header nav a{position:relative;padding:8px 0;opacity:.64;transition:opacity .3s}
+.site-header nav a:hover,.site-header nav a[aria-current="page"]{opacity:1}
+.site-header nav a[aria-current="page"]::after{content:"";position:absolute;left:50%;bottom:-2px;width:3px;height:3px;border-radius:50%;background:currentColor;transform:translateX(-50%)}
+html[data-tone="silver"] .site-header{background:linear-gradient(rgba(217,222,226,.86),rgba(217,222,226,0))}
+
+.eyebrow{font-family:var(--latin);font-size:11px;letter-spacing:.3em;opacity:.7}
+
+/* 丸い輪に矢印の誘導 */
+.cta{display:inline-flex;align-items:center;gap:22px;font-size:13px;letter-spacing:.14em;min-height:48px}
+.cta .ring{flex:none;width:54px;height:54px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;opacity:.9;position:relative;transition:background .35s,transform .35s var(--ease)}
+.cta .ring::before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid currentColor;opacity:.0;transition:opacity .35s,inset .35s var(--ease)}
+.cta:hover .ring{transform:translateX(3px)}
+.cta:hover .ring::before{opacity:.35;inset:-7px}
+.cta .tail{width:46px;height:1px;background:currentColor;opacity:.3}
+html[data-tone="dark"] .cta .ring{border-color:rgba(233,237,242,.3)}
+html[data-tone="silver"] .cta .ring{border-color:rgba(23,33,43,.35)}
+
+/* フッター */
+.site-footer{position:relative;z-index:2;display:grid;grid-template-columns:1.4fr 1fr auto;gap:32px;align-items:end;padding:72px var(--gut) 40px;border-top:1px solid rgba(127,140,150,.25);font-size:13px}
+.site-footer p{opacity:.72}
+.f-brand .logo{display:inline-block;margin-bottom:10px}
+.f-links{display:grid;gap:6px}
+.f-links a{display:inline-flex;align-items:center;gap:8px;opacity:.8;transition:opacity .3s}
+.f-links a:hover{opacity:1}
+.f-copy{display:grid;justify-items:end;font-family:var(--latin);font-size:11px;letter-spacing:.24em}
+.f-copy small{font-size:inherit;opacity:.7}
+@media (max-width:760px){
+  .site-header{padding:20px}
+  .logo{font-size:17px}
+  .site-header nav{gap:18px;font-size:11px;letter-spacing:.14em}
+  .site-header nav a{padding:12px 0}
+  .site-header.is-off{padding-top:8px;padding-bottom:8px}
+  .site-footer{grid-template-columns:1fr;padding:56px 20px 32px}
+  .f-copy{justify-items:start}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}

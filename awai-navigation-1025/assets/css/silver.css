@@ -1,0 +1,385 @@
+/* DETAIL・ABOUT：白銀の地。右上からの柔らかい光と、床の奥のにじみ。真っ白・暖色にはしない */
+body{position:relative;overflow-x:hidden}
+.light{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(42% 38% at 82% 4%,rgba(250,252,253,.95),rgba(250,252,253,0) 72%),
+    radial-gradient(70% 46% at 60% 102%,rgba(178,189,198,.55),rgba(178,189,198,0) 70%),
+    linear-gradient(180deg,#E3E8EB 0%,#D9DEE2 46%,#CDD4D9 100%)}
+.light::before{content:"";position:absolute;inset:-20%;filter:blur(26px);opacity:1;
+  background:
+    linear-gradient(118deg,transparent 40%,rgba(255,255,255,.8) 44%,transparent 49%),
+    linear-gradient(118deg,transparent 50%,rgba(255,255,255,.55) 53%,transparent 57%),
+    linear-gradient(118deg,transparent 58%,rgba(255,255,255,.4) 60.5%,transparent 64%)}
+/* TOPのプリズムの輪郭を、ごく薄く右上に */
+.light::after{content:"";position:absolute;right:-8vw;top:-10vh;width:min(62vw,980px);aspect-ratio:1600/1213;
+  background:url(../media/silver-edge.webp) center/contain no-repeat;opacity:.55;transform:rotate(-8deg);
+  -webkit-mask-image:radial-gradient(70% 70% at 60% 40%,#000 30%,transparent 80%);mask-image:radial-gradient(70% 70% at 60% 40%,#000 30%,transparent 80%)}
+main,.site-footer{position:relative;z-index:1}
+.detail main{overflow-x:clip}
+.eyebrow{color:var(--ink-2)}
+.cta .ring{color:var(--ink)}
+.site-footer{border-top-color:rgba(23,33,43,.14)}
+
+/* ---------- DETAIL ---------- */
+.d-hero{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,4vw,64px);align-items:center;min-height:100svh;padding:104px var(--gut) 40px;max-width:1600px;margin:0 auto}
+/* 見出し：作品の一文を大きな明朝で。作品名はその下に小さく（一文がない作品は作品名を大きく） */
+.d-text h1{margin-top:22px;font-weight:300}
+.d-catch{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.3vw,52px);line-height:1.5;letter-spacing:.05em;word-break:keep-all}
+.d-catch>span>span{display:inline-block}
+.d-name{display:block;font-family:var(--latin);font-weight:300;font-size:clamp(34px,3.8vw,60px);line-height:1.15;letter-spacing:.04em}
+.has-catch .d-name{margin-top:26px;font-size:clamp(18px,1.5vw,22px);letter-spacing:.08em}
+.d-name small{display:block;margin-top:12px;font-family:var(--serif);font-size:clamp(13px,1.05vw,16px);letter-spacing:.16em;color:var(--ink-2)}
+.has-catch .d-name small{display:inline;margin:0 0 0 14px;font-size:13px}
+.d-meta{margin-top:30px;display:grid;gap:8px;font-size:14px}
+.d-meta div{display:grid;grid-template-columns:92px 1fr;gap:16px;padding-bottom:8px;border-bottom:1px solid rgba(23,33,43,.1)}
+.d-meta dd{word-break:keep-all;overflow-wrap:anywhere}
+.d-meta dt{font-family:var(--latin);font-size:10.5px;letter-spacing:.24em;color:var(--ink-3);padding-top:3px}
+.d-text .cta{margin-top:34px}
+
+.d-visual{position:relative;display:grid;justify-items:center;gap:20px}
+.stage{position:relative;width:100%;perspective:1600px;perspective-origin:30% 40%;display:grid;place-items:center;min-height:min(56vw,640px,calc(100svh - 230px));touch-action:pan-y;container-type:inline-size}
+/* 床：板の足もとから手前へ。地平の細い照り返しと、手前へ沈むつや */
+.stage::before{content:"";position:absolute;z-index:-1;left:-60vw;right:-30vw;top:calc(var(--floor,calc(50% + min(100cqw,880px) / 3.2)) - 6px);height:58vh;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.85) 4px,rgba(255,255,255,.3) 16px,rgba(244,247,249,.6) 32%,rgba(196,205,212,0) 100%);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 30%,#000 80%,transparent);mask-image:linear-gradient(90deg,transparent,#000 30%,#000 80%,transparent)}
+.device{--yaw:-7;position:relative;transform-style:preserve-3d;will-change:transform;transform:rotateY(calc(var(--yaw) * 1deg));border-radius:6px;overflow:hidden;background:#0d1117;
+  -webkit-box-reflect:below 4px linear-gradient(transparent 55%,rgba(255,255,255,.34));
+  box-shadow:0 0 0 1px rgba(255,255,255,.7),0 2px 0 rgba(255,255,255,.5) inset,0 40px 90px rgba(40,52,64,.32),0 12px 30px rgba(40,52,64,.18);
+  width:min(100%,880px);aspect-ratio:16/10;transition:width .8s var(--ease),aspect-ratio .8s var(--ease),border-radius .8s var(--ease)}
+.device::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,.22),rgba(255,255,255,0) 30%,rgba(255,255,255,0) 72%,rgba(255,255,255,.1))}
+.device img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:opacity .5s .2s}
+.device .sp{opacity:0}
+.device[data-mode="sp"]{width:min(46%,300px,calc((100svh - 250px) * .462));aspect-ratio:520/1125;border-radius:22px}
+.device[data-mode="sp"] .sp{opacity:1}
+.device[data-mode="sp"] .pc{opacity:0;transition-delay:0s}
+.device.is-reel{width:min(62%,330px,calc((100svh - 250px) * .5625));aspect-ratio:9/16;border-radius:18px}
+.device video{width:100%;height:100%;object-fit:cover}
+.play{position:absolute;left:50%;bottom:18px;translate:-50% 0;padding:8px 18px;border-radius:99px;background:rgba(13,17,23,.6);color:#fff;font-size:12px;letter-spacing:.12em;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.switch{display:flex;gap:4px;padding:4px;border-radius:99px;border:1px solid rgba(23,33,43,.16);background:rgba(255,255,255,.3)}
+.switch button{min-width:64px;min-height:36px;padding:0 16px;border-radius:99px;font-family:var(--latin);font-size:11px;letter-spacing:.22em;color:var(--ink-2);transition:background .3s,color .3s}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--silver-100)}
+.credit{font-size:12.5px;color:var(--ink-2);margin-top:clamp(40px,6vh,72px)}
+.d-intro{margin-top:22px;font-size:15.5px;color:var(--ink);max-width:26em}
+
+/* 一番見てほしい工夫：実物を触った映像は最初の板で流し、ここでは考えだけを読ませる */
+.device video.pc{position:absolute;inset:0;transition:opacity .5s .2s}
+.f-play{position:absolute;right:14px;top:14px;z-index:1;padding:7px 16px;border-radius:99px;background:rgba(13,17,23,.55);color:#fff;font-size:11.5px;letter-spacing:.12em;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:opacity .3s}
+.device[data-mode="sp"] .f-play{opacity:0;pointer-events:none}
+/* 最初の画面のすぐ下に、見出しと本文を横一列で（設計書のモックの3列）。縦に積んで下を空けない */
+.d-focus{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3.5fr) minmax(0,3.5fr);align-items:start;padding:clamp(24px,3vw,48px) var(--gut) clamp(80px,9vw,140px);max-width:1600px;margin:0 auto}
+.f-head{padding-right:clamp(24px,3vw,56px)}
+.f-head h2{margin:12px 0 0;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.3vw,36px);letter-spacing:.06em;line-height:1.6;word-break:keep-all}
+.f-text{padding:4px clamp(20px,2.4vw,40px) 0;border-left:1px solid rgba(23,33,43,.16);font-size:16px;color:var(--ink)}
+
+.d-body{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));padding:clamp(24px,3vw,48px) var(--gut) clamp(80px,9vw,140px);max-width:1600px;margin:0 auto}
+.d-col{padding:4px clamp(20px,2.4vw,40px) 0;border-left:1px solid rgba(23,33,43,.16)}
+.d-col:first-child{padding-left:0;border-left:0}
+.d-col h2,.d-tabs h2,.d-cuts h2{margin:10px 0 14px;font-family:var(--serif);font-weight:400;font-size:clamp(18px,1.5vw,22px);letter-spacing:.06em}
+.d-col p:not(.eyebrow){font-size:15.5px;color:var(--ink);max-width:34em}
+
+.d-tabs{padding:24px var(--gut) 96px;max-width:1600px;margin:0 auto}
+.tablist{margin-top:18px;display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid rgba(23,33,43,.16)}
+.tablist button{position:relative;padding:14px 18px 16px;font-family:var(--latin);font-size:12px;letter-spacing:.24em;color:var(--ink-2);transition:color .3s}
+.tablist button small{margin-left:10px;font-family:var(--sans);font-size:11px;letter-spacing:.08em}
+.tablist button[aria-selected="true"]{color:var(--ink)}
+.tablist button::after{content:"";position:absolute;left:18px;right:18px;bottom:-1px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.tablist button[aria-selected="true"]::after{transform:none}
+.tabpanel{padding-top:30px;max-width:40em}
+.tabpanel p{font-family:var(--serif);font-size:clamp(16px,1.35vw,20px);line-height:2.05;letter-spacing:.05em;animation:t-in .6s var(--ease)}
+@keyframes t-in{from{opacity:0;transform:translateY(8px)}}
+
+.d-cuts{padding:0 var(--gut) 96px;max-width:1600px;margin:0 auto}
+.cuts{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,220px));gap:18px}
+.cuts img{width:100%;height:auto;border-radius:8px;box-shadow:0 20px 50px rgba(40,52,64,.2)}
+
+/* 最初の画面のあとに続く場面：1画面に1枚。最初の画面と同じ板を床に立て、左右を入れ替えながら読み進める */
+.d-scenes{padding:0 var(--gut) clamp(40px,5vw,80px);max-width:1600px;margin:0 auto}
+.d-scenes h2,.d-ask h2{margin:10px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(18px,1.5vw,22px);letter-spacing:.06em}
+.scenes{list-style:none}
+.scene{--yaw:7;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:center;padding:clamp(48px,7vw,110px) 0}
+.scene:nth-child(even){--yaw:-7;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.scene:nth-child(even) .sc-stage{order:2}
+.sc-stage{position:relative;perspective:1600px;perspective-origin:50% 40%}
+/* 床：板の足もとに地平の照り返し、手前へ沈むつや（最初の画面の床と同じ作り） */
+.sc-stage::before{content:"";position:absolute;z-index:-1;left:-12%;right:-12%;top:calc(100% - 4px);height:clamp(120px,14vw,220px);pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.8) 4px,rgba(255,255,255,.25) 14px,rgba(244,247,249,.5) 30%,rgba(196,205,212,0) 100%);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent)}
+.sc-board{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:5px;background:#0d1117;
+  transform:rotateY(calc(var(--yaw) * 1deg));
+  -webkit-box-reflect:below 4px linear-gradient(transparent 62%,rgba(255,255,255,.3));
+  box-shadow:0 0 0 1px rgba(255,255,255,.7),0 36px 80px rgba(40,52,64,.28),0 10px 26px rgba(40,52,64,.16);
+  transition:transform 1.4s var(--ease),opacity 1s var(--ease)}
+.sc-no{display:flex;align-items:baseline;gap:14px;font-family:var(--latin);font-weight:300;font-size:clamp(44px,4.4vw,72px);line-height:1;letter-spacing:.04em;color:var(--ink)}
+.sc-no span{font-size:10.5px;letter-spacing:.26em;color:var(--ink-3)}
+.sc-cap{margin-top:clamp(20px,2.2vw,32px);max-width:21em;font-family:var(--serif);font-size:clamp(16px,1.3vw,19px);line-height:2.1;letter-spacing:.05em;color:var(--ink)}
+/* 見えたら、板が少し大きく振れた所から正面寄りへ戻る（1回だけ。スクロール連動ではない） */
+.scene.reveal{transform:none}
+.scene.reveal .sc-board{opacity:0;transform:rotateY(calc(var(--yaw) * 3deg)) translateY(28px)}
+.scene.reveal .sc-text{opacity:0;transform:translateY(16px);transition:opacity 1s .35s var(--ease),transform 1s .35s var(--ease)}
+.scene.reveal.is-in .sc-board{opacity:1;transform:rotateY(calc(var(--yaw) * 1deg))}
+.scene.reveal.is-in .sc-text{opacity:1;transform:none}
+
+/* 相談：見出しとボタンを1行に */
+.d-ask{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px 48px;padding:64px var(--gut);max-width:1600px;margin:0 auto;border-top:1px solid rgba(23,33,43,.14)}
+.d-ask h2{font-size:clamp(20px,1.9vw,28px);word-break:keep-all}
+.d-ask p:not(.eyebrow){margin-top:12px;font-size:15.5px;color:var(--ink);max-width:40em;word-break:keep-all}
+
+/* 次の作品：その作品の最初の画面と同じ置き方（左に一文、右に斜めの板と床） */
+.d-next{padding:clamp(56px,7vw,110px) var(--gut) clamp(64px,7vw,110px);max-width:1600px;margin:0 auto;border-top:1px solid rgba(23,33,43,.14)}
+.d-next .next{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,4vw,64px);align-items:center}
+.n-text{display:flex;flex-direction:column;align-items:flex-start}
+.n-text .eyebrow{display:block}
+.n-title{display:block;margin-top:20px}
+.n-catch{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.5vw,40px);line-height:1.5;letter-spacing:.05em;word-break:keep-all}
+.n-name{display:block;font-family:var(--latin);font-weight:300;font-size:clamp(30px,3.2vw,52px);line-height:1.15;letter-spacing:.04em}
+.has-catch .n-name{margin-top:16px;font-size:clamp(15px,1.2vw,18px);letter-spacing:.1em;color:var(--ink-2)}
+.n-go{display:inline-flex;align-items:center;gap:18px;margin-top:34px;font-size:12.5px;letter-spacing:.14em}
+.n-go .ring,.d-next .back .ring{flex:none;width:48px;height:48px;border:1px solid rgba(23,33,43,.3);border-radius:50%;display:grid;place-items:center;transition:transform .4s var(--ease)}
+.d-next .next:hover .n-go .ring{transform:translateX(4px)}
+.n-stage{position:relative;display:block;perspective:1600px;perspective-origin:30% 40%}
+.n-stage::before{content:"";position:absolute;z-index:-1;left:-30%;right:-20%;top:calc(100% - 4px);height:clamp(110px,13vw,200px);pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.8) 4px,rgba(255,255,255,.25) 14px,rgba(244,247,249,.5) 30%,rgba(196,205,212,0) 100%);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 25%,#000 80%,transparent);mask-image:linear-gradient(90deg,transparent,#000 25%,#000 80%,transparent)}
+.n-board{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:5px;background:#0d1117;transform:rotateY(-7deg);
+  -webkit-box-reflect:below 4px linear-gradient(transparent 62%,rgba(255,255,255,.3));
+  box-shadow:0 0 0 1px rgba(255,255,255,.7),0 36px 80px rgba(40,52,64,.28),0 10px 26px rgba(40,52,64,.16);transition:transform .9s var(--ease)}
+.d-next .next:hover .n-board{transform:rotateY(-3deg) translateY(-6px)}
+.d-next .back{display:inline-flex;align-items:center;gap:18px;margin-top:clamp(48px,6vw,88px);font-family:var(--latin);font-size:11.5px;letter-spacing:.24em}
+.d-next .back svg{transform:scaleX(-1)}
+
+/* 入ってきたときは、作品の絵から静かに */
+html.js .detail .d-hero>*{animation:d-in 1s var(--ease) both}
+html.js .detail .d-visual{animation-delay:.12s}
+@keyframes d-in{from{opacity:0;transform:translateY(14px)}}
+
+/* ---------- ABOUT ---------- */
+.light::after{content:none!important}
+.a-hero{position:relative;overflow-x:clip;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,4vw,64px);align-items:center;min-height:100svh;padding:104px var(--gut) 40px;max-width:1600px;margin:0 auto}
+.a-text{grid-column:1;grid-row:1}
+.a-visual{grid-column:2;grid-row:1}
+/* 板は作品ページと同じ斜めの板と床。映すのは、最初にお送りするLINEの問いかけ。返事はまだ打っている途中 */
+.a-hero .stage{min-height:min(48vw,640px,calc(100svh - 200px))}
+/* 枠の高さは中身に合わせて伸ばす（iPhoneは字が大きく出て、決めた高さだと下の縁ごと切れた）。画面は縦長を最低限にして、中身が多ければ伸びる */
+.device.a-talk{--yaw:-12;width:min(58%,320px,calc((100svh - 260px) * .52));aspect-ratio:auto;height:auto;border-radius:34px;padding:7px;background:#0d1117}
+.t-screen{aspect-ratio:9/16;border-radius:28px;background:linear-gradient(180deg,#F4F6F7,#E4E9EC);display:flex;flex-direction:column;padding:18px 14px 14px;color:var(--ink)}
+.t-bar{display:flex;align-items:baseline;justify-content:center;gap:8px;padding:6px 0 14px;border-bottom:1px solid rgba(23,33,43,.1);font-family:var(--latin);font-size:13px;letter-spacing:.16em}
+.t-bar small{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;color:var(--ink-3)}
+.t-log{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:16px 0 12px;list-style:none}
+/* 吹き出しの字は、ひと続きの語（span）を同じ行に置き、入らない語だけ中で折る。keep-all＋anywhere は iOS の版によって折れず、吹き出しの外へ出た */
+.t-log li,.t-note{line-break:strict;overflow-wrap:break-word}
+.t-log li span,.t-note span{display:inline-block;max-width:100%}
+.t-log li{align-self:flex-start;max-width:92%;padding:9px 13px;border-radius:4px 16px 16px 16px;background:#fff;box-shadow:0 1px 0 rgba(23,33,43,.06),0 6px 16px -10px rgba(23,33,43,.3);font-size:12.5px;line-height:1.7;letter-spacing:.04em}
+.t-log .you{align-self:flex-end;display:flex;gap:5px;padding:13px 15px;border-radius:16px 4px 16px 16px;background:var(--ink)}
+.t-log .you i{width:5px;height:5px;border-radius:50%;background:var(--silver-100);opacity:.5}
+/* 問いかけは1つずつ届き、前の吹き出しを押し上げる。並びは最初から最後の形のまま置き、まだ届いていない分（--y）だけ全体を下げておく。板の大きさは変わらない（silver.js） */
+/* 隠すのは JS が後から読まれるまでの一瞬も含める（PCでは板が最初の画面にあり、全部が見えてから消えるのを防ぐ）。
+   動かすのは top と色だけ。transform・opacity で動かすと、床の映り込み（box-reflect）が動きについて来ず、動く前の吹き出しを映したまま止まって、終わりで飛んだ */
+@media (prefers-reduced-motion:no-preference){
+  html.js .t-log{overflow:hidden;margin:0 -10px;padding-left:10px;padding-right:10px}
+  html.js .t-log li{position:relative;top:calc(var(--y,0px) + 8px);color:transparent;background-color:rgba(255,255,255,0);box-shadow:0 1px 0 rgba(23,33,43,0),0 6px 16px -10px rgba(23,33,43,0)}
+  html.js .t-log li.you{background-color:rgba(23,33,43,0)}
+  html.js .t-log li.you i{background-color:rgba(233,237,242,0);opacity:1}
+  html.js .t-log li.on{top:var(--y,0px);color:var(--ink);background-color:#fff;box-shadow:0 1px 0 rgba(23,33,43,.06),0 6px 16px -10px rgba(23,33,43,.3)}
+  html.js .t-log li.you.on{background-color:var(--ink)}
+  html.js .t-log li.you.on i{background-color:rgba(233,237,242,.4);animation:t-dots 1.4s ease-in-out infinite}
+  html.js .t-log.is-run li,html.js .t-log.is-run li i{transition:top .7s cubic-bezier(.2,.75,.2,1),color .4s ease-out,background-color .4s ease-out,box-shadow .4s ease-out}
+  .t-log .you.on i:nth-child(2){animation-delay:.18s}
+  .t-log .you.on i:nth-child(3){animation-delay:.36s}
+}
+@keyframes t-dots{0%,60%,100%{background-color:rgba(233,237,242,.4)}30%{background-color:rgba(233,237,242,.95)}}
+.t-note{padding-top:12px;border-top:1px solid rgba(23,33,43,.1);font-size:10.5px;letter-spacing:.08em;text-align:center;color:var(--ink-3)}
+.a-hero h1{margin-top:22px;font-family:var(--serif);font-weight:300;font-size:clamp(32px,4vw,60px);line-height:1.5;letter-spacing:.05em}
+.a-hero h1 span{display:block}
+.a-hero .lead{margin-top:30px;max-width:30em;font-size:clamp(15px,1.15vw,17px);color:var(--ink)}
+.a-hero .lead,.a-step p{word-break:keep-all;overflow-wrap:anywhere}
+.price{margin-top:14px;font-size:13px;letter-spacing:.08em}
+.price a{display:inline-flex;align-items:center;gap:8px;padding-bottom:4px;border-bottom:1px solid currentColor}
+html.js .a-step{animation:a-in 1s var(--ease) both}
+html.js .a-step:nth-child(2){animation-delay:.35s}
+html.js .a-step:nth-child(3){animation-delay:.7s}
+@keyframes a-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.a-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:24px var(--gut) 96px;max-width:1600px;margin:0 auto}
+.a-step{padding:4px clamp(18px,2.6vw,40px) 0;border-left:1px solid rgba(23,33,43,.16)}
+.a-step:first-child{padding-left:0;border-left:0}
+.a-step h2{margin:10px 0 14px;font-family:var(--latin);font-weight:400;font-size:clamp(20px,1.9vw,28px);letter-spacing:.16em}
+.a-step h2 small{margin-left:12px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--ink-2)}
+.a-step p{font-size:15px;color:var(--ink)}
+/* 考えのあとに、実物の例を分けて置く。例から作品のページへ進める */
+.eg-go{display:inline-flex;align-items:center;gap:14px;min-height:44px;margin-top:12px;font-size:12.5px;letter-spacing:.12em;color:var(--ink)}
+.eg-go .ring{flex:none;width:40px;height:40px;border:1px solid rgba(23,33,43,.3);border-radius:50%;display:grid;place-items:center;transition:transform .35s var(--ease)}
+.eg-go:hover .ring{transform:translateX(3px)}
+.a-example{overflow-x:clip;padding:0 var(--gut) clamp(40px,6vw,96px);max-width:1600px;margin:0 auto;border-top:1px solid rgba(23,33,43,.14)}
+/* DESIGN の例：見本の「今週の豆」が、上から墨色の「焙煎日」へ塗り替わる。高さで塗る（透明度で替えると床の映り込みが置いていかれる） */
+.eg-board{position:relative;width:100%;padding:0;border:0;overflow:hidden;cursor:pointer;font:inherit}
+.eg-board img{position:absolute;left:0;top:0;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.eg-ink{position:absolute;left:0;top:0;width:100%;height:0;overflow:hidden;transition:height 1.8s cubic-bezier(.65,0,.25,1)}
+.eg-board.is-ink .eg-ink{height:100%}
+.eg-h{margin-top:16px;font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.8vw,42px);line-height:1.55;letter-spacing:.05em}
+.eg-h span{display:block}
+.eg-t{margin-top:22px;max-width:24em;font-size:15.5px;color:var(--ink);word-break:keep-all;overflow-wrap:anywhere}
+.a-studio{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);padding:80px var(--gut);max-width:1600px;margin:0 auto;border-top:1px solid rgba(23,33,43,.14)}
+.a-studio h2{margin-top:16px;font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.8vw,42px);line-height:1.55;letter-spacing:.05em}
+.a-studio h2 span{display:block}
+.a-studio-body p{font-size:15.5px;color:var(--ink);max-width:34em}
+.a-studio-body p+p{margin-top:14px}
+.a-studio-body h3{margin-top:36px;font-size:13px;font-weight:500;letter-spacing:.14em}
+.a-list{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.a-list li{padding:12px 0;border-bottom:1px solid rgba(23,33,43,.12);font-size:14px}
+.a-list a{display:flex;align-items:center;justify-content:space-between;gap:12px;color:inherit}
+.a-list .go{flex:none;color:var(--ink-3);transition:transform .35s var(--ease),color .35s}
+.a-list a:hover .go{transform:translateX(3px);color:var(--ink)}
+/* FLOW：最初の板と同じスマホで、やりとりが公開まで続く。左に板、右に5つの段。今の段だけ濃く */
+.a-flow{overflow-x:clip;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"v h" "v s";column-gap:clamp(32px,5vw,96px);padding:clamp(56px,7vw,110px) var(--gut);max-width:1600px;margin:0 auto;border-top:1px solid rgba(23,33,43,.14)}
+.fl-visual{grid-area:v;align-self:center;display:grid;justify-items:center}
+.fl-head{grid-area:h;align-self:end}
+.fl-copy{grid-area:s;align-self:start}
+.fl-visual::before{left:-30%;right:-30%}
+.device.fl-talk{--yaw:12;width:min(78%,300px);-webkit-box-reflect:below 4px linear-gradient(transparent 72%,rgba(255,255,255,.3))}
+.fl-talk .t-screen{overflow:hidden;min-height:0}
+.fl-log{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:9px;padding:14px 0 10px;list-style:none}
+.fl-log li{flex:none;align-self:flex-start;max-width:90%;padding:8px 12px;border-radius:4px 16px 16px 16px;background:#fff;box-shadow:0 1px 0 rgba(23,33,43,.06),0 6px 16px -10px rgba(23,33,43,.3);font-size:12px;line-height:1.7;letter-spacing:.04em;line-break:strict;overflow-wrap:break-word}
+.fl-log li .tx>span{display:inline-block;max-width:100%}
+.fl-log .you{align-self:flex-end;border-radius:16px 4px 16px 16px;background:var(--ink);color:#E9EDF2}
+.fl-log .card{width:86%;padding:4px 4px 8px}
+.fl-log .card img{position:static;inset:auto;height:auto;display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:2px 12px 2px 2px}
+.fl-log .card .tx{display:block;padding:7px 8px 0}
+/* FLOW の板も ABOUT の板と同じく、届いていない分（--y）だけ下げて top と色で届かせる（映り込みのため transform・opacity は使わない） */
+@media (prefers-reduced-motion:no-preference){
+  html.js .fl-log li{position:relative;top:calc(var(--y,0px) + 8px);color:transparent;background-color:rgba(255,255,255,0);box-shadow:0 1px 0 rgba(23,33,43,0),0 6px 16px -10px rgba(23,33,43,0)}
+  html.js .fl-log li.you{background-color:rgba(23,33,43,0)}
+  html.js .fl-log li.card img{visibility:hidden}
+  html.js .fl-log li.on{top:var(--y,0px);color:var(--ink);background-color:#fff;box-shadow:0 1px 0 rgba(23,33,43,.06),0 6px 16px -10px rgba(23,33,43,.3)}
+  html.js .fl-log li.you.on{color:#E9EDF2;background-color:var(--ink)}
+  html.js .fl-log li.card.on img{visibility:visible}
+  html.js .fl-log.is-run li{transition:top .7s cubic-bezier(.2,.75,.2,1),color .4s ease-out,background-color .4s ease-out,box-shadow .4s ease-out}
+}
+.fl-log[data-at="1"] li:not([data-s="1"]),.fl-log[data-at="2"] li:is([data-s="3"],[data-s="4"],[data-s="5"]),.fl-log[data-at="3"] li:is([data-s="4"],[data-s="5"]),.fl-log[data-at="4"] li[data-s="5"]{display:none}
+.fl-steps{margin-top:30px;list-style:none;border-top:1px solid rgba(23,33,43,.16)}
+.fl-steps li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:8px;padding:14px 0 14px 14px;border-bottom:1px solid rgba(23,33,43,.12);border-left:2px solid transparent;color:var(--ink-2);transition:color .5s,border-color .5s}
+.fl-steps .n{padding-top:5px;font-family:var(--latin);font-size:11px;letter-spacing:.24em;color:var(--ink-3)}
+.fl-steps h3{font-family:var(--serif);font-weight:400;font-size:clamp(16px,1.3vw,19px);letter-spacing:.08em}
+.fl-steps p{margin-top:4px;font-size:14px;line-height:1.85;word-break:keep-all;overflow-wrap:anywhere}
+.fl-steps li{position:relative}
+.fl-steps h3 button{padding:0;border:0;background:none;font:inherit;letter-spacing:inherit;color:inherit;text-align:left;cursor:pointer}
+.fl-steps h3 button::after{content:"";position:absolute;inset:0}
+.fl-steps h3 button:focus-visible{outline:none}
+.fl-steps h3 button:focus-visible::after{outline:1px solid var(--ink);outline-offset:-1px}
+.fl-steps li:hover{color:var(--ink)}
+.fl-steps li.is-at{border-left-color:var(--ink);color:var(--ink)}
+.fl-steps li.is-at .n{color:var(--ink)}
+.a-flow .note{margin-top:22px;font-size:13.5px;color:var(--ink-2)}
+.a-flow .note a{display:inline-flex;align-items:center;gap:8px;margin-left:10px;border-bottom:1px solid currentColor;color:var(--ink)}
+.a-ask{padding-bottom:clamp(72px,8vw,120px)}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+
+/* 設計を見る：最初は完成画面の板1枚。触れると重なり順どおりの層に分かれ、左の一覧で層を選ぶ（スクロール連動なし） */
+.d-build{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:auto auto;column-gap:clamp(32px,5vw,80px);max-width:1600px;margin:0 auto;padding:24px var(--gut) 110px}
+.d-build h2{margin:10px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(18px,1.5vw,22px);letter-spacing:.06em}
+.d-build .lead{margin-top:14px;font-size:15px;color:var(--ink);max-width:30em}
+.b-head{grid-column:1;grid-row:1;align-self:end}
+.b-list{grid-column:1;grid-row:2;align-self:start}
+.layers{margin-top:30px;border-top:1px solid rgba(23,33,43,.16)}
+.layers li{list-style:none;border-bottom:1px solid rgba(23,33,43,.16)}
+.layers button{display:grid;grid-template-columns:34px 1fr auto;align-items:baseline;width:100%;min-height:52px;padding:16px 0;text-align:left;color:var(--ink-2);transition:color .3s}
+.layers .no{font-family:var(--latin);font-size:11px;letter-spacing:.2em}
+.layers .nm{font-size:15px;letter-spacing:.08em}
+.layers .en{font-family:var(--latin);font-size:10.5px;letter-spacing:.24em}
+.layers button[aria-selected="true"]{color:var(--ink)}
+.why{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.why>div{overflow:hidden}
+.layers li.is-on .why,html:not(.js) .why{grid-template-rows:1fr}
+.why p{padding:0 0 18px 34px;font-size:14.5px;line-height:2;color:var(--ink)}
+.why p+p{margin-top:-8px;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px 18px;padding:0 0 18px 34px;font-size:12px;color:var(--ink-2)}
+.chips span{display:flex;align-items:center;gap:8px}
+.chips i{width:14px;height:14px;border-radius:50%;border:1px solid rgba(23,33,43,.25)}
+.chips b{font-family:var(--latin);font-weight:400;letter-spacing:.08em}
+.why .fonts{font-size:12px;line-height:1.9;color:var(--ink-2)}
+.b-stage{grid-column:2;grid-row:1/3;align-self:center;position:relative;aspect-ratio:16/12;perspective:2200px;perspective-origin:50% 40%}
+.b-stack{position:absolute;inset:0;display:grid;place-items:center;transform-style:preserve-3d;cursor:pointer}
+.b-stack .sheet{position:absolute;width:86%;aspect-ratio:16/10;transform-style:preserve-3d;transform:rotateX(8deg) rotateY(-10deg);transition:transform 1.3s var(--ease),opacity .6s var(--ease)}
+.b-stack .sheet img{width:100%;height:100%;object-fit:cover}
+.b-stack .sheet:first-child{background:#E6E8E8;box-shadow:0 30px 60px -30px rgba(23,33,43,.45)}
+.b-stack .edge{position:absolute;inset:0;border:1px solid rgba(255,255,255,0);transition:border-color .6s}
+.b-stack svg{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .6s}
+.b-stage.is-open .sheet{transform:rotateX(58deg) rotateZ(-28deg) translateZ(calc(var(--z) * 1px))}
+.b-stage.is-open .edge{border-color:rgba(255,255,255,.75)}
+.b-stage.is-open .sheet:not(:first-child){background:rgba(233,237,242,.16)}
+.b-stage.is-open[data-on] .sheet{opacity:.32}
+.b-stage.is-open .sheet.is-on{opacity:1}
+.b-stage.is-open .sheet.is-on svg{opacity:1}
+.hint{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.12em;color:var(--ink-2);transition:opacity .5s;pointer-events:none;white-space:nowrap}
+.hint::before{content:"";width:26px;height:26px;border:1px solid currentColor;border-radius:50%}
+.b-stage.is-open .hint,html:not(.js) .hint{opacity:0}
+
+@media (max-width:900px){
+  .d-hero{grid-template-columns:1fr;min-height:0;padding-top:100px}
+  .d-visual{order:-1}
+  .stage{min-height:0;padding:12px 0}
+  .device{--yaw:0;-webkit-box-reflect:below 3px linear-gradient(transparent 80%,rgba(255,255,255,.26))}
+  .stage{padding-bottom:30px}
+  .credit{margin-top:28px}
+  .d-next .next{grid-template-columns:1fr;gap:28px}
+  .d-next .next{gap:0}
+  .n-stage{order:-1;margin-bottom:calc((100vw - 2 * var(--gut)) * .26 + 12px)}
+  .n-board{transform:none}
+  .n-go{margin-top:24px}
+  .a-steps{grid-template-columns:1fr;gap:28px}
+  .a-hero{grid-template-columns:1fr;min-height:0;padding-top:100px}
+  .a-visual{grid-column:1;grid-row:2}
+  .device.a-talk{--yaw:0;width:min(70vw,290px)}
+  .a-step,.a-step:first-child{padding:20px 0 0;border-left:0;border-top:1px solid rgba(23,33,43,.16)}
+  .a-studio{grid-template-columns:1fr}
+  .a-flow{grid-template-columns:1fr;grid-template-areas:"h" "v" "s"}
+  .fl-visual{margin:36px 0 150px}
+  .fl-steps li{grid-template-columns:40px minmax(0,1fr);padding-left:10px}
+  .device.fl-talk{--yaw:0;width:min(70vw,290px)}
+  .a-list{grid-template-columns:1fr}
+  .cuts{grid-template-columns:repeat(3,1fr);gap:10px}
+  /* スマホの場面：板は正面、床の照り返しを残す。字は板の下 */
+  /* 板の下は映り込みが見える分（板の高さの4割ほど）空けて、字と重ねない */
+  .scene,.scene:nth-child(even){--yaw:0;grid-template-columns:1fr;gap:0;padding:44px 0}
+  .sc-stage{margin-bottom:calc((100vw - 2 * var(--gut)) * .26 + 12px)}
+  .scene:nth-child(even) .sc-stage{order:0}
+  .scene.reveal .sc-board{transform:translateY(24px)}
+  .sc-stage::before{left:-8%;right:-8%;height:90px}
+  .sc-no{font-size:40px}
+  .d-scenes{padding-bottom:40px}
+  .d-ask{padding:56px var(--gut)}
+  .d-focus{grid-template-columns:1fr;padding-top:24px;padding-bottom:72px}
+  .f-head{padding:0 0 22px}
+  .f-text,.d-col,.d-col:first-child{padding:18px 0 0;border-left:0;border-top:1px solid rgba(23,33,43,.16)}
+  .f-text+.f-text,.d-col+.d-col{margin-top:22px}
+  .f-play{right:8px;top:8px;padding:4px 11px;font-size:10.5px}
+  .f-text{font-size:15.5px;line-height:2}
+
+  .d-build{grid-template-columns:1fr;padding-bottom:88px}
+  .b-head,.b-list,.b-stage{grid-column:1;grid-row:auto}
+  /* スマホは図を固定しない：図 → 層の一覧の順に置き、説明と同じ場所を取り合わない */
+  .b-stage{aspect-ratio:1/.92;margin:12px 0 0}
+  .hint{bottom:10%}
+  .b-list{order:1}
+  .layers{margin-top:8px}
+  .b-stack .sheet{width:84%}
+  .b-stage.is-open .sheet{transform:rotateX(58deg) rotateZ(-28deg) translateZ(calc(var(--z) * .5px))}
+}
+@media (max-width:600px){
+  /* 制作意図のタブ：3つを同じ幅の1段に。英字の下に日本語 */
+  .tablist{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .tablist button{padding:12px 2px 14px;font-size:11px;letter-spacing:.12em;text-align:center}
+  .tablist button small{display:block;margin:6px 0 0}
+  .tablist button::after{left:10%;right:10%}
+  /* スマホの本文：大きく・濃く。英字の見出しは控えめのまま */
+  .d-col p:not(.eyebrow),.d-ask p:not(.eyebrow),.a-studio-body p{font-size:15.5px;color:var(--ink);line-height:2}
+  .a-hero .lead,.a-step p,.fl-steps p,.d-scenes .lead,.d-build .lead{font-size:15px;color:var(--ink)}
+  .d-meta{font-size:14px}
+  .a-flow .note{font-size:14px}
+  .fl-steps p{font-size:15px}
+  .sc-cap{font-size:16px}
+  .why p{font-size:14.5px}
+  .a-list li{font-size:15px}
+  .eyebrow{font-size:10.5px}
+}
+@media (prefers-reduced-motion:reduce){html.js .a-step{animation:none}.eg-ink{transition:none}.reveal{opacity:1;transform:none}.b-stack .sheet,.why,.sc-board,.n-board{transition:none}}
