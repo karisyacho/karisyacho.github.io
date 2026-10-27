@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>西岡ソーダ店｜触って、しゅわっ。</title>
+  <meta name="description" content="果実を押すと炭酸が弾ける、西岡ソーダ店の体験試作。すだちと夏みかんの光・味・香りの違いを楽しめます。">
+  <meta name="theme-color" content="#e7f4ee">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="experience.js"></script>
+</head>
+<body>
+<main>
+  <section class="hero" id="experience" data-flavor="sudachi" aria-labelledby="hero-title">
+    <picture class="scene">
+      <source id="scene-phone" media="(max-width:700px)" srcset="assets/sudachi-phone.webp">
+      <img id="scene-image" src="assets/sudachi.webp" alt="光と水の中で、すだちソーダの瓶と緑の果実が弾ける写真表現" fetchpriority="high" width="1536" height="1024">
+    </picture>
+    <canvas id="water-canvas" aria-hidden="true"></canvas>
+    <canvas id="burst-canvas" aria-hidden="true"></canvas>
+    <header class="head">
+      <span class="logo">西岡ソーダ店</span>
+      <span class="head-origin">TOKUSHIMA<br>CITRUS SODA</span>
+      <span class="capacity"><span id="capacity-flavor">SUDACHI</span> <i aria-hidden="true">/</i> 250 ml</span>
+    </header>
+    <div class="copy">
+      <p class="edition">徳島の柑橘でつくる、クラフトソーダ。</p>
+      <h1 id="hero-title"><span id="flavor-title">すだち、</span><span class="pop" aria-label="しゅわっ。"><span aria-hidden="true">し</span><span aria-hidden="true">ゅ</span><span aria-hidden="true">わ</span><span aria-hidden="true">っ</span><span aria-hidden="true">。</span></span></h1>
+      <p class="description" id="flavor-description">皮の香りと、すっきりした酸味。<br>ひと口めから、すだちです。</p>
+    </div>
+    <button class="fruit-press" id="fruit-press" type="button" aria-label="すだちを押して炭酸をはじけさせる" aria-describedby="fruit-hint" disabled><span class="press-cross" aria-hidden="true"></span><span class="press-line" aria-hidden="true"></span><span class="press-label" id="fruit-hint">果実をひと押し</span></button>
+    <div class="flavor-dock">
+      <div class="flavor-picker" role="group" aria-label="味を選ぶ">
+        <button class="flavor-button" type="button" data-flavor="sudachi" aria-pressed="true" disabled><span class="flavor-dot sudachi-dot" aria-hidden="true"></span><span>すだち</span><span class="selected-mark" aria-hidden="true">✓</span></button>
+        <button class="flavor-button" type="button" data-flavor="natsumikan" aria-pressed="false" disabled><span class="flavor-dot natsu-dot" aria-hidden="true"></span><span>夏みかん</span><span class="selected-mark" aria-hidden="true">✓</span></button>
+      </div>
+      <button id="motion-toggle" type="button" class="motion-toggle" aria-pressed="false">動きを止める</button>
+    </div>
+    <p id="experience-status" class="sr-only" role="status" aria-live="polite">すだち味を表示しています。</p>
+  </section>
+  <section class="review" id="review" aria-labelledby="review-title">
+    <p class="review-kicker">冒頭の体験試作 / 2026.10.27</p>
+    <h2 id="review-title">果実を押す。<br>香りが、ひらく。</h2>
+    <p>写真の中の果実を押すと、触れた場所から水の揺らぎと泡が広がります。「すだち」「夏みかん」を選ぶと、果実・ラベル・光も切り替わります。</p>
+    <p>スマホはタップ、PCはクリックで触れます。キーボードでも味を選べます。端末の動きを減らす設定では、静止画で切り替わります。「動きを止める」でも静止表示に切り替えられます。</p>
+    <p class="scope">今回は2つの味と冒頭の仕掛けを確認する試作です。冒頭より下の内容や購入機能は、まだ作っていません。</p>
+    <a href="https://karisyacho.github.io/nishioka-soda-light-20261027/">前の静止画案を見る <span aria-hidden="true">↗</span></a>
+    <p class="fiction">自主制作の架空ブランドです。商品は販売していません。</p>
+    <noscript><p>この試作で味を切り替えるにはJavaScriptを有効にしてください。現在はすだち味の静止画を表示しています。</p></noscript>
+  </section>
+</main>
+</body>
+</html>
