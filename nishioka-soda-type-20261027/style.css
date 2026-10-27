@@ -1,5 +1,6 @@
-@font-face{font-family:ClearJP;src:url('assets/curve-kaku-500.woff2') format('woff2');font-weight:500;font-display:swap}
-@font-face{font-family:ClearJP;src:url('assets/curve-kaku-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:ClearJP;src:url('assets/burst-kaku-500.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:ClearJP;src:url('assets/burst-kaku-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:BurstJP;src:url('assets/burst-black.woff2') format('woff2');font-weight:900;font-display:swap}
 :root{color-scheme:light;--ink:#174339;--paper:#eff7f2;--line:#b8d1c7}
 *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-family:ClearJP,'Yu Gothic',sans-serif;font-weight:500;-webkit-font-smoothing:antialiased}a{color:inherit;text-underline-offset:5px}a:focus-visible{outline:2px solid var(--ink);outline-offset:6px}
 .hero{height:100svh;min-height:850px;max-height:1080px;position:relative;isolation:isolate;overflow:hidden;background:#e9f7f2}
@@ -11,7 +12,9 @@
 .brand-mark{width:28px;height:28px;transform:rotate(12deg)}.logo{font-size:19px;font-weight:700;letter-spacing:.04em}
 .fruit-frame{position:absolute;left:42%;top:53%;width:min(59vw,820px);aspect-ratio:1;transform:translate(-50%,-50%)}
 .citrus-art{z-index:1}.fruit-frame>svg{display:block;width:100%;height:100%;overflow:visible}
-.orbit-title{margin:0;z-index:4;pointer-events:none}.arc-copy{font-family:ClearJP,sans-serif;font-weight:700;font-size:65px;letter-spacing:3px;fill:#123c31}
+.orbit-title{margin:0;z-index:4;pointer-events:none;left:43%;top:51%}
+.orbit-title text{font-family:BurstJP,sans-serif;font-weight:900;fill:#123c31;font-synthesis:none}
+.burst-prefix{font-size:59px;letter-spacing:1px}.burst-bang{letter-spacing:-7px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .splash-wrap{position:absolute;left:48%;top:72%;width:min(69vw,980px);aspect-ratio:4/3;transform:translate(-50%,-50%);z-index:2;pointer-events:none}
 .splash{display:block;width:100%;height:100%;object-fit:contain}
@@ -25,9 +28,11 @@
  .hero{min-height:830px;max-height:1030px;height:100svh}
  .head{height:94px;padding:0 24px;justify-content:center}.origin,.capacity{display:none}.brand{gap:9px}.brand-mark{width:25px;height:25px}.logo{font-size:18px;letter-spacing:.04em}
  .fruit-frame{left:45%;top:45%;width:106%;max-width:490px}
- .arc-copy{font-size:65px;letter-spacing:3px}
+ .orbit-title{left:50%;top:45%;width:100%;max-width:462px}
  .splash-wrap{left:56%;top:68%;width:146%;max-width:680px}
  .bottle-wrap{left:58%;top:59%;height:49%;transform:translate(-50%,-50%) rotate(10deg)}
  .flavor{left:25px;bottom:28px}.flavor-name{font-size:17px;margin-bottom:5px}.flavor-meta{font-size:12px;letter-spacing:.02em}.back{right:25px;bottom:28px;font-size:12px}.back>span{margin-left:8px}
  .review{padding-top:42px}.review>p{font-size:16px}h2{font-size:21px}
 }
+
+
