@@ -181,3 +181,4 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
 .mood-choices button[aria-pressed=false] strong{filter:opacity(.5) drop-shadow(.045em 0 0 var(--rim)) drop-shadow(-.045em 0 0 var(--rim)) drop-shadow(0 .045em 0 var(--rim)) drop-shadow(0 -.045em 0 var(--rim))}
 @media(max-width:700px){.preview-expand{top:auto;bottom:-16px;right:-10px}}
 @media(max-width:1100px) and (min-width:701px){.origin{max-width:none;white-space:nowrap}}
+@media(max-width:700px){.preview-caption{margin-top:44px}}
