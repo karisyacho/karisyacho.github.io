@@ -1,4 +1,4 @@
-import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.js';
+import { wordGlyphs, pourWordMarkup } from './award-card-v1.js';
 
 (() => {
   'use strict';
@@ -11,19 +11,17 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
   const ctx = canvas?.getContext('2d');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const animations = new Set();
-  const state = { part: 'peel', flavor: 'sudachi', gesture: { spread: .5, tilt: 0 }, sample: { u: .35, v: .90 } };
+  const state = { part: 'peel', gesture: { spread: .5, tilt: 0 }, sample: { u: .35, v: .90 } };
   let flightId = 0, flightNode = null, flightAnimation = null;
   const gestures = { peel: { spread: .5, tilt: 0 }, juice: { spread: .5, tilt: 0 } };
   let previewGesture = null, lastCommitGesture = { spread: .5, tilt: 0 };
-  const card = createNoteRenderer({ canvas: document.querySelector('#note-canvas'), button: document.querySelector('#save-note'), status: document.querySelector('#save-status') });
-  let selectedImage = null, cardStarted = false, cardApproaching = false, cardObserver = null, cardPending = false;
   let raf = 0, generation = 0, manualPause = false, burstCount = 0;
-  let lastBurst = -Infinity, flavorRequest = 0, departed = false;
+  let lastBurst = -Infinity, departed = false;
   let particles = [], width = 0, height = 0;
   const allowed = () => !reduced.matches && !manualPause && !document.hidden && !departed;
   const announce = text => { if (status) status.textContent = text; };
   // build.mjs fills PHRASES with BudouX breaks so dynamic Japanese wraps by phrase.
-  const PHRASES = {"動きを減らす設定中":["動きを","減らす","設定中"],"泡と文字の動きを再開する":["泡と","文字の","動きを","再開する"],"泡と文字の動きを止める":["泡と","文字の","動きを","止める"],"光と水の中のすだちソーダ":["光と","水の","中の","すだちソーダ"],"すっきり、青い香り。":["すっきり、","青い","香り。"],"きゅっとした酸味と、すだちの青い香り。気分を切り替えたい午後に。":["きゅっとした","酸味と、","すだちの","青い","香り。","気分を","切り替えたい","午後に。"],"青く、さわやか":["青く、","さわやか"],"きゅっとした酸味":["きゅっとした","酸味"],"すっきり、軽やか":["すっきり、","軽やか"],"光と水の中の夏みかんソーダ":["光と","水の","中の","夏みかん","ソーダ"],"ほろ苦く、ひと休み。":["ほろ","苦く、","ひと休み。"],"夏みかんのほのかな苦みと、やわらかな甘酸っぱさ。ゆっくりしたい午後に。":["夏みかんの","ほのかな","苦みと、","やわらかな","甘酸っぱさ。","ゆっくりしたい","午後に。"],"明るい柑橘の香り":["明る","い","柑橘の","香り"],"ほのかな苦みと甘酸っぱさ":["ほのかな","苦みと","甘酸っぱさ"],"やわらかな余韻":["や","わらかな","余韻"],"「ふわっ」は、皮の香り。":["「ふわっ」は、","皮の","香り。"],"皮は、すりおろして薬味にも。鼻に抜ける青い香りが「ふわっ」。":["皮は、","すり","おろして","薬味にも。","鼻に","抜ける","青い","香りが","「ふわっ」。"],"果皮のクローズアップ":["果皮の","クローズアップ"],"PEEL / 香りを楽しむ":["PEEL / 香りを","楽しむ"],"「きゅっ」は、果汁の酸味。":["「きゅっ」は、","果汁の","酸味。"],"果汁は、焼き魚や鍋にしぼって。舌に残る酸味が「きゅっ」。":["果汁は、","焼き魚や","鍋に","しぼって。","舌に","残る","酸味が","「きゅっ」。"],"果汁を含む果肉のクローズアップ":["果汁を","含む","果肉の","クローズアップ"],"JUICE / 酸味を楽しむ":["JUICE / 酸味を","楽しむ"],"画像を読み込めませんでした。もう一度お試しください。":["画像を","読み込めませんでした。","もう","一度","お試しください。"],"じゅわっ":["じ","ゅわっ"],"甘酸っぱさ派":["甘","酸っぱさ派"],"夏みかんは、皮のほろ苦さと果肉の甘酸っぱさ。":["夏みかんは、","皮の","ほろ苦さと","果肉の","甘酸っぱさ。"],"すだちは、皮の香りと果汁の酸味。":["すだちは、","皮の","香りと","果汁の","酸味。"],"夏みかんソーダ":["夏みかん","ソーダ"],"皮の青い香りを、泡でひらく。":["皮の","青い","香りを、","泡で","ひらく。"],"果汁の酸味を、泡できりっと。":["果汁の","酸味を、","泡できりっと。"],"その香りを、一杯で味わう":["その","香りを、","一杯で","味わう"],"その酸味を、一杯で味わう":["その","酸味を、","一杯で","味わう"],"画像を読み込めませんでした。現在のカードはそのまま保存できます。":["画像を","読み込めませんでした。","現在の","カードは","そのまま","保存できます。"],"泡がはじけました。":["泡が","はじけました。"],"次は、皮と果汁の違いへ。":["次は、","皮と","果汁の","違いへ。"]};
+  const PHRASES = {"動きを減らす設定中":["動きを","減らす","設定中"],"泡と文字の動きを再開する":["泡と","文字の","動きを","再開する"],"泡と文字の動きを止める":["泡と","文字の","動きを","止める"],"「ふわっ」は、皮の香り。":["「ふわっ」は、","皮の","香り。"],"皮は、すりおろして薬味にも。鼻に抜ける青い香りが「ふわっ」。":["皮は、","すり","おろして","薬味にも。","鼻に","抜ける","青い","香りが","「ふわっ」。"],"果皮のクローズアップ":["果皮の","クローズアップ"],"PEEL / 香りを楽しむ":["PEEL / 香りを","楽しむ"],"「きゅっ」は、果汁の酸味。":["「きゅっ」は、","果汁の","酸味。"],"果汁は、焼き魚や鍋にしぼって。舌に残る酸味が「きゅっ」。":["果汁は、","焼き魚や","鍋に","しぼって。","舌に","残る","酸味が","「きゅっ」。"],"果汁を含む果肉のクローズアップ":["果汁を","含む","果肉の","クローズアップ"],"JUICE / 酸味を楽しむ":["JUICE / 酸味を","楽しむ"],"果汁の酸味、きゅっ":["果汁の","酸味、","きゅっ"],"皮の香り、ふわっ":["皮の","香り、","ふわっ"],"皮の青い香りを、泡でひらく。":["皮の","青い","香りを、","泡で","ひらく。"],"果汁の酸味を、泡できりっと。":["果汁の","酸味を、","泡できりっと。"],"その香りを、一杯で味わう":["その","香りを、","一杯で","味わう"],"その酸味を、一杯で味わう":["その","酸味を、","一杯で","味わう"],"泡がはじけました。":["泡が","はじけました。"],"次は、皮と果汁の違いへ。":["次は、","皮と","果汁の","違いへ。"]};
   const phrased = (element, text) => {
     const parts = PHRASES[text];
     if (!parts) { element.textContent = text; return; }
@@ -151,45 +149,10 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
     });
     bubbles(power);
   }
-  const flavors = {
-    sudachi: { image: 'assets/taste-sudachi-v1.webp', alt: '光と水の中のすだちソーダ', title: 'すっきり、青い香り。', description: 'きゅっとした酸味と、すだちの青い香り。気分を切り替えたい午後に。', aroma: '青く、さわやか', taste: 'きゅっとした酸味', finish: 'すっきり、軽やか' },
-    natsumikan: { image: 'assets/taste-natsu-v1.webp', alt: '光と水の中の夏みかんソーダ', title: 'ほろ苦く、ひと休み。', description: '夏みかんのほのかな苦みと、やわらかな甘酸っぱさ。ゆっくりしたい午後に。', aroma: '明るい柑橘の香り', taste: 'ほのかな苦みと甘酸っぱさ', finish: 'やわらかな余韻' },
-  };
-  const loaded = new Map();
-  function loadFlavor(key) {
-    if (!loaded.has(key)) loaded.set(key, new Promise((resolve, reject) => {
-      const image = new Image();
-      image.onload = async () => {
-        try { await image.decode(); resolve(image); }
-        catch (error) { loaded.delete(key); reject(error); }
-      };
-      image.onerror = () => { loaded.delete(key); reject(new Error('image')); };
-      image.src = flavors[key].image;
-    }));
-    return loaded.get(key);
-  }
   const parts = {
     peel: { word: 'ふわっ', title: '「ふわっ」は、皮の香り。', description: '皮は、すりおろして薬味にも。鼻に抜ける青い香りが「ふわっ」。', detail: '果皮のクローズアップ', stage: 'PEEL / 香りを楽しむ' },
     juice: { word: 'きゅっ', title: '「きゅっ」は、果汁の酸味。', description: '果汁は、焼き魚や鍋にしぼって。舌に残る酸味が「きゅっ」。', detail: '果汁を含む果肉のクローズアップ', stage: 'JUICE / 酸味を楽しむ' },
   };
-  function drawCard() {
-    if (!cardStarted || !selectedImage) return;
-    if (document.hidden) { cardPending = true; return; }
-    cardPending = false;
-    card.render({ ...state, gesture: { ...state.gesture }, sample: { ...state.sample }, image: selectedImage }).catch(() => {});
-  }
-  function startCard() {
-    if (cardStarted || document.hidden) return;
-    cardStarted = true; cardObserver?.disconnect();
-    const key = state.flavor;
-    loadFlavor(key).then(image => {
-      if (selectedImage || state.flavor !== key) return;
-      selectedImage = image; drawCard();
-    }).catch(() => {
-      const saveStatus = document.querySelector('#save-status');
-      if (saveStatus && !selectedImage) saveStatus.textContent = '画像を読み込めませんでした。もう一度お試しください。';
-    });
-  }
   const lab = document.querySelector('#lab-fruit');
   const lens = document.querySelector('#aroma .detail-lens');
   const defaults = { peel: { u: .35, v: .90 }, juice: { u: .70, v: .68 } };
@@ -267,7 +230,7 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
     }
     word.setAttribute('aria-label', parts[state.part].word);
     word.style.transform = `rotate(${gesture.tilt}deg)`;
-    // 「大きさで弾む」: the same layout as the saved card (card.js wordGlyphs).
+    // 「大きさで弾む」: the same layout as the pour heading (card.js wordGlyphs).
     const shape = wordGlyphs(parts[state.part].word, state.part, gesture.spread);
     const echo = word.closest('.part-echo'), bang = echo?.querySelector('.part-echo-bang');
     if (echo) { echo.style.width = `${shape.width.toFixed(3)}em`; echo.style.height = `${shape.height.toFixed(3)}em`; }
@@ -285,7 +248,7 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
     root.dataset.gesture = JSON.stringify(state.gesture);
     root.dataset.lastCommitGesture = JSON.stringify(lastCommitGesture);
     samples[state.part] = { ...state.sample };
-    renderWord(); drawCard();
+    renderWord();
     publishComposition();
   }
   ['shape-spread', 'shape-tilt'].forEach(id => {
@@ -302,19 +265,7 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
       commitGesture(gesture); explored(event);
     });
   });
-  function syncStudioMood() {
-    const natsu = state.flavor === 'natsumikan';
-    const meanings = natsu ? { peel: ['ほろっ', 'ほろ苦さ派'], juice: ['じゅわっ', '甘酸っぱさ派'] } : { peel: ['ふわっ', '香り派'], juice: ['きゅっ', '酸味派'] };
-    document.querySelectorAll('#tasting [data-part-choice]').forEach(button => {
-      const copy = meanings[button.dataset.partChoice]; if (!copy) return;
-      const strong = button.querySelector('strong'), subtitle = button.querySelector('span');
-      if (strong) strong.textContent = copy[0];
-      if (subtitle) subtitle.textContent = copy[1];
-    });
-    const meaning = document.querySelector('#flavor-meaning');
-    if (meaning) phrased(meaning, natsu ? '夏みかんは、皮のほろ苦さと果肉の甘酸っぱさ。' : 'すだちは、皮の香りと果汁の酸味。');
-    return `${natsu ? '夏みかんソーダ' : 'すだちソーダ'}、${meanings[state.part].join('、')}`;
-  }
+  const partLabel = () => state.part === 'juice' ? '果汁の酸味、きゅっ' : '皮の香り、ふわっ';
   function selectPart(part, pointer = false, point = samples[part], commit = true) {
     const data = parts[part];
     if (!data) return;
@@ -323,9 +274,8 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
     state.sample = { u: point.u, v: point.v };
     state.gesture = { ...gestures[part] }; previewGesture = null;
     root.dataset.part = part;
-    const aroma = document.querySelector('#aroma'), tasting = document.querySelector('#tasting');
+    const aroma = document.querySelector('#aroma');
     if (aroma) aroma.dataset.part = part;
-    if (tasting) tasting.dataset.part = part;
     document.querySelectorAll('[data-part-choice]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.partChoice === part)));
     const values = { 'part-title': data.title, 'part-description': data.description, 'part-detail-label': data.detail, 'part-stage-note': data.stage };
     Object.entries(values).forEach(([id, value]) => {
@@ -355,8 +305,8 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
       { transform: 'scale(1)' }, { transform: 'scale(.975)', offset: .22 },
       { transform: 'scale(1.018)', offset: .55 }, { transform: 'scale(1)' },
     ], { duration: 300, easing: 'cubic-bezier(.16,.7,.25,1)' }));
-    if (commit) { samples[part] = { ...state.sample }; lastCommitGesture = { ...state.gesture }; root.dataset.lastCommitGesture = JSON.stringify(lastCommitGesture); drawCard(); publishComposition(); }
-    announce(`${syncStudioMood()}を選びました。`);
+    if (commit) { samples[part] = { ...state.sample }; lastCommitGesture = { ...state.gesture }; root.dataset.lastCommitGesture = JSON.stringify(lastCommitGesture); publishComposition(); }
+    announce(`${partLabel()}を選びました。`);
   }
   document.querySelectorAll('[data-part-choice]').forEach(button => {
     button.disabled = false;
@@ -433,43 +383,6 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
   document.addEventListener('visibilitychange', () => { if (document.hidden) cancelDrag(); });
   if (typeof ResizeObserver === 'function' && lens && lab) { const observer = new ResizeObserver(updateLink); observer.observe(lens); observer.observe(lab); }
   selectPart('peel', false, defaults.peel, false);
-  document.querySelectorAll('[data-flavor-choice]').forEach(button => {
-    button.disabled = false;
-    button.addEventListener('click', async event => {
-      if (document.hidden) return;
-      const key = button.dataset.flavorChoice, data = flavors[key];
-      if (!data) return;
-      cardStarted = true; cardObserver?.disconnect();
-      const request = ++flavorRequest;
-      try {
-        const image = await loadFlavor(key);
-        if (request !== flavorRequest) return;
-        state.flavor = key;
-        clearFlight();
-        selectedImage = image;
-        document.querySelectorAll('[data-flavor-choice]').forEach(choice => choice.setAttribute('aria-pressed', String(choice.dataset.flavorChoice === key)));
-        const tasting = document.querySelector('#tasting');
-        if (tasting) tasting.dataset.flavor = key;
-        if (tasting) tasting.dataset.part = state.part;
-        const title = document.querySelector('#taste-title'), description = document.querySelector('#taste-description');
-        if (title) phrased(title, data.title);
-        if (description) phrased(description, data.description);
-        ['aroma', 'taste', 'finish'].forEach(note => {
-          const node = document.querySelector(`#taste-notes [data-note="${note}"]`);
-          if (node) node.textContent = data[note];
-        });
-        drawCard();
-        publishComposition();
-        announce(`${syncStudioMood()}を選びました。`);
-      } catch {
-        if (request === flavorRequest) {
-          announce('画像を読み込めませんでした。もう一度お試しください。');
-          const saveStatus = document.querySelector('#save-status');
-          if (saveStatus) saveStatus.textContent = '画像を読み込めませんでした。現在のカードはそのまま保存できます。';
-        }
-      }
-    });
-  });
   if (fruit) {
     fruit.disabled = false;
     fruit.addEventListener('click', event => {
@@ -493,24 +406,11 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.
   if (hero) hero.dataset.burstCount = '0';
   root.dataset.ready = 'true';
   const stateSnapshot = () => Object.freeze({ ...state, sample: Object.freeze({ ...state.sample }), gesture: Object.freeze({ ...state.gesture }), lastCommitGesture: Object.freeze({ ...lastCommitGesture }), previewGesture: previewGesture ? Object.freeze({ ...previewGesture }) : null });
-  window.__nishiokaMotion = Object.freeze({ snapshot: () => Object.freeze({ activeAnimations: animations.size, raf: Boolean(raf), particles: particles.length, burstCount, motion: root.dataset.motion, ...stateSnapshot(), cardStarted, cardReady: card.snapshot().ready, rendering: card.snapshot().rendering }) });
+  window.__nishiokaMotion = Object.freeze({ snapshot: () => Object.freeze({ activeAnimations: animations.size, raf: Boolean(raf), particles: particles.length, burstCount, motion: root.dataset.motion, ...stateSnapshot() }) });
   Object.defineProperty(window, '__nishiokaState', { configurable: true, get: stateSnapshot });
   root.dataset.part = state.part;
   root.dataset.explored = 'false';
   root.dataset.lastCommitGesture = JSON.stringify(lastCommitGesture);
-  const maker = document.querySelector('#tasting');
-  if (typeof IntersectionObserver === 'function' && maker) {
-    cardObserver = new IntersectionObserver(entries => {
-      cardApproaching = entries.some(entry => entry.isIntersecting);
-      if (cardApproaching) startCard();
-    }, { rootMargin: '700px' });
-    cardObserver.observe(maker);
-  } else { cardApproaching = true; startCard(); }
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) return;
-    if (cardApproaching) startCard();
-    if (cardPending) drawCard();
-  });
   const readiness = [document.fonts?.ready, ...Array.from(hero?.querySelectorAll('img') || [], image => image.decode?.().catch(() => {}))];
   const initialGeneration = generation;
   Promise.allSettled(readiness).then(() => {

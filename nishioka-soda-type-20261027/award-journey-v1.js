@@ -1,12 +1,11 @@
-// One scroll-driven word, shared by the lab, glass and saved card.
+// One scroll-driven word, carried from the lab into the glass.
 (() => {
   'use strict';
   const root = document.documentElement;
   const source = document.querySelector('#aroma .part-echo');
   const pour = document.querySelector('#pour-word');
   const svg = document.querySelector('#pour-title svg');
-  const canvas = document.querySelector('#note-canvas');
-  if (!source || !pour || !svg || !canvas) return;
+  if (!source || !pour || !svg) return;
 
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const actor = document.createElement('div');
@@ -33,8 +32,6 @@
       else element.style.removeProperty('opacity');
     });
     owned.clear();
-    const mask = document.querySelector('#note-word-mask');
-    if (mask) { mask.hidden = true; mask.style.removeProperty('opacity'); }
   }
   function staticView() {
     restore();
@@ -86,25 +83,17 @@
     const distance = b.y - a.y;
     return distance > 1 ? (scrollY - (a.y - innerHeight * .35)) / distance : -1;
   }
-  function cardReady() {
-    try { return window.__nishiokaMotion?.snapshot?.().cardReady === true && !canvas.hidden; }
-    catch { return false; }
-  }
   function draw() {
     frame = 0;
     if (frozen || reduced.matches || root.dataset.explored !== 'true' || root.dataset.motion !== 'active' || root.dataset.keyboard === 'true' || document.hidden || (window.visualViewport?.scale || 1) > 1.01) { staticView(); return; }
-    const labRect = paintedRect(source), glassRect = pour.getBoundingClientRect(), cardRect = canvas.getBoundingClientRect();
+    const labRect = paintedRect(source), glassRect = pour.getBoundingClientRect();
     if (!labRect.width || !glassRect.width) { staticView(); return; }
     const lab = center(labRect), glass = center(glassRect);
-    const note = { x: cardRect.left + cardRect.width * .5, y: cardRect.top + cardRect.height * .4 + scrollY };
-    const first = interval(lab, glass), second = interval(glass, note);
+    const first = interval(lab, glass);
     let t, from, to, startWidth, endWidth;
     if (first > 0 && first < 1) {
       phase = 'lab-to-glass'; t = first; from = lab; to = glass;
       startWidth = labRect.width; endWidth = glassRect.width;
-    } else if (second > 0 && second < 1 && cardRect.width && cardReady() && document.querySelector('#note-word-mask')) {
-      phase = 'glass-to-note'; t = second; from = glass; to = note;
-      startWidth = glassRect.width; endWidth = cardRect.width / 1080 * 850;
     } else { staticView(); return; }
     restore();
     if (cloneDirty) rebuild();
@@ -113,23 +102,13 @@
     const x = t < .2 ? lerp(from.x, laneX, enter) : t > .8 ? lerp(laneX, to.x, leave) : laneX;
     const y = t < .2 ? lerp(from.y - scrollY, laneY, enter) : t > .8 ? lerp(laneY, to.y - scrollY, leave) : laneY;
     const width = t < .2 ? lerp(startWidth, 92, enter) : t > .8 ? lerp(92, endWidth, leave) : 92;
-    const part = root.dataset.part || document.querySelector('#tasting')?.dataset.part || 'peel';
-    if (phase === 'lab-to-glass') {
-      opacity(source, 1 - enter);
-      opacity(svg, leave);
-    } else {
-      opacity(svg, 1 - enter);
-      const mask = document.querySelector('#note-word-mask');
-      const flavor = root.dataset.flavor || document.querySelector('#tasting')?.dataset.flavor || 'sudachi';
-      const natsu = flavor === 'natsumikan' || flavor === 'natsu';
-      mask.style.backgroundColor = part === 'juice' ? (natsu ? '#3c271c' : '#0f382b') : (natsu ? '#fff0d8' : '#f2f0dc');
-      mask.hidden = false;
-      set(mask, 'opacity', String(1 - leave));
-    }
+    const part = root.dataset.part || 'peel';
+    opacity(source, 1 - enter);
+    opacity(svg, leave);
     const pourRect = document.querySelector('#pour')?.getBoundingClientRect();
     const aromaRect = document.querySelector('#aroma')?.getBoundingClientRect();
     const contains = rect => rect && x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
-    const white = contains(pourRect) || (part === 'juice' && (contains(aromaRect) || contains(cardRect)));
+    const white = contains(pourRect) || (part === 'juice' && contains(aromaRect));
     const neutral = enter * (1 - leave);
     const ink = white ? `rgba(245, 248, 231, ${neutral})` : `rgba(18, 60, 49, ${neutral})`;
     glyphs.forEach(({ element, fill, color, filter, brightness, saturate }) => {
@@ -138,7 +117,7 @@
       set(element, 'filter', neutral > 0 ? `brightness(${lerp(brightness, 1, neutral)}) saturate(${lerp(saturate, 1, neutral)})` : filter);
     });
     const scale = clamp(width / baseWidth, .2, 1.5);
-    const angle = phase === 'lab-to-glass' ? lerp(sourceAngle, -10, t) : lerp(-10, sourceAngle, t);
+    const angle = lerp(sourceAngle, -10, t);
     Object.assign(actor.style, { display: 'block', willChange: 'transform, opacity', filter: white ? 'drop-shadow(0 1px 1px rgba(12,40,30,.25))' : 'none', opacity: String(enter * (1 - leave)), transform: `translate(${x}px, ${y}px) translate(-50%, -50%) scale(${scale}) rotate(${angle}deg)` });
     active = true; progress = t;
   }
@@ -159,7 +138,7 @@
   addEventListener('pagehide', () => { frozen = true; if (frame) cancelAnimationFrame(frame); frame = 0; staticView(); });
   addEventListener('pageshow', () => { frozen = false; cloneDirty = true; dirty(); });
   reduced.addEventListener('change', dirty);
-  new MutationObserver(() => { cloneDirty = true; dirty(); }).observe(root, { attributes: true, attributeFilter: ['data-motion', 'data-explored', 'data-keyboard', 'data-part', 'data-flavor'] });
+  new MutationObserver(() => { cloneDirty = true; dirty(); }).observe(root, { attributes: true, attributeFilter: ['data-motion', 'data-explored', 'data-keyboard', 'data-part'] });
   new MutationObserver(records => {
     if (records.some(record => record.target !== source || record.type !== 'attributes' || record.attributeName !== 'style')) { cloneDirty = true; dirty(); }
   }).observe(source, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ['style', 'class'] });
