@@ -132,7 +132,7 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
 .shop-qty small{font-size:12px;opacity:.75;letter-spacing:0}
 .shop-choice label{position:relative;cursor:pointer}
 .shop-choice input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
-.shop-choice span{display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:52px;padding:8px 16px;border:1.5px solid color-mix(in srgb,var(--ink) 30%,transparent);border-radius:12px;font-weight:700;font-size:16px;line-height:1.4;transition:background-color .2s,color .2s}
+.shop-choice input+span{display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:52px;padding:8px 16px;border:1.5px solid color-mix(in srgb,var(--ink) 30%,transparent);border-radius:12px;font-weight:700;font-size:16px;line-height:1.4;transition:background-color .2s,color .2s}
 .shop-choice small{font-weight:500;font-size:13px;opacity:.85}
 .shop-choice input:checked+span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .shop-choice input:focus-visible+span{outline:2px solid var(--ink);outline-offset:3px}
@@ -174,7 +174,7 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
  .shop-form,.shop-confirm{padding:26px 20px;gap:20px}
  .shop-total output{font-size:34px}
 }
-@media(prefers-reduced-motion:reduce){.flavor-pick button,.shop-choice span,.flavor-photo,.bottle-pick{transition:none}}
+@media(prefers-reduced-motion:reduce){.flavor-pick button,.shop-choice input+span,.flavor-photo,.bottle-pick{transition:none}}
 
 /* round11 「つながり」: one background from the light top to the dark shop, the same chapter header on every chapter,
    the same bottle carried through, and bubbles rising across the chapter lines (behind text and photos). */
@@ -219,3 +219,8 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
  .pour-howto{font-size:15px}
 }
 @media(prefers-reduced-motion:reduce){.crate-slot img{transition:none}}
+/* round12 self-check: the quantity hint keeps its gap after budoux wraps the label; the crate fills its column so the
+   chosen bottles read at the size of the form; the hero hint to chapter 2 stays on one line on phones. */
+.shop-qty small{margin-left:10px}
+@media(min-width:701px){.shop-crate{max-width:600px}.shop-form,.shop-confirm{align-self:start;margin-top:40px}}
+@media(min-width:361px) and (max-width:700px){.back{white-space:nowrap}}

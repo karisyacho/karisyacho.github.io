@@ -148,6 +148,10 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
   }
   // Chapter 2: one flavour at a time; the shop below follows the same choice.
   const flavorSection = document.querySelector('#flavor'), shop = document.querySelector('#shop'), form = document.querySelector('#shop-form');
+  const POUR = {
+    sudachi: { pc: 'assets/pour-light-v1.webp', phone: 'assets/pour-light-phone-v1.webp', alt: '光る浅い水面の上で、すだちソーダの瓶から氷の入ったグラスへ注いでいるイメージ' },
+    natsumikan: { pc: 'assets/pour-natsu-v1.webp', phone: 'assets/pour-natsu-phone-v1.webp', alt: '光る浅い水面の上で、夏みかんソーダの瓶から氷の入ったグラスへ注ぎ、横に夏みかんの皮を添えたイメージ' },
+  };
   const howto = { sudachi: '氷を入れたグラスに注いで、薄切りのすだちを一枚。', natsumikan: '氷を入れたグラスに注いで、夏みかんの皮をひとかけ。' };
   function selectFlavor(flavor, pointer = false) {
     const data = FLAVORS[flavor];
@@ -166,6 +170,15 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
     if (say) phrased(say, data.say);
     if (pair) pair.textContent = data.pair;
     if (pour) phrased(pour, howto[flavor]);
+    // Chapter 3 pours the bottle that was chosen, with the garnish the how-to line names.
+    const pourPhoto = document.querySelector('.pour-photo'), pourSet = POUR[flavor];
+    if (pourPhoto && pourPhoto.dataset.flavor !== flavor) {
+      pourPhoto.dataset.flavor = flavor;
+      pourPhoto.querySelector('source').srcset = pourSet.phone;
+      const img = pourPhoto.querySelector('img');
+      img.src = pourSet.pc;
+      img.alt = pourSet.alt;
+    }
     document.querySelectorAll('.chap-flavor').forEach(node => { node.textContent = data.name; });
     const radio = form?.querySelector(`input[name="flavor"][value="${flavor}"]`);
     if (radio) radio.checked = true;

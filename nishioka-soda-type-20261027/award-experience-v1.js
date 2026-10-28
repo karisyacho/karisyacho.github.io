@@ -18,7 +18,7 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
   const allowed = () => !reduced.matches && !manualPause && !document.hidden && !departed;
   const announce = text => { if (status) status.textContent = text; };
   // build.mjs fills PHRASES with BudouX breaks so dynamic Japanese wraps by phrase.
-  const PHRASES = {"動きを減らす設定中":["動きを","減らす","設定中"],"泡と文字の動きを再開する":["泡と","文字の","動きを","再開する"],"泡と文字の動きを止める":["泡と","文字の","動きを","止める"],"氷を入れたグラスに注いで、薄切りのすだちを一枚。":["氷を","入れた","グラスに","注いで、","薄切りの","すだちを","一枚。"],"氷を入れたグラスに注いで、夏みかんの皮をひとかけ。":["氷を","入れた","グラスに","注いで、","夏みかんの","皮を","ひとかけ。"],"泡がはじけました。":["泡が","はじけました。"],"次は、2つの味をくらべる。":["次は、","2つの","味を","くらべる。"],"きりっと酸っぱく、青く香る。":["きりっと","酸っぱく、","青く","香る。"],"唐揚げ、焼き魚、お昼ごはん":["唐揚げ、","焼き魚、","お昼ごはん"],"ほろ苦く、あとから甘い。":["ほろ","苦く、","あとから","甘い。"],"午後のおやつ、ひと休み":["午後の","おやつ、","ひと休み"]};
+  const PHRASES = {"動きを減らす設定中":["動きを","減らす","設定中"],"泡と文字の動きを再開する":["泡と","文字の","動きを","再開する"],"泡と文字の動きを止める":["泡と","文字の","動きを","止める"],"光る浅い水面の上で、すだちソーダの瓶から氷の入ったグラスへ注いでいるイメージ":["光る","浅い","水面の","上で、","すだちソーダの","瓶から","氷の","入った","グラスへ","注いでいる","イメージ"],"光る浅い水面の上で、夏みかんソーダの瓶から氷の入ったグラスへ注ぎ、横に夏みかんの皮を添えたイメージ":["光る","浅い","水面の","上で、","夏みかん","ソーダの","瓶から","氷の","入った","グラスへ","注ぎ、","横に","夏みかんの","皮を","添えた","イメージ"],"氷を入れたグラスに注いで、薄切りのすだちを一枚。":["氷を","入れた","グラスに","注いで、","薄切りの","すだちを","一枚。"],"氷を入れたグラスに注いで、夏みかんの皮をひとかけ。":["氷を","入れた","グラスに","注いで、","夏みかんの","皮を","ひとかけ。"],"泡がはじけました。":["泡が","はじけました。"],"次は、2つの味をくらべる。":["次は、","2つの","味を","くらべる。"],"きりっと酸っぱく、青く香る。":["きりっと","酸っぱく、","青く","香る。"],"唐揚げ、焼き魚、お昼ごはん":["唐揚げ、","焼き魚、","お昼ごはん"],"ほろ苦く、あとから甘い。":["ほろ","苦く、","あとから","甘い。"],"午後のおやつ、ひと休み":["午後の","おやつ、","ひと休み"]};
   const phrased = (element, text) => {
     const parts = PHRASES[text];
     if (!parts) { element.textContent = text; return; }
@@ -148,6 +148,10 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
   }
   // Chapter 2: one flavour at a time; the shop below follows the same choice.
   const flavorSection = document.querySelector('#flavor'), shop = document.querySelector('#shop'), form = document.querySelector('#shop-form');
+  const POUR = {
+    sudachi: { pc: 'assets/pour-light-v1.webp', phone: 'assets/pour-light-phone-v1.webp', alt: '光る浅い水面の上で、すだちソーダの瓶から氷の入ったグラスへ注いでいるイメージ' },
+    natsumikan: { pc: 'assets/pour-natsu-v1.webp', phone: 'assets/pour-natsu-phone-v1.webp', alt: '光る浅い水面の上で、夏みかんソーダの瓶から氷の入ったグラスへ注ぎ、横に夏みかんの皮を添えたイメージ' },
+  };
   const howto = { sudachi: '氷を入れたグラスに注いで、薄切りのすだちを一枚。', natsumikan: '氷を入れたグラスに注いで、夏みかんの皮をひとかけ。' };
   function selectFlavor(flavor, pointer = false) {
     const data = FLAVORS[flavor];
@@ -166,6 +170,15 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
     if (say) phrased(say, data.say);
     if (pair) pair.textContent = data.pair;
     if (pour) phrased(pour, howto[flavor]);
+    // Chapter 3 pours the bottle that was chosen, with the garnish the how-to line names.
+    const pourPhoto = document.querySelector('.pour-photo'), pourSet = POUR[flavor];
+    if (pourPhoto && pourPhoto.dataset.flavor !== flavor) {
+      pourPhoto.dataset.flavor = flavor;
+      pourPhoto.querySelector('source').srcset = pourSet.phone;
+      const img = pourPhoto.querySelector('img');
+      img.src = pourSet.pc;
+      img.alt = pourSet.alt;
+    }
     document.querySelectorAll('.chap-flavor').forEach(node => { node.textContent = data.name; });
     const radio = form?.querySelector(`input[name="flavor"][value="${flavor}"]`);
     if (radio) radio.checked = true;
