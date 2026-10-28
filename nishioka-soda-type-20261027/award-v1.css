@@ -115,3 +115,10 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
 .ph{white-space:nowrap}
 .lab-board .part-choices button{white-space:nowrap}
 .preview-expand{top:30%}
+/* round6: colour A (fruit cross-section) + 「大きさで弾む」 */
+.orbit-title .burst-letter,.orbit-title .burst-bang{stroke:#f4f4df;stroke-width:16px;stroke-linejoin:round;paint-order:stroke}.orbit-title .burst-prefix{fill:#2e6a2c}
+.fruit-lab .part-echo{font-size:clamp(64px,6.2vw,96px);letter-spacing:0;line-height:1;top:9%;transform:translateX(-50%) rotate(-4deg)}.fruit-lab[data-part=juice] .part-echo{transform:translateX(-50%) rotate(-3deg)}
+.fruit-lab .part-echo #part-word{position:absolute;inset:0;display:block}
+.fruit-lab .part-echo .echo-char,.fruit-lab .part-echo .part-echo-bang{position:absolute;left:50%;top:50%;right:auto;margin:0;display:block;line-height:1;background-image:linear-gradient(180deg,#0f3a2ceb 0%,#2e6a2ceb 38%,#9cc83ceb 70%,#ece33ceb 100%),var(--word-material);background-size:100% 100%,520%;background-position:0 0,var(--sample-position);background-repeat:no-repeat;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:0;filter:drop-shadow(.05em 0 0 #f4f4df) drop-shadow(-.05em 0 0 #f4f4df) drop-shadow(0 .05em 0 #f4f4df) drop-shadow(0 -.05em 0 #f4f4df)}
+.fruit-lab[data-part=juice] .part-echo .echo-char,.fruit-lab[data-part=juice] .part-echo .part-echo-bang{background-image:linear-gradient(180deg,#fdfbd2f0 0%,#f3ec7af0 38%,#cfe05af0 70%,#9cc83cf0 100%),var(--word-material);filter:drop-shadow(.05em 0 0 #12382b) drop-shadow(-.05em 0 0 #12382b) drop-shadow(0 .05em 0 #12382b) drop-shadow(0 -.05em 0 #12382b)}
+@media(max-width:700px){.fruit-lab .part-echo{font-size:clamp(58px,17vw,74px);top:6%}}

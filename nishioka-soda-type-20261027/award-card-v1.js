@@ -1,3 +1,53 @@
+// 「大きさで弾む」: big first letter, small middle, oversized "!".
+// Peel lets the small letters bounce upward; juice squeezes them low and tight.
+// Units are em of the base size, centred on (0, 0); y is the glyph centre.
+export function wordGlyphs(word, part, spread = .5) {
+  const chars = [...word.replace(/[。！!]+$/, ''), '!'];
+  const peel = part === 'peel', smallKana = /[ぁぃぅぇぉゃゅょっ]/;
+  const glyphs = [];
+  chars.forEach((ch, i) => {
+    const first = i === 0, last = i === chars.length - 1, small = smallKana.test(ch);
+    const size = first ? 1.5 : last ? (peel ? 1.4 : 1.55) : small ? (peel ? .62 : .74) : .78;
+    const sx = peel || last ? 1 : .84;
+    const ink = last ? .36 : small ? .62 : .92;
+    const width = size * ink * sx, height = size * (small ? .62 : .9);
+    const middle = !first && !last, odd = (i % 2) === 1;
+    const y = peel ? (middle ? (odd ? -.48 - .28 * spread : -.04) : last ? -.36 : 0) : (middle ? .38 - .05 * spread : last ? -.28 : 0);
+    const rotation = (peel ? (first ? -6 : last ? 12 : odd ? 9 : -5) * (.6 + .8 * spread) : first ? -4 : last ? 7 : 0);
+    const gap = peel ? .1 + .22 * spread : last ? .16 : .02 - .06 * spread;
+    const x = i ? glyphs[i - 1].x + glyphs[i - 1].width / 2 + gap + width / 2 : 0;
+    glyphs.push({ ch, x, y, size, sx, rotation, width, height });
+  });
+  const left = Math.min(...glyphs.map(g => g.x - g.width / 2)), right = Math.max(...glyphs.map(g => g.x + g.width / 2));
+  const top = Math.min(...glyphs.map(g => g.y - g.height / 2)), bottom = Math.max(...glyphs.map(g => g.y + g.height / 2));
+  const cx = (left + right) / 2, cy = (top + bottom) / 2;
+  glyphs.forEach(g => { g.x -= cx; g.y -= cy; });
+  return { glyphs, width: right - left, height: bottom - top };
+}
+
+// Colour A (fruit cross-section) and its juice / natsumikan counterparts, top to bottom.
+export const WORD_COLORS = {
+  sudachi: { peel: ['#0f3a2c', '#2e6a2c', '#9cc83c', '#ece33c'], juice: ['#fdfbd2', '#f3ec7a', '#cfe05a', '#9cc83c'] },
+  natsumikan: { peel: ['#5a2408', '#a8460c', '#ec8a1e', '#ffd26a'], juice: ['#fff6dc', '#ffe0a0', '#f8b45a', '#ec8a1e'] }
+};
+const STOPS = [0, .38, .7, 1];
+export function cssWordGradient(flavor, part, alpha = '') {
+  return `linear-gradient(180deg, ${WORD_COLORS[flavor][part].map((c, i) => `${c}${alpha} ${STOPS[i] * 100}%`).join(', ')})`;
+}
+
+// SVG <text> run of wordGlyphs, used by the pour heading (built and live).
+export function svgWord(word, part, { cx, cy, maxWidth, maxHeight, fill, rim, spread = .5 }) {
+  const shape = wordGlyphs(word, part, spread), base = Math.min(maxWidth / shape.width, maxHeight / shape.height);
+  return shape.glyphs.map(g => {
+    const x = (cx + g.x * base).toFixed(1), y = (cy + g.y * base).toFixed(1), size = (g.size * base).toFixed(1);
+    return `<text x="0" y="0" transform="translate(${x} ${y}) rotate(${g.rotation.toFixed(1)}) skewX(-8) scale(${g.sx} 1)" text-anchor="middle" dominant-baseline="central" style="font-size:${size}px;letter-spacing:0;fill:${fill};stroke:${rim};stroke-width:${Math.max(6, g.size * base * .12).toFixed(1)}px;stroke-linejoin:round;paint-order:stroke">${g.ch}</text>`;
+  }).join('');
+}
+export function svgGradient(id, flavor, part, space) {
+  const box = space ? `gradientUnits="userSpaceOnUse" x1="0" y1="${space.y1.toFixed(1)}" x2="0" y2="${space.y2.toFixed(1)}"` : 'x1="0" y1="0" x2="0" y2="1"';
+  return `<linearGradient id="${id}" ${box}>${WORD_COLORS[flavor][part].map((c, i) => `<stop offset="${STOPS[i]}" stop-color="${c}"/>`).join('')}</linearGradient>`;
+}
+
 export function createNoteRenderer({ canvas, button, status }) {
   let token = 0, ready = false, rendering = false, busy = false, destroyed = false;
   let latest = Promise.resolve(), current = null;
@@ -48,33 +98,39 @@ export function createNoteRenderer({ canvas, button, status }) {
         const ink = peel ? natsu ? '#b8500c' : '#123c31' : natsu ? '#ffd496' : '#f7f1a8';
         ctx.fillStyle = peel ? natsu ? '#fff0d8' : '#f2f0dc' : natsu ? '#3c271c' : '#0f382b';
         ctx.fillRect(0, 0, 1080, 1350);
+        const groundColor = ctx.fillStyle;
         ctx.fillStyle = ink;
         ctx.textBaseline = 'alphabetic';
         ctx.font = '700 52px ClearJP';
         ctx.fillText('西岡ソーダ店', 70, 90);
         ctx.font = '500 25px ClearJP'; ctx.textAlign = 'right';
         ctx.fillText('TODAY’S CITRUS NOTE', 1010, 86);
-        const letters = [...(peel ? natsu ? 'ほろっ' : 'ふわっ' : natsu ? 'じゅわっ' : 'きゅっ')];
-        const places = peel ? [[300,650,360,-18,1],[630,485,380,-6,1],[865,810,310,12,1]] : natsu ? [[250,540,330,-16,.7],[460,590,280,-5,.65],[665,640,330,5,.7],[860,720,240,18,.65]] : [[410,560,430,-16,.64],[600,680,340,0,.68],[795,740,300,15,.67]];
+        const word = peel ? natsu ? 'ほろっ' : 'ふわっ' : natsu ? 'じゅわっ' : 'きゅっ';
+        const shape = wordGlyphs(word, part, gesture.spread);
+        const base = Math.min(900 / shape.width, 700 / shape.height), originX = 540, originY = 560;
+        const colors = WORD_COLORS[natsu ? 'natsumikan' : 'sudachi'][part];
         const layer = document.createElement('canvas'); layer.width = 1080; layer.height = 1350;
         const glyphContext = layer.getContext('2d');
         if (!glyphContext) throw new Error('canvas');
-        glyphContext.textAlign = 'center'; glyphContext.textBaseline = 'alphabetic';
-        const glyph = (text, x, y, size, angle, scaleX = 1) => {
-          glyphContext.save(); glyphContext.translate(x, y); glyphContext.rotate(angle * Math.PI / 180);
-          glyphContext.transform(1, 0, Math.tan(-8 * Math.PI / 180), 1, 0, 0);
-          glyphContext.scale(scaleX, 1);
-          glyphContext.font = `900 ${size}px BurstJP`; glyphContext.fillText(text, 0, 0); glyphContext.restore();
+        const place = (context, g) => {
+          const tilt = (g.rotation + gesture.tilt * .5) * Math.PI / 180, size = g.size * base;
+          context.translate(originX + g.x * base, originY + g.y * base); context.rotate(tilt);
+          context.transform(1, 0, Math.tan(-8 * Math.PI / 180), 1, 0, 0); context.scale(g.sx, 1);
+          context.font = `900 ${size}px BurstJP`; context.textAlign = 'center'; context.textBaseline = 'middle';
+          return size;
         };
-        places.forEach(([x, y, size, angle, scaleX], i) => {
-          const side = i === 0 ? -1 : i === places.length - 1 ? 1 : 0;
-          glyph(letters[i], x + side * (peel ? 50 : natsu ? 45 : 60) * (gesture.spread - .5), y, size, angle + gesture.tilt * .3, scaleX);
+        // Ground-coloured rim first, so overlapping letters stay apart.
+        ctx.save(); ctx.strokeStyle = groundColor; ctx.lineJoin = 'round';
+        shape.glyphs.forEach(g => { ctx.save(); const size = place(ctx, g); ctx.lineWidth = Math.max(10, size * .12); ctx.strokeText(g.ch, 0, 0); ctx.restore(); });
+        ctx.restore();
+        shape.glyphs.forEach(g => {
+          glyphContext.save(); const size = place(glyphContext, g);
+          const fill = glyphContext.createLinearGradient(0, -size * .45, 0, size * .45);
+          colors.forEach((color, i) => fill.addColorStop([0, .38, .7, 1][i], color));
+          glyphContext.fillStyle = fill; glyphContext.fillText(g.ch, 0, 0); glyphContext.restore();
         });
-        glyph('!', peel ? 920 : 900, peel ? 280 : natsu ? 260 : 290, peel ? 220 : natsu ? 210 : 240, 16 + gesture.tilt * .3);
-        glyphContext.globalCompositeOperation = 'source-in'; glyphContext.fillStyle = ink;
-        glyphContext.fillRect(0, 0, 1080, 1350);
         if (texture) {
-          glyphContext.globalCompositeOperation = 'source-atop'; glyphContext.globalAlpha = peel ? .32 : .72;
+          glyphContext.globalCompositeOperation = 'source-atop'; glyphContext.globalAlpha = peel ? .2 : .26;
           if (flavor === 'sudachi') {
             const size = Math.min(texture.naturalWidth, texture.naturalHeight) * .34;
             const sx = Math.max(0, Math.min(texture.naturalWidth - size, sample.u * texture.naturalWidth - size / 2));
@@ -189,4 +245,10 @@ export function createNoteRenderer({ canvas, button, status }) {
     },
     snapshot: () => Object.freeze({ ready, rendering, busy, part: current?.part, flavor: current?.flavor, gesture: current ? Object.freeze({ ...current.gesture }) : null, sample: current ? Object.freeze({ ...current.sample }) : null }),
   });
+}
+
+// The pour heading sits on the dark photo: peel gets a cream rim, juice a deep green one.
+export const POUR_DEFS = svgGradient('pour-peel', 'sudachi', 'peel') + svgGradient('pour-juice', 'sudachi', 'juice');
+export function pourWordMarkup(part) {
+  return svgWord(part === 'peel' ? 'ふわっ' : 'きゅっ', part, { cx: 300, cy: 180, maxWidth: 540, maxHeight: 300, fill: `url(#pour-${part})`, rim: part === 'peel' ? '#f4f4df' : '#0f382b' });
 }

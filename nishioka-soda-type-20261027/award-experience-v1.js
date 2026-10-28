@@ -1,4 +1,4 @@
-import { createNoteRenderer } from './award-card-v1.js';
+import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './award-card-v1.js';
 
 (() => {
   'use strict';
@@ -267,15 +267,16 @@ import { createNoteRenderer } from './award-card-v1.js';
     }
     word.setAttribute('aria-label', parts[state.part].word);
     word.style.transform = `rotate(${gesture.tilt}deg)`;
-    word.querySelectorAll('.echo-char').forEach((span, i) => {
-      span.textContent = parts[state.part].word[i];
-      const peel = state.part === 'peel', s = gesture.spread;
-      const x = (i - 1) * (peel ? 18 + 40 * s : -4 - 8 * s);
-      const y = peel && i === 1 ? -4 - 24 * s : 0;
-      const rotation = peel ? [-15, 0, 16][i] * s : [-8, 3, 10][i];
-      span.style.fontSize = i === 2 || !peel && i === 1 ? '.82em' : '1em';
-      span.style.display = 'inline-block';
-      span.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg) scaleX(${peel ? 1 : .82 - .08 * s})`;
+    // 「大きさで弾む」: the same layout as the saved card (card.js wordGlyphs).
+    const shape = wordGlyphs(parts[state.part].word, state.part, gesture.spread);
+    const echo = word.closest('.part-echo'), bang = echo?.querySelector('.part-echo-bang');
+    if (echo) { echo.style.width = `${shape.width.toFixed(3)}em`; echo.style.height = `${shape.height.toFixed(3)}em`; }
+    [...word.querySelectorAll('.echo-char'), bang].forEach((span, i) => {
+      const g = shape.glyphs[i];
+      if (!span || !g) return;
+      if (span !== bang) span.textContent = g.ch;
+      span.style.fontSize = `${g.size}em`;
+      span.style.transform = `translate(-50%, -50%) translate(${(g.x / g.size).toFixed(3)}em, ${(g.y / g.size).toFixed(3)}em) rotate(${g.rotation.toFixed(1)}deg) skewX(-8deg) scaleX(${g.sx})`;
     });
   }
   function commitGesture(gesture = previewGesture || state.gesture) {
@@ -341,7 +342,7 @@ import { createNoteRenderer } from './award-card-v1.js';
     if (lens) lens.setAttribute('aria-label', data.detail);
     const pourWord = document.querySelector('#pour-word'), pourAccessible = document.querySelector('#pour-title .sr-only'), pourCopy = document.querySelector('#pour-sense-copy');
     const pourText = part === 'peel' ? 'ふわっ。' : 'きゅっ。';
-    if (pourWord) pourWord.textContent = pourText;
+    if (pourWord) pourWord.innerHTML = pourWordMarkup(part);
     if (pourAccessible) pourAccessible.textContent = pourText;
     if (pourCopy) phrased(pourCopy, part === 'peel' ? '皮の青い香りを、泡でひらく。' : '果汁の酸味を、泡できりっと。');
     moveLens(point); renderWord();
