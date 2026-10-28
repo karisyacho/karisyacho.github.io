@@ -31,15 +31,8 @@ export function tasteRowsMarkup(flavor) {
 // Chapter 4 "買い方": a fictional price list. Nothing is ordered or charged.
 export const SIZES = { 250: { label: '250 ml 瓶', price: 380 }, 500: { label: '500 ml 瓶', price: 680 } };
 export const yen = n => `${n.toLocaleString('ja-JP')}円`;
-// The chosen bottles in a 12-slot crate; a 500 ml bottle stands taller than a 250 ml one.
-function bottlePath(h, w) {
-  const x = (60 - w) / 2, top = 178 - h, neck = w * .4, nx = (60 - neck) / 2, shoulder = top + h * .36;
-  return `M${nx.toFixed(1)} ${top} h${neck.toFixed(1)} v${(h * .12).toFixed(1)} C${nx + neck} ${(shoulder - h * .06).toFixed(1)} ${x + w} ${(shoulder - h * .05).toFixed(1)} ${x + w} ${(shoulder + h * .07).toFixed(1)} V174 q0 4 -4 4 H${x + 4} q-4 0 -4 -4 V${(shoulder + h * .07).toFixed(1)} C${x} ${(shoulder - h * .05).toFixed(1)} ${nx} ${(shoulder - h * .06).toFixed(1)} ${nx} ${(top + h * .12).toFixed(1)} Z`;
-}
-export function crateMarkup(size, qty) {
-  const h = size === 500 ? 168 : 124, w = size === 500 ? 44 : 38, top = 178 - h, neck = w * .4;
-  const body = bottlePath(h, w), label = top + h * .56;
-  return Array.from({ length: 12 }, (_, i) => i < qty
-    ? `<svg class="crate-slot is-filled" viewBox="0 0 60 180"><path class="bottle-glass" d="${body}"/><rect class="bottle-label" x="${(60 - w) / 2}" y="${label.toFixed(1)}" width="${w}" height="${(h * .2).toFixed(1)}"/><rect class="bottle-cap" x="${((60 - neck) / 2 - 1.5).toFixed(1)}" y="${top - 7}" width="${(neck + 3).toFixed(1)}" height="9" rx="2"/></svg>`
-    : `<svg class="crate-slot" viewBox="0 0 60 180"><path class="bottle-empty" d="${body}"/></svg>`).join('');
+// The chosen bottles in a 12-slot crate: the same bottle as chapters 1-3; a 500 ml bottle stands taller.
+const BOTTLE_IMAGE = { sudachi: 'assets/bottle-pick-sudachi.webp', natsumikan: 'assets/bottle-pick-natsu.webp' };
+export function crateMarkup(size, qty, flavor = 'sudachi') {
+  return Array.from({ length: 12 }, (_, i) => `<span class="crate-slot${i < qty ? ' is-filled' : ''}${size === 500 ? ' is-large' : ''}"><img src="${BOTTLE_IMAGE[flavor]}" alt="" width="415" height="760" decoding="async"></span>`).join('');
 }

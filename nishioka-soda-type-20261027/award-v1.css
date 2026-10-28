@@ -175,3 +175,47 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
  .shop-total output{font-size:34px}
 }
 @media(prefers-reduced-motion:reduce){.flavor-pick button,.shop-choice span,.flavor-photo,.bottle-pick{transition:none}}
+
+/* round11 「つながり」: one background from the light top to the dark shop, the same chapter header on every chapter,
+   the same bottle carried through, and bubbles rising across the chapter lines (behind text and photos). */
+.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:20%;z-index:4;pointer-events:none;background:linear-gradient(180deg,#e9f7f200,#e9f7f2)}
+.flow{position:relative;isolation:isolate;background:linear-gradient(180deg,#e9f7f2 0,#eef4d6 22%,#e2ecb2 52%,#e2ecb2)}
+.stream{position:sticky;top:0;display:block;width:100%;height:100vh;margin-bottom:-100vh;z-index:0;pointer-events:none}
+.chap{position:relative;z-index:3;display:flex;align-items:flex-end;gap:28px;margin:0 6%;padding-top:40px}
+.chap-no{font:900 132px/.8 BurstJP,'Arial Black',sans-serif;letter-spacing:-.04em}
+.chap-name{font-weight:700;font-size:20px;letter-spacing:.12em;padding-bottom:4px;white-space:nowrap}
+.chap-rule{flex:1;height:2px;background:currentColor;margin-bottom:14px}
+.chap-next{font-size:15px;font-weight:700;letter-spacing:.06em;padding-bottom:4px;white-space:nowrap}.chap-next b{font-weight:700}
+.flavors{background:none;min-height:880px}
+.flavor-photo{background:radial-gradient(42% 38% at 38% 68%,#f6f08acc,transparent 72%)}
+.flavors[data-flavor=natsumikan] .flavor-photo{background:radial-gradient(42% 38% at 38% 68%,#ffd9a0cc,transparent 72%)}
+.bottle-pick img{-webkit-mask-image:linear-gradient(180deg,#000 58%,transparent 97%);mask-image:linear-gradient(180deg,#000 58%,transparent 97%)}
+.flavor-body{padding-top:60px}
+.pour{height:900px;margin-top:-60px;background:none;color:var(--ink)}
+.pour::after{content:none}
+.pour-photo img{object-position:60% center;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 90%,transparent);mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 90%,transparent)}
+.pour-detail{left:7%;top:250px;bottom:auto;max-width:520px}
+.pour-heading,.pour-detail .text-link{color:var(--ink)}
+.pour-howto{font-size:18px;font-weight:700;opacity:1}
+.flow-dark{position:relative;padding-top:130px;color:#f2f7df}
+.flow-dark::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#e2ecb2 0,#6f9a58 70px,#24563f 140px,#174339 210px)}
+.flow-dark .shop{background:none;color:#f2f7df;padding-top:60px}
+.shop-form,.shop-confirm{color:var(--ink);background:#f6f9ea}
+.shop-crate{grid-template-columns:repeat(6,1fr);align-items:end;background:#ffffff14;border-bottom-color:#ffffff30}
+.crate-slot{display:block}.crate-slot img{display:block;width:100%;height:auto;transform-origin:50% 100%;-webkit-mask-image:linear-gradient(180deg,#000 58%,transparent 97%);mask-image:linear-gradient(180deg,#000 58%,transparent 97%);transition:opacity .3s,filter .3s}
+.crate-slot.is-large img{transform:scale(1.12,1.18)}
+.crate-slot:not(.is-filled) img{opacity:.16;filter:grayscale(1) brightness(1.6)}
+@media(max-width:700px){
+ .chap{gap:10px 12px;margin:0 20px;padding-top:30px;flex-wrap:wrap}
+ .chap-no{font-size:76px}.chap-name{font-size:16px;letter-spacing:.08em}
+ .chap-rule{flex:1 1 40px;margin-bottom:9px}
+ .chap-next{flex-basis:100%;text-align:right;font-size:13px;padding:0}
+ .flavor-body{padding-top:40px}
+ .flavor-photo{height:380px}
+ .flow-dark{padding-top:100px}.flow-dark .shop{padding-top:40px}
+ .pour{height:auto;aspect-ratio:2/3;margin-top:0}
+ .pour-photo img{object-position:center}
+ .pour-detail{left:20px;right:20px;top:28px;max-width:none}
+ .pour-howto{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){.crate-slot img{transition:none}}

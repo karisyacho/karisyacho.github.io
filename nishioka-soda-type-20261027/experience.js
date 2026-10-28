@@ -48,6 +48,7 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
       toggle.title = label;
     }
     if (!allowed()) stop();
+    syncStream();
   }
   function animate(element, frames, options) {
     if (!element || !allowed() || !element.animate) return;
@@ -165,6 +166,7 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
     if (say) phrased(say, data.say);
     if (pair) pair.textContent = data.pair;
     if (pour) phrased(pour, howto[flavor]);
+    document.querySelectorAll('.chap-flavor').forEach(node => { node.textContent = data.name; });
     const radio = form?.querySelector(`input[name="flavor"][value="${flavor}"]`);
     if (radio) radio.checked = true;
     updateShop();
@@ -200,7 +202,9 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
     state.qty = readQty();
     const sum = SIZES[state.size].price * state.qty;
     if (total) total.textContent = yen(sum);
-    if (crate) crate.innerHTML = crateMarkup(state.size, state.qty);
+    if (crate) crate.innerHTML = crateMarkup(state.size, state.qty, state.flavor);
+    const order = document.querySelector('#chap-order');
+    if (order) order.textContent = `${FLAVORS[state.flavor].name}・${state.size} ml`;
     form.querySelectorAll('[data-step]').forEach(button => {
       const step = Number(button.dataset.step);
       button.disabled = step < 0 ? state.qty <= 1 : state.qty >= 12;
@@ -234,6 +238,74 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
       if (confirmBox) { form.hidden = true; confirmBox.hidden = false; confirmBox.focus(); }
     });
     document.querySelector('#shop-back')?.addEventListener('click', () => closeConfirm());
+  }
+  // Chapters 2-4: one stream of bubbles keeps rising through the page, thickest where it crosses a chapter line.
+  // It moves on its own (not with the scroll); the canvas stays on screen and draws only the bubbles in view.
+  const flow = document.querySelector('#flow'), stream = document.querySelector('#stream-canvas'), sctx = stream?.getContext('2d');
+  let streamRaf = 0, streamLast = 0, streamSeen = false, streamBubbles = [], darkTop = Infinity, sw = 0, sh = 0;
+  function seed(n) { let r = n; return () => (r = (r * 9301 + 49297) % 233280) / 233280; }
+  function layoutStream() {
+    if (!flow || !stream || !sctx) return;
+    const box = flow.getBoundingClientRect(), top = box.top + scrollY, dpr = Math.min(devicePixelRatio || 1, 1.5);
+    sw = document.documentElement.clientWidth; sh = innerHeight;
+    stream.width = Math.round(sw * dpr); stream.height = Math.round(sh * dpr);
+    sctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const dark = flow.querySelector('.flow-dark');
+    darkTop = dark ? dark.getBoundingClientRect().top + scrollY - top + 160 : Infinity;
+    const rnd = seed(7), narrow = sw < 701, bubbles = [];
+    // A band of bubbles around each chapter line, rising across the full width.
+    flow.querySelectorAll('.chap-rule').forEach(rule => {
+      const y = rule.getBoundingClientRect().top + scrollY - top;
+      for (let i = 0; i < (narrow ? 26 : 46); i++) bubbles.push({ x: rnd() * sw, y0: y - 190, y1: y + 150, at: rnd(), v: 14 + rnd() * 26, r: 2 + rnd() * 7, pop: rnd() < .16 });
+    });
+    // A thin column along the left edge joins the bands from the first chapter to the last.
+    const height = box.height;
+    for (let i = 0; i < Math.round(height / (narrow ? 70 : 46)); i++) bubbles.push({ x: (narrow ? 8 : 30) + rnd() * (narrow ? 26 : 60), y0: 0, y1: height, at: rnd(), v: 18 + rnd() * 20, r: 1.5 + rnd() * 4.5, pop: rnd() < .08 });
+    streamBubbles = bubbles;
+    flow.dataset.streamTop = String(top);
+  }
+  function drawStream(dt) {
+    if (!sctx || !flow) return;
+    const top = flow.getBoundingClientRect().top;
+    sctx.clearRect(0, 0, sw, sh);
+    for (const b of streamBubbles) {
+      const span = b.y1 - b.y0;
+      b.at = (b.at - b.v * dt / span + 1) % 1;
+      const y = b.y0 + b.at * span, sy = y + top;
+      if (sy < -20 || sy > sh + 20) continue;
+      const fade = Math.sin(b.at * Math.PI), x = b.x + Math.sin(b.at * 9 + b.r) * 5;
+      sctx.beginPath(); sctx.arc(x, sy, b.r, 0, Math.PI * 2);
+      if (y > darkTop) { sctx.fillStyle = `rgba(255,255,255,${.28 * fade})`; sctx.fill(); continue; }
+      if (b.pop) {
+        const g = sctx.createRadialGradient(x - b.r * .3, sy - b.r * .4, 0, x, sy, b.r * 1.6);
+        g.addColorStop(0, `rgba(255,251,224,${fade})`); g.addColorStop(.3, `rgba(236,227,60,${fade})`); g.addColorStop(1, `rgba(156,200,60,${fade})`);
+        sctx.fillStyle = g; sctx.fill();
+      } else {
+        sctx.fillStyle = `rgba(255,255,255,${.55 * fade})`; sctx.fill();
+        sctx.lineWidth = 1; sctx.strokeStyle = `rgba(120,160,80,${.35 * fade})`; sctx.stroke();
+      }
+    }
+  }
+  function streamFrame(now) {
+    const dt = streamLast ? Math.min(.05, (now - streamLast) / 1000) : 0;
+    streamLast = now;
+    drawStream(dt);
+    streamRaf = streamSeen && allowed() ? requestAnimationFrame(streamFrame) : 0;
+  }
+  function syncStream() {
+    if (!streamSeen) { cancelAnimationFrame(streamRaf); streamRaf = 0; return; }
+    if (allowed()) { if (!streamRaf) { streamLast = 0; streamRaf = requestAnimationFrame(streamFrame); } }
+    else { cancelAnimationFrame(streamRaf); streamRaf = 0; drawStream(0); }
+  }
+  if (flow && sctx) {
+    layoutStream();
+    new IntersectionObserver(entries => { streamSeen = entries[0].isIntersecting; syncStream(); }).observe(flow);
+    // While paused, the bubbles stay where they are but still follow the page as it scrolls.
+    addEventListener('scroll', () => { if (streamSeen && !streamRaf) requestAnimationFrame(() => drawStream(0)); }, { passive: true });
+    let resizeTimer = 0;
+    addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { layoutStream(); drawStream(0); }, 150); });
+    document.fonts?.ready.then(() => { layoutStream(); drawStream(0); });
+    addEventListener('load', () => { layoutStream(); drawStream(0); });
   }
   selectFlavor('sudachi');
   if (fruit) {
