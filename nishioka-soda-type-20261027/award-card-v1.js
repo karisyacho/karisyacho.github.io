@@ -122,6 +122,8 @@ export function createNoteRenderer({ canvas, button, status }) {
         // Ground-coloured rim first, so overlapping letters stay apart.
         ctx.save(); ctx.strokeStyle = groundColor; ctx.lineJoin = 'round';
         shape.glyphs.forEach(g => { ctx.save(); const size = place(ctx, g); ctx.lineWidth = Math.max(10, size * .12); ctx.strokeText(g.ch, 0, 0); ctx.restore(); });
+        // On the pale peel cards a thin dark outline keeps the yellow foot of each letter off the ground.
+        if (peel) { ctx.strokeStyle = colors[0]; shape.glyphs.forEach(g => { ctx.save(); const size = place(ctx, g); ctx.lineWidth = Math.max(5, size * .05); ctx.strokeText(g.ch, 0, 0); ctx.restore(); }); }
         ctx.restore();
         shape.glyphs.forEach(g => {
           glyphContext.save(); const size = place(glyphContext, g);
@@ -130,7 +132,7 @@ export function createNoteRenderer({ canvas, button, status }) {
           glyphContext.fillStyle = fill; glyphContext.fillText(g.ch, 0, 0); glyphContext.restore();
         });
         if (texture) {
-          glyphContext.globalCompositeOperation = 'source-atop'; glyphContext.globalAlpha = peel ? .2 : .26;
+          glyphContext.globalCompositeOperation = 'source-atop'; glyphContext.globalAlpha = peel ? .3 : .34;
           if (flavor === 'sudachi') {
             const size = Math.min(texture.naturalWidth, texture.naturalHeight) * .34;
             const sx = Math.max(0, Math.min(texture.naturalWidth - size, sample.u * texture.naturalWidth - size / 2));
@@ -146,7 +148,7 @@ export function createNoteRenderer({ canvas, button, status }) {
         ctx.drawImage(image, left, 1110 - h / 2, w, h); ctx.restore();
         ctx.strokeStyle = ink; ctx.lineWidth = 1.2;
         ctx.beginPath(); ctx.arc(890, 1110, 126, 0, Math.PI * 2); ctx.stroke();
-        const mood = peel ? natsu ? 'ほろ苦派' : 'ふわっと香り派' : natsu ? 'じゅわっと甘酸っぱ派' : 'きゅっと酸味派';
+        const mood = peel ? natsu ? 'ほろっ、ほろ苦さ派' : 'ふわっ、香り派' : natsu ? 'じゅわっ、甘酸っぱさ派' : 'きゅっ、酸味派';
         const caption = `${natsu ? '夏みかん' : 'すだち'} / ${mood}`;
         const howto = peel ? natsu ? '果皮はマーマレードにして、ほろ苦さを。' : '果皮は、すりおろして薬味にも。' : natsu ? '果肉はそのまま、甘酸っぱさを。' : '果汁をしぼって、さわやかな酸味を。';
         ctx.fillStyle = ink; ctx.textAlign = 'left'; ctx.font = '700 35px ClearJP';

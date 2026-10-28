@@ -169,8 +169,8 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './card.js?v=awar
     return loaded.get(key);
   }
   const parts = {
-    peel: { word: 'ふわっ', title: '「ふわっ」は、皮の香り。', description: '皮は、すりおろして薬味にも。「ふわっ」と広がる、青い香りが主役。', detail: '果皮のクローズアップ', stage: 'PEEL / 香りを楽しむ' },
-    juice: { word: 'きゅっ', title: '「きゅっ」は、果汁の酸味。', description: '果汁は、料理にしぼって使われます。「きゅっ」と感じる、さわやかな酸味が主役。', detail: '果汁を含む果肉のクローズアップ', stage: 'JUICE / 酸味を楽しむ' },
+    peel: { word: 'ふわっ', title: '「ふわっ」は、皮の香り。', description: '皮は、すりおろして薬味にも。鼻に抜ける青い香りが「ふわっ」。', detail: '果皮のクローズアップ', stage: 'PEEL / 香りを楽しむ' },
+    juice: { word: 'きゅっ', title: '「きゅっ」は、果汁の酸味。', description: '果汁は、焼き魚や鍋にしぼって。舌に残る酸味が「きゅっ」。', detail: '果汁を含む果肉のクローズアップ', stage: 'JUICE / 酸味を楽しむ' },
   };
   function drawCard() {
     if (!cardStarted || !selectedImage) return;
@@ -304,7 +304,7 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './card.js?v=awar
   });
   function syncStudioMood() {
     const natsu = state.flavor === 'natsumikan';
-    const meanings = natsu ? { peel: ['ほろっ', 'ほろ苦派'], juice: ['じゅわっ', '甘酸っぱ派'] } : { peel: ['ふわっ', '香り派'], juice: ['きゅっ', '酸味派'] };
+    const meanings = natsu ? { peel: ['ほろっ', 'ほろ苦さ派'], juice: ['じゅわっ', '甘酸っぱさ派'] } : { peel: ['ふわっ', '香り派'], juice: ['きゅっ', '酸味派'] };
     document.querySelectorAll('#tasting [data-part-choice]').forEach(button => {
       const copy = meanings[button.dataset.partChoice]; if (!copy) return;
       const strong = button.querySelector('strong'), subtitle = button.querySelector('span');
@@ -345,6 +345,8 @@ import { createNoteRenderer, wordGlyphs, pourWordMarkup } from './card.js?v=awar
     if (pourWord) pourWord.innerHTML = pourWordMarkup(part);
     if (pourAccessible) pourAccessible.textContent = pourText;
     if (pourCopy) phrased(pourCopy, part === 'peel' ? '皮の青い香りを、泡でひらく。' : '果汁の酸味を、泡できりっと。');
+    const nextLink = document.querySelector('.lab-panel .text-link');
+    if (nextLink) nextLink.firstChild.textContent = part === 'peel' ? 'その香りを、一杯で味わう' : 'その酸味を、一杯で味わう';
     moveLens(point); renderWord();
     root.dataset.gesture = JSON.stringify(state.gesture);
     const targets = [document.querySelector('.part-echo-motion'), document.querySelector('#aroma .detail-lens')];
