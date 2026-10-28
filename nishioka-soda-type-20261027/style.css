@@ -74,10 +74,15 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
 .flavors,.shop{--ink:#174339;--paper:#eef4d6;--deep:#dfeaa8;--b1:#ece33c;--b2:#9cc83c;--b3:#2e6a2c;--o1:#ffd26a;--o2:#ec8a1e;--o3:#a8460c}
 .flavors[data-flavor=natsumikan],.shop[data-flavor=natsumikan]{--ink:#4f2208;--paper:#fbf0dc;--deep:#f8dcae}
 .flavors{position:relative;display:grid;grid-template-columns:50% 1fr;min-height:940px;overflow:hidden;color:var(--ink);background:linear-gradient(180deg,var(--paper) 30%,var(--deep))}
-.flavor-photo{position:relative;overflow:hidden;background:#cfe1e6}
-.flavor-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
-.flavor-splash{position:absolute;left:12%;bottom:-70px;width:40%;height:auto;pointer-events:none;z-index:2;transform:rotate(-8deg)}
-.flavor-word{position:absolute;left:46%;top:36.5%;z-index:3;width:40%;height:auto;transform:rotate(-7deg);overflow:visible;pointer-events:none}
+.flavor-photo{position:sticky;top:0;height:100vh;min-height:640px;align-self:start;overflow:hidden;background:radial-gradient(70% 55% at 42% 78%,#f7f9c8,transparent 70%),linear-gradient(180deg,#d9eaee,#eef4d6 72%);transition:background .5s}
+.flavors[data-flavor=natsumikan] .flavor-photo{background:radial-gradient(70% 55% at 42% 78%,#ffe7b8,transparent 70%),linear-gradient(180deg,#f3e7d6,#fbf0dc 72%)}
+.bottle-pick{position:absolute;bottom:3%;left:50%;width:48%;max-width:420px;margin:0;padding:0;border:0;background:none;cursor:pointer;transform-origin:50% 100%;transition:transform .6s cubic-bezier(.2,.75,.2,1),filter .6s,opacity .6s}
+.bottle-pick img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(180deg,#000 86%,transparent 99%);mask-image:linear-gradient(180deg,#000 86%,transparent 99%)}
+.bottle-pick[aria-pressed=true]{z-index:2;transform:translateX(-74%) scale(1);cursor:default}
+.bottle-pick[aria-pressed=false]{z-index:1;transform:translateX(4%) scale(.62);filter:saturate(.6) brightness(1.04);opacity:.62}
+.bottle-pick[aria-pressed=false]:hover{opacity:.85}
+.bottle-pick:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.flavor-word{display:block;width:min(100%,430px);height:auto;margin:-8px 0 6px -10px;transform:rotate(-5deg);overflow:visible;pointer-events:none}
 .flavor-word text{font-family:BurstJP,sans-serif;font-weight:900;letter-spacing:-.04em;stroke:#f4f4df;stroke-linejoin:round;paint-order:stroke fill}
 .flavor-letter{transform-box:fill-box;transform-origin:center bottom}
 .flavor-body{position:relative;z-index:4;padding:80px 7% 60px 15%;display:flex;flex-direction:column}
@@ -85,7 +90,7 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
 .flavors h2,.shop h2,.pour-heading{font-family:BurstJP,sans-serif;font-weight:900;transform:rotate(-5deg);transform-origin:left center;white-space:nowrap}
 .flavors h2,.shop h2{font-size:clamp(50px,4.6vw,68px);line-height:1.2;letter-spacing:-.05em;margin:0 0 14px}
 .flavor-lead,.shop-lead{margin:0 0 26px;font-size:16px;line-height:1.9}
-.flavor-pick{display:flex;gap:12px;margin:0 0 230px}
+.flavor-pick{display:flex;gap:12px;margin:0 0 18px}
 .flavor-pick button{flex:1;display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;border:1.5px solid color-mix(in srgb,var(--ink) 35%,transparent);border-radius:999px;background:#ffffff70;color:var(--ink);font-size:18px;font-weight:700;line-height:1;cursor:pointer;transition:background-color .25s,color .25s}
 .flavor-pick button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .flavor-pick button:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
@@ -147,19 +152,18 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
 .shop-confirm:focus{outline:none}
 
 @media(max-width:1100px) and (min-width:701px){
- .flavor-body{padding:70px 5% 50px 9%}.flavor-pick{margin-bottom:190px}
- .flavor-word{left:40%;width:46%}
+ .flavor-body{padding:70px 5% 50px 9%}
  .shop{grid-template-columns:1fr;gap:40px;padding:90px 8%}
 }
 @media(max-width:700px){
  .flavors{grid-template-columns:1fr;min-height:0}
- .flavor-photo{height:460px}
- .flavor-splash{display:none}
- .flavor-word{left:6%;top:355px;width:78%}
- .flavor-body{padding:84px 20px 50px}
+ .flavor-photo{position:relative;height:400px;min-height:0}
+ .bottle-pick{width:46%;max-width:200px;bottom:8px}
+ .flavor-word{width:min(100%,330px);margin:-4px 0 4px -6px}
+ .flavor-body{padding:56px 20px 50px}
  .flavors h2,.shop h2{font-size:44px;margin-bottom:10px}
  .flavor-lead,.shop-lead{font-size:14px;margin-bottom:20px}
- .flavor-pick{margin-bottom:28px}.flavor-pick button{font-size:16px;padding:10px 12px;gap:8px}.flavor-pick i{width:24px;height:24px}
+ .flavor-pick{margin-bottom:14px}.flavor-pick button{font-size:16px;padding:10px 12px;gap:8px}.flavor-pick i{width:24px;height:24px}
  .flavor-say{font-size:17px;margin-bottom:18px}
  .taste-row{grid-template-columns:5.6em 1fr}.taste-row b{font-size:14px}
  .taste-line{grid-template-columns:4.6em repeat(5,24px);column-gap:6px}
@@ -170,4 +174,4 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}button{font:inherit;color:in
  .shop-form,.shop-confirm{padding:26px 20px;gap:20px}
  .shop-total output{font-size:34px}
 }
-@media(prefers-reduced-motion:reduce){.flavor-pick button,.shop-choice span{transition:none}}
+@media(prefers-reduced-motion:reduce){.flavor-pick button,.shop-choice span,.flavor-photo,.bottle-pick{transition:none}}

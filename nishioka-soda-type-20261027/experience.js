@@ -148,8 +148,6 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
   // Chapter 2: one flavour at a time; the shop below follows the same choice.
   const flavorSection = document.querySelector('#flavor'), shop = document.querySelector('#shop'), form = document.querySelector('#shop-form');
   const howto = { sudachi: '氷を入れたグラスに注いで、薄切りのすだちを一枚。', natsumikan: '氷を入れたグラスに注いで、夏みかんの皮をひとかけ。' };
-  const preload = new Image();
-  preload.src = FLAVORS.natsumikan.photo;
   function selectFlavor(flavor, pointer = false) {
     const data = FLAVORS[flavor];
     if (!data) return;
@@ -158,8 +156,6 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
     root.dataset.flavor = flavor;
     [flavorSection, shop].forEach(section => { if (section) section.dataset.flavor = flavor; });
     document.querySelectorAll('[data-flavor-choice]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.flavorChoice === flavor)));
-    const photo = document.querySelector('#flavor-photo');
-    if (photo && !photo.src.endsWith(data.photo)) { photo.src = data.photo; photo.alt = data.alt; }
     const word = document.querySelector('#flavor-word');
     if (word) word.innerHTML = flavorWordMarkup(flavor);
     const rows = document.querySelector('#taste-rows');

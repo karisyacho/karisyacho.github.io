@@ -18,7 +18,7 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
   const allowed = () => !reduced.matches && !manualPause && !document.hidden && !departed;
   const announce = text => { if (status) status.textContent = text; };
   // build.mjs fills PHRASES with BudouX breaks so dynamic Japanese wraps by phrase.
-  const PHRASES = {"動きを減らす設定中":["動きを","減らす","設定中"],"泡と文字の動きを再開する":["泡と","文字の","動きを","再開する"],"泡と文字の動きを止める":["泡と","文字の","動きを","止める"],"氷を入れたグラスに注いで、薄切りのすだちを一枚。":["氷を","入れた","グラスに","注いで、","薄切りの","すだちを","一枚。"],"氷を入れたグラスに注いで、夏みかんの皮をひとかけ。":["氷を","入れた","グラスに","注いで、","夏みかんの","皮を","ひとかけ。"],"泡がはじけました。":["泡が","はじけました。"],"次は、2つの味をくらべる。":["次は、","2つの","味を","くらべる。"],"きりっと酸っぱく、青く香る。":["きりっと","酸っぱく、","青く","香る。"],"唐揚げ、焼き魚、お昼ごはん":["唐揚げ、","焼き魚、","お昼ごはん"],"水しぶきの中に立つ、すだちソーダの瓶":["水しぶきの","中に","立つ、","すだちソーダの","瓶"],"ほろ苦く、あとから甘い。":["ほろ","苦く、","あとから","甘い。"],"午後のおやつ、ひと休み":["午後の","おやつ、","ひと休み"],"水しぶきの中に立つ、夏みかんソーダの瓶":["水しぶきの","中に","立つ、","夏みかん","ソーダの","瓶"]};
+  const PHRASES = {"動きを減らす設定中":["動きを","減らす","設定中"],"泡と文字の動きを再開する":["泡と","文字の","動きを","再開する"],"泡と文字の動きを止める":["泡と","文字の","動きを","止める"],"氷を入れたグラスに注いで、薄切りのすだちを一枚。":["氷を","入れた","グラスに","注いで、","薄切りの","すだちを","一枚。"],"氷を入れたグラスに注いで、夏みかんの皮をひとかけ。":["氷を","入れた","グラスに","注いで、","夏みかんの","皮を","ひとかけ。"],"泡がはじけました。":["泡が","はじけました。"],"次は、2つの味をくらべる。":["次は、","2つの","味を","くらべる。"],"きりっと酸っぱく、青く香る。":["きりっと","酸っぱく、","青く","香る。"],"唐揚げ、焼き魚、お昼ごはん":["唐揚げ、","焼き魚、","お昼ごはん"],"ほろ苦く、あとから甘い。":["ほろ","苦く、","あとから","甘い。"],"午後のおやつ、ひと休み":["午後の","おやつ、","ひと休み"]};
   const phrased = (element, text) => {
     const parts = PHRASES[text];
     if (!parts) { element.textContent = text; return; }
@@ -148,8 +148,6 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
   // Chapter 2: one flavour at a time; the shop below follows the same choice.
   const flavorSection = document.querySelector('#flavor'), shop = document.querySelector('#shop'), form = document.querySelector('#shop-form');
   const howto = { sudachi: '氷を入れたグラスに注いで、薄切りのすだちを一枚。', natsumikan: '氷を入れたグラスに注いで、夏みかんの皮をひとかけ。' };
-  const preload = new Image();
-  preload.src = FLAVORS.natsumikan.photo;
   function selectFlavor(flavor, pointer = false) {
     const data = FLAVORS[flavor];
     if (!data) return;
@@ -158,8 +156,6 @@ import { FLAVORS, SIZES, yen, flavorWordMarkup, tasteRowsMarkup, crateMarkup } f
     root.dataset.flavor = flavor;
     [flavorSection, shop].forEach(section => { if (section) section.dataset.flavor = flavor; });
     document.querySelectorAll('[data-flavor-choice]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.flavorChoice === flavor)));
-    const photo = document.querySelector('#flavor-photo');
-    if (photo && !photo.src.endsWith(data.photo)) { photo.src = data.photo; photo.alt = data.alt; }
     const word = document.querySelector('#flavor-word');
     if (word) word.innerHTML = flavorWordMarkup(flavor);
     const rows = document.querySelector('#taste-rows');

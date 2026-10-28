@@ -12,9 +12,9 @@ export function svgGradient(id, flavor, part, space) {
 
 // Chapter 2 "味を選ぶ": the two flavours, compared on the same four scales (5 = strongest).
 export const FLAVORS = {
-  sudachi: { name: 'すだち', say: 'きりっと酸っぱく、青く香る。', pair: '唐揚げ、焼き魚、お昼ごはん', photo: 'assets/taste-sudachi-v1.webp', alt: '水しぶきの中に立つ、すだちソーダの瓶', scores: [5, 5, 1, 1],
+  sudachi: { name: 'すだち', say: 'きりっと酸っぱく、青く香る。', pair: '唐揚げ、焼き魚、お昼ごはん', scores: [5, 5, 1, 1],
     letters: [['す', 150, 200, 196, -6], ['だ', 310, 136, 124, 9], ['ち', 445, 192, 128, -5]] },
-  natsumikan: { name: '夏みかん', say: 'ほろ苦く、あとから甘い。', pair: '午後のおやつ、ひと休み', photo: 'assets/taste-natsu-v1.webp', alt: '水しぶきの中に立つ、夏みかんソーダの瓶', scores: [3, 3, 3, 4],
+  natsumikan: { name: '夏みかん', say: 'ほろ苦く、あとから甘い。', pair: '午後のおやつ、ひと休み', scores: [3, 3, 3, 4],
     letters: [['夏', 120, 196, 170, -6], ['み', 262, 140, 100, 8], ['か', 372, 196, 106, -4], ['ん', 480, 150, 100, 10]] }
 };
 export const TASTE_SCALES = ['酸っぱさ', '香り', '甘さ', 'ほろ苦さ'];
