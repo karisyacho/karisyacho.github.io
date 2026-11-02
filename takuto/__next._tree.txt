@@ -1,4 +1,4 @@
-:HL["/takuto/_next/static/chunks/3fj9-9ggk3p3s.css","style"]
+:HL["/takuto/_next/static/chunks/2pmts-7yt5qkx.css","style"]
 :HL["/takuto/_next/static/media/zen_mincho-s.p.16-inxa60pdxd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"fBhHYI4Ckn8lDly1BRfcI","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"jvL3IsGocXTqT0wWGOAnf","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
