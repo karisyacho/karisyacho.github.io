@@ -1,4 +1,4 @@
 :HL["/takuto/_next/static/chunks/2dltj5s1b5536.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"saNMTdd4ZJ3RnCZBqMAre","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"fAR0w4CupzS2j9XlA6xXp","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
