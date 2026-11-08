@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>店の空気を、そのままWebに。｜小さな店のWebサイト制作</title>
+<title>店の空気を、そのままWebに。｜あわい・徳島のWebサイト制作</title>
 <meta name="description" content="美容室・サロン・アパレル・カフェ・バー。お店の雰囲気が伝わるWebサイトや広告動画、チラシ・ポスター・メニュー表などをつくっています。サイト制作 ¥70,000〜（先着1件だけ ¥50,000）、広告動画 ¥15,000。">
 <meta property="og:title" content="店の空気を、そのままWebに。">
 <meta property="og:description" content="お店の雰囲気が伝わるWebサイトや広告動画、チラシ・ポスター・メニュー表。サイト制作 ¥70,000〜（先着1件だけ ¥50,000）、広告動画 ¥15,000。">
@@ -80,9 +80,15 @@
   .name b{font-family:var(--serif);font-size:1.25rem;font-weight:700;letter-spacing:.08em}
   .name .handle{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-2)}
   .nav{display:flex;gap:clamp(14px,3vw,32px)}
-  .nav a{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ink-2);transition:color .2s ease}
+  .nav a{display:inline-flex;align-items:center;min-height:44px;font-family:var(--jp);font-size:12px;letter-spacing:.05em;text-decoration:none;color:var(--ink-2);transition:color .2s ease}
   .nav a:hover{color:var(--ink)}
   .nav .hide-sm{display:none}
+  @media (max-width:420px){ .name .handle{display:none} }
+  :focus-visible{outline:2px solid currentColor;outline-offset:5px}
+  .skip-link{position:fixed;top:8px;left:8px;z-index:30;transform:translateY(-160%);padding:8px 16px;background:var(--paper);color:var(--ink)}
+  .skip-link:focus{transform:none}
+  #main{scroll-margin-top:76px}
+  .sec,.try{scroll-margin-top:76px}
   @media (min-width:640px){ .nav .hide-sm{display:inline} }
 
   /* ---------- hero ---------- */
@@ -364,15 +370,17 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">本文へ移動</a>
+
 <header class="bar">
   <div class="wrap">
     <a class="name" href="#top"><b>あわい</b><span class="handle">@shacho_kari</span></a>
     <nav class="nav" aria-label="ページ内の移動">
-      <a href="#work">Works</a>
-      <a class="hide-sm" href="#price">Price</a>
-      <a class="hide-sm" href="#flow">Flow</a>
-      <a class="hide-sm" href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#work">制作例</a>
+      <a href="#price">料金</a>
+      <a class="hide-sm" href="#flow">進め方</a>
+      <a class="hide-sm" href="#about">つくる人</a>
+      <a href="#contact">相談</a>
     </nav>
   </div>
 </header>
@@ -394,7 +402,7 @@
   </div>
 </div>
 
-<main>
+<main id="main" tabindex="-1">
 
   <section class="wrap sec" id="work" style="padding-top:0">
     <div class="sec-head">
@@ -405,10 +413,10 @@
     <ol class="index">
       <li><a href="#w-awai"><span class="no">01</span><span class="ttl">あわい<small>自分の屋号のサイト</small></span><span class="label biz">Interactive Web</span><span class="label kind">自主制作</span></a></li>
       <li><a href="#w-aima"><span class="no">02</span><span class="ttl">AIMA — 藍間<small>藍染と滞在のアトリエ</small></span><span class="label biz">Interactive Web</span><span class="label kind">見本</span></a></li>
-      <li><a href="#w-akatsuki"><span class="no">03</span><span class="ttl">おきのはま製パン<small>ベーカリー（作り直し）</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
+      <li><a href="#w-akatsuki"><span class="no">03</span><span class="ttl">おきのはま製パン<small>ベーカリー</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
       <li><a href="#w-studiofree"><span class="no">04</span><span class="ttl">STUDIO FREE<small>ボディケアサロン</small></span><span class="label biz">Video</span><span class="label kind">実案件</span></a></li>
       <li><a href="#w-lueur"><span class="no">05</span><span class="ttl">UCHIMACHI HAIR<small>ヘアサロン</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
-      <li><a href="#w-suketo"><span class="no">06</span><span class="ttl">助任珈琲豆店<small>コーヒー豆の店（作り直し）</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
+      <li><a href="#w-suketo"><span class="no">06</span><span class="ttl">助任珈琲豆店<small>コーヒー豆の店</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
       <li><a href="#w-kasane"><span class="no">07</span><span class="ttl">KASANE<small>アパレル</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
       <li><a href="#w-arc"><span class="no">08</span><span class="ttl">pilates studio ARC<small>ピラティススタジオ</small></span><span class="label biz">LP</span><span class="label kind">見本</span></a></li>
       <li><a href="#w-takuto"><span class="no">09</span><span class="ttl">匠塗 — TAKUTO PAINT WORKS<small>塗装会社</small></span><span class="label biz">Web</span><span class="label kind">見本</span></a></li>
@@ -478,34 +486,35 @@
       <div class="stage" style="--stage:#D8C9AB">
         <figure class="pc">
           <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>okinohama-demo.github.io/okinohama</span></div>
-          <img src="assets/okinohama-pc.webp" alt="おきのはま製パンのWebサイト。生成り色の案内面と、パンが並ぶ朝の売り場写真に「近くのいつもに。遠くの楽しみに。」の見出し。" width="1440" height="900" loading="lazy" decoding="async">
+          <img src="assets/okinohama-pc-20261108.webp" alt="おきのはま製パンのWebサイト。窯の扉が開くと焼きたてのパンが現れ、「朝は この窯から」の見出しが重なる。" width="1440" height="900" loading="lazy" decoding="async">
         </figure>
         <figure class="sp">
-          <img src="assets/okinohama-sp.webp" alt="同じサイトのスマホ表示。朝の売り場写真から親子二代の印、店の案内へ続く。" width="780" height="1688" loading="lazy" decoding="async">
+          <img src="assets/okinohama-sp-20261108.webp" alt="同じサイトのスマホ表示。窯の取っ手を下に引いて扉を開ける入口。" width="780" height="1688" loading="lazy" decoding="async">
         </figure>
       </div>
       <div class="work-body">
         <div>
           <h3>おきのはま製パン<small>OKINOHAMA — LOCAL BAKERY</small></h3>
-          <ul class="specline"><li>1ページ</li><li>親子二代の物語</li><li>全国便・注文体験</li><li>動きつき</li><li>スマホ対応</li></ul>
+          <ul class="specline"><li>窯の扉を開ける</li><li>時刻でパンを選ぶ</li><li>送料込みの合計計算</li><li>スマホ対応</li></ul>
         </div>
         <div>
-          <p>徳島市沖浜町で親子二代、1999年から続くパン屋（架空）。以前の見本「パンと珈琲 暁」を、地元で長く支えてくださる方と新しく知る方の両方へ届くように作り直しました。毎日の定番6品を値段・焼き上がり時刻まで具体的に書き、金曜発送の全国便は買い物かごから注文確認まで実際に操作できます。</p>
-          <a class="visit" href="https://okinohama-demo.github.io/okinohama/" target="_blank" rel="noopener">サイトを見る <span>↗</span></a>
+          <p>徳島市沖浜町で、親子二代が営むパン屋の制作見本です。窯の取っ手を引くと扉が開き、焼きたてのパンが現れます。焼き上がり時刻で6種類のパンを選べて、パン便では地域と箱数を変えると送料込みの合計が分かります。企画・デザイン・動きの設計から実装まで手がけました。</p>
+          <a class="visit" href="https://okinohama-demo.github.io/okinohama/" target="_blank" rel="noopener">窯の扉を開けてみる <span>↗</span></a>
+          <p class="credit">架空の店です。写真は生成画像を使用。注文・決済はできません。</p>
         </div>
       </div>
       <div class="ba">
         <div class="ba-head"><b>作り直した前と後</b><span class="label">Before / After</span></div>
         <div class="ba-pair">
           <figure><img src="assets/akatsuki-pc.webp" alt="前の見本、パンと珈琲 暁のWebサイト。暗い窯の棚と、夜明け前を表す濃い色の画面。" width="1440" height="900" loading="lazy" decoding="async"><figcaption><b>BEFORE</b>パンと珈琲 暁</figcaption></figure>
-          <figure><img src="assets/okinohama-pc.webp" alt="作り直した、おきのはま製パンのWebサイト。" width="1440" height="900" loading="lazy" decoding="async"><figcaption><b>AFTER</b>おきのはま製パン</figcaption></figure>
+          <figure><img src="assets/okinohama-pc-20261108.webp" alt="作り直した、おきのはま製パンのWebサイト。" width="1440" height="900" loading="lazy" decoding="async"><figcaption><b>AFTER</b>おきのはま製パン</figcaption></figure>
         </div>
         <ul class="ba-list">
           <li><span>名前</span><div><s>パンと珈琲 暁</s> → おきのはま製パン（徳島市沖浜町から）</div></li>
-          <li><span>最初の一言</span><div><s>まだ暗いうちに、火を入れる。</s> → 近くのいつもに。遠くの楽しみに。</div></li>
-          <li><span>パン</span><div><s>暗い窯の世界と品書き</s> → 定番6品を値段・大きさ・焼き上がり時刻で</div></li>
-          <li><span>足したもの</span><div>親子二代の話、沖浜町との関係、全国発送の箱、架空の買い物かご</div></li>
-          <li><span>動き</span><div><s>夜明けの色が変わる</s> → 包み紙が開く冒頭と、店から全国へ伸びる配送のひも</div></li>
+          <li><span>最初の一言</span><div><s>まだ暗いうちに、火を入れる。</s> → 朝は この窯から</div></li>
+          <li><span>パン</span><div><s>暗い窯の世界と品書き</s> → 焼き上がり時刻で選べる6品。写真・説明・値段が切り替わる</div></li>
+          <li><span>足したもの</span><div>親子二代の手紙、金曜発送のパン便、地域と箱数で変わる送料込みの合計</div></li>
+          <li><span>動き</span><div><s>夜明けの色が変わる</s> → 取っ手を引いて開く窯の扉と、焼き上がり時刻で切り替わるパン</div></li>
         </ul>
         <a class="visit" href="https://akatsuki-demo.github.io/akatsuki/" target="_blank" rel="noopener">前のサイトも見る <span>↗</span></a>
       </div>
@@ -518,7 +527,7 @@
       </div>
       <div class="stage reel-stage" style="--stage:#D8E0E8">
         <div class="reel">
-          <video src="assets/serapeel-reel.mp4" poster="assets/reel-poster.jpg" width="1080" height="1920" autoplay muted loop playsinline preload="metadata" aria-label="セラピールの広告リール。白地に青の差し色で、商品、特長、施術の流れ、受賞、店舗情報が順に出る22秒の縦型動画。"></video>
+          <video src="assets/serapeel-reel.mp4" poster="assets/reel-poster.jpg" width="1080" height="1920" autoplay muted loop playsinline controls preload="metadata" aria-label="セラピールの広告リール。白地に青の差し色で、商品、特長、施術の流れ、受賞、店舗情報が順に出る22秒の縦型動画。"></video>
         </div>
       </div>
       <div class="work-body">
@@ -602,7 +611,7 @@
           <ul class="specline"><li>1ページ</li><li>豆6種と焙煎日</li><li>動画・動きつき</li><li>スマホ対応</li></ul>
         </div>
         <div>
-          <p>徳島市助任本町の、自家焙煎の珈琲豆店（架空）。以前の見本「余白珈琲」を、「名前も中身も、どこにでもある感じがする」というご指摘を受けて作り直しました。全国12軒の豆屋さんのサイトを読み比べて、どこの何の店か・いつ焼くか・誰が焼くかを具体的に書き、開いたときの演出とスクロールで変わる動きも付けています。</p>
+          <p>徳島市助任本町の自家焙煎の珈琲豆店を想定した制作見本です。豆6種類を、産地・精製方法・煎り具合・100gの価格で比べられます。焙煎日と注文の締め切りも掲載し、好みに合う豆を選べるようにしました。釜の映像と縦書きの見出しで、店の落ち着いた雰囲気を伝えています。</p>
           <a class="visit" href="https://suketo-demo.github.io/suketo/" target="_blank" rel="noopener">サイトを見る <span>↗</span></a>
         </div>
       </div>
@@ -928,7 +937,7 @@
 
     <div class="try" id="try">
       <span class="label incl-head">自分で更新できる形を、試してみてください</span>
-      <p class="note try-lead">左はお店の人のスマホで開いたGoogleスプレッドシート、右はお客さんのスマホで見たホームページです。表の「内容」を書き換えると、右のサイトのその場所に移って、書いたとおりに変わります。お知らせを消すと、お知らせの帯も消えます。</p>
+      <p class="note try-lead">「お店の人のスマホ」にある表を書き換えてみてください。「お客さんのスマホ」のホームページが、書いたとおりに変わります。ホームページの中で、変えた項目の場所まで自動でスクロールします。お知らせを空欄にすると、お知らせの帯も消えます。</p>
       <div class="try-grid">
         <div class="phone" aria-label="スマホで開いたスプレッドシートの見本">
           <p class="who">お店の人のスマホ</p>
