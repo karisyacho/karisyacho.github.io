@@ -1,0 +1,46 @@
+/* One visual language, different movements for words, images, routes and panels. */
+:root{--motion-out:cubic-bezier(.16,1,.3,1);--motion-travel:cubic-bezier(.76,0,.24,1)}
+.motion-line{display:block;overflow:hidden;padding-block:.06em;margin-block:-.06em}
+.motion-line>span{display:block}
+.motion-image-frame{position:relative;overflow:hidden;background:#e6edf5}
+.motion-image-frame>img{display:block;width:100%}
+.site-motion-on [data-motion=heading] .motion-line>span{transform:translate3d(0,110%,0);transition:transform .85s var(--motion-out);transition-delay:calc(var(--line-index,0)*95ms)}
+.site-motion-on [data-motion=heading].motion-entered .motion-line>span{transform:none}
+.site-motion-on [data-motion=copy]{opacity:0;transform:translate3d(0,32px,0);transition:transform .8s var(--motion-out),opacity .55s linear;transition-delay:100ms}
+.site-motion-on [data-motion=row]{opacity:0;transform:translate3d(0,38px,0);transition:transform .8s var(--motion-out),opacity .45s linear;transition-delay:var(--motion-delay,0ms)}
+.site-motion-on [data-motion=copy].motion-entered,.site-motion-on [data-motion=row].motion-entered{opacity:1;transform:none}
+/* A line is drawn as each topic arrives; its contents stay in native document flow. */
+.site-motion-on .audience-links>a,.site-motion-on .service-detail,.site-motion-on .safety-practices>div,.site-motion-on .recruit-links>details,.site-motion-on .culture-topics>article{position:relative}
+.site-motion-on .audience-links>a:before,.site-motion-on .service-detail:before,.site-motion-on .safety-practices>div:before,.site-motion-on .recruit-links>details:before,.site-motion-on .culture-topics>article:before{content:'';position:absolute;top:-1px;left:0;right:0;height:2px;background:#0754ba;transform:scaleX(0);transform-origin:left;transition:transform 1s var(--motion-out);pointer-events:none}
+.site-motion-on .motion-entered:before{transform:scaleX(1)}
+/* The curtain reveals only the image. Captions remain outside its clipping frame. */
+.site-motion-on [data-motion=image] .motion-image-frame:after{content:'';position:absolute;inset:0;background:#dce8f5;transform:scaleX(1);transform-origin:right;transition:transform 1.1s var(--motion-travel);pointer-events:none}
+.site-motion-on [data-motion=image].motion-entered .motion-image-frame:after{transform:scaleX(0)}
+.site-motion-on [data-motion=image] .motion-image-frame>img{transform:translate3d(0,var(--image-shift,0px),0) scale(1.14);transform-origin:center}
+.site-motion-on .recruit-photo .motion-image-frame:after{background:#0754ba;transform-origin:left}
+.site-motion-on .wide-photo .motion-image-frame:after{transform-origin:left}
+/* The service diagram travels from collection to delivery as the section is read. */
+.site-motion-on .transport-brief{opacity:0;transform:translate3d(-45px,0,0);transition:transform .95s var(--motion-out),opacity .6s linear}
+.site-motion-on .transport-brief.motion-entered{opacity:1;transform:none}
+.site-motion-on .route-line i,.site-motion-on .diagram-track{transform:scaleX(var(--route-progress,0));transform-origin:left}
+.site-motion-on .route-line>span{transform:translate3d(calc((1 - var(--route-progress,0))*-36px),0,0);opacity:var(--route-progress,0)}
+.site-motion-on .diagram-stop{transform:translate3d(0,calc((1 - var(--route-progress,0))*20px),0)}
+.site-motion-on .storage-visual>span{opacity:0;transform:translate3d(0,32px,0);transition:transform .8s var(--motion-out),opacity .5s linear}
+.site-motion-on .storage-visual>span:nth-child(2){transition-delay:90ms}.site-motion-on .storage-visual>span:nth-child(3){transition-delay:180ms}.site-motion-on .storage-visual>span:nth-child(4){transition-delay:270ms}
+.site-motion-on .storage-visual.motion-entered>span{opacity:1;transform:none}
+.site-motion-on [data-motion=steps]{position:relative}
+.site-motion-on [data-motion=steps]:after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:#0754ba;transform:scaleX(var(--route-progress,0));transform-origin:left;pointer-events:none}
+/* The final blue panel is a full-width arrival, rather than another small fade. */
+.site-motion-on .contact{position:relative;isolation:isolate;overflow:hidden}
+.site-motion-on .contact:before{content:'';position:absolute;inset:0;z-index:-1;background:#0754ba;transform:scaleX(0);transform-origin:left;transition:transform 1.15s var(--motion-travel)}
+.site-motion-on .contact.motion-entered:before{transform:scaleX(1)}
+.site-motion-on .contact-grid>[data-motion=row]{transition-delay:160ms}
+.site-motion-on .contact-grid>[data-motion=row]+[data-motion=row]{transition-delay:260ms}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.text-link{transition:color .2s linear}.text-link:after{transition:transform .3s var(--motion-out)}.text-link:hover:after{transform:translateX(7px)}.page-jumps>a{transition:color .2s linear,border-color .2s linear}.audience-links a>span{display:block;transition:transform .4s var(--motion-out)}.audience-links a:hover>span{transform:translateX(9px)}}
+/* Keyboard navigation shows the focused destination immediately. */
+.site-motion-on [data-motion].motion-instant,.site-motion-on [data-motion]:focus-within{opacity:1!important;transform:none!important;transition:none!important}
+.site-motion-on .motion-instant .motion-line>span,.site-motion-on [data-motion]:focus-within .motion-line>span{transform:none!important;transition:none!important}
+.site-motion-on [data-motion].motion-instant:before,.site-motion-on [data-motion]:focus-within:before{transition:none!important}
+@media(max-width:600px){.site-motion-on [data-motion=row]{transform:translate3d(0,28px,0)}.site-motion-on [data-motion=row].motion-entered{transform:none}.site-motion-on .transport-brief{transform:translate3d(0,40px,0)}.site-motion-on .transport-brief.motion-entered{transform:none}.site-motion-on .work-timeline:after{top:0;bottom:0;left:-1px;right:auto;width:2px;height:auto;transform:scaleY(var(--route-progress,0));transform-origin:top}}
+@media(prefers-reduced-motion:reduce){[data-motion],.motion-line>span,.motion-image-frame>img{opacity:1!important;transform:none!important;transition:none!important}.motion-image-frame:after,.contact:before,[data-motion=steps]:after{display:none!important}}
+@media print{[data-motion],.motion-line>span,.motion-image-frame>img{opacity:1!important;transform:none!important;transition:none!important}.motion-image-frame:after,.contact:before{display:none!important}}
