@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ポートフォリオの見た目案（11/9）</title>
+<style>
+:root{--bg:#f4f3ef;--ink:#16181d;--sub:#5d6068;--rule:#d9d7d0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16181d;--ink:#eceae4;--sub:#a3a5ab;--rule:#33363c}}
+:root[data-theme="dark"]{--bg:#16181d;--ink:#eceae4;--sub:#a3a5ab;--rule:#33363c}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.9 "Hiragino Sans","Yu Gothic UI",sans-serif;padding:32px 16px 80px}
+main{max-width:880px;margin:0 auto}
+h1{font-size:24px;line-height:1.5}
+h2{font-size:18px;margin:44px 0 10px;padding-top:20px;border-top:1px solid var(--rule)}
+p{margin:10px 0}
+.sub{color:var(--sub);font-size:14px}
+.try{display:block;margin:18px 0;padding:16px 18px;border:2px solid var(--ink);border-radius:10px;text-decoration:none;color:inherit;font-weight:700}
+.try span{display:block;font-weight:400;font-size:14px;color:var(--sub)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.links a{font-size:14px;border:1px solid var(--rule);border-radius:99px;padding:6px 12px;color:inherit;text-decoration:none}
+img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:6px;margin:12px 0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.strip{overflow-x:auto}
+.strip img{min-width:720px}
+ol{padding-left:1.4em}
+li{margin:6px 0}
+</style>
+</head>
+<body>
+<main>
+<h1>ポートフォリオの見た目案：お店の種類で、ページが切り替わる</h1>
+<p class="sub">2026年11月9日。屋号「あわい」で公開しているポートフォリオ（karisyacho.github.io）の作り直し案です。本番のページは、まだ何も変えていません。</p>
+
+<p>11月8日に見てもらった前回の案は、あわいのロゴマーク（藍のAに朱のWを重ねた形）を入口いっぱいに大きく置くものでした。「大きすぎて邪魔」という返事だったので、今回はページの左上、屋号の横に小さく置くだけにしています。</p>
+<p>今回の案では、入口で見る人にお店の種類を選んでもらいます。選ぶとページの背景の色が変わり、いま載せている10件の作品と料金が、そのお店向けのものだけに入れ替わります。見出しの「［あなた］のお店なら、こう作ります。」の括弧の中も、選んだ種類の名前になります。</p>
+
+<a class="try" href="board.html">動く案を開く<span>入口に、お店の種類4つと、10件をまとめて見る「ぜんぶ見る」のボタンがあります。押すと切り替わりを試せます</span></a>
+
+<p>DMを送るときは、最初からお店の種類を選んだ状態で開くリンクも使えます。下の4つは、入口で選べるお店の種類です。</p>
+<div class="links">
+  <a href="board.html?t=food">食べ物・飲み物</a>
+  <a href="board.html?t=beauty">美容・からだ</a>
+  <a href="board.html?t=craft">工事・運送</a>
+  <a href="board.html?t=stay">宿・ものづくり</a>
+</div>
+
+<h2>入口（PC）</h2>
+<p>左が見出しと選ぶボタン、右がその種類でいちばん近い作品です。上が最初の状態、下が「食べ物・飲み物」を選んだ後です。</p>
+<img src="pc-all-top.webp" alt="PCの入口。ぜんぶ見るを選んだ状態" loading="lazy">
+<img src="pc-food-top.webp" alt="PCの入口。食べ物・飲み物を選んだ状態" loading="lazy">
+
+<h2>作品の場面（PC）</h2>
+<p>作品は1件で1画面を使います。パソコンとスマホの画面を重ねて見せ、横に「見る人ができること」と「見せ方」を書いています。工事・運送を選ぶと、背景は暗い色になります。</p>
+<img src="pc-food-work.webp" alt="PCの作品の場面。おきのはま製パン" loading="lazy">
+<img src="pc-craft-work.webp" alt="PCの作品の場面。匠塗" loading="lazy">
+
+<h2>スマホ</h2>
+<p>スマホでは、下にずっと小さな帯が出ます。今どの種類を見ているかと件数が分かり、そこからお店の種類を選び直せます。</p>
+<div class="pair">
+  <img src="sp-all-top.webp" alt="スマホの入口" loading="lazy">
+  <img src="sp-food-work.webp" alt="スマホの作品の場面" loading="lazy">
+</div>
+
+<h2>切り替わりの流れ（スマホ）</h2>
+<p>左から順に、押す前、押した直後、色が変わった直後、止まった後です。押した直後は中身がいったん消えます。押したボタンの位置から次の色が丸く広がり、その後で新しい作品と見出しが現れます。全部で1秒ほどです。</p>
+<div class="strip"><img src="sp-flow-strip.webp" alt="切り替わりの4コマ" loading="lazy"></div>
+
+<h2>本番で足すもの</h2>
+<ol>
+  <li>作品の場面は、いまは最初の画面の写真だけです。本番では、パン屋の見本サイト「おきのはま製パン」で窯の扉が開くところのような、触ったときの動きを短い動画で見せます。</li>
+  <li>料金の全部、よくある質問、つくっている人の紹介、お店がスマホでGoogleの表を直すとホームページの営業時間が変わる見本は、今の内容を残したまま、この見た目に合わせます。</li>
+  <li>「月1回、見た人の数と問い合わせの数を送る」は載せていません。「やめても、サイトとアドレスはお店に残る」も、載せてよいか返事をもらうまでは載せません。</li>
+</ol>
+</main>
+</body>
+</html>
