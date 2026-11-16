@@ -1,6 +1,6 @@
 # 2026-11-16｜サイトの動く部分だけでも
 
-方向確認用。投稿・予約投稿はしていません。YouTube・TikTok・Instagramは構成案の動画が完成してから添えます。Threads・Xは文章だけでも成立します。
+投稿用。投稿・予約投稿はしていません。YouTube・TikTok・Instagramは完成した20.9秒の動画に添えます。Threads・Xは文章だけでも成立します。
 
 ## YouTube Shorts
 
