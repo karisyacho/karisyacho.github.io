@@ -1,0 +1,29 @@
+{
+  "duration": 20.9,
+  "lufs": -14.36,
+  "peak": -1.31,
+  "bytes": 6579738,
+  "mobile_bytes": 1645269,
+  "mobile_lufs": -14.4,
+  "mobile_peak": -1.43,
+  "standard": "awai-parts-20261116-v1.mp4",
+  "mobile": "awai-parts-20261116-mobile-v1.mp4",
+  "sha256": "546843ae1c9b48575c3d7dce2e0743190cb5ee579f250d16a3c8d82be5ef9b40",
+  "mobile_sha256": "61d6d4081f51606ea2a5365717a927103f5672f735a3be21a2c3150fde9df005",
+  "streams": [
+    {
+      "type": "video",
+      "codec": "h264",
+      "width": 1080,
+      "height": 1920,
+      "sample_rate": null
+    },
+    {
+      "type": "audio",
+      "codec": "aac",
+      "width": null,
+      "height": null,
+      "sample_rate": "48000"
+    }
+  ]
+}
