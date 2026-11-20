@@ -9,8 +9,8 @@
       content="古い木の家を、今の暮らしに。ひき戸工務店は、木造住宅の改修をテーマにした架空の工務店の見本サイトです。"
     />
     <title>ひき戸工務店｜古い木の家のリフォーム</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css?v=doors2" />
+    <script src="script.js?v=doors2" defer></script>
   </head>
   <body>
     <a href="#main" class="skip">本文へ進む</a>
@@ -48,22 +48,21 @@
             width="1536"
             height="1024"
           />
-          <div class="sliding-door" id="sliding-door">
-            <img src="assets/door.webp" alt="" draggable="false" /><button
-              class="door-handle"
-              id="door-handle"
-              aria-label="戸をひらく。左矢印キーでも開けられます"
-              aria-expanded="false"
-              aria-controls="room-scene"
-            >
-              <span class="door-instruction"
-                ><span aria-hidden="true" class="door-arrow">←</span
-                ><span id="door-label">戸をひらく</span></span
-              >
+          <div class="sliding-door door-left" id="sliding-door" data-side="left">
+            <img src="assets/door.webp" alt="" draggable="false" />
+            <button class="door-handle" id="door-handle" aria-label="左の戸をひらく。左へドラッグ、または左矢印キー" aria-expanded="false" aria-controls="room-scene">
+              <span class="door-instruction"><span aria-hidden="true" class="door-arrow">←</span><span id="door-label">引いてひらく</span></span>
+            </button>
+          </div>
+          <div class="sliding-door door-right" id="sliding-door-right" data-side="right">
+            <img src="assets/door.webp" alt="" draggable="false" />
+            <span class="door-metal" aria-hidden="true"></span>
+            <button class="door-handle" id="door-handle-right" aria-label="右の戸をひらく。右へドラッグ、または右矢印キー" aria-expanded="false" aria-controls="room-scene">
+              <span class="door-instruction"><span aria-hidden="true" class="door-arrow">→</span></span>
             </button>
           </div>
           <button class="door-return" id="door-return" hidden>
-            戸を戻す <span aria-hidden="true">→</span>
+            戸を戻す <span aria-hidden="true">→ ←</span>
           </button>
         </div>
         <div class="hero-copy">
@@ -77,13 +76,9 @@
         <div class="thought-copy">
           <h2>残したい柱から、<br />間取りを考える。</h2>
           <div class="prose">
-            <p>
-              台所に立つと、家族の顔が見えない。<br />南の庭は明るいのに、家の中は薄暗い。
-            </p>
-            <p>間取りを少しひらくだけで、<br />変わる暮らしがあります。</p>
-            <p>
-              使い込んだ柱、頭上の太い梁。<br />この家らしさを残しながら、<br />今の暮らしに合う形を考えます。
-            </p>
+            <p><span class="thought-line" style="--line-delay:0.000s">台所に立つと、家族の顔が見えない。</span><span class="thought-line" style="--line-delay:0.075s">南の庭は明るいのに、家の中は薄暗い。</span></p>
+            <p><span class="thought-line" style="--line-delay:0.150s">間取りを少しひらくだけで、</span><span class="thought-line" style="--line-delay:0.225s">変わる暮らしがあります。</span></p>
+            <p><span class="thought-line" style="--line-delay:0.300s">使い込んだ柱、頭上の太い梁。</span><span class="thought-line" style="--line-delay:0.375s">この家らしさを残しながら、</span><span class="thought-line" style="--line-delay:0.450s">今の暮らしに合う形を考えます。</span></p>
           </div>
         </div>
       </section>
@@ -138,8 +133,8 @@
               stroke="#454c40"
               stroke-width="9"
             >
-              <path d="M125 374V74H775V374" />
-              <path d="M125 374H200M300 374H480M580 374H775" />
+              <path pathLength="1" d="M125 374V74H775V374" />
+              <path pathLength="1" d="M125 374H200M300 374H480M580 374H775" />
             </g>
             <g stroke="#68725e" stroke-width="2">
               <path d="M200 368H300M200 380H300M480 368H580M480 380H580" />
@@ -208,7 +203,7 @@
                 stroke-width="2"
               />
             </g>
-            <g fill="#454c40">
+            <g class="retained-columns" fill="#454c40">
               <rect x="371" y="185" width="18" height="18" />
               <rect x="371" y="265" width="18" height="18" />
             </g>

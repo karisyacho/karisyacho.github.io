@@ -962,3 +962,107 @@ a:hover,
     transition: none;
   }
 }
+/* Two leaves share one opening: a narrow glimpse of the garden, then a clear room. */
+.sliding-door {
+  width: 37%;
+  overflow: hidden;
+  border: 1px solid #55351d;
+  transition: transform .72s cubic-bezier(.22,.68,.18,1);
+  will-change: auto;
+}
+.door-left { inset: 0 auto 0 0; box-shadow: 9px 0 22px #14100d55, inset -4px 0 0 #39281a; }
+.door-right { inset: 0 0 0 auto; box-shadow: -9px 0 22px #14100d55; }
+.sliding-door::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 5px 0 3px #ffffff16, inset -5px 0 4px #241a1370, inset 0 5px 8px #271b1340;
+}
+.sliding-door > img { width: 100%; height: 100%; object-fit: fill; }
+.door-right > img {
+  position: absolute;
+  width: 182%;
+  height: 146%;
+  max-width: none;
+  left: -25%;
+  top: -18%;
+  object-fit: fill;
+  transform: rotate(180deg);
+  filter: brightness(.94) saturate(.9);
+}
+/* The right leaf uses a different portion of the timber; its recess faces the gap. */
+.door-metal {
+  position: absolute;
+  top: 50.8%;
+  left: 4.1%;
+  width: 5.8%;
+  height: 6.7%;
+  min-width: 12px;
+  border: 2px solid #b7b6a7;
+  background: linear-gradient(90deg,#57594f,#9d9f90 35%,#898c7c 85%,#4c4d43);
+  box-shadow: 0 0 0 1px #5a4935, inset 2px 2px 4px #262a25;
+}
+.is-dragging .sliding-door, .instant-door .sliding-door { transition: none; }
+.is-dragging .door-handle { cursor: grabbing; }
+.door-instruction { gap: 12px; bottom: 29%; font-size: clamp(13px,1.4vw,20px); }
+.door-return { z-index: 2; }
+/* Each entrance supports its content: reading rhythm, drawn plans, opening to the garden. */
+@keyframes settle-copy { from { opacity: .25; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes open-line { from { transform: scaleX(.04); } to { transform: scaleX(1); } }
+@keyframes draw-plan { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes garden-arrival { from { transform: translateY(20px); opacity: .7; } to { transform: none; opacity: 1; } }
+.has-entered.hero-copy h1,
+.has-entered.thought .section-label,
+.has-entered.thought h2,
+.has-entered.thought .thought-line,
+.has-entered.plan-heading h2,
+.has-entered.plan-heading .plan-intro,
+.has-entered.consult-heading h2,
+.has-entered.consult-heading > p,
+.has-entered.consult-content .consult-topics > div,
+.has-entered.consult-content .memo-invite,
+.has-entered.closing-image p { animation: settle-copy .65s cubic-bezier(.2,.65,.25,1) both; }
+.has-entered.thought .prose p:nth-child(1),
+.has-entered.consult-content .consult-topics > div:nth-child(1) { animation-delay: .10s; }
+.has-entered.thought .prose p:nth-child(2),
+.has-entered.consult-content .consult-topics > div:nth-child(2),
+.has-entered.plan-heading .plan-intro,
+.has-entered.consult-heading > p { animation-delay: .22s; }
+.has-entered.thought .prose p:nth-child(3),
+.has-entered.consult-content .consult-topics > div:nth-child(3),
+.has-entered.consult-content .memo-invite { animation-delay: .34s; }
+.thought { position: relative; }
+.thought::before { content: ""; position: absolute; inset: -1px 0 auto; height: 1px; background: #78816d; transform-origin: left; }
+.thought.has-entered::before { animation: open-line 1s cubic-bezier(.2,.65,.25,1) both; }
+.floorplan .plan-before { opacity: 1; transition: opacity .32s, transform .45s cubic-bezier(.2,.65,.25,1); transform-origin: 380px 194px; }
+.floorplan .plan-after { opacity: 0; transition: opacity .5s .12s, transform .55s cubic-bezier(.2,.65,.25,1); transform: translateY(5px); }
+.floorplan.is-after .plan-before { opacity: 0; transform: translateY(-8px); }
+.floorplan.is-after .plan-after { opacity: 1; transform: none; }
+.floorplan .retained-columns { transform-box: fill-box; transform-origin: center; transition: filter .4s; }
+.floorplan.is-after .retained-columns { filter: drop-shadow(0 0 4px #68725e60); }
+.has-entered.plan-workspace .outer-walls path { animation: draw-plan 1.15s cubic-bezier(.25,.6,.3,1) both; stroke-dasharray: 1; }
+.plan-instant *, .plan-instant { transition: none !important; animation: none !important; }
+.closing-image { overflow: hidden; }
+.has-entered.closing-image img { animation: garden-arrival .95s cubic-bezier(.2,.65,.25,1) both; }
+.has-entered.closing-image p { animation-delay: .16s; }
+.memo-panel:not([hidden]) { animation: settle-copy .32s cubic-bezier(.2,.65,.25,1) both; transition: opacity .18s, transform .18s cubic-bezier(.2,.65,.25,1); }
+.memo-panel.memo-closing { animation: none; opacity: 0; transform: translateY(-5px); }
+.memo-panel.memo-instant { animation: none; transition: none; }
+@media (max-width: 600px) {
+  .sliding-door { width: 37%; }
+  .door-instruction { flex-direction: column; gap: 5px; font-size: 12px; bottom: 28%; }
+  .door-right .door-instruction { flex-direction: column-reverse; }
+  .door-arrow { font-size: 23px; }
+  .door-return { bottom: 18px; left: 18px; }
+  .door-metal { border-width: 1px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+.door-left .door-instruction { top: 60%; bottom: auto; right: 8%; width: max-content; flex-direction: row; gap: 8px; }
+.door-right .door-instruction { top: 60%; bottom: auto; left: 5%; width: max-content; }
+
+.thought-line { display: block; }
+.has-entered.thought .thought-line { animation-delay: var(--line-delay, 0s); }
