@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta
+      name="description"
+      content="古い木の家を、今の暮らしに。ひき戸工務店は、木造住宅の改修をテーマにした架空の工務店の見本サイトです。"
+    />
+    <title>ひき戸工務店｜古い木の家のリフォーム</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">本文へ進む</a>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="ひき戸工務店 トップ"
+        >ひき戸工務店</a
+      >
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span class="menu-label">メニュー</span
+        ><span class="menu-lines" aria-hidden="true"></span>
+      </button>
+      <nav
+        id="site-menu"
+        class="site-menu"
+        aria-label="ページ内メニュー"
+        hidden
+      >
+        <a href="#thought">家との向き合い方</a><a href="#plan">間取りをひらく</a
+        ><a href="#consultation">改修の相談</a>
+        <small>架空の工務店の見本サイト</small>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="opening" aria-labelledby="hero-title">
+        <div class="room-scene" id="room-scene">
+          <img
+            class="room-image"
+            src="assets/room.webp"
+            alt="古い梁と柱を残した台所。大きな開口の向こうに緑の庭が広がる、改修後の住まいのイメージ"
+            fetchpriority="high"
+            width="1536"
+            height="1024"
+          />
+          <div class="sliding-door" id="sliding-door">
+            <img src="assets/door.webp" alt="" draggable="false" /><button
+              class="door-handle"
+              id="door-handle"
+              aria-label="戸をひらく。左矢印キーでも開けられます"
+              aria-expanded="false"
+              aria-controls="room-scene"
+            >
+              <span class="door-instruction"
+                ><span aria-hidden="true" class="door-arrow">←</span
+                ><span id="door-label">戸をひらく</span></span
+              >
+            </button>
+          </div>
+          <button class="door-return" id="door-return" hidden>
+            戸を戻す <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="hero-copy">
+          <h1 id="hero-title">台所から、庭まで。</h1>
+          <p>古い木の家のリフォーム</p>
+        </div>
+        <p class="sr-only" id="door-status" aria-live="polite"></p>
+      </section>
+      <section id="thought" class="thought section-width">
+        <p class="section-label">家との向き合い方</p>
+        <div class="thought-copy">
+          <h2>残したい柱から、<br />間取りを考える。</h2>
+          <div class="prose">
+            <p>
+              台所に立つと、家族の顔が見えない。<br />南の庭は明るいのに、家の中は薄暗い。
+            </p>
+            <p>間取りを少しひらくだけで、<br />変わる暮らしがあります。</p>
+            <p>
+              使い込んだ柱、頭上の太い梁。<br />この家らしさを残しながら、<br />今の暮らしに合う形を考えます。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="plan-section" id="plan" aria-labelledby="plan-title">
+        <div class="plan-heading section-width">
+          <p class="section-label">間取りをひらく</p>
+          <h2 id="plan-title">壁の向こうに、<br />庭があった。</h2>
+          <p class="plan-intro">
+            細かく分かれていた台所と居間を、庭へつながるひと続きの場所に。<br
+              class="desktop-break"
+            />同じ家の改修前と改修後を、図面で比べてみてください。
+          </p>
+        </div>
+        <div class="plan-workspace section-width">
+          <div class="plan-controls" role="group" aria-label="図面の切り替え">
+            <button class="active" data-plan="before" aria-pressed="true">
+              改修前</button
+            ><span aria-hidden="true">／</span
+            ><button data-plan="after" aria-pressed="false">改修後</button>
+          </div>
+          <svg
+            class="floorplan"
+            viewBox="0 0 900 510"
+            role="img"
+            aria-labelledby="plan-svg-title plan-svg-desc"
+          >
+            <title id="plan-svg-title">改修前の間取り</title>
+            <desc id="plan-svg-desc">
+              台所と居間、廊下が壁で分かれています。改修後では間仕切りを撤去し、柱を残します。
+            </desc>
+            <defs>
+              <pattern
+                id="garden-hatch"
+                patternUnits="userSpaceOnUse"
+                width="12"
+                height="12"
+              >
+                <path d="M0 12L12 0" stroke="#c7cbbd" stroke-width=".7" />
+              </pattern>
+            </defs>
+            <rect
+              x="125"
+              y="374"
+              width="650"
+              height="95"
+              fill="url(#garden-hatch)"
+            />
+            <text x="450" y="432" class="garden-label">庭</text>
+            <g
+              class="outer-walls"
+              fill="none"
+              stroke="#454c40"
+              stroke-width="9"
+            >
+              <path d="M125 374V74H775V374" />
+              <path d="M125 374H200M300 374H480M580 374H775" />
+            </g>
+            <g stroke="#68725e" stroke-width="2">
+              <path d="M200 368H300M200 380H300M480 368H580M480 380H580" />
+              <path d="M200 374H300M480 374H580" />
+            </g>
+            <g class="plan-before">
+              <g fill="none" stroke="#454c40" stroke-width="7">
+                <path
+                  d="M380 74V264M380 324V374M125 274H245M310 274H380M380 194H610M670 194H775"
+                />
+              </g>
+              <g class="room-labels">
+                <text x="250" y="181">台 所</text>
+                <text x="577" y="305">居 間</text>
+                <text x="577" y="143">廊 下</text>
+              </g>
+              <path
+                d="M245 274A65 65 0 0 1 310 209V274"
+                fill="none"
+                stroke="#7d8274"
+                stroke-width="1.5"
+              />
+            </g>
+            <g class="plan-after" visibility="hidden">
+              <g
+                fill="none"
+                stroke="#a28160"
+                stroke-width="2"
+                stroke-dasharray="7 7"
+              >
+                <path
+                  d="M380 74V185M380 203V264M380 324V374M125 274H245M310 274H371M389 194H610M670 194H775"
+                />
+              </g>
+              <rect
+                x="161"
+                y="108"
+                width="163"
+                height="53"
+                fill="#c7cbbe"
+                stroke="#68725e"
+              />
+              <path d="M161 133H324" stroke="#68725e" />
+              <ellipse
+                cx="451"
+                cy="282"
+                rx="70"
+                ry="43"
+                fill="#c7cbbe"
+                stroke="#68725e"
+              />
+              <path
+                d="M416 333V345M451 335V350M486 333V345"
+                stroke="#68725e"
+                stroke-width="8"
+              />
+              <g class="room-labels">
+                <text x="245" y="216">台 所</text>
+                <text x="636" y="294">居 間</text>
+              </g>
+              <path d="M545 315V428" stroke="#68725e" stroke-width="2" />
+              <path
+                d="M538 417L545 429L552 417"
+                fill="none"
+                stroke="#68725e"
+                stroke-width="2"
+              />
+            </g>
+            <g fill="#454c40">
+              <rect x="371" y="185" width="18" height="18" />
+              <rect x="371" y="265" width="18" height="18" />
+            </g>
+            <g class="plan-after" visibility="hidden">
+              <path d="M381 194L444 112H515" stroke="#68725e" fill="none" />
+              <text x="456" y="100" class="annotation">残す柱</text>
+            </g>
+            <text x="819" y="88" class="north">北</text>
+            <path
+              d="M831 128V99M825 108L831 98L837 108"
+              stroke="#68725e"
+              fill="none"
+            />
+          </svg>
+          <div class="plan-caption">
+            <p id="plan-caption" aria-live="polite">
+              改修前 ── 壁で分かれ、台所から庭や居間が見えにくい間取り。
+            </p>
+            <div class="legend">
+              <span><i class="column-key"></i>残す柱</span
+              ><span><i class="wall-key"></i>取り除く壁（改修後に表示）</span>
+            </div>
+          </div>
+        </div>
+        <p class="plan-footnote section-width">
+          改修の考え方を示す架空の図面です。実際に撤去できる壁は、建物の構造や傷みを調べて判断します。
+        </p>
+      </section>
+      <section class="consultation section-width" id="consultation">
+        <p class="section-label">改修の相談</p>
+        <div class="consult-heading">
+          <h2>「この家、どうしよう」<br />からで、大丈夫です。</h2>
+          <p>
+            直す場所も、予算も、まだ決まっていない。<br />まずは、暮らしの中で気になることから。
+          </p>
+        </div>
+        <div class="consult-content">
+          <div>
+            <h3>最初に、一緒に確かめること</h3>
+            <dl class="consult-topics">
+              <div>
+                <dt>今の暮らし</dt>
+                <dd>
+                  寒い、暗い、行き来しにくい。<br />毎日感じている不便を聞きます。
+                </dd>
+              </div>
+              <div>
+                <dt>残したいもの</dt>
+                <dd>
+                  柱や建具、庭の眺め。<br />この家で好きな場所も教えてください。
+                </dd>
+              </div>
+              <div>
+                <dt>これからのこと</dt>
+                <dd>
+                  誰と、どんなふうに住んでいくか。<br />時期や費用の希望を整理します。
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="memo-invite">
+            <p>ボタンを押すと、<br />相談メモの記入欄が開きます。</p>
+            <button
+              class="text-cta"
+              id="open-memo"
+              aria-expanded="false"
+              aria-controls="memo-panel"
+            >
+              わが家の改修を相談する <span aria-hidden="true">↗</span></button
+            ><small
+              >このサイトは架空の見本です。<br />メモは外部へ送信されません。</small
+            >
+          </div>
+        </div>
+        <div class="memo-panel" id="memo-panel" hidden>
+          <div class="memo-heading">
+            <h3>わが家の相談メモ</h3>
+            <button id="close-memo" class="quiet-button">閉じる ×</button>
+          </div>
+          <p>
+            気になるところだけ書いてください。名前や住所は必要ありません。<br />保存したメモは、実際の工務店へ相談するときの控えに使えます。
+          </p>
+          <form id="memo-form">
+            <label
+              >今、困っていること<textarea
+                name="problem"
+                rows="3"
+                placeholder="例：冬の台所が寒い。料理中に家族と話しづらい。"
+              ></textarea></label
+            ><label
+              >残したい場所や好きなところ<textarea
+                name="keep"
+                rows="3"
+                placeholder="例：祖父の代からある柱。縁側から見える庭。"
+              ></textarea>
+            </label>
+            <div class="memo-fields">
+              <label
+                >相談したい時期<select name="timing">
+                  <option value="まだ決めていない">まだ決めていない</option>
+                  <option>半年以内</option>
+                  <option>1年くらい先</option>
+                  <option>まずは話を聞きたい</option>
+                </select></label
+              ><label
+                >予算の希望（任意）<input
+                  name="budget"
+                  placeholder="例：まずは費用の目安を知りたい"
+                  maxlength="120"
+              /></label>
+            </div>
+            <div class="memo-actions">
+              <button type="submit" class="solid-button">
+                このブラウザに保存する</button
+              ><button type="button" id="copy-memo" class="line-button">
+                メモをコピー</button
+              ><button type="button" id="download-memo" class="line-button">
+                テキストでダウンロード
+              </button>
+            </div>
+            <p id="memo-status" class="memo-status" role="status"></p>
+            <p class="memo-privacy">
+              「保存する」を押すと、この端末のブラウザに残ります。共用端末ではコピーかダウンロードをご利用ください。
+            </p>
+            <button type="button" id="delete-memo" class="quiet-button">
+              保存したメモを削除する
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="closing-image" aria-label="庭につながる住まい">
+        <img
+          src="assets/room.webp"
+          alt="木の梁が続く室内から、木々の茂る庭を眺める"
+          loading="lazy"
+          width="1536"
+          height="1024"
+        />
+        <p>この家で、<br />もう一度暮らそう。</p>
+      </section>
+    </main>
+    <footer class="site-footer section-width">
+      <a class="wordmark" href="#">ひき戸工務店</a>
+      <p>古い木の家を、今の暮らしに。</p>
+      <div class="footer-bottom">
+        <p>
+          架空の工務店の見本サイトです。<br />写真はAIで作成したイメージで、施工実績ではありません。
+        </p>
+        <a href="#">ページのはじめへ ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
