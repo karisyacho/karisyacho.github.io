@@ -9,8 +9,8 @@
       content="古い木の家を、今の暮らしに。ひき戸工務店は、木造住宅の改修をテーマにした架空の工務店の見本サイトです。"
     />
     <title>ひき戸工務店｜古い木の家のリフォーム</title>
-    <link rel="stylesheet" href="style.css?v=doors2" />
-    <script src="script.js?v=doors2" defer></script>
+    <link rel="stylesheet" href="style.css?v=works3" />
+    <script src="script.js?v=works3" defer></script>
   </head>
   <body>
     <a href="#main" class="skip">本文へ進む</a>
@@ -18,6 +18,10 @@
       <a class="wordmark" href="#" aria-label="ひき戸工務店 トップ"
         >ひき戸工務店</a
       >
+      <nav class="header-links" aria-label="主なご案内">
+        <a href="#works">工事・費用</a>
+        <a class="header-team" href="#team">相談する人</a>
+      </nav>
       <button
         class="menu-toggle"
         aria-expanded="false"
@@ -32,8 +36,10 @@
         aria-label="ページ内メニュー"
         hidden
       >
-        <a href="#thought">家との向き合い方</a><a href="#plan">間取りをひらく</a
-        ><a href="#consultation">改修の相談</a>
+        <a href="#works">頼める工事・費用</a>
+        <a href="#plan">間取りのモデルプラン</a>
+        <a href="#team">相談する人</a>
+        <a href="#consultation">相談から工事まで</a>
         <small>架空の工務店の見本サイト</small>
       </nav>
     </header>
@@ -67,29 +73,92 @@
         </div>
         <div class="hero-copy">
           <h1 id="hero-title">台所から、庭まで。</h1>
-          <p>古い木の家のリフォーム</p>
+          <p>台所の交換も、間取りの変更も、実家全体の改修も。<br />古い木の家を、今の暮らしに合わせて直します。</p>
+          <a class="inline-link hero-link" href="#works">頼める工事と費用を見る <span aria-hidden="true">↓</span></a>
         </div>
         <p class="sr-only" id="door-status" aria-live="polite"></p>
       </section>
-      <section id="thought" class="thought section-width">
-        <p class="section-label">家との向き合い方</p>
+      <section id="thought" class="thought section-width" aria-labelledby="thought-title">
+        <p class="section-label">頼める工事・費用</p>
         <div class="thought-copy">
-          <h2>残したい柱から、<br />間取りを考える。</h2>
+          <h2 id="thought-title">どこを<br class="desktop-break" />直したいですか。</h2>
           <div class="prose">
-            <p><span class="thought-line" style="--line-delay:0.000s">台所に立つと、家族の顔が見えない。</span><span class="thought-line" style="--line-delay:0.075s">南の庭は明るいのに、家の中は薄暗い。</span></p>
-            <p><span class="thought-line" style="--line-delay:0.150s">間取りを少しひらくだけで、</span><span class="thought-line" style="--line-delay:0.225s">変わる暮らしがあります。</span></p>
-            <p><span class="thought-line" style="--line-delay:0.300s">使い込んだ柱、頭上の太い梁。</span><span class="thought-line" style="--line-delay:0.375s">この家らしさを残しながら、</span><span class="thought-line" style="--line-delay:0.450s">今の暮らしに合う形を考えます。</span></p>
+            <p>毎日の台所から、家全体の住み継ぎまで。<br />直したい場所と、残したいものを一緒に考えます。</p>
+            <nav class="work-shortcuts" aria-label="工事の種類">
+              <a href="#kitchen">台所を使いやすく <span aria-hidden="true">↓</span></a>
+              <a href="#rooms">二部屋をつなぐ <span aria-hidden="true">↓</span></a>
+              <a href="#whole-house">実家全体を住み継ぐ <span aria-hidden="true">↓</span></a>
+            </nav>
           </div>
         </div>
       </section>
+      <section class="works section-width" id="works" aria-labelledby="works-title">
+        <div class="works-heading">
+          <h2 id="works-title">工事の中身と、<br />費用を知る。</h2>
+          <p>費用は、設備の選び方や家の状態で変わります。<br />下の金額は他社が公開している施工事例です。<br />ひき戸工務店の料金や見積額ではありません。</p>
+        </div>
+        <article class="work-row" id="kitchen">
+          <div class="work-summary">
+            <p class="work-type">水まわりの改修</p>
+            <h3>台所を使いやすく</h3>
+            <p>キッチンの交換に合わせて、収納や作業台の位置も見直します。</p>
+          </div>
+          <dl class="work-details">
+            <div><dt>できる工事</dt><dd>キッチンの交換、収納の造作、給排水・電気の工事、床や壁の張り替え。</dd></div>
+            <div><dt>見積の前に確かめること</dt><dd>設備の仕様、配管を動かす距離、床下の傷み。台所の位置を変えるかどうかも費用に関わります。</dd></div>
+          </dl>
+          <div class="work-reference">
+            <a class="reference-source" href="https://www.nakanoya.co.jp/casestudy/10564/" target="_blank" rel="noopener noreferrer">ナカノヤ｜他社の施工事例 ↗</a>
+            <p class="reference-price">168<span>万円（税込）</span></p>
+            <p class="reference-duration">工期 <strong>8日</strong></p>
+            <p class="reference-context">墨田区・築40年。キッチンと食器棚の撤去、隣の洗面室との壁の変更を含む事例。</p>
+          </div>
+        </article>
+        <article class="work-row" id="rooms">
+          <div class="work-summary">
+            <p class="work-type">間取りの改修</p>
+            <h3>二部屋をつなぐ</h3>
+            <p>台所と居間の間仕切りを見直し、家族の顔が見えるひと続きの場所へ。</p>
+            <a class="inline-link" href="#plan">間取りのモデルプランを見る ↓</a>
+          </div>
+          <dl class="work-details">
+            <div><dt>できる工事</dt><dd>間仕切りの撤去、床・壁の仕上げ、建具や収納の変更。必要に応じて梁を補強します。</dd></div>
+            <div><dt>見積の前に確かめること</dt><dd>取り除ける壁か、柱や梁の補強が必要か。床の段差や配線の位置も現地で調べます。</dd></div>
+          </dl>
+          <div class="work-reference">
+            <a class="reference-source" href="https://www.39yamanaka.com/works/w_dining/jire-5.html" target="_blank" rel="noopener noreferrer">やまなか工務店｜他社の施工事例 ↗</a>
+            <p class="reference-price"><span class="price-prefix">約</span>99<span>万円（税込）</span></p>
+            <p class="reference-duration">工期 <strong>約7日</strong></p>
+            <p class="reference-context">和泉市。間仕切り撤去、床・壁・建具・収納の工事と梁の補強を含む事例。</p>
+          </div>
+        </article>
+        <article class="work-row" id="whole-house">
+          <div class="work-summary">
+            <p class="work-type">家全体の改修</p>
+            <h3>実家全体を住み継ぐ</h3>
+            <p>水まわりも間取りも一緒に見直し、残したい柱や梁を生かす計画を考えます。</p>
+          </div>
+          <dl class="work-details">
+            <div><dt>できる工事</dt><dd>間取りと水まわりの変更、内装の改修。断熱や構造の補強も、家の状態に合わせて検討します。</dd></div>
+            <div><dt>見積の前に確かめること</dt><dd>直す面積、柱や基礎の傷み、断熱・耐震の工事範囲。仮住まいの要否も相談します。</dd></div>
+          </dl>
+          <div class="work-reference">
+            <a class="reference-source" href="https://upreform.jp/works/all/1999/" target="_blank" rel="noopener noreferrer">DOのリフォーム｜他社の施工事例 ↗</a>
+            <p class="reference-price">1,840<span>万円（税込）</span></p>
+            <p class="reference-duration">工期 <strong>100日</strong></p>
+            <p class="reference-context">京都市右京区・築100年、95㎡の全面改装事例。</p>
+          </div>
+        </article>
+        <p class="works-note">工事の範囲が異なる3つの事例です。金額・工期をそのまま自宅に当てはめず、詳しい条件は各社の掲載ページでご確認ください。</p>
+      </section>
       <section class="plan-section" id="plan" aria-labelledby="plan-title">
         <div class="plan-heading section-width">
-          <p class="section-label">間取りをひらく</p>
+          <p class="section-label">間取りのモデルプラン</p>
           <h2 id="plan-title">壁の向こうに、<br />庭があった。</h2>
           <p class="plan-intro">
             細かく分かれていた台所と居間を、庭へつながるひと続きの場所に。<br
               class="desktop-break"
-            />同じ家の改修前と改修後を、図面で比べてみてください。
+            />架空の住まいを想定したモデルプランです。改修前後を切り替えて比べられます。
           </p>
         </div>
         <div class="plan-workspace section-width">
@@ -232,8 +301,31 @@
           改修の考え方を示す架空の図面です。実際に撤去できる壁は、建物の構造や傷みを調べて判断します。
         </p>
       </section>
+      <section class="team-section section-width" id="team" aria-labelledby="team-title">
+        <div class="team-heading">
+          <p class="section-label">相談する人</p>
+          <h2 id="team-title">図面の前に、<br />暮らしの話を。</h2>
+        </div>
+        <div class="team-layout">
+          <figure class="team-photo">
+            <img src="assets/consultation.webp" alt="相談・設計担当が施主の話を聞き、大工と一緒に古い木の家を調べる場面のイメージ" width="1536" height="1024" loading="lazy" />
+            <figcaption>担当者と現地調査を描いたイメージ（AI生成）</figcaption>
+          </figure>
+          <div class="team-copy">
+            <dl class="team-roles">
+              <div><dt>相談・設計担当</dt><dd>今の不便や予算を聞き、直す範囲と間取りを整理します。見積の内容も一緒に確認する役割です。</dd></div>
+              <div><dt>大工</dt><dd>柱や床下の状態を調べ、残せる部分と直す部分を確かめます。図面だけでは分からない家の状態を伝えます。</dd></div>
+            </dl>
+            <div class="team-questions">
+              <h3>こんなことから聞いてください。</h3>
+              <p>「この壁は取れる？」<br />「住みながら工事できる？」<br />「予算の中で、どこから直せる？」</p>
+            </div>
+            <p class="team-note">架空の工務店を想定した役割紹介です。実在する担当者の紹介ではありません。</p>
+          </div>
+        </div>
+      </section>
       <section class="consultation section-width" id="consultation">
-        <p class="section-label">改修の相談</p>
+        <p class="section-label">相談から工事まで</p>
         <div class="consult-heading">
           <h2>「この家、どうしよう」<br />からで、大丈夫です。</h2>
           <p>
@@ -242,29 +334,17 @@
         </div>
         <div class="consult-content">
           <div>
-            <h3>最初に、一緒に確かめること</h3>
-            <dl class="consult-topics">
-              <div>
-                <dt>今の暮らし</dt>
-                <dd>
-                  寒い、暗い、行き来しにくい。<br />毎日感じている不便を聞きます。
-                </dd>
-              </div>
-              <div>
-                <dt>残したいもの</dt>
-                <dd>
-                  柱や建具、庭の眺め。<br />この家で好きな場所も教えてください。
-                </dd>
-              </div>
-              <div>
-                <dt>これからのこと</dt>
-                <dd>
-                  誰と、どんなふうに住んでいくか。<br />時期や費用の希望を整理します。
-                </dd>
-              </div>
-            </dl>
+            <h3>工事を決めるまでの流れ</h3>
+            <ol class="consult-process">
+              <li><h4>相談</h4><p>不便に感じる場所、残したいもの、予算と時期を聞きます。</p></li>
+              <li><h4>現地調査</h4><p>寸法や配管、柱・床下の状態を確認。調査や見積に費用がかかる場合は、実施前に伝えます。</p></li>
+              <li><h4>プラン・見積</h4><p>設備代と工事費を分けて説明します。見積に含む範囲と、追加費用が生じる条件も確認します。</p></li>
+              <li><h4>契約・工事</h4><p>内容・金額・工期に合意してから契約へ。工事中に追加が必要になった場合も、内容と金額を伝え、合意してから進めます。</p></li>
+            </ol>
           </div>
           <div class="memo-invite">
+            <h3>工事中も台所を使える？</h3>
+            <p class="consult-answer">流し台を外す日と、水を止める時間帯を工程表で確かめます。使えない期間の過ごし方も、着工前に相談します。</p>
             <p>ボタンを押すと、<br />相談メモの記入欄が開きます。</p>
             <button
               class="text-cta"
@@ -272,7 +352,7 @@
               aria-expanded="false"
               aria-controls="memo-panel"
             >
-              わが家の改修を相談する <span aria-hidden="true">↗</span></button
+              相談メモを書く <span aria-hidden="true">↗</span></button
             ><small
               >このサイトは架空の見本です。<br />メモは外部へ送信されません。</small
             >
@@ -350,7 +430,7 @@
       <p>古い木の家を、今の暮らしに。</p>
       <div class="footer-bottom">
         <p>
-          架空の工務店の見本サイトです。<br />写真はAIで作成したイメージで、施工実績ではありません。
+          架空の工務店の見本サイトです。お問い合わせは受け付けていません。<br />写真はAIで作成したイメージです。掲載した他社の事例は各社の施工実績です。
         </p>
         <a href="#">ページのはじめへ ↑</a>
       </div>

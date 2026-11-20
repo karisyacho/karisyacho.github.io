@@ -112,7 +112,7 @@
 
   // Content stays readable by default. Observer adds a one-time entrance only
   // when a section arrives; no opacity gate or scroll interception is needed.
-  const sections = document.querySelectorAll(".hero-copy, .thought, .plan-heading, .plan-workspace, .consult-heading, .consult-content, .closing-image");
+  const sections = document.querySelectorAll(".hero-copy, .thought, .plan-heading, .plan-workspace, .work-row, .team-heading, .team-layout, .consult-heading, .consult-content, .closing-image");
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
