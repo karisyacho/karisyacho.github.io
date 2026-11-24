@@ -10,16 +10,17 @@ const revealTargets = [
   '.journal-card',
 ].join(', ');
 
-export function setupPageMotion(main, isKeyboardInput) {
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+export function setupPageMotion(main, enabled) {
   const controller = new AbortController();
   const { signal } = controller;
   const backdrop = main.querySelector('.hero-backdrop');
   const hero = backdrop?.parentElement;
   let observer;
+  let heroObserver;
   let frame = 0;
+  const targets = Array.from(main.querySelectorAll(revealTargets));
 
-  if (!reduced.matches && 'IntersectionObserver' in window) {
+  if (enabled && 'IntersectionObserver' in window) {
     const pending = new Set();
     function reveal(element, animate, delay = 0) {
       if (!pending.delete(element)) return;
@@ -33,14 +34,13 @@ export function setupPageMotion(main, isKeyboardInput) {
     observer = new IntersectionObserver(entries => {
       let stagger = 0;
       for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        const animate = !isKeyboardInput() && !reduced.matches;
+        if (!entry.isIntersecting || entry.intersectionRatio < .2) continue;
         const card = entry.target.matches('.product-card, .collection-detail, .journal-card, .home-editorial > a');
-        reveal(entry.target, animate, card ? Math.min(stagger++ * 72, 216) : 0);
+        reveal(entry.target, true, card ? Math.min(stagger++ * 110, 660) : 0);
       }
-    }, { rootMargin: '0px 0px -12px', threshold: .08 });
+    }, { rootMargin: '0px 0px -24px', threshold: .2 });
 
-    for (const element of main.querySelectorAll(revealTargets)) {
+    for (const element of targets) {
       if (element.getBoundingClientRect().bottom <= 0) continue;
       element.classList.add('reveal-pending');
       pending.add(element);
@@ -52,23 +52,31 @@ export function setupPageMotion(main, isKeyboardInput) {
     }, { signal });
   }
 
-  if (backdrop) {
+  if (backdrop && enabled) {
+    if ('IntersectionObserver' in window) {
+      heroObserver = new IntersectionObserver(([entry]) => {
+        hero.classList.toggle('ribbon-in-view', entry.isIntersecting && entry.intersectionRatio >= .12);
+      }, { threshold: .12 });
+      heroObserver.observe(hero);
+    } else hero.classList.add('ribbon-in-view');
     function updateRibbon() {
       frame = 0;
-      const offset = reduced.matches ? 0 : Math.max(0, Math.min(-hero.getBoundingClientRect().top * .085, 64));
+      const offset = Math.max(0, Math.min(-hero.getBoundingClientRect().top * .13, 84));
       backdrop.style.setProperty('--ribbon-scroll-offset', offset.toFixed(1) + 'px');
     }
     function scheduleRibbon() {
       if (!frame) frame = requestAnimationFrame(updateRibbon);
     }
     window.addEventListener('scroll', scheduleRibbon, { passive: true, signal });
-    reduced.addEventListener('change', scheduleRibbon, { signal });
     updateRibbon();
   }
 
   return () => {
     controller.abort();
     observer?.disconnect();
+    heroObserver?.disconnect();
     cancelAnimationFrame(frame);
+    hero?.classList.remove('ribbon-in-view');
+    for (const element of targets) element.classList.remove('reveal-pending', 'reveal-in');
   };
 }

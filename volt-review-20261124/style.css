@@ -55,6 +55,19 @@ h1[tabindex]:focus, main:focus { outline: none; }
   content: ""; position: absolute; left: 0; right: 0; bottom: 19px; border-bottom: 1px solid;
 }
 .header-tools { gap: 7px; justify-self: end; }
+.motion-toggle {
+  display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; min-width: 44px;
+  padding: 0 7px; color: #c1c1b4; background: #090909ac; border: 1px solid transparent;
+  cursor: pointer; font: 700 9px/1 ui-monospace, monospace; letter-spacing: .09em;
+}
+.motion-toggle[aria-pressed="false"] { color: var(--volt); border-color: #535942; }
+.motion-toggle:hover, .motion-toggle:focus-visible { color: var(--volt); border-color: #7f895b; }
+.motion-toggle svg { width: 15px; height: 15px; }
+.motion-toggle[aria-pressed="false"] svg:nth-child(2),
+.motion-toggle[aria-pressed="true"] svg:first-child { display: none; }
+@media (max-width: 1080px) {
+  .header:not(.header--home) .motion-toggle span { display: none; }
+}
 .icon-btn { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; padding: 0; position: relative; }
 .icon-btn:hover { color: var(--volt); }
 .icon-btn svg { width: 21px; height: 21px; }

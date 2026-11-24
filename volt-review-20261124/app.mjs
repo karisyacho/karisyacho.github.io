@@ -1,6 +1,6 @@
 import { angles, articles, colors, craftsmanship, products, sizes, story, technology } from './catalog.mjs';
 import { addItem, clearCart, readCart, readFavorites, setItemQuantity, toggleFavorite } from './shop.mjs';
-import { setupPageMotion } from './page-motion.mjs';
+import { setupPageMotion } from './page-motion.mjs?v=motion-preview';
 import { setupTurntable } from './turntable.mjs';
 
 const main = document.querySelector('#main');
@@ -31,6 +31,7 @@ const iconPaths = {
   check: '<path d="m4 12 5 5L20 6"/>',
   turn: '<path d="M20 11a8 8 0 1 0-2 6m-1-9 3 3 3-3"/>',
   pause: '<path d="M9 6v12m6-12v12"/>',
+  play: '<path d="m9 5 11 7-11 7z"/>',
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${iconPaths[name]}</svg>`;
 const url = (page = 'home', slug = '') => page === 'home' ? '#/' : `#/${page}${slug ? '/' + slug : ''}`;
@@ -52,6 +53,45 @@ let toastTimer;
 let disposePageMotion;
 let disposeTurntable;
 let keyboardInput = false;
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const motionStorageKey = 'volt.motion';
+const motionQuery = new URLSearchParams(location.search).get('motion');
+let motionChoice = motionQuery === 'on' || motionQuery === 'off' ? motionQuery : readMotionChoice();
+
+function readMotionChoice() {
+  try {
+    const saved = sessionStorage.getItem(motionStorageKey);
+    return saved === 'on' || saved === 'off' ? saved : null;
+  } catch { return null; }
+}
+
+function motionEnabled() {
+  return motionChoice === null ? !reducedMotion.matches : motionChoice === 'on';
+}
+
+function syncMotionMode() {
+  const enabled = motionEnabled();
+  document.documentElement.classList.toggle('motion-enabled', enabled);
+  header.querySelector('[data-motion-toggle]')?.setAttribute('aria-pressed', String(enabled));
+}
+
+function toggleMotion() {
+  motionChoice = motionEnabled() ? 'off' : 'on';
+  try { sessionStorage.setItem(motionStorageKey, motionChoice); } catch {}
+  const current = new URL(location.href);
+  if (current.searchParams.has('motion')) {
+    current.searchParams.delete('motion');
+    history.replaceState(history.state, '', current);
+  }
+  refreshMotion();
+}
+
+function refreshMotion() {
+  disposePageMotion?.();
+  syncMotionMode();
+  main.classList.toggle('route-enter', motionEnabled());
+  disposePageMotion = setupPageMotion(main, motionEnabled());
+}
 
 function getRoute() {
   const [page = 'home', slug = ''] = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
@@ -73,6 +113,7 @@ function renderChrome(page) {
   header.innerHTML = `${brand()}<nav class="desktop-nav" aria-label="メインメニュー">
     ${navigation.map(([key, label]) => `<a href="${url(key)}" ${active === key ? 'aria-current="page"' : ''}>${label}</a>`).join('')}
     </nav><div class="header-tools">
+    <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="${motionEnabled()}" aria-label="動きの演出">${icon('play')}${icon('pause')}<span>MOTION</span></button>
     <button class="icon-btn search-button" type="button" data-overlay="search" aria-label="商品を検索">${icon('search')}</button>
     <a class="icon-btn bag-button" href="${url('cart')}" aria-label="カート">${icon('bag')}<span class="bag-count" hidden></span></a>
     <button class="icon-btn menu-button" type="button" data-overlay="menu" aria-label="メニュー">${icon('menu')}</button>
@@ -502,7 +543,7 @@ function render(force = false, moveFocus = false) {
   disposePageMotion?.();
   disposeTurntable?.();
   disposeTurntable = null;
-  const animateRoute = !keyboardInput && (!routeKey || moveFocus);
+  const animateRoute = !routeKey || moveFocus;
   if (page !== 'checkout') confirmation = null;
   if (overlay.open) overlay.close();
   routeKey = key;
@@ -516,6 +557,7 @@ function render(force = false, moveFocus = false) {
     cart: cartPage, checkout: checkoutPage, missing: missingPage,
   };
   renderChrome(page);
+  syncMotionMode();
   main.classList.toggle('route-enter', animateRoute);
   main.innerHTML = views[page]();
   const heading = main.querySelector('h1');
@@ -527,15 +569,17 @@ function render(force = false, moveFocus = false) {
     window.scrollTo(0, 0);
     heading.focus({ preventScroll: true });
   }
-  disposePageMotion = setupPageMotion(main, () => keyboardInput);
+  disposePageMotion = setupPageMotion(main, motionEnabled());
   if (page === 'home') disposeTurntable = setupTurntable(main.querySelector('.hero'));
 }
 
 document.addEventListener('keydown', () => { keyboardInput = true; }, { capture: true });
 document.addEventListener('pointerdown', () => { keyboardInput = false; }, { capture: true });
 document.addEventListener('wheel', () => { keyboardInput = false; }, { passive: true });
+reducedMotion.addEventListener('change', () => { if (motionChoice === null) refreshMotion(); });
 
 document.addEventListener('click', event => {
+  if (event.target.closest('[data-motion-toggle]')) toggleMotion();
   const trigger = event.target.closest('button[data-overlay]');
   if (trigger) openOverlay(trigger.dataset.overlay);
   if (event.target.closest('.skip')) {
