@@ -1,23 +1,42 @@
 @media (prefers-reduced-motion: no-preference) {
   :root { --volt-motion-out: cubic-bezier(.2, .7, .25, 1); }
 
+  .hero-backdrop { transform: translate3d(0, var(--ribbon-scroll-offset, 0px), 0); }
+  .hero-ribbon { transform: scale(1.12); }
+
   .route-enter .hero-ribbon {
-    animation: volt-hero-image 825ms var(--volt-motion-out);
+    animation: volt-ribbon-drift 4600ms cubic-bezier(.33, 0, .3, 1);
   }
 
   .route-enter .hero-title span {
-    animation: volt-hero-word 670ms var(--volt-motion-out) backwards;
+    --word-start: clamp(-106px, -8vw, -28px);
+    animation: volt-hero-word 850ms var(--volt-motion-out) 100ms backwards;
   }
 
-  .route-enter .hero-title span:last-child { animation-delay: 85ms; }
+  .route-enter .hero-title span:last-child {
+    --word-start: clamp(28px, 8vw, 106px);
+    animation-delay: 235ms;
+  }
 
-  .route-enter h1:not(.hero-title),
+  .route-enter :is(.hero-action, .hero-caption) {
+    animation: volt-detail-in 540ms var(--volt-motion-out) 490ms backwards;
+  }
+
+  .route-enter h1:not(.hero-title) {
+    animation: volt-heading-in 570ms var(--volt-motion-out);
+  }
   .route-enter :is(.editorial-hero-image, .article-hero img, .look-feature > img) {
-    animation: volt-route-in 260ms var(--volt-motion-out);
+    animation: volt-image-in 440ms var(--volt-motion-out);
   }
 
-  .js-reveal.is-visible {
-    animation: volt-reveal 500ms var(--volt-motion-out);
+  .reveal-pending:not(:focus-within) { opacity: 0; }
+
+  .reveal-in {
+    animation: volt-reveal 590ms var(--volt-motion-out) var(--reveal-delay, 0ms) backwards;
+  }
+
+  .editorial-band-text.reveal-in, .home-products .section-heading.reveal-in {
+    animation-name: volt-heading-in;
   }
 
   .overlay[open] {
@@ -35,11 +54,13 @@
   body:has(:focus-visible) :is(
     .route-enter .hero-ribbon,
     .route-enter .hero-title span,
+    .route-enter .hero-action,
+    .route-enter .hero-caption,
     .route-enter h1:not(.hero-title),
     .route-enter .editorial-hero-image,
     .route-enter .article-hero img,
     .route-enter .look-feature > img,
-    .js-reveal.is-visible,
+    .reveal-in,
     .overlay[open],
     .viewer-image--changed
   ),
@@ -48,20 +69,30 @@
     animation-delay: 0s;
   }
 
-  @keyframes volt-hero-image {
-    from { opacity: .68; scale: 1.07; translate: 1.2vw -1vh; rotate: 1deg; }
+  @keyframes volt-ribbon-drift {
+    0% { transform: translate3d(-3vw, 1.5vh, 0) rotate(-1.75deg) scale(1.18); }
+    48% { transform: translate3d(1.8vw, -1.5vh, 0) rotate(1.1deg) scale(1.16); }
+    100% { transform: scale(1.12); }
   }
 
   @keyframes volt-hero-word {
-    from { opacity: .4; translate: 0 18px; }
+    from { opacity: 0; translate: var(--word-start) 0; }
   }
 
-  @keyframes volt-route-in {
-    from { opacity: .76; }
+  @keyframes volt-heading-in {
+    from { opacity: 0; translate: -28px 0; }
+  }
+
+  @keyframes volt-image-in {
+    from { opacity: .45; }
+  }
+
+  @keyframes volt-detail-in {
+    from { opacity: 0; translate: 0 8px; }
   }
 
   @keyframes volt-reveal {
-    from { opacity: .7; translate: 0 14px; }
+    from { opacity: 0; translate: 0 26px; scale: .973; }
   }
 
   @keyframes volt-dialog-in {
