@@ -1,0 +1,96 @@
+@media (prefers-reduced-motion: no-preference) {
+  :root { --volt-motion-out: cubic-bezier(.2, .7, .25, 1); }
+
+  .route-enter .hero-ribbon {
+    animation: volt-hero-image 825ms var(--volt-motion-out);
+  }
+
+  .route-enter .hero-title span {
+    animation: volt-hero-word 670ms var(--volt-motion-out) backwards;
+  }
+
+  .route-enter .hero-title span:last-child { animation-delay: 85ms; }
+
+  .route-enter h1:not(.hero-title),
+  .route-enter :is(.editorial-hero-image, .article-hero img, .look-feature > img) {
+    animation: volt-route-in 260ms var(--volt-motion-out);
+  }
+
+  .js-reveal.is-visible {
+    animation: volt-reveal 500ms var(--volt-motion-out);
+  }
+
+  .overlay[open] {
+    animation: volt-dialog-in 180ms var(--volt-motion-out);
+  }
+
+  .overlay[open]::backdrop {
+    animation: volt-backdrop-in 160ms var(--volt-motion-out);
+  }
+
+  .viewer-image--changed {
+    animation: volt-photo-in 165ms var(--volt-motion-out);
+  }
+
+  body:has(:focus-visible) :is(
+    .route-enter .hero-ribbon,
+    .route-enter .hero-title span,
+    .route-enter h1:not(.hero-title),
+    .route-enter .editorial-hero-image,
+    .route-enter .article-hero img,
+    .route-enter .look-feature > img,
+    .js-reveal.is-visible,
+    .overlay[open],
+    .viewer-image--changed
+  ),
+  body:has(:focus-visible) .overlay[open]::backdrop {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+
+  @keyframes volt-hero-image {
+    from { opacity: .68; scale: 1.07; translate: 1.2vw -1vh; rotate: 1deg; }
+  }
+
+  @keyframes volt-hero-word {
+    from { opacity: .4; translate: 0 18px; }
+  }
+
+  @keyframes volt-route-in {
+    from { opacity: .76; }
+  }
+
+  @keyframes volt-reveal {
+    from { opacity: .7; translate: 0 14px; }
+  }
+
+  @keyframes volt-dialog-in {
+    from { opacity: .78; translate: 0 5px; }
+  }
+
+  @keyframes volt-backdrop-in {
+    from { opacity: .55; }
+  }
+
+  @keyframes volt-photo-in {
+    from { opacity: .73; }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  :is(.home-editorial a, .detail-strip a, .look-options button, .journal-card) {
+    overflow: clip;
+  }
+
+  :is(.product-card, .home-editorial a, .detail-strip a, .look-options button, .journal-card) img {
+    transition: scale 320ms var(--volt-motion-out);
+  }
+
+  :is(.product-card, .home-editorial a, .detail-strip a, .look-options button, .journal-card):hover:not(:focus-visible) img {
+    scale: 1.035;
+  }
+
+  :is(.product-card, .home-editorial a, .detail-strip a, .look-options button, .journal-card):focus-visible img {
+    transition: none;
+  }
+}

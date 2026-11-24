@@ -493,3 +493,70 @@ legend span { font-weight: 400; color: var(--muted); letter-spacing: .025em; mar
   .added-actions form button { width: 100%; }
   .journal-grid { grid-template-columns: 1fr; }
 }
+
+.hero-turntable {
+  position: absolute; z-index: 3; width: 66%; height: 79%; top: 4%; left: 19%;
+  display: grid; place-items: center; touch-action: pan-y; cursor: grab;
+}
+.hero-turntable.is-dragging { cursor: grabbing; }
+.hero-turntable canvas, .hero-turntable-photo {
+  width: 100%; height: 100%; position: absolute; inset: 0;
+  opacity: 0; pointer-events: none;
+}
+.hero-turntable-photo { object-fit: contain; }
+.hero--film .hero-turntable canvas, .hero--photos .hero-turntable-photo { opacity: 1; }
+.hero--film .hero-shoe, .hero--photos .hero-shoe { opacity: 0; animation: none; }
+.hero--orbit-open .hero-title { opacity: .74; }
+.hero--orbit-open .hero-ribbon { opacity: .87; }
+.orbit-ui {
+  position: absolute; z-index: 4; bottom: clamp(22px, 4.4vw, 66px); left: 50%;
+  transform: translateX(-50%); display: grid; justify-items: center; gap: 7px;
+}
+.orbit-instructions {
+  color: #d5d3c8; font-size: 10px; letter-spacing: .06em; white-space: nowrap;
+  text-shadow: 0 1px 7px #000, 0 0 5px #000;
+}
+.orbit-controls {
+  display: grid; grid-template-columns: 34px minmax(42px, auto) 34px 38px;
+  min-height: 40px; align-items: center; justify-items: center; gap: 1px;
+  border: 1px solid #4f5340; background: #0a0b07ed;
+}
+.orbit-controls .icon-btn { width: 34px; height: 38px; }
+.orbit-controls .icon-btn svg { width: 16px; height: 16px; }
+.orbit-controls span { color: var(--volt); font: 700 12px/1 monospace; white-space: nowrap; }
+.orbit-controls:has([data-orbit-spin][hidden]) { grid-template-columns: 34px minmax(42px, auto) 34px; }
+.orbit-toggle {
+  display: flex; align-items: center; justify-content: center; gap: 7px; min-width: 134px; min-height: 44px;
+  color: var(--volt); border: 1px solid #b1bf65; background: #0a0b07d9;
+  padding: 0 12px; font-size: 12px; font-weight: 800; letter-spacing: .095em;
+  white-space: nowrap;
+}
+.orbit-toggle svg { width: 18px; height: 18px; }
+.orbit-toggle:hover, .orbit-toggle:focus-visible { color: var(--ink); background: var(--volt); border-color: var(--volt); }
+.hero--film .hero-turntable:focus-visible, .hero--photos .hero-turntable:focus-visible { outline-offset: -5px; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-turntable canvas, .hero-turntable-photo, .hero-shoe, .hero-title { transition: opacity 195ms cubic-bezier(.2,.7,.25,1); }
+  .hero-ribbon {
+    translate: calc(var(--orbit-sway, 0) * 1.25vw) calc(var(--orbit-lift, 0) * -.95vh);
+    rotate: calc(var(--orbit-sway, 0) * 1.15deg);
+  }
+  .hero--orbit-open .hero-ribbon { transform: scale(1.065); }
+  .hero-title span:first-child {
+    translate: calc(var(--orbit-sway, 0) * -1.35vw) calc(var(--orbit-lift, 0) * -.8vh);
+  }
+  .hero-title span:last-child {
+    translate: calc(var(--orbit-sway, 0) * 1.35vw) calc(var(--orbit-lift, 0) * .8vh);
+  }
+}
+@media (max-width: 800px) {
+  .hero-turntable { width: 89%; left: 6%; height: 69%; top: 14%; }
+}
+@media (max-width: 580px) {
+  .hero-turntable { width: 100%; left: 0; top: 17%; height: 63%; }
+  .orbit-ui { bottom: clamp(76px, 12svh, 108px); }
+  .orbit-toggle { min-height: 44px; }
+  .orbit-controls { grid-template-columns: 44px minmax(42px, auto) 44px 44px; }
+  .orbit-controls .icon-btn { width: 44px; height: 44px; }
+  .orbit-controls:has([data-orbit-spin][hidden]) { grid-template-columns: 44px minmax(42px, auto) 44px; }
+  .hero--orbit-open .orbit-ui { bottom: 75px; }
+}

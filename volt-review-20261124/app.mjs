@@ -1,5 +1,6 @@
 import { angles, articles, colors, craftsmanship, products, sizes, story, technology } from './catalog.mjs';
 import { addItem, clearCart, readCart, readFavorites, setItemQuantity, toggleFavorite } from './shop.mjs';
+import { setupHeroOrbit } from './orbit-control.mjs';
 
 const main = document.querySelector('#main');
 const header = document.querySelector('#header');
@@ -27,6 +28,7 @@ const iconPaths = {
   minus: '<path d="M5 12h14"/>',
   expand: '<path d="M4 9V4h5m6 0h5v5m0 6v5h-5m-6 0H4v-5"/>',
   check: '<path d="m4 12 5 5L20 6"/>',
+  orbit: '<path d="m17.5 8 3 3 3-3M20.5 11a8.5 8.5 0 1 0-2.5 7"/>',
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${iconPaths[name]}</svg>`;
 const url = (page = 'home', slug = '') => page === 'home' ? '#/' : `#/${page}${slug ? '/' + slug : ''}`;
@@ -45,6 +47,9 @@ let lookIndex = 0;
 let journalFilter = 'ALL';
 let confirmation = null;
 let toastTimer;
+let disposeHeroOrbit;
+let revealObserver;
+let keyboardInput = false;
 
 function getRoute() {
   const [page = 'home', slug = ''] = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
@@ -83,6 +88,20 @@ function homePage() {
     ${image('hero-ribbon', 'hero-ribbon', '', true)}
     <h1 class="hero-title" id="hero-title" lang="en"><span>MOVE</span><span>BEYOND.</span></h1>
     ${image('orbit-hero', 'hero-shoe', 'ライム色のソールを備えた白いORBIT', true)}
+    <div class="hero-turntable" id="hero-turntable" role="group" aria-label="ORBITを回す。矢印キーで回転、Homeキーで初期位置に戻る" tabindex="-1">
+      <canvas aria-hidden="true"></canvas>
+      <img class="hero-turntable-photo" alt="">
+    </div>
+    <div class="orbit-ui">
+      <p class="orbit-instructions" aria-live="polite">ドラッグ・スワイプで回す</p>
+      <div class="orbit-controls" id="orbit-controls" role="group" aria-label="ORBITの回転操作" hidden>
+        <button type="button" class="icon-btn" data-orbit-step="-1" aria-label="左に回す">${icon('back')}</button>
+        <span data-orbit-angle>000°</span>
+        <button type="button" class="icon-btn" data-orbit-step="1" aria-label="右に回す">${icon('next')}</button>
+        <button type="button" class="icon-btn" data-orbit-spin aria-label="一周回す">${icon('orbit')}</button>
+      </div>
+      <button type="button" class="orbit-toggle" data-orbit-toggle aria-controls="hero-turntable orbit-controls" aria-expanded="false">${icon('orbit')}<span>360° VIEW</span></button>
+    </div>
     <div class="hero-action">${action('Explore collection', url('collection'), 'outline')}</div>
     <a class="hero-caption" href="${url('product', 'orbit')}">V-01 / ORBIT ${icon('diagonal')}</a>
   </section>
@@ -180,6 +199,7 @@ function changeView(index, refreshThumbs = false) {
   const shot = next.content.firstElementChild;
   const previous = frame.firstElementChild;
   if (previous.src === shot.src) return;
+  if (!keyboardInput) shot.classList.add('viewer-image--changed');
   frame.replaceChildren(shot);
   frame.classList.remove('viewer-frame--hero');
   if (productState.index === 0) frame.classList.add('viewer-frame--hero');
@@ -477,6 +497,10 @@ function render(force = false, moveFocus = false) {
   const { page, slug } = getRoute();
   const key = page + '/' + slug;
   if (!force && routeKey === key) return;
+  disposeHeroOrbit?.();
+  disposeHeroOrbit = null;
+  revealObserver?.disconnect();
+  const animateRoute = !keyboardInput && (!routeKey || moveFocus);
   if (page !== 'checkout') confirmation = null;
   if (overlay.open) overlay.close();
   routeKey = key;
@@ -490,6 +514,7 @@ function render(force = false, moveFocus = false) {
     cart: cartPage, checkout: checkoutPage, missing: missingPage,
   };
   renderChrome(page);
+  main.classList.toggle('route-enter', animateRoute);
   main.innerHTML = views[page]();
   const heading = main.querySelector('h1');
   heading.tabIndex = -1;
@@ -500,7 +525,26 @@ function render(force = false, moveFocus = false) {
     window.scrollTo(0, 0);
     heading.focus({ preventScroll: true });
   }
+  if (page === 'home') disposeHeroOrbit = setupHeroOrbit(main.querySelector('.hero'));
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    revealObserver = new IntersectionObserver((entries, observer) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        if (!keyboardInput) entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    }, { threshold: .12 });
+    for (const section of main.querySelectorAll('.home-products, .home-editorial, .editorial-band, .construction, .detail-strip')) {
+      if (section.getBoundingClientRect().top < innerHeight - 36) continue;
+      section.classList.add('js-reveal');
+      revealObserver.observe(section);
+    }
+  }
 }
+
+document.addEventListener('keydown', () => { keyboardInput = true; }, { capture: true });
+document.addEventListener('pointerdown', () => { keyboardInput = false; }, { capture: true });
+document.addEventListener('wheel', () => { keyboardInput = false; }, { passive: true });
 
 document.addEventListener('click', event => {
   const trigger = event.target.closest('button[data-overlay]');
