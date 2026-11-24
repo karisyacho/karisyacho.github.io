@@ -122,6 +122,8 @@ h1{font-family:var(--mincho);font-weight:700;font-size:clamp(40px,5.6vw,88px);li
 .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,24px)}
 .ba-pair figure{display:grid;gap:8px}
 .ba-pair img{width:100%;aspect-ratio:1440/900;object-fit:cover;object-position:top;border-radius:3px}
+.ba-pair--single{grid-template-columns:minmax(0,900px)}
+.ba-pair--single img{aspect-ratio:auto}
 .ba-pair figcaption{font-size:13px;color:var(--sub)}
 .ba-pair figcaption b{font-size:11px;letter-spacing:.14em;margin-right:8px;color:var(--ink)}
 .ba-list{list-style:none;margin-top:20px;border-top:1px solid var(--rule)}
@@ -281,22 +283,22 @@ footer b{font-family:var(--mincho);color:var(--ink);font-size:15px;margin-right:
     <h1><span class="slot" aria-live="polite"><span class="cur"><u>あなた</u></span></span><span class="tail">のお店なら、</span><br>こう作ります。</h1>
     <div class="choose" role="group" aria-label="お店の種類で作品を絞る">
       <p>近いお店を<wbr>選ぶと、<wbr>下の作品と料金が<wbr>そのお店向けに<wbr>切り替わります</p>
-      <button type="button" class="chip" data-t="food" aria-pressed="false">食べ物・飲み物 <small>2件</small></button>
+      <button type="button" class="chip" data-t="food" aria-pressed="false">食べ物・飲み物 <small>3件</small></button>
       <button type="button" class="chip" data-t="beauty" aria-pressed="false">美容・からだ <small>3件</small></button>
       <button type="button" class="chip" data-t="craft" aria-pressed="false">工事・運送 <small>2件</small></button>
       <button type="button" class="chip" data-t="stay" aria-pressed="false">宿・ものづくり <small>2件</small></button>
-      <button type="button" class="chip" data-t="all" aria-pressed="true">ぜんぶ見る <small>10件</small></button>
+      <button type="button" class="chip" data-t="all" aria-pressed="true">ぜんぶ見る <small>11件</small></button>
     </div>
     <p class="facts"><span>ホームページ ¥70,000〜</span><span>お店の写真と文章がそろってから10日で公開</span><span>公開後の更新はLINEで送るだけ（月¥3,000）</span></p>
   </div>
-  <figure class="lead-pic"><img class="lead-img" src="assets/aima-pc.webp" alt="" width="1440" height="900" fetchpriority="high"><figcaption><b class="lead-name">AIMA — 藍間</b><span class="count"><b class="n">10</b><span>件の作品</span></span></figcaption></figure>
+  <figure class="lead-pic"><img class="lead-img" src="assets/aima-pc.webp" alt="" width="1440" height="900" fetchpriority="high"><figcaption><b class="lead-name">AIMA — 藍間</b><span class="count"><b class="n">11</b><span>件の作品</span></span></figcaption></figure>
 </section>
 
 <div id="works">
 <!-- 食べ物・飲み物 -->
 <article class="scene" id="w-okinohama" data-in="food">
   <div class="shots"><video class="pc" src="assets/clips/okinohama-20261109.mp4" poster="assets/okinohama-pc-20261108.webp" width="1280" height="800" muted loop playsinline preload="none" aria-label="おきのはま製パンのPC画面。窯の扉が開くと焼きたてのパンが現れ、「朝は この窯から」の見出しが重なる。触ったときの動き（約5秒）"></video><span class="live">サイトを触ったときの動き</span><img class="sp" src="assets/okinohama-sp-20261108.webp" alt="同じサイトのスマホ画面。窯の取っ手を下に引いて扉を開ける入口" width="780" height="1688" loading="lazy"></div>
-  <div><p class="no">01 / 02</p><h2>おきのはま製パン</h2><p class="where">徳島市沖浜町のパン屋<span class="tag">見本・架空の店</span></p>
+  <div><p class="no">01 / 03</p><h2>おきのはま製パン</h2><p class="where">徳島市沖浜町のパン屋<span class="tag">見本・架空の店</span></p>
   <dl><dt>見る人ができること</dt><dd>焼き上がりの時刻でパンを選べます。パン便は地域と箱数を変えると、送料込みの合計が出ます。</dd><dt>サイトの見せ方</dt><dd>窯の取っ手を引くと扉が開き、焼きたてのパンが現れます。</dd></dl>
   <a class="go" href="https://okinohama-demo.github.io/okinohama/" target="_blank" rel="noopener">窯の扉を開けてみる</a>
   <p class="note">写真は生成画像です。注文・決済はできません。</p></div>
@@ -314,7 +316,7 @@ footer b{font-family:var(--mincho);color:var(--ink);font-size:15px;margin-right:
 </article>
 <article class="scene" id="w-suketo" data-in="food">
   <div class="shots"><video class="pc" src="assets/clips/suketo-20261109.mp4" poster="assets/suketo-pc.webp" width="1280" height="800" muted loop playsinline preload="none" aria-label="助任珈琲豆店のPC画面。焙煎機の釜の動画の上に、明朝の縦書きで「焼いて三日目が、いちばんうまい。」と店名。触ったときの動き（約5秒）"></video><span class="live">サイトを触ったときの動き</span><img class="sp" src="assets/suketo-sp.webp" alt="同じサイトのスマホ画面。縦書きの見出しと店名、下に説明と営業時間" width="780" height="1688" loading="lazy"></div>
-  <div><p class="no">02 / 02</p><h2>助任珈琲豆店</h2><p class="where">徳島市助任本町の珈琲豆店<span class="tag">見本・架空の店</span></p>
+  <div><p class="no">02 / 03</p><h2>助任珈琲豆店</h2><p class="where">徳島市助任本町の珈琲豆店<span class="tag">見本・架空の店</span></p>
   <dl><dt>見る人ができること</dt><dd>豆6種を、産地・精製・煎り具合・100gの値段で比べられます。焙煎日と注文の締め切りも分かります。</dd><dt>サイトの見せ方</dt><dd>釜の映像と縦書きの見出しで、店の落ち着きを伝えます。</dd></dl>
   <a class="go" href="https://suketo-demo.github.io/suketo/" target="_blank" rel="noopener">サイトを見る</a></div>
   <details class="ba"><summary>作り直す前のサイトと比べる</summary>
@@ -327,6 +329,26 @@ footer b{font-family:var(--mincho);color:var(--ink);font-size:15px;margin-right:
       <li><span>動き</span><div><s>ほぼ止まったまま</s> → 開いたときの演出と、スクロールで変わる動き（焙煎の動画・字が灯る・墨色に変わる）</div></li>
     </ul>
     <a class="go" href="https://yohaku-coffee-studio.makoto0808ellhome.chatgpt.site/" target="_blank" rel="noopener">前のサイトも見る</a>
+  </details>
+</article>
+<article class="scene" id="w-muya" data-in="food">
+  <div class="shots">
+    <img class="pc" src="assets/muya-pc.webp" alt="撫養の菓子箱のトップ。焼き菓子の写真に紺と金の渦が重なる" width="1440" height="864" loading="lazy" decoding="async">
+    <img class="sp" src="assets/muya-sp.webp" alt="撫養の菓子箱のスマホ画面。焼き菓子の写真にキャッチコピーが重なる" width="390" height="844" loading="lazy" decoding="async">
+  </div>
+  <div>
+    <p class="no">03 / 03</p><h2>撫養の菓子箱</h2><p class="where">鳴門・撫養（むや）の焼き菓子店<span class="tag">自主制作・架空の店</span></p>
+    <dl>
+      <dt>見る人ができること</dt><dd>定番・季節・詰め合わせからお菓子を探せます。店舗の場所や営業時間を確認し、フォームから問い合わせできます。</dd>
+      <dt>お店の人が更新できること</dt><dd>商品写真・価格、お知らせ、営業時間をWordPressの管理画面から更新できます。</dd>
+    </dl>
+    <p class="note">PHPでWordPressの専用テーマを実装しました。問い合わせの受信はテスト環境で確認しています。</p>
+  </div>
+  <details class="ba"><summary>商品一覧の画面を見る</summary>
+    <div class="ba-pair ba-pair--single"><figure>
+      <img src="assets/muya-sweets.webp" alt="焼き菓子5点を並べた商品一覧。定番、季節、詰め合わせで絞り込める" width="1440" height="1155" loading="lazy" decoding="async">
+      <figcaption>お菓子一覧のPC画面</figcaption>
+    </figure></div>
   </details>
 </article>
 <!-- 美容・からだ -->
@@ -391,18 +413,19 @@ footer b{font-family:var(--mincho);color:var(--ink);font-size:15px;margin-right:
 
 <!-- ぜんぶ見る：残りは一覧で -->
 <section class="list" data-in="all" aria-labelledby="list-h">
-  <h2 class="h3" id="list-h">10件の作品</h2>
+  <h2 class="h3" id="list-h">11件の作品</h2>
   <ol>
     <li><span>01</span><b>AIMA — 藍間</b><button type="button" data-jump="stay" data-to="w-aima">宿・ものづくりで見る</button></li>
     <li><span>02</span><b>おきのはま製パン</b><button type="button" data-jump="food" data-to="w-okinohama">食べ物・飲み物で見る</button></li>
     <li><span>03</span><b>助任珈琲豆店</b><button type="button" data-jump="food" data-to="w-suketo">食べ物・飲み物で見る</button></li>
-    <li><span>04</span><b>UCHIMACHI HAIR</b><button type="button" data-jump="beauty" data-to="w-uchimachi">美容・からだで見る</button></li>
-    <li><span>05</span><b>pilates studio ARC</b><button type="button" data-jump="beauty" data-to="w-arc">美容・からだで見る</button></li>
-    <li><span>06</span><b>STUDIO FREE（実際のお仕事）</b><button type="button" data-jump="beauty" data-to="w-studiofree">美容・からだで見る</button></li>
-    <li><span>07</span><b>匠塗</b><button type="button" data-jump="craft" data-to="w-takuto">工事・運送で見る</button></li>
-    <li><span>08</span><b>青葉運輸</b><button type="button" data-jump="craft" data-to="w-aoba">工事・運送で見る</button></li>
-    <li><span>09</span><b>KASANE｜かさね</b><button type="button" data-jump="stay" data-to="w-kasane">宿・ものづくりで見る</button></li>
-    <li><span>10</span><b>あわい（自分の屋号のサイト）</b><a class="go" href="https://awai-web.pages.dev/" target="_blank" rel="noopener">サイトを見る</a></li>
+    <li><span>04</span><b>撫養の菓子箱</b><button type="button" data-jump="food" data-to="w-muya">食べ物・飲み物で見る</button></li>
+    <li><span>05</span><b>UCHIMACHI HAIR</b><button type="button" data-jump="beauty" data-to="w-uchimachi">美容・からだで見る</button></li>
+    <li><span>06</span><b>pilates studio ARC</b><button type="button" data-jump="beauty" data-to="w-arc">美容・からだで見る</button></li>
+    <li><span>07</span><b>STUDIO FREE（実際のお仕事）</b><button type="button" data-jump="beauty" data-to="w-studiofree">美容・からだで見る</button></li>
+    <li><span>08</span><b>匠塗</b><button type="button" data-jump="craft" data-to="w-takuto">工事・運送で見る</button></li>
+    <li><span>09</span><b>青葉運輸</b><button type="button" data-jump="craft" data-to="w-aoba">工事・運送で見る</button></li>
+    <li><span>10</span><b>KASANE｜かさね</b><button type="button" data-jump="stay" data-to="w-kasane">宿・ものづくりで見る</button></li>
+    <li><span>11</span><b>あわい（自分の屋号のサイト）</b><a class="go" href="https://awai-web.pages.dev/" target="_blank" rel="noopener">サイトを見る</a></li>
   </ol>
 </section>
 </div>
@@ -578,10 +601,10 @@ footer b{font-family:var(--mincho);color:var(--ink);font-size:15px;margin-right:
 
 <footer><span><b>あわい</b>@shacho_kari</span><span>徳島 2026</span></footer>
 
-<div class="dock" aria-hidden="true"><span><b class="dname">ぜんぶ</b>｜<span class="n">10</span>件</span><button type="button" tabindex="-1">種類を変える</button></div>
+<div class="dock" aria-hidden="true"><span><b class="dname">ぜんぶ</b>｜<span class="n">11</span>件</span><button type="button" tabindex="-1">種類を変える</button></div>
 
 <script>
-const T={all:{w:'あなた',n:10,p:'料金',c:'#EEECE6'},food:{w:'食べ物・飲み物',n:2,p:'食べ物・飲み物のお店なら',c:'#E7D8BE'},beauty:{w:'美容・からだ',n:3,p:'美容・からだのお店なら',c:'#E8DDD9'},craft:{w:'工事・運送',n:2,p:'工事・運送の会社なら',tail:'の会社なら、',c:'#1E2225'},stay:{w:'宿・ものづくり',n:2,p:'宿・ものづくりなら',c:'#263A78'}};
+const T={all:{w:'あなた',n:11,p:'料金',c:'#EEECE6'},food:{w:'食べ物・飲み物',n:3,p:'食べ物・飲み物のお店なら',c:'#E7D8BE'},beauty:{w:'美容・からだ',n:3,p:'美容・からだのお店なら',c:'#E8DDD9'},craft:{w:'工事・運送',n:2,p:'工事・運送の会社なら',tail:'の会社なら、',c:'#1E2225'},stay:{w:'宿・ものづくり',n:2,p:'宿・ものづくりなら',c:'#263A78'}};
 const LEAD={all:['assets/aima-pc.webp','AIMA — 藍間'],food:['assets/okinohama-pc-20261108.webp','おきのはま製パン'],beauty:['assets/uchimachi-pc.webp','UCHIMACHI HAIR'],craft:['assets/takuto-pc.webp','匠塗'],stay:['assets/aima-pc.webp','AIMA — 藍間']};
 const body=document.body, wipe=document.querySelector('.wipe'), slot=document.querySelector('.slot');
 const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
