@@ -1,4 +1,4 @@
-const source = 'assets/orbit-turntable.mp4';
+const source = 'assets/orbit-turntable.mp4?v=heel-safe';
 const wrap = value => ((value % 1) + 1) % 1;
 
 const vertexSource = [

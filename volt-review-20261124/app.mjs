@@ -1,7 +1,7 @@
 import { angles, articles, colors, craftsmanship, products, sizes, story, technology } from './catalog.mjs';
 import { addItem, clearCart, readCart, readFavorites, setItemQuantity, toggleFavorite } from './shop.mjs';
 import { setupPageMotion } from './page-motion.mjs?v=motion-preview';
-import { setupTurntable } from './turntable.mjs';
+import { setupTurntable } from './turntable.mjs?v=heel-safe';
 
 const main = document.querySelector('#main');
 const header = document.querySelector('#header');

@@ -45,7 +45,7 @@ export function setupTurntable(hero) {
     }
     status.textContent = '回転映像を読み込み中…';
     if (loading) return;
-    loading = import('./turntable-video.mjs').then(async ({ mountTurntable }) => {
+    loading = import('./turntable-video.mjs?v=heel-safe').then(async ({ mountTurntable }) => {
       if (signal.aborted) return;
       view = await mountTurntable(stage, signal, value => {
         position.textContent = String(Math.round(value * 360) % 360).padStart(3, '0') + '°';
