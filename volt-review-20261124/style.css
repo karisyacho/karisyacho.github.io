@@ -503,8 +503,8 @@ legend span { font-weight: 400; color: var(--muted); letter-spacing: .025em; mar
   cursor: grab; touch-action: pan-y;
 }
 .hero-turntable.is-dragging { cursor: grabbing; }
-.hero-turntable canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-.hero-turntable video { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.hero-turntable canvas { position: absolute; inset: 0; margin: auto; pointer-events: none; }
+.hero-turntable video { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
 .hero-turntable:focus-visible { outline-offset: -4px; }
 @media (max-width: 800px) {
   .hero-turntable { width: 91%; left: 4.5%; height: 69%; top: 14%; }

@@ -1,12 +1,12 @@
 const wrap = value => ((value % 1) + 1) % 1;
+const framesPerSecond = 24;
 
 const vertexSource = [
   'attribute vec2 point;',
-  'uniform vec2 fit;',
   'varying vec2 surface;',
   'void main() {',
   '  surface = vec2(point.x * .5 + .5, .5 - point.y * .5);',
-  '  gl_Position = vec4(point * fit, 0., 1.);',
+  '  gl_Position = vec4(point, 0., 1.);',
   '}',
 ].join('\n');
 const fragmentSource = [
@@ -21,33 +21,33 @@ const fragmentSource = [
   '}',
 ].join('\n');
 
-function fitFrame(canvas, video) {
-  const aspect = (video.videoWidth * 2) / video.videoHeight;
-  const viewport = canvas.width / canvas.height;
-  return [Math.min(1, aspect / viewport), Math.min(1, viewport / aspect)];
-}
-
-function renderer(canvas, video) {
-  const gl = canvas.getContext('webgl', { alpha: true, antialias: false, premultipliedAlpha: true });
-  if (!gl) {
+function renderer(stage, video) {
+  const canvas = stage.querySelector('canvas');
+  const gpuCanvas = canvas.cloneNode(false);
+  const gl = gpuCanvas.getContext('webgl', {
+    alpha: true, antialias: false, premultipliedAlpha: true, failIfMajorPerformanceCaveat: true,
+  });
+  const debug = gl?.getExtension('WEBGL_debug_renderer_info');
+  const gpu = debug ? gl.getParameter(debug.UNMASKED_RENDERER_WEBGL) : '';
+  if (!gl || /swiftshader|llvmpipe|software|basic render driver|\bwarp\b/i.test(gpu)) {
+    gl?.getExtension('WEBGL_lose_context')?.loseContext();
     const ctx = canvas.getContext('2d');
     if (!ctx) return null;
     const plate = document.createElement('canvas');
-    plate.width = video.videoWidth;
-    plate.height = video.videoHeight;
     const buffer = plate.getContext('2d', { willReadFrequently: true });
-    const height = plate.height / 2;
     return {
+      canvas,
       draw() {
-        buffer.drawImage(video, 0, 0);
-        const { data } = buffer.getImageData(0, 0, plate.width, plate.height);
-        const half = plate.width * height * 4;
+        const { width, height } = canvas;
+        if (plate.width !== width || plate.height !== height * 2) {
+          plate.width = width;
+          plate.height = height * 2;
+        }
+        buffer.drawImage(video, 0, 0, width, height * 2);
+        const { data } = buffer.getImageData(0, 0, width, height * 2);
+        const half = width * height * 4;
         for (let i = 3; i < half; i += 4) data[i] = data[half + i - 2];
-        buffer.putImageData(new ImageData(data.subarray(0, half), plate.width, height), 0, 0);
-        const [sx, sy] = fitFrame(canvas, video);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(plate, 0, 0, plate.width, height, (1 - sx) * canvas.width / 2,
-          (1 - sy) * canvas.height / 2, canvas.width * sx, canvas.height * sy);
+        ctx.putImageData(new ImageData(data.subarray(0, half), width, height), 0, 0);
       },
       dispose() {},
     };
@@ -69,7 +69,6 @@ function renderer(canvas, video) {
   gl.bindBuffer(gl.ARRAY_BUFFER, quad);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
   const point = gl.getAttribLocation(program, 'point');
-  const fit = gl.getUniformLocation(program, 'fit');
   gl.enableVertexAttribArray(point);
   gl.vertexAttribPointer(point, 2, gl.FLOAT, false, 0, 0);
   const texture = gl.createTexture();
@@ -78,13 +77,15 @@ function renderer(canvas, video) {
     [gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE], [gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE]]) {
     gl.texParameteri(gl.TEXTURE_2D, parameter, value);
   }
-  gl.clearColor(0, 0, 0, 0);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, video.videoWidth, video.videoHeight, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+  canvas.replaceWith(gpuCanvas);
   return {
+    canvas: gpuCanvas,
+    resize() {
+      gl.viewport(0, 0, gpuCanvas.width, gpuCanvas.height);
+    },
     draw() {
-      gl.viewport(0, 0, canvas.width, canvas.height);
-      gl.clear(gl.COLOR_BUFFER_BIT);
-      gl.uniform2f(fit, ...fitFrame(canvas, video));
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, video);
+      gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, gl.RGBA, gl.UNSIGNED_BYTE, video);
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     },
     dispose() {
@@ -115,59 +116,73 @@ function load(video, signal) {
 }
 
 export async function mountTurntable(stage, signal) {
-  const canvas = stage.querySelector('canvas');
   const video = stage.querySelector('video');
   await load(video, signal);
   if (signal.aborted) return;
   if (!(video.duration > 0 && video.videoHeight % 2 === 0)) throw new Error('Invalid turntable video.');
-  const view = renderer(canvas, video);
+  const view = renderer(stage, video);
   if (!view) throw new Error('The turntable canvas is unavailable.');
+  const { canvas } = view;
   const duration = video.duration;
+  const frameCount = Math.round(duration * framesPerSecond);
+  const aspect = video.videoWidth * 2 / video.videoHeight;
+  const decodedCallbacks = typeof video.requestVideoFrameCallback === 'function';
+  const requestFrame = decodedCallbacks ? video.requestVideoFrameCallback.bind(video) : requestAnimationFrame;
+  const cancelFrame = decodedCallbacks ? video.cancelVideoFrameCallback.bind(video) : cancelAnimationFrame;
   let desired = 0;
   let frame = 0;
+  let lastPaint = -1;
 
-  function paint() {
+  function paint(time = video.currentTime) {
     if (video.readyState >= 2 && !video.seeking && canvas.width && canvas.height) {
       view.draw();
-      stage.dataset.videoTime = String(video.currentTime);
+      lastPaint = time;
+      stage.dataset.videoTime = String(time);
     }
   }
 
   function seek() {
-    const time = Math.min(desired * duration, duration - 1 / 48);
-    if (video.seeking || Math.abs(video.currentTime - time) <= 1 / 72) return;
-    video.currentTime = time;
+    const target = Math.min(frameCount - 1, Math.floor(desired * frameCount));
+    if (video.seeking || target === Math.floor(video.currentTime * framesPerSecond + .01)) return;
+    video.currentTime = (target + .5) / framesPerSecond;
   }
 
   function resize() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    const width = Math.round(canvas.clientWidth * dpr);
-    const height = Math.round(canvas.clientHeight * dpr);
-    if (!width || !height) return;
+    const displayWidth = Math.min(stage.clientWidth, stage.clientHeight * aspect);
+    if (!displayWidth) return;
+    canvas.style.width = `${displayWidth}px`;
+    canvas.style.height = `${displayWidth / aspect}px`;
+    const width = Math.min(video.videoWidth, Math.round(displayWidth * Math.min(devicePixelRatio || 1, 1.5)));
+    const height = Math.round(width / aspect);
+    if (canvas.width === width && canvas.height === height) return;
     canvas.width = width;
     canvas.height = height;
+    view.resize?.();
     paint();
   }
 
-  function playFrame() {
+  function playFrame(_, metadata) {
     frame = 0;
     if (video.paused || signal.aborted) return;
-    if (Number(stage.dataset.videoTime) !== video.currentTime) paint();
-    frame = requestAnimationFrame(playFrame);
+    const time = metadata?.mediaTime ?? Math.floor(video.currentTime * framesPerSecond) / framesPerSecond;
+    if (lastPaint !== time) paint(time);
+    frame = requestFrame(playFrame);
   }
 
   video.addEventListener('playing', () => {
-    if (!frame) frame = requestAnimationFrame(playFrame);
+    if (!frame) frame = requestFrame(playFrame);
   }, { signal });
   video.addEventListener('seeked', () => {
-    paint();
-    if (video.paused) seek();
+    if (video.paused) {
+      paint();
+      seek();
+    }
   }, { signal });
   const observer = new ResizeObserver(resize);
-  observer.observe(canvas);
+  observer.observe(stage);
   resize();
   signal.addEventListener('abort', () => {
-    cancelAnimationFrame(frame);
+    if (frame) cancelFrame(frame);
     observer.disconnect();
     view.dispose();
   }, { once: true });
@@ -185,8 +200,7 @@ export async function mountTurntable(stage, signal) {
       if (video.paused) return;
       desired = wrap(video.currentTime / duration);
       video.pause();
-      paint();
-      cancelAnimationFrame(frame);
+      if (frame) cancelFrame(frame);
       frame = 0;
     },
   };

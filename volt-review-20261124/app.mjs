@@ -1,7 +1,7 @@
 import { angles, articles, colors, craftsmanship, products, sizes, story, technology } from './catalog.mjs';
 import { addItem, clearCart, readCart, readFavorites, setItemQuantity, toggleFavorite } from './shop.mjs';
 import { setupPageMotion } from './page-motion.mjs?v=motion-preview';
-import { setupTurntable } from './turntable.mjs?v=hero-video';
+import { setupTurntable } from './turntable.mjs?v=hero-light';
 
 const main = document.querySelector('#main');
 const header = document.querySelector('#header');
@@ -128,11 +128,12 @@ function renderChrome(page) {
 }
 
 function homePage() {
+  const mobileVideo = matchMedia('(max-width: 800px)').matches;
   return `<section class="hero" aria-labelledby="hero-title">
     <div class="hero-backdrop" aria-hidden="true">${image('hero-ribbon', 'hero-ribbon', '', true)}</div>
     <h1 class="hero-title" id="hero-title" lang="en"><span>MOVE</span><span>BEYOND.</span></h1>
     <div class="hero-turntable" id="hero-turntable" role="region" aria-label="ORBITを回す。左右にドラッグ、スワイプ、または矢印キーで角度を変更" tabindex="0">
-      <video src="assets/orbit-turntable.mp4?v=heel-safe" muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <video src="assets/orbit-turntable${mobileVideo ? '-mobile' : ''}.mp4?v=hero-light" width="${mobileVideo ? 692 : 1038}" height="${mobileVideo ? 800 : 1200}" muted loop playsinline preload="auto" aria-hidden="true"></video>
       <canvas aria-hidden="true"></canvas>
     </div>
     <span class="sr" role="status" data-turntable-status></span>

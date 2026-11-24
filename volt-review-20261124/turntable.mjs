@@ -1,4 +1,4 @@
-import { mountTurntable } from './turntable-video.mjs?v=hero-video';
+import { mountTurntable } from './turntable-video.mjs?v=hero-light';
 
 export function setupTurntable(hero, motionEnabled) {
   const stage = hero.querySelector('.hero-turntable');
@@ -47,7 +47,7 @@ export function setupTurntable(hero, motionEnabled) {
 
   stage.addEventListener('pointerdown', event => {
     if (!event.isPrimary || event.button !== 0) return;
-    gesture = { id: event.pointerId, x: event.clientX, y: event.clientY, active: false };
+    gesture = { id: event.pointerId, x: event.clientX, y: event.clientY, distance: Math.max(220, stage.clientWidth * .72), active: false };
   }, { signal });
   stage.addEventListener('pointermove', event => {
     if (gesture?.id !== event.pointerId) return;
@@ -62,7 +62,7 @@ export function setupTurntable(hero, motionEnabled) {
       stage.setPointerCapture(event.pointerId);
       stage.classList.add('is-dragging');
     }
-    turn(dx / Math.max(220, stage.clientWidth * .72));
+    turn(dx / gesture.distance);
     gesture.x = event.clientX;
   }, { signal });
 
