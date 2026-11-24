@@ -1,7 +1,7 @@
 import { angles, articles, colors, craftsmanship, products, sizes, story, technology } from './catalog.mjs';
 import { addItem, clearCart, readCart, readFavorites, setItemQuantity, toggleFavorite } from './shop.mjs';
 import { setupPageMotion } from './page-motion.mjs?v=motion-preview';
-import { setupTurntable } from './turntable.mjs?v=heel-safe';
+import { setupTurntable } from './turntable.mjs?v=hero-video';
 
 const main = document.querySelector('#main');
 const header = document.querySelector('#header');
@@ -29,7 +29,6 @@ const iconPaths = {
   minus: '<path d="M5 12h14"/>',
   expand: '<path d="M4 9V4h5m6 0h5v5m0 6v5h-5m-6 0H4v-5"/>',
   check: '<path d="m4 12 5 5L20 6"/>',
-  turn: '<path d="M20 11a8 8 0 1 0-2 6m-1-9 3 3 3-3"/>',
   pause: '<path d="M9 6v12m6-12v12"/>',
   play: '<path d="m9 5 11 7-11 7z"/>',
 };
@@ -51,7 +50,7 @@ let journalFilter = 'ALL';
 let confirmation = null;
 let toastTimer;
 let disposePageMotion;
-let disposeTurntable;
+let turntable;
 let keyboardInput = false;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const motionStorageKey = 'volt.motion';
@@ -89,8 +88,10 @@ function toggleMotion() {
 function refreshMotion() {
   disposePageMotion?.();
   syncMotionMode();
-  main.classList.toggle('route-enter', motionEnabled());
-  disposePageMotion = setupPageMotion(main, motionEnabled());
+  const enabled = motionEnabled();
+  main.classList.toggle('route-enter', enabled);
+  disposePageMotion = setupPageMotion(main, enabled);
+  turntable?.setMotion(enabled);
 }
 
 function getRoute() {
@@ -130,21 +131,11 @@ function homePage() {
   return `<section class="hero" aria-labelledby="hero-title">
     <div class="hero-backdrop" aria-hidden="true">${image('hero-ribbon', 'hero-ribbon', '', true)}</div>
     <h1 class="hero-title" id="hero-title" lang="en"><span>MOVE</span><span>BEYOND.</span></h1>
-    ${image('orbit-hero', 'hero-shoe', 'ライム色のソールを備えた白いORBIT', true)}
-    <div class="hero-turntable" id="hero-turntable" role="region" aria-label="ORBITを回す。左右の矢印キーで角度を変更" tabindex="-1">
-      <video muted playsinline preload="none" aria-hidden="true"></video>
+    <div class="hero-turntable" id="hero-turntable" role="region" aria-label="ORBITを回す。左右にドラッグ、スワイプ、または矢印キーで角度を変更" tabindex="0">
+      <video src="assets/orbit-turntable.mp4?v=heel-safe" muted loop playsinline preload="auto" aria-hidden="true"></video>
       <canvas aria-hidden="true"></canvas>
     </div>
-    <div class="turntable-ui">
-      <p class="turntable-status" aria-live="polite"></p>
-      <div class="turntable-tools" id="turntable-tools" role="group" aria-label="回転の操作" hidden>
-        <button type="button" class="icon-btn" data-turntable-step="-1" aria-label="左に回す">${icon('back')}</button>
-        <output aria-live="off">000°</output>
-        <button type="button" class="icon-btn" data-turntable-step="1" aria-label="右に回す">${icon('next')}</button>
-        <button type="button" class="icon-btn turntable-play" data-turntable-play aria-label="一周再生" aria-pressed="false">${icon('turn')}${icon('pause')}</button>
-      </div>
-      <button type="button" class="turntable-toggle" data-turntable-toggle aria-controls="hero-turntable turntable-tools" aria-expanded="false">${icon('turn')}<span>360° VIEW</span></button>
-    </div>
+    <span class="sr" role="status" data-turntable-status></span>
     <div class="hero-action">${action('Explore collection', url('collection'), 'outline')}</div>
     <a class="hero-caption" href="${url('product', 'orbit')}">V-01 / ORBIT ${icon('diagonal')}</a>
   </section>
@@ -541,8 +532,8 @@ function render(force = false, moveFocus = false) {
   const key = page + '/' + slug;
   if (!force && routeKey === key) return;
   disposePageMotion?.();
-  disposeTurntable?.();
-  disposeTurntable = null;
+  turntable?.dispose();
+  turntable = null;
   const animateRoute = !routeKey || moveFocus;
   if (page !== 'checkout') confirmation = null;
   if (overlay.open) overlay.close();
@@ -570,7 +561,7 @@ function render(force = false, moveFocus = false) {
     heading.focus({ preventScroll: true });
   }
   disposePageMotion = setupPageMotion(main, motionEnabled());
-  if (page === 'home') disposeTurntable = setupTurntable(main.querySelector('.hero'));
+  if (page === 'home') turntable = setupTurntable(main.querySelector('.hero'), motionEnabled());
 }
 
 document.addEventListener('keydown', () => { keyboardInput = true; }, { capture: true });

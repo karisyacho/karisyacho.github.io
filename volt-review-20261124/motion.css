@@ -7,15 +7,15 @@
 .motion-enabled .ribbon-in-view .hero-ribbon { animation-play-state: running; }
 
 .motion-enabled .route-enter .hero-title span {
-  --word-start: clamp(-148px, -13vw, -48px);
-  animation: volt-hero-word 1260ms var(--volt-motion-out) 180ms backwards;
+  --word-start: clamp(-280px, -19vw, -72px);
+  animation: volt-hero-word 400ms cubic-bezier(.2, .8, .25, 1) backwards;
 }
 .motion-enabled .route-enter .hero-title span:last-child {
-  --word-start: clamp(48px, 13vw, 148px);
-  animation-delay: 460ms;
+  --word-start: clamp(72px, 19vw, 280px);
+  animation-delay: 75ms;
 }
 .motion-enabled .route-enter :is(.hero-action, .hero-caption) {
-  animation: volt-detail-in 560ms var(--volt-motion-out) 760ms backwards;
+  animation: volt-detail-in 420ms var(--volt-motion-out) 310ms backwards;
 }
 .motion-enabled .route-enter h1:not(.hero-title) {
   animation: volt-heading-in 780ms var(--volt-motion-out);

@@ -1,101 +1,49 @@
-export function setupTurntable(hero) {
+import { mountTurntable } from './turntable-video.mjs?v=hero-video';
+
+export function setupTurntable(hero, motionEnabled) {
   const stage = hero.querySelector('.hero-turntable');
   const video = stage.querySelector('video');
-  const button = hero.querySelector('[data-turntable-toggle]');
-  const toolbar = hero.querySelector('.turntable-tools');
-  const position = toolbar.querySelector('output');
-  const play = toolbar.querySelector('[data-turntable-play]');
-  const status = hero.querySelector('.turntable-status');
+  const status = hero.querySelector('[data-turntable-status]');
   const controller = new AbortController();
   const { signal } = controller;
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  let opened = false;
   let view;
-  let loading;
   let gesture;
   let queuedTurn = 0;
+  let manual = false;
+  let inView = !('IntersectionObserver' in window);
 
-  function playing(active) {
-    play.setAttribute('aria-pressed', String(active));
-    play.setAttribute('aria-label', active ? '回転を止める' : '一周再生');
+  function syncPlayback() {
+    view?.setAutoplay(motionEnabled && inView && !manual && !document.hidden);
   }
 
-  function syncPreference() {
-    play.hidden = reduced.matches;
-    if (reduced.matches) view?.stop();
+  if (!inView) {
+    const observer = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      syncPlayback();
+    });
+    observer.observe(stage);
+    signal.addEventListener('abort', () => observer.disconnect(), { once: true });
   }
-  syncPreference();
-  reduced.addEventListener('change', syncPreference, { signal });
+  document.addEventListener('visibilitychange', syncPlayback, { signal });
 
-  function ready() {
-    status.textContent = '左右にドラッグ・スワイプで回転';
-    toolbar.hidden = false;
+  mountTurntable(stage, signal).then(mounted => {
+    if (signal.aborted) return;
+    view = mounted;
+    if (queuedTurn) view.turn(queuedTurn);
     hero.classList.add('hero--turntable-ready');
-  }
-
-  function open() {
-    if (opened) return;
-    opened = true;
-    button.setAttribute('aria-expanded', 'true');
-    button.querySelector('span').textContent = '360°を閉じる';
-    stage.tabIndex = 0;
-    if (view) {
-      ready();
-      return;
-    }
-    status.textContent = '回転映像を読み込み中…';
-    if (loading) return;
-    loading = import('./turntable-video.mjs?v=heel-safe').then(async ({ mountTurntable }) => {
-      if (signal.aborted) return;
-      view = await mountTurntable(stage, signal, value => {
-        position.textContent = String(Math.round(value * 360) % 360).padStart(3, '0') + '°';
-      }, playing);
-      if (!opened || signal.aborted) return;
-      if (queuedTurn) view.turn(queuedTurn);
-      queuedTurn = 0;
-      ready();
-    }).catch(() => {
-      queuedTurn = 0;
-      if (signal.aborted) return;
-      video.removeAttribute('src');
-      video.load();
-      if (opened) status.textContent = '映像を読み込めませんでした';
-    }).finally(() => { loading = null; });
-  }
-
-  function close() {
-    opened = false;
-    gesture = null;
-    queuedTurn = 0;
-    stage.tabIndex = -1;
-    toolbar.hidden = true;
-    button.setAttribute('aria-expanded', 'false');
-    button.querySelector('span').textContent = '360° VIEW';
-    status.textContent = '';
-    hero.classList.remove('hero--turntable-ready');
-    stage.classList.remove('is-dragging');
-    view?.reset();
-  }
-
-  button.addEventListener('click', event => {
-    if (opened) close();
-    else {
-      open();
-      if (event.detail === 0) stage.focus({ preventScroll: true });
-    }
-  }, { signal });
+    syncPlayback();
+  }).catch(() => {
+    if (!signal.aborted) status.textContent = 'ORBITの映像を読み込めませんでした。';
+  });
 
   function turn(delta) {
+    if (!manual) {
+      manual = true;
+      syncPlayback();
+    }
     if (view) view.turn(delta);
     else queuedTurn += delta;
   }
-
-  toolbar.addEventListener('click', event => {
-    const clicked = event.target.closest('button');
-    if (!view || !clicked) return;
-    if (clicked === play) view.togglePlay();
-    else if (clicked.dataset.turntableStep) turn(Number(clicked.dataset.turntableStep) / 8);
-  }, { signal });
 
   stage.addEventListener('pointerdown', event => {
     if (!event.isPrimary || event.button !== 0) return;
@@ -113,7 +61,6 @@ export function setupTurntable(hero) {
       gesture.active = true;
       stage.setPointerCapture(event.pointerId);
       stage.classList.add('is-dragging');
-      open();
     }
     turn(dx / Math.max(220, stage.clientWidth * .72));
     gesture.x = event.clientX;
@@ -131,24 +78,23 @@ export function setupTurntable(hero) {
     if (!gesture?.active) release(event);
   }, { signal });
   stage.addEventListener('keydown', event => {
-    if (!opened || !['ArrowLeft', 'ArrowRight', 'Home', 'Escape'].includes(event.key)) return;
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
     event.preventDefault();
-    if (event.key === 'Escape') {
-      close();
-      button.focus();
-    } else if (event.key === 'Home') {
-      queuedTurn = 0;
-      view?.reset();
-    } else {
-      turn(event.key === 'ArrowLeft' ? -.125 : .125);
-    }
+    turn(event.key === 'ArrowLeft' ? -.125 : .125);
   }, { signal });
 
-  return () => {
-    controller.abort();
-    if (!view && video.hasAttribute('src')) {
+  return {
+    setMotion(enabled) {
+      if (motionEnabled === enabled) return;
+      motionEnabled = enabled;
+      manual = false;
+      syncPlayback();
+    },
+    dispose() {
+      controller.abort();
+      video.pause();
       video.removeAttribute('src');
       video.load();
-    }
+    },
   };
 }

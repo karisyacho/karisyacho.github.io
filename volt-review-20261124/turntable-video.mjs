@@ -1,4 +1,3 @@
-const source = 'assets/orbit-turntable.mp4?v=heel-safe';
 const wrap = value => ((value % 1) + 1) % 1;
 
 const vertexSource = [
@@ -97,6 +96,8 @@ function renderer(canvas, video) {
 }
 
 function load(video, signal) {
+  if (video.readyState >= 2) return Promise.resolve();
+  if (video.error) return Promise.reject(new Error(video.error.message));
   return new Promise((resolve, reject) => {
     const controller = new AbortController();
     const timer = setTimeout(() => done(false, 'Timed out waiting for a decoded video frame.'), 14000);
@@ -109,35 +110,26 @@ function load(video, signal) {
     video.addEventListener('loadeddata', () => done(true), { signal: controller.signal, once: true });
     video.addEventListener('error', () => done(false, video.error?.message), { signal: controller.signal, once: true });
     signal.addEventListener('abort', () => done(false), { signal: controller.signal, once: true });
-    if (signal.aborted) {
-      done(false);
-      return;
-    }
-    video.preload = 'auto';
-    video.src = source;
-    video.load();
+    if (signal.aborted) done(false);
   });
 }
 
-export async function mountTurntable(stage, signal, onPosition, onPlaying) {
+export async function mountTurntable(stage, signal) {
   const canvas = stage.querySelector('canvas');
   const video = stage.querySelector('video');
   await load(video, signal);
+  if (signal.aborted) return;
   if (!(video.duration > 0 && video.videoHeight % 2 === 0)) throw new Error('Invalid turntable video.');
   const view = renderer(canvas, video);
   if (!view) throw new Error('The turntable canvas is unavailable.');
   const duration = video.duration;
-  let position = 0;
   let desired = 0;
-  let round = null;
   let frame = 0;
-  let needsPaint = true;
 
   function paint() {
     if (video.readyState >= 2 && !video.seeking && canvas.width && canvas.height) {
       view.draw();
       stage.dataset.videoTime = String(video.currentTime);
-      needsPaint = false;
     }
   }
 
@@ -154,105 +146,48 @@ export async function mountTurntable(stage, signal, onPosition, onPlaying) {
     if (!width || !height) return;
     canvas.width = width;
     canvas.height = height;
-    needsPaint = true;
     paint();
-  }
-
-  function setPosition(value) {
-    position = desired = wrap(value);
-    onPosition(position);
-    seek();
-  }
-
-  function stop() {
-    if (!round) return;
-    round = null;
-    video.pause();
-    cancelAnimationFrame(frame);
-    frame = 0;
-    onPlaying(false);
   }
 
   function playFrame() {
     frame = 0;
-    if (!round) return;
-    const now = video.currentTime;
-    if (round.started && !video.seeking && (now !== round.previous || needsPaint)) {
-      round.previous = now;
-      position = desired = wrap(now / duration);
-      onPosition(position);
-      paint();
-      if (round.wrapped && now >= round.origin * duration - 1 / 40) {
-        finishRound();
-        return;
-      }
-    }
+    if (video.paused || signal.aborted) return;
+    if (Number(stage.dataset.videoTime) !== video.currentTime) paint();
     frame = requestAnimationFrame(playFrame);
   }
 
-  function finishRound() {
-    const origin = round.origin;
-    stop();
-    setPosition(origin);
-  }
-
-  function startRound() {
-    if (!round || round.started || video.seeking) return;
-    round.started = true;
-    round.previous = video.currentTime;
-    video.play().then(() => {
-      if (round && !frame) frame = requestAnimationFrame(playFrame);
-    }).catch(stop);
-  }
-
+  video.addEventListener('playing', () => {
+    if (!frame) frame = requestAnimationFrame(playFrame);
+  }, { signal });
   video.addEventListener('seeked', () => {
     paint();
-    if (round) startRound();
-    else seek();
-  }, { signal });
-  video.addEventListener('ended', () => {
-    if (!round) return;
-    if (round.wrapped || round.origin * duration < 1 / 48) {
-      finishRound();
-      return;
-    }
-    round.wrapped = true;
-    round.started = false;
-    video.currentTime = 0;
-    startRound();
-  }, { signal });
-  video.addEventListener('pause', () => {
-    if (round?.started && !video.ended && !video.seeking) stop();
+    if (video.paused) seek();
   }, { signal });
   const observer = new ResizeObserver(resize);
   observer.observe(canvas);
   resize();
   signal.addEventListener('abort', () => {
-    stop();
+    cancelAnimationFrame(frame);
     observer.disconnect();
     view.dispose();
-    video.removeAttribute('src');
-    video.load();
   }, { once: true });
 
   return {
     turn(delta) {
-      stop();
-      setPosition(position + delta);
+      desired = wrap(desired + delta);
+      seek();
     },
-    reset() {
-      stop();
-      setPosition(0);
-    },
-    stop,
-    togglePlay() {
-      if (round) {
-        stop();
+    setAutoplay(enabled) {
+      if (enabled) {
+        if (video.paused) video.play().catch(() => {});
         return;
       }
-      round = { origin: position, previous: video.currentTime, started: false, wrapped: false };
-      onPlaying(true);
-      startRound();
+      if (video.paused) return;
+      desired = wrap(video.currentTime / duration);
+      video.pause();
+      paint();
+      cancelAnimationFrame(frame);
+      frame = 0;
     },
   };
 }
