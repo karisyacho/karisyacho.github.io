@@ -1,6 +1,7 @@
 import { angles, articles, colors, craftsmanship, products, sizes, story, technology } from './catalog.mjs';
 import { addItem, clearCart, readCart, readFavorites, setItemQuantity, toggleFavorite } from './shop.mjs';
 import { setupPageMotion } from './page-motion.mjs';
+import { setupTurntable } from './turntable.mjs';
 
 const main = document.querySelector('#main');
 const header = document.querySelector('#header');
@@ -28,6 +29,8 @@ const iconPaths = {
   minus: '<path d="M5 12h14"/>',
   expand: '<path d="M4 9V4h5m6 0h5v5m0 6v5h-5m-6 0H4v-5"/>',
   check: '<path d="m4 12 5 5L20 6"/>',
+  turn: '<path d="M20 11a8 8 0 1 0-2 6m-1-9 3 3 3-3"/>',
+  pause: '<path d="M9 6v12m6-12v12"/>',
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${iconPaths[name]}</svg>`;
 const url = (page = 'home', slug = '') => page === 'home' ? '#/' : `#/${page}${slug ? '/' + slug : ''}`;
@@ -47,6 +50,7 @@ let journalFilter = 'ALL';
 let confirmation = null;
 let toastTimer;
 let disposePageMotion;
+let disposeTurntable;
 let keyboardInput = false;
 
 function getRoute() {
@@ -86,6 +90,20 @@ function homePage() {
     <div class="hero-backdrop" aria-hidden="true">${image('hero-ribbon', 'hero-ribbon', '', true)}</div>
     <h1 class="hero-title" id="hero-title" lang="en"><span>MOVE</span><span>BEYOND.</span></h1>
     ${image('orbit-hero', 'hero-shoe', 'ライム色のソールを備えた白いORBIT', true)}
+    <div class="hero-turntable" id="hero-turntable" role="region" aria-label="ORBITを回す。左右の矢印キーで角度を変更" tabindex="-1">
+      <video muted playsinline preload="none" aria-hidden="true"></video>
+      <canvas aria-hidden="true"></canvas>
+    </div>
+    <div class="turntable-ui">
+      <p class="turntable-status" aria-live="polite"></p>
+      <div class="turntable-tools" id="turntable-tools" role="group" aria-label="回転の操作" hidden>
+        <button type="button" class="icon-btn" data-turntable-step="-1" aria-label="左に回す">${icon('back')}</button>
+        <output aria-live="off">000°</output>
+        <button type="button" class="icon-btn" data-turntable-step="1" aria-label="右に回す">${icon('next')}</button>
+        <button type="button" class="icon-btn turntable-play" data-turntable-play aria-label="一周再生" aria-pressed="false">${icon('turn')}${icon('pause')}</button>
+      </div>
+      <button type="button" class="turntable-toggle" data-turntable-toggle aria-controls="hero-turntable turntable-tools" aria-expanded="false">${icon('turn')}<span>360° VIEW</span></button>
+    </div>
     <div class="hero-action">${action('Explore collection', url('collection'), 'outline')}</div>
     <a class="hero-caption" href="${url('product', 'orbit')}">V-01 / ORBIT ${icon('diagonal')}</a>
   </section>
@@ -482,6 +500,8 @@ function render(force = false, moveFocus = false) {
   const key = page + '/' + slug;
   if (!force && routeKey === key) return;
   disposePageMotion?.();
+  disposeTurntable?.();
+  disposeTurntable = null;
   const animateRoute = !keyboardInput && (!routeKey || moveFocus);
   if (page !== 'checkout') confirmation = null;
   if (overlay.open) overlay.close();
@@ -508,6 +528,7 @@ function render(force = false, moveFocus = false) {
     heading.focus({ preventScroll: true });
   }
   disposePageMotion = setupPageMotion(main, () => keyboardInput);
+  if (page === 'home') disposeTurntable = setupTurntable(main.querySelector('.hero'));
 }
 
 document.addEventListener('keydown', () => { keyboardInput = true; }, { capture: true });

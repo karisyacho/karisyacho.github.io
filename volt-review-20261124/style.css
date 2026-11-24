@@ -490,3 +490,45 @@ legend span { font-weight: 400; color: var(--muted); letter-spacing: .025em; mar
   .added-actions form button { width: 100%; }
   .journal-grid { grid-template-columns: 1fr; }
 }
+
+.hero-turntable {
+  position: absolute; z-index: 3; width: 74%; height: 79%; top: 4%; left: 15%;
+  cursor: grab; touch-action: pan-y;
+}
+.hero-turntable.is-dragging { cursor: grabbing; }
+.hero-turntable canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; }
+.hero-turntable video { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.hero--turntable-ready .hero-shoe { opacity: 0; }
+.hero--turntable-ready .hero-turntable canvas { opacity: 1; }
+.hero-turntable:focus-visible { outline-offset: -4px; }
+.turntable-ui {
+  position: absolute; z-index: 4; bottom: clamp(22px, 4.4vw, 66px); left: 50%; transform: translateX(-50%);
+  display: grid; justify-items: center; gap: 7px;
+}
+.turntable-status { color: #ededdd; white-space: nowrap; font-size: 10px; letter-spacing: .06em; text-shadow: 0 1px 8px #000, 0 0 6px #000; }
+.turntable-status:empty { display: none; }
+.turntable-tools {
+  display: grid; grid-template-columns: 44px minmax(42px, auto) 44px 44px; align-items: center; justify-items: center;
+  border: 1px solid #565945; background: #0a0b07ed;
+}
+.turntable-tools:has([data-turntable-play][hidden]) { grid-template-columns: 44px minmax(42px, auto) 44px; }
+.turntable-tools output { color: var(--volt); font: 700 12px/1 monospace; padding: 0 3px; }
+.turntable-tools svg, .turntable-toggle svg { width: 17px; height: 17px; }
+.turntable-play[aria-pressed="false"] svg:last-child,
+.turntable-play[aria-pressed="true"] svg:first-child { display: none; }
+.turntable-toggle {
+  min-height: 44px; min-width: 134px; display: flex; align-items: center; justify-content: center; gap: 7px;
+  color: var(--volt); border: 1px solid #b1bf65; background: #0a0b07d9; padding: 0 12px;
+  font-size: 12px; font-weight: 800; white-space: nowrap; letter-spacing: .08em;
+}
+.turntable-toggle:hover, .turntable-toggle:focus-visible { color: var(--ink); background: var(--volt); border-color: var(--volt); }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-turntable canvas, .hero-shoe { transition: opacity 150ms cubic-bezier(.2,.7,.25,1); }
+}
+@media (max-width: 800px) {
+  .hero-turntable { width: 91%; left: 4.5%; height: 69%; top: 14%; }
+}
+@media (max-width: 580px) {
+  .hero-turntable { width: 100%; left: 0; top: 17%; height: 63%; }
+  .turntable-ui { bottom: 75px; }
+}
