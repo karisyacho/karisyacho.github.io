@@ -146,6 +146,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(251,248,243,.9);backdrop
 .works{padding-block:clamp(52px,6.6vw,96px)}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,30px);margin-top:clamp(26px,3.2vw,40px)}
 .card{background:#fff;border:1px solid var(--rule);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.card[hidden]{display:none}
 .card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(34,38,43,.45)}
 .card img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center}
 /* 縦型の動画は切り取らず、生成りの地の上に縦のまま置く */
